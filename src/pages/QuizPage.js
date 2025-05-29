@@ -57,7 +57,7 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, subjectQuestions.length, name, subject, user.code]);
+  }, [navigate, subjectQuestions, name, subject, user.code]); // <-- fixed here
 
   useEffect(() => {
     if (!user.code || shuffledQuestions.length === 0) return;
@@ -122,7 +122,7 @@ function QuizPage() {
           <div key={idx} style={{ marginBottom: 10, borderBottom: '1px solid #ccc', paddingBottom: 10 }}>
             <p><strong>Q{idx + 1}:</strong> {a.question}</p>
             <p style={{ color: a.isCorrect ? 'green' : 'red' }}>
-              Your Answer: {a.selected} {a.isCorrect ? '?' : '?'}
+              Your Answer: {a.selected} {a.isCorrect ? '??' : '?'}
             </p>
             {!a.isCorrect && <p>Correct Answer: {a.correct}</p>}
           </div>
