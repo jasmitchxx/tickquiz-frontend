@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
@@ -9,11 +9,8 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject } = user;
 
-  // Memoize subjectQuestions so it doesn't change unnecessarily
-  const subjectQuestions = useMemo(() => {
-    const subjectData = questionsData.find(s => s.subject === subject);
-    return subjectData?.questions || [];
-  }, [subject]);
+  const subjectData = questionsData.find(s => s.subject === subject);
+  const subjectQuestions = subjectData?.questions || [];
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -60,7 +57,7 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, subjectQuestions, name, subject, user.code]);
+  }, [navigate, subjectQuestions.length, name, subject, user.code]);
 
   useEffect(() => {
     if (!user.code || shuffledQuestions.length === 0) return;
