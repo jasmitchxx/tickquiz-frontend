@@ -57,7 +57,7 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, subjectQuestions, name, subject, user.code]); // <-- fixed here
+  }, [navigate, subjectQuestions, name, subject, user.code]); // ? FIXED: Added subjectQuestions
 
   useEffect(() => {
     if (!user.code || shuffledQuestions.length === 0) return;
