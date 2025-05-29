@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function RequestAccessWithPayment() {
   const [name, setName] = useState('');
@@ -9,7 +10,17 @@ function RequestAccessWithPayment() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
+  const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('quizUser'));
+    if (user && user.code && user.name && user.subject) {
+      navigate('/start');
+    } else {
+      localStorage.removeItem('quizUser');
+    }
+  }, [navigate]);
 
   const handlePayment = async () => {
     if (!name || !email || !phone) {
