@@ -12,6 +12,7 @@ function RequestAccessWithPayment() {
 
   const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
+console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
