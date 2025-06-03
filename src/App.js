@@ -15,7 +15,7 @@ function App() {
         <Route path="/start" element={<QuizStartPage />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/use-code" element={<UseAccessCodePage />} /> {/* Optional */}
-        <Route path="/verify" element={<VerifyPaymentPage />} />
+<Route path="/verify-payment" element={<VerifyPaymentPage />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
         <Route path="/payment-failed" element={<PaymentFailedPage />} />
       </Routes>
