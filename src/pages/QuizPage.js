@@ -1,3 +1,4 @@
+// src/pages/QuizPage.js
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -5,16 +6,14 @@ import questionsData from '../data/questionsData';
 
 function QuizPage() {
   const navigate = useNavigate();
-
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject } = user;
+  const { name, subject, code } = user;
 
-  const subjectData = questionsData.find(s => s.subject === subject);
-  
-  // ? FIXED: useMemo to make subjectQuestions stable
-  const subjectQuestions = useMemo(() => {
-    return subjectData?.questions || [];
-  }, [subjectData]);
+  const subjectData = useMemo(() => {
+    return questionsData.find(s => s.subject === subject);
+  }, [subject]);
+
+  const subjectQuestions = useMemo(() => subjectData?.questions || [], [subjectData]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -35,13 +34,11 @@ function QuizPage() {
   const endQuiz = useCallback(async () => {
     setFinished(true);
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, {
-        code: user?.code,
-      });
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
     } catch (err) {
       console.error('Failed to update usage:', err);
     }
-  }, [user?.code]);
+  }, [code]);
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -50,37 +47,29 @@ function QuizPage() {
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
-    if (saved && saved.code === user.code) {
+    if (saved && saved.code === code) {
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
       setTimeLeft(saved.timeLeft);
       setFinished(saved.finished);
-      setShuffledQuestions(saved.questions); // load saved shuffle
+      setShuffledQuestions(saved.questions);
     } else {
       const shuffled = shuffleArray(subjectQuestions);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, subjectQuestions, name, subject, user.code]); // ? OK now
+  }, [navigate, name, subject, subjectQuestions, code]);
 
   useEffect(() => {
-    if (!user.code || shuffledQuestions.length === 0) return;
-    const progress = {
-      code: user.code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions
-    };
+    if (!code || shuffledQuestions.length === 0) return;
+    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
-  }, [current, answers, score, timeLeft, finished, shuffledQuestions, user.code]);
+  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
   useEffect(() => {
     if (finished) return;
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 1) {
           clearInterval(timer);
           endQuiz();
@@ -96,11 +85,7 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [
-      ...prev,
-      { question: q.question, selected, correct: q.answer, isCorrect },
-    ]);
-
+    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
@@ -116,6 +101,8 @@ function QuizPage() {
     return `${mins}:${secs}`;
   };
 
+  if (shuffledQuestions.length === 0) return <p style={{ textAlign: 'center' }}>Loading questions...</p>;
+
   if (finished) {
     return (
       <div style={{ maxWidth: 800, margin: '2rem auto' }}>
@@ -126,7 +113,7 @@ function QuizPage() {
           <div key={idx} style={{ marginBottom: 10, borderBottom: '1px solid #ccc', paddingBottom: 10 }}>
             <p><strong>Q{idx + 1}:</strong> {a.question}</p>
             <p style={{ color: a.isCorrect ? 'green' : 'red' }}>
-              Your Answer: {a.selected} {a.isCorrect ? '??' : '?'}
+              Your Answer: {a.selected} {a.isCorrect ? '?' : '?'}
             </p>
             {!a.isCorrect && <p>Correct Answer: {a.correct}</p>}
           </div>
