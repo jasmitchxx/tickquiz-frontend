@@ -1,11 +1,13 @@
 // src/pages/UseAccessCodePage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function UseAccessCodePage() {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const API_URL = process.env.REACT_APP_API_URL;
 
@@ -19,6 +21,11 @@ function UseAccessCodePage() {
       if (res.data.success) {
         setMessage(res.data.message);
         setSuccess(true);
+
+        // Auto-redirect to quiz after short delay
+        setTimeout(() => {
+          navigate('/quiz');
+        }, 2000); // 2 second delay
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
       }
@@ -29,7 +36,13 @@ function UseAccessCodePage() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '2rem auto', padding: '1rem', border: '1px solid #ccc', borderRadius: 8 }}>
+    <div style={{
+      maxWidth: 400,
+      margin: '2rem auto',
+      padding: '1rem',
+      border: '1px solid #ccc',
+      borderRadius: 8
+    }}>
       <h2>Enter Access Code</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -40,7 +53,17 @@ function UseAccessCodePage() {
           style={{ width: '100%', marginBottom: 10, padding: 8 }}
           required
         />
-        <button type="submit" style={{ width: '100%', padding: 10, backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: 4 }}>
+        <button
+          type="submit"
+          style={{
+            width: '100%',
+            padding: 10,
+            backgroundColor: '#28a745',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 4
+          }}
+        >
           Submit Code
         </button>
       </form>
