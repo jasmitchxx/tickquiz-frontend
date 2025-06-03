@@ -1,14 +1,45 @@
-import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function PaymentSuccessPage() {
   const location = useLocation();
-  const { accessCode, phone } = location.state || {};
+  const navigate = useNavigate();
+  const { phone, accessCode } = location.state || {};
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/use-code');
+    }, 5000); // Redirect after 5 seconds
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
+  const handleStartNow = () => {
+    navigate('/use-code');
+  };
 
   return (
-    <div className="p-4 text-center">
-      <h1 className="text-2xl font-bold">✅ Payment Successful!</h1>
-      <p>We’ve sent your access code to <strong>{phone}</strong>.</p>
-      <p className="mt-4">Code: <code className="text-lg">{accessCode}</code></p>
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h2>? Payment Successful!</h2>
+      <p>We�ve sent your access code to <strong>{phone}</strong>.</p>
+      <p>Your code: <strong>{accessCode}</strong></p>
+      <p>Redirecting you to start the quiz...</p>
+
+      <button
+        onClick={handleStartNow}
+        style={{
+          marginTop: '20px',
+          padding: '10px 20px',
+          fontSize: '16px',
+          backgroundColor: '#4CAF50',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}
+      >
+        Start Now
+      </button>
     </div>
   );
 }
