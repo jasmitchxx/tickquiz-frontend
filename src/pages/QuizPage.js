@@ -8,9 +8,11 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code } = user;
 
-  const subjectQuestions = useMemo(() => {
-    return questionsData[subject] || [];
+  const subjectData = useMemo(() => {
+    return questionsData.find(s => s.subject === subject);
   }, [subject]);
+
+  const subjectQuestions = useMemo(() => subjectData?.questions || [], [subjectData]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -82,7 +84,7 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [...prev, { question: q.question || q.q, selected, correct: q.answer, isCorrect }]);
+    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
@@ -127,7 +129,7 @@ function QuizPage() {
         <h3>Question {current + 1} / {shuffledQuestions.length}</h3>
         <h3>Time Left: {formatTime()}</h3>
       </div>
-      <h4>{q.question || q.q}</h4>
+      <h4>{q.question}</h4>
       {q.options.map(option => (
         <button
           key={option}
