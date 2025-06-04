@@ -1,4 +1,3 @@
-// src/pages/UseAccessCodePage.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -18,14 +17,25 @@ function UseAccessCodePage() {
 
     try {
       const res = await axios.post(`${API_URL}/api/use-access-code`, { code });
+
       if (res.data.success) {
         setMessage(res.data.message);
         setSuccess(true);
 
-        // Auto-redirect to quiz after short delay
+        // ? Save user info to localStorage
+        localStorage.setItem(
+          'quizUser',
+          JSON.stringify({
+            name: res.data.name || 'Student',         // fallback to 'Student' if not provided
+            subject: res.data.subject || 'Mathematics', // fallback subject if not provided
+            code: code
+          })
+        );
+
+        // ? Redirect to quiz page
         setTimeout(() => {
           navigate('/quiz');
-        }, 2000); // 2 second delay
+        }, 2000);
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
       }
