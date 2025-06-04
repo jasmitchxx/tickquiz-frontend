@@ -23,17 +23,21 @@ function UseAccessCodePage() {
         setMessage(res.data.message);
         setSuccess(true);
 
+        // Store user info
+        const storedUser = JSON.parse(localStorage.getItem('quizUser')) || {};
         localStorage.setItem(
           'quizUser',
           JSON.stringify({
-            name: res.data.name || 'Student',
+            ...storedUser,
+            name: res.data.name || storedUser.name || 'Student',
             code: code,
-            // Subject will be selected on the next page
+            // Subject will be selected after start screen
           })
         );
 
+        // ? Go to start screen
         setTimeout(() => {
-          navigate('/select-subject'); // Redirect to subject selection page
+          navigate('/start');
         }, 2000);
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');

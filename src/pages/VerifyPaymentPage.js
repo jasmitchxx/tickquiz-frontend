@@ -16,19 +16,20 @@ export default function VerifyPaymentPage() {
         });
 
         if (res.data.message === 'Payment verified. Access code sent!') {
-          const { accessCode, phone, name, subject } = res.data;
+          const { accessCode, phone, name } = res.data;
 
+          // Save basic user info (excluding subject for now)
           localStorage.setItem(
             'quizUser',
             JSON.stringify({
               code: accessCode,
               phone,
               name: name || 'User',
-              subject: subject || 'General',
             })
           );
 
-          navigate('/start');
+          // ? Redirect to access code entry page
+          navigate('/use-access-code');
         } else {
           navigate('/payment-failed');
         }
