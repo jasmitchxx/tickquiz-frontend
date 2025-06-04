@@ -6,7 +6,7 @@ function QuizStartPage() {
   const navigate = useNavigate();
 
   const handleStartQuiz = () => {
-    navigate('/quiz');
+    navigate('/use-access-code');  // Redirect to access code input page
   };
 
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};

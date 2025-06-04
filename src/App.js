@@ -13,17 +13,17 @@ import Header from './components/Header'; // ? new
 function App() {
   return (
     <Router>
-      <Header /> {/* ? Navigation visible on all pages */}
+      <Header />
       <Routes>
         <Route path="/" element={<RequestAccessWithPayment />} />
         <Route path="/start" element={<QuizStartPage />} />
         <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/use-code" element={<UseAccessCodePage />} />
+        <Route path="/use-access-code" element={<UseAccessCodePage />} /> {/* ? updated */}
         <Route path="/verify" element={<VerifyPaymentPage />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
         <Route path="/payment-failed" element={<PaymentFailedPage />} />
-        <Route path="/about" element={<About />} /> {/* ? added */}
-        <Route path="/contact" element={<Contact />} /> {/* ? added */}
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
