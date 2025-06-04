@@ -12,16 +12,12 @@ function RequestAccessWithPayment() {
 
   const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
-console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
+  console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('quizUser'));
-    if (user && user.code && user.name && user.subject) {
-      navigate('/start');
-    } else {
-      localStorage.removeItem('quizUser');
-    }
-  }, [navigate]);
+    // Clear any stale user session
+    localStorage.removeItem('quizUser');
+  }, []);
 
   const handlePayment = async () => {
     if (!name || !email || !phone) {
@@ -39,6 +35,7 @@ console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
         phone: countryCode + phone,
       });
 
+      // Redirect user to Paystack for payment
       window.location.href = response.data.authorization_url;
     } catch (error) {
       console.error('Payment initialization error:', error);

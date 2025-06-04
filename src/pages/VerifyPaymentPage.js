@@ -15,7 +15,8 @@ export default function VerifyPaymentPage() {
         });
 
         if (res.data.message === 'Payment verified. Access code sent!') {
-          navigate('/payment-success', {
+          // Redirect directly to QuizStartPage with accessCode and phone
+          navigate('/start', {
             state: {
               accessCode: res.data.accessCode,
               phone: res.data.phone,
@@ -30,8 +31,11 @@ export default function VerifyPaymentPage() {
       }
     };
 
-    if (reference) verify();
-    else navigate('/payment-failed');
+    if (reference) {
+      verify();
+    } else {
+      navigate('/payment-failed');
+    }
   }, [reference, navigate]);
 
   return <p>Verifying your payment, please wait...</p>;
