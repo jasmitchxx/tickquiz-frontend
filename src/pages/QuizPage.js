@@ -9,7 +9,9 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code } = user;
 
-  // ? Correct way to retrieve questions from questionsData object
+  const MAX_QUESTIONS = 60;
+
+  // Find the questions for the selected subject
   const subjectQuestions = useMemo(() => {
     return questionsData[subject] || [];
   }, [subject]);
@@ -54,22 +56,15 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions);
+      // Shuffle and limit questions to MAX_QUESTIONS
+      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
   }, [navigate, name, subject, subjectQuestions, code]);
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = {
-      code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions
-    };
+    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
@@ -92,12 +87,7 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [...prev, {
-      question: q.question,
-      selected,
-      correct: q.answer,
-      isCorrect
-    }]);
+    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
@@ -115,7 +105,6 @@ function QuizPage() {
   };
 
   const progressPercent = (timeLeft / 3600) * 100;
-  const currentQuestion = shuffledQuestions[current];
 
   if (finished) {
     return (
@@ -126,9 +115,11 @@ function QuizPage() {
     );
   }
 
+  const currentQuestion = shuffledQuestions[current];
+
   return (
     <div className="max-w-3xl mx-auto p-6">
-      {/* Timer */}
+      {/* Timer Bar */}
       <div className="mb-4">
         <div className="flex justify-between mb-1">
           <span className="text-sm font-medium">Time Left</span>
@@ -142,13 +133,13 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question Display */}
+      {/* Question */}
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
         </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="grid grid-cols-1 gap-3">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {currentQuestion?.options.map((option, index) => (
             <button
               key={index}

@@ -7,9 +7,9 @@ import QuizPage from './pages/QuizPage';
 import PaymentFailedPage from './pages/PaymentFailedPage';
 import UseAccessCodePage from './pages/UseAccessCodePage';
 import QuizStartPage from './pages/QuizStartPage';
-import About from './pages/About'; // ? new
-import Contact from './pages/Contact'; // ? new
-import Header from './components/Header'; // ? new
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<RequestAccessWithPayment />} />
-     <Route path="/select-subject" element={<SubjectSelectionPage />} />
+        <Route path="/use-access-code" element={<UseAccessCodePage />} /> {/* Access code entry page */}
+        <Route path="/select-subject" element={<SubjectSelectionPage />} />
         <Route path="/start" element={<QuizStartPage />} />
         <Route path="/quiz" element={<QuizPage />} />
-        <Route path="/use-access-code" element={<UseAccessCodePage />} /> {/* ? updated */}
         <Route path="/verify" element={<VerifyPaymentPage />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
         <Route path="/payment-failed" element={<PaymentFailedPage />} />

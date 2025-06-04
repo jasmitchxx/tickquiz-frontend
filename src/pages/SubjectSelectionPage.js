@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import questionsData from '../data/questionsData';
 
 function SubjectSelectionPage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('quizUser'));
+    if (!user || !user.code) {
+      // If no user or code found, redirect back to access code page
+      navigate('/use-access-code');
+    }
+  }, [navigate]);
 
   const handleSelectSubject = (subject) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
@@ -20,7 +28,7 @@ function SubjectSelectionPage() {
           <button
             key={index}
             onClick={() => handleSelectSubject(subject)}
-            className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+            className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer"
           >
             {subject}
           </button>

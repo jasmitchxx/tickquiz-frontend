@@ -28,12 +28,12 @@ function UseAccessCodePage() {
           JSON.stringify({
             name: res.data.name || 'Student',
             code: code,
-            // Do NOT set subject here – it will be selected next
+            // Subject will be selected on the next page
           })
         );
 
         setTimeout(() => {
-          navigate('/select-subject'); // ? Redirect to subject selection
+          navigate('/select-subject'); // Redirect to subject selection page
         }, 2000);
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
@@ -45,13 +45,15 @@ function UseAccessCodePage() {
   };
 
   return (
-    <div style={{
-      maxWidth: 400,
-      margin: '2rem auto',
-      padding: '1rem',
-      border: '1px solid #ccc',
-      borderRadius: 8
-    }}>
+    <div
+      style={{
+        maxWidth: 400,
+        margin: '2rem auto',
+        padding: '1rem',
+        border: '1px solid #ccc',
+        borderRadius: 8,
+      }}
+    >
       <h2>Enter Access Code</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -70,16 +72,14 @@ function UseAccessCodePage() {
             backgroundColor: '#28a745',
             color: '#fff',
             border: 'none',
-            borderRadius: 4
+            borderRadius: 4,
           }}
         >
           Submit Code
         </button>
       </form>
       {message && (
-        <p style={{ color: success ? 'green' : 'red', marginTop: 10 }}>
-          {message}
-        </p>
+        <p style={{ color: success ? 'green' : 'red', marginTop: 10 }}>{message}</p>
       )}
     </div>
   );
