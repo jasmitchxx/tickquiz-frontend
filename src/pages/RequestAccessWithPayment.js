@@ -10,11 +10,13 @@ function RequestAccessWithPayment() {
   const [message, setMessage] = useState('');
 
   const API_URL = process.env.REACT_APP_API_URL;
-  console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
 
   useEffect(() => {
-    // Clear any stale user session
-    localStorage.removeItem('quizUser');
+    // ? Only clear quizUser if it's not already set — prevents removal after successful payment
+    const user = JSON.parse(localStorage.getItem('quizUser'));
+    if (!user || !user.code || !user.name || !user.subject) {
+      localStorage.removeItem('quizUser');
+    }
   }, []);
 
   const handlePayment = async () => {
@@ -33,7 +35,13 @@ function RequestAccessWithPayment() {
         phone: countryCode + phone,
       });
 
-      // Redirect user to Paystack for payment
+      // Optionally: store user info temporarily if needed later
+      localStorage.setItem(
+        'pendingUser',
+        JSON.stringify({ name, email, phone: countryCode + phone })
+      );
+
+      // Redirect to Paystack
       window.location.href = response.data.authorization_url;
     } catch (error) {
       console.error('Payment initialization error:', error);
@@ -44,7 +52,15 @@ function RequestAccessWithPayment() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '2rem auto', padding: '1rem', border: '1px solid #ccc', borderRadius: 8 }}>
+    <div
+      style={{
+        maxWidth: 400,
+        margin: '2rem auto',
+        padding: '1rem',
+        border: '1px solid #ccc',
+        borderRadius: 8,
+      }}
+    >
       <h2>Request Access Code & Pay</h2>
       <input
         type="text"
@@ -78,7 +94,14 @@ function RequestAccessWithPayment() {
       <button
         onClick={handlePayment}
         disabled={loading}
-        style={{ width: '100%', padding: '10px', backgroundColor: '#007BFF', color: 'white', border: 'none', borderRadius: 4 }}
+        style={{
+          width: '100%',
+          padding: '10px',
+          backgroundColor: '#007BFF',
+          color: 'white',
+          border: 'none',
+          borderRadius: 4,
+        }}
       >
         {loading ? 'Processing...' : 'Pay 20 GHS & Get Access Code'}
       </button>

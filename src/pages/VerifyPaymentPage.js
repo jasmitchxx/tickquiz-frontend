@@ -15,13 +15,21 @@ export default function VerifyPaymentPage() {
         });
 
         if (res.data.message === 'Payment verified. Access code sent!') {
-          // Redirect directly to QuizStartPage with accessCode and phone
-          navigate('/start', {
-            state: {
-              accessCode: res.data.accessCode,
-              phone: res.data.phone,
-            },
-          });
+          const { accessCode, phone, name, subject } = res.data;
+
+          // ? Save the required fields to localStorage
+          localStorage.setItem(
+            'quizUser',
+            JSON.stringify({
+              code: accessCode,
+              phone,
+              name: name || 'User',
+              subject: subject || 'General',
+            })
+          );
+
+          // ? Redirect to the start page
+          navigate('/start');
         } else {
           navigate('/payment-failed');
         }
@@ -31,11 +39,8 @@ export default function VerifyPaymentPage() {
       }
     };
 
-    if (reference) {
-      verify();
-    } else {
-      navigate('/payment-failed');
-    }
+    if (reference) verify();
+    else navigate('/payment-failed');
   }, [reference, navigate]);
 
   return <p>Verifying your payment, please wait...</p>;
