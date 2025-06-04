@@ -1,16 +1,22 @@
 // src/pages/QuizStartPage.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import questionsData from '../data/questionsData';
 
 function QuizStartPage() {
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const [selectedSubject, setSelectedSubject] = useState('');
+  const subjects = Object.keys(questionsData);
 
   const handleStartQuiz = () => {
-    navigate('/use-access-code');  // Redirect to access code input page
+    if (!selectedSubject) return alert('Please select a subject');
+    localStorage.setItem(
+      'quizUser',
+      JSON.stringify({ ...user, subject: selectedSubject })
+    );
+    navigate('/quiz');
   };
-
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject } = user;
 
   if (!user.code) {
     return (
@@ -23,8 +29,23 @@ function QuizStartPage() {
 
   return (
     <div style={{ maxWidth: 400, margin: '2rem auto', textAlign: 'center' }}>
-      <h2>Welcome, {name || 'Student'}</h2>
-      <p>Subject: {subject || 'General'}</p>
+      <h2>Welcome, {user.name || 'Student'}</h2>
+      <label htmlFor="subject-select">Select Subject:</label>
+      <br />
+      <select
+        id="subject-select"
+        value={selectedSubject}
+        onChange={(e) => setSelectedSubject(e.target.value)}
+        style={{ padding: '10px', margin: '10px 0', width: '100%' }}
+      >
+        <option value="">-- Choose a Subject --</option>
+        {subjects.map((subj) => (
+          <option key={subj} value={subj}>
+            {subj}
+          </option>
+        ))}
+      </select>
+      <br />
       <button
         onClick={handleStartQuiz}
         style={{
@@ -34,7 +55,7 @@ function QuizStartPage() {
           color: 'white',
           border: 'none',
           borderRadius: '5px',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
       >
         Start Quiz

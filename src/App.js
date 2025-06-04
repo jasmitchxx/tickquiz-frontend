@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RequestAccessWithPayment from './pages/RequestAccessWithPayment';
 import VerifyPaymentPage from './pages/VerifyPaymentPage';
+import SubjectSelectionPage from './pages/SubjectSelectionPage';
 import PaymentSuccessPage from './pages/PaymentSuccessPage';
 import QuizPage from './pages/QuizPage';
 import PaymentFailedPage from './pages/PaymentFailedPage';
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<RequestAccessWithPayment />} />
+     <Route path="/select-subject" element={<SubjectSelectionPage />} />
         <Route path="/start" element={<QuizStartPage />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/use-access-code" element={<UseAccessCodePage />} /> {/* ? updated */}

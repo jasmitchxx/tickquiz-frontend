@@ -27,13 +27,13 @@ function UseAccessCodePage() {
           'quizUser',
           JSON.stringify({
             name: res.data.name || 'Student',
-            subject: res.data.subject || 'Mathematics',
-            code: code
+            code: code,
+            // Do NOT set subject here – it will be selected next
           })
         );
 
         setTimeout(() => {
-          navigate('/quiz');
+          navigate('/select-subject'); // ? Redirect to subject selection
         }, 2000);
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');

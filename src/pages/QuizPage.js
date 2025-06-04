@@ -9,11 +9,10 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code } = user;
 
-  const subjectData = useMemo(() => {
-    return questionsData.find(s => s.subject === subject);
+  // ? Correct way to retrieve questions from questionsData object
+  const subjectQuestions = useMemo(() => {
+    return questionsData[subject] || [];
   }, [subject]);
-
-  const subjectQuestions = useMemo(() => subjectData?.questions || [], [subjectData]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -62,7 +61,15 @@ function QuizPage() {
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
+    const progress = {
+      code,
+      current,
+      answers,
+      score,
+      timeLeft,
+      finished,
+      questions: shuffledQuestions
+    };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
@@ -85,7 +92,12 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
+    setAnswers(prev => [...prev, {
+      question: q.question,
+      selected,
+      correct: q.answer,
+      isCorrect
+    }]);
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
@@ -103,6 +115,7 @@ function QuizPage() {
   };
 
   const progressPercent = (timeLeft / 3600) * 100;
+  const currentQuestion = shuffledQuestions[current];
 
   if (finished) {
     return (
@@ -113,11 +126,9 @@ function QuizPage() {
     );
   }
 
-  const currentQuestion = shuffledQuestions[current];
-
   return (
     <div className="max-w-3xl mx-auto p-6">
-      {/* Timer Bar */}
+      {/* Timer */}
       <div className="mb-4">
         <div className="flex justify-between mb-1">
           <span className="text-sm font-medium">Time Left</span>
@@ -131,7 +142,7 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question */}
+      {/* Question Display */}
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
