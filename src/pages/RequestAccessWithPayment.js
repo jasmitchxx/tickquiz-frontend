@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 function RequestAccessWithPayment() {
   const [name, setName] = useState('');
@@ -10,7 +9,6 @@ function RequestAccessWithPayment() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
   console.log('Paystack Key:', process.env.REACT_APP_PAYSTACK_PUBLIC_KEY);
 
