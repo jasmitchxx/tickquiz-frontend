@@ -1,5 +1,6 @@
+// src/pages/VerifyPaymentPage.js
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function VerifyPaymentPage() {
@@ -17,7 +18,6 @@ export default function VerifyPaymentPage() {
         if (res.data.message === 'Payment verified. Access code sent!') {
           const { accessCode, phone, name, subject } = res.data;
 
-          // ? Save the required fields to localStorage
           localStorage.setItem(
             'quizUser',
             JSON.stringify({
@@ -28,7 +28,6 @@ export default function VerifyPaymentPage() {
             })
           );
 
-          // ? Redirect to the start page
           navigate('/start');
         } else {
           navigate('/payment-failed');

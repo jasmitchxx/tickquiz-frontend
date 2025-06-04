@@ -1,3 +1,4 @@
+// src/pages/QuizPage.js
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -17,7 +18,7 @@ function QuizPage() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60);
+  const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
 
@@ -95,59 +96,59 @@ function QuizPage() {
   };
 
   const formatTime = () => {
-    const mins = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-    const secs = (timeLeft % 60).toString().padStart(2, '0');
+    const safeTime = Number.isFinite(timeLeft) ? timeLeft : 0;
+    const mins = Math.floor(safeTime / 60).toString().padStart(2, '0');
+    const secs = (safeTime % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
 
-  if (shuffledQuestions.length === 0) return <p style={{ textAlign: 'center' }}>Loading questions...</p>;
+  const progressPercent = (timeLeft / 3600) * 100;
 
   if (finished) {
     return (
-      <div style={{ maxWidth: 800, margin: '2rem auto' }}>
-        <h2>Quiz Completed</h2>
-        <p><strong>{name}</strong>, your score: {score} / {shuffledQuestions.length}</p>
-        <h3>Review Answers</h3>
-        {answers.map((a, idx) => (
-          <div key={idx} style={{ marginBottom: 10, borderBottom: '1px solid #ccc', paddingBottom: 10 }}>
-            <p><strong>Q{idx + 1}:</strong> {a.question}</p>
-            <p style={{ color: a.isCorrect ? 'green' : 'red' }}>
-              Your Answer: {a.selected} {a.isCorrect ? '?' : '?'}
-            </p>
-            {!a.isCorrect && <p>Correct Answer: {a.correct}</p>}
-          </div>
-        ))}
+      <div className="p-6 text-center">
+        <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
+        <p className="text-xl">Score: {score} / {shuffledQuestions.length}</p>
       </div>
     );
   }
 
-  const q = shuffledQuestions[current];
+  const currentQuestion = shuffledQuestions[current];
 
   return (
-    <div style={{ maxWidth: 700, margin: '2rem auto' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <h3>Question {current + 1} / {shuffledQuestions.length}</h3>
-        <h3>Time Left: {formatTime()}</h3>
+    <div className="max-w-3xl mx-auto p-6">
+      {/* Timer Bar */}
+      <div className="mb-4">
+        <div className="flex justify-between mb-1">
+          <span className="text-sm font-medium">Time Left</span>
+          <span className="text-sm font-mono">{formatTime()}</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-4">
+          <div
+            className="bg-green-500 h-4 rounded-full transition-all duration-500"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
       </div>
-      <h4>{q.question}</h4>
-      {q.options.map(option => (
-        <button
-          key={option}
-          onClick={() => handleAnswer(option)}
-          style={{
-            display: 'block',
-            width: '100%',
-            padding: 10,
-            marginBottom: 8,
-            backgroundColor: '#f1f1f1',
-            border: '1px solid #ccc',
-            borderRadius: 5,
-            textAlign: 'left',
-          }}
-        >
-          {option}
-        </button>
-      ))}
+
+      {/* Question */}
+      <div className="mb-6">
+        <h2 className="text-xl font-semibold mb-4">
+          Question {current + 1} of {shuffledQuestions.length}
+        </h2>
+        <p className="text-lg mb-4">{currentQuestion?.question}</p>
+        <div className="grid grid-cols-1 gap-3">
+          {currentQuestion?.options.map((option, index) => (
+            <button
+              key={index}
+              className="bg-white border rounded-lg px-4 py-2 text-left shadow hover:bg-gray-100"
+              onClick={() => handleAnswer(option)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

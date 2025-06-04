@@ -1,3 +1,4 @@
+// src/pages/UseAccessCodePage.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -22,17 +23,15 @@ function UseAccessCodePage() {
         setMessage(res.data.message);
         setSuccess(true);
 
-        // ? Save user info to localStorage
         localStorage.setItem(
           'quizUser',
           JSON.stringify({
-            name: res.data.name || 'Student',         // fallback to 'Student' if not provided
-            subject: res.data.subject || 'Mathematics', // fallback subject if not provided
+            name: res.data.name || 'Student',
+            subject: res.data.subject || 'Mathematics',
             code: code
           })
         );
 
-        // ? Redirect to quiz page
         setTimeout(() => {
           navigate('/quiz');
         }, 2000);

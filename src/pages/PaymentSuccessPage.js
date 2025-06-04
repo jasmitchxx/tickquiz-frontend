@@ -1,3 +1,4 @@
+// src/pages/PaymentSuccessPage.js
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -9,7 +10,7 @@ export default function PaymentSuccessPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/use-code');
-    }, 5000); // Redirect after 5 seconds
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
