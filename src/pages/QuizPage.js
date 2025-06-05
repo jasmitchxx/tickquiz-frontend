@@ -36,7 +36,7 @@ function QuizPage() {
         setCurrent((prev) => prev + 1);
         setSelected(null);
         setFade(true); // Fade-in new question
-      }, 200);
+      }, 300); // Match fade transition duration
     } else {
       setQuizDone(true);
     }
@@ -91,12 +91,17 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '300px' }}>
+    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '350px', position: 'relative' }}>
       <div
         style={{
           opacity: fade ? 1 : 0,
           transition: 'opacity 0.3s ease-in-out',
-          minHeight: '220px',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          minHeight: '350px',
+          pointerEvents: fade ? 'auto' : 'none',
         }}
       >
         <h3>Question {current + 1} of {questions.length}</h3>
@@ -128,6 +133,8 @@ function QuizPage() {
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
+          position: 'relative',
+          zIndex: 1,
         }}
       >
         {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
