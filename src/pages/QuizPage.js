@@ -17,11 +17,10 @@ function QuizPage() {
       return;
     }
 
-    // Get random 60 non-repeating questions from subject
     const all = questionsData[user.subject] || [];
     const shuffled = [...all].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 60);
-    setQuestions(selected);
+    const selectedQuestions = shuffled.slice(0, 60);
+    setQuestions(selectedQuestions);
   }, [navigate, user]);
 
   const handleAnswer = () => {
@@ -51,13 +50,8 @@ function QuizPage() {
     return { grade: 'F9', remark: 'Fail' };
   };
 
-  if (!user || !user.subject) {
-    return <p>Loading user data...</p>;
-  }
-
-  if (questions.length === 0) {
-    return <p>Loading questions...</p>;
-  }
+  if (!user || !user.subject) return <p>Loading user data...</p>;
+  if (questions.length === 0) return <p>Loading questions...</p>;
 
   if (quizDone) {
     const percentage = Math.round((score / questions.length) * 100);
@@ -93,14 +87,18 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto' }}>
-      <h3>
+    <div style={{ maxWidth: 600, margin: '2rem auto', padding: '1rem', border: '1px solid #ddd', borderRadius: '8px' }}>
+      <h3 style={{ marginBottom: '1rem' }}>
         Question {current + 1} of {questions.length}
       </h3>
-      <p>{currentQuestion.question}</p>
-      <div>
+
+      <div style={{ minHeight: '120px', marginBottom: '1rem', transition: 'all 0.3s ease' }}>
+        <p style={{ fontSize: '1.1rem', fontWeight: '500' }}>{currentQuestion.question}</p>
+      </div>
+
+      <div style={{ marginBottom: '1rem' }}>
         {currentQuestion.options.map((opt, idx) => (
-          <div key={idx}>
+          <div key={idx} style={{ marginBottom: '0.5rem' }}>
             <label>
               <input
                 type="radio"
@@ -108,22 +106,25 @@ function QuizPage() {
                 value={opt}
                 checked={selected === opt}
                 onChange={() => setSelected(opt)}
-              />{' '}
+                style={{ marginRight: '0.5rem' }}
+              />
               {opt}
             </label>
           </div>
         ))}
       </div>
+
       <button
         onClick={handleAnswer}
+        disabled={selected === null}
         style={{
-          marginTop: '1rem',
           padding: '10px 20px',
-          backgroundColor: '#28a745',
+          backgroundColor: selected === null ? '#aaa' : '#28a745',
           color: '#fff',
           border: 'none',
           borderRadius: '5px',
-          cursor: 'pointer'
+          cursor: selected === null ? 'not-allowed' : 'pointer',
+          transition: 'background-color 0.2s ease',
         }}
       >
         {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
