@@ -11,7 +11,6 @@ function QuizPage() {
 
   const MAX_QUESTIONS = 60;
 
-  // Find the questions for the selected subject
   const subjectQuestions = useMemo(() => {
     return questionsData[subject] || [];
   }, [subject]);
@@ -19,9 +18,10 @@ function QuizPage() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes
+  const [timeLeft, setTimeLeft] = useState(60 * 60);
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
+  const [reviewing, setReviewing] = useState(false);
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -56,7 +56,6 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      // Shuffle and limit questions to MAX_QUESTIONS
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
@@ -106,11 +105,78 @@ function QuizPage() {
 
   const progressPercent = (timeLeft / 3600) * 100;
 
-  if (finished) {
+  const getGrade = (percentage) => {
+    if (percentage >= 99) return { grade: 'A+', level: 'Advanced' };
+    if (percentage >= 96) return { grade: 'A', level: 'Advanced' };
+    if (percentage >= 93) return { grade: 'A-', level: 'Advanced' };
+    if (percentage >= 90) return { grade: 'B+', level: 'Proficient' };
+    if (percentage >= 87) return { grade: 'B', level: 'Proficient' };
+    if (percentage >= 84) return { grade: 'B-', level: 'Proficient' };
+    if (percentage >= 81) return { grade: 'C+', level: 'Developing' };
+    if (percentage >= 78) return { grade: 'C', level: 'Developing' };
+    if (percentage >= 75) return { grade: 'C-', level: 'Developing' };
+    if (percentage >= 73) return { grade: 'D', level: 'Beginning' };
+    if (percentage >= 65) return { grade: 'D-', level: 'Beginning' };
+    return { grade: 'F', level: 'Insufficient' };
+  };
+
+  if (finished && !reviewing) {
+    const percentage = Math.round((score / shuffledQuestions.length) * 100);
+    const { grade, level } = getGrade(percentage);
     return (
-      <div className="p-6 text-center">
+      <div className="p-6 text-center bg-blue-100 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
-        <p className="text-xl">Score: {score} / {shuffledQuestions.length}</p>
+        <p className="text-lg">Name: <strong>{name}</strong></p>
+        <p className="text-lg">Subject: <strong>{subject}</strong></p>
+        <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
+        <p className="text-xl mt-2">Grade: <strong>{grade}</strong> - <em>{level}</em></p>
+
+        <div className="mt-6 space-x-4">
+          <button
+            className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+            onClick={() => setReviewing(true)}
+          >
+            Review Answers
+          </button>
+          <button
+            className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+            onClick={() => navigate('/start')}
+          >
+            Start Over
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (reviewing) {
+    return (
+      <div className="p-6 bg-blue-100 min-h-screen">
+        <h2 className="text-2xl font-bold mb-4 text-center">Review Answers</h2>
+        {answers.map((item, index) => (
+          <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
+            <p className="font-semibold">{index + 1}. {item.question}</p>
+            <p>
+              Your answer:{" "}
+              <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
+                {item.selected}
+              </span>
+            </p>
+            {!item.isCorrect && (
+              <p>
+                Correct answer: <span className="text-green-600">{item.correct}</span>
+              </p>
+            )}
+          </div>
+        ))}
+        <div className="text-center mt-6">
+          <button
+            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={() => navigate('/start')}
+          >
+            Return to Start
+          </button>
+        </div>
       </div>
     );
   }
@@ -118,8 +184,7 @@ function QuizPage() {
   const currentQuestion = shuffledQuestions[current];
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      {/* Timer Bar */}
+    <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
       <div className="mb-4">
         <div className="flex justify-between mb-1">
           <span className="text-sm font-medium">Time Left</span>
@@ -133,13 +198,12 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question */}
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
         </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div className="flex flex-col gap-3">
           {currentQuestion?.options.map((option, index) => (
             <button
               key={index}
