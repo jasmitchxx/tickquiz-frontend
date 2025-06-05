@@ -11,6 +11,7 @@ function QuizPage() {
   const [score, setScore] = useState(0);
   const [quizDone, setQuizDone] = useState(false);
 
+  // Select 60 non-repeating random questions only once
   useEffect(() => {
     if (!user || !user.subject) {
       navigate('/start');
@@ -18,20 +19,19 @@ function QuizPage() {
     }
 
     const all = questionsData[user.subject] || [];
-    const shuffled = [...all].sort(() => 0.5 - Math.random());
-    const selectedQuestions = shuffled.slice(0, 60);
-    setQuestions(selectedQuestions);
+    const uniqueQuestions = [...all].sort(() => Math.random() - 0.5).slice(0, 60);
+    setQuestions(uniqueQuestions);
   }, [navigate, user]);
 
   const handleAnswer = () => {
     if (selected === null) return;
 
     if (questions[current].answer === selected) {
-      setScore(score + 1);
+      setScore(prev => prev + 1);
     }
 
     if (current + 1 < questions.length) {
-      setCurrent(current + 1);
+      setCurrent(prev => prev + 1);
       setSelected(null);
     } else {
       setQuizDone(true);
@@ -50,8 +50,13 @@ function QuizPage() {
     return { grade: 'F9', remark: 'Fail' };
   };
 
-  if (!user || !user.subject) return <p>Loading user data...</p>;
-  if (questions.length === 0) return <p>Loading questions...</p>;
+  if (!user || !user.subject) {
+    return <p style={{ textAlign: 'center' }}>Loading user data...</p>;
+  }
+
+  if (questions.length === 0) {
+    return <p style={{ textAlign: 'center' }}>Loading questions...</p>;
+  }
 
   if (quizDone) {
     const percentage = Math.round((score / questions.length) * 100);
@@ -87,44 +92,46 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto', padding: '1rem', border: '1px solid #ddd', borderRadius: '8px' }}>
-      <h3 style={{ marginBottom: '1rem' }}>
-        Question {current + 1} of {questions.length}
-      </h3>
-
-      <div style={{ minHeight: '120px', marginBottom: '1rem', transition: 'all 0.3s ease' }}>
-        <p style={{ fontSize: '1.1rem', fontWeight: '500' }}>{currentQuestion.question}</p>
-      </div>
-
+    <div
+      key={current} // Ensure a stable layout per question
+      style={{
+        maxWidth: 600,
+        margin: '2rem auto',
+        padding: '1rem',
+        border: '1px solid #ddd',
+        borderRadius: 8,
+        backgroundColor: '#fff',
+        transition: 'all 0.3s ease-in-out'
+      }}
+    >
+      <h3>Question {current + 1} of {questions.length}</h3>
+      <p style={{ minHeight: '60px' }}>{currentQuestion.question}</p>
       <div style={{ marginBottom: '1rem' }}>
         {currentQuestion.options.map((opt, idx) => (
-          <div key={idx} style={{ marginBottom: '0.5rem' }}>
+          <div key={idx} style={{ marginBottom: 8 }}>
             <label>
               <input
                 type="radio"
-                name="option"
+                name={`question-${current}`}
                 value={opt}
                 checked={selected === opt}
                 onChange={() => setSelected(opt)}
-                style={{ marginRight: '0.5rem' }}
+                style={{ marginRight: 8 }}
               />
               {opt}
             </label>
           </div>
         ))}
       </div>
-
       <button
         onClick={handleAnswer}
-        disabled={selected === null}
         style={{
           padding: '10px 20px',
-          backgroundColor: selected === null ? '#aaa' : '#28a745',
+          backgroundColor: '#28a745',
           color: '#fff',
           border: 'none',
           borderRadius: '5px',
-          cursor: selected === null ? 'not-allowed' : 'pointer',
-          transition: 'background-color 0.2s ease',
+          cursor: 'pointer'
         }}
       >
         {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
