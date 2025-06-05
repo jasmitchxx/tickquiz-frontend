@@ -10,7 +10,6 @@ function QuizPage() {
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [quizDone, setQuizDone] = useState(false);
-  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     if (!user || !user.subject) {
@@ -23,27 +22,19 @@ function QuizPage() {
     setQuestions(shuffled);
   }, [navigate, user]);
 
-  // Automatically handle answer selection and move to next question
-  const handleSelect = (option) => {
-    if (selected !== null) return; // prevent multiple selections quickly
+  const handleAnswer = () => {
+    if (selected === null) return;
 
-    setSelected(option);
-
-    if (questions[current].answer === option) {
+    if (questions[current].answer === selected) {
       setScore((prev) => prev + 1);
     }
 
-    setFade(false); // Start fade-out
-
-    setTimeout(() => {
-      if (current + 1 < questions.length) {
-        setCurrent((prev) => prev + 1);
-        setSelected(null);
-        setFade(true); // Fade-in new question
-      } else {
-        setQuizDone(true);
-      }
-    }, 500); // delay for fade animation (adjust if needed)
+    if (current + 1 < questions.length) {
+      setCurrent((prev) => prev + 1);
+      setSelected(null);
+    } else {
+      setQuizDone(true);
+    }
   };
 
   const getGrade = (percentage) => {
@@ -83,7 +74,7 @@ function QuizPage() {
             color: '#fff',
             border: 'none',
             borderRadius: '5px',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           Take Another Quiz
@@ -95,34 +86,39 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '300px' }}>
-      <div
+    <div style={{ maxWidth: 600, margin: '2rem auto' }}>
+      <h3>Question {current + 1} of {questions.length}</h3>
+      <p>{currentQuestion.question}</p>
+      <div>
+        {currentQuestion.options.map((opt, idx) => (
+          <div key={idx}>
+            <label>
+              <input
+                type="radio"
+                name="option"
+                value={opt}
+                checked={selected === opt}
+                onChange={() => setSelected(opt)}
+              />{' '}
+              {opt}
+            </label>
+          </div>
+        ))}
+      </div>
+      <button
+        onClick={handleAnswer}
         style={{
-          opacity: fade ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out',
-          minHeight: '220px',
+          marginTop: '1rem',
+          padding: '10px 20px',
+          backgroundColor: '#28a745',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer'
         }}
       >
-        <h3>Question {current + 1} of {questions.length}</h3>
-        <p>{currentQuestion.question}</p>
-        <div>
-          {currentQuestion.options.map((opt, idx) => (
-            <div key={idx}>
-              <label style={{ cursor: selected === null ? 'pointer' : 'default' }}>
-                <input
-                  type="radio"
-                  name="option"
-                  value={opt}
-                  checked={selected === opt}
-                  onChange={() => handleSelect(opt)}
-                  disabled={selected !== null} // disable after selection
-                />{' '}
-                {opt}
-              </label>
-            </div>
-          ))}
-        </div>
-      </div>
+        {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
+      </button>
     </div>
   );
 }
