@@ -11,7 +11,6 @@ function QuizPage() {
   const [score, setScore] = useState(0);
   const [quizDone, setQuizDone] = useState(false);
 
-  // Select 60 non-repeating random questions only once
   useEffect(() => {
     if (!user || !user.subject) {
       navigate('/start');
@@ -19,8 +18,9 @@ function QuizPage() {
     }
 
     const all = questionsData[user.subject] || [];
-    const uniqueQuestions = [...all].sort(() => Math.random() - 0.5).slice(0, 60);
-    setQuestions(uniqueQuestions);
+    const unique = [...new Set(all.map(q => JSON.stringify(q)))].map(q => JSON.parse(q)); // Ensure uniqueness
+    const shuffled = unique.sort(() => 0.5 - Math.random()).slice(0, 60);
+    setQuestions(shuffled);
   }, [navigate, user]);
 
   const handleAnswer = () => {
@@ -50,20 +50,14 @@ function QuizPage() {
     return { grade: 'F9', remark: 'Fail' };
   };
 
-  if (!user || !user.subject) {
-    return <p style={{ textAlign: 'center' }}>Loading user data...</p>;
-  }
-
-  if (questions.length === 0) {
-    return <p style={{ textAlign: 'center' }}>Loading questions...</p>;
-  }
+  if (!user || !user.subject) return <p>Loading user data...</p>;
+  if (questions.length === 0) return <p>Loading questions...</p>;
 
   if (quizDone) {
     const percentage = Math.round((score / questions.length) * 100);
     const { grade, remark } = getGrade(percentage);
-
     return (
-      <div style={{ maxWidth: 500, margin: '2rem auto', textAlign: 'center' }}>
+      <div style={styles.container}>
         <h2>Quiz Completed</h2>
         <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Subject:</strong> {user.subject}</p>
@@ -71,20 +65,7 @@ function QuizPage() {
         <p><strong>Percentage:</strong> {percentage}%</p>
         <p><strong>Grade:</strong> {grade}</p>
         <p><strong>Remark:</strong> {remark}</p>
-        <button
-          onClick={() => navigate('/start')}
-          style={{
-            marginTop: '1rem',
-            padding: '10px 20px',
-            backgroundColor: '#007BFF',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer'
-          }}
-        >
-          Take Another Quiz
-        </button>
+        <button onClick={() => navigate('/start')} style={styles.buttonPrimary}>Take Another Quiz</button>
       </div>
     );
   }
@@ -92,52 +73,71 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div
-      key={current} // Ensure a stable layout per question
-      style={{
-        maxWidth: 600,
-        margin: '2rem auto',
-        padding: '1rem',
-        border: '1px solid #ddd',
-        borderRadius: 8,
-        backgroundColor: '#fff',
-        transition: 'all 0.3s ease-in-out'
-      }}
-    >
+    <div style={styles.container}>
       <h3>Question {current + 1} of {questions.length}</h3>
-      <p style={{ minHeight: '60px' }}>{currentQuestion.question}</p>
-      <div style={{ marginBottom: '1rem' }}>
-        {currentQuestion.options.map((opt, idx) => (
-          <div key={idx} style={{ marginBottom: 8 }}>
-            <label>
-              <input
-                type="radio"
-                name={`question-${current}`}
-                value={opt}
-                checked={selected === opt}
-                onChange={() => setSelected(opt)}
-                style={{ marginRight: 8 }}
-              />
-              {opt}
-            </label>
-          </div>
-        ))}
+      <div style={styles.questionBox}>
+        <p style={styles.questionText}>{currentQuestion.question}</p>
+        <div>
+          {currentQuestion.options.map((opt, idx) => (
+            <div key={idx} style={{ marginBottom: 8 }}>
+              <label>
+                <input
+                  type="radio"
+                  name="option"
+                  value={opt}
+                  checked={selected === opt}
+                  onChange={() => setSelected(opt)}
+                  style={{ marginRight: 8 }}
+                />
+                {opt}
+              </label>
+            </div>
+          ))}
+        </div>
       </div>
-      <button
-        onClick={handleAnswer}
-        style={{
-          padding: '10px 20px',
-          backgroundColor: '#28a745',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer'
-        }}
-      >
+      <button onClick={handleAnswer} style={styles.buttonGreen}>
         {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
       </button>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    maxWidth: 600,
+    margin: '2rem auto',
+    padding: '1.5rem',
+    borderRadius: 8,
+    border: '1px solid #ccc',
+    backgroundColor: '#fdfdfd',
+    minHeight: 400,
+    transition: 'all 0.3s ease'
+  },
+  questionBox: {
+    marginBottom: '1rem',
+    minHeight: '100px' // Prevent height shifting
+  },
+  questionText: {
+    marginBottom: '1rem',
+    fontSize: '1.1rem',
+    fontWeight: '500'
+  },
+  buttonGreen: {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer'
+  },
+  buttonPrimary: {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer'
+  }
+};
 
 export default QuizPage;
