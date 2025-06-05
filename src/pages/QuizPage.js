@@ -1,156 +1,133 @@
-// src/pages/QuizPage.js
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import questionsData from '../data/questionsData';
 
 function QuizPage() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code } = user;
-
-  const MAX_QUESTIONS = 60;
-
-  // Find the questions for the selected subject
-  const subjectQuestions = useMemo(() => {
-    return questionsData[subject] || [];
-  }, [subject]);
-
+  const user = JSON.parse(localStorage.getItem('quizUser'));
+  const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState([]);
+  const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes
-  const [finished, setFinished] = useState(false);
-  const [shuffledQuestions, setShuffledQuestions] = useState([]);
-
-  const shuffleArray = (arr) => {
-    const array = [...arr];
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
-
-  const endQuiz = useCallback(async () => {
-    setFinished(true);
-    try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-    } catch (err) {
-      console.error('Failed to update usage:', err);
-    }
-  }, [code]);
+  const [quizDone, setQuizDone] = useState(false);
 
   useEffect(() => {
-    if (!name || !subject || subjectQuestions.length === 0) {
-      navigate('/');
+    if (!user || !user.subject) {
+      navigate('/start');
       return;
     }
 
-    const saved = JSON.parse(localStorage.getItem('quizProgress'));
-    if (saved && saved.code === code) {
-      setCurrent(saved.current);
-      setAnswers(saved.answers);
-      setScore(saved.score);
-      setTimeLeft(saved.timeLeft);
-      setFinished(saved.finished);
-      setShuffledQuestions(saved.questions);
-    } else {
-      // Shuffle and limit questions to MAX_QUESTIONS
-      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
-      setShuffledQuestions(shuffled);
+    // Get random 60 non-repeating questions from subject
+    const all = questionsData[user.subject] || [];
+    const shuffled = [...all].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 60);
+    setQuestions(selected);
+  }, [navigate, user]);
+
+  const handleAnswer = () => {
+    if (selected === null) return;
+
+    if (questions[current].answer === selected) {
+      setScore(score + 1);
     }
-  }, [navigate, name, subject, subjectQuestions, code]);
 
-  useEffect(() => {
-    if (!code || shuffledQuestions.length === 0) return;
-    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
-    localStorage.setItem('quizProgress', JSON.stringify(progress));
-  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
-
-  useEffect(() => {
-    if (finished) return;
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          endQuiz();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [finished, endQuiz]);
-
-  const handleAnswer = (selected) => {
-    const q = shuffledQuestions[current];
-    const isCorrect = selected === q.answer;
-
-    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
-    if (isCorrect) setScore(prev => prev + 1);
-
-    if (current + 1 === shuffledQuestions.length) {
-      endQuiz();
-    } else {
+    if (current + 1 < questions.length) {
       setCurrent(current + 1);
+      setSelected(null);
+    } else {
+      setQuizDone(true);
     }
   };
 
-  const formatTime = () => {
-    const safeTime = Number.isFinite(timeLeft) ? timeLeft : 0;
-    const mins = Math.floor(safeTime / 60).toString().padStart(2, '0');
-    const secs = (safeTime % 60).toString().padStart(2, '0');
-    return `${mins}:${secs}`;
+  const getGrade = (percentage) => {
+    if (percentage >= 75) return { grade: 'A1', remark: 'Excellent' };
+    if (percentage >= 70) return { grade: 'B2', remark: 'Very Good' };
+    if (percentage >= 65) return { grade: 'B3', remark: 'Good' };
+    if (percentage >= 60) return { grade: 'C4', remark: 'Credit' };
+    if (percentage >= 55) return { grade: 'C5', remark: 'Credit' };
+    if (percentage >= 50) return { grade: 'C6', remark: 'Credit' };
+    if (percentage >= 45) return { grade: 'D7', remark: 'Pass' };
+    if (percentage >= 40) return { grade: 'E8', remark: 'Pass' };
+    return { grade: 'F9', remark: 'Fail' };
   };
 
-  const progressPercent = (timeLeft / 3600) * 100;
+  if (!user || !user.subject) {
+    return <p>Loading user data...</p>;
+  }
 
-  if (finished) {
+  if (questions.length === 0) {
+    return <p>Loading questions...</p>;
+  }
+
+  if (quizDone) {
+    const percentage = Math.round((score / questions.length) * 100);
+    const { grade, remark } = getGrade(percentage);
+
     return (
-      <div className="p-6 text-center">
-        <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
-        <p className="text-xl">Score: {score} / {shuffledQuestions.length}</p>
+      <div style={{ maxWidth: 500, margin: '2rem auto', textAlign: 'center' }}>
+        <h2>Quiz Completed</h2>
+        <p><strong>Name:</strong> {user.name}</p>
+        <p><strong>Subject:</strong> {user.subject}</p>
+        <p><strong>Score:</strong> {score} / {questions.length}</p>
+        <p><strong>Percentage:</strong> {percentage}%</p>
+        <p><strong>Grade:</strong> {grade}</p>
+        <p><strong>Remark:</strong> {remark}</p>
+        <button
+          onClick={() => navigate('/start')}
+          style={{
+            marginTop: '1rem',
+            padding: '10px 20px',
+            backgroundColor: '#007BFF',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        >
+          Take Another Quiz
+        </button>
       </div>
     );
   }
 
-  const currentQuestion = shuffledQuestions[current];
+  const currentQuestion = questions[current];
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      {/* Timer Bar */}
-      <div className="mb-4">
-        <div className="flex justify-between mb-1">
-          <span className="text-sm font-medium">Time Left</span>
-          <span className="text-sm font-mono">{formatTime()}</span>
-        </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
-          <div
-            className="bg-green-500 h-4 rounded-full transition-all duration-500"
-            style={{ width: `${progressPercent}%` }}
-          />
-        </div>
+    <div style={{ maxWidth: 600, margin: '2rem auto' }}>
+      <h3>
+        Question {current + 1} of {questions.length}
+      </h3>
+      <p>{currentQuestion.question}</p>
+      <div>
+        {currentQuestion.options.map((opt, idx) => (
+          <div key={idx}>
+            <label>
+              <input
+                type="radio"
+                name="option"
+                value={opt}
+                checked={selected === opt}
+                onChange={() => setSelected(opt)}
+              />{' '}
+              {opt}
+            </label>
+          </div>
+        ))}
       </div>
-
-      {/* Question */}
-      <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
-        </h2>
-        <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {currentQuestion?.options.map((option, index) => (
-            <button
-              key={index}
-              className="bg-white border rounded-lg px-4 py-2 text-left shadow hover:bg-gray-100"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
+      <button
+        onClick={handleAnswer}
+        style={{
+          marginTop: '1rem',
+          padding: '10px 20px',
+          backgroundColor: '#28a745',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}
+      >
+        {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
+      </button>
     </div>
   );
 }
