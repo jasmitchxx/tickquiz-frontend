@@ -23,23 +23,27 @@ function QuizPage() {
     setQuestions(shuffled);
   }, [navigate, user]);
 
-  const handleAnswer = () => {
-    if (selected === null) return;
+  // Automatically handle answer selection and move to next question
+  const handleSelect = (option) => {
+    if (selected !== null) return; // prevent multiple selections quickly
 
-    if (questions[current].answer === selected) {
+    setSelected(option);
+
+    if (questions[current].answer === option) {
       setScore((prev) => prev + 1);
     }
 
-    if (current + 1 < questions.length) {
-      setFade(false); // Start fade-out
-      setTimeout(() => {
+    setFade(false); // Start fade-out
+
+    setTimeout(() => {
+      if (current + 1 < questions.length) {
         setCurrent((prev) => prev + 1);
         setSelected(null);
         setFade(true); // Fade-in new question
-      }, 300); // Match fade transition duration
-    } else {
-      setQuizDone(true);
-    }
+      } else {
+        setQuizDone(true);
+      }
+    }, 500); // delay for fade animation (adjust if needed)
   };
 
   const getGrade = (percentage) => {
@@ -79,7 +83,7 @@ function QuizPage() {
             color: '#fff',
             border: 'none',
             borderRadius: '5px',
-            cursor: 'pointer'
+            cursor: 'pointer',
           }}
         >
           Take Another Quiz
@@ -91,17 +95,12 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '350px', position: 'relative' }}>
+    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '300px' }}>
       <div
         style={{
           opacity: fade ? 1 : 0,
           transition: 'opacity 0.3s ease-in-out',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          minHeight: '350px',
-          pointerEvents: fade ? 'auto' : 'none',
+          minHeight: '220px',
         }}
       >
         <h3>Question {current + 1} of {questions.length}</h3>
@@ -109,13 +108,14 @@ function QuizPage() {
         <div>
           {currentQuestion.options.map((opt, idx) => (
             <div key={idx}>
-              <label>
+              <label style={{ cursor: selected === null ? 'pointer' : 'default' }}>
                 <input
                   type="radio"
                   name="option"
                   value={opt}
                   checked={selected === opt}
-                  onChange={() => setSelected(opt)}
+                  onChange={() => handleSelect(opt)}
+                  disabled={selected !== null} // disable after selection
                 />{' '}
                 {opt}
               </label>
@@ -123,22 +123,6 @@ function QuizPage() {
           ))}
         </div>
       </div>
-      <button
-        onClick={handleAnswer}
-        style={{
-          marginTop: '1rem',
-          padding: '10px 20px',
-          backgroundColor: '#28a745',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          position: 'relative',
-          zIndex: 1,
-        }}
-      >
-        {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
-      </button>
     </div>
   );
 }
