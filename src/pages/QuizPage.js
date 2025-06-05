@@ -18,14 +18,15 @@ function QuizPage() {
     }
 
     const all = questionsData[user.subject] || [];
-    const unique = [...new Set(all.map(q => JSON.stringify(q)))].map(q => JSON.parse(q)); // Ensure uniqueness
+    const unique = Array.from(new Set(all.map(q => JSON.stringify(q)))).map(q =>
+      JSON.parse(q)
+    );
     const shuffled = unique.sort(() => 0.5 - Math.random()).slice(0, 60);
     setQuestions(shuffled);
   }, [navigate, user]);
 
   const handleAnswer = () => {
     if (selected === null) return;
-
     if (questions[current].answer === selected) {
       setScore(prev => prev + 1);
     }
@@ -53,9 +54,12 @@ function QuizPage() {
   if (!user || !user.subject) return <p>Loading user data...</p>;
   if (questions.length === 0) return <p>Loading questions...</p>;
 
+  const currentQuestion = questions[current];
+
   if (quizDone) {
     const percentage = Math.round((score / questions.length) * 100);
     const { grade, remark } = getGrade(percentage);
+
     return (
       <div style={styles.container}>
         <h2>Quiz Completed</h2>
@@ -65,12 +69,12 @@ function QuizPage() {
         <p><strong>Percentage:</strong> {percentage}%</p>
         <p><strong>Grade:</strong> {grade}</p>
         <p><strong>Remark:</strong> {remark}</p>
-        <button onClick={() => navigate('/start')} style={styles.buttonPrimary}>Take Another Quiz</button>
+        <button onClick={() => navigate('/start')} style={styles.buttonPrimary}>
+          Take Another Quiz
+        </button>
       </div>
     );
   }
-
-  const currentQuestion = questions[current];
 
   return (
     <div style={styles.container}>
@@ -79,7 +83,7 @@ function QuizPage() {
         <p style={styles.questionText}>{currentQuestion.question}</p>
         <div>
           {currentQuestion.options.map((opt, idx) => (
-            <div key={idx} style={{ marginBottom: 8 }}>
+            <div key={idx} style={styles.optionWrapper}>
               <label>
                 <input
                   type="radio"
@@ -109,18 +113,24 @@ const styles = {
     padding: '1.5rem',
     borderRadius: 8,
     border: '1px solid #ccc',
-    backgroundColor: '#fdfdfd',
-    minHeight: 400,
-    transition: 'all 0.3s ease'
+    backgroundColor: '#ffffff',
+    minHeight: '420px', // Lock height
+    transition: 'none',
+    boxShadow: '0 0 8px rgba(0,0,0,0.05)'
   },
   questionBox: {
     marginBottom: '1rem',
-    minHeight: '100px' // Prevent height shifting
+    minHeight: '140px', // Ensures question section does not shift height
+    whiteSpace: 'pre-wrap',
+    lineHeight: '1.5'
   },
   questionText: {
-    marginBottom: '1rem',
     fontSize: '1.1rem',
-    fontWeight: '500'
+    fontWeight: '500',
+    marginBottom: '1rem'
+  },
+  optionWrapper: {
+    marginBottom: 8
   },
   buttonGreen: {
     padding: '10px 20px',
