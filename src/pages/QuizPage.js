@@ -10,6 +10,7 @@ function QuizPage() {
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
   const [quizDone, setQuizDone] = useState(false);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     if (!user || !user.subject) {
@@ -30,10 +31,12 @@ function QuizPage() {
     }
 
     if (current + 1 < questions.length) {
+      setFade(false); // Start fade-out
       setTimeout(() => {
         setCurrent((prev) => prev + 1);
         setSelected(null);
-      }, 200); // Slight delay helps smoothen transition
+        setFade(true); // Fade-in new question
+      }, 200);
     } else {
       setQuizDone(true);
     }
@@ -76,7 +79,7 @@ function QuizPage() {
             color: '#fff',
             border: 'none',
             borderRadius: '5px',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           Take Another Quiz
@@ -88,8 +91,14 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto' }}>
-      <div key={current} style={{ transition: 'all 0.3s ease-in-out' }}>
+    <div style={{ maxWidth: 600, margin: '2rem auto', minHeight: '300px' }}>
+      <div
+        style={{
+          opacity: fade ? 1 : 0,
+          transition: 'opacity 0.3s ease-in-out',
+          minHeight: '220px',
+        }}
+      >
         <h3>Question {current + 1} of {questions.length}</h3>
         <p>{currentQuestion.question}</p>
         <div>
@@ -108,21 +117,21 @@ function QuizPage() {
             </div>
           ))}
         </div>
-        <button
-          onClick={handleAnswer}
-          style={{
-            marginTop: '1rem',
-            padding: '10px 20px',
-            backgroundColor: '#28a745',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-          }}
-        >
-          {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
-        </button>
       </div>
+      <button
+        onClick={handleAnswer}
+        style={{
+          marginTop: '1rem',
+          padding: '10px 20px',
+          backgroundColor: '#28a745',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+        }}
+      >
+        {current + 1 === questions.length ? 'Finish Quiz' : 'Next'}
+      </button>
     </div>
   );
 }
