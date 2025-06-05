@@ -86,12 +86,23 @@ function QuizPage() {
   const currentQuestion = questions[current];
 
   return (
-    <div style={{ maxWidth: 600, margin: '2rem auto' }}>
+    <div
+      style={{
+        maxWidth: 600,
+        margin: '2rem auto',
+        padding: '1rem',
+        minHeight: '320px', // Fixed height to prevent layout shift
+        transition: 'all 0.3s ease-in-out', // Smooth transition
+        border: '1px solid #ccc',
+        borderRadius: '8px',
+        backgroundColor: '#fafafa',
+      }}
+    >
       <h3>Question {current + 1} of {questions.length}</h3>
       <p>{currentQuestion.question}</p>
       <div>
-        {currentQuestion.options.map((opt, idx) => (
-          <div key={idx}>
+        {currentQuestion.options.map((opt) => (
+          <div key={`${current}-${opt}`}>
             <label>
               <input
                 type="radio"
