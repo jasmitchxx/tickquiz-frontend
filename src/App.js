@@ -9,8 +9,6 @@ import QuizPage from './pages/QuizPage';
 import PaymentFailedPage from './pages/PaymentFailedPage';
 import UseAccessCodePage from './pages/UseAccessCodePage';
 import QuizStartPage from './pages/QuizStartPage';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import Header from './components/Header';
 
 function App() {
@@ -22,8 +20,6 @@ function App() {
         <Route path="/use-access-code" element={<UseAccessCodePage />} /> {/* Access code entry page */}
         <Route path="/select-subject" element={<SubjectSelectionPage />} />
         <Route path="/start" element={<QuizStartPage />} />
-<Route path="/about" element={<About />} />
-<Route path="/contact" element={<Contact />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/verify" element={<VerifyPaymentPage />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
