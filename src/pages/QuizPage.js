@@ -1,4 +1,3 @@
-// src/pages/QuizPage.js
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -145,6 +144,20 @@ function QuizPage() {
             Start Over
           </button>
         </div>
+
+        {/* ? WhatsApp Support */}
+        <div className="mt-6">
+          <p className="text-sm text-gray-600">Need help? Paid but couldn’t access the quiz?</p>
+          <a
+            href="https://wa.me/233548951652?text=Hi%20TickQuiz%2C%20I%20paid%20but%20couldn't%20access%20the%20quiz."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+              Chat with Support on WhatsApp
+            </button>
+          </a>
+        </div>
       </div>
     );
   }
@@ -157,7 +170,7 @@ function QuizPage() {
           <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
             <p className="font-semibold">{index + 1}. {item.question}</p>
             <p>
-              Your answer:{" "}
+              Your answer:{' '}
               <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
                 {item.selected}
               </span>
@@ -203,11 +216,11 @@ function QuizPage() {
           Question {current + 1} of {shuffledQuestions.length}
         </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap gap-4">
           {currentQuestion?.options.map((option, index) => (
             <button
               key={index}
-              className="bg-white border rounded-lg px-4 py-2 text-left shadow hover:bg-gray-100"
+              className="bg-white border rounded-lg px-6 py-3 text-left shadow hover:bg-gray-100"
               onClick={() => handleAnswer(option)}
             >
               {option}
