@@ -3842,8 +3842,8 @@ const economicsQuestions = [
   },
   {
     question: "Terms of trade is calculated as:",
-    options: ["(Index of export prices \ Index of import prices) x100", "Import price \ Export question:uantity", "Export price xImport price", "Export value \ GDP"],
-    answer: "(Index of export prices \ Index of import prices) x100"
+    options: ["(Index of export prices / Index of import prices) x100", "Import price / Export question:uantity", "Export price xImport price", "Export value / GDP"],
+    answer: "(Index of export prices / Index of import prices) x100"
   },
   {
     question: "Which of the following affects Ghana's trade negatively?",
