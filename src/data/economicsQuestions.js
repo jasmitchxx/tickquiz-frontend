@@ -2447,7 +2447,7 @@ const economicsQuestions = [
   },
   {
     question: "Total cost equestion:uals:",
-    options: ["Fixed cost + Variable cost", "Variable cost - Fixed cost", "Marginal cost x�Quantity", "Average cost \ Output"],
+    options: ["Fixed cost + Variable cost", "Variable cost - Fixed cost", "Marginal cost x�Quantity", "Average cost / Output"],
     answer: "Fixed cost + Variable cost"
   },
   {
@@ -2482,8 +2482,8 @@ const economicsQuestions = [
   },
   {
     question: "Average variable cost is calculated by:",
-    options: ["Variable cost \ Output", "Total cost \ Output", "Fixed cost \ Output", "Marginal cost x� Output"],
-    answer: "Variable cost \ Output"
+    options: ["Variable cost / Output", "Total cost / Output", "Fixed cost / Output", "Marginal cost x� Output"],
+    answer: "Variable cost / Output"
   },
   {
     question: "If total revenue is Ghs1000 and total cost is Ghs850, what is profit?",
@@ -2497,7 +2497,7 @@ const economicsQuestions = [
   },
   {
     question: "Total revenue equestion:uals:",
-    options: ["Price xQuantity", "Price \ Quantity", "Profit - Cost", "Revenue - Profit"],
+    options: ["Price xQuantity", "Price / Quantity", "Profit - Cost", "Revenue - Profit"],
     answer: "Price xQuantity"
   },
   {
@@ -2507,8 +2507,8 @@ const economicsQuestions = [
   },
   {
     question: "Average revenue equestion:uals:",
-    options: ["Total revenue \ Quantity", "Quantity \ Price", "Total cost \ Output", "Price xOutput"],
-    answer: "Total revenue \ Quantity"
+    options: ["Total revenue / Quantity", "Quantity / Price", "Total cost / Output", "Price xOutput"],
+    answer: "Total revenue / Quantity"
   },
   {
     question: "In perfect competition, average revenue is equestion:ual to:",
@@ -2521,7 +2521,7 @@ const economicsQuestions = [
     answer: "Average cost"
   },
   {
-    question: "If a firmÃ¢â‚¬â„¢s total cost is Ghs800 and its average cost is Ghs40, what is its output?",
+    question: "If a firm's total cost is Ghs800 and its average cost is Ghs40, what is its output?",
     options: ["20 units", "40 units", "50 units", "30 units"],
     answer: "20 units"
   },
