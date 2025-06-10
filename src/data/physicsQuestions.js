@@ -71,8 +71,8 @@ const physicsQuestions = [
   },
   {
     question: "1 Newton is the force that gives a mass of 1 kg an acceleration of?",
-    options: ["1 m/s¬≤", "10 m/s¬≤", "9.8 m/s¬≤", "5 m/s¬≤"],
-    answer: "1 m/s¬≤"
+    options: ["1 m/s≤", "10 m/s≤", "9.8 m/s≤", "5 m/s≤"],
+    answer: "1 m/s≤"
   },
   {
     question: "Which of the following is used to measure the volume of irregular solids?",
@@ -126,8 +126,8 @@ const physicsQuestions = [
   },
   {
     question: "What is the SI unit of density?",
-    options: ["kg/m¬≥", "g/cm¬≥", "kg/cm¬≥", "g/m¬≥"],
-    answer: "kg/m¬≥"
+    options: ["kg/m≥", "g/cm≥", "kg/cm≥", "g/m≥"],
+    answer: "kg/m≥"
   },
   {
     question: "Which one of the following is an extensive property?",
@@ -266,8 +266,8 @@ const physicsQuestions = [
   },
   {
     question: "What is the SI unit of acceleration?",
-    options: ["m/s¬≤", "m/s", "m¬≤/s", "s/m¬≤"],
-    answer: "m/s¬≤"
+    options: ["m/s≤", "m/s", "m≤/s", "s/m≤"],
+    answer: "m/s≤"
   },
   {
     question: "The area under a velocity-time graph gives?",
@@ -286,11 +286,11 @@ const physicsQuestions = [
   },
   {
     question: "What is the acceleration due to gravity on earth?",
-    options: ["9.8 m/s¬≤", "10 m/s", "9.8 m/s", "10 m/s¬≤"],
-    answer: "9.8 m/s¬≤"
+    options: ["9.8 m/s≤", "10 m/s", "9.8 m/s", "10 m/s≤"],
+    answer: "9.8 m/s≤"
   },
   {
-    question: "Which of the following equations represents Newton‚Äôs Second Law?",
+    question: "Which of the following equations represents Newton‚'s Second Law?",
     options: ["F = ma", "F = mv", "F = mg", "F = m/a"],
     answer: "F = ma"
   },
@@ -306,8 +306,8 @@ const physicsQuestions = [
   },
   {
     question: "Which law states that every action has an equal and opposite reaction?",
-    options: ["Newton‚Äôs third law", "Newton‚Äôs first law", "Newton‚Äôs second law", "Hooke‚Äôs law"],
-    answer: "Newton‚Äôs third law"
+    options: ["Newton‚'s third law", "Newton‚'s first law", "Newton‚'s second law", "Hooke‚'s law"],
+    answer: "Newton‚'s third law"
   },
   {
     question: "Friction is a force that?",
@@ -381,7 +381,7 @@ const physicsQuestions = [
   },
   {
     question: "What is the mechanical advantage of a machine?",
-    options: ["Load/Effort", "Effort/Load", "Velocity √ó Time", "Force √ó Distance"],
+    options: ["Load/Effort", "Effort/Load", "Velocity x Time", "Force x Distance"],
     answer: "Load/Effort"
   },
   {
@@ -516,8 +516,8 @@ const physicsQuestions = [
   },
   {
     question: "What is the boiling point of water in Celsius?",
-    options: ["100¬∞C", "0¬∞C", "212¬∞C", "273¬∞C"],
-    answer: "100¬∞C"
+    options: ["100∞C", "0∞C", "212∞C", "273∞C"],
+    answer: "100∞C"
   },
   {
     question: "The melting point of ice in Kelvin is?",
@@ -581,18 +581,18 @@ const physicsQuestions = [
   },
   {
     question: "What is the freezing point of water in Fahrenheit?",
-    options: ["32¬∞F", "0¬∞F", "100¬∞F", "212¬∞F"],
-    answer: "32¬∞F"
+    options: ["32∞F", "0∞F", "100∞F", "212∞F"],
+    answer: "32∞F"
   },
   {
-    question: "The amount of heat required to raise the temperature of 1 kg of a substance by 1¬∞C is called?",
+    question: "The amount of heat required to raise the temperature of 1 kg of a substance by 1∞C is called?",
     options: ["Specific heat capacity", "Latent heat", "Heat energy", "Thermal capacity"],
     answer: "Specific heat capacity"
   },
   {
     question: "What is the unit of specific heat capacity?",
-    options: ["J/kg¬∞C", "J/kg", "W/kg", "C/kg"],
-    answer: "J/kg¬∞C"
+    options: ["J/kg∞C", "J/kg", "W/kg", "C/kg"],
+    answer: "J/kg∞C"
   },
   {
     question: "During boiling, the temperature of a substance?",
@@ -696,7 +696,7 @@ const physicsQuestions = [
   },
   {
     question: "What is the boiling point of water in Kelvin?",
-    options: ["373 K", "273 K", "100 K", "273¬∞C"],
+    options: ["373 K", "273 K", "100 K", "273∞C"],
     answer: "373 K"
   },
   {
@@ -711,8 +711,8 @@ const physicsQuestions = [
   },
   {
     question: "What is the freezing point of water in Celsius?",
-    options: ["0¬∞C", "32¬∞C", "100¬∞C", "273¬∞C"],
-    answer: "0¬∞C"
+    options: ["0∞C", "32∞C", "100∞C", "273∞C"],
+    answer: "0∞C"
   },
   {
     question: "The change of state from solid to gas without becoming liquid is called?",
@@ -776,8 +776,8 @@ const physicsQuestions = [
   },
   {
     question: "What is the speed of light in air?",
-    options: ["3.0 √ó 10^8 m/s", "340 m/s", "1500 m/s", "1.0 √ó 10^6 m/s"],
-    answer: "3.0 √ó 10^8 m/s"
+    options: ["3.0 x 10^8 m/s", "340 m/s", "1500 m/s", "1.0 x 10^6 m/s"],
+    answer: "3.0 x 10^8 m/s"
   },
   {
     question: "Which wave travels fastest in solids?",
@@ -1261,18 +1261,18 @@ const physicsQuestions = [
   },
   {
     question: "The normal body temperature in Celsius is?",
-    options: ["37¬∞C", "100¬∞C", "0¬∞C", "25¬∞C"],
-    answer: "37¬∞C"
+    options: ["37∞C", "100∞C", "0∞C", "25∞C"],
+    answer: "37∞C"
   },
   {
     question: "The boiling point of water in Celsius is?",
-    options: ["100¬∞C", "0¬∞C", "50¬∞C", "25¬∞C"],
-    answer: "100¬∞C"
+    options: ["100∞C", "0∞C", "50∞C", "25∞C"],
+    answer: "100∞C"
   },
   {
     question: "The freezing point of water in Celsius is?",
-    options: ["0¬∞C", "100¬∞C", "25¬∞C", "50¬∞C"],
-    answer: "0¬∞C"
+    options: ["0∞C", "100∞C", "25∞C", "50∞C"],
+    answer: "0∞C"
   },
   {
     question: "The boiling point of water in Kelvin is?",
@@ -1330,7 +1330,7 @@ const physicsQuestions = [
     answer: "Latent heat"
   },
   {
-    question: "The heat required to raise the temperature of a unit mass by 1¬∞C is?",
+    question: "The heat required to raise the temperature of a unit mass by 1∞C is?",
     options: ["Specific heat capacity", "Latent heat", "Thermal energy", "Heat flux"],
     answer: "Specific heat capacity"
   },
@@ -1406,13 +1406,13 @@ const physicsQuestions = [
   },
   {
     question: "What is the freezing point of mercury?",
-    options: ["-39¬∞C", "0¬∞C", "-273¬∞C", "-10¬∞C"],
-    answer: "-39¬∞C"
+    options: ["-39∞C", "0∞C", "-273∞C", "-10∞C"],
+    answer: "-39∞C"
   },
   {
     question: "What is the boiling point of mercury?",
-    options: ["357¬∞C", "100¬∞C", "212¬∞C", "500¬∞C"],
-    answer: "357¬∞C"
+    options: ["357∞C", "100∞C", "212∞C", "500∞C"],
+    answer: "357∞C"
   },
   {
     question: "Which of the following materials is best for cooking pots?",
@@ -1646,8 +1646,8 @@ const physicsQuestions = [
   },
   {
     question: "The speed of light in vacuum is?",
-    options: ["3 √ó 10‚Å∏ m/s", "3 √ó 10‚Å∂ m/s", "3 √ó 10‚Åµ m/s", "3 √ó 10‚Å∑ m/s"],
-    answer: "3 √ó 10‚Å∏ m/s"
+    options: ["3 x 10? m/s", "3 x 10? m/s", "3 x 10? m/s", "3 x 10? m/s"],
+    answer: "3 x 10? m/s"
   },
   {
     question: "The type of lens that converges light rays is?",
@@ -1725,13 +1725,13 @@ const physicsQuestions = [
     answer: "Ohmmeter"
   },
   {
-    question: "Ohm‚Äôs law states that voltage is directly proportional to?",
+    question: "Ohm‚'s law states that voltage is directly proportional to?",
     options: ["Current", "Resistance", "Power", "Charge"],
     answer: "Current"
   },
   {
-    question: "The formula for Ohm‚Äôs law is?",
-    options: ["V = IR", "V = I/R", "V = R/I", "V = IR¬≤"],
+    question: "The formula for Ohm‚'s law is?",
+    options: ["V = IR", "V = I/R", "V = R/I", "V = IR≤"],
     answer: "V = IR"
   },
   {
@@ -1756,7 +1756,7 @@ const physicsQuestions = [
   },
   {
     question: "Electrical power is calculated as?",
-    options: ["P = IV", "P = I/V", "P = V/R", "P = I¬≤R"],
+    options: ["P = IV", "P = I/V", "P = V/R", "P = I≤R"],
     answer: "P = IV"
   },
   {
@@ -2081,8 +2081,8 @@ const physicsQuestions = [
   },
   {
     question: "The speed of light in vacuum is?",
-    options: ["3 √ó 10^8 m/s", "3 √ó 10^6 m/s", "3 √ó 10^4 m/s", "3 √ó 10^2 m/s"],
-    answer: "3 √ó 10^8 m/s"
+    options: ["3 x 10^8 m/s", "3 x 10^6 m/s", "3 x 10^4 m/s", "3 x 10^2 m/s"],
+    answer: "3 x 10^8 m/s"
   },
   {
     question: "Electrons revolve around the nucleus in?",
@@ -2271,8 +2271,8 @@ const physicsQuestions = [
   },
   {
     question: "Which law explains the floating of ships?",
-    options: ["Archimedes‚Äô Principle", "Hooke‚Äôs Law", "Newton‚Äôs 3rd Law", "Ohm‚Äôs Law"],
-    answer: "Archimedes‚Äô Principle"
+    options: ["Archimedes‚' Principle", "Hooke‚'s Law", "Newton‚'s 3rd Law", "Ohm‚'s Law"],
+    answer: "Archimedes‚' Principle"
   },
   {
     question: "What determines the pitch of a sound?",
@@ -2306,8 +2306,8 @@ const physicsQuestions = [
   },
   {
     question: "What causes tides on Earth?",
-    options: ["Moon‚Äôs gravity", "Sunlight", "Wind", "Clouds"],
-    answer: "Moon‚Äôs gravity"
+    options: ["Moon‚'s gravity", "Sunlight", "Wind", "Clouds"],
+    answer: "Moon‚'s gravity"
   },
   {
     question: "The unit of electric current is?",
@@ -2350,14 +2350,14 @@ const physicsQuestions = [
     answer: "Sound wave"
   },
   {
-    question: "Which wave doesn‚Äôt need a medium?",
+    question: "Which wave doesn‚'t need a medium?",
     options: ["Light", "Sound", "Water", "Seismic"],
     answer: "Light"
   },
   {
     question: "Which law explains how rockets move?",
-    options: ["Newton‚Äôs 3rd Law", "Newton‚Äôs 1st Law", "Hooke‚Äôs Law", "Ohm‚Äôs Law"],
-    answer: "Newton‚Äôs 3rd Law"
+    options: ["Newton‚'s 3rd Law", "Newton‚'s 1st Law", "Hooke‚'s Law", "Ohm‚'s Law"],
+    answer: "Newton‚'s 3rd Law"
   },
   {
     question: "Who developed the theory of relativity?",
@@ -2365,7 +2365,7 @@ const physicsQuestions = [
     answer: "Albert Einstein"
   },
   {
-    question: "The formula E = mc¬≤ relates energy and?",
+    question: "The formula E = mc≤ relates energy and?",
     options: ["Mass", "Velocity", "Distance", "Time"],
     answer: "Mass"
   },
@@ -2417,7 +2417,6 @@ const physicsQuestions = [
 ];
 
 export default physicsQuestions;
-
 
 
 

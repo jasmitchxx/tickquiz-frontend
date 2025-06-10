@@ -1,6 +1,7 @@
 // src/pages/RequestAccessWithPayment.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function RequestAccessWithPayment() {
   const [name, setName] = useState('');
@@ -20,8 +21,8 @@ function RequestAccessWithPayment() {
   }, []);
 
   const handlePayment = async () => {
-    if (!name || !email || !phone) {
-      alert('Please fill out all fields.');
+    if (!name.trim() || !email.trim() || !phone.trim()) {
+      alert('Please fill out all fields correctly.');
       return;
     }
 
@@ -30,14 +31,14 @@ function RequestAccessWithPayment() {
 
     try {
       const response = await axios.post(`${API_URL}/api/initiate-payment`, {
-        name,
-        email,
-        phone: countryCode + phone,
+        name: name.trim(),
+        email: email.trim(),
+        phone: countryCode + phone.trim(),
       });
 
       localStorage.setItem(
         'pendingUser',
-        JSON.stringify({ name, email, phone: countryCode + phone })
+        JSON.stringify({ name, email, phone: countryCode + phone.trim() })
       );
 
       window.location.href = response.data.authorization_url;
@@ -50,35 +51,51 @@ function RequestAccessWithPayment() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '2rem auto', padding: '1rem', border: '1px solid #ccc', borderRadius: 8 }}>
-      <h2>Request Access Code & Pay</h2>
+    <div
+      style={{
+        maxWidth: 420,
+        margin: '2rem auto',
+        padding: '1.5rem',
+        border: '1px solid #ccc',
+        borderRadius: 8,
+        backgroundColor: '#f9f9f9',
+      }}
+    >
+      <h2>Buy Access Code</h2>
+      <p style={{ fontSize: 14, marginBottom: 20 }}>
+        Pay <strong>20 GHS</strong> using Paystack. After payment, your access code will be sent to your phone via SMS.
+      </p>
+
       <input
         type="text"
         placeholder="Full Name"
         value={name}
         onChange={e => setName(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 8 }}
+        style={{ width: '100%', marginBottom: 10, padding: 10 }}
+        required
       />
       <input
         type="email"
         placeholder="Email Address"
         value={email}
         onChange={e => setEmail(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 8 }}
+        style={{ width: '100%', marginBottom: 10, padding: 10 }}
+        required
       />
       <input
         type="text"
         placeholder="+Country Code"
         value={countryCode}
         onChange={e => setCountryCode(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 8 }}
+        style={{ width: '100%', marginBottom: 10, padding: 10 }}
       />
       <input
         type="tel"
         placeholder="Phone Number"
         value={phone}
         onChange={e => setPhone(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 8 }}
+        style={{ width: '100%', marginBottom: 10, padding: 10 }}
+        required
       />
 
       <button
@@ -86,17 +103,32 @@ function RequestAccessWithPayment() {
         disabled={loading}
         style={{
           width: '100%',
-          padding: '10px',
-          backgroundColor: '#007BFF',
-          color: 'white',
+          padding: '12px',
+          backgroundColor: '#28a745',
+          color: '#fff',
+          fontWeight: 'bold',
+          fontSize: 16,
           border: 'none',
           borderRadius: 4,
         }}
       >
-        {loading ? 'Processing...' : 'Pay 20 GHS & Get Access Code'}
+        {loading ? 'Processing Payment...' : 'Pay & Get Access Code'}
       </button>
 
-      {message && <p style={{ color: 'red', marginTop: 10 }}>{message}</p>}
+      {message && <p style={{ color: 'red', marginTop: 12 }}>{message}</p>}
+
+      <div style={{ marginTop: 16, textAlign: 'center' }}>
+        <Link
+          to="/use-access-code"
+          style={{
+            fontSize: 13,
+            color: '#007bff',
+            textDecoration: 'none',
+          }}
+        >
+          Already have a code?
+        </Link>
+      </div>
     </div>
   );
 }

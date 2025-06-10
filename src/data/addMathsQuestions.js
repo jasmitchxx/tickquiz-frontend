@@ -5,9 +5,9 @@ const addMathsQuestions = [
     answer: "{2,3,4,5,6}"
   },
   {
-    question: "Simplify âˆš12 + âˆš27 - âˆš3.",
-    options: ["4âˆš3", "5âˆš3", "6âˆš3", "2âˆš3"],
-    answer: "4âˆš3"
+    question: "Simplify ?12 + ?27 - ?3.",
+    options: ["4?3", "5?3", "6?3", "2?3"],
+    answer: "4?3"
   },
   {
     question: "If * is defined on real numbers by a * b = ab + a, find 2 * 3.",
@@ -20,27 +20,27 @@ const addMathsQuestions = [
     answer: "14"
   },
   {
-    question: "The function f(x) = xÂ² + 3x â€“ 4 is a:",
+    question: "The function f(x) = x² + 3x - 4 is a:",
     options: ["Polynomial of degree 1", "Polynomial of degree 2", "Rational function", "Binomial"],
     answer: "Polynomial of degree 2"
   },
   {
-    question: "What is the remainder when xÂ³ + 2xÂ² - 3x + 4 is divided by x - 2?",
+    question: "What is the remainder when x³ + 2x² - 3x + 4 is divided by x - 2?",
     options: ["0", "4", "10", "6"],
     answer: "10"
   },
   {
     question: "If f(x) = 1/(x - 2), what is the domain of f(x)?",
-    options: ["x â‰  0", "x â‰  -2", "x â‰  2", "x â‰  1"],
-    answer: "x â‰  2"
+    options: ["x ? 0", "x ? -2", "x ? 2", "x ? 1"],
+    answer: "x ? 2"
   },
   {
-    question: "Find the constant term in the expansion of (2x - 3)Â³.",
+    question: "Find the constant term in the expansion of (2x - 3)³.",
     options: ["-27", "-54", "-36", "-81"],
     answer: "-27"
   },
   {
-    question: "Simplify (2âˆš3)Â².",
+    question: "Simplify (2?3)².",
     options: ["6", "12", "4", "3"],
     answer: "12"
   },
@@ -50,24 +50,24 @@ const addMathsQuestions = [
     answer: "{3,4}"
   },
   {
-    question: "What is the coefficient of xÂ² in the expansion of (x + 2)Â³?",
+    question: "What is the coefficient of x² in the expansion of (x + 2)³?",
     options: ["6", "4", "12", "3"],
     answer: "12"
   },
   {
-    question: "Simplify: (xÂ² - 1)/(x + 1).",
-    options: ["x - 1", "x + 1", "xÂ² - 1", "x - 2"],
+    question: "Simplify: (x² - 1)/(x + 1).",
+    options: ["x - 1", "x + 1", "x² - 1", "x - 2"],
     answer: "x - 1"
   },
   {
-    question: "If g(x) = xÂ² and h(x) = x + 1, find g(h(x)).",
-    options: ["xÂ² + 1", "(x + 1)Â²", "xÂ² + 2x + 1", "x + 2"],
-    answer: "xÂ² + 2x + 1"
+    question: "If g(x) = x² and h(x) = x + 1, find g(h(x)).",
+    options: ["x² + 1", "(x + 1)²", "x² + 2x + 1", "x + 2"],
+    answer: "x² + 2x + 1"
   },
   {
-    question: "Simplify: âˆš(50) + âˆš(8).",
-    options: ["âˆš58", "7âˆš2", "5âˆš2 + 2âˆš2", "6âˆš2"],
-    answer: "7âˆš2"
+    question: "Simplify: ?(50) + ?(8).",
+    options: ["?58", "7?2", "5?2 + 2?2", "6?2"],
+    answer: "7?2"
   },
   {
     question: "In binary operation, if a âŠ— b = a + 2b, what is 2 âŠ— 3?",
@@ -76,11 +76,11 @@ const addMathsQuestions = [
   },
   {
     question: "Which of the following is a rational function?",
-    options: ["xÂ² + 1", "1/(x - 1)", "âˆšx", "xÂ³ - 2x"],
+    options: ["x² + 1", "1/(x - 1)", "?x", "x³ - 2x"],
     answer: "1/(x - 1)"
   },
   {
-    question: "Evaluate (3 - âˆš2)(3 + âˆš2).",
+    question: "Evaluate (3 - ?2)(3 + ?2).",
     options: ["7", "9", "11", "5"],
     answer: "7"
   },
@@ -90,12 +90,12 @@ const addMathsQuestions = [
     answer: "(x - 1)/2"
   },
   {
-    question: "Simplify: (x + 1)(xÂ² - x + 1).",
-    options: ["xÂ³ + 1", "xÂ³ - 1", "xÂ² + 1", "xÂ³ - xÂ² + x + 1"],
-    answer: "xÂ³ + 1"
+    question: "Simplify: (x + 1)(x² - x + 1).",
+    options: ["x³ + 1", "x³ - 1", "x² + 1", "x³ - x² + x + 1"],
+    answer: "x³ + 1"
   },
   {
-    question: "The nth term of a polynomial is 2nÂ² - 3n + 1. Find the third term.",
+    question: "The nth term of a polynomial is 2n² - 3n + 1. Find the third term.",
     options: ["4", "7", "10", "1"],
     answer: "4"
   },
@@ -103,14 +103,14 @@ const addMathsQuestions = [
   // (30 more questions below follow similar format)
 
   {
-    question: "What is the coefficient of xâ´ in the expansion of (1 + x)âµ?",
+    question: "What is the coefficient of x?´ in the expansion of (1 + x)??",
     options: ["5", "10", "1", "15"],
     answer: "5"
   },
   {
     question: "Which of the following is NOT a function?",
-    options: ["f(x) = xÂ²", "f(x) = âˆšx", "f(x) = 1/x", "f(x) = Â±âˆšx"],
-    answer: "f(x) = Â±âˆšx"
+    options: ["f(x) = x²", "f(x) = ?x", "f(x) = 1/x", "f(x) = ±?x"],
+    answer: "f(x) = ±?x"
   },
   {
     question: "Solve: (x - 1)/(x + 2) = 2.",
@@ -118,9 +118,9 @@ const addMathsQuestions = [
     answer: "x = 4"
   },
   {
-    question: "If f(x) = xÂ² - 2x and g(x) = x + 1, find f(g(x)).",
-    options: ["xÂ² + 2x + 1", "xÂ² + 1", "xÂ²", "xÂ² + 4x + 1"],
-    answer: "xÂ² + 2x + 1"
+    question: "If f(x) = x² - 2x and g(x) = x + 1, find f(g(x)).",
+    options: ["x² + 2x + 1", "x² + 1", "x²", "x² + 4x + 1"],
+    answer: "x² + 2x + 1"
   },
   {
     question: "Find the value of x in the inequality: 2x - 3 < 7.",
@@ -129,7 +129,7 @@ const addMathsQuestions = [
   },
   {
     question: "Which of the following is a binomial expression?",
-    options: ["xÂ² + x", "x + 1", "x", "xÂ² + 2x + 1"],
+    options: ["x² + x", "x + 1", "x", "x² + 2x + 1"],
     answer: "x + 1"
   },
   {
@@ -138,72 +138,72 @@ const addMathsQuestions = [
     answer: "3x + 2"
   },
   {
-    question: "If x + 1 is a factor of f(x) = xÂ³ + 2xÂ² - 5x - 6, find the remainder when f(x) is divided by x + 1.",
+    question: "If x + 1 is a factor of f(x) = x³ + 2x² - 5x - 6, find the remainder when f(x) is divided by x + 1.",
     options: ["0", "-2", "1", "-1"],
     answer: "0"
   },
   {
-    question: "Find the middle term in the expansion of (x + 2)â´.",
-    options: ["12xÂ²", "6xÂ²", "4xÂ²", "8xÂ²"],
-    answer: "6xÂ²"
+    question: "Find the middle term in the expansion of (x + 2)?´.",
+    options: ["12x²", "6x²", "4x²", "8x²"],
+    answer: "6x²"
   },
   {
-    question: "What is the least common multiple of âˆš18 and âˆš8?",
-    options: ["2âˆš2", "6âˆš2", "12", "12âˆš2"],
+    question: "What is the least common multiple of ?18 and ?8?",
+    options: ["2?2", "6?2", "12", "12?2"],
     answer: "12"
   },
   {
-    question: "The domain of f(x) = âˆš(x - 3) is:",
-    options: ["x â‰¥ 3", "x > 3", "x â‰  3", "x â‰¤ 3"],
+    question: "The domain of f(x) = ?(x - 3) is:",
+    options: ["x â‰¥ 3", "x > 3", "x ? 3", "x â‰¤ 3"],
     answer: "x â‰¥ 3"
   },
   {
-    question: "Find the constant term in (x - 1)â´.",
+    question: "Find the constant term in (x - 1)?´.",
     options: ["-1", "4", "1", "0"],
     answer: "1"
   },
   {
-    question: "Solve: 5xÂ² + 6x + 1 = 0.",
+    question: "Solve: 5x² + 6x + 1 = 0.",
     options: ["x = -1, -1/5", "x = -1/5, -1", "x = 1/5, 1", "x = 1, 1/5"],
     answer: "x = -1, -1/5"
   },
   {
     question: "What is the simplified form of (x + 1)(x - 1)?",
-    options: ["xÂ² + 1", "xÂ² - 1", "xÂ²", "xÂ² - 2"],
-    answer: "xÂ² - 1"
+    options: ["x² + 1", "x² - 1", "x²", "x² - 2"],
+    answer: "x² - 1"
   },
   {
-    question: "If a binary operation âŠ• is defined by a âŠ• b = ab - b, find 3 âŠ• 4.",
+    question: "If a binary operation ? is defined by a ? b = ab - b, find 3 ? 4.",
     options: ["8", "12", "9", "10"],
     answer: "8"
   },
   {
     question: "What is the domain of the rational function f(x) = (x + 2)/(x - 3)?",
-    options: ["x â‰  2", "x â‰  3", "x â‰  -2", "x âˆˆ â„"],
-    answer: "x â‰  3"
+    options: ["x ? 2", "x ? 3", "x ? -2", "x x ? ?"],
+    answer: "x ? 3"
   },
   {
     question: "Which of the following expressions is a surd?",
-    options: ["âˆš7", "7", "âˆš9", "3"],
-    answer: "âˆš7"
+    options: ["?7", "7", "?9", "3"],
+    answer: "?7"
   },
   {
-    question: "Evaluate (3âˆš2)Â².",
+    question: "Evaluate (3?2)².",
     options: ["6", "12", "9", "18"],
     answer: "18"
   },
   {
-    question: "What is the value of n in the binomial expansion (1 + x)^n if the 4th term is 120xÂ³?",
+    question: "What is the value of n in the binomial expansion (1 + x)^n if the 4th term is 120x³?",
     options: ["6", "7", "8", "5"],
     answer: "5"
   },
   {
-    question: "Simplify (xÂ² - 9)/(x + 3).",
-    options: ["x - 3", "x + 3", "xÂ² - 3", "x - 9"],
+    question: "Simplify (x² - 9)/(x + 3).",
+    options: ["x - 3", "x + 3", "x² - 3", "x - 9"],
     answer: "x - 3"
   },
   {
-    question: "101. The value of (3 + âˆš2)(3 - âˆš2) is:",
+    question: "101. The value of (3 + ?2)(3 - ?2) is:",
     options: ["7", "9", "11", "13"],
     answer: "7"
   },
@@ -213,14 +213,14 @@ const addMathsQuestions = [
     answer: "{4, 6}"
   },
   {
-    question: "103. Simplify: (âˆš50 + âˆš8)",
-    options: ["3âˆš2", "4âˆš2", "5âˆš2 + 2âˆš2", "5âˆš2 + âˆš8"],
-    answer: "5âˆš2 + 2âˆš2"
+    question: "103. Simplify: (?50 + ?8)",
+    options: ["3?2", "4?2", "5?2 + 2?2", "5?2 + ?8"],
+    answer: "5?2 + 2?2"
   },
   {
     question: "104. What is the inverse of the function f(x) = 2x - 5?",
-    options: ["fâ»Â¹(x) = (x + 5)/2", "fâ»Â¹(x) = 2x + 5", "fâ»Â¹(x) = (x - 5)/2", "fâ»Â¹(x) = (x + 5)*2"],
-    answer: "fâ»Â¹(x) = (x + 5)/2"
+    options: ["f?»¹(x) = (x + 5)/2", "f?»¹(x) = 2x + 5", "f?»¹(x) = (x - 5)/2", "f?»¹(x) = (x + 5)*2"],
+    answer: "f?»¹(x) = (x + 5)/2"
   },
   {
     question: "105. Expand and simplify: (x + 2)^3",
@@ -253,9 +253,9 @@ const addMathsQuestions = [
     answer: "11"
   },
   {
-    question: "111. Rationalize the denominator: 5 / âˆš3",
-    options: ["5âˆš3 / 3", "âˆš3 / 5", "5 / 3âˆš3", "5âˆš3 / âˆš3"],
-    answer: "5âˆš3 / 3"
+    question: "111. Rationalize the denominator: 5 / ?3",
+    options: ["5?3 / 3", "?3 / 5", "5 / 3?3", "5?3 / ?3"],
+    answer: "5?3 / 3"
   },
   {
     question: "112. Evaluate: logâ‚‚(32)",
@@ -294,11 +294,11 @@ const addMathsQuestions = [
   },
   {
     question: "119. The domain of f(x) = 1/(x - 3) is:",
-    options: ["x â‰  3", "x â‰¥ 3", "x > 0", "x â‰  0"],
-    answer: "x â‰  3"
+    options: ["x ? 3", "x â‰¥ 3", "x > 0", "x ? 0"],
+    answer: "x ? 3"
   },
   {
-    question: "120. What is the value of n in 2â¿ = 128?",
+    question: "120. What is the value of n in 2?¿ = 128?",
     options: ["6", "7", "8", "9"],
     answer: "7"
   },
@@ -308,8 +308,8 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "122. Evaluate: âˆ«3xÂ² dx",
-    options: ["x^3 + C", "x^3", "3x + C", "xÂ² + C"],
+    question: "122. Evaluate: âˆ«3x² dx",
+    options: ["x^3 + C", "x^3", "3x + C", "x² + C"],
     answer: "x^3 + C"
   },
   {
@@ -318,7 +318,7 @@ const addMathsQuestions = [
     answer: "5"
   },
   {
-    question: "124. If f(x) = xÂ² + 2x + 1, find f(-1).",
+    question: "124. If f(x) = x² + 2x + 1, find f(-1).",
     options: ["0", "1", "-1", "2"],
     answer: "0"
   },
@@ -334,8 +334,8 @@ const addMathsQuestions = [
   },
   {
     question: "127. Which of these is a surd?",
-    options: ["âˆš5", "3", "1/2", "4"],
-    answer: "âˆš5"
+    options: ["?5", "3", "1/2", "4"],
+    answer: "?5"
   },
   {
     question: "128. Find the midpoint between (1, 4) and (5, 10).",
@@ -343,7 +343,7 @@ const addMathsQuestions = [
     answer: "(3, 7)"
   },
   {
-    question: "129. The quadratic expression xÂ² - 5x + 6 factors into:",
+    question: "129. The quadratic expression x² - 5x + 6 factors into:",
     options: ["(x - 2)(x - 3)", "(x + 2)(x + 3)", "(x - 1)(x - 6)", "(x + 1)(x - 6)"],
     answer: "(x - 2)(x - 3)"
   },
@@ -353,9 +353,9 @@ const addMathsQuestions = [
     answer: "6"
   },
   // 20 more to complete the part
-  // Questions 131â€“150 (you can ask to continue anytime)
+  // Questions 131-150 (you can ask to continue anytime)
   {
-    question: "The value of (3 + âˆš2)(3 - âˆš2) is:",
+    question: "The value of (3 + ?2)(3 - ?2) is:",
     options: ["7", "9", "11", "13"],
     answer: "7"
   },
@@ -365,14 +365,14 @@ const addMathsQuestions = [
     answer: "{4, 6}"
   },
   {
-    question: "Simplify: (âˆš50 + âˆš8)",
-    options: ["3âˆš2", "4âˆš2", "5âˆš2 + 2âˆš2", "5âˆš2 + âˆš8"],
-    answer: "5âˆš2 + 2âˆš2"
+    question: "Simplify: (?50 + ?8)",
+    options: ["3?2", "4?2", "5?2 + 2?2", "5?2 + ?8"],
+    answer: "5?2 + 2?2"
   },
   {
     question: "What is the inverse of the function f(x) = 2x - 5?",
-    options: ["fâ»Â¹(x) = (x + 5)/2", "fâ»Â¹(x) = 2x + 5", "fâ»Â¹(x) = (x - 5)/2", "fâ»Â¹(x) = (x + 5)*2"],
-    answer: "fâ»Â¹(x) = (x + 5)/2"
+    options: ["f?¹(x) = (x + 5)/2", "f?¹(x) = 2x + 5", "f?¹(x) = (x - 5)/2", "f?¹(x) = (x + 5)*2"],
+    answer: "f?¹(x) = (x + 5)/2"
   },
   {
     question: "Expand and simplify: (x + 2)^3",
@@ -405,9 +405,9 @@ const addMathsQuestions = [
     answer: "11"
   },
   {
-    question: "Rationalize the denominator: 5 / âˆš3",
-    options: ["5âˆš3 / 3", "âˆš3 / 5", "5 / 3âˆš3", "5âˆš3 / âˆš3"],
-    answer: "5âˆš3 / 3"
+    question: "Rationalize the denominator: 5 / ?3",
+    options: ["5?3 / 3", "?3 / 5", "5 / 3?3", "5?3 / ?3"],
+    answer: "5?3 / 3"
   },
   {
     question: "Evaluate: logâ‚‚(32)",
@@ -446,11 +446,11 @@ const addMathsQuestions = [
   },
   {
     question: "The domain of f(x) = 1/(x - 3) is:",
-    options: ["x â‰  3", "x â‰¥ 3", "x > 0", "x â‰  0"],
-    answer: "x â‰  3"
+    options: ["x ? 3", "x â‰¥ 3", "x > 0", "x ? 0"],
+    answer: "x ? 3"
   },
   {
-    question: "What is the value of n in 2â¿ = 128?",
+    question: "What is the value of n in 2?¿ = 128?",
     options: ["6", "7", "8", "9"],
     answer: "7"
   },
@@ -460,8 +460,8 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "Evaluate: âˆ«3xÂ² dx",
-    options: ["x^3 + C", "x^3", "3x + C", "xÂ² + C"],
+    question: "Evaluate: âˆ«3x² dx",
+    options: ["x^3 + C", "x^3", "3x + C", "x² + C"],
     answer: "x^3 + C"
   },
   {
@@ -470,7 +470,7 @@ const addMathsQuestions = [
     answer: "5"
   },
   {
-    question: "If f(x) = xÂ² + 2x + 1, find f(-1).",
+    question: "If f(x) = x² + 2x + 1, find f(-1).",
     options: ["0", "1", "-1", "2"],
     answer: "0"
   },
@@ -486,8 +486,8 @@ const addMathsQuestions = [
   },
   {
     question: "Which of these is a surd?",
-    options: ["âˆš5", "3", "1/2", "4"],
-    answer: "âˆš5"
+    options: ["?5", "3", "1/2", "4"],
+    answer: "?5"
   },
   {
     question: "Find the midpoint between (1, 4) and (5, 10).",
@@ -495,7 +495,7 @@ const addMathsQuestions = [
     answer: "(3, 7)"
   },
   {
-    question: "The quadratic expression xÂ² - 5x + 6 factors into:",
+    question: "The quadratic expression x² - 5x + 6 factors into:",
     options: ["(x - 2)(x - 3)", "(x + 2)(x + 3)", "(x - 1)(x - 6)", "(x + 1)(x - 6)"],
     answer: "(x - 2)(x - 3)"
   },
@@ -505,19 +505,19 @@ const addMathsQuestions = [
     answer: "6"
   },
   {
-    question: "Evaluate: logâ‚â‚€(1000)",
+    question: "Evaluate: log??(1000)",
     options: ["1", "2", "3", "4"],
     answer: "3"
   },
   {
-    question: "Simplify: (2 + âˆš3)(2 - âˆš3)",
-    options: ["1", "4", "3", "âˆš3"],
+    question: "Simplify: (2 + ?3)(2 - ?3)",
+    options: ["1", "4", "3", "?3"],
     answer: "1"
   },
   {
-    question: "If f(x) = xÂ² + 4 and g(x) = x - 1, find f(g(x))",
-    options: ["xÂ² - 2x + 5", "xÂ² - 1", "(x - 1)Â² + 4", "xÂ² + x - 5"],
-    answer: "(x - 1)Â² + 4"
+    question: "If f(x) = x² + 4 and g(x) = x - 1, find f(g(x))",
+    options: ["x² - 2x + 5", "x² - 1", "(x - 1)² + 4", "x² + x - 5"],
+    answer: "(x - 1)² + 4"
   },
   {
     question: "What is the 5th term of the geometric sequence 2, 4, 8, ...?",
@@ -531,7 +531,7 @@ const addMathsQuestions = [
   },
   {
     question: "Which of these functions is not one-to-one?",
-    options: ["f(x) = xÂ³", "f(x) = 2x + 1", "f(x) = |x|", "f(x) = x - 7"],
+    options: ["f(x) = x³", "f(x) = 2x + 1", "f(x) = |x|", "f(x) = x - 7"],
     answer: "f(x) = |x|"
   },
   {
@@ -540,24 +540,24 @@ const addMathsQuestions = [
     answer: "2"
   },
   {
-    question: "Differentiate y = 3xÂ² + 2x - 1",
+    question: "Differentiate y = 3x² + 2x - 1",
     options: ["6x + 2", "6x - 2", "3x + 2", "2x + 3"],
     answer: "6x + 2"
   },
   {
     question: "Integrate: âˆ«x dx",
-    options: ["x", "xÂ²", "xÂ² / 2", "x / 2"],
-    answer: "xÂ² / 2"
+    options: ["x", "x²", "x² / 2", "x / 2"],
+    answer: "x² / 2"
   },
   {
     question: "Which of the following is not a surd?",
-    options: ["âˆš2", "âˆš3", "âˆš4", "âˆš5"],
-    answer: "âˆš4"
+    options: ["?2", "?3", "?4", "?5"],
+    answer: "?4"
   },
   {
     question: "What is the inverse of f(x) = 1/x?",
-    options: ["fâ»Â¹(x) = x", "fâ»Â¹(x) = 1/x", "fâ»Â¹(x) = xÂ²", "fâ»Â¹(x) = âˆšx"],
-    answer: "fâ»Â¹(x) = 1/x"
+    options: ["f?¹(x) = x", "f?¹(x) = 1/x", "f?¹(x) = x²", "f?¹(x) = ?x"],
+    answer: "f?¹(x) = 1/x"
   },
   {
     question: "Find the sum of the first 6 terms of the geometric series: 2, 4, 8, ...",
@@ -570,8 +570,8 @@ const addMathsQuestions = [
     answer: "{1, 2, 3, 4, 5}"
   },
   {
-    question: "Simplify: (xÂ² - 9)/(x - 3)",
-    options: ["x + 3", "x - 3", "xÂ² - 3", "xÂ² + 3"],
+    question: "Simplify: (x² - 9)/(x - 3)",
+    options: ["x + 3", "x - 3", "x² - 3", "x² + 3"],
     answer: "x + 3"
   },
   {
@@ -580,14 +580,14 @@ const addMathsQuestions = [
     answer: "10"
   },
   {
-    question: "What is the binomial coefficient of xÂ²yÂ² in (x + y)^4?",
+    question: "What is the binomial coefficient of x²y² in (x + y)^4?",
     options: ["6", "4", "12", "24"],
     answer: "6"
   },
   {
     question: "If sin x = 1/2 and x is acute, find x.",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "30Â°"
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "30°"
   },
   {
     question: "The midpoint of points A(2, 3) and B(6, 7) is:",
@@ -600,9 +600,9 @@ const addMathsQuestions = [
     answer: "B = {(1,2), (2,4)}"
   },
   {
-    question: "Solve: xÂ² - 16 = 0",
-    options: ["x = Â±4", "x = Â±8", "x = 4", "x = -4"],
-    answer: "x = Â±4"
+    question: "Solve: x² - 16 = 0",
+    options: ["x = ±4", "x = ±8", "x = 4", "x = -4"],
+    answer: "x = ±4"
   },
   {
     question: "Which of the following is not a binary operation on real numbers?",
@@ -610,12 +610,12 @@ const addMathsQuestions = [
     answer: "Square Root"
   },
   {
-    question: "What is the range of f(x) = xÂ²?",
-    options: ["All real numbers", "x > 0", "x â‰¥ 0", "x < 0"],
-    answer: "x â‰¥ 0"
+    question: "What is the range of f(x) = x²?",
+    options: ["All real numbers", "x > 0", "x ?0", "x < 0"],
+    answer: "x ?0"
   },
   {
-    question: "If a sequence is defined as Tn = nÂ², what is the 6th term?",
+    question: "If a sequence is defined as Tn = n², what is the 6th term?",
     options: ["36", "30", "25", "49"],
     answer: "36"
   },
@@ -625,13 +625,13 @@ const addMathsQuestions = [
     answer: "101101"
   },
   {
-    question: "Simplify: (3xÂ²y)(2xyÂ²)",
-    options: ["6xÂ³yÂ³", "6xÂ²yÂ³", "5xÂ²yÂ³", "5xÂ³yÂ²"],
-    answer: "6xÂ³yÂ³"
+    question: "Simplify: (3x²y)(2xy²)",
+    options: ["6x³y³", "6x²y³", "5x²y³", "5x³y²"],
+    answer: "6x³y³"
   },
   {
-    question: "Factor completely: xÂ² - 25",
-    options: ["(x - 5)(x + 5)", "(x - 25)(x + 25)", "x(x - 25)", "(x + 5)Â²"],
+    question: "Factor completely: x² - 25",
+    options: ["(x - 5)(x + 5)", "(x - 25)(x + 25)", "x(x - 25)", "(x + 5)²"],
     answer: "(x - 5)(x + 5)"
   },
   {
@@ -661,22 +661,22 @@ const addMathsQuestions = [
   },
   {
     question: "What is the sum of the interior angles of a pentagon?",
-    options: ["540Â°", "360Â°", "180Â°", "720Â°"],
-    answer: "540Â°"
+    options: ["540°", "360°", "180°", "720°"],
+    answer: "540°"
   },
   {
-    question: "If f(x) = 2x + 1, find fâ»Â¹(x).",
+    question: "If f(x) = 2x + 1, find f?¹(x).",
     options: ["(x - 1)/2", "2x - 1", "(x + 1)/2", "1 - 2x"],
     answer: "(x - 1)/2"
   },
   {
-    question: "Solve the quadratic equation xÂ² - 5x + 6 = 0.",
+    question: "Solve the quadratic equation x² - 5x + 6 = 0.",
     options: ["x = 2 or 3", "x = -2 or -3", "x = 1 or 6", "x = -1 or -6"],
     answer: "x = 2 or 3"
   },
   {
     question: "Which of the following is a rational function?",
-    options: ["f(x) = (x + 1)/(x - 2)", "f(x) = xÂ² + 1", "f(x) = âˆšx", "f(x) = sin x"],
+    options: ["f(x) = (x + 1)/(x - 2)", "f(x) = x² + 1", "f(x) = ?x", "f(x) = sin x"],
     answer: "f(x) = (x + 1)/(x - 2)"
   },
   {
@@ -685,24 +685,24 @@ const addMathsQuestions = [
     answer: "2i + 6j"
   },
   {
-    question: "What is the binomial expansion of (1 + x)Â³?",
+    question: "What is the binomial expansion of (1 + x)³?",
     options: [
-      "1 + 3x + 3xÂ² + xÂ³",
-      "1 + x + xÂ² + xÂ³",
-      "1 + 2x + 3xÂ² + 4xÂ³",
-      "1 + 3x + xÂ² + xÂ³"
+      "1 + 3x + 3x² + x³",
+      "1 + x + x² + x³",
+      "1 + 2x + 3x² + 4x³",
+      "1 + 3x + x² + x³"
     ],
-    answer: "1 + 3x + 3xÂ² + xÂ³"
+    answer: "1 + 3x + 3x² + x³"
   },
   {
-    question: "If logâ‚‚ 8 = x, find the value of x.",
+    question: "If log? 8 = x, find the value of x.",
     options: ["1", "2", "3", "4"],
     answer: "3"
   },
   {
-    question: "Simplify: (xÂ³yÂ²)Â²",
-    options: ["xâ¶yâ´", "xâµyâ´", "xâ¶yÂ²", "xÂ³yÂ²"],
-    answer: "xâ¶yâ´"
+    question: "Simplify: (x³y²)²",
+    options: ["x?y?", "x?y?", "x?y²", "x³y²"],
+    answer: "x?y?´"
   },
   {
     question: "If two events are independent, what is P(A âˆ© B)?",
@@ -750,14 +750,14 @@ const addMathsQuestions = [
     answer: "y = 2x + 1"
   },
   {
-    question: "Expand (2x - 3)Â².",
+    question: "Expand (2x - 3)².",
     options: [
-      "4xÂ² - 12x + 9",
-      "4xÂ² + 12x + 9",
-      "2xÂ² - 9",
-      "4xÂ² - 6x + 9"
+      "4x² - 12x + 9",
+      "4x² + 12x + 9",
+      "2x² - 9",
+      "4x² - 6x + 9"
     ],
-    answer: "4xÂ² - 12x + 9"
+    answer: "4x² - 12x + 9"
   },
   {
     question: "What is the solution set of |x - 3| < 5?",
@@ -786,8 +786,8 @@ const addMathsQuestions = [
   },
   {
     question: "Simplify (x + 2)(x - 3).",
-    options: ["xÂ² - x - 6", "xÂ² + x - 6", "xÂ² - 5x + 6", "xÂ² + 5x + 6"],
-    answer: "xÂ² - x - 6"
+    options: ["x² - x - 6", "x² + x - 6", "x² - 5x + 6", "x² + 5x + 6"],
+    answer: "x² - x - 6"
   },
   {
     question: "If sin A = 3/5 and A is acute, find cos A.",
@@ -806,11 +806,11 @@ const addMathsQuestions = [
   },
   {
     question: "If the vector u = 2i - 3j, find its magnitude.",
-    options: ["âˆš13", "5", "1", "6"],
-    answer: "âˆš13"
+    options: ["?13", "5", "1", "6"],
+    answer: "?13"
   },
   {
-    question: "Find the binomial coefficient for the term containing xÂ² in the expansion of (1 + x)â´.",
+    question: "Find the binomial coefficient for the term containing x² in the expansion of (1 + x)?´.",
     options: ["6", "4", "3", "1"],
     answer: "6"
   },
@@ -820,14 +820,14 @@ const addMathsQuestions = [
     answer: "4"
   },
   {
-    question: "Differentiate y = xÂ³ + 2x.",
-    options: ["3xÂ² + 2", "xÂ² + 2", "3x + 2", "3xÂ²"],
-    answer: "3xÂ² + 2"
+    question: "Differentiate y = x³ + 2x.",
+    options: ["3x² + 2", "x² + 2", "3x + 2", "3x²"],
+    answer: "3x² + 2"
   },
   {
-    question: "Find the integral of 3xÂ² dx.",
-    options: ["xÂ³ + C", "xÂ² + C", "3x + C", "xÂ³"],
-    answer: "xÂ³ + C"
+    question: "Find the integral of 3x² dx.",
+    options: ["x³ + C", "x² + C", "3x + C", "x³"],
+    answer: "x³ + C"
   },
   {
     question: "Find the solution to the inequality 3x - 5 > 1.",
@@ -846,13 +846,13 @@ const addMathsQuestions = [
   },
   {
     question: "Expand and simplify (x - 2)(x + 5).",
-    options: ["xÂ² + 3x - 10", "xÂ² - 3x + 10", "xÂ² + 7x - 10", "xÂ² - 7x + 10"],
-    answer: "xÂ² + 3x - 10"
+    options: ["x² + 3x - 10", "x² - 3x + 10", "x² + 7x - 10", "x² - 7x + 10"],
+    answer: "x² + 3x - 10"
   },
   {
     question: "What is the sum of the interior angles of a hexagon?",
-    options: ["720Â°", "540Â°", "360Â°", "900Â°"],
-    answer: "720Â°"
+    options: ["720°", "540°", "360°", "900°"],
+    answer: "720°"
   },
   {
     question: "Find the next term in the sequence: 2, 6, 12, 20, ...",
@@ -870,9 +870,9 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "What is the solution to the equation 4xÂ² - 9 = 0?",
-    options: ["x = Â±3/2", "x = Â±2/3", "x = 3", "x = -3"],
-    answer: "x = Â±3/2"
+    question: "What is the solution to the equation 4x² - 9 = 0?",
+    options: ["x = ±3/2", "x = ±2/3", "x = 3", "x = -3"],
+    answer: "x = ±3/2"
   },
   {
     question: "Find the value of the binomial coefficient C(5,3).",
@@ -885,7 +885,7 @@ const addMathsQuestions = [
     answer: "189"
   },
   {
-    question: "Find the remainder when xÂ³ + 2xÂ² - 5x + 6 is divided by x - 1.",
+    question: "Find the remainder when x³ + 2x² - 5x + 6 is divided by x - 1.",
     options: ["4", "2", "0", "3"],
     answer: "6"
   },
@@ -895,29 +895,29 @@ const addMathsQuestions = [
     answer: "3"
   },
   {
-    question: "If vectors a = 2i + 3j and b = i - 4j, find a Â· b.",
+    question: "If vectors a = 2i + 3j and b = i - 4j, find a · b.",
     options: ["-10", "14", "0", "12"],
     answer: "-10"
   },
   {
-    question: "Find the maximum value of the quadratic function f(x) = -2xÂ² + 4x + 1.",
+    question: "Find the maximum value of the quadratic function f(x) = -2x² + 4x + 1.",
     options: ["3", "5", "4", "6"],
     answer: "3"
   },
   {
     question: "If sin A = 1/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30Â°", "60Â°", "45Â°", "90Â°"],
-    answer: "30Â°"
+    options: ["30°", "60°", "45°", "90°"],
+    answer: "30°"
   },
   {
-    question: "Differentiate y = 5xâ´ - 3xÂ² + 2.",
-    options: ["20xÂ³ - 6x", "20xâ´ - 6x", "5xÂ³ - 3x", "20xÂ³ + 6x"],
-    answer: "20xÂ³ - 6x"
+    question: "Differentiate y = 5x?´ - 3x² + 2.",
+    options: ["20x³ - 6x", "20x?´ - 6x", "5x³ - 3x", "20x³ + 6x"],
+    answer: "20x³ - 6x"
   },
   {
-    question: "Integrate âˆ«(4xÂ³ - 2x) dx.",
-    options: ["xâ´ - xÂ² + C", "xâ´ - 2x + C", "xâ´ + xÂ² + C", "xÂ³ - x + C"],
-    answer: "xâ´ - xÂ² + C"
+    question: "Integrate âˆ«(4x³ - 2x) dx.",
+    options: ["x?´ - x² + C", "x?´ - 2x + C", "x?´ + x² + C", "x³ - x + C"],
+    answer: "x?´ - x² + C"
   },
   {
     question: "Find the next term in the arithmetic sequence 7, 13, 19, 25, ...",
@@ -935,9 +935,9 @@ const addMathsQuestions = [
     answer: "155"
   },
   {
-    question: "If cos 2Î¸ = 1/2, find Î¸ in degrees where 0Â° â‰¤ Î¸ â‰¤ 90Â°.",
-    options: ["30Â°", "45Â°", "60Â°", "15Â°"],
-    answer: "30Â°"
+    question: "If cos 2Î¸ = 1/2, find Î¸ in degrees where 0° â‰¤ Î¸ â‰¤ 90°.",
+    options: ["30°", "45°", "60°", "15°"],
+    answer: "30°"
   },
   {
     question: "Find the equation of the line passing through (2,3) with gradient 4.",
@@ -950,12 +950,12 @@ const addMathsQuestions = [
     answer: "7"
   },
   {
-    question: "Find the expansion of (1 - x)Â³.",
-    options: ["1 - 3x + 3xÂ² - xÂ³", "1 + 3x + 3xÂ² + xÂ³", "1 - xÂ³", "1 - 3xÂ³"],
-    answer: "1 - 3x + 3xÂ² - xÂ³"
+    question: "Find the expansion of (1 - x)³.",
+    options: ["1 - 3x + 3x² - x³", "1 + 3x + 3x² + x³", "1 - x³", "1 - 3x³"],
+    answer: "1 - 3x + 3x² - x³"
   },
   {
-    question: "If logâ‚ 2 = 0.3010 and logâ‚ 3 = 0.4771, find logâ‚ 6.",
+    question: "If log?? 2 = 0.3010 and log?? 3 = 0.4771, find log?? 6.",
     options: ["0.7781", "0.1761", "0.9542", "0.5230"],
     answer: "0.7781"
   },
@@ -980,9 +980,9 @@ const addMathsQuestions = [
     answer: "12.5"
   },
   {
-    question: "If tan Î¸ = 1, find Î¸ in degrees (0Â° < Î¸ < 90Â°).",
-    options: ["45Â°", "30Â°", "60Â°", "90Â°"],
-    answer: "45Â°"
+    question: "If tan Î¸ = 1, find Î¸ in degrees (0° < Î¸ < 90°).",
+    options: ["45°", "30°", "60°", "90°"],
+    answer: "45°"
   },
   {
     question: "Calculate the length of the vector 7i - 24j.",
@@ -990,9 +990,9 @@ const addMathsQuestions = [
     answer: "25"
   },
   {
-    question: "Expand (2x - 3)Â².",
-    options: ["4xÂ² - 12x + 9", "4xÂ² + 12x + 9", "2xÂ² - 3x + 9", "4xÂ² - 9"],
-    answer: "4xÂ² - 12x + 9"
+    question: "Expand (2x - 3)².",
+    options: ["4x² - 12x + 9", "4x² + 12x + 9", "2x² - 3x + 9", "4x² - 9"],
+    answer: "4x² - 12x + 9"
   },
   {
     question: "Differentiate y = sin x.",
@@ -1005,9 +1005,9 @@ const addMathsQuestions = [
     answer: "sin x + C"
   },
   {
-    question: "If f(x) = 2x + 1 and g(x) = xÂ², find (f âˆ˜ g)(x).",
-    options: ["2xÂ² + 1", "xÂ² + 2x + 1", "2x + xÂ²", "2x + 1"],
-    answer: "2xÂ² + 1"
+    question: "If f(x) = 2x + 1 and g(x) = x², find (f âˆ˜ g)(x).",
+    options: ["2x² + 1", "x² + 2x + 1", "2x + x²", "2x + 1"],
+    answer: "2x² + 1"
   },
   {
     question: "Find the sum to n terms of the arithmetic series where first term a = 3 and common difference d = 5.",
@@ -1015,7 +1015,7 @@ const addMathsQuestions = [
     answer: "n/2 (6 + 5(n-1))"
   },
   {
-    question: "If a matrix A = [[2, 3], [1, 4]], find AÂ².",
+    question: "If a matrix A = [[2, 3], [1, 4]], find A².",
     options: [
       "[[7, 18], [6, 19]]",
       "[[5, 7], [5, 7]]",
@@ -1025,7 +1025,7 @@ const addMathsQuestions = [
     answer: "[[7, 18], [6, 19]]"
   },
   {
-    question: "Solve the equation xÂ² - 5x + 6 = 0.",
+    question: "Solve the equation x² - 5x + 6 = 0.",
     options: ["x = 2 or 3", "x = 1 or 6", "x = -2 or -3", "x = -1 or -6"],
     answer: "x = 2 or 3"
   },
@@ -1035,9 +1035,9 @@ const addMathsQuestions = [
     answer: "48"
   },
   {
-    question: "If logâ‚ x = 2, find x in terms of a.",
-    options: ["aÂ²", "2a", "a", "2"],
-    answer: "aÂ²"
+    question: "If log?? x = 2, find x in terms of a.",
+    options: ["a²", "2a", "a", "2"],
+    answer: "a²"
   },
   {
     question: "What is the probability of drawing a red card from a standard deck of 52 cards?",
@@ -1045,7 +1045,7 @@ const addMathsQuestions = [
     answer: "1/2"
   },
   {
-    question: "Find the remainder when xÂ³ + 4xÂ² - x + 7 is divided by x + 2.",
+    question: "Find the remainder when x³ + 4x² - x + 7 is divided by x + 2.",
     options: ["3", "5", "7", "9"],
     answer: "3"
   },
@@ -1055,29 +1055,29 @@ const addMathsQuestions = [
     answer: "5"
   },
   {
-    question: "If vectors a = 4i - j and b = 2i + 3j, find a Â· b.",
+    question: "If vectors a = 4i - j and b = 2i + 3j, find a · b.",
     options: ["5", "11", "1", "10"],
     answer: "5"
   },
   {
-    question: "Find the minimum value of the quadratic function f(x) = 3xÂ² - 12x + 7.",
+    question: "Find the minimum value of the quadratic function f(x) = 3x² - 12x + 7.",
     options: ["-11", "-5", "7", "1"],
     answer: "-11"
   },
   {
-    question: "If sin A = âˆš3/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "60Â°"
+    question: "If sin A = ?3/2 and A is in the first quadrant, find A in degrees.",
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "60°"
   },
   {
-    question: "Differentiate y = 7xÂ³ - 2x + 5.",
-    options: ["21xÂ² - 2", "21xÂ³ - 2", "7xÂ² - 2", "21xÂ² + 2"],
-    answer: "21xÂ² - 2"
+    question: "Differentiate y = 7x³ - 2x + 5.",
+    options: ["21x² - 2", "21x³ - 2", "7x² - 2", "21x² + 2"],
+    answer: "21x² - 2"
   },
   {
-    question: "Integrate âˆ«(6xÂ² - 4x + 1) dx.",
-    options: ["2xÂ³ - 2xÂ² + x + C", "2xÂ³ - 4x + C", "6xÂ³ - 2xÂ² + x + C", "2xÂ³ + 2xÂ² + x + C"],
-    answer: "2xÂ³ - 2xÂ² + x + C"
+    question: "Integrate âˆ«(6x² - 4x + 1) dx.",
+    options: ["2x³ - 2x² + x + C", "2x³ - 4x + C", "6x³ - 2x² + x + C", "2x³ + 2x² + x + C"],
+    answer: "2x³ - 2x² + x + C"
   },
   {
     question: "Find the 8th term of the arithmetic sequence 5, 8, 11, 14, ...",
@@ -1095,9 +1095,9 @@ const addMathsQuestions = [
     answer: "345"
   },
   {
-    question: "If cos 3Î¸ = 1/2, find Î¸ in degrees where 0Â° â‰¤ Î¸ â‰¤ 90Â°.",
-    options: ["20Â°", "30Â°", "45Â°", "60Â°"],
-    answer: "20Â°"
+    question: "If cos 3Î¸ = 1/2, find Î¸ in degrees where 0° â‰¤ Î¸ â‰¤ 90°.",
+    options: ["20°", "30°", "45°", "60°"],
+    answer: "20°"
   },
   {
     question: "Find the equation of the line passing through (3, -1) with gradient -2.",
@@ -1110,19 +1110,19 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "Find the expansion of (2 + x)Â³.",
-    options: ["8 + 12x + 6xÂ² + xÂ³", "8 + 6x + 3xÂ² + xÂ³", "2 + 3x + 3xÂ² + xÂ³", "8 + 9x + 3xÂ² + xÂ³"],
-    answer: "8 + 12x + 6xÂ² + xÂ³"
+    question: "Find the expansion of (2 + x)³.",
+    options: ["8 + 12x + 6x² + x³", "8 + 6x + 3x² + x³", "2 + 3x + 3x² + x³", "8 + 9x + 3x² + x³"],
+    answer: "8 + 12x + 6x² + x³"
   },
   {
-    question: "If logâ‚ 4 = 0.6021 and logâ‚ 5 = 0.6990, find logâ‚ 20.",
+    question: "If log?? 4 = 0.6021 and log?? 5 = 0.6990, find log?? 20.",
     options: ["1.3011", "1.3010", "1.3012", "1.3009"],
     answer: "1.3011"
   },
   {
-    question: "Solve the inequality |3x + 1| â‰¥ 4.",
-    options: ["x â‰¤ -5/3 or x â‰¥ 1", "-5/3 â‰¤ x â‰¤ 1", "x > -5/3 and x < 1", "x â‰¤ 5/3 or x â‰¥ -1"],
-    answer: "x â‰¤ -5/3 or x â‰¥ 1"
+    question: "Solve the inequality |3x + 1| ?4.",
+    options: ["x â‰¤ -5/3 or x ?1", "-5/3 â‰¤ x â‰¤ 1", "x > -5/3 and x < 1", "x â‰¤ 5/3 or x ?-1"],
+    answer: "x â‰¤ -5/3 or x ?1"
   },
   {
     question: "Find the coordinates of the midpoint of the line segment joining points A(-1,4) and B(7,-2).",
@@ -1140,9 +1140,9 @@ const addMathsQuestions = [
     answer: "16"
   },
   {
-    question: "If tan Î¸ = âˆš3, find Î¸ in degrees (0Â° < Î¸ < 90Â°).",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "60Â°"
+    question: "If tan Î¸ = ?3, find Î¸ in degrees (0° < Î¸ < 90°).",
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "60°"
   },
   {
     question: "Calculate the length of the vector 9i - 12j.",
@@ -1150,9 +1150,9 @@ const addMathsQuestions = [
     answer: "15"
   },
   {
-    question: "Expand (x - 4)Â².",
-    options: ["xÂ² - 8x + 16", "xÂ² + 8x + 16", "xÂ² - 4x + 16", "xÂ² - 16"],
-    answer: "xÂ² - 8x + 16"
+    question: "Expand (x - 4)².",
+    options: ["x² - 8x + 16", "x² + 8x + 16", "x² - 4x + 16", "x² - 16"],
+    answer: "x² - 8x + 16"
   },
   {
     question: "Differentiate y = cos x.",
@@ -1160,19 +1160,19 @@ const addMathsQuestions = [
     answer: "-sin x"
   },
   {
-    question: "Integrate âˆ«secÂ² x dx.",
+    question: "Integrate âˆ«sec² x dx.",
     options: ["tan x + C", "-tan x + C", "sec x + C", "-sec x + C"],
     answer: "tan x + C"
   },
   {
-    question: "If f(x) = 3x - 2 and g(x) = xÂ² + 1, find (g âˆ˜ f)(x).",
-    options: ["(3x - 2)Â² + 1", "3xÂ² - 2x + 1", "3xÂ² - 2 + 1", "3x - 2 + 1"],
-    answer: "(3x - 2)Â² + 1"
+    question: "If f(x) = 3x - 2 and g(x) = x² + 1, find (g âˆ˜ f)(x).",
+    options: ["(3x - 2)² + 1", "3x² - 2x + 1", "3x² - 2 + 1", "3x - 2 + 1"],
+    answer: "(3x - 2)² + 1"
   },
   {
     question: "Find the sum to n terms of the geometric series with first term 5 and common ratio 2.",
-    options: ["5(2â¿ - 1)", "5(2â¿ + 1)", "5(2â¿ - 2)", "5(2â¿)"],
-    answer: "5(2â¿ - 1)"
+    options: ["5(2?¿ - 1)", "5(2?¿ + 1)", "5(2?¿ - 2)", "5(2?¿)"],
+    answer: "5(2?¿ - 1)"
   },
   {
     question: "If A = [[1, 2], [3, 4]], find the inverse of A.",
@@ -1185,7 +1185,7 @@ const addMathsQuestions = [
     answer: "[[-2, 1], [1.5, -0.5]]"
   },
   {
-    question: "Solve the quadratic equation xÂ² - 4x - 5 = 0.",
+    question: "Solve the quadratic equation x² - 4x - 5 = 0.",
     options: ["x = 5 or -1", "x = -5 or 1", "x = 4 or -5", "x = -4 or 5"],
     answer: "x = 5 or -1"
   },
@@ -1195,9 +1195,9 @@ const addMathsQuestions = [
     answer: "80"
   },
   {
-    question: "If logâ‚ x = 3, find x in terms of a.",
-    options: ["aÂ³", "3a", "a", "3"],
-    answer: "aÂ³"
+    question: "If log?? x = 3, find x in terms of a.",
+    options: ["a³", "3a", "a", "3"],
+    answer: "a³"
   },
   {
     question: "What is the probability of drawing an ace from a standard deck of 52 cards?",
@@ -1205,7 +1205,7 @@ const addMathsQuestions = [
     answer: "1/13"
   },
   {
-    question: "Find the remainder when xÂ³ + 4xÂ² - x + 7 is divided by x + 2.",
+    question: "Find the remainder when x³ + 4x² - x + 7 is divided by x + 2.",
     options: ["3", "5", "7", "9"],
     answer: "3"
   },
@@ -1215,29 +1215,29 @@ const addMathsQuestions = [
     answer: "5"
   },
   {
-    question: "If vectors a = 4i - j and b = 2i + 3j, find a Â· b.",
+    question: "If vectors a = 4i - j and b = 2i + 3j, find a · b.",
     options: ["5", "11", "1", "10"],
     answer: "5"
   },
   {
-    question: "Find the minimum value of the quadratic function f(x) = 3xÂ² - 12x + 7.",
+    question: "Find the minimum value of the quadratic function f(x) = 3x² - 12x + 7.",
     options: ["-11", "-5", "7", "1"],
     answer: "-11"
   },
   {
-    question: "If sin A = âˆš3/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "60Â°"
+    question: "If sin A = ?3/2 and A is in the first quadrant, find A in degrees.",
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "60°"
   },
   {
-    question: "Differentiate y = 7xÂ³ - 2x + 5.",
-    options: ["21xÂ² - 2", "21xÂ³ - 2", "7xÂ² - 2", "21xÂ² + 2"],
-    answer: "21xÂ² - 2"
+    question: "Differentiate y = 7x³ - 2x + 5.",
+    options: ["21x² - 2", "21x³ - 2", "7x² - 2", "21x² + 2"],
+    answer: "21x² - 2"
   },
   {
-    question: "Integrate âˆ«(6xÂ² - 4x + 1) dx.",
-    options: ["2xÂ³ - 2xÂ² + x + C", "2xÂ³ - 4x + C", "6xÂ³ - 2xÂ² + x + C", "2xÂ³ + 2xÂ² + x + C"],
-    answer: "2xÂ³ - 2xÂ² + x + C"
+    question: "Integrate âˆ«(6x² - 4x + 1) dx.",
+    options: ["2x³ - 2x² + x + C", "2x³ - 4x + C", "6x³ - 2x² + x + C", "2x³ + 2x² + x + C"],
+    answer: "2x³ - 2x² + x + C"
   },
   {
     question: "Find the 8th term of the arithmetic sequence 5, 8, 11, 14, ...",
@@ -1255,9 +1255,9 @@ const addMathsQuestions = [
     answer: "345"
   },
   {
-    question: "If cos 3Î¸ = 1/2, find Î¸ in degrees where 0Â° â‰¤ Î¸ â‰¤ 90Â°.",
-    options: ["20Â°", "30Â°", "45Â°", "60Â°"],
-    answer: "20Â°"
+    question: "If cos 3Î¸ = 1/2, find Î¸ in degrees where 0° â‰¤ Î¸ â‰¤ 90°.",
+    options: ["20°", "30°", "45°", "60°"],
+    answer: "20°"
   },
   {
     question: "Find the equation of the line passing through (3, -1) with gradient -2.",
@@ -1270,19 +1270,19 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "Find the expansion of (2 + x)Â³.",
-    options: ["8 + 12x + 6xÂ² + xÂ³", "8 + 6x + 3xÂ² + xÂ³", "2 + 3x + 3xÂ² + xÂ³", "8 + 9x + 3xÂ² + xÂ³"],
-    answer: "8 + 12x + 6xÂ² + xÂ³"
+    question: "Find the expansion of (2 + x)³.",
+    options: ["8 + 12x + 6x² + x³", "8 + 6x + 3x² + x³", "2 + 3x + 3x² + x³", "8 + 9x + 3x² + x³"],
+    answer: "8 + 12x + 6x² + x³"
   },
   {
-    question: "If logâ‚ 4 = 0.6021 and logâ‚ 5 = 0.6990, find logâ‚ 20.",
+    question: "If log?? 4 = 0.6021 and log?? 5 = 0.6990, find log?? 20.",
     options: ["1.3011", "1.3010", "1.3012", "1.3009"],
     answer: "1.3011"
   },
   {
-    question: "Solve the inequality |3x + 1| â‰¥ 4.",
-    options: ["x â‰¤ -5/3 or x â‰¥ 1", "-5/3 â‰¤ x â‰¤ 1", "x > -5/3 and x < 1", "x â‰¤ 5/3 or x â‰¥ -1"],
-    answer: "x â‰¤ -5/3 or x â‰¥ 1"
+    question: "Solve the inequality |3x + 1| ?4.",
+    options: ["x ? -5/3 or x ?1", "-5/3 ? x ? 1", "x > -5/3 and x < 1", "x ? 5/3 or x ?-1"],
+    answer: "x ? -5/3 or x ?1"
   },
   {
     question: "Find the coordinates of the midpoint of the line segment joining points A(-1,4) and B(7,-2).",
@@ -1300,9 +1300,9 @@ const addMathsQuestions = [
     answer: "16"
   },
   {
-    question: "If tan Î¸ = âˆš3, find Î¸ in degrees (0Â° < Î¸ < 90Â°).",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "60Â°"
+    question: "If tan Î¸ = ?3, find Î¸ in degrees (0° < Î¸ < 90°).",
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "60°"
   },
   {
     question: "Calculate the length of the vector 9i - 12j.",
@@ -1310,9 +1310,9 @@ const addMathsQuestions = [
     answer: "15"
   },
   {
-    question: "Expand (x - 4)Â².",
-    options: ["xÂ² - 8x + 16", "xÂ² + 8x + 16", "xÂ² - 4x + 16", "xÂ² - 16"],
-    answer: "xÂ² - 8x + 16"
+    question: "Expand (x - 4)².",
+    options: ["x² - 8x + 16", "x² + 8x + 16", "x² - 4x + 16", "x² - 16"],
+    answer: "x² - 8x + 16"
   },
   {
     question: "Differentiate y = cos x.",
@@ -1320,19 +1320,19 @@ const addMathsQuestions = [
     answer: "-sin x"
   },
   {
-    question: "Integrate âˆ«secÂ² x dx.",
+    question: "Integrate âˆ«sec² x dx.",
     options: ["tan x + C", "-tan x + C", "sec x + C", "-sec x + C"],
     answer: "tan x + C"
   },
   {
-    question: "If f(x) = 3x - 2 and g(x) = xÂ² + 1, find (g âˆ˜ f)(x).",
-    options: ["(3x - 2)Â² + 1", "3xÂ² - 2x + 1", "3xÂ² - 2 + 1", "3x - 2 + 1"],
-    answer: "(3x - 2)Â² + 1"
+    question: "If f(x) = 3x - 2 and g(x) = x² + 1, find (g âˆ˜ f)(x).",
+    options: ["(3x - 2)² + 1", "3x² - 2x + 1", "3x² - 2 + 1", "3x - 2 + 1"],
+    answer: "(3x - 2)² + 1"
   },
   {
     question: "Find the sum to n terms of the geometric series with first term 5 and common ratio 2.",
-    options: ["5(2â¿ - 1)", "5(2â¿ + 1)", "5(2â¿ - 2)", "5(2â¿)"],
-    answer: "5(2â¿ - 1)"
+    options: ["5(2?¿ - 1)", "5(2?¿ + 1)", "5(2?¿ - 2)", "5(2?¿)"],
+    answer: "5(2?¿ - 1)"
   },
   {
     question: "If A = [[1, 2], [3, 4]], find the inverse of A.",
@@ -1345,7 +1345,7 @@ const addMathsQuestions = [
     answer: "[[-2, 1], [1.5, -0.5]]"
   },
   {
-    question: "Solve the quadratic equation xÂ² - 4x - 5 = 0.",
+    question: "Solve the quadratic equation x² - 4x - 5 = 0.",
     options: ["x = 5 or -1", "x = -5 or 1", "x = 4 or -5", "x = -4 or 5"],
     answer: "x = 5 or -1"
   },
@@ -1355,9 +1355,9 @@ const addMathsQuestions = [
     answer: "80"
   },
   {
-    question: "If logâ‚ x = 3, find x in terms of a.",
-    options: ["aÂ³", "3a", "a", "3"],
-    answer: "aÂ³"
+    question: "If log?? x = 3, find x in terms of a.",
+    options: ["a³", "3a", "a", "3"],
+    answer: "a³"
   },
   {
     question: "What is the probability of drawing an ace from a standard deck of 52 cards?",
@@ -1366,11 +1366,11 @@ const addMathsQuestions = [
   },
   {
     question: "Find the angle between the vectors 2i + 5j and 3i - j.",
-    options: ["60Â°", "45Â°", "90Â°", "30Â°"],
-    answer: "60Â°"
+    options: ["60°", "45°", "90°", "30°"],
+    answer: "60°"
   },
   {
-    question: "Find the coordinates of the focus of the parabola yÂ² = 8x.",
+    question: "Find the coordinates of the focus of the parabola y² = 8x.",
     options: ["(2, 0)", "(4, 0)", "(0, 2)", "(0, 4)"],
     answer: "(2, 0)"
   },
@@ -1385,37 +1385,37 @@ const addMathsQuestions = [
     answer: "x = 2, y = 1"
   },
   {
-    question: "Express sin 2Î¸ in terms of sin Î¸ and cos Î¸.",
+    question: "Express sin 2?¸ in terms of sin ?¸ and cos ?¸.",
     options: [
-      "2 sin Î¸ cos Î¸",
-      "sinÂ² Î¸ - cosÂ² Î¸",
-      "2 cosÂ² Î¸ - 1",
-      "1 - 2 sinÂ² Î¸"
+      "2 sin ?¸ cos ?¸",
+      "sin² ?¸ - cos² ?¸",
+      "2 cos² ?¸ - 1",
+      "1 - 2 sin² ?¸"
     ],
-    answer: "2 sin Î¸ cos Î¸"
+    answer: "2 sin ?¸ cos ?¸"
   },
   {
     question: "Find the inverse of the function f(x) = (2x - 3)/5.",
     options: [
-      "fâ»Â¹(x) = (5x + 3)/2",
-      "fâ»Â¹(x) = (2x + 3)/5",
-      "fâ»Â¹(x) = (5x - 3)/2",
-      "fâ»Â¹(x) = (3x + 2)/5"
+      "f?¹(x) = (5x + 3)/2",
+      "f?¹(x) = (2x + 3)/5",
+      "f?¹(x) = (5x - 3)/2",
+      "f?¹(x) = (3x + 2)/5"
     ],
-    answer: "fâ»Â¹(x) = (5x + 3)/2"
+    answer: "f?¹(x) = (5x + 3)/2"
   },
   {
-    question: "Differentiate y = ln(xÂ² + 1).",
+    question: "Differentiate y = ln(x² + 1).",
     options: [
-      "2x / (xÂ² + 1)",
-      "1 / (xÂ² + 1)",
+      "2x / (x² + 1)",
+      "1 / (x² + 1)",
       "2 / (x + 1)",
-      "x / (xÂ² + 1)"
+      "x / (x² + 1)"
     ],
-    answer: "2x / (xÂ² + 1)"
+    answer: "2x / (x² + 1)"
   },
   {
-    question: "Find the limit: limâ‚“â†’2 (xÂ² - 4)/(x - 2).",
+    question: "Find the limit: limâ‚“â†’2 (x² - 4)/(x - 2).",
     options: ["4", "2", "0", "Undefined"],
     answer: "4"
   },
@@ -1426,8 +1426,8 @@ const addMathsQuestions = [
   },
   {
     question: "Calculate the angle between two vectors a = 3i + 4j and b = 4i + 3j.",
-    options: ["30Â°", "45Â°", "60Â°", "90Â°"],
-    answer: "30Â°"
+    options: ["30°", "45°", "60°", "90°"],
+    answer: "30°"
   },
   {
     question: "If cos A = 3/5 and A is in the first quadrant, find sin A.",
@@ -1445,7 +1445,7 @@ const addMathsQuestions = [
     answer: "3e^(3x)"
   },
   {
-    question: "Evaluate âˆ«â‚€Â¹ (3xÂ²) dx.",
+    question: "Evaluate âˆ«â‚€¹ (3x²) dx.",
     options: ["1", "3", "0", "1/3"],
     answer: "1"
   },
@@ -1477,12 +1477,12 @@ const addMathsQuestions = [
   {
     question: "Find the general solution of sin x = 1/2.",
     options: [
-      "x = 30Â° + 360Â°n or 150Â° + 360Â°n",
-      "x = 45Â° + 360Â°n or 135Â° + 360Â°n",
-      "x = 60Â° + 360Â°n or 120Â° + 360Â°n",
-      "x = 0Â° + 360Â°n or 180Â° + 360Â°n"
+      "x = 30° + 360°n or 150° + 360°n",
+      "x = 45° + 360°n or 135° + 360°n",
+      "x = 60° + 360°n or 120° + 360°n",
+      "x = 0° + 360°n or 180° + 360°n"
     ],
-    answer: "x = 30Â° + 360Â°n or 150Â° + 360Â°n"
+    answer: "x = 30° + 360°n or 150° + 360°n"
   },
   {
     question: "Find the inverse matrix of [[2, 0], [0, 3]].",
@@ -1495,7 +1495,7 @@ const addMathsQuestions = [
     answer: "[[1/2, 0], [0, 1/3]]"
   },
   {
-    question: "If logâ‚ 9 = 2, find a.",
+    question: "If log?? 9 = 2, find a.",
     options: ["3", "9", "81", "2"],
     answer: "3"
   },
@@ -1511,8 +1511,8 @@ const addMathsQuestions = [
   },
   {
     question: "Find the angle between the line y = 3x + 2 and the x-axis.",
-    options: ["71.57Â°", "45Â°", "30Â°", "60Â°"],
-    answer: "71.57Â°"
+    options: ["71.57°", "45°", "30°", "60°"],
+    answer: "71.57°"
   },
   {
     question: "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 2]], find AB.",
@@ -1540,17 +1540,17 @@ const addMathsQuestions = [
     answer: "-2 < x < 5"
   },
   {
-    question: "If f(x) = 2xÂ² - 3x + 1, find f'(x).",
-    options: ["4x - 3", "2x - 3", "2xÂ² - 3", "4x + 3"],
+    question: "If f(x) = 2x² - 3x + 1, find f'(x).",
+    options: ["4x - 3", "2x - 3", "2x² - 3", "4x + 3"],
     answer: "4x - 3"
   },
   {
     question: "Evaluate âˆ« (2x + 1) dx.",
-    options: ["xÂ² + x + C", "xÂ² + C", "2xÂ² + x + C", "x + C"],
-    answer: "xÂ² + x + C"
+    options: ["x² + x + C", "x² + C", "2x² + x + C", "x + C"],
+    answer: "x² + x + C"
   },
   {
-    question: "Find the coefficient of xÂ³ in the expansion of (2x - 3)â´.",
+    question: "Find the coefficient of x³ in the expansion of (2x - 3)?´.",
     options: ["-432", "432", "-108", "108"],
     answer: "-432"
   },
@@ -1560,19 +1560,19 @@ const addMathsQuestions = [
     answer: "5"
   },
   {
-    question: "If the vectors a = i + 2j and b = 3i - j, find a Â· b.",
+    question: "If the vectors a = i + 2j and b = 3i - j, find a · b.",
     options: ["1", "3", "1", "5"],
     answer: "1"
   },
   {
     question: "Find the general solution of cos x = 1/2.",
     options: [
-      "x = 60Â° + 360Â°n or 300Â° + 360Â°n",
-      "x = 45Â° + 360Â°n or 315Â° + 360Â°n",
-      "x = 30Â° + 360Â°n or 150Â° + 360Â°n",
-      "x = 0Â° + 360Â°n or 180Â° + 360Â°n"
+      "x = 60° + 360°n or 300° + 360°n",
+      "x = 45° + 360°n or 315° + 360°n",
+      "x = 30° + 360°n or 150° + 360°n",
+      "x = 0° + 360°n or 180° + 360°n"
     ],
-    answer: "x = 60Â° + 360Â°n or 300Â° + 360Â°n"
+    answer: "x = 60° + 360°n or 300° + 360°n"
   },
   {
     question: "Find the determinant of the matrix [[4, 5], [2, 3]].",
@@ -1580,14 +1580,14 @@ const addMathsQuestions = [
     answer: "2"
   },
   {
-    question: "Simplify: logâ‚ (xÂ²) + logâ‚ (xÂ³).",
+    question: "Simplify: log?? (x²) + log?? (x³).",
     options: [
-      "5 logâ‚ x",
-      "6 logâ‚ x",
-      "2 logâ‚ x + 3 logâ‚ x",
-      "logâ‚ (xâµ)"
+      "5 log?? x",
+      "6 log?? x",
+      "2 log?? x + 3 log?? x",
+      "log?? (x?µ)"
     ],
-    answer: "5 logâ‚ x"
+    answer: "5 log?? x"
   },
   {
     question: "If the sum to infinity of a geometric series is 20 and the first term is 16, find the common ratio.",
@@ -1602,12 +1602,12 @@ const addMathsQuestions = [
   {
     question: "Find the inverse of the function f(x) = (3x + 2)/5.",
     options: [
-      "fâ»Â¹(x) = (5x - 2)/3",
-      "fâ»Â¹(x) = (5x + 2)/3",
-      "fâ»Â¹(x) = (3x - 2)/5",
-      "fâ»Â¹(x) = (2x + 3)/5"
+      "f?¹(x) = (5x - 2)/3",
+      "f?¹(x) = (5x + 2)/3",
+      "f?¹(x) = (3x - 2)/5",
+      "f?¹(x) = (2x + 3)/5"
     ],
-    answer: "fâ»Â¹(x) = (5x - 2)/3"
+    answer: "f?¹(x) = (5x - 2)/3"
   },
   {
     question: "Solve for x: logâ‚“ 16 = 2.",
@@ -1615,7 +1615,7 @@ const addMathsQuestions = [
     answer: "4"
   },
   {
-    question: "Find the solution set for 2xÂ² - 5x + 3 = 0.",
+    question: "Find the solution set for 2x² - 5x + 3 = 0.",
     options: [
       "x = 1 or x = 1.5",
       "x = -1 or x = 1.5",
@@ -1626,8 +1626,8 @@ const addMathsQuestions = [
   },
   {
     question: "Calculate the angle between the vectors a = 2i + 3j and b = i + j.",
-    options: ["16.26Â°", "30Â°", "45Â°", "60Â°"],
-    answer: "16.26Â°"
+    options: ["16.26°", "30°", "45°", "60°"],
+    answer: "16.26°"
   },
   {
     question: "Differentiate y = sin(3x).",
@@ -1635,7 +1635,7 @@ const addMathsQuestions = [
     answer: "3 cos(3x)"
   },
   {
-    question: "Evaluate âˆ«â‚Â² (xÂ³) dx.",
+    question: "Evaluate ??² (x³) dx.",
     options: ["15/4", "7.5", "5", "16"],
     answer: "15/4"
   },
@@ -1655,7 +1655,7 @@ const addMathsQuestions = [
     answer: "x = 1, y = 3"
   },
   {
-    question: "Find the vertex of the parabola y = xÂ² - 4x + 3.",
+    question: "Find the vertex of the parabola y = x² - 4x + 3.",
     options: [
       "(2, -1)",
       "(1, 0)",
@@ -1675,24 +1675,24 @@ const addMathsQuestions = [
     answer: "[[3, 3], [1, 5]]"
   },
   {
-    question: "Find the binomial expansion of (1 + 2x)Â³.",
+    question: "Find the binomial expansion of (1 + 2x)³.",
     options: [
-      "1 + 6x + 12xÂ² + 8xÂ³",
-      "1 + 3x + 6xÂ² + 8xÂ³",
-      "1 + 6x + 8xÂ² + 12xÂ³",
-      "1 + 3x + 12xÂ² + 8xÂ³"
+      "1 + 6x + 12x² + 8x³",
+      "1 + 3x + 6x² + 8x³",
+      "1 + 6x + 8x² + 12x³",
+      "1 + 3x + 12x² + 8x³"
     ],
-    answer: "1 + 6x + 12xÂ² + 8xÂ³"
+    answer: "1 + 6x + 12x² + 8x³"
   },
   {
     question: "Find the domain of the function f(x) = 1/(x - 2).",
     options: [
-      "x â‰  2",
-      "x â‰  -2",
+      "x ? 2",
+      "x ? -2",
       "x > 2",
       "x < 2"
     ],
-    answer: "x â‰  2"
+    answer: "x ? 2"
   },
   {
     question: "Calculate the gradient of the line passing through points (1, 2) and (3, 8).",
@@ -1715,7 +1715,7 @@ const addMathsQuestions = [
     answer: "4"
   },
   {
-    question: "Evaluate the limit: lim (x â†’ 2) (xÂ² - 4)/(x - 2).",
+    question: "Evaluate the limit: lim (x â†’ 2) (x² - 4)/(x - 2).",
     options: ["4", "2", "0", "Undefined"],
     answer: "4"
   },
@@ -1730,8 +1730,8 @@ const addMathsQuestions = [
     answer: "-2"
   },
   {
-    question: "Simplify: sinÂ²Î¸ + cosÂ²Î¸.",
-    options: ["1", "0", "sin Î¸", "cos Î¸"],
+    question: "Simplify: sin²?¸ + cos²?¸.",
+    options: ["1", "0", "sin ?¸", "cos ?¸"],
     answer: "1"
   },
   {
@@ -1745,9 +1745,9 @@ const addMathsQuestions = [
     answer: "13"
   },
   {
-    question: "Evaluate the integral âˆ« 3xÂ² dx.",
-    options: ["xÂ³ + C", "xÂ³", "3xÂ³ + C", "xÂ² + C"],
-    answer: "xÂ³ + C"
+    question: "Evaluate the integral âˆ« 3x² dx.",
+    options: ["x³ + C", "x³", "3x³ + C", "x² + C"],
+    answer: "x³ + C"
   },
   {
     question: "Find the sum of the infinite geometric series 8 + 4 + 2 + ...",
@@ -1765,29 +1765,29 @@ const addMathsQuestions = [
     answer: "1"
   },
   {
-    question: "Solve for x: 2 sin x = 1 for 0Â° â‰¤ x â‰¤ 360Â°.",
-    options: ["30Â°, 150Â°", "45Â°, 135Â°", "60Â°, 120Â°", "90Â°, 180Â°"],
-    answer: "30Â°, 150Â°"
+    question: "Solve for x: 2 sin x = 1 for 0° ? x ? 360°.",
+    options: ["30°, 150°", "45°, 135°", "60°, 120°", "90°, 180°"],
+    answer: "30°, 150°"
   },
   {
     question: "Find the inverse of the function f(x) = (x - 3)/2.",
     options: [
-      "fâ»Â¹(x) = 2x + 3",
-      "fâ»Â¹(x) = (x + 3)/2",
-      "fâ»Â¹(x) = (2x - 3)",
-      "fâ»Â¹(x) = (x - 3)/2"
+      "f?¹(x) = 2x + 3",
+      "f?¹(x) = (x + 3)/2",
+      "f?¹(x) = (2x - 3)",
+      "f?¹(x) = (x - 3)/2"
     ],
-    answer: "fâ»Â¹(x) = 2x + 3"
+    answer: "f?¹(x) = 2x + 3"
   },
   {
     question: "Determine the middle term in the expansion of (2x + 3)^6.",
     options: [
-      "540xÂ³",
-      "720xÂ³",
-      "360xÂ³",
-      "480xÂ³"
+      "540x³",
+      "720x³",
+      "360x³",
+      "480x³"
     ],
-    answer: "540xÂ³"
+    answer: "540x³"
   },
   {
     question: "Find the inverse of matrix [[2, 3], [1, 4]].",
@@ -1840,14 +1840,14 @@ const addMathsQuestions = [
     answer: "30"
   },
   {
-    question: "Simplify: (sin Î¸)/(1 - cos Î¸) + (sin Î¸)/(1 + cos Î¸).",
+    question: "Simplify: (sin ?¸)/(1 - cos ?¸) + (sin ?¸)/(1 + cos ?¸).",
     options: [
-      "2 csc Î¸",
-      "2 sec Î¸",
-      "tan Î¸",
-      "cot Î¸"
+      "2 csc ?¸",
+      "2 sec ?¸",
+      "tan ?¸",
+      "cot ?¸"
     ],
-    answer: "2 csc Î¸"
+    answer: "2 csc ?¸"
   },
   {
     question: "Find the solution set of the equation: |x - 3| < 5.",
@@ -1862,12 +1862,12 @@ const addMathsQuestions = [
   {
     question: "Evaluate the integral âˆ« (2x + 3) dx.",
     options: [
-      "xÂ² + 3x + C",
-      "xÂ² + 6x + C",
-      "xÂ³ + 3x + C",
+      "x² + 3x + C",
+      "x² + 6x + C",
+      "x³ + 3x + C",
       "2x + 3 + C"
     ],
-    answer: "xÂ² + 3x + C"
+    answer: "x² + 3x + C"
   },
   {
     question: "Find the equation of the line perpendicular to y = 2x + 3 and passing through (1, 4).",
@@ -1892,12 +1892,12 @@ const addMathsQuestions = [
   {
     question: "Calculate the angle between two vectors a = 3i - 2j and b = i + 4j.",
     options: [
-      "45Â°",
-      "60Â°",
-      "90Â°",
-      "30Â°"
+      "45°",
+      "60°",
+      "90°",
+      "30°"
     ],
-    answer: "60Â°"
+    answer: "60°"
   },
   {
     question: "Determine the rank of the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]].",
@@ -1927,12 +1927,12 @@ const addMathsQuestions = [
   {
     question: "Find the equation of the circle with center (3, -4) and radius 5.",
     options: [
-      "(x - 3)Â² + (y + 4)Â² = 25",
-      "(x + 3)Â² + (y - 4)Â² = 25",
-      "(x - 3)Â² + (y - 4)Â² = 25",
-      "(x + 3)Â² + (y + 4)Â² = 25"
+      "(x - 3)² + (y + 4)² = 25",
+      "(x + 3)² + (y - 4)² = 25",
+      "(x - 3)² + (y - 4)² = 25",
+      "(x + 3)² + (y + 4)² = 25"
     ],
-    answer: "(x - 3)Â² + (y + 4)Â² = 25"
+    answer: "(x - 3)² + (y + 4)² = 25"
   },
   {
     question: "Calculate the work done when a force of 10N moves an object 5m in the direction of the force.",
@@ -1963,7 +1963,6 @@ const addMathsQuestions = [
 ];
 
 export default addMathsQuestions;
-
 
 
 

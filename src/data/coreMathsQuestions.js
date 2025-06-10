@@ -5,9 +5,9 @@ const coreMathsQuestions = [
     answer: "{1, 2, 3, 4, 5}"
   },
   {
-    question: "Simplify: âˆš50 + âˆš18",
-    options: ["âˆš68", "8âˆš2", "âˆš25 + âˆš9", "5âˆš5 + 3âˆš2"],
-    answer: "8âˆš2"
+    question: "Simplify: ?50 + ?18",
+    options: ["?68", "8?2", "?25 + ?9", "5?5 + 3?2"],
+    answer: "8?2"
   },
   {
     question: "Solve for x: 2^x = 32",
@@ -15,7 +15,7 @@ const coreMathsQuestions = [
     answer: "5"
   },
   {
-    question: "Which of the following is the correct factorization of xÂ² - 5x + 6?",
+    question: "Which of the following is the correct factorization of x² - 5x + 6?",
     options: ["(x + 2)(x + 3)", "(x - 2)(x - 3)", "(x + 1)(x - 6)", "(x - 1)(x - 6)"],
     answer: "(x - 2)(x - 3)"
   },
@@ -30,12 +30,12 @@ const coreMathsQuestions = [
     answer: "{1, 2, 3, 4, 5}"
   },
   {
-    question: "Simplify: âˆš50 + âˆš18",
-    options: ["âˆš68", "8âˆš2", "âˆš25 + âˆš9", "5âˆš5 + 3âˆš2"],
-    answer: "8âˆš2"
+    question: "Simplify: ?50 + ?18",
+    options: ["?68", "8?2", "?25 + ?9", "5?5 + 3?2"],
+    answer: "8?2"
   },
   {
-    question: "Convert the binary number 1011â‚‚ to base 10.",
+    question: "Convert the binary number 1011? to base 10.",
     options: ["13", "11", "9", "7"],
     answer: "11"
   },
@@ -62,19 +62,19 @@ const coreMathsQuestions = [
     answer: "4"
   },
   {
-    question: "Factorize the quadratic expression: xÂ² - 7x + 10.",
+    question: "Factorize the quadratic expression: x² - 7x + 10.",
     options: ["(x - 5)(x - 2)", "(x + 5)(x + 2)", "(x - 10)(x + 1)", "(x + 10)(x - 1)"],
     answer: "(x - 5)(x - 2)"
   },
   {
     question: "Find the volume of a cylinder with radius 4 cm and height 10 cm (Use \u03C0 = 3.14).",
-    options: ["502.4 cmÂ³", "125.6 cmÂ³", "251.2 cmÂ³", "400 cmÂ³"],
-    answer: "502.4 cmÂ³"
+    options: ["502.4 cm³", "125.6 cm³", "251.2 cm³", "400 cm³"],
+    answer: "502.4 cm³"
   },
   {
     question: "If sin \u03B8 = 0.6, what is \u03B8 (in degrees)?",
-    options: ["30Â°", "36.9Â°", "45Â°", "53.1Â°"],
-    answer: "36.9Â°"
+    options: ["30°", "36.9°", "45°", "53.1°"],
+    answer: "36.9°"
   },
   {
     question: "What is the next term in the arithmetic sequence: 3, 7, 11, 15, ...?",
@@ -98,7 +98,7 @@ const coreMathsQuestions = [
     answer: "Compass"
   },
   {
-    question: "Find tan 45Â°.",
+    question: "Find tan 45°.",
     options: ["0", "1", "\u221E (infinity)", "\u221A3/3"],
     answer: "1"
   },
@@ -110,21 +110,21 @@ const coreMathsQuestions = [
   },
   {
     question: "Which number is irrational?",
-    options: ["3/4", "âˆš2", "5", "0.5"],
-    answer: "âˆš2"
+    options: ["3/4", "?2", "5", "0.5"],
+    answer: "?2"
   },
   {
-    question: "Simplify: (3xÂ²)(2xÂ³)",
-    options: ["6xâµ", "5xâ¶", "6xâ¶", "5xâµ"],
-    answer: "6xâµ"
+    question: "Simplify: (3x²)(2x³)",
+    options: ["6x?", "5x?", "6x?", "5x?"],
+    answer: "6x?"
   },
   {
-    question: "Simplify âˆš72",
-    options: ["6âˆš2", "8âˆš3", "9âˆš2", "4âˆš3"],
-    answer: "6âˆš2"
+    question: "Simplify ?72",
+    options: ["6?2", "8?3", "9?2", "4?3"],
+    answer: "6?2"
   },
   {
-    question: "Convert 1101â‚‚ to decimal (base 10).",
+    question: "Convert 1101? to decimal (base 10).",
     options: ["11", "13", "14", "15"],
     answer: "13"
   },
@@ -135,8 +135,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the sum of interior angles of a triangle?",
-    options: ["180Â°", "360Â°", "90Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "360°", "90°", "270°"],
+    answer: "180°"
   },
   {
     question: "Solve for x: 3x + 5 = 20",
@@ -144,9 +144,9 @@ const coreMathsQuestions = [
     answer: "5"
   },
   {
-    question: "A ship sails 45Â° NE from a point. What is the bearing?",
-    options: ["045Â°", "135Â°", "225Â°", "315Â°"],
-    answer: "045Â°"
+    question: "A ship sails 45° NE from a point. What is the bearing?",
+    options: ["045°", "135°", "225°", "315°"],
+    answer: "045°"
   },
   {
     question: "Vector A = 4i + 3j. What is the magnitude of A?",
@@ -201,17 +201,17 @@ const coreMathsQuestions = [
     answer: "10"
   },
   {
-    question: "Factorize xÂ² - 9x + 18.",
+    question: "Factorize x² - 9x + 18.",
     options: ["(x - 6)(x - 3)", "(x + 6)(x + 3)", "(x - 9)(x + 2)", "(x + 9)(x - 2)"],
     answer: "(x - 6)(x - 3)"
   },
   {
     question: "Find the area of a circle with radius 7 cm (\u03C0 = 3.14).",
-    options: ["153.86 cmÂ²", "49 cmÂ²", "43.96 cmÂ²", "100 cmÂ²"],
-    answer: "153.86 cmÂ²"
+    options: ["153.86 cm²", "49 cm²", "43.96 cm²", "100 cm²"],
+    answer: "153.86 cm²"
   },
   {
-    question: "Calculate cos 60Â°.",
+    question: "Calculate cos 60°.",
     options: ["1", "0", "0.5", "0.866"],
     answer: "0.5"
   },
@@ -242,14 +242,14 @@ const coreMathsQuestions = [
     answer: "If the ground is not wet, then it did not rain"
   },
   {
-    question: "Calculate tan 45Â°.",
+    question: "Calculate tan 45°.",
     options: ["0", "1", "\u221E (infinity)", "\u221A3/3"],
     answer: "1"
   },
   {
     question: "What is the sum of the interior angles of a pentagon?",
-    options: ["540Â°", "360Â°", "720Â°", "180Â°"],
-    answer: "540Â°"
+    options: ["540°", "360°", "720°", "180°"],
+    answer: "540°"
   },
   {
     question: "Solve for x: 2x + 3 = 11",
@@ -258,7 +258,7 @@ const coreMathsQuestions = [
   },
   // YEAR 1
   {
-    question: "If A = {1, 3, 5} and B = {2, 3, 4}, what is A âˆ© B?",
+    question: "If A = {1, 3, 5} and B = {2, 3, 4}, what is A ? B?",
     options: ["{3}", "{1, 2, 3, 4, 5}", "{}","{2, 4}"],
     answer: "{3}"
   },
@@ -273,24 +273,24 @@ const coreMathsQuestions = [
     answer: "x^7"
   },
   {
-    question: "Simplify âˆš98",
-    options: ["7âˆš2", "14âˆš7", "49âˆš2", "7âˆš7"],
-    answer: "7âˆš2"
+    question: "Simplify ?98",
+    options: ["7?2", "14?7", "49?2", "7?7"],
+    answer: "7?2"
   },
   {
-    question: "Convert 1001â‚‚ to decimal.",
+    question: "Convert 1001? to decimal.",
     options: ["9", "11", "7", "13"],
     answer: "9"
   },
   {
-    question: "If f(x) = xÂ² - 2, find f(3).",
+    question: "If f(x) = x² - 2, find f(3).",
     options: ["7", "9", "5", "3"],
     answer: "7"
   },
   {
     question: "What is the measure of each angle in an equilateral triangle?",
-    options: ["60Â°", "90Â°", "45Â°", "30Â°"],
-    answer: "60Â°"
+    options: ["60°", "90°", "45°", "30°"],
+    answer: "60°"
   },
   {
     question: "Solve for x: 5x - 10 = 0",
@@ -298,14 +298,14 @@ const coreMathsQuestions = [
     answer: "2"
   },
   {
-    question: "A plane flies 120Â° from north. What is the bearing?",
-    options: ["120Â°", "240Â°", "60Â°", "300Â°"],
-    answer: "120Â°"
+    question: "A plane flies 120° from north. What is the bearing?",
+    options: ["120°", "240°", "60°", "300°"],
+    answer: "120°"
   },
   {
     question: "Vector A = 5i - 2j. Find the magnitude of A.",
-    options: ["âˆš29", "7", "3", "6"],
-    answer: "âˆš29"
+    options: ["?29", "7", "3", "6"],
+    answer: "?29"
   },
   {
     question: "Find the mode of the data set: 3, 7, 7, 8, 9.",
@@ -361,11 +361,11 @@ const coreMathsQuestions = [
   },
   {
     question: "Find the surface area of a sphere with radius 3 cm (\u03C0 = 3.14).",
-    options: ["113.04 cmÂ²", "28.26 cmÂ²", "56.52 cmÂ²", "36 cmÂ²"],
-    answer: "113.04 cmÂ²"
+    options: ["113.04 cm²", "28.26 cm²", "56.52 cm²", "36 cm²"],
+    answer: "113.04 cm²"
   },
   {
-    question: "Calculate sin 45Â°.",
+    question: "Calculate sin 45°.",
     options: ["0.707", "0.5", "1", "0"],
     answer: "0.707"
   },
@@ -397,14 +397,14 @@ const coreMathsQuestions = [
     answer: "It rains and the ground is not wet"
   },
   {
-    question: "Calculate cos 90Â°.",
+    question: "Calculate cos 90°.",
     options: ["0", "1", "-1", "0.5"],
     answer: "0"
   },
   {
     question: "Sum of interior angles of a hexagon?",
-    options: ["720Â°", "540Â°", "600Â°", "360Â°"],
-    answer: "720Â°"
+    options: ["720°", "540°", "600°", "360°"],
+    answer: "720°"
   },
   {
     question: "Solve for x: 3x - 7 = 11.",
@@ -412,8 +412,8 @@ const coreMathsQuestions = [
     answer: "6"
   },
   {
-    question: "Calculate tan 30Â°.",
-    options: ["0.577", "1", "0", "âˆš3"],
+    question: "Calculate tan 30°.",
+    options: ["0.577", "1", "0", "?3"],
     answer: "0.577"
   },
   {
@@ -427,9 +427,9 @@ const coreMathsQuestions = [
     answer: "21"
   },
   {
-    question: "What is the complement of angle 40Â°?",
-    options: ["50Â°", "130Â°", "140Â°", "90Â°"],
-    answer: "50Â°"
+    question: "What is the complement of angle 40°?",
+    options: ["50°", "130°", "140°", "90°"],
+    answer: "50°"
   },
   {
     question: "Which logical statement is equivalent to 'If p then q'?",
@@ -454,13 +454,13 @@ const coreMathsQuestions = [
   },
   {
     question: "Expand: (x + 3)(x - 2).",
-    options: ["xÂ² + x - 6", "xÂ² - 5", "xÂ² + 5x - 6", "xÂ² - x + 6"],
-    answer: "xÂ² + x - 6"
+    options: ["x² + x - 6", "x² - 5", "x² + 5x - 6", "x² - x + 6"],
+    answer: "x² + x - 6"
   },
   {
-    question: "Simplify: âˆš50",
-    options: ["5âˆš2", "7âˆš2", "10âˆš5", "25âˆš2"],
-    answer: "5âˆš2"
+    question: "Simplify: ?50",
+    options: ["5?2", "7?2", "10?5", "25?2"],
+    answer: "5?2"
   },
   {
     question: "Convert 255 in decimal to binary.",
@@ -484,8 +484,8 @@ const coreMathsQuestions = [
   },
   {
     question: "Find the bearing of a plane flying directly south.",
-    options: ["180Â°", "0Â°", "90Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "0°", "90°", "270°"],
+    answer: "180°"
   },
   {
     question: "Vector B = -3i + 4j. Find the magnitude of B.",
@@ -498,7 +498,7 @@ const coreMathsQuestions = [
     answer: "17.5"
   },
   {
-    question: "Which is a rotation of 90Â° a rigid motion?",
+    question: "Which is a rotation of 90° a rigid motion?",
     options: ["Yes", "No"],
     answer: "Yes"
   },
@@ -545,12 +545,12 @@ const coreMathsQuestions = [
     answer: "(x - 4)(x + 4)"
   },
   {
-    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (Ï€=3.14).",
-    options: ["197.82 cmÂ³", "65.94 cmÂ³", "131.88 cmÂ³", "99 cmÂ³"],
-    answer: "197.82 cmÂ³"
+    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (?=3.14).",
+    options: ["197.82 cm³", "65.94 cm³", "131.88 cm³", "99 cm³"],
+    answer: "197.82 cm³"
   },
   {
-    question: "Calculate sin 30Â°.",
+    question: "Calculate sin 30°.",
     options: ["0.5", "0.707", "1", "0"],
     answer: "0.5"
   },
@@ -582,14 +582,14 @@ const coreMathsQuestions = [
     answer: "If the grass is wet, then it rains"
   },
   {
-    question: "Calculate tan 60Â°.",
-    options: ["âˆš3", "1", "0", "0.5"],
-    answer: "âˆš3"
+    question: "Calculate tan 60°.",
+    options: ["?3", "1", "0", "0.5"],
+    answer: "?3"
   },
   {
     question: "Sum of interior angles of an octagon?",
-    options: ["1080Â°", "900Â°", "720Â°", "1260Â°"],
-    answer: "1080Â°"
+    options: ["1080°", "900°", "720°", "1260°"],
+    answer: "1080°"
   },
   {
     question: "Solve for x: 4x + 5 = 21.",
@@ -607,9 +607,9 @@ const coreMathsQuestions = [
     answer: "40"
   },
   {
-    question: "What is the supplement of 110Â°?",
-    options: ["70Â°", "60Â°", "80Â°", "100Â°"],
-    answer: "70Â°"
+    question: "What is the supplement of 110°?",
+    options: ["70°", "60°", "80°", "100°"],
+    answer: "70°"
   },
   {
     question: "Which is the contrapositive of 'If p then q'?",
@@ -633,7 +633,7 @@ const coreMathsQuestions = [
     answer: "{1, 3, 5}"
   },
   {
-    question: "Is âˆš2 rational or irrational?",
+    question: "Is ?2 rational or irrational?",
     options: ["Rational", "Irrational"],
     answer: "Irrational"
   },
@@ -643,9 +643,9 @@ const coreMathsQuestions = [
     answer: "6x^5"
   },
   {
-    question: "Simplify âˆš72.",
-    options: ["6âˆš2", "8âˆš3", "9âˆš2", "12âˆš3"],
-    answer: "6âˆš2"
+    question: "Simplify ?72.",
+    options: ["6?2", "8?3", "9?2", "12?3"],
+    answer: "6?2"
   },
   {
     question: "Convert decimal 45 to binary.",
@@ -669,8 +669,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of a plane flying due east?",
-    options: ["90Â°", "0Â°", "180Â°", "270Â°"],
-    answer: "90Â°"
+    options: ["90°", "0°", "180°", "270°"],
+    answer: "90°"
   },
   {
     question: "Vector C = 6i + 8j. Find magnitude of C.",
@@ -730,12 +730,12 @@ const coreMathsQuestions = [
     answer: "(x + 3)(x + 2)"
   },
   {
-    question: "Calculate the volume of a cone with radius 3 cm and height 9 cm (Ï€=3.14).",
-    options: ["84.78 cmÂ³", "56.52 cmÂ³", "28.26 cmÂ³", "113.04 cmÂ³"],
-    answer: "84.78 cmÂ³"
+    question: "Calculate the volume of a cone with radius 3 cm and height 9 cm (?=3.14).",
+    options: ["84.78 cm³", "56.52 cm³", "28.26 cm³", "113.04 cm³"],
+    answer: "84.78 cm³"
   },
   {
-    question: "Calculate cos 60Â°.",
+    question: "Calculate cos 60°.",
     options: ["0.5", "0.707", "1", "0"],
     answer: "0.5"
   },
@@ -767,14 +767,14 @@ const coreMathsQuestions = [
     answer: "If not p then not q"
   },
   {
-    question: "Calculate sin 60Â°.",
+    question: "Calculate sin 60°.",
     options: ["0.866", "0.5", "1", "0"],
     answer: "0.866"
   },
   {
     question: "Sum of interior angles of a pentagon?",
-    options: ["540Â°", "360Â°", "720Â°", "900Â°"],
-    answer: "540Â°"
+    options: ["540°", "360°", "720°", "900°"],
+    answer: "540°"
   },
   {
     question: "Solve for x: 6x - 9 = 15.",
@@ -792,9 +792,9 @@ const coreMathsQuestions = [
     answer: "63"
   },
   {
-    question: "What is the complement of 35Â°?",
-    options: ["55Â°", "45Â°", "65Â°", "75Â°"],
-    answer: "55Â°"
+    question: "What is the complement of 35°?",
+    options: ["55°", "45°", "65°", "75°"],
+    answer: "55°"
   },
   {
     question: "Which is the inverse of 'If p then q'?",
@@ -828,9 +828,9 @@ const coreMathsQuestions = [
     answer: "5x + 3"
   },
   {
-    question: "Simplify âˆš18.",
-    options: ["3âˆš2", "9âˆš2", "6âˆš3", "2âˆš9"],
-    answer: "3âˆš2"
+    question: "Simplify ?18.",
+    options: ["3?2", "9?2", "6?3", "2?9"],
+    answer: "3?2"
   },
   {
     question: "Convert binary 1101 to decimal.",
@@ -854,13 +854,13 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing for northeast?",
-    options: ["45Â°", "90Â°", "135Â°", "60Â°"],
-    answer: "45Â°"
+    options: ["45°", "90°", "135°", "60°"],
+    answer: "45°"
   },
   {
     question: "Vector D = 2i - 5j. Find magnitude of D.",
-    options: ["âˆš29", "7", "3", "âˆš27"],
-    answer: "âˆš29"
+    options: ["?29", "7", "3", "?27"],
+    answer: "?29"
   },
   {
     question: "Find the range of the data: 3, 7, 7, 9, 15.",
@@ -915,13 +915,13 @@ const coreMathsQuestions = [
     answer: "(x - 5)(x - 4)"
   },
   {
-    question: "Calculate the surface area of a sphere with radius 3 cm (Ï€=3.14).",
-    options: ["113.04 cmÂ²", "56.52 cmÂ²", "75.36 cmÂ²", "28.26 cmÂ²"],
-    answer: "113.04 cmÂ²"
+    question: "Calculate the surface area of a sphere with radius 3 cm (?=3.14).",
+    options: ["113.04 cm²", "56.52 cm²", "75.36 cm²", "28.26 cm²"],
+    answer: "113.04 cm²"
   },
   {
-    question: "Calculate tan 45Â°.",
-    options: ["1", "0", "âˆš2", "0.5"],
+    question: "Calculate tan 45°.",
+    options: ["1", "0", "?2", "0.5"],
     answer: "1"
   },
   {
@@ -952,14 +952,14 @@ const coreMathsQuestions = [
     answer: "If the ground is not wet, then it does not rain"
   },
   {
-    question: "Calculate cos 45Â°.",
+    question: "Calculate cos 45°.",
     options: ["0.707", "0.5", "1", "0"],
     answer: "0.707"
   },
   {
     question: "Sum of interior angles of a triangle?",
-    options: ["180Â°", "360Â°", "90Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "360°", "90°", "270°"],
+    answer: "180°"
   },
   {
     question: "Solve for x: 5x + 7 = 27.",
@@ -977,9 +977,9 @@ const coreMathsQuestions = [
     answer: "31"
   },
   {
-    question: "What is the supplement of 65Â°?",
-    options: ["115Â°", "125Â°", "95Â°", "105Â°"],
-    answer: "115Â°"
+    question: "What is the supplement of 65°?",
+    options: ["115°", "125°", "95°", "105°"],
+    answer: "115°"
   },
   {
     question: "Which is the converse of 'If p then q'?",
@@ -1013,9 +1013,9 @@ const coreMathsQuestions = [
     answer: "5a"
   },
   {
-    question: "Simplify âˆš50.",
-    options: ["5âˆš2", "10âˆš5", "7âˆš2", "25âˆš2"],
-    answer: "5âˆš2"
+    question: "Simplify ?50.",
+    options: ["5?2", "10?5", "7?2", "25?2"],
+    answer: "5?2"
   },
   {
     question: "Convert decimal 19 to binary.",
@@ -1039,8 +1039,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of a plane flying due south?",
-    options: ["180Â°", "90Â°", "270Â°", "0Â°"],
-    answer: "180Â°"
+    options: ["180°", "90°", "270°", "0°"],
+    answer: "180°"
   },
   {
     question: "Vector E = -3i + 4j. Find magnitude of E.",
@@ -1100,12 +1100,12 @@ const coreMathsQuestions = [
     answer: "(x - 6)(x + 2)"
   },
   {
-    question: "Calculate the volume of a cylinder with radius 4 cm and height 7 cm (Ï€=3.14).",
-    options: ["351.68 cmÂ³", "175.84 cmÂ³", "87.96 cmÂ³", "439.82 cmÂ³"],
-    answer: "351.68 cmÂ³"
+    question: "Calculate the volume of a cylinder with radius 4 cm and height 7 cm (?=3.14).",
+    options: ["351.68 cm³", "175.84 cm³", "87.96 cm³", "439.82 cm³"],
+    answer: "351.68 cm³"
   },
   {
-    question: "Calculate sin 30Â°.",
+    question: "Calculate sin 30°.",
     options: ["0.5", "0.866", "1", "0"],
     answer: "0.5"
   },
@@ -1137,14 +1137,14 @@ const coreMathsQuestions = [
     answer: "If the ground is wet, then it rains"
   },
   {
-    question: "Calculate tan 30Â°.",
+    question: "Calculate tan 30°.",
     options: ["0.577", "1", "0.5", "0"],
     answer: "0.577"
   },
   {
     question: "Sum of exterior angles of any polygon?",
-    options: ["360Â°", "180Â°", "90Â°", "540Â°"],
-    answer: "360Â°"
+    options: ["360°", "180°", "90°", "540°"],
+    answer: "360°"
   },
   {
     question: "Solve for x: 7x - 8 = 20.",
@@ -1162,9 +1162,9 @@ const coreMathsQuestions = [
     answer: "41"
   },
   {
-    question: "What is the complement of 50Â°?",
-    options: ["40Â°", "30Â°", "60Â°", "50Â°"],
-    answer: "40Â°"
+    question: "What is the complement of 50°?",
+    options: ["40°", "30°", "60°", "50°"],
+    answer: "40°"
   },
   {
     question: "Which is the negation of 'If p then q'?",
@@ -1188,7 +1188,7 @@ const coreMathsQuestions = [
     answer: "{2}"
   },
   {
-    question: "Is âˆš16 a rational number?",
+    question: "Is ?16 a rational number?",
     options: ["Yes", "No"],
     answer: "Yes"
   },
@@ -1198,9 +1198,9 @@ const coreMathsQuestions = [
     answer: "6x"
   },
   {
-    question: "Simplify âˆš72.",
-    options: ["6âˆš2", "8âˆš2", "3âˆš6", "9âˆš8"],
-    answer: "6âˆš2"
+    question: "Simplify ?72.",
+    options: ["6?2", "8?2", "3?6", "9?8"],
+    answer: "6?2"
   },
   {
     question: "Convert decimal 25 to binary.",
@@ -1224,8 +1224,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of east?",
-    options: ["90Â°", "0Â°", "180Â°", "270Â°"],
-    answer: "90Â°"
+    options: ["90°", "0°", "180°", "270°"],
+    answer: "90°"
   },
   {
     question: "Vector F = 6i + 8j. Find magnitude of F.",
@@ -1243,7 +1243,7 @@ const coreMathsQuestions = [
     answer: "Yes"
   },
   {
-    question: "If 5 liters of paint cover 30 mÂ², how many liters are needed for 90 mÂ²?",
+    question: "If 5 liters of paint cover 30 m², how many liters are needed for 90 m²?",
     options: ["15", "20", "10", "12"],
     answer: "15"
   },
@@ -1286,11 +1286,11 @@ const coreMathsQuestions = [
   },
   {
     question: "Calculate the volume of a cube with side 5 cm.",
-    options: ["125 cmÂ³", "100 cmÂ³", "150 cmÂ³", "115 cmÂ³"],
-    answer: "125 cmÂ³"
+    options: ["125 cm³", "100 cm³", "150 cm³", "115 cm³"],
+    answer: "125 cm³"
   },
   {
-    question: "Calculate cos 60Â°.",
+    question: "Calculate cos 60°.",
     options: ["0.5", "0.866", "1", "0"],
     answer: "0.5"
   },
@@ -1322,14 +1322,14 @@ const coreMathsQuestions = [
     answer: "If not p then not q"
   },
   {
-    question: "Calculate sin 45Â°.",
+    question: "Calculate sin 45°.",
     options: ["0.707", "0.5", "1", "0"],
     answer: "0.707"
   },
   {
     question: "Sum of interior angles of a pentagon?",
-    options: ["540Â°", "360Â°", "720Â°", "180Â°"],
-    answer: "540Â°"
+    options: ["540°", "360°", "720°", "180°"],
+    answer: "540°"
   },
   {
     question: "Solve for x: 6x + 4 = 22.",
@@ -1347,9 +1347,9 @@ const coreMathsQuestions = [
     answer: "27"
   },
   {
-    question: "What is the complement of 70Â°?",
-    options: ["20Â°", "30Â°", "40Â°", "50Â°"],
-    answer: "20Â°"
+    question: "What is the complement of 70°?",
+    options: ["20°", "30°", "40°", "50°"],
+    answer: "20°"
   },
   {
     question: "Which is the contrapositive of 'If p then q'?",
@@ -1383,9 +1383,9 @@ const coreMathsQuestions = [
     answer: "10x"
   },
   {
-    question: "Simplify âˆš32.",
-    options: ["4âˆš2", "5âˆš2", "6âˆš2", "3âˆš2"],
-    answer: "4âˆš2"
+    question: "Simplify ?32.",
+    options: ["4?2", "5?2", "6?2", "3?2"],
+    answer: "4?2"
   },
   {
     question: "Convert decimal 13 to binary.",
@@ -1409,8 +1409,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of north-west?",
-    options: ["315Â°", "45Â°", "135Â°", "225Â°"],
-    answer: "315Â°"
+    options: ["315°", "45°", "135°", "225°"],
+    answer: "315°"
   },
   {
     question: "Vector G = 9i + 12j. Find magnitude of G.",
@@ -1445,7 +1445,7 @@ const coreMathsQuestions = [
     answer: "3"
   },
   {
-    question: "Solve for x: logâ‚â‚€(x) = 2.",
+    question: "Solve for x: log??(x) = 2.",
     options: ["100", "10", "1000", "1"],
     answer: "100"
   },
@@ -1471,11 +1471,11 @@ const coreMathsQuestions = [
   },
   {
     question: "Calculate the surface area of a cube with side 3 cm.",
-    options: ["54 cmÂ²", "27 cmÂ²", "36 cmÂ²", "18 cmÂ²"],
-    answer: "54 cmÂ²"
+    options: ["54 cm²", "27 cm²", "36 cm²", "18 cm²"],
+    answer: "54 cm²"
   },
   {
-    question: "Calculate tan 45Â°.",
+    question: "Calculate tan 45°.",
     options: ["1", "0.5", "0", "0.707"],
     answer: "1"
   },
@@ -1507,14 +1507,14 @@ const coreMathsQuestions = [
     answer: "If not q then not p"
   },
   {
-    question: "Calculate cos 0Â°.",
+    question: "Calculate cos 0°.",
     options: ["1", "0", "0.5", "-1"],
     answer: "1"
   },
   {
     question: "Sum of interior angles of a triangle?",
-    options: ["180Â°", "90Â°", "360Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "90°", "360°", "270°"],
+    answer: "180°"
   },
   {
     question: "Solve for x: 8x - 12 = 28.",
@@ -1532,9 +1532,9 @@ const coreMathsQuestions = [
     answer: "31"
   },
   {
-    question: "What is the supplement of 120Â°?",
-    options: ["60Â°", "70Â°", "50Â°", "45Â°"],
-    answer: "60Â°"
+    question: "What is the supplement of 120°?",
+    options: ["60°", "70°", "50°", "45°"],
+    answer: "60°"
   },
   {
     question: "Which is the inverse of 'If p then q'?",
@@ -1568,9 +1568,9 @@ const coreMathsQuestions = [
     answer: "7a"
   },
   {
-    question: "Simplify âˆš50.",
-    options: ["5âˆš2", "6âˆš2", "4âˆš2", "7âˆš2"],
-    answer: "5âˆš2"
+    question: "Simplify ?50.",
+    options: ["5?2", "6?2", "4?2", "7?2"],
+    answer: "5?2"
   },
   {
     question: "Convert binary 1010 to decimal.",
@@ -1594,8 +1594,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of south-east?",
-    options: ["135Â°", "45Â°", "225Â°", "315Â°"],
-    answer: "135Â°"
+    options: ["135°", "45°", "225°", "315°"],
+    answer: "135°"
   },
   {
     question: "Vector H = 8i - 6j. Find magnitude of H.",
@@ -1655,12 +1655,12 @@ const coreMathsQuestions = [
     answer: "(x + 4)(x + 5)"
   },
   {
-    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (use Ï€=3.14).",
-    options: ["197.82 cmÂ³", "200 cmÂ³", "180 cmÂ³", "210 cmÂ³"],
-    answer: "197.82 cmÂ³"
+    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (use ?=3.14).",
+    options: ["197.82 cm³", "200 cm³", "180 cm³", "210 cm³"],
+    answer: "197.82 cm³"
   },
   {
-    question: "Calculate sin 30Â°.",
+    question: "Calculate sin 30°.",
     options: ["0.5", "0.866", "1", "0"],
     answer: "0.5"
   },
@@ -1692,14 +1692,14 @@ const coreMathsQuestions = [
     answer: "If q then p"
   },
   {
-    question: "Calculate tan 60Â°.",
+    question: "Calculate tan 60°.",
     options: ["1.732", "1", "0.577", "0"],
     answer: "1.732"
   },
   {
     question: "Sum of interior angles of a hexagon?",
-    options: ["720Â°", "540Â°", "600Â°", "480Â°"],
-    answer: "720Â°"
+    options: ["720°", "540°", "600°", "480°"],
+    answer: "720°"
   },
   {
     question: "Solve for x: 5x - 3 = 17.",
@@ -1717,9 +1717,9 @@ const coreMathsQuestions = [
     answer: "29"
   },
   {
-    question: "What is the supplement of 150Â°?",
-    options: ["30Â°", "40Â°", "20Â°", "45Â°"],
-    answer: "30Â°"
+    question: "What is the supplement of 150°?",
+    options: ["30°", "40°", "20°", "45°"],
+    answer: "30°"
   },
   {
     question: "Which is the inverse of 'If p then q'?",
@@ -1743,7 +1743,7 @@ const coreMathsQuestions = [
     answer: "{4, 5}"
   },
   {
-    question: "Is âˆš16 a rational number?",
+    question: "Is ?16 a rational number?",
     options: ["Yes", "No"],
     answer: "Yes"
   },
@@ -1753,9 +1753,9 @@ const coreMathsQuestions = [
     answer: "10y"
   },
   {
-    question: "Simplify âˆš18.",
-    options: ["3âˆš2", "4âˆš2", "2âˆš2", "5âˆš2"],
-    answer: "3âˆš2"
+    question: "Simplify ?18.",
+    options: ["3?2", "4?2", "2?2", "5?2"],
+    answer: "3?2"
   },
   {
     question: "Convert decimal 25 to binary.",
@@ -1779,8 +1779,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of east?",
-    options: ["90Â°", "0Â°", "180Â°", "270Â°"],
-    answer: "90Â°"
+    options: ["90°", "0°", "180°", "270°"],
+    answer: "90°"
   },
   {
     question: "Vector J = -7i + 24j. Find magnitude of J.",
@@ -1815,7 +1815,7 @@ const coreMathsQuestions = [
     answer: "4"
   },
   {
-    question: "Solve for x: logâ‚‚(x) = 3.",
+    question: "Solve for x: log?(x) = 3.",
     options: ["8", "6", "9", "7"],
     answer: "8"
   },
@@ -1841,11 +1841,11 @@ const coreMathsQuestions = [
   },
   {
     question: "Calculate the volume of a cube with side 5 cm.",
-    options: ["125 cmÂ³", "150 cmÂ³", "100 cmÂ³", "120 cmÂ³"],
-    answer: "125 cmÂ³"
+    options: ["125 cm³", "150 cm³", "100 cm³", "120 cm³"],
+    answer: "125 cm³"
   },
   {
-    question: "Calculate cos 60Â°.",
+    question: "Calculate cos 60°.",
     options: ["0.5", "0.866", "1", "0"],
     answer: "0.5"
   },
@@ -1877,14 +1877,14 @@ const coreMathsQuestions = [
     answer: "p and not q"
   },
   {
-    question: "Calculate sin 90Â°.",
+    question: "Calculate sin 90°.",
     options: ["1", "0", "0.5", "-1"],
     answer: "1"
   },
   {
     question: "Sum of exterior angles of any polygon?",
-    options: ["360Â°", "180Â°", "540Â°", "720Â°"],
-    answer: "360Â°"
+    options: ["360°", "180°", "540°", "720°"],
+    answer: "360°"
   },
   {
     question: "Solve for x: 4x + 7 = 23.",
@@ -1902,9 +1902,9 @@ const coreMathsQuestions = [
     answer: "23"
   },
   {
-    question: "What is the complement of 70Â°?",
-    options: ["20Â°", "30Â°", "40Â°", "50Â°"],
-    answer: "20Â°"
+    question: "What is the complement of 70°?",
+    options: ["20°", "30°", "40°", "50°"],
+    answer: "20°"
   },
   {
     question: "Which is the contrapositive of 'If p then q'?",
@@ -1938,9 +1938,9 @@ const coreMathsQuestions = [
     answer: "6m"
   },
   {
-    question: "Simplify âˆš72.",
-    options: ["6âˆš2", "5âˆš2", "4âˆš2", "3âˆš2"],
-    answer: "6âˆš2"
+    question: "Simplify ?72.",
+    options: ["6?2", "5?2", "4?2", "3?2"],
+    answer: "6?2"
   },
   {
     question: "Convert binary 1111 to decimal.",
@@ -1948,7 +1948,7 @@ const coreMathsQuestions = [
     answer: "15"
   },
   {
-    question: "If f(x) = xÂ² - 2x + 1, find f(3).",
+    question: "If f(x) = x² - 2x + 1, find f(3).",
     options: ["4", "2", "6", "8"],
     answer: "4"
   },
@@ -1964,8 +1964,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of north-west?",
-    options: ["315Â°", "45Â°", "135Â°", "225Â°"],
-    answer: "315Â°"
+    options: ["315°", "45°", "135°", "225°"],
+    answer: "315°"
   },
   {
     question: "Vector K = 3i + 4j. Find magnitude of K.",
@@ -2000,7 +2000,7 @@ const coreMathsQuestions = [
     answer: "6"
   },
   {
-    question: "Solve for x: logâ‚ƒ(x) = 4.",
+    question: "Solve for x: log?(x) = 4.",
     options: ["81", "64", "27", "16"],
     answer: "81"
   },
@@ -2010,7 +2010,7 @@ const coreMathsQuestions = [
     answer: "x=4, y=3"
   },
   {
-    question: "If y varies directly as xÂ² and y=18 when x=3, find y when x=6.",
+    question: "If y varies directly as x² and y=18 when x=3, find y when x=6.",
     options: ["72", "54", "36", "108"],
     answer: "72"
   },
@@ -2020,18 +2020,18 @@ const coreMathsQuestions = [
     answer: "3"
   },
   {
-    question: "Factorize: xÂ² + 5x + 6.",
+    question: "Factorize: x² + 5x + 6.",
     options: ["(x + 2)(x + 3)", "(x + 1)(x + 6)", "(x + 3)(x + 5)", "(x + 4)(x + 2)"],
     answer: "(x + 2)(x + 3)"
   },
   {
     question: "Calculate the surface area of a cube with side 4 cm.",
-    options: ["96 cmÂ²", "64 cmÂ²", "48 cmÂ²", "80 cmÂ²"],
-    answer: "96 cmÂ²"
+    options: ["96 cm²", "64 cm²", "48 cm²", "80 cm²"],
+    answer: "96 cm²"
   },
   {
-    question: "Calculate tan 45Â°.",
-    options: ["1", "0", "âˆš3", "0.5"],
+    question: "Calculate tan 45°.",
+    options: ["1", "0", "?3", "0.5"],
     answer: "1"
   },
   {
@@ -2047,7 +2047,7 @@ const coreMathsQuestions = [
 
   // YEAR 3
   {
-    question: "Which tool is used to draw an angle of 60Â°?",
+    question: "Which tool is used to draw an angle of 60°?",
     options: ["Compass", "Protractor", "Ruler", "Set square"],
     answer: "Protractor"
   },
@@ -2062,14 +2062,14 @@ const coreMathsQuestions = [
     answer: "If not q then not p"
   },
   {
-    question: "Calculate cos 0Â°.",
+    question: "Calculate cos 0°.",
     options: ["1", "0", "0.5", "-1"],
     answer: "1"
   },
   {
     question: "Sum of interior angles of a triangle?",
-    options: ["180Â°", "360Â°", "90Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "360°", "90°", "270°"],
+    answer: "180°"
   },
   {
     question: "Solve for x: 6x + 2 = 20.",
@@ -2087,9 +2087,9 @@ const coreMathsQuestions = [
     answer: "22"
   },
   {
-    question: "What is the supplement of 110Â°?",
-    options: ["70Â°", "80Â°", "60Â°", "90Â°"],
-    answer: "70Â°"
+    question: "What is the supplement of 110°?",
+    options: ["70°", "80°", "60°", "90°"],
+    answer: "70°"
   },
   {
     question: "Which is the inverse of 'If p then q'?",
@@ -2123,9 +2123,9 @@ const coreMathsQuestions = [
     answer: "6m"
   },
   {
-    question: "Simplify âˆš72.",
-    options: ["6âˆš2", "5âˆš2", "4âˆš2", "3âˆš2"],
-    answer: "6âˆš2"
+    question: "Simplify ?72.",
+    options: ["6?2", "5?2", "4?2", "3?2"],
+    answer: "6?2"
   },
   {
     question: "Convert binary 1111 to decimal.",
@@ -2133,7 +2133,7 @@ const coreMathsQuestions = [
     answer: "15"
   },
   {
-    question: "If f(x) = xÂ² - 2x + 1, find f(3).",
+    question: "If f(x) = x² - 2x + 1, find f(3).",
     options: ["4", "2", "6", "8"],
     answer: "4"
   },
@@ -2149,8 +2149,8 @@ const coreMathsQuestions = [
   },
   {
     question: "What is the bearing of north-west?",
-    options: ["315Â°", "45Â°", "135Â°", "225Â°"],
-    answer: "315Â°"
+    options: ["315°", "45°", "135°", "225°"],
+    answer: "315°"
   },
   {
     question: "Vector K = 3i + 4j. Find magnitude of K.",
@@ -2185,7 +2185,7 @@ const coreMathsQuestions = [
     answer: "6"
   },
   {
-    question: "Solve for x: logâ‚ƒ(x) = 4.",
+    question: "Solve for x: log?(x) = 4.",
     options: ["81", "64", "27", "16"],
     answer: "81"
   },
@@ -2195,7 +2195,7 @@ const coreMathsQuestions = [
     answer: "x=4, y=3"
   },
   {
-    question: "If y varies directly as xÂ² and y=18 when x=3, find y when x=6.",
+    question: "If y varies directly as x² and y=18 when x=3, find y when x=6.",
     options: ["72", "54", "36", "108"],
     answer: "72"
   },
@@ -2205,18 +2205,18 @@ const coreMathsQuestions = [
     answer: "3"
   },
   {
-    question: "Factorize: xÂ² + 5x + 6.",
+    question: "Factorize: x² + 5x + 6.",
     options: ["(x + 2)(x + 3)", "(x + 1)(x + 6)", "(x + 3)(x + 5)", "(x + 4)(x + 2)"],
     answer: "(x + 2)(x + 3)"
   },
   {
     question: "Calculate the surface area of a cube with side 4 cm.",
-    options: ["96 cmÂ²", "64 cmÂ²", "48 cmÂ²", "80 cmÂ²"],
-    answer: "96 cmÂ²"
+    options: ["96 cm²", "64 cm²", "48 cm²", "80 cm²"],
+    answer: "96 cm²"
   },
   {
-    question: "Calculate tan 45Â°.",
-    options: ["1", "0", "âˆš3", "0.5"],
+    question: "Calculate tan 45°.",
+    options: ["1", "0", "?3", "0.5"],
     answer: "1"
   },
   {
@@ -2232,7 +2232,7 @@ const coreMathsQuestions = [
 
   // YEAR 3
   {
-    question: "Which tool is used to draw an angle of 60Â°?",
+    question: "Which tool is used to draw an angle of 60°?",
     options: ["Compass", "Protractor", "Ruler", "Set square"],
     answer: "Protractor"
   },
@@ -2247,14 +2247,14 @@ const coreMathsQuestions = [
     answer: "If not q then not p"
   },
   {
-    question: "Calculate cos 0Â°.",
+    question: "Calculate cos 0°.",
     options: ["1", "0", "0.5", "-1"],
     answer: "1"
   },
   {
     question: "Sum of interior angles of a triangle?",
-    options: ["180Â°", "360Â°", "90Â°", "270Â°"],
-    answer: "180Â°"
+    options: ["180°", "360°", "90°", "270°"],
+    answer: "180°"
   },
   {
     question: "Solve for x: 6x + 2 = 20.",
@@ -2272,9 +2272,9 @@ const coreMathsQuestions = [
     answer: "22"
   },
   {
-    question: "What is the supplement of 110Â°?",
-    options: ["70Â°", "80Â°", "60Â°", "90Â°"],
-    answer: "70Â°"
+    question: "What is the supplement of 110°?",
+    options: ["70°", "80°", "60°", "90°"],
+    answer: "70°"
   },
   {
     question: "Which is the inverse of 'If p then q'?",
@@ -2295,8 +2295,6 @@ const coreMathsQuestions = [
 ];
 
 export default coreMathsQuestions;
-
-
 
 
 

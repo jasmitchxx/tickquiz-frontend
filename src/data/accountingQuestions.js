@@ -1,6 +1,6 @@
 const accountingQuestions = [
   {
-    question: "A business bought goods worth GHÂ¢2,000 and recorded it in the Purchases Day Book. What is the correct double entry?",
+    question: "A business bought goods worth GHS2,000 and recorded it in the Purchases Day Book. What is the correct double entry?",
     options: ["", "Debit Purchases, Credit Cash",
       "Debit Sales, Credit Purchases",
       "Debit Purchases, Credit Creditors",
@@ -8,9 +8,9 @@ const accountingQuestions = [
 answer: "Debit Purchases, Credit Creditors"
   },
   {
-    question: "Calculate the VAT payable: Sales = GHÂ¢12,000, VAT rate = 15%",
-    options: ["", "GHÂ¢1,200", "GHÂ¢1,800", "GHÂ¢1,500", "GHÂ¢2,100"],
-answer: "GHÂ¢1,800"
+    question: "Calculate the VAT payable: Sales = GHS12,000, VAT rate = 15%",
+    options: ["", "GHS1,200", "GHS1,800", "GHS1,500", "GHS2,100"],
+answer: "GHS1,800"
   },
   {
     question: "In which book of original entry is the return of goods by a customer recorded?",
@@ -18,22 +18,22 @@ answer: "GHÂ¢1,800"
 answer: "Sales Return Book"
   },
   {
-    question: "The total column in the Petty Cash Book is GHÂ¢500. Postage GHÂ¢150, Stationery GHÂ¢200, Transport GHÂ¢150. What is the imprest?",
-    options: ["", "GHÂ¢500", "GHÂ¢200", "GHÂ¢150", "GHÂ¢300"],
-answer: "GHÂ¢500"
+    question: "The total column in the Petty Cash Book is GHS500. Postage GHS150, Stationery GHS200, Transport GHS150. What is the imprest?",
+    options: ["", "GHS500", "GHS200", "GHS150", "GHS300"],
+answer: "GHS500"
   },
   {
-    question: "If VAT on purchases is GHÂ¢600 and VAT on sales is GHÂ¢900, what is the VAT payable?",
-    options: ["", "GHÂ¢1,500", "GHÂ¢300", "GHÂ¢600", "GHÂ¢900"],
-answer: "GHÂ¢300"
+    question: "If VAT on purchases is GHS600 and VAT on sales is GHS900, what is the VAT payable?",
+    options: ["", "GHS1,500", "GHS300", "GHS600", "GHS900"],
+answer: "GHS300"
   },
   {
-    question: "What is the double entry for VAT charged on sales of GHÂ¢5,000 at 15%?",
-    options: ["", "Debit VAT Control GHÂ¢750, Credit Sales GHÂ¢5,750",
-      "Debit Debtors GHÂ¢5,750; Credit Sales GHÂ¢5,000; Credit VAT Control GHÂ¢750",
-      "Debit Sales GHÂ¢5,000, Credit VAT Control GHÂ¢750",
-      "Credit VAT GHÂ¢5,000; Debit Sales GHÂ¢750"],
-answer: "Debit Debtors GHÂ¢5,750; Credit Sales GHÂ¢5,000; Credit VAT Control GHÂ¢750"
+    question: "What is the double entry for VAT charged on sales of GHS5,000 at 15%?",
+    options: ["", "Debit VAT Control GHS750, Credit Sales GHS5,750",
+      "Debit Debtors GHS5,750; Credit Sales GHS5,000; Credit VAT Control GHS750",
+      "Debit Sales GHS5,000, Credit VAT Control GHS750",
+      "Credit VAT GHS5,000; Debit Sales GHS750"],
+answer: "Debit Debtors GHS5,750; Credit Sales GHS5,000; Credit VAT Control GHS750"
   },
   {
     question: "Which of the following is not a Book of Original Entry?",
@@ -41,9 +41,9 @@ answer: "Debit Debtors GHÂ¢5,750; Credit Sales GHÂ¢5,000; Credit VAT Control
 answer: "Ledger"
   },
   {
-    question: "If a Petty Cashier is given an imprest of GHÂ¢300 and spends GHÂ¢280 during the month, how much is reimbursed?",
-    options: ["", "GHÂ¢20", "GHÂ¢280", "GHÂ¢300", "GHÂ¢0"],
-answer: "GHÂ¢280"
+    question: "If a Petty Cashier is given an imprest of GHS300 and spends GHS280 during the month, how much is reimbursed?",
+    options: ["", "GHS20", "GHS280", "GHS300", "GHS0"],
+answer: "GHS280"
   },
   {
     question: "Which of the following is a function of the Cash Book?",
@@ -51,19 +51,19 @@ answer: "GHÂ¢280"
 answer: "To record all cash and bank transactions"
   },
   {
-    question: "Prepare VAT control account from the following:\nVAT on Purchases = GHÂ¢1,200, VAT on Sales = GHÂ¢1,700",
-    options: ["", "Balance c/d GHÂ¢500 (credit)", "Balance b/d GHÂ¢500 (debit)", "Balance c/d GHÂ¢1,700 (debit)", "No balance"],
-answer: "Balance c/d GHÂ¢500 (credit)"
+    question: "Prepare VAT control account from the following:\nVAT on Purchases = GHS1,200, VAT on Sales = GHS1,700",
+    options: ["", "Balance c/d GHS500 (credit)", "Balance b/d GHS500 (debit)", "Balance c/d GHS1,700 (debit)", "No balance"],
+answer: "Balance c/d GHS500 (credit)"
   },
   {
-    question: "What is the VAT amount on a purchase of GHÂ¢2,500 if the VAT rate is 12.5%?",
-    options: ["", "GHÂ¢325", "GHÂ¢300", "GHÂ¢250", "GHÂ¢312.50"],
-answer: "GHÂ¢312.50"
+    question: "What is the VAT amount on a purchase of GHS2,500 if the VAT rate is 12.5%?",
+    options: ["", "GHS325", "GHS300", "GHS250", "GHS312.50"],
+answer: "GHS312.50"
   },
   {
-    question: "A Petty Cashier recorded: Transport GHÂ¢100, Postage GHÂ¢80, and Refreshments GHÂ¢60. Total expenditure is:",
-    options: ["", "GHÂ¢180", "GHÂ¢200", "GHÂ¢240", "GHÂ¢150"],
-answer: "GHÂ¢240"
+    question: "A Petty Cashier recorded: Transport GHS100, Postage GHS80, and Refreshments GHS60. Total expenditure is:",
+    options: ["", "GHS180", "GHS200", "GHS240", "GHS150"],
+answer: "GHS240"
   },
   {
     question: "Which of the following will be recorded in the Purchases Day Book?",
@@ -81,19 +81,19 @@ answer: "VAT Control"
 answer: "Credit sales"
   },
   {
-    question: "A business sells goods at GHÂ¢4,600 including VAT at 15%. What is the net sales value?",
-    options: ["", "GHÂ¢4,000", "GHÂ¢4,300", "GHÂ¢4,600", "GHÂ¢3,800"],
-answer: "GHÂ¢4,000"
+    question: "A business sells goods at GHS4,600 including VAT at 15%. What is the net sales value?",
+    options: ["", "GHS4,000", "GHS4,300", "GHS4,600", "GHS3,800"],
+answer: "GHS4,000"
   },
   {
-    question: "From the following determine the closing petty cash balance:\nOpening balance: GHÂ¢400, Total expenses: GHÂ¢360",
-    options: ["", "GHÂ¢40", "GHÂ¢360", "GHÂ¢400", "GHÂ¢760"],
-answer: "GHÂ¢40"
+    question: "From the following determine the closing petty cash balance:\nOpening balance: GHS400, Total expenses: GHS360",
+    options: ["", "GHS40", "GHS360", "GHS400", "GHS760"],
+answer: "GHS40"
   },
   {
-    question: "A cash sale of GHÂ¢2,000 including VAT at 20% is made. What amount is recorded as VAT?",
-    options: ["", "GHÂ¢333.33", "GHÂ¢400", "GHÂ¢250", "GHÂ¢166.67"],
-answer: "GHÂ¢333.33"
+    question: "A cash sale of GHS2,000 including VAT at 20% is made. What amount is recorded as VAT?",
+    options: ["", "GHS333.33", "GHS400", "GHS250", "GHS166.67"],
+answer: "GHS333.33"
   },
   {
     question: "What is the function of the Journal in bookkeeping?",
@@ -104,9 +104,9 @@ answer: "GHÂ¢333.33"
 answer: "To record transactions not captured in other books"
   },
   {
-    question: "A business purchased inventory worth GHÂ¢3,000 on credit. What is the entry in the Purchases Day Book?",
-    options: ["", "GHÂ¢3,000 in debit column", "GHÂ¢3,000 in credit column", "No entry", "GHÂ¢3,000 in VAT column"],
-answer: "GHÂ¢3,000 in debit column"
+    question: "A business purchased inventory worth GHS3,000 on credit. What is the entry in the Purchases Day Book?",
+    options: ["", "GHS3,000 in debit column", "GHS3,000 in credit column", "No entry", "GHS3,000 in VAT column"],
+answer: "GHS3,000 in debit column"
   },
   {
     question: "Which of the following best defines accounting?",
@@ -138,39 +138,39 @@ answer: "Cooking the books"
   },
   // --- Calculations start here (70% of the batch) ---
   {
-    question: "Given: Assets = GHÂ¢25,000, Liabilities = GHÂ¢8,000. Calculate the OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Equity.",
-    options: ["", "GHÂ¢17,000", "GHÂ¢33,000", "GHÂ¢8,000", "GHÂ¢25,000"],
-answer: "GHÂ¢17,000"
+    question: "Given: Assets = GHS25,000, Liabilities = GHS8,000. Calculate the Owner's Equity.",
+    options: ["", "GHS17,000", "GHS33,000", "GHS8,000", "GHS25,000"],
+answer: "GHS17,000"
   },
   {
-    question: "If Capital = GHÂ¢40,000 and Liabilities = GHÂ¢10,000, what is the total Assets?",
-    options: ["", "GHÂ¢30,000", "GHÂ¢50,000", "GHÂ¢60,000", "GHÂ¢40,000"],
-answer: "GHÂ¢50,000"
+    question: "If Capital = GHS40,000 and Liabilities = GHS10,000, what is the total Assets?",
+    options: ["", "GHS30,000", "GHS50,000", "GHS60,000", "GHS40,000"],
+answer: "GHS50,000"
   },
   {
-    question: "A business started with GHÂ¢60,000 capital. It bought goods for GHÂ¢20,000 on credit and paid GHÂ¢5,000 cash for expenses. What is the closing capital?",
-    options: ["", "GHÂ¢60,000", "GHÂ¢35,000", "GHÂ¢55,000", "GHÂ¢60,000"],
-answer: "GHÂ¢55,000"
+    question: "A business started with GHS60,000 capital. It bought goods for GHS20,000 on credit and paid GHS5,000 cash for expenses. What is the closing capital?",
+    options: ["", "GHS60,000", "GHS35,000", "GHS55,000", "GHS60,000"],
+answer: "GHS55,000"
   },
   {
-    question: "A transaction increases assets by GHÂ¢10,000 and also increases liabilities. What is the impact on equity?",
-    options: ["", "Increase by GHÂ¢10,000", "Decrease by GHÂ¢10,000", "No change", "Cannot be determined"],
+    question: "A transaction increases assets by GHS10,000 and also increases liabilities. What is the impact on equity?",
+    options: ["", "Increase by GHS10,000", "Decrease by GHS10,000", "No change", "Cannot be determined"],
 answer: "No change"
   },
   {
-    question: "Given the following transactions, calculate the balance of the cash account:\n\nOpening Cash: GHÂ¢5,000\nReceived from customers: GHÂ¢12,000\nPaid rent: GHÂ¢3,000\nBought equipment: GHÂ¢4,000",
-    options: ["", "GHÂ¢10,000", "GHÂ¢11,000", "GHÂ¢9,000", "GHÂ¢8,000"],
-answer: "GHÂ¢10,000"
+    question: "Given the following transactions, calculate the balance of the cash account:\n\nOpening Cash: GHS5,000\nReceived from customers: GHS12,000\nPaid rent: GHS3,000\nBought equipment: GHS4,000",
+    options: ["", "GHS10,000", "GHS11,000", "GHS9,000", "GHS8,000"],
+answer: "GHS10,000"
   },
   {
-    question: "A business had the following:\nCapital: GHÂ¢15,000\nBank Loan: GHÂ¢5,000\nAssets: ?\nFind the missing asset value.",
-    options: ["", "GHÂ¢10,000", "GHÂ¢20,000", "GHÂ¢15,000", "GHÂ¢25,000"],
-answer: "GHÂ¢20,000"
+    question: "A business had the following:\nCapital: GHS15,000\nBank Loan: GHS5,000\nAssets: ?\nFind the missing asset value.",
+    options: ["", "GHS10,000", "GHS20,000", "GHS15,000", "GHS25,000"],
+answer: "GHS20,000"
   },
   {
-    question: "If revenue = GHÂ¢22,000 and expenses = GHÂ¢14,000, what is the profit?",
-    options: ["", "GHÂ¢36,000", "GHÂ¢8,000", "GHÂ¢14,000", "GHÂ¢22,000"],
-answer: "GHÂ¢8,000"
+    question: "If revenue = GHS22,000 and expenses = GHS14,000, what is the profit?",
+    options: ["", "GHS36,000", "GHS8,000", "GHS14,000", "GHS22,000"],
+answer: "GHS8,000"
   },
   {
     question: "Which of these affects both sides of the balance sheet equally?",
@@ -178,12 +178,12 @@ answer: "GHÂ¢8,000"
 answer: "Cash purchase of equipment"
   },
   {
-    question: "A business bought goods worth GHÂ¢9,000 and paid half by cash and the rest on credit. How does it affect the accounting equation?",
-    options: ["", "Assets ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 9,000; Cash ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ by 4,500; Creditors ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 4,500",
-      "Assets ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ by 4,500; Liabilities ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 4,500",
-      "Assets ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 9,000; Capital ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 4,500",
+    question: "A business bought goods worth GHS9,000 and paid half by cash and the rest on credit. How does it affect the accounting equation?",
+    options: ["", "Assets increase by 9,000; Cash decreases  by 4,500; Creditors increase by 4,500",
+      "Assets decreases  by 4,500; Liabilities increase by 4,500",
+      "Assets increase by 9,000; Capital increase by 4,500",
       "No effect"],
-answer: "Assets ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 9,000; Cash ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ by 4,500; Creditors ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ by 4,500"
+answer: "Assets increase by 9,000; Cash decreases  by 4,500; Creditors increase by 4,500"
   },
   {
     question: "Which of the following is NOT a book of original entry?",
@@ -207,54 +207,54 @@ answer: "Purchases Ledger"
   },
   // --- Calculation & Working-Based Questions ---
   {
-    question: "Given: Sales on credit GHÂ¢12,000, Cash sales GHÂ¢3,000, Sales returns GHÂ¢1,500. What amount should be posted to the Sales Ledger?",
-    options: ["", "GHÂ¢13,500", "GHÂ¢12,000", "GHÂ¢10,500", "GHÂ¢14,000"],
-answer: "GHÂ¢10,500"
+    question: "Given: Sales on credit GHS12,000, Cash sales GHS3,000, Sales returns GHS1,500. What amount should be posted to the Sales Ledger?",
+    options: ["", "GHS13,500", "GHS12,000", "GHS10,500", "GHS14,000"],
+answer: "GHS10,500"
   },
   {
-    question: "Opening petty cash float is GHÂ¢200. During the week, the following were spent: Postage GHÂ¢25, Stationery GHÂ¢30, Transport GHÂ¢20. What is the balance at the end of the week?",
-    options: ["", "GHÂ¢125", "GHÂ¢150", "GHÂ¢100", "GHÂ¢200"],
-answer: "GHÂ¢125"
+    question: "Opening petty cash float is GHS200. During the week, the following were spent: Postage GHS25, Stationery GHS30, Transport GHS20. What is the balance at the end of the week?",
+    options: ["", "GHS125", "GHS150", "GHS100", "GHS200"],
+answer: "GHS125"
   },
   {
-    question: "A business purchased goods worth GHÂ¢2,000 on credit. Where would this transaction be recorded first?",
+    question: "A business purchased goods worth GHS2,000 on credit. Where would this transaction be recorded first?",
     options: ["", "Purchase Journal", "Cash Book", "Sales Ledger", "General Ledger"],
 answer: "Purchase Journal"
   },
   {
-    question: "A cash discount of GHÂ¢300 was allowed on payment of GHÂ¢7,200. What was the original amount due?",
-    options: ["", "GHÂ¢7,500", "GHÂ¢7,200", "GHÂ¢6,900", "GHÂ¢7,300"],
-answer: "GHÂ¢7,500"
+    question: "A cash discount of GHS300 was allowed on payment of GHS7,200. What was the original amount due?",
+    options: ["", "GHS7,500", "GHS7,200", "GHS6,900", "GHS7,300"],
+answer: "GHS7,500"
   },
   {
-    question: "Total cash payments from the cash book amounted to GHÂ¢15,000. Cash payments include: Salaries GHÂ¢8,000, Rent GHÂ¢3,000, Electricity GHÂ¢2,000, Sundry GHÂ¢2,000. What is the amount spent on overheads?",
-    options: ["", "GHÂ¢5,000", "GHÂ¢7,000", "GHÂ¢10,000", "GHÂ¢15,000"],
-answer: "GHÂ¢7,000"
+    question: "Total cash payments from the cash book amounted to GHS15,000. Cash payments include: Salaries GHS8,000, Rent GHS3,000, Electricity GHS2,000, Sundry GHS2,000. What is the amount spent on overheads?",
+    options: ["", "GHS5,000", "GHS7,000", "GHS10,000", "GHS15,000"],
+answer: "GHS7,000"
   },
   {
-    question: "If purchases = GHÂ¢25,000 and purchase returns = GHÂ¢2,000, what is the net purchases?",
-    options: ["", "GHÂ¢27,000", "GHÂ¢25,000", "GHÂ¢23,000", "GHÂ¢2,000"],
-answer: "GHÂ¢23,000"
+    question: "If purchases = GHS25,000 and purchase returns = GHS2,000, what is the net purchases?",
+    options: ["", "GHS27,000", "GHS25,000", "GHS23,000", "GHS2,000"],
+answer: "GHS23,000"
   },
   {
-    question: "VAT rate is 15%. If the selling price including VAT is GHÂ¢4,600, calculate the VAT amount.",
-    options: ["", "GHÂ¢600", "GHÂ¢690", "GHÂ¢400", "GHÂ¢575"],
-answer: "GHÂ¢600"
+    question: "VAT rate is 15%. If the selling price including VAT is GHS4,600, calculate the VAT amount.",
+    options: ["", "GHS600", "GHS690", "GHS400", "GHS575"],
+answer: "GHS600"
   },
   {
-    question: "A trader sold goods at GHÂ¢2,300 excluding VAT. Calculate the VAT payable at 15%.",
-    options: ["", "GHÂ¢345", "GHÂ¢300", "GHÂ¢230", "GHÂ¢345.50"],
-answer: "GHÂ¢345"
+    question: "A trader sold goods at GHS2,300 excluding VAT. Calculate the VAT payable at 15%.",
+    options: ["", "GHS345", "GHS300", "GHS230", "GHS345.50"],
+answer: "GHS345"
   },
   {
-    question: "If VAT collected = GHÂ¢1,200 and input VAT paid = GHÂ¢950, what is the VAT payable to the tax authority?",
-    options: ["", "GHÂ¢1,200", "GHÂ¢250", "GHÂ¢950", "GHÂ¢2,150"],
-answer: "GHÂ¢250"
+    question: "If VAT collected = GHS1,200 and input VAT paid = GHS950, what is the VAT payable to the tax authority?",
+    options: ["", "GHS1,200", "GHS250", "GHS950", "GHS2,150"],
+answer: "GHS250"
   },
   {
-    question: "Calculate the selling price including 15% VAT on goods worth GHÂ¢3,000.",
-    options: ["", "GHÂ¢3,450", "GHÂ¢3,000", "GHÂ¢3,300", "GHÂ¢4,000"],
-answer: "GHÂ¢3,450"
+    question: "Calculate the selling price including 15% VAT on goods worth GHS3,000.",
+    options: ["", "GHS3,450", "GHS3,000", "GHS3,300", "GHS4,000"],
+answer: "GHS3,450"
   },
   {
     question: "Which of the following is NOT a characteristic of VAT?",
@@ -282,44 +282,44 @@ answer: "Consistency"
 answer: "Money Measurement"
   },
   {
-    question: "A business has the following balances: Capital GHÂ¢20,000, Drawings GHÂ¢2,000, Net profit GHÂ¢5,000. What is the closing capital?",
-    options: ["", "GHÂ¢23,000", "GHÂ¢25,000", "GHÂ¢27,000", "GHÂ¢30,000"],
-answer: "GHÂ¢23,000"
+    question: "A business has the following balances: Capital GHS20,000, Drawings GHS2,000, Net profit GHS5,000. What is the closing capital?",
+    options: ["", "GHS23,000", "GHS25,000", "GHS27,000", "GHS30,000"],
+answer: "GHS23,000"
   },
   {
-    question: "From the Trial Balance: Sales GHÂ¢60,000, Purchases GHÂ¢35,000, Closing Stock GHÂ¢10,000. Calculate Gross Profit.",
-    options: ["", "GHÂ¢25,000", "GHÂ¢35,000", "GHÂ¢15,000", "GHÂ¢40,000"],
-answer: "GHÂ¢35,000"
+    question: "From the Trial Balance: Sales GHS60,000, Purchases GHS35,000, Closing Stock GHS10,000. Calculate Gross Profit.",
+    options: ["", "GHS25,000", "GHS35,000", "GHS15,000", "GHS40,000"],
+answer: "GHS35,000"
   },
   {
-    question: "A business has Rent expense GHÂ¢1,200 prepaid. How should this be treated in the Final Accounts?",
+    question: "A business has Rent expense GHS1,200 prepaid. How should this be treated in the Final Accounts?",
     options: ["", "Deduct from Rent Expense in P&L, add to Current Assets", "Add to Rent in P&L", "Ignore it", "Show as liability"],
 answer: "Deduct from Rent Expense in P&L, add to Current Assets"
   },
   {
-    question: "Calculate Net Profit if Gross Profit is GHÂ¢45,000 and Operating Expenses are GHÂ¢20,000.",
-    options: ["", "GHÂ¢25,000", "GHÂ¢65,000", "GHÂ¢45,000", "GHÂ¢15,000"],
-answer: "GHÂ¢25,000"
+    question: "Calculate Net Profit if Gross Profit is GHS45,000 and Operating Expenses are GHS20,000.",
+    options: ["", "GHS25,000", "GHS65,000", "GHS45,000", "GHS15,000"],
+answer: "GHS25,000"
   },
   {
-    question: "A Trial Balance shows: Debtors GHÂ¢10,000, Creditors GHÂ¢6,000, Sales GHÂ¢50,000, Purchases GHÂ¢30,000, Expenses GHÂ¢8,000, Closing Stock GHÂ¢12,000. What is the Net Profit?",
-    options: ["", "GHÂ¢14,000", "GHÂ¢20,000", "GHÂ¢18,000", "GHÂ¢24,000"],
-answer: "GHÂ¢24,000"
+    question: "A Trial Balance shows: Debtors GHS10,000, Creditors GHS6,000, Sales GHS50,000, Purchases GHS30,000, Expenses GHS8,000, Closing Stock GHS12,000. What is the Net Profit?",
+    options: ["", "GHS14,000", "GHS20,000", "GHS18,000", "GHS24,000"],
+answer: "GHS24,000"
   },
   {
-    question: "Opening capital = GHÂ¢10,000, Additional capital = GHÂ¢5,000, Net loss = GHÂ¢2,000, Drawings = GHÂ¢3,000. Compute the closing capital.",
-    options: ["", "GHÂ¢10,000", "GHÂ¢12,000", "GHÂ¢13,000", "GHÂ¢14,000"],
-answer: "GHÂ¢10,000"
+    question: "Opening capital = GHS10,000, Additional capital = GHS5,000, Net loss = GHS2,000, Drawings = GHS3,000. Compute the closing capital.",
+    options: ["", "GHS10,000", "GHS12,000", "GHS13,000", "GHS14,000"],
+answer: "GHS10,000"
   },
   {
-    question: "If Closing Stock is GHÂ¢8,500 and is not included in the Trial Balance, how is it treated in Final Accounts?",
+    question: "If Closing Stock is GHS8,500 and is not included in the Trial Balance, how is it treated in Final Accounts?",
     options: ["", "P&L: Credit, Balance Sheet: Current Asset", "P&L: Debit, Balance Sheet: Current Asset", "Only Balance Sheet", "Only P&L"],
 answer: "P&L: Credit, Balance Sheet: Current Asset"
   },
   {
-    question: "From the Trial Balance: Rent income GHÂ¢4,000, Accrued income GHÂ¢500. What is the total Rent Income in the P&L?",
-    options: ["", "GHÂ¢4,500", "GHÂ¢3,500", "GHÂ¢4,000", "GHÂ¢500"],
-answer: "GHÂ¢4,500"
+    question: "From the Trial Balance: Rent income GHS4,000, Accrued income GHS500. What is the total Rent Income in the P&L?",
+    options: ["", "GHS4,500", "GHS3,500", "GHS4,000", "GHS500"],
+answer: "GHS4,500"
   },
   {
     question: "Which one of these is an example of a revenue expense?",
@@ -332,32 +332,32 @@ answer: "Office Rent"
 answer: "To ascertain profit/loss and financial position"
   },
   {
-    question: "Trial Balance: Sales GHÂ¢80,000, Opening Stock GHÂ¢10,000, Purchases GHÂ¢50,000, Closing Stock GHÂ¢15,000. What is Gross Profit?",
-    options: ["", "GHÂ¢35,000", "GHÂ¢25,000", "GHÂ¢40,000", "GHÂ¢45,000"],
-answer: "GHÂ¢35,000"
+    question: "Trial Balance: Sales GHS80,000, Opening Stock GHS10,000, Purchases GHS50,000, Closing Stock GHS15,000. What is Gross Profit?",
+    options: ["", "GHS35,000", "GHS25,000", "GHS40,000", "GHS45,000"],
+answer: "GHS35,000"
   },
   {
-    question: "A firm purchased equipment for GHÂ¢12,000. It depreciates at 10% per annum using the straight-line method. What is the annual depreciation charge?",
-    options: ["", "GHÂ¢1,200", "GHÂ¢1,000", "GHÂ¢2,000", "GHÂ¢1,500"],
-answer: "GHÂ¢1,200"
+    question: "A firm purchased equipment for GHS12,000. It depreciates at 10% per annum using the straight-line method. What is the annual depreciation charge?",
+    options: ["", "GHS1,200", "GHS1,000", "GHS2,000", "GHS1,500"],
+answer: "GHS1,200"
   },
   {
-    question: "What is the book value of an asset purchased at GHÂ¢10,000 after 3 years of 20% straight-line depreciation?",
-    options: ["", "GHÂ¢4,000", "GHÂ¢6,000", "GHÂ¢8,000", "GHÂ¢2,000"],
-answer: "GHÂ¢4,000"
+    question: "What is the book value of an asset purchased at GHS10,000 after 3 years of 20% straight-line depreciation?",
+    options: ["", "GHS4,000", "GHS6,000", "GHS8,000", "GHS2,000"],
+answer: "GHS4,000"
   },
   {
-    question: "A machine costing GHÂ¢15,000 is depreciated at 25% per annum on reducing balance. What is the depreciation for year 1?",
-    options: ["", "GHÂ¢3,750", "GHÂ¢3,000", "GHÂ¢2,500", "GHÂ¢5,000"],
-answer: "GHÂ¢3,750"
+    question: "A machine costing GHS15,000 is depreciated at 25% per annum on reducing balance. What is the depreciation for year 1?",
+    options: ["", "GHS3,750", "GHS3,000", "GHS2,500", "GHS5,000"],
+answer: "GHS3,750"
   },
   {
-    question: "Provision for doubtful debts is GHÂ¢500. Debtors amount to GHÂ¢10,000. What is the Net Realisable Value of Debtors?",
-    options: ["", "GHÂ¢9,500", "GHÂ¢10,500", "GHÂ¢10,000", "GHÂ¢500"],
-answer: "GHÂ¢9,500"
+    question: "Provision for doubtful debts is GHS500. Debtors amount to GHS10,000. What is the Net Realisable Value of Debtors?",
+    options: ["", "GHS9,500", "GHS10,500", "GHS10,000", "GHS500"],
+answer: "GHS9,500"
   },
   {
-    question: "What is the journal entry to create a provision for doubtful debts of GHÂ¢300?",
+    question: "What is the journal entry to create a provision for doubtful debts of GHS300?",
     options: ["", "Debit Bad Debts, Credit Provision for Doubtful Debts",
       "Debit Provision for Doubtful Debts, Credit Debtors",
       "Debit P&L, Credit Provision for Doubtful Debts",
@@ -365,7 +365,7 @@ answer: "GHÂ¢9,500"
 answer: "Debit P&L, Credit Provision for Doubtful Debts"
   },
   {
-    question: "An old debt of GHÂ¢700 was written off. What is the correct journal entry?",
+    question: "An old debt of GHS700 was written off. What is the correct journal entry?",
     options: ["", "Debit Bad Debts, Credit Debtors",
       "Debit Debtors, Credit Bad Debts",
       "Debit Provision for Bad Debts, Credit Debtors",
@@ -373,9 +373,9 @@ answer: "Debit P&L, Credit Provision for Doubtful Debts"
 answer: "Debit Bad Debts, Credit Debtors"
   },
   {
-    question: "A provision for bad debts is to be increased from GHÂ¢400 to GHÂ¢600. What amount is charged to Profit and Loss?",
-    options: ["", "GHÂ¢200", "GHÂ¢400", "GHÂ¢600", "GHÂ¢1,000"],
-answer: "GHÂ¢200"
+    question: "A provision for bad debts is to be increased from GHS400 to GHS600. What amount is charged to Profit and Loss?",
+    options: ["", "GHS200", "GHS400", "GHS600", "GHS1,000"],
+answer: "GHS200"
   },
   {
     question: "Depreciation is provided to account for:",
@@ -401,9 +401,9 @@ answer: "Deduction from asset"
 answer: "Credited to P&L"
   },
   {
-    question: "If Provision for Depreciation is GHÂ¢6,000 and the asset cost is GHÂ¢20,000, what is the book value?",
-    options: ["", "GHÂ¢14,000", "GHÂ¢16,000", "GHÂ¢26,000", "GHÂ¢6,000"],
-answer: "GHÂ¢14,000"
+    question: "If Provision for Depreciation is GHS6,000 and the asset cost is GHS20,000, what is the book value?",
+    options: ["", "GHS14,000", "GHS16,000", "GHS26,000", "GHS6,000"],
+answer: "GHS14,000"
   },
   {
     question: "What type of account is Provision for Bad Debts?",
@@ -421,28 +421,28 @@ answer: "Non-cash expense"
 answer: "Charging extra in current year"
   },
   {
-    question: "An error was discovered: Rent of GHÂ¢300 was debited to Equipment. What type of error is this?",
+    question: "An error was discovered: Rent of GHS300 was debited to Equipment. What type of error is this?",
     options: ["", "Error of Omission", "Error of Commission", "Error of Principle", "Compensating Error"],
 answer: "Error of Principle"
   },
   {
-    question: "A credit sale of GHÂ¢500 was entered in the books as GHÂ¢50. What is the correction entry?",
-    options: ["", "Dr Sales GHÂ¢450, Cr Debtors GHÂ¢450",
-      "Dr Debtors GHÂ¢450, Cr Sales GHÂ¢450",
-      "Dr Sales GHÂ¢50, Cr Debtors GHÂ¢500",
-      "Dr Cash GHÂ¢500, Cr Sales GHÂ¢450"],
-answer: "Dr Debtors GHÂ¢450, Cr Sales GHÂ¢450"
+    question: "A credit sale of GHS500 was entered in the books as GHS50. What is the correction entry?",
+    options: ["", "Dr Sales GHS450, Cr Debtors GHS450",
+      "Dr Debtors GHS450, Cr Sales GHS450",
+      "Dr Sales GHS50, Cr Debtors GHS500",
+      "Dr Cash GHS500, Cr Sales GHS450"],
+answer: "Dr Debtors GHS450, Cr Sales GHS450"
   },
   {
-    question: "Trial Balance failed to agree by GHÂ¢320, which was posted to a Suspense Account. Later, a discount received of GHÂ¢320 was omitted. What is the correcting entry?",
-    options: ["", "Dr Suspense GHÂ¢320, Cr Discount Received GHÂ¢320",
-      "Dr Discount Received GHÂ¢320, Cr Suspense GHÂ¢320",
-      "Dr Suspense GHÂ¢160, Cr Discount Allowed GHÂ¢160",
-      "Dr P&L GHÂ¢320, Cr Suspense GHÂ¢320"],
-answer: "Dr Suspense GHÂ¢320, Cr Discount Received GHÂ¢320"
+    question: "Trial Balance failed to agree by GHS320, which was posted to a Suspense Account. Later, a discount received of GHS320 was omitted. What is the correcting entry?",
+    options: ["", "Dr Suspense GHS320, Cr Discount Received GHS320",
+      "Dr Discount Received GHS320, Cr Suspense GHS320",
+      "Dr Suspense GHS160, Cr Discount Allowed GHS160",
+      "Dr P&L GHS320, Cr Suspense GHS320"],
+answer: "Dr Suspense GHS320, Cr Discount Received GHS320"
   },
   {
-    question: "A GHÂ¢400 cash sale was recorded in the Purchases Day Book. Which account is wrongly debited?",
+    question: "A GHS400 cash sale was recorded in the Purchases Day Book. Which account is wrongly debited?",
     options: ["", "Sales Account", "Purchases Account", "Cash Account", "Capital Account"],
 answer: "Purchases Account"
   },
@@ -455,41 +455,41 @@ answer: "Purchases Account"
 answer: "Single-sided error"
   },
   {
-    question: "Correct the following: Wages of GHÂ¢250 were debited to Salaries.",
-    options: ["", "Dr Wages GHÂ¢250, Cr Salaries GHÂ¢250",
-      "Dr Salaries GHÂ¢250, Cr Wages GHÂ¢250",
-      "Dr P&L GHÂ¢250, Cr Wages GHÂ¢250",                                                     
-      "Dr Salaries GHÂ¢125, Cr Wages GHÂ¢125"],  
-answer: "Dr Wages GHÂ¢250, Cr Salaries GHÂ¢250"
+    question: "Correct the following: Wages of GHS250 were debited to Salaries.",
+    options: ["", "Dr Wages GHS250, Cr Salaries GHS250",
+      "Dr Salaries GHS250, Cr Wages GHS250",
+      "Dr P&L GHS250, Cr Wages GHS250",                                                     
+      "Dr Salaries GHS125, Cr Wages GHS125"],  
+answer: "Dr Wages GHS250, Cr Salaries GHS250"
   },
   {
-    question: "Error: Furniture purchased for GHÂ¢2,000 was posted to Purchases. What is the correcting entry?",
-    options: ["", "Dr Furniture GHÂ¢2,000, Cr Purchases GHÂ¢2,000",
-      "Dr Purchases GHÂ¢2,000, Cr Furniture GHÂ¢2,000",
-      "Dr Sales GHÂ¢2,000, Cr Furniture GHÂ¢2,000",
-      "Dr Furniture GHÂ¢1,000, Cr Purchases GHÂ¢1,000"],
-answer: "Dr Furniture GHÂ¢2,000, Cr Purchases GHÂ¢2,000"
+    question: "Error: Furniture purchased for GHS2,000 was posted to Purchases. What is the correcting entry?",
+    options: ["", "Dr Furniture GHS2,000, Cr Purchases GHS2,000",
+      "Dr Purchases GHS2,000, Cr Furniture GHS2,000",
+      "Dr Sales GHS2,000, Cr Furniture GHS2,000",
+      "Dr Furniture GHS1,000, Cr Purchases GHS1,000"],
+answer: "Dr Furniture GHS2,000, Cr Purchases GHS2,000"
   },
   {
-    question: "The Suspense Account had a debit balance of GHÂ¢500. An entry to correct undercast rent expense of GHÂ¢500 is:",
-    options: ["", "Dr Rent GHÂ¢500, Cr Suspense GHÂ¢500",
-      "Dr Suspense GHÂ¢500, Cr Rent GHÂ¢500",
-      "Dr P&L GHÂ¢500, Cr Suspense GHÂ¢500",
-      "Dr Suspense GHÂ¢250, Cr Rent GHÂ¢250"],
-answer: "Dr Rent GHÂ¢500, Cr Suspense GHÂ¢500"
+    question: "The Suspense Account had a debit balance of GHS500. An entry to correct undercast rent expense of GHS500 is:",
+    options: ["", "Dr Rent GHS500, Cr Suspense GHS500",
+      "Dr Suspense GHS500, Cr Rent GHS500",
+      "Dr P&L GHS500, Cr Suspense GHS500",
+      "Dr Suspense GHS250, Cr Rent GHS250"],
+answer: "Dr Rent GHS500, Cr Suspense GHS500"
   },
   {
-    question: "Correcting entry for cash received from Kofi GHÂ¢600 entered in KwameÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s account:",
-    options: ["", "Dr Kwame GHÂ¢600, Cr Kofi GHÂ¢600",
-      "Dr Suspense GHÂ¢600, Cr Cash GHÂ¢600",
-      "Dr Cash GHÂ¢600, Cr Kwame GHÂ¢600",
-      "Dr Kofi GHÂ¢600, Cr Kwame GHÂ¢600"],
-answer: "Dr Kofi GHÂ¢600, Cr Kwame GHÂ¢600"
+    question: "Correcting entry for cash received from Kofi GHS600 entered in Kwame's account:",
+    options: ["", "Dr Kwame GHS600, Cr Kofi GHS600",
+      "Dr Suspense GHS600, Cr Cash GHS600",
+      "Dr Cash GHS600, Cr Kwame GHS600",
+      "Dr Kofi GHS600, Cr Kwame GHS600"],
+answer: "Dr Kofi GHS600, Cr Kwame GHS600"
   },
   {
-    question: "If the corrected profit is GHÂ¢12,000 and errors totaling GHÂ¢2,000 overstatement were identified, what was the original reported profit?",
-    options: ["", "GHÂ¢14,000", "GHÂ¢10,000", "GHÂ¢12,000", "GHÂ¢8,000"],
-answer: "GHÂ¢10,000"
+    question: "If the corrected profit is GHS12,000 and errors totaling GHS2,000 overstatement were identified, what was the original reported profit?",
+    options: ["", "GHS14,000", "GHS10,000", "GHS12,000", "GHS8,000"],
+answer: "GHS10,000"
   },
   {
     question: "Which of the following errors does **not** affect the Trial Balance?",
@@ -505,20 +505,20 @@ answer: "Compensating Error"
 answer: "Errors are not discovered"
   },
   {
-    question: "An expense of GHÂ¢1,200 was recorded twice. What is the correction entry?",
-    options: ["", "Dr Suspense GHÂ¢1,200, Cr Expense GHÂ¢1,200",
-      "Dr Expense GHÂ¢1,200, Cr Suspense GHÂ¢1,200",
-      "Dr P&L GHÂ¢1,200, Cr Expense GHÂ¢1,200",
-      "Dr Expense GHÂ¢600, Cr Suspense GHÂ¢600"],
-answer: "Dr Suspense GHÂ¢1,200, Cr Expense GHÂ¢1,200"
+    question: "An expense of GHS1,200 was recorded twice. What is the correction entry?",
+    options: ["", "Dr Suspense GHS1,200, Cr Expense GHS1,200",
+      "Dr Expense GHS1,200, Cr Suspense GHS1,200",
+      "Dr P&L GHS1,200, Cr Expense GHS1,200",
+      "Dr Expense GHS600, Cr Suspense GHS600"],
+answer: "Dr Suspense GHS1,200, Cr Expense GHS1,200"
   },
   {
-    question: "Sales of GHÂ¢900 were recorded as GHÂ¢990. What is the correcting journal?",
-    options: ["", "Dr Sales GHÂ¢90, Cr Suspense GHÂ¢90",
-      "Dr Suspense GHÂ¢90, Cr Sales GHÂ¢90",
-      "Dr Sales GHÂ¢990, Cr Suspense GHÂ¢990",
-      "Dr Debtors GHÂ¢90, Cr Sales GHÂ¢90"],
-answer: "Dr Suspense GHÂ¢90, Cr Sales GHÂ¢90"
+    question: "Sales of GHS900 were recorded as GHS990. What is the correcting journal?",
+    options: ["", "Dr Sales GHS90, Cr Suspense GHS90",
+      "Dr Suspense GHS90, Cr Sales GHS90",
+      "Dr Sales GHS990, Cr Suspense GHS990",
+      "Dr Debtors GHS90, Cr Sales GHS90"],
+answer: "Dr Suspense GHS90, Cr Sales GHS90"
   },
   {
     question: "What is the effect of an error that increases both assets and liabilities equally?",
@@ -537,35 +537,35 @@ answer: "Balance sheet remains balanced"
 answer: "To reconcile the cash book balance with the bank statement balance"
   },
   {
-    question: "If the bank statement shows a balance of GHÂ¢10,000 and unpresented cheques total GHÂ¢1,500, what is the adjusted bank balance?",
-    options: ["", "GHÂ¢8,500", "GHÂ¢11,500", "GHÂ¢10,000", "GHÂ¢1,500"],
-answer: "GHÂ¢8,500"
+    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
+    options: ["", "GHS8,500", "GHS11,500", "GHS10,000", "GHS1,500"],
+answer: "GHS8,500"
   },
   {
-    question: "The cash book shows a balance of GHÂ¢5,200. Cheques totaling GHÂ¢800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "GHÂ¢4,400", "GHÂ¢6,000", "GHÂ¢5,200", "GHÂ¢6,000"],
-answer: "GHÂ¢4,400"
+    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
+    options: ["", "GHS4,400", "GHS6,000", "GHS5,200", "GHS6,000"],
+answer: "GHS4,400"
   },
   {
-    question: "Bank charges of GHÂ¢50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50",
-      "Dr Cash book GHÂ¢50, Cr Bank charges GHÂ¢50",
-      "Dr Suspense account GHÂ¢50, Cr Cash book GHÂ¢50",
+    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
+    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
+      "Dr Cash book GHS50, Cr Bank charges GHS50",
+      "Dr Suspense account GHS50, Cr Cash book GHS50",
       "No entry is required"],
-answer: "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50"
+answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
   },
   {
-    question: "A cheque for GHÂ¢1,200 was entered in the cash book but was recorded in the bank statement as GHÂ¢1,020. What is the error?",
+    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
     options: ["", "Bank error", "Cash book error", "Suspense error", "No error"],
 answer: "Cash book error"
   },
   {
-    question: "The bank statement shows a deposit of GHÂ¢2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHÂ¢2,000, Cr Suspense GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Bank GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000",
-      "Dr Suspense GHÂ¢2,000, Cr Cash book GHÂ¢2,000"],
-answer: "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000"
+    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
+    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
+      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
+      "Dr Cash book GHS2,000, Cr Suspense GHS2,000",
+      "Dr Suspense GHS2,000, Cr Cash book GHS2,000"],
+answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
   },
   {
     question: "What is a self-balancing ledger?",
@@ -593,12 +593,12 @@ answer: "Total amount owed by customers (debtors)"
   {
     question: "How would you prepare a Purchases Ledger Control Account?",
     options: ["", "By summarizing all creditor transactions",
-      "By listing all debtorsÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ balances",
+      "By listing all debtors' balances",
       "By preparing the trial balance"], 
 answer: "By summarizing all creditor transactions"
   },
   {
-    question: "The Purchases Ledger Control Account shows a balance of GHÂ¢4,000. Individual creditors total GHÂ¢3,800. What might this indicate?",
+    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
     options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
 answer: "Error in individual accounts"
   },
@@ -608,14 +608,14 @@ answer: "Error in individual accounts"
 answer: "Investigate and reconcile differences"
   },
   {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHÂ¢10,000, credit sales GHÂ¢6,000, cash received from debtors GHÂ¢7,000, and returns from debtors GHÂ¢500.",
-    options: ["", "", "", "GHÂ¢8,000", "GHÂ¢9,500", "GHÂ¢10,500"],
-answer: "GHÂ¢8,500"
+    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
+    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
+answer: "GHS8,500"
   },
   {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHÂ¢5,000, credit purchases are GHÂ¢3,000, payments to creditors are GHÂ¢4,000, and returns to suppliers are GHÂ¢1,000.",
-    options: ["", "", "", "GHÂ¢2,000", "GHÂ¢4,000", "GHÂ¢5,000"],
-answer: "GHÂ¢3,000"
+    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
+    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
+answer: "GHS3,000"
   },
   {
     question: "What are the advantages of control accounts?",
@@ -625,15 +625,15 @@ answer: "GHÂ¢3,000"
 answer: "Detect errors, simplify ledger reconciliation, save time"
   },
   {
-    question: "A total of GHÂ¢12,000 was posted to the wrong ledger account. How would this affect the control account?",
+    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
     options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
 answer: "Control account balance is incorrect"
   },
   {
-    question: "Bank statement shows a direct debit of GHÂ¢250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250",
-      "Dr Bank GHÂ¢250, Cr Insurance Expense GHÂ¢250", "Dr Suspense GHÂ¢250, Cr Bank GHÂ¢250"],
-answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
+    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
+    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
+      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
+answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
   },
   {
     question: "What is an unpresented cheque?",
@@ -642,21 +642,21 @@ answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
 answer: "A cheque issued by the business but not yet cleared by the bank"
   },
   {
-    question: "The cash book shows GHÂ¢7,500, the bank statement shows GHÂ¢8,200, and uncredited deposits total GHÂ¢1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHÂ¢8,500", "GHÂ¢6,500", "GHÂ¢7,200"],
-answer: "GHÂ¢8,500"
+    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
+    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
+answer: "GHS8,500"
   },
   {
-    question: "If the bank statement shows GHÂ¢200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHÂ¢200, Cr Bank GHÂ¢200",
-      "Dr Bank GHÂ¢200, Cr Cash book GHÂ¢200",
-      "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"],
-answer: "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"
+    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
+    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
+      "Dr Bank GHS200, Cr Cash book GHS200",
+      "Dr Cash book GHS200, Cr Suspense GHS200"],
+answer: "Dr Cash book GHS200, Cr Suspense GHS200"
   },
   {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHÂ¢5,000 and the bank statement shows GHÂ¢4,300 with unpresented cheques GHÂ¢600.",
-    options: ["", "", "", "GHÂ¢700", "GHÂ¢1,200", "GHÂ¢500"],
-answer: "GHÂ¢700"
+    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
+    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
+answer: "GHS700"
   },
   {
     question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
@@ -664,16 +664,16 @@ answer: "GHÂ¢700"
 answer: "Depreciation"
   },
   {
-    question: "The Suspense Account was cleared with a debit of GHÂ¢1,000 and a credit of GHÂ¢1,000. What does this indicate?",
+    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
     options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
 answer: "Errors were corrected"
   },
   {
-    question: "A cheque for GHÂ¢750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750",
-      "Dr Cash book GHÂ¢750, Cr Suspense GHÂ¢750",
-      "Dr Suspense GHÂ¢1,500, Cr Cash book GHÂ¢1,500"],
-answer: "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750"
+    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
+    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
+      "Dr Cash book GHS750, Cr Suspense GHS750",
+      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
+answer: "Dr Suspense GHS750, Cr Cash book GHS750"
   },
   {
     question: "What is the main purpose of preparing a Bank Reconciliation Statement (BRS)?",
@@ -683,33 +683,33 @@ answer: "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750"
 answer: "To reconcile the cash book balance with the bank statement balance"
   },
   {
-    question: "If the bank statement shows a balance of GHÂ¢10,000 and unpresented cheques total GHÂ¢1,500, what is the adjusted bank balance?",
-    options: ["", "", "", "GHÂ¢11,500", "GHÂ¢10,000", "GHÂ¢1,500"],
-answer: "GHÂ¢8,500"
+    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
+    options: ["", "", "", "GHS11,500", "GHS10,000", "GHS1,500"],
+answer: "GHS8,500"
   },
   {
-    question: "The cash book shows a balance of GHÂ¢5,200. Cheques totaling GHÂ¢800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "", "", "GHÂ¢6,000", "GHÂ¢5,200", "GHÂ¢6,000"],
-answer: "GHÂ¢4,400"
+    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
+    options: ["", "", "", "GHS6,000", "GHS5,200", "GHS6,000"],
+answer: "GHS4,400"
   },
   {
-    question: "Bank charges of GHÂ¢50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50",
-      "Dr Cash book GHÂ¢50, Cr Bank charges GHÂ¢50",
-      "Dr Suspense account GHÂ¢50, Cr Cash book GHÂ¢50"],
-answer: "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50"
+    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
+    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
+      "Dr Cash book GHS50, Cr Bank charges GHS50",
+      "Dr Suspense account GHS50, Cr Cash book GHS50"],
+answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
   },
   {
-    question: "A cheque for GHÂ¢1,200 was entered in the cash book but was recorded in the bank statement as GHÂ¢1,020. What is the error?",
+    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
     options: ["", "", "", "Cash book error", "Suspense error", "No error"],
 answer: "Cash book error"
   },
   {
-    question: "The bank statement shows a deposit of GHÂ¢2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHÂ¢2,000, Cr Suspense GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Bank GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000"],
-answer: "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000"
+    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
+    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
+      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
+      "Dr Cash book GHS2,000, Cr Suspense GHS2,000"],
+answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
   },
   {
     question: "What is a self-balancing ledger?",
@@ -735,12 +735,12 @@ answer: "Total amount owed by customers (debtors)"
   {
     question: "How would you prepare a Purchases Ledger Control Account?",
     options: ["", "By summarizing all creditor transactions",
-      "By listing all debtorsÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ balances",
+      "By listing all debtors' balances",
       "By preparing the trial balance"],
 answer: "By summarizing all creditor transactions"
   },
   {
-    question: "The Purchases Ledger Control Account shows a balance of GHÂ¢4,000. Individual creditors total GHÂ¢3,800. What might this indicate?",
+    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
     options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
 answer: "Error in individual accounts"
   },
@@ -750,14 +750,14 @@ answer: "Error in individual accounts"
 answer: "Investigate and reconcile differences"
   },
   {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHÂ¢10,000, credit sales GHÂ¢6,000, cash received from debtors GHÂ¢7,000, and returns from debtors GHÂ¢500.",
-    options: ["", "", "", "GHÂ¢8,000", "GHÂ¢9,500", "GHÂ¢10,500"],
-answer: "GHÂ¢8,500"
+    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
+    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
+answer: "GHS8,500"
   },
   {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHÂ¢5,000, credit purchases are GHÂ¢3,000, payments to creditors are GHÂ¢4,000, and returns to suppliers are GHÂ¢1,000.",
-    options: ["", "", "", "GHÂ¢2,000", "GHÂ¢4,000", "GHÂ¢5,000"],
-answer: "GHÂ¢3,000"
+    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
+    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
+answer: "GHS3,000"
   },
   {
     question: "What are the advantages of control accounts?",
@@ -767,15 +767,15 @@ answer: "GHÂ¢3,000"
 answer: "Detect errors, simplify ledger reconciliation, save time"
   },
   {
-    question: "A total of GHÂ¢12,000 was posted to the wrong ledger account. How would this affect the control account?",
+    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
     options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
 answer: "Control account balance is incorrect"
   },
   {
-    question: "Bank statement shows a direct debit of GHÂ¢250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250",
-      "Dr Bank GHÂ¢250, Cr Insurance Expense GHÂ¢250", "Dr Suspense GHÂ¢250, Cr Bank GHÂ¢250"],
-answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
+    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
+    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
+      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
+answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
   },
   {
     question: "What is an unpresented cheque?",
@@ -784,21 +784,21 @@ answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
 answer: "A cheque issued by the business but not yet cleared by the bank"
   },
   {
-    question: "The cash book shows GHÂ¢7,500, the bank statement shows GHÂ¢8,200, and uncredited deposits total GHÂ¢1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHÂ¢8,500", "GHÂ¢6,500", "GHÂ¢7,200"],
-answer: "GHÂ¢8,500"
+    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
+    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
+answer: "GHS8,500"
   },
   {
-    question: "If the bank statement shows GHÂ¢200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHÂ¢200, Cr Bank GHÂ¢200",
-      "Dr Bank GHÂ¢200, Cr Cash book GHÂ¢200",
-      "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"],
-answer: "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"
+    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
+    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
+      "Dr Bank GHS200, Cr Cash book GHS200",
+      "Dr Cash book GHS200, Cr Suspense GHS200"],
+answer: "Dr Cash book GHS200, Cr Suspense GHS200"
   },
   {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHÂ¢5,000 and the bank statement shows GHÂ¢4,300 with unpresented cheques GHÂ¢600.",
-    options: ["", "", "", "GHÂ¢700", "GHÂ¢1,200", "GHÂ¢500"],
-answer: "GHÂ¢700"
+    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
+    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
+answer: "GHS700"
   },
   {
     question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
@@ -806,16 +806,16 @@ answer: "GHÂ¢700"
 answer: "Depreciation"
   },
   {
-    question: "The Suspense Account was cleared with a debit of GHÂ¢1,000 and a credit of GHÂ¢1,000. What does this indicate?",
+    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
     options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
 answer: "Errors were corrected"
   },
   {
-    question: "A cheque for GHÂ¢750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750",
-      "Dr Cash book GHÂ¢750, Cr Suspense GHÂ¢750",
-      "Dr Suspense GHÂ¢1,500, Cr Cash book GHÂ¢1,500"],
-answer: "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750"
+    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
+    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
+      "Dr Cash book GHS750, Cr Suspense GHS750",
+      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
+answer: "Dr Suspense GHS750, Cr Cash book GHS750"
   },
   {
     question: "What is a contra entry?",
@@ -853,33 +853,33 @@ answer: "Dr Cash book"
 answer: "To reconcile the cash book balance with the bank statement balance"
   },
   {
-    question: "If the bank statement shows a balance of GHÂ¢10,000 and unpresented cheques total GHÂ¢1,500, what is the adjusted bank balance?",
-    options: ["", "", "", "GHÂ¢11,500", "GHÂ¢10,000", "GHÂ¢1,500"],
-answer: "GHÂ¢8,500"
+    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
+    options: ["", "", "", "GHS11,500", "GHS10,000", "GHS1,500"],
+answer: "GHS8,500"
   },
   {
-    question: "The cash book shows a balance of GHÂ¢5,200. Cheques totaling GHÂ¢800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "", "", "GHÂ¢6,000", "GHÂ¢5,200", "GHÂ¢6,000"],
-answer: "GHÂ¢4,400"
+    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
+    options: ["", "", "", "GHS6,000", "GHS5,200", "GHS6,000"],
+answer: "GHS4,400"
   },
   {
-    question: "Bank charges of GHÂ¢50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50",
-      "Dr Cash book GHÂ¢50, Cr Bank charges GHÂ¢50",
-      "Dr Suspense account GHÂ¢50, Cr Cash book GHÂ¢50"],
-answer: "Dr Bank charges GHÂ¢50, Cr Cash book GHÂ¢50"
+    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
+    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
+      "Dr Cash book GHS50, Cr Bank charges GHS50",
+      "Dr Suspense account GHS50, Cr Cash book GHS50"],
+answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
   },
   {
-    question: "A cheque for GHÂ¢1,200 was entered in the cash book but was recorded in the bank statement as GHÂ¢1,020. What is the error?",
+    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
     options: ["", "", "", "Cash book error", "Suspense error", "No error"],
 answer: "Cash book error"
   },
   {
-    question: "The bank statement shows a deposit of GHÂ¢2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHÂ¢2,000, Cr Suspense GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Bank GHÂ¢2,000",
-      "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000"],
-answer: "Dr Cash book GHÂ¢2,000, Cr Suspense GHÂ¢2,000"
+    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
+    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
+      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
+      "Dr Cash book GHS2,000, Cr Suspense GHS2,000"],
+answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
   },
   {
     question: "What is a self-balancing ledger?",
@@ -905,12 +905,12 @@ answer: "Total amount owed by customers (debtors)"
   {
     question: "How would you prepare a Purchases Ledger Control Account?",
     options: ["", "By summarizing all creditor transactions",
-      "By listing all debtorsÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ balances",
+      "By listing all debtors' balances",
       "By preparing the trial balance"],
 answer: "By summarizing all creditor transactions"
   },
   {
-    question: "The Purchases Ledger Control Account shows a balance of GHÂ¢4,000. Individual creditors total GHÂ¢3,800. What might this indicate?",
+    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
     options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
 answer: "Error in individual accounts"
   },
@@ -920,14 +920,14 @@ answer: "Error in individual accounts"
 answer: "Investigate and reconcile differences"
   },
   {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHÂ¢10,000, credit sales GHÂ¢6,000, cash received from debtors GHÂ¢7,000, and returns from debtors GHÂ¢500.",
-    options: ["", "", "", "GHÂ¢8,000", "GHÂ¢9,500", "GHÂ¢10,500"],
-answer: "GHÂ¢8,500"
+    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
+    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
+answer: "GHS8,500"
   },
   {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHÂ¢5,000, credit purchases are GHÂ¢3,000, payments to creditors are GHÂ¢4,000, and returns to suppliers are GHÂ¢1,000.",
-    options: ["", "", "", "GHÂ¢2,000", "GHÂ¢4,000", "GHÂ¢5,000"],
-answer: "GHÂ¢3,000"
+    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
+    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
+answer: "GHS3,000"
   },
   {
     question: "What are the advantages of control accounts?",
@@ -937,15 +937,15 @@ answer: "GHÂ¢3,000"
 answer: "Detect errors, simplify ledger reconciliation, save time"
   },
   {
-    question: "A total of GHÂ¢12,000 was posted to the wrong ledger account. How would this affect the control account?",
+    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
     options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
 answer: "Control account balance is incorrect"
   },
   {
-    question: "Bank statement shows a direct debit of GHÂ¢250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250",
-      "Dr Bank GHÂ¢250, Cr Insurance Expense GHÂ¢250", "Dr Suspense GHÂ¢250, Cr Bank GHÂ¢250"],
-answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
+    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
+    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
+      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
+answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
   },
   {
     question: "What is an unpresented cheque?",
@@ -954,21 +954,21 @@ answer: "Dr Insurance Expense GHÂ¢250, Cr Bank GHÂ¢250"
 answer: "A cheque issued by the business but not yet cleared by the bank"
   },
   {
-    question: "The cash book shows GHÂ¢7,500, the bank statement shows GHÂ¢8,200, and uncredited deposits total GHÂ¢1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHÂ¢8,500", "GHÂ¢6,500", "GHÂ¢7,200"],
-answer: "GHÂ¢8,500"
+    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
+    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
+answer: "GHS8,500"
   },
   {
-    question: "If the bank statement shows GHÂ¢200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHÂ¢200, Cr Bank GHÂ¢200",
-      "Dr Bank GHÂ¢200, Cr Cash book GHÂ¢200",
-      "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"],
-answer: "Dr Cash book GHÂ¢200, Cr Suspense GHÂ¢200"
+    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
+    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
+      "Dr Bank GHS200, Cr Cash book GHS200",
+      "Dr Cash book GHS200, Cr Suspense GHS200"],
+answer: "Dr Cash book GHS200, Cr Suspense GHS200"
   },
   {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHÂ¢5,000 and the bank statement shows GHÂ¢4,300 with unpresented cheques GHÂ¢600.",
-    options: ["", "", "", "GHÂ¢700", "GHÂ¢1,200", "GHÂ¢500"],
-answer: "GHÂ¢700"
+    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
+    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
+answer: "GHS700"
   },
   {
     question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
@@ -976,16 +976,16 @@ answer: "GHÂ¢700"
 answer: "Depreciation"
   },
   {
-    question: "The Suspense Account was cleared with a debit of GHÂ¢1,000 and a credit of GHÂ¢1,000. What does this indicate?",
+    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
     options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
 answer: "Errors were corrected"
   },
   {
-    question: "A cheque for GHÂ¢750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750",
-      "Dr Cash book GHÂ¢750, Cr Suspense GHÂ¢750",
-      "Dr Suspense GHÂ¢1,500, Cr Cash book GHÂ¢1,500"],
-answer: "Dr Suspense GHÂ¢750, Cr Cash book GHÂ¢750"
+    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
+    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
+      "Dr Cash book GHS750, Cr Suspense GHS750",
+      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
+answer: "Dr Suspense GHS750, Cr Cash book GHS750"
   },
   {
     question: "What is a contra entry?",
@@ -1115,11 +1115,11 @@ answer: "Creditors ledger"
 answer: "Expense account"
   },
   {
-    question: "Which entry would correct a bank error in recording a deposit as GHÂ¢800 instead of GHÂ¢1,000?",
-    options: ["", "Add GHÂ¢200 to the bank statement balance",
-      "Deduct GHÂ¢200 from the cash book",
-      "Add GHÂ¢200 to the cash book"],
-answer: "Add GHÂ¢200 to the bank statement balance"
+    question: "Which entry would correct a bank error in recording a deposit as GHS800 instead of GHS1,000?",
+    options: ["", "Add GHS200 to the bank statement balance",
+      "Deduct GHS200 from the cash book",
+      "Add GHS200 to the cash book"],
+answer: "Add GHS200 to the bank statement balance"
   },
   {
     question: "What type of error causes the trial balance to disagree, necessitating a suspense account?",
@@ -1150,18 +1150,18 @@ answer: "Simplifies reconciliation of ledger accounts"
 answer: "Does not show profit or loss clearly"
   },
   {
-    question: "From the following single entry records, calculate the net profit: Opening capital GHÂ¢50,000, Closing capital GHÂ¢60,000, Additional capital introduced GHÂ¢5,000, Drawings GHÂ¢3,000.",
-    options: ["", "GHÂ¢12,000",
-      "GHÂ¢8,000",
-      "GHÂ¢10,000"],
-answer: "GHÂ¢12,000"
+    question: "From the following single entry records, calculate the net profit: Opening capital GHS50,000, Closing capital GHS60,000, Additional capital introduced GHS5,000, Drawings GHS3,000.",
+    options: ["", "GHS12,000",
+      "GHS8,000",
+      "GHS10,000"],
+answer: "GHS12,000"
   },
   {
-    question: "Calculate the credit sales if total sales are GHÂ¢150,000 and cash sales are GHÂ¢50,000.",
-    options: ["", "GHÂ¢100,000",
-      "GHÂ¢200,000",
-      "GHÂ¢50,000"],
-answer: "GHÂ¢100,000"
+    question: "Calculate the credit sales if total sales are GHS150,000 and cash sales are GHS50,000.",
+    options: ["", "GHS100,000",
+      "GHS200,000",
+      "GHS50,000"],
+answer: "GHS100,000"
   },
   {
     question: "What is the purpose of receipts and payments account in clubs and societies?",
@@ -1178,11 +1178,11 @@ answer: "To show cash inflows and outflows"
 answer: "Opening fund + Income - Expenditure"
   },
   {
-    question: "Compute the prime cost if direct materials cost GHÂ¢30,000, direct labour GHÂ¢20,000 and direct expenses GHÂ¢5,000.",
-    options: ["", "GHÂ¢55,000",
-      "GHÂ¢50,000",
-      "GHÂ¢45,000"],
-answer: "GHÂ¢55,000"
+    question: "Compute the prime cost if direct materials cost GHS30,000, direct labour GHS20,000 and direct expenses GHS5,000.",
+    options: ["", "GHS55,000",
+      "GHS50,000",
+      "GHS45,000"],
+answer: "GHS55,000"
   },
   {
     question: "What does the manufacturing account show?",
@@ -1192,11 +1192,11 @@ answer: "GHÂ¢55,000"
 answer: "Cost of goods manufactured"
   },
   {
-    question: "Calculate the production cost if prime cost is GHÂ¢55,000, factory overheads GHÂ¢15,000.",
-    options: ["", "GHÂ¢70,000",
-      "GHÂ¢40,000",
-      "GHÂ¢85,000"],
-answer: "GHÂ¢70,000"
+    question: "Calculate the production cost if prime cost is GHS55,000, factory overheads GHS15,000.",
+    options: ["", "GHS70,000",
+      "GHS40,000",
+      "GHS85,000"],
+answer: "GHS70,000"
   },
   {
     question: "What is meant by unrealized profit in manufacturing accounts?",
@@ -1206,11 +1206,11 @@ answer: "GHÂ¢70,000"
 answer: "Profit on goods still held in closing stock"
   },
   {
-    question: "Prepare a simple income and expenditure account given the following: Income GHÂ¢100,000, Expenditure GHÂ¢70,000.",
-    options: ["", "Net surplus GHÂ¢30,000",
-      "Net deficit GHÂ¢30,000",
-      "Net surplus GHÂ¢70,000"],
-answer: "Net surplus GHÂ¢30,000"
+    question: "Prepare a simple income and expenditure account given the following: Income GHS100,000, Expenditure GHS70,000.",
+    options: ["", "Net surplus GHS30,000",
+      "Net deficit GHS30,000",
+      "Net surplus GHS70,000"],
+answer: "Net surplus GHS30,000"
   },
   {
     question: "How is the subscriptions account credited in clubs and societies?",
@@ -1227,11 +1227,11 @@ answer: "When subscriptions are due"
 answer: "Departments are parts of a business; branches are separate locations"
   },
   {
-    question: "Calculate the value of closing stock given: Opening stock GHÂ¢10,000, Purchases GHÂ¢40,000, Sales GHÂ¢70,000, Cost of goods sold GHÂ¢35,000.",
-    options: ["", "GHÂ¢15,000",
-      "GHÂ¢20,000",
-      "GHÂ¢25,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate the value of closing stock given: Opening stock GHS10,000, Purchases GHS40,000, Sales GHS70,000, Cost of goods sold GHS35,000.",
+    options: ["", "GHS15,000",
+      "GHS20,000",
+      "GHS25,000"],
+answer: "GHS15,000"
   },
   {
     question: "What distinguishes public sector accounting from private sector accounting?",
@@ -1269,18 +1269,18 @@ answer: "Speed and accuracy of data processing"
 answer: "Prone to human error"
   },
   {
-    question: "Compute the net worth of a sole proprietor with assets GHÂ¢200,000 and liabilities GHÂ¢75,000.",
-    options: ["", "GHÂ¢125,000",
-      "GHÂ¢275,000",
-      "GHÂ¢75,000"],
-answer: "GHÂ¢125,000"
+    question: "Compute the net worth of a sole proprietor with assets GHS200,000 and liabilities GHS75,000.",
+    options: ["", "GHS125,000",
+      "GHS275,000",
+      "GHS75,000"],
+answer: "GHS125,000"
   },
   {
-    question: "If sales are GHÂ¢100,000, cost of goods sold GHÂ¢60,000, and expenses GHÂ¢20,000, calculate the net profit.",
-    options: ["", "GHÂ¢20,000",
-      "GHÂ¢40,000",
-      "GHÂ¢80,000"],
-answer: "GHÂ¢20,000"
+    question: "If sales are GHS100,000, cost of goods sold GHS60,000, and expenses GHS20,000, calculate the net profit.",
+    options: ["", "GHS20,000",
+      "GHS40,000",
+      "GHS80,000"],
+answer: "GHS20,000"
   },
   {
     question: "What is the role of an income and expenditure account in clubs?",
@@ -1304,11 +1304,11 @@ answer: "Closing capital + Drawings - Opening capital"
 answer: "Debit Depreciation Expense, Credit Accumulated Depreciation"
   },
   {
-    question: "Calculate depreciation on machinery costing GHÂ¢50,000 at 10% per annum using the straight-line method.",
-    options: ["", "GHÂ¢5,000",
-      "GHÂ¢500",
-      "GHÂ¢10,000"],
-answer: "GHÂ¢5,000"
+    question: "Calculate depreciation on machinery costing GHS50,000 at 10% per annum using the straight-line method.",
+    options: ["", "GHS5,000",
+      "GHS500",
+      "GHS10,000"],
+answer: "GHS5,000"
   },
   {
     question: "What is a suspense account used for in accounting?",
@@ -1346,11 +1346,11 @@ answer: "Every transaction affects at least two accounts, debit equals credit"
 answer: "Increase assets and increase liabilities"
   },
   {
-    question: "Calculate the closing capital given: Opening capital GHÂ¢80,000, additional capital introduced GHÂ¢20,000, net profit GHÂ¢15,000, and drawings GHÂ¢10,000.",
-    options: ["", "GHÂ¢105,000",
-      "GHÂ¢125,000",
-      "GHÂ¢85,000"],
-answer: "GHÂ¢105,000"
+    question: "Calculate the closing capital given: Opening capital GHS80,000, additional capital introduced GHS20,000, net profit GHS15,000, and drawings GHS10,000.",
+    options: ["", "GHS105,000",
+      "GHS125,000",
+      "GHS85,000"],
+answer: "GHS105,000"
   },
   {
     question: "How do you classify expenses in the final accounts of a sole proprietorship?",
@@ -1360,11 +1360,11 @@ answer: "GHÂ¢105,000"
 answer: "By nature or by function"
   },
   {
-    question: "Prepare a simple trial balance given: Cash GHÂ¢5,000 (debit), Capital GHÂ¢20,000 (credit), Equipment GHÂ¢7,000 (debit), Accounts Payable GHÂ¢4,000 (credit).",
-    options: ["", "Trial balance agrees with total debit GHÂ¢12,000 and credit GHÂ¢24,000",
-      "Trial balance agrees with total debit GHÂ¢12,000 and credit GHÂ¢24,000",
-      "Trial balance agrees with total debit GHÂ¢12,000 and credit GHÂ¢24,000"],
-answer: "Trial balance agrees with total debit GHÂ¢12,000 and credit GHÂ¢24,000"
+    question: "Prepare a simple trial balance given: Cash GHS5,000 (debit), Capital GHS20,000 (credit), Equipment GHS7,000 (debit), Accounts Payable GHS4,000 (credit).",
+    options: ["", "Trial balance agrees with total debit GHS12,000 and credit GHS24,000",
+      "Trial balance agrees with total debit GHS12,000 and credit GHS24,000",
+      "Trial balance agrees with total debit GHS12,000 and credit GHS24,000"],
+answer: "Trial balance agrees with total debit GHS12,000 and credit GHS24,000"
   },
   {
     question: "What is the key purpose of preparing a bank reconciliation statement?",
@@ -1381,18 +1381,18 @@ answer: "To explain differences between cash book and bank statement balances"
 answer: "It reduces profit as an expense"
   },
   {
-    question: "Calculate the value of closing stock using the cost formula if opening stock is GHÂ¢10,000, purchases GHÂ¢25,000, sales GHÂ¢40,000, and cost of goods sold GHÂ¢20,000.",
-    options: ["", "GHÂ¢15,000",
-      "GHÂ¢10,000",
-      "GHÂ¢25,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate the value of closing stock using the cost formula if opening stock is GHS10,000, purchases GHS25,000, sales GHS40,000, and cost of goods sold GHS20,000.",
+    options: ["", "GHS15,000",
+      "GHS10,000",
+      "GHS25,000"],
+answer: "GHS15,000"
   },
   {
-    question: "In VAT accounting, if a sale of GHÂ¢100,000 attracts VAT at 12.5%, calculate the VAT payable.",
-    options: ["", "GHÂ¢12,500",
-      "GHÂ¢8,000",
-      "GHÂ¢11,250"],
-answer: "GHÂ¢12,500"
+    question: "In VAT accounting, if a sale of GHS100,000 attracts VAT at 12.5%, calculate the VAT payable.",
+    options: ["", "GHS12,500",
+      "GHS8,000",
+      "GHS11,250"],
+answer: "GHS12,500"
   },
   {
     question: "Explain the effect on the balance sheet when depreciation is charged on fixed assets.",
@@ -1416,11 +1416,11 @@ answer: "Complexity"
 answer: "To record small cash payments"
   },
   {
-    question: "Calculate the payroll for 10 workers each paid GHÂ¢500 per week for 4 weeks.",
-    options: ["", "GHÂ¢20,000",
-      "GHÂ¢2,000",
-      "GHÂ¢50,000"],
-answer: "GHÂ¢20,000"
+    question: "Calculate the payroll for 10 workers each paid GHS500 per week for 4 weeks.",
+    options: ["", "GHS20,000",
+      "GHS2,000",
+      "GHS50,000"],
+answer: "GHS20,000"
   },
   {
     question: "Explain the difference between revenue and capital expenditure.",
@@ -1444,18 +1444,18 @@ answer: "Deduct from debtors and record as an expense"
 answer: "Increases liabilities and expenses"
   },
   {
-    question: "Prepare a ledger account for 'Rent Expense' given the following transactions: Paid GHÂ¢1,000 cash, owing GHÂ¢200 at year-end.",
-    options: ["", "Debit Rent Expense GHÂ¢1,200 and credit Cash GHÂ¢1,000 and Accrued Expenses GHÂ¢200",
-      "Debit Rent Expense GHÂ¢1,000 and credit Cash GHÂ¢1,000",
-      "Credit Rent Expense GHÂ¢1,200 and debit Cash GHÂ¢1,200"],
-answer: "Debit Rent Expense GHÂ¢1,200 and credit Cash GHÂ¢1,000 and Accrued Expenses GHÂ¢200"
+    question: "Prepare a ledger account for 'Rent Expense' given the following transactions: Paid GHS1,000 cash, owing GHS200 at year-end.",
+    options: ["", "Debit Rent Expense GHS1,200 and credit Cash GHS1,000 and Accrued Expenses GHS200",
+      "Debit Rent Expense GHS1,000 and credit Cash GHS1,000",
+      "Credit Rent Expense GHS1,200 and debit Cash GHS1,200"],
+answer: "Debit Rent Expense GHS1,200 and credit Cash GHS1,000 and Accrued Expenses GHS200"
   },
   {
-    question: "Calculate gross profit if sales are GHÂ¢120,000, cost of goods sold is GHÂ¢70,000, and expenses are GHÂ¢30,000.",
-    options: ["", "GHÂ¢50,000",
-      "GHÂ¢20,000",
-      "GHÂ¢30,000"],
-answer: "GHÂ¢50,000"
+    question: "Calculate gross profit if sales are GHS120,000, cost of goods sold is GHS70,000, and expenses are GHS30,000.",
+    options: ["", "GHS50,000",
+      "GHS20,000",
+      "GHS30,000"],
+answer: "GHS50,000"
   },
   {
     question: "What are the key users of accounting information?",
@@ -1472,11 +1472,11 @@ answer: "Owners, managers, creditors, investors, government"
 answer: "To summarize ledger balances and detect errors"
   },
   {
-    question: "Calculate VAT payable if total sales including VAT is GHÂ¢112,500 and the VAT rate is 12.5%.",
-    options: ["", "GHÂ¢12,500",
-      "GHÂ¢10,000",
-      "GHÂ¢11,250"],
-answer: "GHÂ¢12,500"
+    question: "Calculate VAT payable if total sales including VAT is GHS112,500 and the VAT rate is 12.5%.",
+    options: ["", "GHS12,500",
+      "GHS10,000",
+      "GHS11,250"],
+answer: "GHS12,500"
   },
   {
     question: "What is the accounting equation?",
@@ -1486,11 +1486,11 @@ answer: "GHÂ¢12,500"
 answer: "Assets = Liabilities + Capital"
   },
   {
-    question: "A business has assets GHÂ¢100,000, liabilities GHÂ¢40,000. What is the owner's equity?",
-    options: ["", "GHÂ¢60,000",
-      "GHÂ¢140,000",
-      "GHÂ¢40,000"],
-answer: "GHÂ¢60,000"
+    question: "A business has assets GHS100,000, liabilities GHS40,000. What is the owner's equity?",
+    options: ["", "GHS60,000",
+      "GHS140,000",
+      "GHS40,000"],
+answer: "GHS60,000"
   },
   {
     question: "What is the main difference between financial accounting and cost accounting?",
@@ -1507,11 +1507,11 @@ answer: "Financial accounting focuses on external reporting; cost accounting foc
 answer: "To check the equality of debits and credits"
   },
   {
-    question: "Calculate net profit if total revenue is GHÂ¢150,000 and total expenses are GHÂ¢90,000.",
-    options: ["", "GHÂ¢60,000",
-      "GHÂ¢240,000",
-      "GHÂ¢90,000"],
-answer: "GHÂ¢60,000"
+    question: "Calculate net profit if total revenue is GHS150,000 and total expenses are GHS90,000.",
+    options: ["", "GHS60,000",
+      "GHS240,000",
+      "GHS90,000"],
+answer: "GHS60,000"
   },
   {
     question: "What type of account is 'Accounts Payable'?",
@@ -1529,17 +1529,17 @@ answer: "Record as an asset until used"
   },
   {
     question: "Define the term 'drawings' in accounting.",
-    options: ["", "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s withdrawal of business assets for personal use",
+    options: ["", "Owner's withdrawal of business assets for personal use",
       "Payment of salaries",
       "Money borrowed from bank"],
-answer: "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s withdrawal of business assets for personal use"
+answer: "Owner's withdrawal of business assets for personal use"
   },
   {
-    question: "A company has sales of GHÂ¢80,000, returns inwards GHÂ¢2,000, purchases GHÂ¢40,000, and returns outwards GHÂ¢1,000. Calculate net sales.",
-    options: ["", "GHÂ¢78,000",
-      "GHÂ¢79,000",
-      "GHÂ¢81,000"],
-answer: "GHÂ¢78,000"
+    question: "A company has sales of GHS80,000, returns inwards GHS2,000, purchases GHS40,000, and returns outwards GHS1,000. Calculate net sales.",
+    options: ["", "GHS78,000",
+      "GHS79,000",
+      "GHS81,000"],
+answer: "GHS78,000"
   },
   {
     question: "What is the function of the petty cash book?",
@@ -1549,11 +1549,11 @@ answer: "GHÂ¢78,000"
 answer: "To record small cash payments"
   },
   {
-    question: "Calculate the accrued interest if a loan of GHÂ¢10,000 attracts 6% interest annually for 3 months.",
-    options: ["", "GHÂ¢150",
-      "GHÂ¢600",
-      "GHÂ¢500"],
-answer: "GHÂ¢150"
+    question: "Calculate the accrued interest if a loan of GHS10,000 attracts 6% interest annually for 3 months.",
+    options: ["", "GHS150",
+      "GHS600",
+      "GHS500"],
+answer: "GHS150"
   },
   {
     question: "What is the purpose of depreciation accounting?",
@@ -1584,11 +1584,11 @@ answer: "Decrease assets and decrease profit"
 answer: "To record transactions not recorded in special journals"
   },
   {
-    question: "Calculate the book value of an asset bought for GHÂ¢20,000 with accumulated depreciation of GHÂ¢4,000.",
-    options: ["", "GHÂ¢16,000",
-      "GHÂ¢24,000",
-      "GHÂ¢20,000"],
-answer: "GHÂ¢16,000"
+    question: "Calculate the book value of an asset bought for GHS20,000 with accumulated depreciation of GHS4,000.",
+    options: ["", "GHS16,000",
+      "GHS24,000",
+      "GHS20,000"],
+answer: "GHS16,000"
   },
   {
     question: "What is the difference between current and fixed assets?",
@@ -1598,11 +1598,11 @@ answer: "GHÂ¢16,000"
 answer: "Current assets are short-term, fixed assets are long-term"
   },
   {
-    question: "Calculate net cash flow given cash inflows GHÂ¢100,000 and cash outflows GHÂ¢70,000.",
-    options: ["", "GHÂ¢30,000",
-      "GHÂ¢170,000",
-      "GHÂ¢70,000"],
-answer: "GHÂ¢30,000"
+    question: "Calculate net cash flow given cash inflows GHS100,000 and cash outflows GHS70,000.",
+    options: ["", "GHS30,000",
+      "GHS170,000",
+      "GHS70,000"],
+answer: "GHS30,000"
   },
   {
     question: "Explain the accounting treatment of capital introduced by the owner.",
@@ -1626,11 +1626,11 @@ answer: "Balance Sheet"
 answer: "Ability to meet short-term obligations"
   },
   {
-    question: "Calculate the straight-line depreciation on an asset costing GHÂ¢12,000 with a useful life of 4 years and no residual value.",
-    options: ["", "GHÂ¢3,000 per year",
-      "GHÂ¢4,000 per year",
-      "GHÂ¢2,000 per year"],
-answer: "GHÂ¢3,000 per year"
+    question: "Calculate the straight-line depreciation on an asset costing GHS12,000 with a useful life of 4 years and no residual value.",
+    options: ["", "GHS3,000 per year",
+      "GHS4,000 per year",
+      "GHS2,000 per year"],
+answer: "GHS3,000 per year"
   },
   {
     question: "What is a suspense account used for?",
@@ -1647,11 +1647,11 @@ answer: "To temporarily hold unclassified or doubtful transactions"
 answer: "By making the correct entry in the appropriate ledger"
   },
   {
-    question: "Calculate the adjusted closing balance of the cash book if the unadjusted balance is GHÂ¢5,000, bank charges are GHÂ¢200, and a direct deposit of GHÂ¢300 was not recorded.",
-    options: ["", "GHÂ¢5,100",
-      "GHÂ¢5,100",
-      "GHÂ¢4,500"],
-answer: "GHÂ¢5,100"
+    question: "Calculate the adjusted closing balance of the cash book if the unadjusted balance is GHS5,000, bank charges are GHS200, and a direct deposit of GHS300 was not recorded.",
+    options: ["", "GHS5,100",
+      "GHS5,100",
+      "GHS4,500"],
+answer: "GHS5,100"
   },
   {
     question: "What is meant by 'deferred income'?",
@@ -1661,7 +1661,7 @@ answer: "GHÂ¢5,100"
 answer: "Income received in advance and not yet earned"
   },
   {
-    question: "A company has total debtors of GHÂ¢15,000 and credit sales of GHÂ¢120,000. Calculate the debtor's turnover ratio.",
+    question: "A company has total debtors of GHS15,000 and credit sales of GHS120,000. Calculate the debtor's turnover ratio.",
     options: ["", "8 times",
       "0.125 times",
       "10 times"],
@@ -1669,10 +1669,10 @@ answer: "8 times"
   },
   {
     question: "What is the purpose of the income statement?",
-    options: ["", "To show the companyÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s revenues and expenses over a period, resulting in profit or loss",
+    options: ["", "To show the company's revenues and expenses over a period, resulting in profit or loss",
       "To show financial position at a point in time",
       "To record cash transactions"],
-answer: "To show the companyÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s revenues and expenses over a period, resulting in profit or loss"
+answer: "To show the company's revenues and expenses over a period, resulting in profit or loss"
   },
   {
     question: "Explain the meaning of 'capital expenditure'.",
@@ -1682,11 +1682,11 @@ answer: "To show the companyÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ã
 answer: "Expenditure that improves the value or life of an asset"
   },
   {
-    question: "Calculate profit if opening capital is GHÂ¢20,000, closing capital is GHÂ¢30,000, and drawings are GHÂ¢5,000.",
-    options: ["", "GHÂ¢15,000",
-      "GHÂ¢5,000",
-      "GHÂ¢10,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate profit if opening capital is GHS20,000, closing capital is GHS30,000, and drawings are GHS5,000.",
+    options: ["", "GHS15,000",
+      "GHS5,000",
+      "GHS10,000"],
+answer: "GHS15,000"
   },
   {
     question: "What does a credit balance in the purchases ledger control account indicate?",
@@ -1703,11 +1703,11 @@ answer: "An overpayment or return to suppliers"
 answer: "Every transaction affects at least two accounts with equal debit and credit entries"
   },
   {
-    question: "A petty cash book has a balance of GHÂ¢200. Expenses of GHÂ¢80 and GHÂ¢50 were paid from it. What is the new balance?",
-    options: ["", "GHÂ¢70",
-      "GHÂ¢130",
-      "GHÂ¢330"],
-answer: "GHÂ¢70"
+    question: "A petty cash book has a balance of GHS200. Expenses of GHS80 and GHS50 were paid from it. What is the new balance?",
+    options: ["", "GHS70",
+      "GHS130",
+      "GHS330"],
+answer: "GHS70"
   },
   {
     question: "What is a trial balance?",
@@ -1724,11 +1724,11 @@ answer: "A list of all ledger balances to check debits equal credits"
 answer: "Recording revenues and expenses when they are earned or incurred, regardless of cash flow"
   },
   {
-    question: "Calculate bad debt expense if total credit sales are GHÂ¢100,000 and bad debts are estimated at 3%.",
-    options: ["", "GHÂ¢3,000",
-      "GHÂ¢30,000",
-      "GHÂ¢300"],
-answer: "GHÂ¢3,000"
+    question: "Calculate bad debt expense if total credit sales are GHS100,000 and bad debts are estimated at 3%.",
+    options: ["", "GHS3,000",
+      "GHS30,000",
+      "GHS300"],
+answer: "GHS3,000"
   },
   {
     question: "What is the effect of recording depreciation on financial statements?",
@@ -1745,32 +1745,32 @@ answer: "Decrease assets and decrease profit"
 answer: "Journal is the original book of entry; ledger summarizes transactions by account"
   },
   {
-    question: "A business made cash sales of GHÂ¢40,000 and credit sales of GHÂ¢60,000. Calculate total sales.",
-    options: ["", "GHÂ¢100,000",
-      "GHÂ¢60,000",
-      "GHÂ¢40,000"],
-answer: "GHÂ¢100,000"
+    question: "A business made cash sales of GHS40,000 and credit sales of GHS60,000. Calculate total sales.",
+    options: ["", "GHS100,000",
+      "GHS60,000",
+      "GHS40,000"],
+answer: "GHS100,000"
   },
   {
-    question: "Calculate the closing stock if opening stock was GHÂ¢10,000, purchases GHÂ¢40,000, and cost of goods sold GHÂ¢45,000.",
-    options: ["", "GHÂ¢5,000",
-      "GHÂ¢45,000",
-      "GHÂ¢50,000"],
-answer: "GHÂ¢5,000"
+    question: "Calculate the closing stock if opening stock was GHS10,000, purchases GHS40,000, and cost of goods sold GHS45,000.",
+    options: ["", "GHS5,000",
+      "GHS45,000",
+      "GHS50,000"],
+answer: "GHS5,000"
   },
   {
     question: "What is meant by 'capital' in accounting?",
-    options: ["", "The ownerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment in the business",
+    options: ["", "The owner's investment in the business",
       "Borrowed funds",
       "Sales revenue"],
-answer: "The ownerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment in the business"
+answer: "The owner's investment in the business"
   },
   {
-    question: "Calculate the depreciation using the reducing balance method at 20% on an asset costing GHÂ¢10,000 after 1 year.",
-    options: ["", "GHÂ¢2,000",
-      "GHÂ¢1,000",
-      "GHÂ¢8,000"],
-answer: "GHÂ¢2,000"
+    question: "Calculate the depreciation using the reducing balance method at 20% on an asset costing GHS10,000 after 1 year.",
+    options: ["", "GHS2,000",
+      "GHS1,000",
+      "GHS8,000"],
+answer: "GHS2,000"
   },
   {
     question: "What is the main purpose of a balance sheet?",
@@ -1780,32 +1780,32 @@ answer: "GHÂ¢2,000"
 answer: "To show the financial position of a business at a specific date"
   },
   {
-    question: "A company has a trial balance with debits GHÂ¢25,000 and credits GHÂ¢24,500. What does the difference of GHÂ¢500 represent?",
+    question: "A company has a trial balance with debits GHS25,000 and credits GHS24,500. What does the difference of GHS500 represent?",
     options: ["", "Suspense account balance",
       "Profit",
       "Loss"],
 answer: "Suspense account balance"
   },
   {
-    question: "Calculate gross profit if sales are GHÂ¢150,000 and cost of goods sold is GHÂ¢90,000.",
-    options: ["", "GHÂ¢60,000",
-      "GHÂ¢240,000",
-      "GHÂ¢90,000"],
-answer: "GHÂ¢60,000"
+    question: "Calculate gross profit if sales are GHS150,000 and cost of goods sold is GHS90,000.",
+    options: ["", "GHS60,000",
+      "GHS240,000",
+      "GHS90,000"],
+answer: "GHS60,000"
   },
   {
     question: "What is meant by 'liabilities' in accounting?",
     options: ["", "Amounts owed by the business to others",
       "Resources owned by the business",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment"],
+      "Owner's investment"],
 answer: "Amounts owed by the business to others"
   },
   {
-    question: "Calculate net profit if gross profit is GHÂ¢40,000 and operating expenses are GHÂ¢25,000.",
-    options: ["", "GHÂ¢15,000",
-      "GHÂ¢65,000",
-      "GHÂ¢25,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate net profit if gross profit is GHS40,000 and operating expenses are GHS25,000.",
+    options: ["", "GHS15,000",
+      "GHS65,000",
+      "GHS25,000"],
+answer: "GHS15,000"
   },
   {
     question: "Explain the term 'accrued expenses'.",
@@ -1815,25 +1815,25 @@ answer: "GHÂ¢15,000"
 answer: "Expenses incurred but not yet paid"
   },
   {
-    question: "A cash book shows a balance of GHÂ¢3,200, and the bank statement shows GHÂ¢3,000. Bank charges of GHÂ¢50 are not recorded in the cash book. What is the adjusted cash book balance?",
-    options: ["", "GHÂ¢3,150",
-      "GHÂ¢3,250",
-      "GHÂ¢3,000"],
-answer: "GHÂ¢3,150"
+    question: "A cash book shows a balance of GHS3,200, and the bank statement shows GHS3,000. Bank charges of GHS50 are not recorded in the cash book. What is the adjusted cash book balance?",
+    options: ["", "GHS3,150",
+      "GHS3,250",
+      "GHS3,000"],
+answer: "GHS3,150"
   },
   {
     question: "Define 'accounts receivable'.",
     options: ["", "Money owed to the business by customers",
       "Money owed by the business to suppliers",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s equity"],
+      "Owner's equity"],
 answer: "Money owed to the business by customers"
   },
   {
-    question: "Calculate the value of closing inventory if opening inventory is GHÂ¢5,000, purchases are GHÂ¢30,000, and cost of goods sold is GHÂ¢32,000.",
-    options: ["", "GHÂ¢3,000",
-      "GHÂ¢7,000",
-      "GHÂ¢32,000"],
-answer: "GHÂ¢3,000"
+    question: "Calculate the value of closing inventory if opening inventory is GHS5,000, purchases are GHS30,000, and cost of goods sold is GHS32,000.",
+    options: ["", "GHS3,000",
+      "GHS7,000",
+      "GHS32,000"],
+answer: "GHS3,000"
   },
   {
     question: "What is the purpose of a petty cash book?",
@@ -1850,32 +1850,32 @@ answer: "To record small cash payments"
 answer: "Non-physical assets like patents and trademarks"
   },
   {
-    question: "Explain 'ownerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s equity' in accounting.",
-    options: ["", "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment plus retained earnings",
+    question: "Explain 'owner's equity' in accounting.",
+    options: ["", "Owner's investment plus retained earnings",
       "Loans owed by the business",
       "Cash on hand"],
-answer: "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment plus retained earnings"
+answer: "Owner's investment plus retained earnings"
   },
   {
-    question: "A business has fixed assets costing GHÂ¢50,000 and accumulated depreciation of GHÂ¢10,000. Calculate the net book value.",
-    options: ["", "GHÂ¢40,000",
-      "GHÂ¢60,000",
-      "GHÂ¢10,000"],
-answer: "GHÂ¢40,000"
+    question: "A business has fixed assets costing GHS50,000 and accumulated depreciation of GHS10,000. Calculate the net book value.",
+    options: ["", "GHS40,000",
+      "GHS60,000",
+      "GHS10,000"],
+answer: "GHS40,000"
   },
   {
     question: "What is the accounting equation?",
-    options: ["", "Assets = Liabilities + OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Equity",
+    options: ["", "Assets = Liabilities + Owner's Equity",
       "Assets = Revenue + Expenses",
       "Assets + Liabilities = Equity"],
-answer: "Assets = Liabilities + OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Equity"
+answer: "Assets = Liabilities + Owner's Equity"
   },
   {
-    question: "Calculate the amount of provision for bad debts if trade receivables are GHÂ¢20,000 and the provision rate is 5%.",
-    options: ["", "GHÂ¢1,000",
-      "GHÂ¢2,000",
-      "GHÂ¢5,000"],
-answer: "GHÂ¢1,000"
+    question: "Calculate the amount of provision for bad debts if trade receivables are GHS20,000 and the provision rate is 5%.",
+    options: ["", "GHS1,000",
+      "GHS2,000",
+      "GHS5,000"],
+answer: "GHS1,000"
   },
   {
     question: "What is the difference between capital and revenue expenditure?",
@@ -1899,11 +1899,11 @@ answer: "Every transaction is recorded with equal debit and credit entries"
 answer: "A book where similar transactions are grouped and recorded"
   },
   {
-    question: "A company purchased machinery for GHÂ¢100,000 with an estimated useful life of 10 years and no residual value. Calculate annual straight-line depreciation.",
-    options: ["", "GHÂ¢10,000",
-      "GHÂ¢5,000",
-      "GHÂ¢20,000"],
-answer: "GHÂ¢10,000"
+    question: "A company purchased machinery for GHS100,000 with an estimated useful life of 10 years and no residual value. Calculate annual straight-line depreciation.",
+    options: ["", "GHS10,000",
+      "GHS5,000",
+      "GHS20,000"],
+answer: "GHS10,000"
   },
   {
     question: "What is meant by 'trial balance'?",
@@ -1920,11 +1920,11 @@ answer: "A statement showing the debit and credit balances of ledger accounts to
 answer: "Customer overpayment or credit note issued"
   },
   {
-    question: "Calculate profit before tax if gross profit is GHÂ¢80,000, operating expenses are GHÂ¢40,000, and other income is GHÂ¢10,000.",
-    options: ["", "GHÂ¢50,000",
-      "GHÂ¢30,000",
-      "GHÂ¢40,000"],
-answer: "GHÂ¢50,000"
+    question: "Calculate profit before tax if gross profit is GHS80,000, operating expenses are GHS40,000, and other income is GHS10,000.",
+    options: ["", "GHS50,000",
+      "GHS30,000",
+      "GHS40,000"],
+answer: "GHS50,000"
   },
   {
     question: "What is a bank reconciliation statement used for?",
@@ -1941,21 +1941,21 @@ answer: "To reconcile differences between bank statement and cash book balances"
 answer: "Expenses or revenues recognized before cash is received or paid"
   },
   {
-    question: "Calculate net assets if total assets are GHÂ¢150,000 and total liabilities are GHÂ¢70,000.",
-    options: ["", "GHÂ¢80,000",
-      "GHÂ¢220,000",
-      "GHÂ¢70,000"],
-answer: "GHÂ¢80,000"
+    question: "Calculate net assets if total assets are GHS150,000 and total liabilities are GHS70,000.",
+    options: ["", "GHS80,000",
+      "GHS220,000",
+      "GHS70,000"],
+answer: "GHS80,000"
   },
   {
     question: "What are current liabilities?",
     options: ["", "Obligations payable within one year",
       "Long-term debts",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s equity"],
+      "Owner's equity"],
 answer: "Obligations payable within one year"
   },
   {
-    question: "Calculate the gross profit margin if gross profit is GHÂ¢45,000 and sales revenue is GHÂ¢150,000.",
+    question: "Calculate the gross profit margin if gross profit is GHS45,000 and sales revenue is GHS150,000.",
     options: ["", "30%",
       "25%",
       "35%"],
@@ -1969,21 +1969,21 @@ answer: "30%"
 answer: "Spending on acquiring or improving fixed assets"
   },
   {
-    question: "A business made sales of GHÂ¢200,000 with 5% VAT included. Calculate the VAT amount.",
-    options: ["", "GHÂ¢9,523.81",
-      "GHÂ¢10,000",
-      "GHÂ¢5,000"],
-answer: "GHÂ¢9,523.81"
+    question: "A business made sales of GHS200,000 with 5% VAT included. Calculate the VAT amount.",
+    options: ["", "GHS9,523.81",
+      "GHS10,000",
+      "GHS5,000"],
+answer: "GHS9,523.81"
   },
   {
-    question: "What is the journal entry to record payment of salaries GHÂ¢5,000?",
-    options: ["", "Debit Salaries Expense GHÂ¢5,000; Credit Cash GHÂ¢5,000",
-      "Debit Cash GHÂ¢5,000; Credit Salaries Expense GHÂ¢5,000",
-      "Debit Salaries Expense GHÂ¢5,000; Credit Salaries Payable GHÂ¢5,000"],
-answer: "Debit Salaries Expense GHÂ¢5,000; Credit Cash GHÂ¢5,000"
+    question: "What is the journal entry to record payment of salaries GHS5,000?",
+    options: ["", "Debit Salaries Expense GHS5,000; Credit Cash GHS5,000",
+      "Debit Cash GHS5,000; Credit Salaries Expense GHS5,000",
+      "Debit Salaries Expense GHS5,000; Credit Salaries Payable GHS5,000"],
+answer: "Debit Salaries Expense GHS5,000; Credit Cash GHS5,000"
   },
   {
-    question: "Calculate the debtors turnover ratio if credit sales are GHÂ¢120,000 and average trade receivables are GHÂ¢30,000.",
+    question: "Calculate the debtors turnover ratio if credit sales are GHS120,000 and average trade receivables are GHS30,000.",
     options: ["", "4 times",
       "0.25 times",
       "3 times"],
@@ -2004,11 +2004,11 @@ answer: "Income earned but not yet received"
 answer: "To ensure total debits equal total credits"
   },
   {
-    question: "Calculate closing stock if opening stock is GHÂ¢10,000, purchases GHÂ¢50,000, sales GHÂ¢70,000 and gross profit margin is 40%.",
-    options: ["", "GHÂ¢18,000",
-      "GHÂ¢20,000",
-      "GHÂ¢22,000"],
-answer: "GHÂ¢18,000"
+    question: "Calculate closing stock if opening stock is GHS10,000, purchases GHS50,000, sales GHS70,000 and gross profit margin is 40%.",
+    options: ["", "GHS18,000",
+      "GHS20,000",
+      "GHS22,000"],
+answer: "GHS18,000"
   },
   {
     question: "What is the difference between 'provision' and 'reserve'?",
@@ -2018,11 +2018,11 @@ answer: "GHÂ¢18,000"
 answer: "Provision is for known liabilities; reserve is for unknown contingencies"
   },
   {
-    question: "Calculate the straight-line depreciation for an asset costing GHÂ¢60,000 with a residual value of GHÂ¢6,000 and useful life of 6 years.",
-    options: ["", "GHÂ¢9,000",
-      "GHÂ¢10,000",
-      "GHÂ¢8,000"],
-answer: "GHÂ¢9,000"
+    question: "Calculate the straight-line depreciation for an asset costing GHS60,000 with a residual value of GHS6,000 and useful life of 6 years.",
+    options: ["", "GHS9,000",
+      "GHS10,000",
+      "GHS8,000"],
+answer: "GHS9,000"
   },
   {
     question: "What does a debit balance in the purchases ledger control account indicate?",
@@ -2046,18 +2046,18 @@ answer: "Current assets minus current liabilities"
 answer: "Debts that are unlikely to be collected"
   },
   {
-    question: "A company received GHÂ¢500 in cash and issued a receipt. What is the double entry?",
-    options: ["", "Debit Cash GHÂ¢500; Credit Sales GHÂ¢500",
-      "Debit Sales GHÂ¢500; Credit Cash GHÂ¢500",
-      "Debit Cash GHÂ¢500; Credit Debtors GHÂ¢500"],
-answer: "Debit Cash GHÂ¢500; Credit Sales GHÂ¢500"
+    question: "A company received GHS500 in cash and issued a receipt. What is the double entry?",
+    options: ["", "Debit Cash GHS500; Credit Sales GHS500",
+      "Debit Sales GHS500; Credit Cash GHS500",
+      "Debit Cash GHS500; Credit Debtors GHS500"],
+answer: "Debit Cash GHS500; Credit Sales GHS500"
   },
   {
-    question: "Calculate the cost of goods sold if opening stock is GHÂ¢8,000, purchases GHÂ¢42,000, and closing stock GHÂ¢12,000.",
-    options: ["", "GHÂ¢38,000",
-      "GHÂ¢50,000",
-      "GHÂ¢32,000"],
-answer: "GHÂ¢38,000"
+    question: "Calculate the cost of goods sold if opening stock is GHS8,000, purchases GHS42,000, and closing stock GHS12,000.",
+    options: ["", "GHS38,000",
+      "GHS50,000",
+      "GHS32,000"],
+answer: "GHS38,000"
   },
   {
     question: "What is the role of the petty cashier?",
@@ -2074,11 +2074,11 @@ answer: "To manage small day-to-day cash expenses"
 answer: "To show surplus or deficit for the period"
   },
   {
-    question: "Calculate the net profit if total income is GHÂ¢120,000 and total expenses GHÂ¢85,000.",
-    options: ["", "GHÂ¢35,000",
-      "GHÂ¢205,000",
-      "GHÂ¢45,000"],
-answer: "GHÂ¢35,000"
+    question: "Calculate the net profit if total income is GHS120,000 and total expenses GHS85,000.",
+    options: ["", "GHS35,000",
+      "GHS205,000",
+      "GHS45,000"],
+answer: "GHS35,000"
   },
   {
     question: "What is the purpose of the suspense account?",
@@ -2088,11 +2088,11 @@ answer: "GHÂ¢35,000"
 answer: "To temporarily hold discrepancies in trial balance"
   },
   {
-    question: "A bank statement shows GHÂ¢2,000, cash book shows GHÂ¢1,850, and unpresented cheques amount to GHÂ¢100. What is the adjusted cash book balance after bank charges of GHÂ¢50?",
-    options: ["", "GHÂ¢1,800",
-      "GHÂ¢2,050",
-      "GHÂ¢1,900"],
-answer: "GHÂ¢1,800"
+    question: "A bank statement shows GHS2,000, cash book shows GHS1,850, and unpresented cheques amount to GHS100. What is the adjusted cash book balance after bank charges of GHS50?",
+    options: ["", "GHS1,800",
+      "GHS2,050",
+      "GHS1,900"],
+answer: "GHS1,800"
   },
   {
     question: "Define 'ledger control account'.",
@@ -2116,7 +2116,7 @@ answer: "Direct materials, direct labor, factory overheads"
 answer: "Profit included in stock not yet sold"
   },
   {
-    question: "Calculate the inventory turnover ratio if cost of goods sold is GHÂ¢120,000 and average inventory is GHÂ¢30,000.",
+    question: "Calculate the inventory turnover ratio if cost of goods sold is GHS120,000 and average inventory is GHS30,000.",
     options: ["", "4 times",
       "0.25 times",
       "3 times"],
@@ -2130,11 +2130,11 @@ answer: "4 times"
 answer: "To reconcile the cash book balance with the bank statement balance"
   },
   {
-    question: "A business issues credit notes worth GHÂ¢2,000 to customers. What is the correct journal entry?",
-    options: ["", "Debit Sales Returns GHÂ¢2,000; Credit Debtors GHÂ¢2,000",
-      "Debit Debtors GHÂ¢2,000; Credit Sales GHÂ¢2,000",
-      "Debit Cash GHÂ¢2,000; Credit Sales GHÂ¢2,000"],
-answer: "Debit Sales Returns GHÂ¢2,000; Credit Debtors GHÂ¢2,000"
+    question: "A business issues credit notes worth GHS2,000 to customers. What is the correct journal entry?",
+    options: ["", "Debit Sales Returns GHS2,000; Credit Debtors GHS2,000",
+      "Debit Debtors GHS2,000; Credit Sales GHS2,000",
+      "Debit Cash GHS2,000; Credit Sales GHS2,000"],
+answer: "Debit Sales Returns GHS2,000; Credit Debtors GHS2,000"
   },
   {
     question: "Explain the purpose of the suspense account in accounting.",
@@ -2144,25 +2144,25 @@ answer: "Debit Sales Returns GHÂ¢2,000; Credit Debtors GHÂ¢2,000"
 answer: "To temporarily record discrepancies in the trial balance"
   },
   {
-    question: "Calculate the bank overdraft balance if the cash book shows GHÂ¢4,000 and unpresented cheques total GHÂ¢6,000.",
-    options: ["", "GHÂ¢2,000 overdraft",
-      "GHÂ¢10,000 overdraft",
-      "GHÂ¢4,000 overdraft"],
-answer: "GHÂ¢2,000 overdraft"
+    question: "Calculate the bank overdraft balance if the cash book shows GHS4,000 and unpresented cheques total GHS6,000.",
+    options: ["", "GHS2,000 overdraft",
+      "GHS10,000 overdraft",
+      "GHS4,000 overdraft"],
+answer: "GHS2,000 overdraft"
   },
   {
-    question: "What is the effect on the accounting equation when a business takes a loan of GHÂ¢10,000 from the bank?",
-    options: ["", "Assets and liabilities increase by GHÂ¢10,000",
+    question: "What is the effect on the accounting equation when a business takes a loan of GHS10,000 from the bank?",
+    options: ["", "Assets and liabilities increase by GHS10,000",
       "Assets decrease and liabilities increase",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s equity increases"],
-answer: "Assets and liabilities increase by GHÂ¢10,000"
+      "Owner's equity increases"],
+answer: "Assets and liabilities increase by GHS10,000"
   },
   {
-    question: "Calculate the net realizable value of inventory if cost is GHÂ¢20,000 and estimated selling price is GHÂ¢18,000 with disposal costs GHÂ¢1,000.",
-    options: ["", "GHÂ¢17,000",
-      "GHÂ¢18,000",
-      "GHÂ¢20,000"],
-answer: "GHÂ¢17,000"
+    question: "Calculate the net realizable value of inventory if cost is GHS20,000 and estimated selling price is GHS18,000 with disposal costs GHS1,000.",
+    options: ["", "GHS17,000",
+      "GHS18,000",
+      "GHS20,000"],
+answer: "GHS17,000"
   },
   {
     question: "What type of account is 'Accumulated Depreciation'?",
@@ -2179,61 +2179,61 @@ answer: "Contra asset account"
 answer: "The amount needed to balance an unequal trial balance"
   },
   {
-    question: "Calculate the profit on disposal of an asset sold for GHÂ¢12,000, with a cost of GHÂ¢15,000 and accumulated depreciation of GHÂ¢5,000.",
-    options: ["", "Loss of GHÂ¢2,000",
-      "Profit of GHÂ¢2,000",
-      "Profit of GHÂ¢8,000"],
-answer: "Loss of GHÂ¢2,000"
+    question: "Calculate the profit on disposal of an asset sold for GHS12,000, with a cost of GHS15,000 and accumulated depreciation of GHS5,000.",
+    options: ["", "Loss of GHS2,000",
+      "Profit of GHS2,000",
+      "Profit of GHS8,000"],
+answer: "Loss of GHS2,000"
   },
   {
-    question: "Define 'ownerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s drawings'.",
+    question: "Define 'owner's drawings'.",
     options: ["", "Withdrawals made by the owner from the business for personal use",
       "Capital invested in the business",
       "Business expenses"],
 answer: "Withdrawals made by the owner from the business for personal use"
   },
   {
-    question: "What is the journal entry to record accrued expenses of GHÂ¢1,500?",
-    options: ["", "Debit Expense account GHÂ¢1,500; Credit Accrued expenses GHÂ¢1,500",
-      "Debit Cash GHÂ¢1,500; Credit Expense account GHÂ¢1,500",
-      "Debit Accrued expenses GHÂ¢1,500; Credit Expense account GHÂ¢1,500"],
-answer: "Debit Expense account GHÂ¢1,500; Credit Accrued expenses GHÂ¢1,500"
+    question: "What is the journal entry to record accrued expenses of GHS1,500?",
+    options: ["", "Debit Expense account GHS1,500; Credit Accrued expenses GHS1,500",
+      "Debit Cash GHS1,500; Credit Expense account GHS1,500",
+      "Debit Accrued expenses GHS1,500; Credit Expense account GHS1,500"],
+answer: "Debit Expense account GHS1,500; Credit Accrued expenses GHS1,500"
   },
   {
-    question: "Calculate the closing inventory if opening inventory is GHÂ¢5,000, purchases are GHÂ¢20,000, and cost of goods sold is GHÂ¢18,000.",
-    options: ["", "GHÂ¢7,000", "GHÂ¢3,000", "GHÂ¢18,000", "GHÂ¢25,000"],
-answer: "GHÂ¢7,000"
+    question: "Calculate the closing inventory if opening inventory is GHS5,000, purchases are GHS20,000, and cost of goods sold is GHS18,000.",
+    options: ["", "GHS7,000", "GHS3,000", "GHS18,000", "GHS25,000"],
+answer: "GHS7,000"
   },
   {
-    question: "What is the effect on the accounting equation when the business pays off a GHÂ¢3,000 creditor?",
+    question: "What is the effect on the accounting equation when the business pays off a GHS3,000 creditor?",
     options: ["", "Assets decrease and liabilities decrease",
       "Assets increase and liabilities increase",
       "Assets decrease and equity decreases"],
 answer: "Assets decrease and liabilities decrease"
   },
   {
-    question: "Prepare the journal entry for depreciation of GHÂ¢2,000 on machinery.",
-    options: ["", "Debit Depreciation expense GHÂ¢2,000; Credit Accumulated depreciation GHÂ¢2,000",
-      "Debit Machinery account GHÂ¢2,000; Credit Accumulated depreciation GHÂ¢2,000",
-      "Debit Accumulated depreciation GHÂ¢2,000; Credit Depreciation expense GHÂ¢2,000"],
-answer: "Debit Depreciation expense GHÂ¢2,000; Credit Accumulated depreciation GHÂ¢2,000"
+    question: "Prepare the journal entry for depreciation of GHS2,000 on machinery.",
+    options: ["", "Debit Depreciation expense GHS2,000; Credit Accumulated depreciation GHS2,000",
+      "Debit Machinery account GHS2,000; Credit Accumulated depreciation GHS2,000",
+      "Debit Accumulated depreciation GHS2,000; Credit Depreciation expense GHS2,000"],
+answer: "Debit Depreciation expense GHS2,000; Credit Accumulated depreciation GHS2,000"
   },
   {
-    question: "Calculate the trade receivables turnover ratio given credit sales of GHÂ¢120,000 and average receivables of GHÂ¢15,000.",
+    question: "Calculate the trade receivables turnover ratio given credit sales of GHS120,000 and average receivables of GHS15,000.",
     options: ["", "8 times", "12 times", "10 times", "6 times"],
 answer: "8 times"
   },
   {
-    question: "What is the journal entry to record payment of salaries GHÂ¢5,000?",
-    options: ["", "Debit Salaries expense GHÂ¢5,000; Credit Cash GHÂ¢5,000",
-      "Debit Cash GHÂ¢5,000; Credit Salaries expense GHÂ¢5,000",
-      "Debit Salaries payable GHÂ¢5,000; Credit Cash GHÂ¢5,000"],
-answer: "Debit Salaries expense GHÂ¢5,000; Credit Cash GHÂ¢5,000"
+    question: "What is the journal entry to record payment of salaries GHS5,000?",
+    options: ["", "Debit Salaries expense GHS5,000; Credit Cash GHS5,000",
+      "Debit Cash GHS5,000; Credit Salaries expense GHS5,000",
+      "Debit Salaries payable GHS5,000; Credit Cash GHS5,000"],
+answer: "Debit Salaries expense GHS5,000; Credit Cash GHS5,000"
   },
   {
-    question: "Calculate net profit if total revenue is GHÂ¢150,000, total expenses GHÂ¢110,000, and income tax is GHÂ¢10,000.",
-    options: ["", "GHÂ¢30,000", "GHÂ¢40,000", "GHÂ¢50,000", "GHÂ¢60,000"],
-answer: "GHÂ¢30,000"
+    question: "Calculate net profit if total revenue is GHS150,000, total expenses GHS110,000, and income tax is GHS10,000.",
+    options: ["", "GHS30,000", "GHS40,000", "GHS50,000", "GHS60,000"],
+answer: "GHS30,000"
   },
   {
     question: "Which book records all cash receipts and payments?",
@@ -2241,9 +2241,9 @@ answer: "GHÂ¢30,000"
 answer: "Cash book"
   },
   {
-    question: "Calculate the value of goods sold on credit if total sales are GHÂ¢80,000 and cash sales are GHÂ¢30,000.",
-    options: ["", "GHÂ¢50,000", "GHÂ¢110,000", "GHÂ¢30,000", "GHÂ¢80,000"],
-answer: "GHÂ¢50,000"
+    question: "Calculate the value of goods sold on credit if total sales are GHS80,000 and cash sales are GHS30,000.",
+    options: ["", "GHS50,000", "GHS110,000", "GHS30,000", "GHS80,000"],
+answer: "GHS50,000"
   },
   {
     question: "What is the main purpose of the trial balance?",
@@ -2253,21 +2253,21 @@ answer: "GHÂ¢50,000"
 answer: "To check the equality of debits and credits"
   },
   {
-    question: "Calculate the VAT on a sale of GHÂ¢12,000 with VAT rate of 12.5%.",
-    options: ["", "GHÂ¢1,500", "GHÂ¢1,250", "GHÂ¢1,200", "GHÂ¢1,350"],
-answer: "GHÂ¢1,500"
+    question: "Calculate the VAT on a sale of GHS12,000 with VAT rate of 12.5%.",
+    options: ["", "GHS1,500", "GHS1,250", "GHS1,200", "GHS1,350"],
+answer: "GHS1,500"
   },
   {
-    question: "Prepare the journal entry for a credit purchase of inventory worth GHÂ¢8,000.",
-    options: ["", "Debit Inventory GHÂ¢8,000; Credit Accounts Payable GHÂ¢8,000",
-      "Debit Accounts Payable GHÂ¢8,000; Credit Inventory GHÂ¢8,000",
-      "Debit Inventory GHÂ¢8,000; Credit Cash GHÂ¢8,000"],
-answer: "Debit Inventory GHÂ¢8,000; Credit Accounts Payable GHÂ¢8,000"
+    question: "Prepare the journal entry for a credit purchase of inventory worth GHS8,000.",
+    options: ["", "Debit Inventory GHS8,000; Credit Accounts Payable GHS8,000",
+      "Debit Accounts Payable GHS8,000; Credit Inventory GHS8,000",
+      "Debit Inventory GHS8,000; Credit Cash GHS8,000"],
+answer: "Debit Inventory GHS8,000; Credit Accounts Payable GHS8,000"
   },
   {
-    question: "Calculate gross profit if sales are GHÂ¢200,000 and cost of goods sold is GHÂ¢140,000.",
-    options: ["", "GHÂ¢60,000", "GHÂ¢340,000", "GHÂ¢140,000", "GHÂ¢200,000"],
-answer: "GHÂ¢60,000"
+    question: "Calculate gross profit if sales are GHS200,000 and cost of goods sold is GHS140,000.",
+    options: ["", "GHS60,000", "GHS340,000", "GHS140,000", "GHS200,000"],
+answer: "GHS60,000"
   },
   {
     question: "Define 'accrued income'.",
@@ -2277,16 +2277,16 @@ answer: "GHÂ¢60,000"
 answer: "Income earned but not yet received"
   },
   {
-    question: "What is the double entry for ownerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s capital introduction of GHÂ¢50,000?",
-    options: ["", "Debit Cash GHÂ¢50,000; Credit OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Capital GHÂ¢50,000",
-      "Debit OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Capital GHÂ¢50,000; Credit Cash GHÂ¢50,000",
-      "Debit OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Drawings GHÂ¢50,000; Credit Cash GHÂ¢50,000"],
-answer: "Debit Cash GHÂ¢50,000; Credit OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s Capital GHÂ¢50,000"
+    question: "What is the double entry for owner's capital introduction of GHS50,000?",
+    options: ["", "Debit Cash GHS50,000; Credit Owner's Capital GHS50,000",
+      "Debit Owner's Capital GHS50,000; Credit Cash GHS50,000",
+      "Debit Owner's Drawings GHS50,000; Credit Cash GHS50,000"],
+answer: "Debit Cash GHS50,000; Credit Owner's Capital GHS50,000"
   },
   {
-    question: "Calculate the provision for bad debts if total debtors are GHÂ¢15,000 and provision percentage is 5%.",
-    options: ["", "GHÂ¢750", "GHÂ¢300", "GHÂ¢1,500", "GHÂ¢7500"],
-answer: "GHÂ¢750"
+    question: "Calculate the provision for bad debts if total debtors are GHS15,000 and provision percentage is 5%.",
+    options: ["", "GHS750", "GHS300", "GHS1,500", "GHS7500"],
+answer: "GHS750"
   },
   {
     question: "What type of account is 'Prepaid expenses'?",
@@ -2294,9 +2294,9 @@ answer: "GHÂ¢750"
 answer: "Asset"
   },
   {
-    question: "Calculate the closing balance of petty cash if opening balance was GHÂ¢500, expenses paid GHÂ¢400 and cash received GHÂ¢200.",
-    options: ["", "GHÂ¢300", "GHÂ¢100", "GHÂ¢200", "GHÂ¢700"],
-answer: "GHÂ¢300"
+    question: "Calculate the closing balance of petty cash if opening balance was GHS500, expenses paid GHS400 and cash received GHS200.",
+    options: ["", "GHS300", "GHS100", "GHS200", "GHS700"],
+answer: "GHS300"
   },
   {
     question: "Explain the term 'capital expenditure'.",
@@ -2306,16 +2306,16 @@ answer: "GHÂ¢300"
 answer: "Expenditure on acquiring or improving fixed assets"
   },
   {
-    question: "Prepare the journal entry for the purchase of a vehicle costing GHÂ¢25,000 by cheque.",
-    options: ["", "Debit Vehicles GHÂ¢25,000; Credit Bank GHÂ¢25,000",
-      "Debit Vehicles GHÂ¢25,000; Credit Cash GHÂ¢25,000",
-      "Debit Bank GHÂ¢25,000; Credit Vehicles GHÂ¢25,000"],
-answer: "Debit Vehicles GHÂ¢25,000; Credit Bank GHÂ¢25,000"
+    question: "Prepare the journal entry for the purchase of a vehicle costing GHS25,000 by cheque.",
+    options: ["", "Debit Vehicles GHS25,000; Credit Bank GHS25,000",
+      "Debit Vehicles GHS25,000; Credit Cash GHS25,000",
+      "Debit Bank GHS25,000; Credit Vehicles GHS25,000"],
+answer: "Debit Vehicles GHS25,000; Credit Bank GHS25,000"
   },
   {
-    question: "Calculate the cost of goods sold using the formula: Opening Inventory + Purchases - Closing Inventory, if Opening Inventory GHÂ¢4,000, Purchases GHÂ¢16,000 and Closing Inventory GHÂ¢5,000.",
-    options: ["", "GHÂ¢15,000", "GHÂ¢25,000", "GHÂ¢20,000", "GHÂ¢17,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate the cost of goods sold using the formula: Opening Inventory + Purchases - Closing Inventory, if Opening Inventory GHS4,000, Purchases GHS16,000 and Closing Inventory GHS5,000.",
+    options: ["", "GHS15,000", "GHS25,000", "GHS20,000", "GHS17,000"],
+answer: "GHS15,000"
   },
   {
     question: "What is the meaning of 'liquidity' in financial accounting?",
@@ -2325,9 +2325,9 @@ answer: "GHÂ¢15,000"
 answer: "Ability to meet short-term obligations"
   },
   {
-    question: "Calculate the depreciation expense using straight-line method for an asset costing GHÂ¢50,000 with a residual value of GHÂ¢5,000 and useful life of 9 years.",
-    options: ["", "GHÂ¢5,000", "GHÂ¢4,500", "GHÂ¢6,000", "GHÂ¢7,000"],
-answer: "GHÂ¢5,000"
+    question: "Calculate the depreciation expense using straight-line method for an asset costing GHS50,000 with a residual value of GHS5,000 and useful life of 9 years.",
+    options: ["", "GHS5,000", "GHS4,500", "GHS6,000", "GHS7,000"],
+answer: "GHS5,000"
   },
   {
     question: "Which document records all sales made on credit?",
@@ -2342,21 +2342,21 @@ answer: "Sales journal"
 answer: "To reconcile the bank statement balance with the cash book balance"
   },
   {
-    question: "Calculate the net book value of an asset costing GHÂ¢30,000 with accumulated depreciation of GHÂ¢12,000.",
-    options: ["", "GHÂ¢18,000", "GHÂ¢42,000", "GHÂ¢30,000", "GHÂ¢12,000"],
-answer: "GHÂ¢18,000"
+    question: "Calculate the net book value of an asset costing GHS30,000 with accumulated depreciation of GHS12,000.",
+    options: ["", "GHS18,000", "GHS42,000", "GHS30,000", "GHS12,000"],
+answer: "GHS18,000"
   },
   {
-    question: "Prepare the journal entry to record a bad debt expense of GHÂ¢1,200.",
-    options: ["", "Debit Bad debts expense GHÂ¢1,200; Credit Accounts receivable GHÂ¢1,200",
-      "Debit Accounts receivable GHÂ¢1,200; Credit Bad debts expense GHÂ¢1,200",
-      "Debit Bad debts expense GHÂ¢1,200; Credit Cash GHÂ¢1,200"],
-answer: "Debit Bad debts expense GHÂ¢1,200; Credit Accounts receivable GHÂ¢1,200"
+    question: "Prepare the journal entry to record a bad debt expense of GHS1,200.",
+    options: ["", "Debit Bad debts expense GHS1,200; Credit Accounts receivable GHS1,200",
+      "Debit Accounts receivable GHS1,200; Credit Bad debts expense GHS1,200",
+      "Debit Bad debts expense GHS1,200; Credit Cash GHS1,200"],
+answer: "Debit Bad debts expense GHS1,200; Credit Accounts receivable GHS1,200"
   },
   {
-    question: "Calculate the net profit from the following: Sales GHÂ¢100,000; Cost of sales GHÂ¢60,000; Operating expenses GHÂ¢25,000; Interest expense GHÂ¢5,000.",
-    options: ["", "GHÂ¢10,000", "GHÂ¢15,000", "GHÂ¢20,000", "GHÂ¢25,000"],
-answer: "GHÂ¢10,000"
+    question: "Calculate the net profit from the following: Sales GHS100,000; Cost of sales GHS60,000; Operating expenses GHS25,000; Interest expense GHS5,000.",
+    options: ["", "GHS10,000", "GHS15,000", "GHS20,000", "GHS25,000"],
+answer: "GHS10,000"
   },
   {
     question: "What accounting concept requires that revenue be recorded when earned and expenses when incurred?",
@@ -2369,37 +2369,37 @@ answer: "Accrual concept"
     question: "Define 'liabilities' in accounting terms.",
     options: ["", "Amounts owed by the business",
       "Assets owned by the business",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s equity"],
+      "Owner's equity"],
 answer: "Amounts owed by the business"
   },
   {
-    question: "Calculate the owner's equity if assets total GHÂ¢150,000 and liabilities total GHÂ¢90,000.",
-    options: ["", "GHÂ¢60,000", "GHÂ¢240,000", "GHÂ¢90,000", "GHÂ¢150,000"],
-answer: "GHÂ¢60,000"
+    question: "Calculate the owner's equity if assets total GHS150,000 and liabilities total GHS90,000.",
+    options: ["", "GHS60,000", "GHS240,000", "GHS90,000", "GHS150,000"],
+answer: "GHS60,000"
   },
   {
-    question: "Prepare the journal entry for the purchase of office supplies on credit for GHÂ¢3,000.",
-    options: ["", "Debit Office supplies GHÂ¢3,000; Credit Accounts payable GHÂ¢3,000",
-      "Debit Accounts payable GHÂ¢3,000; Credit Office supplies GHÂ¢3,000",
-      "Debit Office supplies GHÂ¢3,000; Credit Cash GHÂ¢3,000"],
-answer: "Debit Office supplies GHÂ¢3,000; Credit Accounts payable GHÂ¢3,000"
+    question: "Prepare the journal entry for the purchase of office supplies on credit for GHS3,000.",
+    options: ["", "Debit Office supplies GHS3,000; Credit Accounts payable GHS3,000",
+      "Debit Accounts payable GHS3,000; Credit Office supplies GHS3,000",
+      "Debit Office supplies GHS3,000; Credit Cash GHS3,000"],
+answer: "Debit Office supplies GHS3,000; Credit Accounts payable GHS3,000"
   },
   {
-    question: "Calculate the profit margin percentage if net profit is GHÂ¢25,000 and sales revenue is GHÂ¢100,000.",
+    question: "Calculate the profit margin percentage if net profit is GHS25,000 and sales revenue is GHS100,000.",
     options: ["", "25%", "20%", "30%", "15%"],
 answer: "25%"
   },
   {
     question: "What does the term 'capital' refer to in accounting?",
-    options: ["", "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment in the business",
+    options: ["", "Owner's investment in the business",
       "Business debts",
       "Business expenses"],
-answer: "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment in the business"
+answer: "Owner's investment in the business"
   },
   {
-    question: "Calculate the amount of bad debt provision if debtors amount to GHÂ¢10,000 and the provision rate is 3%.",
-    options: ["", "GHÂ¢300", "GHÂ¢3,000", "GHÂ¢30", "GHÂ¢100"],
-answer: "GHÂ¢300"
+    question: "Calculate the amount of bad debt provision if debtors amount to GHS10,000 and the provision rate is 3%.",
+    options: ["", "GHS300", "GHS3,000", "GHS30", "GHS100"],
+answer: "GHS300"
   },
   {
     question: "What is the main function of a ledger in accounting?",
@@ -2409,9 +2409,9 @@ answer: "GHÂ¢300"
 answer: "To summarize and classify transactions"
   },
   {
-    question: "Calculate the total expenses given: Rent GHÂ¢8,000; Salaries GHÂ¢15,000; Utilities GHÂ¢4,000; Depreciation GHÂ¢3,000.",
-    options: ["", "GHÂ¢30,000", "GHÂ¢25,000", "GHÂ¢26,000", "GHÂ¢29,000"],
-answer: "GHÂ¢30,000"
+    question: "Calculate the total expenses given: Rent GHS8,000; Salaries GHS15,000; Utilities GHS4,000; Depreciation GHS3,000.",
+    options: ["", "GHS30,000", "GHS25,000", "GHS26,000", "GHS29,000"],
+answer: "GHS30,000"
   },
   {
     question: "Explain the meaning of 'double entry system' in accounting.",
@@ -2426,19 +2426,19 @@ answer: "Every transaction affects two accounts with equal debit and credit"
 answer: "Contra asset account"
   },
   {
-    question: "Calculate the value of stock at the end of the period using FIFO if the following purchases were made: 100 units at GHÂ¢5, 200 units at GHÂ¢6, and 150 units sold.",
-    options: ["", "GHÂ¢800", "GHÂ¢750", "GHÂ¢900", "GHÂ¢850"],
-answer: "GHÂ¢800"
+    question: "Calculate the value of stock at the end of the period using FIFO if the following purchases were made: 100 units at GHS5, 200 units at GHS6, and 150 units sold.",
+    options: ["", "GHS800", "GHS750", "GHS900", "GHS850"],
+answer: "GHS800"
   },
   {
-    question: "Prepare a bank reconciliation statement showing a cash book balance of GHÂ¢15,000, outstanding checks of GHÂ¢1,200, and deposits in transit of GHÂ¢800.",
-    options: ["", "Adjusted bank balance is GHÂ¢14,600",
-      "Adjusted bank balance is GHÂ¢16,000",
-      "Adjusted bank balance is GHÂ¢15,800"],
-answer: "Adjusted bank balance is GHÂ¢14,600"
+    question: "Prepare a bank reconciliation statement showing a cash book balance of GHS15,000, outstanding checks of GHS1,200, and deposits in transit of GHS800.",
+    options: ["", "Adjusted bank balance is GHS14,600",
+      "Adjusted bank balance is GHS16,000",
+      "Adjusted bank balance is GHS15,800"],
+answer: "Adjusted bank balance is GHS14,600"
   },
   {
-    question: "Calculate the return on capital employed (ROCE) if net profit is GHÂ¢40,000 and capital employed is GHÂ¢200,000.",
+    question: "Calculate the return on capital employed (ROCE) if net profit is GHS40,000 and capital employed is GHS200,000.",
     options: ["", "20%", "25%", "15%", "30%"],
 answer: "20%"
   },
@@ -2450,16 +2450,16 @@ answer: "20%"
 answer: "To temporarily hold doubtful or unclear transactions"
   },
   {
-    question: "Prepare the journal entry to correct an error of GHÂ¢500 overstatement of sales revenue.",
-    options: ["", "Debit Sales GHÂ¢500; Credit Suspense account GHÂ¢500",
-      "Debit Suspense account GHÂ¢500; Credit Sales GHÂ¢500",
-      "Debit Sales GHÂ¢500; Credit Purchases GHÂ¢500"],
-answer: "Debit Sales GHÂ¢500; Credit Suspense account GHÂ¢500"
+    question: "Prepare the journal entry to correct an error of GHS500 overstatement of sales revenue.",
+    options: ["", "Debit Sales GHS500; Credit Suspense account GHS500",
+      "Debit Suspense account GHS500; Credit Sales GHS500",
+      "Debit Sales GHS500; Credit Purchases GHS500"],
+answer: "Debit Sales GHS500; Credit Suspense account GHS500"
   },
   {
-    question: "Calculate the accruals for utilities if the expense incurred during the period is GHÂ¢1,500 but only GHÂ¢1,200 was paid.",
-    options: ["", "GHÂ¢300", "GHÂ¢1,500", "GHÂ¢1,200", "GHÂ¢0"],
-answer: "GHÂ¢300"
+    question: "Calculate the accruals for utilities if the expense incurred during the period is GHS1,500 but only GHS1,200 was paid.",
+    options: ["", "GHS300", "GHS1,500", "GHS1,200", "GHS0"],
+answer: "GHS300"
   },
   {
     question: "What is the difference between capital and revenue expenditure?",
@@ -2469,21 +2469,21 @@ answer: "GHÂ¢300"
 answer: "Capital expenditure is for assets; revenue expenditure is for running costs"
   },
   {
-    question: "Calculate the capital employed if total assets are GHÂ¢500,000 and current liabilities are GHÂ¢120,000.",
-    options: ["", "GHÂ¢380,000", "GHÂ¢620,000", "GHÂ¢500,000", "GHÂ¢120,000"],
-answer: "GHÂ¢380,000"
+    question: "Calculate the capital employed if total assets are GHS500,000 and current liabilities are GHS120,000.",
+    options: ["", "GHS380,000", "GHS620,000", "GHS500,000", "GHS120,000"],
+answer: "GHS380,000"
   },
   {
-    question: "Prepare the journal entry for the payment of a creditor GHÂ¢7,000 by cheque.",
-    options: ["", "Debit Accounts payable GHÂ¢7,000; Credit Bank GHÂ¢7,000",
-      "Debit Bank GHÂ¢7,000; Credit Accounts payable GHÂ¢7,000",
-      "Debit Cash GHÂ¢7,000; Credit Accounts payable GHÂ¢7,000"],
-answer: "Debit Accounts payable GHÂ¢7,000; Credit Bank GHÂ¢7,000"
+    question: "Prepare the journal entry for the payment of a creditor GHS7,000 by cheque.",
+    options: ["", "Debit Accounts payable GHS7,000; Credit Bank GHS7,000",
+      "Debit Bank GHS7,000; Credit Accounts payable GHS7,000",
+      "Debit Cash GHS7,000; Credit Accounts payable GHS7,000"],
+answer: "Debit Accounts payable GHS7,000; Credit Bank GHS7,000"
   },
   {
-    question: "Calculate the net assets if total assets are GHÂ¢350,000 and total liabilities GHÂ¢150,000.",
-    options: ["", "GHÂ¢200,000", "GHÂ¢500,000", "GHÂ¢350,000", "GHÂ¢150,000"],
-answer: "GHÂ¢200,000"
+    question: "Calculate the net assets if total assets are GHS350,000 and total liabilities GHS150,000.",
+    options: ["", "GHS200,000", "GHS500,000", "GHS350,000", "GHS150,000"],
+answer: "GHS200,000"
   },
   {
     question: "What is the normal balance of a liability account?",
@@ -2493,9 +2493,9 @@ answer: "GHÂ¢200,000"
 answer: "Credit"
   },
   {
-    question: "Calculate the cost of goods manufactured if raw materials used are GHÂ¢30,000, direct labor GHÂ¢20,000, and manufacturing overhead GHÂ¢10,000.",
-    options: ["", "GHÂ¢60,000", "GHÂ¢50,000", "GHÂ¢40,000", "GHÂ¢70,000"],
-answer: "GHÂ¢60,000"
+    question: "Calculate the cost of goods manufactured if raw materials used are GHS30,000, direct labor GHS20,000, and manufacturing overhead GHS10,000.",
+    options: ["", "GHS60,000", "GHS50,000", "GHS40,000", "GHS70,000"],
+answer: "GHS60,000"
   },
   {
     question: "Define the term 'fixed assets'.",
@@ -2505,9 +2505,9 @@ answer: "GHÂ¢60,000"
 answer: "Assets used for long-term business operations"
   },
   {
-    question: "Calculate the working capital if current assets are GHÂ¢80,000 and current liabilities are GHÂ¢50,000.",
-    options: ["", "GHÂ¢30,000", "GHÂ¢130,000", "GHÂ¢50,000", "GHÂ¢80,000"],
-answer: "GHÂ¢30,000"
+    question: "Calculate the working capital if current assets are GHS80,000 and current liabilities are GHS50,000.",
+    options: ["", "GHS30,000", "GHS130,000", "GHS50,000", "GHS80,000"],
+answer: "GHS30,000"
   },
   {
     question: "What is the effect on the accounting equation when equipment is purchased for cash?",
@@ -2524,7 +2524,7 @@ answer: "Assets increase and decrease by the same amount"
 answer: "Expenses should be matched with the revenue they helped generate"
   },
   {
-    question: "Calculate the inventory turnover ratio if cost of goods sold is GHÂ¢180,000 and average inventory is GHÂ¢30,000.",
+    question: "Calculate the inventory turnover ratio if cost of goods sold is GHS180,000 and average inventory is GHS30,000.",
     options: ["", "6 times", "5 times", "4 times", "3 times"],
 answer: "6 times"
   },
@@ -2536,16 +2536,16 @@ answer: "6 times"
 answer: "A transaction involving both debit and credit in cash and bank accounts"
   },
   {
-    question: "Calculate the depreciation using reducing balance method if the cost is GHÂ¢40,000, rate 10%, and accumulated depreciation is GHÂ¢5,000.",
-    options: ["", "GHÂ¢3,500", "GHÂ¢4,000", "GHÂ¢3,000", "GHÂ¢3,000"],
-answer: "GHÂ¢3,500"
+    question: "Calculate the depreciation using reducing balance method if the cost is GHS40,000, rate 10%, and accumulated depreciation is GHS5,000.",
+    options: ["", "GHS3,500", "GHS4,000", "GHS3,000", "GHS3,000"],
+answer: "GHS3,500"
   },
   {
-    question: "Prepare the journal entry to record accrued expenses of GHÂ¢2,000.",
-    options: ["", "Debit Expense GHÂ¢2,000; Credit Accrued expenses GHÂ¢2,000",
-      "Debit Accrued expenses GHÂ¢2,000; Credit Expense GHÂ¢2,000",
-      "Debit Cash GHÂ¢2,000; Credit Expense GHÂ¢2,000"],
-answer: "Debit Expense GHÂ¢2,000; Credit Accrued expenses GHÂ¢2,000"
+    question: "Prepare the journal entry to record accrued expenses of GHS2,000.",
+    options: ["", "Debit Expense GHS2,000; Credit Accrued expenses GHS2,000",
+      "Debit Accrued expenses GHS2,000; Credit Expense GHS2,000",
+      "Debit Cash GHS2,000; Credit Expense GHS2,000"],
+answer: "Debit Expense GHS2,000; Credit Accrued expenses GHS2,000"
   },
   {
     question: "What is the normal balance side of an expense account?",
@@ -2553,9 +2553,9 @@ answer: "Debit Expense GHÂ¢2,000; Credit Accrued expenses GHÂ¢2,000"
 answer: "Debit"
   },
   {
-    question: "Calculate the net sales if gross sales are GHÂ¢120,000 and sales returns are GHÂ¢10,000.",
-    options: ["", "GHÂ¢110,000", "GHÂ¢130,000", "GHÂ¢120,000", "GHÂ¢100,000"],
-answer: "GHÂ¢110,000"
+    question: "Calculate the net sales if gross sales are GHS120,000 and sales returns are GHS10,000.",
+    options: ["", "GHS110,000", "GHS130,000", "GHS120,000", "GHS100,000"],
+answer: "GHS110,000"
   },
   {
     question: "What does the accounting equation represent?",
@@ -2565,9 +2565,9 @@ answer: "GHÂ¢110,000"
 answer: "Assets = Liabilities + Capital"
   },
   {
-    question: "Calculate the capital employed if total assets are GHÂ¢250,000 and total liabilities are GHÂ¢100,000.",
-    options: ["", "GHÂ¢150,000", "GHÂ¢350,000", "GHÂ¢100,000", "GHÂ¢250,000"],
-answer: "GHÂ¢150,000"
+    question: "Calculate the capital employed if total assets are GHS250,000 and total liabilities are GHS100,000.",
+    options: ["", "GHS150,000", "GHS350,000", "GHS100,000", "GHS250,000"],
+answer: "GHS150,000"
   },
   {
     question: "Which book is used to record all cash receipts and payments?",
@@ -2575,11 +2575,11 @@ answer: "GHÂ¢150,000"
 answer: "Cash Book"
   },
   {
-    question: "If purchases amount to GHÂ¢50,000, sales GHÂ¢80,000, and closing stock GHÂ¢10,000, calculate cost of goods sold.",
-    options: ["", "GHÂ¢40,000",
-      "GHÂ¢70,000",
-      "GHÂ¢90,000"],
-answer: "GHÂ¢40,000"
+    question: "If purchases amount to GHS50,000, sales GHS80,000, and closing stock GHS10,000, calculate cost of goods sold.",
+    options: ["", "GHS40,000",
+      "GHS70,000",
+      "GHS90,000"],
+answer: "GHS40,000"
   },
   {
     question: "What is the effect on the accounting equation when the owner withdraws cash for personal use?",
@@ -2596,11 +2596,11 @@ answer: "Assets and Capital decrease"
 answer: "Allocation of cost of a fixed asset over its useful life"
   },
   {
-    question: "Calculate net profit if total revenue is GHÂ¢100,000 and total expenses are GHÂ¢60,000.",
-    options: ["", "GHÂ¢40,000",
-      "GHÂ¢160,000",
-      "GHÂ¢60,000"],
-answer: "GHÂ¢40,000"
+    question: "Calculate net profit if total revenue is GHS100,000 and total expenses are GHS60,000.",
+    options: ["", "GHS40,000",
+      "GHS160,000",
+      "GHS60,000"],
+answer: "GHS40,000"
   },
   {
     question: "What is the purpose of a trial balance?",
@@ -2610,18 +2610,18 @@ answer: "GHÂ¢40,000"
 answer: "To check the equality of debit and credit balances"
   },
   {
-    question: "Prepare the journal entry for the purchase of inventory on credit for GHÂ¢5,000.",
-    options: ["", "Debit Inventory GHÂ¢5,000; Credit Accounts Payable GHÂ¢5,000",
-      "Debit Accounts Payable GHÂ¢5,000; Credit Inventory GHÂ¢5,000",
-      "Debit Cash GHÂ¢5,000; Credit Inventory GHÂ¢5,000"],
-answer: "Debit Inventory GHÂ¢5,000; Credit Accounts Payable GHÂ¢5,000"
+    question: "Prepare the journal entry for the purchase of inventory on credit for GHS5,000.",
+    options: ["", "Debit Inventory GHS5,000; Credit Accounts Payable GHS5,000",
+      "Debit Accounts Payable GHS5,000; Credit Inventory GHS5,000",
+      "Debit Cash GHS5,000; Credit Inventory GHS5,000"],
+answer: "Debit Inventory GHS5,000; Credit Accounts Payable GHS5,000"
   },
   {
-    question: "Calculate closing capital if opening capital is GHÂ¢60,000, net profit GHÂ¢15,000, and drawings GHÂ¢5,000.",
-    options: ["", "GHÂ¢70,000",
-      "GHÂ¢80,000",
-      "GHÂ¢65,000"],
-answer: "GHÂ¢70,000"
+    question: "Calculate closing capital if opening capital is GHS60,000, net profit GHS15,000, and drawings GHS5,000.",
+    options: ["", "GHS70,000",
+      "GHS80,000",
+      "GHS65,000"],
+answer: "GHS70,000"
   },
   {
     question: "Which financial statement shows the financial position of a business at a given date?",
@@ -2645,11 +2645,11 @@ answer: "Intangible asset representing business reputation"
 answer: "Transactions are recorded when they occur, not when cash is received or paid"
   },
   {
-    question: "Calculate gross profit if sales are GHÂ¢200,000 and cost of goods sold is GHÂ¢120,000.",
-    options: ["", "GHÂ¢80,000",
-      "GHÂ¢320,000",
-      "GHÂ¢120,000"],
-answer: "GHÂ¢80,000"
+    question: "Calculate gross profit if sales are GHS200,000 and cost of goods sold is GHS120,000.",
+    options: ["", "GHS80,000",
+      "GHS320,000",
+      "GHS120,000"],
+answer: "GHS80,000"
   },
   {
     question: "Which of the following is NOT a current asset?",
@@ -2659,17 +2659,17 @@ answer: "GHÂ¢80,000"
 answer: "Machinery"
   },
   {
-    question: "Prepare the journal entry to record depreciation of GHÂ¢3,000 on equipment.",
-    options: ["", "Debit Depreciation Expense GHÂ¢3,000; Credit Accumulated Depreciation GHÂ¢3,000",
-      "Debit Equipment GHÂ¢3,000; Credit Depreciation Expense GHÂ¢3,000",
-      "Debit Accumulated Depreciation GHÂ¢3,000; Credit Equipment GHÂ¢3,000"],
-answer: "Debit Depreciation Expense GHÂ¢3,000; Credit Accumulated Depreciation GHÂ¢3,000"
+    question: "Prepare the journal entry to record depreciation of GHS3,000 on equipment.",
+    options: ["", "Debit Depreciation Expense GHS3,000; Credit Accumulated Depreciation GHS3,000",
+      "Debit Equipment GHS3,000; Credit Depreciation Expense GHS3,000",
+      "Debit Accumulated Depreciation GHS3,000; Credit Equipment GHS3,000"],
+answer: "Debit Depreciation Expense GHS3,000; Credit Accumulated Depreciation GHS3,000"
   },
   {
     question: "Define the term 'liabilities'.",
     options: ["", "Obligations or debts owed by the business",
       "Resources owned by the business",
-      "OwnerÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s investment"],
+      "Owner's investment"],
 answer: "Obligations or debts owed by the business"
   },
   {
@@ -2680,11 +2680,11 @@ answer: "Obligations or debts owed by the business"
 answer: "Small daily expenses"
   },
   {
-    question: "Calculate the bank reconciliation if cash book balance is GHÂ¢10,000 and outstanding checks are GHÂ¢1,500.",
-    options: ["", "GHÂ¢8,500",
-      "GHÂ¢11,500",
-      "GHÂ¢10,000"],
-answer: "GHÂ¢8,500"
+    question: "Calculate the bank reconciliation if cash book balance is GHS10,000 and outstanding checks are GHS1,500.",
+    options: ["", "GHS8,500",
+      "GHS11,500",
+      "GHS10,000"],
+answer: "GHS8,500"
   },
   {
     question: "What is the primary purpose of an income statement?",
@@ -2694,11 +2694,11 @@ answer: "GHÂ¢8,500"
 answer: "To show profit or loss over a period"
   },
   {
-    question: "Prepare the ledger entry for credit sales of GHÂ¢15,000.",
-    options: ["", "Debit Accounts Receivable GHÂ¢15,000; Credit Sales GHÂ¢15,000",
-      "Debit Sales GHÂ¢15,000; Credit Accounts Receivable GHÂ¢15,000",
-      "Debit Cash GHÂ¢15,000; Credit Sales GHÂ¢15,000"],
-answer: "Debit Accounts Receivable GHÂ¢15,000; Credit Sales GHÂ¢15,000"
+    question: "Prepare the ledger entry for credit sales of GHS15,000.",
+    options: ["", "Debit Accounts Receivable GHS15,000; Credit Sales GHS15,000",
+      "Debit Sales GHS15,000; Credit Accounts Receivable GHS15,000",
+      "Debit Cash GHS15,000; Credit Sales GHS15,000"],
+answer: "Debit Accounts Receivable GHS15,000; Credit Sales GHS15,000"
   },
   {
     question: "Define the term 'capital expenditure'.",
@@ -2708,7 +2708,7 @@ answer: "Debit Accounts Receivable GHÂ¢15,000; Credit Sales GHÂ¢15,000"
 answer: "Expenditure on acquiring or improving fixed assets"
   },
   {
-    question: "Calculate gross profit margin if gross profit is GHÂ¢50,000 and sales are GHÂ¢250,000.",
+    question: "Calculate gross profit margin if gross profit is GHS50,000 and sales are GHS250,000.",
     options: ["", "20%",
       "25%",
       "15%"],
@@ -2729,7 +2729,7 @@ answer: "Assets increase and income increases"
 answer: "Contra Capital Account"
   },
   {
-    question: "Calculate the debtors turnover period if credit sales are GHÂ¢180,000 and average debtors GHÂ¢15,000.",
+    question: "Calculate the debtors turnover period if credit sales are GHS180,000 and average debtors GHS15,000.",
     options: ["", "30 days",
       "45 days",
       "60 days"],
@@ -2750,11 +2750,11 @@ answer: "Estimated amount of receivables unlikely to be collected"
 answer: "Credit"
   },
   {
-    question: "Calculate net assets if total assets are GHÂ¢500,000 and total liabilities GHÂ¢200,000.",
-    options: ["", "GHÂ¢300,000",
-      "GHÂ¢700,000",
-      "GHÂ¢200,000"],
-answer: "GHÂ¢300,000"
+    question: "Calculate net assets if total assets are GHS500,000 and total liabilities GHS200,000.",
+    options: ["", "GHS300,000",
+      "GHS700,000",
+      "GHS200,000"],
+answer: "GHS300,000"
   },
   {
     question: "What is a suspense account used for?",
@@ -2778,11 +2778,11 @@ answer: "Every transaction affects at least two accounts with equal debit and cr
 answer: "To update accounts before preparing financial statements"
 },
 {
-  question: "Calculate the VAT payable if sales are GHÂ¢120,000 and VAT rate is 15%.",
-  options: ["", "GHÂ¢18,000",
-    "GHÂ¢8,000",
-    "GHÂ¢15,000"],
-answer: "GHÂ¢18,000"
+  question: "Calculate the VAT payable if sales are GHS120,000 and VAT rate is 15%.",
+  options: ["", "GHS18,000",
+    "GHS8,000",
+    "GHS15,000"],
+answer: "GHS18,000"
 },
 {
   question: "What is the effect of a credit purchase on the accounting equation?",
@@ -2799,11 +2799,11 @@ answer: "Assets and Liabilities increase"
 answer: "Cash"
 },
 {
-  question: "Calculate depreciation using the straight-line method for an asset costing GHÂ¢50,000 with a useful life of 10 years and residual value of GHÂ¢5,000.",
-  options: ["", "GHÂ¢4,500 per year",
-    "GHÂ¢5,000 per year",
-    "GHÂ¢45,000 per year"],
-answer: "GHÂ¢4,500 per year"
+  question: "Calculate depreciation using the straight-line method for an asset costing GHS50,000 with a useful life of 10 years and residual value of GHS5,000.",
+  options: ["", "GHS4,500 per year",
+    "GHS5,000 per year",
+    "GHS45,000 per year"],
+answer: "GHS4,500 per year"
 },
 {
   question: "Explain the term 'contra entry'.",
@@ -2813,11 +2813,11 @@ answer: "GHÂ¢4,500 per year"
 answer: "An entry that involves both debit and credit to cash and bank accounts"
 },
 {
-  question: "If opening stock is GHÂ¢20,000, purchases GHÂ¢80,000, and closing stock GHÂ¢25,000, calculate cost of goods sold.",
-  options: ["", "GHÂ¢75,000",
-    "GHÂ¢85,000",
-    "GHÂ¢95,000"],
-answer: "GHÂ¢75,000"
+  question: "If opening stock is GHS20,000, purchases GHS80,000, and closing stock GHS25,000, calculate cost of goods sold.",
+  options: ["", "GHS75,000",
+    "GHS85,000",
+    "GHS95,000"],
+answer: "GHS75,000"
 },
 {
   question: "What is the normal balance of the sales account?",
@@ -2842,11 +2842,11 @@ answer: "Owners need profit info; creditors need solvency info; management needs
 answer: "A statement showing debit and credit balances to check equality"
   },
   {
-    question: "Calculate the adjusted net profit if the unadjusted profit is GHÂ¢50,000 and depreciation of GHÂ¢5,000 is charged.",
-    options: ["", "GHÂ¢45,000",
-      "GHÂ¢55,000",
-      "GHÂ¢50,000"],
-answer: "GHÂ¢45,000"
+    question: "Calculate the adjusted net profit if the unadjusted profit is GHS50,000 and depreciation of GHS5,000 is charged.",
+    options: ["", "GHS45,000",
+      "GHS55,000",
+      "GHS50,000"],
+answer: "GHS45,000"
   },
   {
     question: "Which book of original entry records credit sales?",
@@ -2870,11 +2870,11 @@ answer: "Every transaction affects at least two accounts with equal debit and cr
 answer: "To record small day-to-day expenses"
   },
   {
-    question: "Calculate VAT on a sale of GHÂ¢30,000 at a rate of 12.5%.",
-    options: ["", "GHÂ¢3,750",
-      "GHÂ¢2,500",
-      "GHÂ¢4,000"],
-answer: "GHÂ¢3,750"
+    question: "Calculate VAT on a sale of GHS30,000 at a rate of 12.5%.",
+    options: ["", "GHS3,750",
+      "GHS2,500",
+      "GHS4,000"],
+answer: "GHS3,750"
   },
   {
     question: "What effect does payment of salaries have on the accounting equation?",
@@ -2898,11 +2898,11 @@ answer: "Expenses incurred but not yet paid"
 answer: "Relevance"
   },
   {
-    question: "Calculate closing capital if opening capital is GHÂ¢100,000, net profit GHÂ¢20,000, and drawings GHÂ¢15,000.",
-    options: ["", "GHÂ¢105,000",
-      "GHÂ¢135,000",
-      "GHÂ¢85,000"],
-answer: "GHÂ¢105,000"
+    question: "Calculate closing capital if opening capital is GHS100,000, net profit GHS20,000, and drawings GHS15,000.",
+    options: ["", "GHS105,000",
+      "GHS135,000",
+      "GHS85,000"],
+answer: "GHS105,000"
   },
   {
     question: "Which ledger division contains all personal accounts?",
@@ -2919,11 +2919,11 @@ answer: "Sales ledger"
 answer: "Expenditure on acquiring fixed assets"
   },
   {
-    question: "Prepare the journal entry for the purchase of inventory on credit for GHÂ¢10,000.",
-    options: ["", "Debit Inventory GHÂ¢10,000; Credit Accounts Payable GHÂ¢10,000",
-      "Debit Cash GHÂ¢10,000; Credit Inventory GHÂ¢10,000",
-      "Debit Accounts Payable GHÂ¢10,000; Credit Inventory GHÂ¢10,000"],
-answer: "Debit Inventory GHÂ¢10,000; Credit Accounts Payable GHÂ¢10,000"
+    question: "Prepare the journal entry for the purchase of inventory on credit for GHS10,000.",
+    options: ["", "Debit Inventory GHS10,000; Credit Accounts Payable GHS10,000",
+      "Debit Cash GHS10,000; Credit Inventory GHS10,000",
+      "Debit Accounts Payable GHS10,000; Credit Inventory GHS10,000"],
+answer: "Debit Inventory GHS10,000; Credit Accounts Payable GHS10,000"
   },
   {
     question: "What is meant by the term 'debtors'?",
@@ -2947,11 +2947,11 @@ answer: "Going concern concept"
 answer: "An estimated amount of receivables expected to be uncollectible"
   },
   {
-    question: "Calculate gross profit if sales are GHÂ¢150,000 and cost of goods sold is GHÂ¢100,000.",
-    options: ["", "GHÂ¢50,000",
-      "GHÂ¢250,000",
-      "GHÂ¢100,000"],
-answer: "GHÂ¢50,000"
+    question: "Calculate gross profit if sales are GHS150,000 and cost of goods sold is GHS100,000.",
+    options: ["", "GHS50,000",
+      "GHS250,000",
+      "GHS100,000"],
+answer: "GHS50,000"
   },
   {
     question: "Which financial statement shows the financial position of a business at a specific date?",
@@ -2996,11 +2996,11 @@ answer: "Expenditure incurred for the day-to-day running of the business"
 answer: "To record all cash receipts and payments"
   },
   {
-    question: "Calculate the total sales if the VAT charged is GHÂ¢7,500 and the VAT rate is 15%.",
-    options: ["", "GHÂ¢50,000",
-      "GHÂ¢55,000",
-      "GHÂ¢45,000"],
-answer: "GHÂ¢50,000"
+    question: "Calculate the total sales if the VAT charged is GHS7,500 and the VAT rate is 15%.",
+    options: ["", "GHS50,000",
+      "GHS55,000",
+      "GHS45,000"],
+answer: "GHS50,000"
   },
   {
     question: "What is the effect of an increase in accounts payable on the accounting equation?",
@@ -3017,11 +3017,11 @@ answer: "Liabilities increase and assets increase"
 answer: "Rules and guidelines for preparing financial statements"
   },
   {
-    question: "Calculate net profit if gross profit is GHÂ¢40,000 and expenses are GHÂ¢15,000.",
-    options: ["", "GHÂ¢25,000",
-      "GHÂ¢55,000",
-      "GHÂ¢40,000"],
-answer: "GHÂ¢25,000"
+    question: "Calculate net profit if gross profit is GHS40,000 and expenses are GHS15,000.",
+    options: ["", "GHS25,000",
+      "GHS55,000",
+      "GHS40,000"],
+answer: "GHS25,000"
   },
   {
     question: "Which document is used as evidence for credit purchases?",
@@ -3045,19 +3045,19 @@ answer: "A book containing all accounts of the business"
 answer: "To temporarily hold unclassified or doubtful transactions"
   },
   {
-    question: "Calculate the profit or loss from single entry records if opening capital is GHÂ¢100,000, closing capital GHÂ¢120,000, and drawings GHÂ¢10,000.",
-    options: ["", "GHÂ¢30,000 profit",
-      "GHÂ¢10,000 loss",
-      "GHÂ¢20,000 profit"],
-answer: "GHÂ¢30,000 profit",
-    working: "Profit = Closing Capital + Drawings - Opening Capital = 120,000 + 10,000 - 100,000 = GHÂ¢30,000 profit"
+    question: "Calculate the profit or loss from single entry records if opening capital is GHS100,000, closing capital GHS120,000, and drawings GHS10,000.",
+    options: ["", "GHS30,000 profit",
+      "GHS10,000 loss",
+      "GHS20,000 profit"],
+answer: "GHS30,000 profit",
+    working: "Profit = Closing Capital + Drawings - Opening Capital = 120,000 + 10,000 - 100,000 = GHS30,000 profit"
   },
   {
-    question: "Prepare a journal entry to record depreciation of GHÂ¢4,000 on equipment.",
-    options: ["", "Debit Depreciation Expense GHÂ¢4,000; Credit Accumulated Depreciation GHÂ¢4,000",
-      "Debit Equipment GHÂ¢4,000; Credit Cash GHÂ¢4,000",
-      "Debit Accumulated Depreciation GHÂ¢4,000; Credit Equipment GHÂ¢4,000"],
-answer: "Debit Depreciation Expense GHÂ¢4,000; Credit Accumulated Depreciation GHÂ¢4,000"
+    question: "Prepare a journal entry to record depreciation of GHS4,000 on equipment.",
+    options: ["", "Debit Depreciation Expense GHS4,000; Credit Accumulated Depreciation GHS4,000",
+      "Debit Equipment GHS4,000; Credit Cash GHS4,000",
+      "Debit Accumulated Depreciation GHS4,000; Credit Equipment GHS4,000"],
+answer: "Debit Depreciation Expense GHS4,000; Credit Accumulated Depreciation GHS4,000"
   },
   {
     question: "Define 'bad debts'.",
@@ -3067,11 +3067,11 @@ answer: "Debit Depreciation Expense GHÂ¢4,000; Credit Accumulated Depreciation
 answer: "Debts that cannot be collected"
   },
   {
-    question: "A company has sales of GHÂ¢200,000, returns inwards GHÂ¢10,000, purchases GHÂ¢120,000, and returns outwards GHÂ¢5,000. Calculate net sales and net purchases.",
-    options: ["", "Net sales = GHÂ¢190,000; Net purchases = GHÂ¢115,000",
-      "Net sales = GHÂ¢210,000; Net purchases = GHÂ¢125,000",
-      "Net sales = GHÂ¢200,000; Net purchases = GHÂ¢120,000"],
-answer: "Net sales = GHÂ¢190,000; Net purchases = GHÂ¢115,000",
+    question: "A company has sales of GHS200,000, returns inwards GHS10,000, purchases GHS120,000, and returns outwards GHS5,000. Calculate net sales and net purchases.",
+    options: ["", "Net sales = GHS190,000; Net purchases = GHS115,000",
+      "Net sales = GHS210,000; Net purchases = GHS125,000",
+      "Net sales = GHS200,000; Net purchases = GHS120,000"],
+answer: "Net sales = GHS190,000; Net purchases = GHS115,000",
     working: "Net sales = 200,000 - 10,000 = 190,000; Net purchases = 120,000 - 5,000 = 115,000"
   },
   {
@@ -3089,12 +3089,12 @@ answer: "It is deducted from debtors in the balance sheet"
 answer: "To reconcile differences between bank statement and cash book balances"
   },
   {
-    question: "Calculate the adjusted cash book balance if the unadjusted cash book balance is GHÂ¢12,000, bank charges of GHÂ¢200 have not been recorded, and a direct deposit of GHÂ¢500 was not recorded.",
-    options: ["", "GHÂ¢12,300",
-      "GHÂ¢11,700",
-      "GHÂ¢12,500"],
-answer: "GHÂ¢12,300",
-    working: "Adjusted balance = 12,000 - 200 + 500 = GHÂ¢12,300"
+    question: "Calculate the adjusted cash book balance if the unadjusted cash book balance is GHS12,000, bank charges of GHS200 have not been recorded, and a direct deposit of GHS500 was not recorded.",
+    options: ["", "GHS12,300",
+      "GHS11,700",
+      "GHS12,500"],
+answer: "GHS12,300",
+    working: "Adjusted balance = 12,000 - 200 + 500 = GHS12,300"
   },
   {
     question: "What is a control account?",
@@ -3104,11 +3104,11 @@ answer: "GHÂ¢12,300",
 answer: "A summary account in the general ledger for a group of subsidiary accounts"
   },
   {
-    question: "Prepare a sales ledger control account balance given total sales GHÂ¢150,000, receipts from debtors GHÂ¢130,000, and discounts allowed GHÂ¢5,000.",
-    options: ["", "Closing balance GHÂ¢15,000 debit",
-      "Closing balance GHÂ¢25,000 debit",
-      "Closing balance GHÂ¢20,000 debit"],
-answer: "Closing balance GHÂ¢15,000 debit",
+    question: "Prepare a sales ledger control account balance given total sales GHS150,000, receipts from debtors GHS130,000, and discounts allowed GHS5,000.",
+    options: ["", "Closing balance GHS15,000 debit",
+      "Closing balance GHS25,000 debit",
+      "Closing balance GHS20,000 debit"],
+answer: "Closing balance GHS15,000 debit",
     working: "Opening + Sales - Receipts - Discounts = Closing balance; assuming opening nil: 150,000 - 130,000 - 5,000 = 15,000 debit balance"
   },
   {
@@ -3119,12 +3119,12 @@ answer: "Closing balance GHÂ¢15,000 debit",
 answer: "Accounting records that are partial and not fully maintained"
   },
   {
-    question: "How do you compute profit from incomplete records if opening capital is GHÂ¢80,000, closing capital GHÂ¢100,000, and drawings GHÂ¢15,000?",
-    options: ["", "Profit = Closing capital + Drawings - Opening capital = GHÂ¢35,000",
-      "Profit = Opening capital + Drawings - Closing capital = GHÂ¢5,000",
-      "Profit = Closing capital - Drawings - Opening capital = GHÂ¢5,000"],
-answer: "Profit = Closing capital + Drawings - Opening capital = GHÂ¢35,000",
-    working: "Profit = 100,000 + 15,000 - 80,000 = GHÂ¢35,000"
+    question: "How do you compute profit from incomplete records if opening capital is GHS80,000, closing capital GHS100,000, and drawings GHS15,000?",
+    options: ["", "Profit = Closing capital + Drawings - Opening capital = GHS35,000",
+      "Profit = Opening capital + Drawings - Closing capital = GHS5,000",
+      "Profit = Closing capital - Drawings - Opening capital = GHS5,000"],
+answer: "Profit = Closing capital + Drawings - Opening capital = GHS35,000",
+    working: "Profit = 100,000 + 15,000 - 80,000 = GHS35,000"
   },
   {
     question: "Explain the nature of the accumulated fund in clubs and societies.",
@@ -3134,12 +3134,12 @@ answer: "Profit = Closing capital + Drawings - Opening capital = GHÂ¢35,000",
 answer: "It is the net assets belonging to the club after liabilities"
   },
   {
-    question: "Prepare an income and expenditure account given subscription income GHÂ¢25,000, donations GHÂ¢5,000, expenses GHÂ¢20,000, and depreciation GHÂ¢2,000.",
-    options: ["", "Surplus of GHÂ¢8,000",
-      "Deficit of GHÂ¢8,000",
-      "Surplus of GHÂ¢2,000"],
-answer: "Surplus of GHÂ¢8,000",
-    working: "Income = 25,000 + 5,000 = 30,000; Expenses = 20,000 + 2,000 = 22,000; Surplus = 30,000 - 22,000 = GHÂ¢8,000"
+    question: "Prepare an income and expenditure account given subscription income GHS25,000, donations GHS5,000, expenses GHS20,000, and depreciation GHS2,000.",
+    options: ["", "Surplus of GHS8,000",
+      "Deficit of GHS8,000",
+      "Surplus of GHS2,000"],
+answer: "Surplus of GHS8,000",
+    working: "Income = 25,000 + 5,000 = 30,000; Expenses = 20,000 + 2,000 = 22,000; Surplus = 30,000 - 22,000 = GHS8,000"
   },
   {
     question: "What is the main purpose of manufacturing accounts?",
@@ -3149,12 +3149,12 @@ answer: "Surplus of GHÂ¢8,000",
 answer: "To ascertain the cost of production"
   },
   {
-    question: "Calculate the prime cost if direct materials are GHÂ¢50,000, direct labor GHÂ¢30,000, and factory overheads GHÂ¢20,000.",
-    options: ["", "GHÂ¢80,000",
-      "GHÂ¢100,000",
-      "GHÂ¢70,000"],
-answer: "GHÂ¢80,000",
-    working: "Prime cost = Direct materials + Direct labor = 50,000 + 30,000 = GHÂ¢80,000"
+    question: "Calculate the prime cost if direct materials are GHS50,000, direct labor GHS30,000, and factory overheads GHS20,000.",
+    options: ["", "GHS80,000",
+      "GHS100,000",
+      "GHS70,000"],
+answer: "GHS80,000",
+    working: "Prime cost = Direct materials + Direct labor = 50,000 + 30,000 = GHS80,000"
   },
   {
     question: "Explain the treatment of unrealized profit in inter-branch transactions.",
@@ -3178,26 +3178,26 @@ answer: "Capital expenditure is for assets, recurrent is for day-to-day running"
 answer: "Faster data processing and error reduction"
   },
   {
-    question: "Calculate the net assets of a club with total assets GHÂ¢100,000 and total liabilities GHÂ¢30,000.",
-    options: ["", "GHÂ¢70,000",
-      "GHÂ¢130,000",
-      "GHÂ¢30,000"],
-answer: "GHÂ¢70,000",
-    working: "Net assets = Total assets - Total liabilities = 100,000 - 30,000 = GHÂ¢70,000"
+    question: "Calculate the net assets of a club with total assets GHS100,000 and total liabilities GHS30,000.",
+    options: ["", "GHS70,000",
+      "GHS130,000",
+      "GHS30,000"],
+answer: "GHS70,000",
+    working: "Net assets = Total assets - Total liabilities = 100,000 - 30,000 = GHS70,000"
   },
   {
-    question: "What is the effect on capital if the owner withdraws GHÂ¢5,000 for personal use?",
-    options: ["", "Capital decreases by GHÂ¢5,000",
-      "Capital increases by GHÂ¢5,000",
+    question: "What is the effect on capital if the owner withdraws GHS5,000 for personal use?",
+    options: ["", "Capital decreases by GHS5,000",
+      "Capital increases by GHS5,000",
       "No effect"],
-answer: "Capital decreases by GHÂ¢5,000"
+answer: "Capital decreases by GHS5,000"
   },
   {
-    question: "What is the effect on capital if the owner withdraws GHÂ¢5,000 for personal use?",
-    options: ["", "Capital decreases by GHÂ¢5,000",
-      "Capital increases by GHÂ¢5,000",
+    question: "What is the effect on capital if the owner withdraws GHS5,000 for personal use?",
+    options: ["", "Capital decreases by GHS5,000",
+      "Capital increases by GHS5,000",
       "No effect"],
-answer: "Capital decreases by GHÂ¢5,000"
+answer: "Capital decreases by GHS5,000"
   },
   {
     question: "What is the purpose of suspense accounts in accounting?",
@@ -3214,11 +3214,11 @@ answer: "To temporarily hold transactions when there is uncertainty"
 answer: "Payment voucher"
   },
   {
-    question: "Calculate the closing stock using the formula: Opening Stock + Purchases - Cost of Sales = Closing Stock. Given: Opening Stock GHÂ¢10,000, Purchases GHÂ¢50,000, Cost of Sales GHÂ¢45,000.",
-    options: ["", "GHÂ¢15,000",
-      "GHÂ¢5,000",
-      "GHÂ¢55,000"],
-answer: "GHÂ¢15,000"
+    question: "Calculate the closing stock using the formula: Opening Stock + Purchases - Cost of Sales = Closing Stock. Given: Opening Stock GHS10,000, Purchases GHS50,000, Cost of Sales GHS45,000.",
+    options: ["", "GHS15,000",
+      "GHS5,000",
+      "GHS55,000"],
+answer: "GHS15,000"
   },
   {
     question: "What is meant by 'matching concept' in accounting?",
@@ -3242,11 +3242,11 @@ answer: "Investors, creditors, management"
 answer: "To allocate the cost of a fixed asset over its useful life"
   },
   {
-    question: "Calculate the net realizable value of stock if cost is GHÂ¢20,000 and net realizable value is GHÂ¢18,000.",
-    options: ["", "GHÂ¢18,000",
-      "GHÂ¢20,000",
-      "GHÂ¢38,000"],
-answer: "GHÂ¢18,000"
+    question: "Calculate the net realizable value of stock if cost is GHS20,000 and net realizable value is GHS18,000.",
+    options: ["", "GHS18,000",
+      "GHS20,000",
+      "GHS38,000"],
+answer: "GHS18,000"
   },
   {
     question: "What does the term 'liquidity' refer to in accounting?",
@@ -3275,4 +3275,3 @@ answer: "Income statement (profit and loss account)"
 ],
 ];
 export default accountingQuestions;
-

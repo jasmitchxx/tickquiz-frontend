@@ -20,14 +20,14 @@ const costAccountingQuestions = [
     answer: "Complexity"
   },
   {
-    question: "If a company incurs the following costs: Direct Material = $4,000; Direct Labour = $2,500; Direct Expenses = $500. What is the **Prime Cost**?",
+    question: "If a company incurs the following costs: Direct Material = GHS4,000; Direct Labour = GHS2,500; Direct Expenses = GHS500. What is the **Prime Cost**?",
     options: [
-      "$7,000",
-      "$6,000",
-      "$7,500",
-      "$8,000"
+      "GHS7,000",
+      "GHS6,000",
+      "GHS7,500",
+      "GHS8,000"
     ],
-    answer: "$7,000"
+    answer: "GHS7,000"
   },
   {
     question: "Which term describes the cost that changes with the level of activity?",
@@ -40,14 +40,14 @@ const costAccountingQuestions = [
     answer: "Variable cost"
   },
   {
-    question: "A business incurs the following: Rent = $1,200, Depreciation = $300, Factory wages = $2,000, Indirect material = $500. What is the **total indirect cost**?",
+    question: "A business incurs the following: Rent = GHS1,200, Depreciation = GHS300, Factory wages = GHS2,000, Indirect material = GHS500. What is the **total indirect cost**?",
     options: [
-      "$2,000",
-      "$2,700",
-      "$4,000",
-      "$2,000"
+      "GHS2,000",
+      "GHS2,700",
+      "GHS4,000",
+      "GHS2,000"
     ],
-    answer: "$2,000"
+    answer: "GHS2,000"
   },
   {
     question: "Which of the following is a method of cost classification?",
@@ -70,14 +70,14 @@ const costAccountingQuestions = [
     answer: "Direct labour"
   },
   {
-    question: "If a companyâ€™s material usage is 1,500 units and each unit costs $8, what is the **material cost**?",
+    question: "If a companys material usage is 1,500 units and each unit costs GHS8, what is the **material cost**?",
     options: [
-      "$1,200",
-      "$12,000",
-      "$11,500",
-      "$10,000"
+      "GHS1,200",
+      "GHS12,000",
+      "GHS11,500",
+      "GHS10,000"
     ],
-    answer: "$12,000"
+    answer: "GHS12,000"
   },
   {
     question: "Which document is used by stores to request materials from the warehouse?",
@@ -120,14 +120,14 @@ const costAccountingQuestions = [
     answer: "ROI"
   },
   {
-    question: "Under **FIFO**, if 100 units were bought at $5 and another 150 at $6, and 180 units were issued, what is the issue value?",
+    question: "Under **FIFO**, if 100 units were bought at GHS5 and another 150 at GHS6, and 180 units were issued, what is the issue value?",
     options: [
-      "$1,000",
-      "$1,030",
-      "$1,080",
-      "$1,060"
+      "GHS1,000",
+      "GHS1,030",
+      "GHS1,080",
+      "GHS1,060"
     ],
-    answer: "$1,030"
+    answer: "GHS1,030"
   },
   {
     question: "Which of the following is a **preventive control** measure in material control?",
@@ -150,14 +150,14 @@ const costAccountingQuestions = [
     answer: "Weighted average cost per unit"
   },
   {
-    question: "If 200 units were bought at $4, 100 units at $6, and 150 units were sold, calculate issue value using **LIFO**.",
+    question: "If 200 units were bought at GHS4, 100 units at GHS6, and 150 units were sold, calculate issue value using **LIFO**.",
     options: [
-      "$750",
-      "$800",
-      "$700",
-      "$720"
+      "GHS750",
+      "GHS800",
+      "GHS700",
+      "GHS720"
     ],
-    answer: "$750"
+    answer: "GHS750"
   },
   {
     question: "Time cards are used in which of the following functions?",
@@ -170,14 +170,14 @@ const costAccountingQuestions = [
     answer: "Payroll accounting"
   },
   {
-    question: "If a worker earns $15/hour and worked 45 hours in a week with overtime rate at 1.5x after 40 hours, what is the **gross pay**?",
+    question: "If a worker earns GHS15/hour and worked 45 hours in a week with overtime rate at 1.5x after 40 hours, what is the **gross pay**?",
     options: [
-      "$675",
-      "$712.50",
-      "$682.50",
-      "$690"
+      "GHS675",
+      "GHS712.50",
+      "GHS682.50",
+      "GHS690"
     ],
-    answer: "$712.50"
+    answer: "GHS712.50"
   },
   {
     question: "Which document records the attendance time of employees?",
@@ -210,14 +210,14 @@ const costAccountingQuestions = [
     answer: "Stock option"
   },
   {
-    question: "Calculate total earnings if time rate is $10/hr and a worker worked 38 hours.",
+    question: "Calculate total earnings if time rate is GHS10/hr and a worker worked 38 hours.",
     options: [
-      "$380",
-      "$300",
-      "$400",
-      "$350"
+      "GHS380",
+      "GHS300",
+      "GHS400",
+      "GHS350"
     ],
-    answer: "$380"
+    answer: "GHS380"
   },
   {
     question: "Which of the following is used in allocating indirect labour cost?",
@@ -230,14 +230,14 @@ const costAccountingQuestions = [
     answer: "Absorption rate"
   },
   {
-    question: "If total overheads = $12,000 and total machine hours = 2,000, what is the **overhead absorption rate per hour**?",
+    question: "If total overheads = GHS12,000 and total machine hours = 2,000, what is the **overhead absorption rate per hour**?",
     options: [
-      "$6.00",
-      "$5.50",
-      "$6.50",
-      "$7.00"
+      "GHS6.00",
+      "GHS5.50",
+      "GHS6.50",
+      "GHS7.00"
     ],
-    answer: "$6.00"
+    answer: "GHS6.00"
   },
   {
     question: "Which of the following methods best suits **Activity Based Costing**?",
@@ -270,14 +270,14 @@ const costAccountingQuestions = [
     answer: "Contract costing"
   },
   {
-    question: "If materials cost $15,000, labour cost $8,000 and overheads $6,000, what is the **total cost of the job**?",
+    question: "If materials cost GHS15,000, labour cost GHS8,000 and overheads GHS6,000, what is the **total cost of the job**?",
     options: [
-      "$29,000",
-      "$28,000",
-      "$30,000",
-      "$31,000"
+      "GHS29,000",
+      "GHS28,000",
+      "GHS30,000",
+      "GHS31,000"
     ],
-    answer: "$29,000"
+    answer: "GHS29,000"
   },
   {
     question: "What does a **cost ledger** mainly record?",
@@ -330,14 +330,14 @@ const costAccountingQuestions = [
     answer: "Idle cost"
   },
   {
-    question: "If 100 labour hours are spent on a job and the wage rate is $20/hour, what is the **direct labour cost**?",
+    question: "If 100 labour hours are spent on a job and the wage rate is GHS20/hour, what is the **direct labour cost**?",
     options: [
-      "$2,000",
-      "$1,000",
-      "$2,500",
-      "$1,500"
+      "GHS2,000",
+      "GHS1,000",
+      "GHS2,500",
+      "GHS1,500"
     ],
-    answer: "$2,000"
+    answer: "GHS2,000"
   },
   {
     question: "In cost accounting, the acronym FIFO stands for:",
@@ -360,14 +360,14 @@ const costAccountingQuestions = [
     answer: "Indirect fixed cost"
   },
   {
-    question: "Calculate the **closing stock** using FIFO: Bought 200 units @ $5, then 300 units @ $6. Issued 350 units.",
+    question: "Calculate the **closing stock** using FIFO: Bought 200 units @ GHS5, then 300 units @ GHS6. Issued 350 units.",
     options: [
-      "$750",
-      "$900",
-      "$800",
-      "$850"
+      "GHS750",
+      "GHS900",
+      "GHS800",
+      "GHS850"
     ],
-    answer: "$900"
+    answer: "GHS900"
   },
   {
     question: "Which of the following is an example of an **administrative overhead**?",
@@ -430,24 +430,24 @@ const costAccountingQuestions = [
     answer: "LIFO-FIFO hybrid"
   },
   {
-    question: "A factory pays $200 per week for 10 workers and $150 in fixed overheads. What is the **total weekly labour cost**?",
+    question: "A factory pays GHS200 per week for 10 workers and GHS150 in fixed overheads. What is the **total weekly labour cost**?",
     options: [
-      "$2,000",
-      "$2,150",
-      "$2,100",
-      "$2,300"
+      "GHS2,000",
+      "GHS2,150",
+      "GHS2,100",
+      "GHS2,300"
     ],
-    answer: "$2,000"
+    answer: "GHS2,000"
   },
   {
     question: "Labour turnover can be measured by:",
     options: [
       "Number of sick days",
-      "Number of resignations / Average staff Ã— 100",
+      "Number of resignations / Average staff x 100",
       "Hours worked / Total staff",
       "Absenteeism rate"
     ],
-    answer: "Number of resignations / Average staff Ã— 100"
+    answer: "Number of resignations / Average staff x 100"
   },
   {
     question: "What is the main purpose of cost classification?",
@@ -470,14 +470,14 @@ const costAccountingQuestions = [
     answer: "Production cost"
   },
   {
-    question: "A factory produces 2,000 units with total direct material cost of $16,000. What is the **direct material cost per unit**?",
+    question: "A factory produces 2,000 units with total direct material cost of GHS16,000. What is the **direct material cost per unit**?",
     options: [
-      "$6",
-      "$8",
-      "$10",
-      "$12"
+      "GHS6",
+      "GHS8",
+      "GHS10",
+      "GHS12"
     ],
-    answer: "$8"
+    answer: "GHS8"
   },
   {
     question: "Which costing method is best for hospitals?",
@@ -500,14 +500,14 @@ const costAccountingQuestions = [
     answer: "1,600 units"
   },
   {
-    question: "A company buys 300 units @ $4, then 200 units @ $5. If 400 units are issued, what is the **issue value using FIFO**?",
+    question: "A company buys 300 units @ GHS4, then 200 units @ GHS5. If 400 units are issued, what is the **issue value using FIFO**?",
     options: [
-      "$1,800",
-      "$1,700",
-      "$2,000",
-      "$1,600"
+      "GHS1,800",
+      "GHS1,700",
+      "GHS2,000",
+      "GHS1,600"
     ],
-    answer: "$1,700"
+    answer: "GHS1,700"
   },
   {
     question: "Which of the following is used to monitor materials on hand and movement in the store?",
@@ -550,14 +550,14 @@ const costAccountingQuestions = [
     answer: "Wages of machine operators"
   },
   {
-    question: "A worker is paid $10 per hour with a target of 40 hours/week. If they complete the work in 35 hours and are paid under a bonus scheme of 50% time saved, what is the **total earnings**?",
+    question: "A worker is paid GHS10 per hour with a target of 40 hours/week. If they complete the work in 35 hours and are paid under a bonus scheme of 50% time saved, what is the **total earnings**?",
     options: [
-      "$375",
-      "$370",
-      "$350",
-      "$400"
+      "GHS375",
+      "GHS370",
+      "GHS350",
+      "GHS400"
     ],
-    answer: "$375"
+    answer: "GHS375"
   },
   {
     question: "Which of the following is an **indirect labour cost**?",
@@ -580,14 +580,14 @@ const costAccountingQuestions = [
     answer: "10%"
   },
   {
-    question: "Calculate **overtime premium** if overtime is paid at 1.5x and a worker works 6 extra hours at a normal rate of $12/hour.",
+    question: "Calculate **overtime premium** if overtime is paid at 1.5x and a worker works 6 extra hours at a normal rate of GHS12/hour.",
     options: [
-      "$72",
-      "$90",
-      "$18",
-      "$108"
+      "GHS72",
+      "GHS90",
+      "GHS18",
+      "GHS108"
     ],
-    answer: "$108"
+    answer: "GHS108"
   },
   {
     question: "Which of the following is a method of **absorbing overheads**?",
@@ -600,14 +600,14 @@ const costAccountingQuestions = [
     answer: "Rate per unit of output"
   },
   {
-    question: "Given: Overheads = $10,000; Direct Labour hours = 5,000. What is the **absorption rate per hour**?",
+    question: "Given: Overheads = GHS10,000; Direct Labour hours = 5,000. What is the **absorption rate per hour**?",
     options: [
-      "$2",
-      "$3",
-      "$4",
-      "$5"
+      "GHS2",
+      "GHS3",
+      "GHS4",
+      "GHS5"
     ],
-    answer: "$2"
+    answer: "GHS2"
   },
   {
     question: "What is the **purpose of overhead absorption**?",
@@ -640,7 +640,7 @@ const costAccountingQuestions = [
     answer: "Power consumption"
   },
   {
-    question: "What is the **break-even point** if fixed costs = $20,000, selling price per unit = $10, and variable cost per unit = $6?",
+    question: "What is the **break-even point** if fixed costs = GHS20,000, selling price per unit = GHS10, and variable cost per unit = GHS6?",
     options: [
       "2,000 units",
       "5,000 units",
@@ -650,14 +650,14 @@ const costAccountingQuestions = [
     answer: "5,000 units"
   },
   {
-    question: "A company has sales of $60,000, variable costs of $36,000 and fixed costs of $15,000. What is the **net profit**?",
+    question: "A company has sales of GHS60,000, variable costs of GHS36,000 and fixed costs of GHS15,000. What is the **net profit**?",
     options: [
-      "$9,000",
-      "$24,000",
-      "$21,000",
-      "$18,000"
+      "GHS9,000",
+      "GHS24,000",
+      "GHS21,000",
+      "GHS18,000"
     ],
-    answer: "$9,000"
+    answer: "GHS9,000"
   },
   {
     question: "Which of the following costs is **irrelevant** in decision-making?",
@@ -670,14 +670,14 @@ const costAccountingQuestions = [
     answer: "Sunk cost"
   },
   {
-    question: "Calculate the **contribution per unit**: Selling Price = $20; Variable Cost = $12.",
+    question: "Calculate the **contribution per unit**: Selling Price = GHS20; Variable Cost = GHS12.",
     options: [
-      "$6",
-      "$8",
-      "$10",
-      "$12"
+      "GHS6",
+      "GHS8",
+      "GHS10",
+      "GHS12"
     ],
-    answer: "$8"
+    answer: "GHS8"
   },
   {
     question: "Which chart is used to **illustrate break-even analysis**?",
@@ -690,14 +690,14 @@ const costAccountingQuestions = [
     answer: "Break-even chart"
   },
   {
-    question: "If the budgeted sales = $50,000 and actual sales = $55,000, what is the **sales variance**?",
+    question: "If the budgeted sales = GHS50,000 and actual sales = GHS55,000, what is the **sales variance**?",
     options: [
-      "$4,000 favorable",
-      "$5,000 adverse",
-      "$5,000 favorable",
-      "$10,000 adverse"
+      "GHS4,000 favorable",
+      "GHS5,000 adverse",
+      "GHS5,000 favorable",
+      "GHS10,000 adverse"
     ],
-    answer: "$5,000 favorable"
+    answer: "GHS5,000 favorable"
   },
   {
     question: "Which of the following is a **functional budget**?",
@@ -710,7 +710,7 @@ const costAccountingQuestions = [
     answer: "Sales budget"
   },
   {
-    question: "A businessâ€™s fixed cost is $8,000, selling price = $40, variable cost = $25. What is the **break-even sales (units)?**",
+    question: "A businesss fixed cost is GHS8,000, selling price = GHS40, variable cost = GHS25. What is the **break-even sales (units)?**",
     options: [
       "320 units",
       "533 units",
@@ -740,14 +740,14 @@ const costAccountingQuestions = [
     answer: "Work-in-progress account"
   },
   {
-    question: "If opening WIP = $5,000, direct materials = $10,000, direct labour = $7,000 and closing WIP = $4,000, what is the **cost of production**?",
+    question: "If opening WIP = GHS5,000, direct materials = GHS10,000, direct labour = GHS7,000 and closing WIP = GHS4,000, what is the **cost of production**?",
     options: [
-      "$18,000",
-      "$21,000",
-      "$19,000",
-      "$20,000"
+      "GHS18,000",
+      "GHS21,000",
+      "GHS19,000",
+      "GHS20,000"
     ],
-    answer: "$18,000"
+    answer: "GHS18,000"
   },
   {
     question: "Which cost is **excluded** in marginal costing?",
@@ -790,14 +790,14 @@ const costAccountingQuestions = [
     answer: "Standard costing"
   },
   {
-    question: "Standard cost for material = $4/unit; actual = $4.5; 1,000 units used. What is the **material variance**?",
+    question: "Standard cost for material = GHS4/unit; actual = GHS4.5; 1,000 units used. What is the **material variance**?",
     options: [
-      "$500 favorable",
-      "$500 adverse",
-      "$4,000 adverse",
-      "$4,500 favorable"
+      "GHS500 favorable",
+      "GHS500 adverse",
+      "GHS4,000 adverse",
+      "GHS4,500 favorable"
     ],
-    answer: "$500 adverse"
+    answer: "GHS500 adverse"
   },
   {
     question: "A company maintains cost and financial accounts separately. This is called:",
@@ -880,9 +880,9 @@ const costAccountingQuestions = [
     answer: "Variance"
   },
   {
-    question: "What is the total cost if: Direct materials = $5,000, Direct labour = $4,000, and Overheads = $3,000?",
-    options: ["$10,000", "$11,000", "$12,000", "$13,000"],
-    answer: "$12,000"
+    question: "What is the total cost if: Direct materials = GHS5,000, Direct labour = GHS4,000, and Overheads = GHS3,000?",
+    options: ["GHS10,000", "GHS11,000", "GHS12,000", "GHS13,000"],
+    answer: "GHS12,000"
   },
   {
     question: "Which document authorizes the issue of materials to production?",
@@ -890,9 +890,9 @@ const costAccountingQuestions = [
     answer: "Material Requisition Note"
   },
   {
-    question: "If a material is purchased at $20/unit for 300 units and a further 200 units are bought at $25/unit, what is the issue price of 400 units under FIFO?",
-    options: ["$8,000", "$8,500", "$9,000", "$9,500"],
-    answer: "$8,500"
+    question: "If a material is purchased at GHS20/unit for 300 units and a further 200 units are bought at GHS25/unit, what is the issue price of 400 units under FIFO?",
+    options: ["GHS8,000", "GHS8,500", "GHS9,000", "GHS9,500"],
+    answer: "GHS8,500"
   },
   {
     question: "Which cost classification does 'factory rent' fall under?",
@@ -905,7 +905,7 @@ const costAccountingQuestions = [
     answer: "1,200 units"
   },
   {
-    question: "Calculate economic order quantity (EOQ) if: Annual demand = 10,000 units, Ordering cost = $40/order, Holding cost = $2/unit.",
+    question: "Calculate economic order quantity (EOQ) if: Annual demand = 10,000 units, Ordering cost = GHS40/order, Holding cost = GHS2/unit.",
     options: ["500 units", "400 units", "600 units", "300 units"],
     answer: "632 units"
   },
@@ -920,9 +920,9 @@ const costAccountingQuestions = [
     answer: "Earliest purchase price"
   },
   {
-    question: "What is the closing stock value using weighted average if 100 units @ $5 and 200 units @ $6 were purchased?",
-    options: ["$1,700", "$1,800", "$1,900", "$2,000"],
-    answer: "$1,800"
+    question: "What is the closing stock value using weighted average if 100 units @ GHS5 and 200 units @ GHS6 were purchased?",
+    options: ["GHS1,700", "GHS1,800", "GHS1,900", "GHS2,000"],
+    answer: "GHS1,800"
   },
   {
     question: "Which method is used to account for joint products and by-products?",
@@ -935,9 +935,9 @@ const costAccountingQuestions = [
     answer: "Factory overhead"
   },
   {
-    question: "If gross wages = $2,500 and deductions = $500, what is net pay?",
-    options: ["$2,000", "$2,100", "$2,200", "$2,300"],
-    answer: "$2,000"
+    question: "If gross wages = GHS2,500 and deductions = GHS500, what is net pay?",
+    options: ["GHS2,000", "GHS2,100", "GHS2,200", "GHS2,300"],
+    answer: "GHS2,000"
   },
   {
     question: "Which of these best defines 'time rate system'?",
@@ -945,14 +945,14 @@ const costAccountingQuestions = [
     answer: "Paying based on hours worked"
   },
   {
-    question: "Calculate overhead absorption rate: Estimated overheads = $12,000; Estimated direct labour hours = 6,000 hrs.",
-    options: ["$1", "$2", "$3", "$4"],
-    answer: "$2"
+    question: "Calculate overhead absorption rate: Estimated overheads = GHS12,000; Estimated direct labour hours = 6,000 hrs.",
+    options: ["GHS1", "GHS2", "GHS3", "GHS4"],
+    answer: "GHS2"
   },
   {
-    question: "What is the overhead absorbed if absorption rate is $3/hour and actual hours worked are 2,500?",
-    options: ["$7,500", "$6,000", "$8,000", "$7,000"],
-    answer: "$7,500"
+    question: "What is the overhead absorbed if absorption rate is GHS3/hour and actual hours worked are 2,500?",
+    options: ["GHS7,500", "GHS6,000", "GHS8,000", "GHS7,000"],
+    answer: "GHS7,500"
   },
   {
     question: "Under Activity-Based Costing, 'setup time' is best allocated using:",
@@ -965,24 +965,24 @@ const costAccountingQuestions = [
     answer: "It improves cost accuracy"
   },
   {
-    question: "Break-even sales (in $) if: Fixed cost = $18,000, Contribution per unit = $6, Selling price = $12/unit.",
-    options: ["$36,000", "$30,000", "$27,000", "$24,000"],
-    answer: "$36,000"
+    question: "Break-even sales (in GHS) if: Fixed cost = GHS18,000, Contribution per unit = GHS6, Selling price = GHS12/unit.",
+    options: ["GHS36,000", "GHS30,000", "GHS27,000", "GHS24,000"],
+    answer: "GHS36,000"
   },
   {
-    question: "A firmâ€™s variable cost is 60% of sales and fixed cost is $12,000. What sales are needed to earn a profit of $6,000?",
-    options: ["$45,000", "$50,000", "$60,000", "$70,000"],
-    answer: "$45,000"
+    question: "A firms variable cost is 60% of sales and fixed cost is GHS12,000. What sales are needed to earn a profit of GHS6,000?",
+    options: ["GHS45,000", "GHS50,000", "GHS60,000", "GHS70,000"],
+    answer: "GHS45,000"
   },
   {
-    question: "What is the margin of safety if actual sales = $80,000 and break-even sales = $60,000?",
-    options: ["$20,000", "$25,000", "$15,000", "$30,000"],
-    answer: "$20,000"
+    question: "What is the margin of safety if actual sales = GHS80,000 and break-even sales = GHS60,000?",
+    options: ["GHS20,000", "GHS25,000", "GHS15,000", "GHS30,000"],
+    answer: "GHS20,000"
   },
   {
-    question: "If total sales = $50,000 and contribution margin = $20,000, what is the profit when fixed costs = $15,000?",
-    options: ["$5,000", "$10,000", "$15,000", "$20,000"],
-    answer: "$5,000"
+    question: "If total sales = GHS50,000 and contribution margin = GHS20,000, what is the profit when fixed costs = GHS15,000?",
+    options: ["GHS5,000", "GHS10,000", "GHS15,000", "GHS20,000"],
+    answer: "GHS5,000"
   },
   {
     question: "Which of the following is a decision-making technique?",
@@ -1000,9 +1000,9 @@ const costAccountingQuestions = [
     answer: "Service costing"
   },
   {
-    question: "Find the total production cost if: DM = $5,000; DL = $2,500; OH = 150% of DL.",
-    options: ["$10,250", "$11,250", "$12,250", "$13,250"],
-    answer: "$11,250"
+    question: "Find the total production cost if: DM = GHS5,000; DL = GHS2,500; OH = 150% of DL.",
+    options: ["GHS10,250", "GHS11,250", "GHS12,250", "GHS13,250"],
+    answer: "GHS11,250"
   },
   {
     question: "The difference between budgeted cost and actual cost is called:",
@@ -1010,9 +1010,9 @@ const costAccountingQuestions = [
     answer: "Variance"
   },
   {
-    question: "If actual material used = 1,100kg at $6/kg and standard = 1,000kg at $5/kg, what is the material price variance?",
-    options: ["$1,100 A", "$1,000 A", "$1,000 F", "$1,100 F"],
-    answer: "$1,100 A"
+    question: "If actual material used = 1,100kg at GHS6/kg and standard = 1,000kg at GHS5/kg, what is the material price variance?",
+    options: ["GHS1,100 A", "GHS1,000 A", "GHS1,000 F", "GHS1,100 F"],
+    answer: "GHS1,100 A"
   },
   {
     question: "Which of these is a controllable cost?",
@@ -1020,19 +1020,19 @@ const costAccountingQuestions = [
     answer: "Material wastage"
   },
   {
-    question: "A contract is 80% complete. Total cost incurred = $60,000. Contract price = $100,000. What is the notional profit?",
-    options: ["$40,000", "$30,000", "$20,000", "$50,000"],
-    answer: "$40,000"
+    question: "A contract is 80% complete. Total cost incurred = GHS60,000. Contract price = GHS100,000. What is the notional profit?",
+    options: ["GHS40,000", "GHS30,000", "GHS20,000", "GHS50,000"],
+    answer: "GHS40,000"
   },
   {
-    question: "A firm manufactures in batches of 500 units. Setup cost = $1,000, variable cost/unit = $3. What is cost per unit?",
-    options: ["$5", "$6", "$4", "$3"],
-    answer: "$5"
+    question: "A firm manufactures in batches of 500 units. Setup cost = GHS1,000, variable cost/unit = GHS3. What is cost per unit?",
+    options: ["GHS5", "GHS6", "GHS4", "GHS3"],
+    answer: "GHS5"
   },
   {
-    question: "Service cost per unit if: total cost = $20,000 and service rendered = 5,000 units.",
-    options: ["$2", "$3", "$4", "$5"],
-    answer: "$4"
+    question: "Service cost per unit if: total cost = GHS20,000 and service rendered = 5,000 units.",
+    options: ["GHS2", "GHS3", "GHS4", "GHS5"],
+    answer: "GHS4"
   },
   {
     question: "In contract costing, retention money is:",
@@ -1045,9 +1045,9 @@ const costAccountingQuestions = [
     answer: "Actual overheads differ from absorbed"
   },
   {
-    question: "Calculate net profit if: Sales = $90,000; VC = $60,000; FC = $20,000.",
-    options: ["$10,000", "$20,000", "$30,000", "$40,000"],
-    answer: "$10,000"
+    question: "Calculate net profit if: Sales = GHS90,000; VC = GHS60,000; FC = GHS20,000.",
+    options: ["GHS10,000", "GHS20,000", "GHS30,000", "GHS40,000"],
+    answer: "GHS10,000"
   },
   {
     question: "Which of the following represents indirect materials?",
@@ -1070,9 +1070,9 @@ const costAccountingQuestions = [
     answer: "Efficiency variance"
   },
   {
-    question: "A batch of 1,000 units incurred $12,000 in costs. What is the cost per unit?",
-    options: ["$10", "$11", "$12", "$13"],
-    answer: "$12"
+    question: "A batch of 1,000 units incurred GHS12,000 in costs. What is the cost per unit?",
+    options: ["GHS10", "GHS11", "GHS12", "GHS13"],
+    answer: "GHS12"
   },
   {
     question: "Labour turnover is mostly caused by:",
@@ -1095,7 +1095,7 @@ const costAccountingQuestions = [
     answer: "Variance analysis"
   },
   {
-    question: "A product has a selling price of $25 and a variable cost of $15. What is the contribution margin ratio?",
+    question: "A product has a selling price of GHS25 and a variable cost of GHS15. What is the contribution margin ratio?",
     options: ["40%", "50%", "60%", "75%"],
     answer: "40%"
   },
@@ -1120,9 +1120,9 @@ const costAccountingQuestions = [
     answer: "Cost driver"
   },
   {
-    question: "A company uses a predetermined overhead rate of $10 per machine hour. Actual machine hours used were 3,000. What is the overhead absorbed?",
-    options: ["$30,000", "$25,000", "$35,000", "$40,000"],
-    answer: "$30,000"
+    question: "A company uses a predetermined overhead rate of GHS10 per machine hour. Actual machine hours used were 3,000. What is the overhead absorbed?",
+    options: ["GHS30,000", "GHS25,000", "GHS35,000", "GHS40,000"],
+    answer: "GHS30,000"
   },
   {
     question: "Which of the following would NOT be considered part of direct expenses?",
@@ -1130,9 +1130,9 @@ const costAccountingQuestions = [
     answer: "Salary of factory manager"
   },
   {
-    question: "Calculate the cost per unit if: Total production cost = $25,000 and total units = 2,500.",
-    options: ["$10", "$8", "$12", "$15"],
-    answer: "$10"
+    question: "Calculate the cost per unit if: Total production cost = GHS25,000 and total units = 2,500.",
+    options: ["GHS10", "GHS8", "GHS12", "GHS15"],
+    answer: "GHS10"
   },
   {
     question: "If reorder level is 2,000 units and minimum stock level is 500 units, what is the average stock level?",
@@ -1140,14 +1140,14 @@ const costAccountingQuestions = [
     answer: "1,250 units"
   },
   {
-    question: "A company purchases 500 units @ $8, followed by 300 units @ $9. Using LIFO, what is the value of 600 units issued?",
-    options: ["$5,100", "$5,300", "$4,900", "$4,800"],
-    answer: "$5,300"
+    question: "A company purchases 500 units @ GHS8, followed by 300 units @ GHS9. Using LIFO, what is the value of 600 units issued?",
+    options: ["GHS5,100", "GHS5,300", "GHS4,900", "GHS4,800"],
+    answer: "GHS5,300"
   },
   {
-    question: "A labourer worked 48 hours, and the standard working week is 40 hours. Overtime is paid at 1.5 times the normal rate of $10/hour. What is total pay?",
-    options: ["$520", "$480", "$500", "$460"],
-    answer: "$520"
+    question: "A labourer worked 48 hours, and the standard working week is 40 hours. Overtime is paid at 1.5 times the normal rate of GHS10/hour. What is total pay?",
+    options: ["GHS520", "GHS480", "GHS500", "GHS460"],
+    answer: "GHS520"
   },
   {
     question: "Which of these is a method of wage payment that combines both time and output?",
@@ -1180,7 +1180,7 @@ const costAccountingQuestions = [
     answer: "Fixed Costs Ã· Contribution per unit"
   },
   {
-    question: "A company has fixed costs of $12,000, a selling price per unit of $20, and a variable cost per unit of $8. What is the break-even point in units?",
+    question: "A company has fixed costs of GHS12,000, a selling price per unit of GHS20, and a variable cost per unit of GHS8. What is the break-even point in units?",
     options: ["600", "1,000", "1,200", "2,000"],
     answer: "1,000"
   },
@@ -1195,9 +1195,9 @@ const costAccountingQuestions = [
     answer: "Variance"
   },
   {
-    question: "A companyâ€™s actual material cost is $5,000 and the standard cost is $4,800. What is the material variance?",
-    options: ["$200 Adverse", "$200 Favourable", "$100 Adverse", "$100 Favourable"],
-    answer: "$200 Adverse"
+    question: "A companys actual material cost is GHS5,000 and the standard cost is GHS4,800. What is the material variance?",
+    options: ["GHS200 Adverse", "GHS200 Favourable", "GHS100 Adverse", "GHS100 Favourable"],
+    answer: "GHS200 Adverse"
   },
   {
     question: "Which document authorizes the issue of materials from the store?",
@@ -1207,12 +1207,12 @@ const costAccountingQuestions = [
   {
     question: "What is the formula for Contribution Margin per Unit?",
     options: [
-      "Selling Price â€“ Variable Cost",
-      "Total Revenue â€“ Fixed Cost",
-      "Fixed Cost â€“ Variable Cost",
-      "Selling Price â€“ Fixed Cost"
+      "Selling Price-Variable Cost",
+      "Total Revenue-Fixed Cost",
+      "Fixed Cost-Variable Cost",
+      "Selling Price-Fixed Cost"
     ],
-    answer: "Selling Price â€“ Variable Cost"
+    answer: "Selling Price-Variable Cost"
   },
   {
     question: "Which of these is a feature of Activity-Based Costing (ABC)?",
@@ -1235,9 +1235,9 @@ const costAccountingQuestions = [
     answer: "Tax"
   },
   {
-    question: "Total budgeted overhead = $50,000. Budgeted labour hours = 10,000 hours. What is the overhead absorption rate per hour?",
-    options: ["$5", "$4", "$6", "$10"],
-    answer: "$5"
+    question: "Total budgeted overhead = GHS50,000. Budgeted labour hours = 10,000 hours. What is the overhead absorption rate per hour?",
+    options: ["GHS5", "GHS4", "GHS6", "GHS10"],
+    answer: "GHS5"
   },
   {
     question: "Which of the following is a qualitative characteristic of good cost information?",
@@ -1260,9 +1260,9 @@ const costAccountingQuestions = [
     answer: "Facilitate decision-making"
   },
   {
-    question: "What is the closing stock if opening stock is $5,000, purchases are $10,000, and cost of goods sold is $12,000?",
-    options: ["$3,000", "$2,000", "$1,000", "$5,000"],
-    answer: "$3,000"
+    question: "What is the closing stock if opening stock is GHS5,000, purchases are GHS10,000, and cost of goods sold is GHS12,000?",
+    options: ["GHS3,000", "GHS2,000", "GHS1,000", "GHS5,000"],
+    answer: "GHS3,000"
   },
   {
     question: "Which costing technique is most suitable for industries like oil refining and chemicals?",
@@ -1270,9 +1270,9 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "A standard cost of material is $3 per kg. Actual cost is $3.20 per kg. What is the material price variance for 1,000 kg?",
-    options: ["$200 Adverse", "$200 Favourable", "$20 Adverse", "$20 Favourable"],
-    answer: "$200 Adverse"
+    question: "A standard cost of material is GHS3 per kg. Actual cost is GHS3.20 per kg. What is the material price variance for 1,000 kg?",
+    options: ["GHS200 Adverse", "GHS200 Favourable", "GHS20 Adverse", "GHS20 Favourable"],
+    answer: "GHS200 Adverse"
   },
   {
     question: "Which principle allows overheads to be shared fairly across departments?",
@@ -1282,17 +1282,17 @@ const costAccountingQuestions = [
   {
     question: "Labour turnover rate is calculated using which of the following formulas?",
     options: [
-      "Number of leavers / Average number of employees Ã— 100",
+      "Number of leavers / Average number of employees x 100",
       "Number of hours worked / Output",
       "Direct labour cost / Units produced",
       "Wages paid / Labour hours"
     ],
-    answer: "Number of leavers / Average number of employees Ã— 100"
+    answer: "Number of leavers / Average number of employees x 100"
   },
   {
-    question: "Total budgeted overhead = $50,000. Budgeted labour hours = 10,000 hours. What is the overhead absorption rate per hour?",
-    options: ["$5", "$4", "$6", "$10"],
-    answer: "$5"
+    question: "Total budgeted overhead = GHS50,000. Budgeted labour hours = 10,000 hours. What is the overhead absorption rate per hour?",
+    options: ["GHS5", "GHS4", "GHS6", "GHS10"],
+    answer: "GHS5"
   },
   {
     question: "Which of the following is a qualitative characteristic of good cost information?",
@@ -1315,9 +1315,9 @@ const costAccountingQuestions = [
     answer: "Facilitate decision-making"
   },
   {
-    question: "What is the closing stock if opening stock is $5,000, purchases are $10,000, and cost of goods sold is $12,000?",
-    options: ["$3,000", "$2,000", "$1,000", "$5,000"],
-    answer: "$3,000"
+    question: "What is the closing stock if opening stock is GHS5,000, purchases are GHS10,000, and cost of goods sold is GHS12,000?",
+    options: ["GHS3,000", "GHS2,000", "GHS1,000", "GHS5,000"],
+    answer: "GHS3,000"
   },
   {
     question: "Which costing technique is most suitable for industries like oil refining and chemicals?",
@@ -1325,9 +1325,9 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "A standard cost of material is $3 per kg. Actual cost is $3.20 per kg. What is the material price variance for 1,000 kg?",
-    options: ["$200 Adverse", "$200 Favourable", "$20 Adverse", "$20 Favourable"],
-    answer: "$200 Adverse"
+    question: "A standard cost of material is GHS3 per kg. Actual cost is GHS3.20 per kg. What is the material price variance for 1,000 kg?",
+    options: ["GHS200 Adverse", "GHS200 Favourable", "GHS20 Adverse", "GHS20 Favourable"],
+    answer: "GHS200 Adverse"
   },
   {
     question: "Which principle allows overheads to be shared fairly across departments?",
@@ -1337,15 +1337,15 @@ const costAccountingQuestions = [
   {
     question: "Labour turnover rate is calculated using which of the following formulas?",
     options: [
-      "Number of leavers / Average number of employees Ã— 100",
+      "Number of leavers / Average number of employees x 100",
       "Number of hours worked / Output",
       "Direct labour cost / Units produced",
       "Wages paid / Labour hours"
     ],
-    answer: "Number of leavers / Average number of employees Ã— 100"
+    answer: "Number of leavers / Average number of employees x 100"
   },
   {
-    question: "If the contribution per unit is $5 and fixed cost is $20,000, how many units are needed to break even?",
+    question: "If the contribution per unit is GHS5 and fixed cost is GHS20,000, how many units are needed to break even?",
     options: ["4,000", "5,000", "3,000", "6,000"],
     answer: "4,000"
   },
@@ -1400,9 +1400,9 @@ const costAccountingQuestions = [
     answer: "Goods Received Note"
   },
   {
-    question: "If total sales is $100,000, variable costs are $60,000, and fixed costs are $30,000, what is the profit?",
-    options: ["$10,000", "$30,000", "$40,000", "$70,000"],
-    answer: "$10,000"
+    question: "If total sales is GHS100,000, variable costs are GHS60,000, and fixed costs are GHS30,000, what is the profit?",
+    options: ["GHS10,000", "GHS30,000", "GHS40,000", "GHS70,000"],
+    answer: "GHS10,000"
   },
   {
     question: "Which of these is an indirect cost?",
@@ -1410,9 +1410,9 @@ const costAccountingQuestions = [
     answer: "Factory rent"
   },
   {
-    question: "Calculate contribution per unit: selling price = $50, variable cost = $30.",
-    options: ["$20", "$80", "$30", "$50"],
-    answer: "$20"
+    question: "Calculate contribution per unit: selling price = GHS50, variable cost = GHS30.",
+    options: ["GHS20", "GHS80", "GHS30", "GHS50"],
+    answer: "GHS20"
   },
   {
     question: "Which costing method is used when services like transport or hospitals are involved?",
@@ -1435,19 +1435,19 @@ const costAccountingQuestions = [
     answer: "Office rent"
   },
   {
-    question: "Calculate overhead absorption rate: overheads = $40,000; machine hours = 8,000.",
-    options: ["$5/hour", "$4/hour", "$8/hour", "$10/hour"],
-    answer: "$5/hour"
+    question: "Calculate overhead absorption rate: overheads = GHS40,000; machine hours = 8,000.",
+    options: ["GHS5/hour", "GHS4/hour", "GHS8/hour", "GHS10/hour"],
+    answer: "GHS5/hour"
   },
   {
     question: "What is the formula for calculating margin of safety?",
     options: [
-      "Actual sales â€“ Break-even sales",
+      "Actual sales-Break-even sales",
       "Fixed cost Ã· Selling price",
       "Contribution Ã· Sales",
       "Profit Ã· Sales"
     ],
-    answer: "Actual sales â€“ Break-even sales"
+    answer: "Actual sales-Break-even sales"
   },
   {
     question: "Which document is used to authorize a purchase transaction?",
@@ -1455,9 +1455,9 @@ const costAccountingQuestions = [
     answer: "Purchase Requisition"
   },
   {
-    question: "A business has sales of $200,000, variable cost of $120,000 and fixed cost of $50,000. What is its profit?",
-    options: ["$30,000", "$70,000", "$80,000", "$50,000"],
-    answer: "$30,000"
+    question: "A business has sales of GHS200,000, variable cost of GHS120,000 and fixed cost of GHS50,000. What is its profit?",
+    options: ["GHS30,000", "GHS70,000", "GHS80,000", "GHS50,000"],
+    answer: "GHS30,000"
   },
   {
     question: "Which of the following is a sunk cost?",
@@ -1500,9 +1500,9 @@ const costAccountingQuestions = [
     answer: "Prime cost"
   },
   {
-    question: "Calculate prime cost: Direct materials = $1,000, Direct labour = $600, Direct expenses = $200.",
-    options: ["$1,600", "$1,800", "$2,000", "$1,200"],
-    answer: "$1,800"
+    question: "Calculate prime cost: Direct materials = GHS1,000, Direct labour = GHS600, Direct expenses = GHS200.",
+    options: ["GHS1,600", "GHS1,800", "GHS2,000", "GHS1,200"],
+    answer: "GHS1,800"
   },
   {
     question: "Which of the following is an advantage of budgeting?",
@@ -1510,9 +1510,9 @@ const costAccountingQuestions = [
     answer: "Controls expenses"
   },
   {
-    question: "What is the cost per unit if total cost is $12,000 and 1,500 units were produced?",
-    options: ["$8", "$10", "$12", "$6"],
-    answer: "$8"
+    question: "What is the cost per unit if total cost is GHS12,000 and 1,500 units were produced?",
+    options: ["GHS8", "GHS10", "GHS12", "GHS6"],
+    answer: "GHS8"
   },
   {
     question: "Which document is used for recording time worked by employees?",
@@ -1522,12 +1522,12 @@ const costAccountingQuestions = [
   {
     question: "The formula for break-even point (units) is:",
     options: [
-      "Fixed costs Ã· Contribution per unit",
-      "Variable costs Ã· Sales",
-      "Fixed costs Ã· Selling price",
-      "Sales â€“ Variable costs"
+      "Fixed costs /� Contribution per unit",
+      "Variable costs /� Sales",
+      "Fixed costs /� Selling price",
+      "Sales-Variable costs"
     ],
-    answer: "Fixed costs Ã· Contribution per unit"
+    answer: "Fixed costs /� Contribution per unit"
   },
   {
     question: "Which of the following is not part of absorption costing?",
@@ -1535,14 +1535,14 @@ const costAccountingQuestions = [
     answer: "Selling cost"
   },
   {
-    question: "Calculate inventory turnover: COGS = $60,000; Average inventory = $10,000.",
+    question: "Calculate inventory turnover: COGS = GHS60,000; Average inventory = GHS10,000.",
     options: ["6 times", "5 times", "4 times", "7 times"],
     answer: "6 times"
   },
   {
-    question: "What is the total fixed cost if contribution is $40,000 and profit is $10,000?",
-    options: ["$30,000", "$50,000", "$40,000", "$10,000"],
-    answer: "$30,000"
+    question: "What is the total fixed cost if contribution is GHS40,000 and profit is GHS10,000?",
+    options: ["GHS30,000", "GHS50,000", "GHS40,000", "GHS10,000"],
+    answer: "GHS30,000"
   },
   {
     question: "Which method assumes that the oldest inventory is used first?",
@@ -1555,7 +1555,7 @@ const costAccountingQuestions = [
     answer: "Variable cost"
   },
   {
-    question: "A company has fixed cost of $25,000 and unit contribution of $5. Break-even sales units are:",
+    question: "A company has fixed cost of GHS25,000 and unit contribution of GHS5. Break-even sales units are:",
     options: ["5,000", "4,000", "6,000", "3,000"],
     answer: "5,000"
   },
@@ -1580,9 +1580,9 @@ const costAccountingQuestions = [
     answer: "Selling overhead"
   },
   {
-    question: "Calculate break-even revenue: Break-even units = 2,000; Selling price per unit = $15.",
-    options: ["$30,000", "$25,000", "$20,000", "$15,000"],
-    answer: "$30,000"
+    question: "Calculate break-even revenue: Break-even units = 2,000; Selling price per unit = GHS15.",
+    options: ["GHS30,000", "GHS25,000", "GHS20,000", "GHS15,000"],
+    answer: "GHS30,000"
   },
   {
     question: "Which method helps allocate overhead based on actual activities?",
@@ -1590,9 +1590,9 @@ const costAccountingQuestions = [
     answer: "Activity Based Costing"
   },
   {
-    question: "A batch contains 100 units. Direct cost = $500. Overheads = $200. What is cost per unit?",
-    options: ["$7", "$8", "$6", "$9"],
-    answer: "$7"
+    question: "A batch contains 100 units. Direct cost = GHS500. Overheads = GHS200. What is cost per unit?",
+    options: ["GHS7", "GHS8", "GHS6", "GHS9"],
+    answer: "GHS7"
   },
   {
     question: "In standard costing, a favorable variance means:",
@@ -1600,12 +1600,12 @@ const costAccountingQuestions = [
     answer: "Actual cost is less than standard"
   },
   {
-    question: "A contract has value $500,000. Work certified is $300,000. Retention money is 10%. How much is payable?",
-    options: ["$270,000", "$300,000", "$200,000", "$250,000"],
-    answer: "$270,000"
+    question: "A contract has value GHS500,000. Work certified is GHS300,000. Retention money is 10%. How much is payable?",
+    options: ["GHS270,000", "GHS300,000", "GHS200,000", "GHS250,000"],
+    answer: "GHS270,000"
   },
   {
-    question: "What is meant by â€˜over-absorptionâ€™ of overheads?",
+    question: "What is meant byover-absorption of overheads?",
     options: [
       "Actual overheads > absorbed overheads",
       "Absorbed overheads > actual overheads",
@@ -1615,7 +1615,7 @@ const costAccountingQuestions = [
     answer: "Absorbed overheads > actual overheads"
   },
   {
-    question: "Calculate contribution margin ratio: Contribution = $40,000; Sales = $100,000.",
+    question: "Calculate contribution margin ratio: Contribution = GHS40,000; Sales = GHS100,000.",
     options: ["40%", "25%", "60%", "50%"],
     answer: "40%"
   },
@@ -1625,9 +1625,9 @@ const costAccountingQuestions = [
     answer: "High-Low method"
   },
   {
-    question: "What is the predetermined overhead rate if budgeted overhead = $120,000 and labour hours = 30,000?",
-    options: ["$4/hour", "$3/hour", "$5/hour", "$6/hour"],
-    answer: "$4/hour"
+    question: "What is the predetermined overhead rate if budgeted overhead = GHS120,000 and labour hours = 30,000?",
+    options: ["GHS4/hour", "GHS3/hour", "GHS5/hour", "GHS6/hour"],
+    answer: "GHS4/hour"
   },
   {
     question: "Calculate reorder level: maximum usage = 60 units/day, lead time = 10 days.",
@@ -1650,7 +1650,7 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "Calculate economic order quantity (EOQ): demand = 4000 units, order cost = $20, carrying cost = $2/unit.",
+    question: "Calculate economic order quantity (EOQ): demand = 4000 units, order cost = GHS20, carrying cost = GHS2/unit.",
     options: ["200 units", "400 units", "100 units", "300 units"],
     answer: "200 units"
   },
@@ -1680,9 +1680,9 @@ const costAccountingQuestions = [
     answer: "Marginal costing"
   },
   {
-    question: "Calculate average stock: opening = $1,200, closing = $800.",
-    options: ["$1,000", "$1,100", "$2,000", "$1,500"],
-    answer: "$1,000"
+    question: "Calculate average stock: opening = GHS1,200, closing = GHS800.",
+    options: ["GHS1,000", "GHS1,100", "GHS2,000", "GHS1,500"],
+    answer: "GHS1,000"
   },
   {
     question: "What is the main aim of budgetary control?",
@@ -1705,9 +1705,9 @@ const costAccountingQuestions = [
     answer: "Invoicing"
   },
   {
-    question: "Calculate absorption rate: total overhead = $60,000; total labour hours = 15,000.",
-    options: ["$4/hour", "$3/hour", "$5/hour", "$6/hour"],
-    answer: "$4/hour"
+    question: "Calculate absorption rate: total overhead = GHS60,000; total labour hours = 15,000.",
+    options: ["GHS4/hour", "GHS3/hour", "GHS5/hour", "GHS6/hour"],
+    answer: "GHS4/hour"
   },
   {
     question: "In contract costing, which account records costs incurred and revenue earned?",
@@ -1720,9 +1720,9 @@ const costAccountingQuestions = [
     answer: "Predetermined cost"
   },
   {
-    question: "What is the labour cost if 5 workers work 8 hours each at $10/hour?",
-    options: ["$400", "$350", "$300", "$450"],
-    answer: "$400"
+    question: "What is the labour cost if 5 workers work 8 hours each at GHS10/hour?",
+    options: ["GHS400", "GHS350", "GHS300", "GHS450"],
+    answer: "GHS400"
   },
   {
     question: "Which of these is *not* a method of absorbing overheads?",
@@ -1730,19 +1730,19 @@ const costAccountingQuestions = [
     answer: "Material usage rate"
   },
   {
-    question: "Calculate contribution: Selling price = $20, Variable cost = $12.",
-    options: ["$8", "$6", "$12", "$10"],
-    answer: "$8"
+    question: "Calculate contribution: Selling price = GHS20, Variable cost = GHS12.",
+    options: ["GHS8", "GHS6", "GHS12", "GHS10"],
+    answer: "GHS8"
   },
   {
     question: "The EOQ formula is:",
     options: [
-      "âˆš(2AD / C)", 
-      "A Ã— D Ã— C", 
-      "A Ã· D Ã· C", 
-      "C Ã— D Ã— 2 Ã· A"
+      "?(2AD / C)", 
+      "A x D x C", 
+      "A /� D /� C", 
+      "C x D x 2 /� A"
     ],
-    answer: "âˆš(2AD / C)"
+    answer: "?(2AD / C)"
   },
   {
     question: "Which one is a direct cost?",
@@ -1765,7 +1765,7 @@ const costAccountingQuestions = [
     answer: "Direct material + Direct labour + Direct expenses"
   },
   {
-    question: "A product sells for $50 and has a variable cost of $30. What is the P/V ratio?",
+    question: "A product sells for GHS50 and has a variable cost of GHS30. What is the P/V ratio?",
     options: ["40%", "50%", "60%", "20%"],
     answer: "40%"
   },
@@ -1785,12 +1785,12 @@ const costAccountingQuestions = [
     answer: "Actual overheads > absorbed overheads"
   },
   {
-    question: "Calculate material cost variance: Standard = $5,000; Actual = $4,800.",
-    options: ["$200 Favorable", "$200 Adverse", "$0", "$4,800 Favorable"],
-    answer: "$200 Favorable"
+    question: "Calculate material cost variance: Standard = GHS5,000; Actual = GHS4,800.",
+    options: ["GHS200 Favorable", "GHS200 Adverse", "GHS0", "GHS4,800 Favorable"],
+    answer: "GHS200 Favorable"
   },
   {
-    question: "What is the break-even point if fixed costs = $12,000 and contribution/unit = $4?",
+    question: "What is the break-even point if fixed costs = GHS12,000 and contribution/unit = GHS4?",
     options: ["3,000 units", "2,000 units", "4,000 units", "5,000 units"],
     answer: "3,000 units"
   },
@@ -1805,9 +1805,9 @@ const costAccountingQuestions = [
     answer: "To match profits"
   },
   {
-    question: "Calculate cost of goods manufactured: Direct material = $6,000; Labour = $4,000; Overheads = $2,000.",
-    options: ["$12,000", "$10,000", "$8,000", "$14,000"],
-    answer: "$12,000"
+    question: "Calculate cost of goods manufactured: Direct material = GHS6,000; Labour = GHS4,000; Overheads = GHS2,000.",
+    options: ["GHS12,000", "GHS10,000", "GHS8,000", "GHS14,000"],
+    answer: "GHS12,000"
   },
   {
     question: "Which of these is *not* a financial institution?",
@@ -1830,9 +1830,9 @@ const costAccountingQuestions = [
     answer: "Break-even analysis"
   },
   {
-    question: "Calculate overhead absorption rate per labour hour: Total overhead = $24,000; Total hours = 6,000.",
-    options: ["$4/hour", "$5/hour", "$6/hour", "$3/hour"],
-    answer: "$4/hour"
+    question: "Calculate overhead absorption rate per labour hour: Total overhead = GHS24,000; Total hours = 6,000.",
+    options: ["GHS4/hour", "GHS5/hour", "GHS6/hour", "GHS3/hour"],
+    answer: "GHS4/hour"
   },
   {
     question: "Which costing technique separates overheads based on activities?",
@@ -1840,9 +1840,9 @@ const costAccountingQuestions = [
     answer: "Activity-Based Costing"
   },
   {
-    question: "If direct material = $3,000, direct labour = $2,000, and overhead = $1,000, calculate prime cost.",
-    options: ["$5,000", "$6,000", "$4,000", "$3,000"],
-    answer: "$5,000"
+    question: "If direct material = GHS3,000, direct labour = GHS2,000, and overhead = GHS1,000, calculate prime cost.",
+    options: ["GHS5,000", "GHS6,000", "GHS4,000", "GHS3,000"],
+    answer: "GHS5,000"
   },
   {
     question: "What type of cost is electricity used in production?",
@@ -1870,9 +1870,9 @@ const costAccountingQuestions = [
     answer: "(SP - VC)/SP"
   },
   {
-    question: "Calculate break-even sales in dollars: FC = $15,000; CM ratio = 0.25.",
-    options: ["$60,000", "$40,000", "$45,000", "$35,000"],
-    answer: "$60,000"
+    question: "Calculate break-even sales in dollars: FC = GHS15,000; CM ratio = 0.25.",
+    options: ["GHS60,000", "GHS40,000", "GHS45,000", "GHS35,000"],
+    answer: "GHS60,000"
   },
   {
     question: "Which variance measures efficiency of labour usage?",
@@ -1886,7 +1886,7 @@ const costAccountingQuestions = [
   },
   {
     question: "What is the ideal stock level formula?",
-    options: ["Reorder level + minimum stock", "Maximum stock - (Average usage Ã— Average lead time)", "Minimum level + Â½ reorder quantity", "None of the above"],
+    options: ["Reorder level + minimum stock", "Maximum stock - (Average usage x Average lead time)", "Minimum level + Â½ reorder quantity", "None of the above"],
     answer: "Minimum level + Â½ reorder quantity"
   },
   {
@@ -1905,7 +1905,7 @@ const costAccountingQuestions = [
     answer: "To record employee attendance"
   },
   {
-    question: "Calculate EOQ: Demand = 2,000 units/year, Order cost = $25, Carrying cost = $1/unit/year.",
+    question: "Calculate EOQ: Demand = 2,000 units/year, Order cost = GHS25, Carrying cost = GHS1/unit/year.",
     options: ["316 units", "250 units", "500 units", "400 units"],
     answer: "316 units"
   },
@@ -1915,9 +1915,9 @@ const costAccountingQuestions = [
     answer: "Raw materials"
   },
   {
-    question: "Calculate fixed cost if total cost = $40,000, variable cost = $20/unit, and 1,000 units were produced.",
-    options: ["$20,000", "$10,000", "$15,000", "$5,000"],
-    answer: "$20,000"
+    question: "Calculate fixed cost if total cost = GHS40,000, variable cost = GHS20/unit, and 1,000 units were produced.",
+    options: ["GHS20,000", "GHS10,000", "GHS15,000", "GHS5,000"],
+    answer: "GHS20,000"
   },
   {
     question: "Absorption costing includes which type of cost in product cost?",
@@ -1930,9 +1930,9 @@ const costAccountingQuestions = [
     answer: "Master budget"
   },
   {
-    question: "Calculate closing stock using FIFO: Purchases: 100 units @ $5, then 100 units @ $6. Issue: 150 units.",
-    options: ["$300", "$250", "$270", "$240"],
-    answer: "$300"
+    question: "Calculate closing stock using FIFO: Purchases: 100 units @ GHS5, then 100 units @ GHS6. Issue: 150 units.",
+    options: ["GHS300", "GHS250", "GHS270", "GHS240"],
+    answer: "GHS300"
   },
   {
     question: "Which cost does not change with production level?",
@@ -1955,7 +1955,7 @@ const costAccountingQuestions = [
     answer: "Service costing"
   },
   {
-    question: "If selling price = $100, variable cost = $60, and fixed cost = $12,000, find BEP in units.",
+    question: "If selling price = GHS100, variable cost = GHS60, and fixed cost = GHS12,000, find BEP in units.",
     options: ["300 units", "400 units", "500 units", "600 units"],
     answer: "300 units"
   },
@@ -1970,14 +1970,14 @@ const costAccountingQuestions = [
     answer: "Future cost"
   },
   {
-    question: "Calculate contribution: Sales = $25,000, Variable cost = $18,000.",
-    options: ["$7,000", "$6,000", "$5,000", "$8,000"],
-    answer: "$7,000"
+    question: "Calculate contribution: Sales = GHS25,000, Variable cost = GHS18,000.",
+    options: ["GHS7,000", "GHS6,000", "GHS5,000", "GHS8,000"],
+    answer: "GHS7,000"
   },
   {
-    question: "Calculate labour hour rate: Overhead = $60,000; Labour hours = 15,000.",
-    options: ["$4/hour", "$5/hour", "$6/hour", "$3/hour"],
-    answer: "$4/hour"
+    question: "Calculate labour hour rate: Overhead = GHS60,000; Labour hours = 15,000.",
+    options: ["GHS4/hour", "GHS5/hour", "GHS6/hour", "GHS3/hour"],
+    answer: "GHS4/hour"
   },
   {
     question: "The costing method for custom-built furniture is:",
@@ -1995,9 +1995,9 @@ const costAccountingQuestions = [
     answer: "Set objectives"
   },
   {
-    question: "Calculate total cost: Prime cost = $10,000, Overhead = $5,000.",
-    options: ["$15,000", "$10,000", "$12,000", "$20,000"],
-    answer: "$15,000"
+    question: "Calculate total cost: Prime cost = GHS10,000, Overhead = GHS5,000.",
+    options: ["GHS15,000", "GHS10,000", "GHS12,000", "GHS20,000"],
+    answer: "GHS15,000"
   },
   {
     question: "Which costing technique is used to value closing inventory at variable cost only?",
@@ -2005,9 +2005,9 @@ const costAccountingQuestions = [
     answer: "Marginal costing"
   },
   {
-    question: "Calculate machine hour rate: Total overhead = $18,000; Machine hours = 900.",
-    options: ["$20/hour", "$18/hour", "$25/hour", "$22/hour"],
-    answer: "$20/hour"
+    question: "Calculate machine hour rate: Total overhead = GHS18,000; Machine hours = 900.",
+    options: ["GHS20/hour", "GHS18/hour", "GHS25/hour", "GHS22/hour"],
+    answer: "GHS20/hour"
   },
   {
     question: "A good costing system should be:",
@@ -2015,7 +2015,7 @@ const costAccountingQuestions = [
     answer: "Simple, accurate, and economical"
   },
   {
-    question: "Calculate stock turnover ratio: COGS = $30,000; Average stock = $6,000.",
+    question: "Calculate stock turnover ratio: COGS = GHS30,000; Average stock = GHS6,000.",
     options: ["5 times", "6 times", "4 times", "3 times"],
     answer: "5 times"
   },
@@ -2035,9 +2035,9 @@ const costAccountingQuestions = [
     answer: "SIFO"
   },
   {
-    question: "Calculate overhead absorption rate: Overhead = $24,000, Labour hours = 6,000.",
-    options: ["$4/hour", "$5/hour", "$6/hour", "$3/hour"],
-    answer: "$4/hour"
+    question: "Calculate overhead absorption rate: Overhead = GHS24,000, Labour hours = 6,000.",
+    options: ["GHS4/hour", "GHS5/hour", "GHS6/hour", "GHS3/hour"],
+    answer: "GHS4/hour"
   },
   {
     question: "In marginal costing, fixed costs are treated as:",
@@ -2050,7 +2050,7 @@ const costAccountingQuestions = [
     answer: "To reconcile cost and financial accounts"
   },
   {
-    question: "Calculate break-even point: FC = $18,000; SP = $60; VC = $40.",
+    question: "Calculate break-even point: FC = GHS18,000; SP = GHS60; VC = GHS40.",
     options: ["900 units", "1,000 units", "1,200 units", "1,500 units"],
     answer: "900 units"
   },
@@ -2070,9 +2070,9 @@ const costAccountingQuestions = [
     answer: "Fixed budget"
   },
   {
-    question: "Calculate contribution per unit: SP = $50, VC = $30.",
-    options: ["$20", "$30", "$10", "$25"],
-    answer: "$20"
+    question: "Calculate contribution per unit: SP = GHS50, VC = GHS30.",
+    options: ["GHS20", "GHS30", "GHS10", "GHS25"],
+    answer: "GHS20"
   },
   {
     question: "Which cost is incurred after a decision is made?",
@@ -2085,14 +2085,14 @@ const costAccountingQuestions = [
     answer: "Service costing"
   },
   {
-    question: "Calculate break-even revenue: FC = $25,000; CM ratio = 0.5.",
-    options: ["$50,000", "$45,000", "$60,000", "$30,000"],
-    answer: "$50,000"
+    question: "Calculate break-even revenue: FC = GHS25,000; CM ratio = 0.5.",
+    options: ["GHS50,000", "GHS45,000", "GHS60,000", "GHS30,000"],
+    answer: "GHS50,000"
   },
   {
     question: "Labour turnover is calculated using:",
-    options: ["No. of leavers Ã· average number of workers Ã— 100", "Hours worked Ã· wages", "Absentees Ã· total staff", "Wages Ã· hours worked"],
-    answer: "No. of leavers Ã· average number of workers Ã— 100"
+    options: ["No. of leavers /� average number of workers x 100", "Hours worked /� wages", "Absentees /� total staff", "Wages /� hours worked"],
+    answer: "No. of leavers /� average number of workers x 100"
   },
   {
     question: "What is an example of a fixed overhead?",
@@ -2105,9 +2105,9 @@ const costAccountingQuestions = [
     answer: "Cash budget"
   },
   {
-    question: "Calculate profit: Sales = $100,000; VC = $60,000; FC = $25,000.",
-    options: ["$15,000", "$10,000", "$20,000", "$30,000"],
-    answer: "$15,000"
+    question: "Calculate profit: Sales = GHS100,000; VC = GHS60,000; FC = GHS25,000.",
+    options: ["GHS15,000", "GHS10,000", "GHS20,000", "GHS30,000"],
+    answer: "GHS15,000"
   },
   {
     question: "In Activity-Based Costing, cost drivers are used to:",
@@ -2155,19 +2155,19 @@ const costAccountingQuestions = [
     answer: "Interlocking system"
   },
   {
-    question: "Calculate EOQ: D = 4,000 units/year, O = $20, H = $4/unit.",
+    question: "Calculate EOQ: D = 4,000 units/year, O = GHS20, H = GHS4/unit.",
     options: ["200 units", "400 units", "300 units", "250 units"],
     answer: "200 units"
   },
   {
-    question: "What does the term â€˜cost centreâ€™ refer to?",
+    question: "What does the termcost centre refer to?",
     options: ["Area where cost is accumulated", "Profit-earning unit", "Only factory floor", "Warehouse only"],
     answer: "Area where cost is accumulated"
   },
   {
-    question: "Calculate margin of safety: Sales = $80,000; BE Sales = $60,000.",
-    options: ["$20,000", "$10,000", "$15,000", "$25,000"],
-    answer: "$20,000"
+    question: "Calculate margin of safety: Sales = GHS80,000; BE Sales = GHS60,000.",
+    options: ["GHS20,000", "GHS10,000", "GHS15,000", "GHS25,000"],
+    answer: "GHS20,000"
   },
   {
     question: "Which document is used to order goods from supplier?",
@@ -2180,9 +2180,9 @@ const costAccountingQuestions = [
     answer: "Pre-determined rates"
   },
   {
-    question: "Calculate net profit: Contribution = $30,000, FC = $25,000.",
-    options: ["$5,000", "$10,000", "$20,000", "$15,000"],
-    answer: "$5,000"
+    question: "Calculate net profit: Contribution = GHS30,000, FC = GHS25,000.",
+    options: ["GHS5,000", "GHS10,000", "GHS20,000", "GHS15,000"],
+    answer: "GHS5,000"
   },
   {
     question: "Which of the following is a method of time booking?",
@@ -2210,17 +2210,17 @@ const costAccountingQuestions = [
     answer: "Recording wages and deductions"
   },
   {
-    question: "Calculate total cost: Material = $6,000, Labour = $4,000, Overhead = $2,000.",
-    options: ["$12,000", "$10,000", "$11,000", "$13,000"],
-    answer: "$12,000"
+    question: "Calculate total cost: Material = GHS6,000, Labour = GHS4,000, Overhead = GHS2,000.",
+    options: ["GHS12,000", "GHS10,000", "GHS11,000", "GHS13,000"],
+    answer: "GHS12,000"
   },
   {
-    question: "Calculate the prime cost: Material = $8,000; Labour = $5,000; Expenses = $2,000.",
-    options: ["$15,000", "$13,000", "$10,000", "$5,000"],
-    answer: "$13,000"
+    question: "Calculate the prime cost: Material = GHS8,000; Labour = GHS5,000; Expenses = GHS2,000.",
+    options: ["GHS15,000", "GHS13,000", "GHS10,000", "GHS5,000"],
+    answer: "GHS13,000"
   },
   {
-    question: "What does the term â€˜idle timeâ€™ in labour mean?",
+    question: "What does the termidle time in labour mean?",
     options: ["Time lost due to inefficiency", "Time spent working", "Overtime hours", "Break time"],
     answer: "Time lost due to inefficiency"
   },
@@ -2230,9 +2230,9 @@ const costAccountingQuestions = [
     answer: "Complexity"
   },
   {
-    question: "Calculate labour cost per hour if total wages = $3,000 and hours worked = 600.",
-    options: ["$5", "$6", "$4", "$7"],
-    answer: "$5"
+    question: "Calculate labour cost per hour if total wages = GHS3,000 and hours worked = 600.",
+    options: ["GHS5", "GHS6", "GHS4", "GHS7"],
+    answer: "GHS5"
   },
   {
     question: "Which is a controllable cost?",
@@ -2240,9 +2240,9 @@ const costAccountingQuestions = [
     answer: "Direct materials"
   },
   {
-    question: "Calculate factory overhead rate: Overhead = $30,000; Machine hours = 10,000.",
-    options: ["$3 per hour", "$2 per hour", "$4 per hour", "$5 per hour"],
-    answer: "$3 per hour"
+    question: "Calculate factory overhead rate: Overhead = GHS30,000; Machine hours = 10,000.",
+    options: ["GHS3 per hour", "GHS2 per hour", "GHS4 per hour", "GHS5 per hour"],
+    answer: "GHS3 per hour"
   },
   {
     question: "Which of these is a method of labour remuneration?",
@@ -2250,14 +2250,14 @@ const costAccountingQuestions = [
     answer: "Time rate"
   },
   {
-    question: "What is â€˜sunk costâ€™?",
+    question: "What is a sunk cost?",
     options: ["Cost that cannot be recovered", "Future cost", "Variable cost", "Fixed cost"],
     answer: "Cost that cannot be recovered"
   },
   {
-    question: "Calculate overhead absorption if overhead is $12,000 and labour hours are 2,000.",
-    options: ["$6 per hour", "$5 per hour", "$4 per hour", "$7 per hour"],
-    answer: "$6 per hour"
+    question: "Calculate overhead absorption if overhead is GHS12,000 and labour hours are 2,000.",
+    options: ["GHS6 per hour", "GHS5 per hour", "GHS4 per hour", "GHS7 per hour"],
+    answer: "GHS6 per hour"
   },
   {
     question: "A business using job costing system would most likely be:",
@@ -2265,7 +2265,7 @@ const costAccountingQuestions = [
     answer: "A tailor"
   },
   {
-    question: "Calculate margin of safety ratio if sales = $100,000 and BE sales = $80,000.",
+    question: "Calculate margin of safety ratio if sales = GHS100,000 and BE sales = GHS80,000.",
     options: ["20%", "25%", "15%", "10%"],
     answer: "20%"
   },
@@ -2275,7 +2275,7 @@ const costAccountingQuestions = [
     answer: "Glue used in packaging"
   },
   {
-    question: "Calculate economic order quantity if demand = 5,000 units, ordering cost = $50, carrying cost = $2 per unit.",
+    question: "Calculate economic order quantity if demand = 5,000 units, ordering cost = GHS50, carrying cost = GHS2 per unit.",
     options: ["500 units", "700 units", "1000 units", "800 units"],
     answer: "707 units"
   },
@@ -2286,13 +2286,13 @@ const costAccountingQuestions = [
   },
   {
     question: "Labour turnover rate formula is:",
-    options: ["No. of employees leaving Ã· Average employees Ã— 100", "Total wages Ã· No. of workers", "Hours worked Ã· Wages", "No. of employees joining Ã· Average employees Ã— 100"],
-    answer: "No. of employees leaving Ã· Average employees Ã— 100"
+    options: ["No. of employees leaving /� Average employees x 100", "Total wages /� No. of workers", "Hours worked /� Wages", "No. of employees joining /� Average employees x 100"],
+    answer: "No. of employees leaving /� Average employees x 100"
   },
   {
-    question: "Calculate total cost if direct material = $10,000, direct labour = $5,000, overhead = $3,000.",
-    options: ["$18,000", "$15,000", "$17,000", "$20,000"],
-    answer: "$18,000"
+    question: "Calculate total cost if direct material = GHS10,000, direct labour = GHS5,000, overhead = GHS3,000.",
+    options: ["GHS18,000", "GHS15,000", "GHS17,000", "GHS20,000"],
+    answer: "GHS18,000"
   },
   {
     question: "Which financial institution primarily deals with stock exchange activities?",
@@ -2300,14 +2300,14 @@ const costAccountingQuestions = [
     answer: "Stock Exchange"
   },
   {
-    question: "What is the â€˜lead timeâ€™ in stock control?",
+    question: "What is thelead time in stock control?",
     options: ["Time between ordering and receiving stock", "Time to sell stock", "Time to pay suppliers", "Time to produce goods"],
     answer: "Time between ordering and receiving stock"
   },
   {
     question: "Break-even point can be calculated using:",
-    options: ["Fixed costs Ã· Contribution per unit", "Variable costs Ã· Fixed costs", "Sales Ã· Profit", "Fixed costs Ã· Sales"],
-    answer: "Fixed costs Ã· Contribution per unit"
+    options: ["Fixed costs /� Contribution per unit", "Variable costs /� Fixed costs", "Sales /� Profit", "Fixed costs /� Sales"],
+    answer: "Fixed costs /� Contribution per unit"
   },
   {
     question: "Which of these is a characteristic of good cost information?",
@@ -2315,9 +2315,9 @@ const costAccountingQuestions = [
     answer: "Relevance"
   },
   {
-    question: "Calculate contribution margin if sales price = $80 and variable cost = $50.",
-    options: ["$30", "$40", "$20", "$50"],
-    answer: "$30"
+    question: "Calculate contribution margin if sales price = GHS80 and variable cost = GHS50.",
+    options: ["GHS30", "GHS40", "GHS20", "GHS50"],
+    answer: "GHS30"
   },
   {
     question: "In contract costing, the cost is accumulated for:",
@@ -2330,9 +2330,9 @@ const costAccountingQuestions = [
     answer: "Fixed overhead"
   },
   {
-    question: "Calculate break-even sales if fixed cost = $15,000 and contribution margin ratio = 0.3.",
-    options: ["$50,000", "$45,000", "$40,000", "$55,000"],
-    answer: "$50,000"
+    question: "Calculate break-even sales if fixed cost = GHS15,000 and contribution margin ratio = 0.3.",
+    options: ["GHS50,000", "GHS45,000", "GHS40,000", "GHS55,000"],
+    answer: "GHS50,000"
   },
   {
     question: "What is the main objective of stores keeping?",
@@ -2365,7 +2365,7 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "What does the term â€˜overhead absorptionâ€™ mean?",
+    question: "What does the termoverhead absorption mean?",
     options: ["Charging overheads to cost units", "Paying wages", "Recording sales", "Calculating profit"],
     answer: "Charging overheads to cost units"
   },
@@ -2375,12 +2375,12 @@ const costAccountingQuestions = [
     answer: "Cheque"
   },
   {
-    question: "What is the meaning of â€˜depreciationâ€™ in cost accounting?",
+    question: "What is the meaning ofdepreciation in cost accounting?",
     options: ["Allocation of cost of an asset over its useful life", "Profit earned", "Material cost", "Labour cost"],
     answer: "Allocation of cost of an asset over its useful life"
   },
   {
-    question: "Calculate stock turnover ratio if cost of goods sold = $120,000 and average stock = $30,000.",
+    question: "Calculate stock turnover ratio if cost of goods sold = GHS120,000 and average stock = GHS30,000.",
     options: ["4 times", "3 times", "5 times", "6 times"],
     answer: "4 times"
   },
@@ -2400,19 +2400,19 @@ const costAccountingQuestions = [
     answer: "Flexible budget"
   },
   {
-    question: "Calculate profit if sales = $90,000, variable cost = $50,000 and fixed cost = $30,000.",
-    options: ["$10,000", "$20,000", "$15,000", "$25,000"],
-    answer: "$10,000"
+    question: "Calculate profit if sales = GHS90,000, variable cost = GHS50,000 and fixed cost = GHS30,000.",
+    options: ["GHS10,000", "GHS20,000", "GHS15,000", "GHS25,000"],
+    answer: "GHS10,000"
   },
   {
-    question: "What does â€˜payroll accountingâ€™ involve?",
+    question: "What doespayroll accounting involve?",
     options: ["Recording employee wages and deductions", "Managing sales invoices", "Tracking inventory", "Calculating depreciation"],
     answer: "Recording employee wages and deductions"
   },
   {
-    question: "Calculate the total cost if direct materials = $15,000, direct labour = $8,000, and overheads = $5,000.",
-    options: ["$28,000", "$23,000", "$18,000", "$30,000"],
-    answer: "$28,000"
+    question: "Calculate the total cost if direct materials = GHS15,000, direct labour = GHS8,000, and overheads = GHS5,000.",
+    options: ["GHS28,000", "GHS23,000", "GHS18,000", "GHS30,000"],
+    answer: "GHS28,000"
   },
   {
     question: "What is the process of assigning overhead costs to cost centers called?",
@@ -2420,9 +2420,9 @@ const costAccountingQuestions = [
     answer: "Allocation"
   },
   {
-    question: "Calculate labour efficiency variance if standard hours = 1,000, actual hours = 1,100, and standard rate = $10 per hour.",
-    options: ["$1,000 Adverse", "$1,000 Favourable", "$100 Adverse", "$100 Favourable"],
-    answer: "$1,000 Adverse"
+    question: "Calculate labour efficiency variance if standard hours = 1,000, actual hours = 1,100, and standard rate = GHS10 per hour.",
+    options: ["GHS1,000 Adverse", "GHS1,000 Favourable", "GHS100 Adverse", "GHS100 Favourable"],
+    answer: "GHS1,000 Adverse"
   },
   {
     question: "Which cost varies directly with the level of production?",
@@ -2430,12 +2430,12 @@ const costAccountingQuestions = [
     answer: "Variable cost"
   },
   {
-    question: "Define â€˜break-even pointâ€™.",
+    question: "Definebreak-even point.",
     options: ["Point where total cost equals total revenue", "Point where fixed costs are zero", "Maximum profit point", "Minimum sales target"],
     answer: "Point where total cost equals total revenue"
   },
   {
-    question: "Calculate contribution margin ratio if sales are $200,000 and variable costs are $120,000.",
+    question: "Calculate contribution margin ratio if sales are GHS200,000 and variable costs are GHS120,000.",
     options: ["40%", "60%", "50%", "70%"],
     answer: "40%"
   },
@@ -2450,9 +2450,9 @@ const costAccountingQuestions = [
     answer: "Job cost sheet"
   },
   {
-    question: "Calculate overhead absorption rate if estimated overheads = $60,000 and estimated labour hours = 15,000.",
-    options: ["$4 per hour", "$3 per hour", "$5 per hour", "$6 per hour"],
-    answer: "$4 per hour"
+    question: "Calculate overhead absorption rate if estimated overheads = GHS60,000 and estimated labour hours = 15,000.",
+    options: ["GHS4 per hour", "GHS3 per hour", "GHS5 per hour", "GHS6 per hour"],
+    answer: "GHS4 per hour"
   },
   {
     question: "What is the primary purpose of reconciliation of cost and financial profits?",
@@ -2465,9 +2465,9 @@ const costAccountingQuestions = [
     answer: "Job costing"
   },
   {
-    question: "Calculate stock valuation if opening stock = $10,000, purchases = $30,000, closing stock = $8,000.",
-    options: ["$32,000", "$30,000", "$28,000", "$40,000"],
-    answer: "$32,000"
+    question: "Calculate stock valuation if opening stock = GHS10,000, purchases = GHS30,000, closing stock = GHS8,000.",
+    options: ["GHS32,000", "GHS30,000", "GHS28,000", "GHS40,000"],
+    answer: "GHS32,000"
   },
   {
     question: "What is the main objective of standard costing?",
@@ -2475,7 +2475,7 @@ const costAccountingQuestions = [
     answer: "Cost control"
   },
   {
-    question: "Calculate the break-even point in units if fixed cost = $50,000, selling price = $20, variable cost = $12.",
+    question: "Calculate the break-even point in units if fixed cost = GHS50,000, selling price = GHS20, variable cost = GHS12.",
     options: ["6,250 units", "5,000 units", "8,000 units", "4,000 units"],
     answer: "6,250 units"
   },
@@ -2485,14 +2485,14 @@ const costAccountingQuestions = [
     answer: "Rent"
   },
   {
-    question: "What does â€˜labour turnoverâ€™ measure?",
+    question: "What doeslabour turnover measure?",
     options: ["Rate at which employees leave a company", "Employee attendance", "Labour productivity", "Wages paid"],
     answer: "Rate at which employees leave a company"
   },
   {
-    question: "Calculate labour cost variance if actual cost = $12,000 and standard cost = $10,000.",
-    options: ["$2,000 Adverse", "$2,000 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$2,000 Adverse"
+    question: "Calculate labour cost variance if actual cost = GHS12,000 and standard cost = GHS10,000.",
+    options: ["GHS2,000 Adverse", "GHS2,000 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS2,000 Adverse"
   },
   {
     question: "Which of the following is NOT part of financial institutions?",
@@ -2500,14 +2500,14 @@ const costAccountingQuestions = [
     answer: "Factories"
   },
   {
-    question: "What is the meaning of â€˜activity based costingâ€™?",
+    question: "What is the meaning of activity based costing?",
     options: ["Cost allocation based on activities", "Costing per unit", "Budget preparation", "Labour cost calculation"],
     answer: "Cost allocation based on activities"
   },
   {
-    question: "Calculate the closing stock if opening stock is $5,000, purchases $20,000 and cost of goods sold is $18,000.",
-    options: ["$7,000", "$6,000", "$5,000", "$8,000"],
-    answer: "$7,000"
+    question: "Calculate the closing stock if opening stock is GHS5,000, purchases GHS20,000 and cost of goods sold is GHS18,000.",
+    options: ["GHS7,000", "GHS6,000", "GHS5,000", "GHS8,000"],
+    answer: "GHS7,000"
   },
   {
     question: "Which cost is classified as a direct cost?",
@@ -2515,14 +2515,14 @@ const costAccountingQuestions = [
     answer: "Direct materials"
   },
   {
-    question: "Define â€˜marginal costingâ€™.",
+    question: "Definemarginal costing.",
     options: ["Costing that considers only variable costs", "Costing including fixed costs", "Historical costing", "Standard costing"],
     answer: "Costing that considers only variable costs"
   },
   {
-    question: "Calculate the margin of safety if sales = $250,000 and break-even sales = $150,000.",
-    options: ["$100,000", "$120,000", "$90,000", "$110,000"],
-    answer: "$100,000"
+    question: "Calculate the margin of safety if sales = GHS250,000 and break-even sales = GHS150,000.",
+    options: ["GHS100,000", "GHS120,000", "GHS90,000", "GHS110,000"],
+    answer: "GHS100,000"
   },
   {
     question: "What document is used to authorize purchase of materials?",
@@ -2535,22 +2535,22 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "Calculate the standard cost of labour if standard hours are 500 and standard rate per hour is $15.",
-    options: ["$7,500", "$5,000", "$6,500", "$8,000"],
-    answer: "$7,500"
+    question: "Calculate the standard cost of labour if standard hours are 500 and standard rate per hour is GHS15.",
+    options: ["GHS7,500", "GHS5,000", "GHS6,500", "GHS8,000"],
+    answer: "GHS7,500"
   },
   {
-    question: "What is the purpose of â€˜time keepingâ€™ in labour accounting?",
+    question: "What is the purpose oftime keeping in labour accounting?",
     options: ["To record actual hours worked", "To calculate sales", "To determine material costs", "To calculate depreciation"],
     answer: "To record actual hours worked"
   },
   {
-    question: "Calculate the cost of goods manufactured if opening work in progress = $10,000, direct materials = $25,000, direct labour = $15,000, manufacturing overhead = $12,000, and closing work in progress = $8,000.",
-    options: ["$54,000", "$52,000", "$60,000", "$58,000"],
-    answer: "$54,000"
+    question: "Calculate the cost of goods manufactured if opening work in progress = GHS10,000, direct materials = GHS25,000, direct labour = GHS15,000, manufacturing overhead = GHS12,000, and closing work in progress = GHS8,000.",
+    options: ["GHS54,000", "GHS52,000", "GHS60,000", "GHS58,000"],
+    answer: "GHS54,000"
   },
   {
-    question: "What does â€˜payroll accountingâ€™ involve?",
+    question: "What doespayroll accounting involve?",
     options: ["Recording wages and deductions", "Recording sales", "Calculating depreciation", "Managing inventory"],
     answer: "Recording wages and deductions"
   },
@@ -2560,9 +2560,9 @@ const costAccountingQuestions = [
     answer: "Depreciating"
   },
   {
-    question: "Calculate the cost of goods sold if opening stock = $5,000, purchases = $30,000, and closing stock = $7,000.",
-    options: ["$28,000", "$32,000", "$35,000", "$25,000"],
-    answer: "$28,000"
+    question: "Calculate the cost of goods sold if opening stock = GHS5,000, purchases = GHS30,000, and closing stock = GHS7,000.",
+    options: ["GHS28,000", "GHS32,000", "GHS35,000", "GHS25,000"],
+    answer: "GHS28,000"
   },
   {
     question: "Which of the following is an example of a negotiable instrument?",
@@ -2585,12 +2585,12 @@ const costAccountingQuestions = [
     answer: "Marginal costing treats fixed overhead as period cost, absorption includes it in product cost"
   },
   {
-    question: "Calculate the sales required to earn a profit of $20,000 if fixed cost = $60,000 and contribution margin ratio = 0.25.",
-    options: ["$320,000", "$300,000", "$280,000", "$350,000"],
-    answer: "$320,000"
+    question: "Calculate the sales required to earn a profit of GHS20,000 if fixed cost = GHS60,000 and contribution margin ratio = 0.25.",
+    options: ["GHS320,000", "GHS300,000", "GHS280,000", "GHS350,000"],
+    answer: "GHS320,000"
   },
   {
-    question: "What is the â€˜reorder levelâ€™ in stock control?",
+    question: "What is thereorder level in stock control?",
     options: ["Stock level at which a new order should be placed", "Maximum stock level", "Minimum stock level", "Average stock level"],
     answer: "Stock level at which a new order should be placed"
   },
@@ -2600,22 +2600,22 @@ const costAccountingQuestions = [
     answer: "Factory"
   },
   {
-    question: "What is the meaning of â€˜risk managementâ€™ in business finance?",
+    question: "What is the meaning ofrisk management in business finance?",
     options: ["Identifying and controlling threats to business", "Increasing profits", "Managing inventory", "Paying taxes"],
     answer: "Identifying and controlling threats to business"
   },
   {
-    question: "Calculate margin of safety ratio if sales = $150,000 and break-even sales = $120,000.",
+    question: "Calculate margin of safety ratio if sales = GHS150,000 and break-even sales = GHS120,000.",
     options: ["20%", "25%", "15%", "18%"],
     answer: "20%"
   },
   {
-    question: "Calculate the prime cost if direct materials = $30,000 and direct labour = $20,000.",
-    options: ["$50,000", "$40,000", "$35,000", "$25,000"],
-    answer: "$50,000"
+    question: "Calculate the prime cost if direct materials = GHS30,000 and direct labour = GHS20,000.",
+    options: ["GHS50,000", "GHS40,000", "GHS35,000", "GHS25,000"],
+    answer: "GHS50,000"
   },
   {
-    question: "What does â€˜overhead absorptionâ€™ refer to in cost accounting?",
+    question: "What doesoverhead absorption refer to in cost accounting?",
     options: ["Charging overheads to cost units", "Recording direct materials", "Paying salaries", "Calculating profit"],
     answer: "Charging overheads to cost units"
   },
@@ -2625,22 +2625,22 @@ const costAccountingQuestions = [
     answer: "Sales commission"
   },
   {
-    question: "Calculate labour rate variance if actual rate = $12 per hour, standard rate = $10 per hour, and actual hours = 1,000.",
-    options: ["$2,000 Adverse", "$2,000 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$2,000 Adverse"
+    question: "Calculate labour rate variance if actual rate = GHS12 per hour, standard rate = GHS10 per hour, and actual hours = 1,000.",
+    options: ["GHS2,000 Adverse", "GHS2,000 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS2,000 Adverse"
   },
   {
-    question: "Which of these best describes â€˜budgetary controlâ€™?",
+    question: "Which of these best describes budgetary control?",
     options: ["Comparing actual results with budgets", "Calculating taxes", "Cost classification", "Inventory management"],
     answer: "Comparing actual results with budgets"
   },
   {
-    question: "Calculate the overhead variance if actual overheads = $25,000 and absorbed overheads = $22,000.",
-    options: ["$3,000 Adverse", "$3,000 Favourable", "$2,000 Adverse", "$2,000 Favourable"],
-    answer: "$3,000 Adverse"
+    question: "Calculate the overhead variance if actual overheads = GHS25,000 and absorbed overheads = GHS22,000.",
+    options: ["GHS3,000 Adverse", "GHS3,000 Favourable", "GHS2,000 Adverse", "GHS2,000 Favourable"],
+    answer: "GHS3,000 Adverse"
   },
   {
-    question: "What is the â€˜reorder quantityâ€™?",
+    question: "What is the reorder quantity?",
     options: ["Optimal order size to minimize costs", "Maximum stock level", "Minimum stock level", "Average stock level"],
     answer: "Optimal order size to minimize costs"
   },
@@ -2650,9 +2650,9 @@ const costAccountingQuestions = [
     answer: "Electricity bill"
   },
   {
-    question: "Calculate the contribution per unit if selling price = $50 and variable cost = $30.",
-    options: ["$20", "$15", "$25", "$30"],
-    answer: "$20"
+    question: "Calculate the contribution per unit if selling price = GHS50 and variable cost = GHS30.",
+    options: ["GHS20", "GHS15", "GHS25", "GHS30"],
+    answer: "GHS20"
   },
   {
     question: "Which of these is NOT a characteristic of a good costing system?",
@@ -2660,9 +2660,9 @@ const costAccountingQuestions = [
     answer: "Complexity"
   },
   {
-    question: "Calculate the labour efficiency variance if standard hours = 1,200, actual hours = 1,100, standard rate = $15 per hour.",
-    options: ["$1,500 Favourable", "$1,500 Adverse", "$1,650 Favourable", "$1,650 Adverse"],
-    answer: "$1,500 Favourable"
+    question: "Calculate the labour efficiency variance if standard hours = 1,200, actual hours = 1,100, standard rate = GHS15 per hour.",
+    options: ["GHS1,500 Favourable", "GHS1,500 Adverse", "GHS1,650 Favourable", "GHS1,650 Adverse"],
+    answer: "GHS1,500 Favourable"
   },
   {
     question: "What is the primary function of stores keeping?",
@@ -2670,7 +2670,7 @@ const costAccountingQuestions = [
     answer: "Safeguarding materials"
   },
   {
-    question: "Calculate the stock turnover ratio if cost of goods sold = $120,000 and average stock = $30,000.",
+    question: "Calculate the stock turnover ratio if cost of goods sold = GHS120,000 and average stock = GHS30,000.",
     options: ["4 times", "3 times", "5 times", "6 times"],
     answer: "4 times"
   },
@@ -2685,12 +2685,12 @@ const costAccountingQuestions = [
     answer: "Rent"
   },
   {
-    question: "Calculate the break-even sales if fixed costs = $40,000 and contribution margin ratio = 0.4.",
-    options: ["$100,000", "$160,000", "$80,000", "$60,000"],
-    answer: "$100,000"
+    question: "Calculate the break-even sales if fixed costs = GHS40,000 and contribution margin ratio = 0.4.",
+    options: ["GHS100,000", "GHS160,000", "GHS80,000", "GHS60,000"],
+    answer: "GHS100,000"
   },
   {
-    question: "What does â€˜standard costingâ€™ help to control?",
+    question: "What doesstandard costing help to control?",
     options: ["Costs", "Sales", "Inventory", "Depreciation"],
     answer: "Costs"
   },
@@ -2715,9 +2715,9 @@ const costAccountingQuestions = [
     answer: "Recording cost transactions"
   },
   {
-    question: "Calculate the margin of safety if expected sales are $200,000 and break-even sales are $150,000.",
-    options: ["$50,000", "$40,000", "$60,000", "$70,000"],
-    answer: "$50,000"
+    question: "Calculate the margin of safety if expected sales are GHS200,000 and break-even sales are GHS150,000.",
+    options: ["GHS50,000", "GHS40,000", "GHS60,000", "GHS70,000"],
+    answer: "GHS50,000"
   },
   {
     question: "Which of the following is NOT part of the costing cycle?",
@@ -2725,14 +2725,14 @@ const costAccountingQuestions = [
     answer: "Tax computation"
   },
   {
-    question: "What is meant by â€˜integrated cost accounting systemâ€™?",
+    question: "What is meant by integrated cost accounting system?",
     options: ["Combination of cost and financial accounts", "Separate cost accounts", "Payroll only", "Sales ledger only"],
     answer: "Combination of cost and financial accounts"
   },
   {
-    question: "Calculate the overhead absorption rate if estimated overheads = $48,000 and machine hours = 12,000.",
-    options: ["$4 per machine hour", "$3 per machine hour", "$5 per machine hour", "$6 per machine hour"],
-    answer: "$4 per machine hour"
+    question: "Calculate the overhead absorption rate if estimated overheads = GHS48,000 and machine hours = 12,000.",
+    options: ["GHS4 per machine hour", "GHS3 per machine hour", "GHS5 per machine hour", "GHS6 per machine hour"],
+    answer: "GHS4 per machine hour"
   },
   {
     question: "Which of the following is NOT a method of material pricing?",
@@ -2740,12 +2740,12 @@ const costAccountingQuestions = [
     answer: "Last sale price"
   },
   {
-    question: "Calculate the total cost if direct materials = $25,000, direct labour = $15,000 and overheads absorbed = $10,000.",
-    options: ["$50,000", "$40,000", "$45,000", "$55,000"],
-    answer: "$50,000"
+    question: "Calculate the total cost if direct materials = GHS25,000, direct labour = GHS15,000 and overheads absorbed = GHS10,000.",
+    options: ["GHS50,000", "GHS40,000", "GHS45,000", "GHS55,000"],
+    answer: "GHS50,000"
   },
   {
-    question: "What is â€˜cost behaviorâ€™?",
+    question: "What is cost behavior?",
     options: ["How costs change with activity", "Fixed costs only", "Variable costs only", "Profit margins"],
     answer: "How costs change with activity"
   },
@@ -2755,17 +2755,17 @@ const costAccountingQuestions = [
     answer: "Fixed costs absorbed into product cost"
   },
   {
-    question: "Calculate the labour cost if actual hours worked are 1,200 and wage rate is $8 per hour.",
-    options: ["$9,600", "$10,000", "$8,800", "$9,200"],
-    answer: "$9,600"
+    question: "Calculate the labour cost if actual hours worked are 1,200 and wage rate is GHS8 per hour.",
+    options: ["GHS9,600", "GHS10,000", "GHS8,800", "GHS9,200"],
+    answer: "GHS9,600"
   },
   {
-    question: "What is the purpose of â€˜payroll accountingâ€™?",
+    question: "What is the purpose of payroll accounting?",
     options: ["Calculating wages and deductions", "Managing inventory", "Sales recording", "Budgeting"],
     answer: "Calculating wages and deductions"
   },
   {
-    question: "Calculate the break-even point in units if fixed costs = $30,000, selling price per unit = $15, and variable cost per unit = $10.",
+    question: "Calculate the break-even point in units if fixed costs = GHS30,000, selling price per unit = GHS15, and variable cost per unit = GHS10.",
     options: ["6,000 units", "5,000 units", "4,000 units", "7,000 units"],
     answer: "6,000 units"
   },
@@ -2780,7 +2780,7 @@ const costAccountingQuestions = [
     answer: "Future cost"
   },
   {
-    question: "Calculate stock turnover in days if cost of goods sold = $360,000 and average stock = $30,000.",
+    question: "Calculate stock turnover in days if cost of goods sold = GHS360,000 and average stock = GHS30,000.",
     options: ["30 days", "25 days", "35 days", "40 days"],
     answer: "30 days"
   },
@@ -2790,34 +2790,34 @@ const costAccountingQuestions = [
     answer: "Job cost sheet"
   },
   {
-    question: "What is â€˜risk managementâ€™ in financial institutions?",
+    question: "What isrisk management in financial institutions?",
     options: ["Identifying and controlling financial risks", "Increasing sales", "Managing payroll", "Tax planning"],
     answer: "Identifying and controlling financial risks"
   },
   {
-    question: "Calculate the standard cost if standard quantity is 500 units and standard price per unit is $25.",
-    options: ["$12,500", "$10,000", "$11,000", "$13,000"],
-    answer: "$12,500"
+    question: "Calculate the standard cost if standard quantity is 500 units and standard price per unit is GHS25.",
+    options: ["GHS12,500", "GHS10,000", "GHS11,000", "GHS13,000"],
+    answer: "GHS12,500"
   },
   {
-    question: "Define â€˜cost centerâ€™ in cost accounting.",
+    question: "Define cost center in cost accounting.",
     options: ["A department where costs are collected", "A profit-making unit", "A sales outlet", "A budgeting office"],
     answer: "A department where costs are collected"
   },
   {
-    question: "Calculate the material price variance if actual cost = $22,000 for 2,000 kg and standard cost = $10 per kg.",
-    options: ["$2,000 Adverse", "$2,000 Favourable", "$20,000 Adverse", "$20,000 Favourable"],
-    answer: "$2,000 Adverse"
+    question: "Calculate the material price variance if actual cost = GHS22,000 for 2,000 kg and standard cost = GHS10 per kg.",
+    options: ["GHS2,000 Adverse", "GHS2,000 Favourable", "GHS20,000 Adverse", "GHS20,000 Favourable"],
+    answer: "GHS2,000 Adverse"
   },
   {
-    question: "What is â€˜job costingâ€™ best suited for?",
+    question: "What isjob costing best suited for?",
     options: ["Custom products", "Mass production", "Continuous processes", "Retail stores"],
     answer: "Custom products"
   },
   {
-    question: "Calculate the break-even sales revenue if fixed costs are $25,000 and contribution margin per unit is $5 with 10,000 units sold.",
-    options: ["$50,000", "$125,000", "$75,000", "$100,000"],
-    answer: "$125,000"
+    question: "Calculate the break-even sales revenue if fixed costs are GHS25,000 and contribution margin per unit is GHS5 with 10,000 units sold.",
+    options: ["GHS50,000", "GHS125,000", "GHS75,000", "GHS100,000"],
+    answer: "GHS125,000"
   },
   {
     question: "Which costing method allocates overheads based on activities?",
@@ -2825,19 +2825,19 @@ const costAccountingQuestions = [
     answer: "Activity based costing"
   },
   {
-    question: "Calculate labour idle time variance if actual hours = 1,100, productive hours = 1,000, and standard rate = $12 per hour.",
-    options: ["$1,200 Adverse", "$1,200 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$1,200 Adverse"
+    question: "Calculate labour idle time variance if actual hours = 1,100, productive hours = 1,000, and standard rate = GHS12 per hour.",
+    options: ["GHS1,200 Adverse", "GHS1,200 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS1,200 Adverse"
   },
   {
-    question: "What is the main purpose of â€˜stock valuationâ€™?",
+    question: "What is the main purpose of stock valuation?",
     options: ["To value inventory for financial reporting", "To calculate salaries", "To compute taxes", "To budget expenses"],
     answer: "To value inventory for financial reporting"
   },
   {
-    question: "Calculate the closing stock if opening stock is $15,000, purchases are $40,000, and cost of goods sold is $45,000.",
-    options: ["$10,000", "$5,000", "$15,000", "$20,000"],
-    answer: "$10,000"
+    question: "Calculate the closing stock if opening stock is GHS15,000, purchases are GHS40,000, and cost of goods sold is GHS45,000.",
+    options: ["GHS10,000", "GHS5,000", "GHS15,000", "GHS20,000"],
+    answer: "GHS10,000"
   },
   {
     question: "Which of the following is a direct cost?",
@@ -2845,19 +2845,19 @@ const costAccountingQuestions = [
     answer: "Direct labour"
   },
   {
-    question: "Calculate the labour cost per unit if total labour cost is $18,000 and output is 1,500 units.",
-    options: ["$12", "$10", "$15", "$20"],
-    answer: "$12"
+    question: "Calculate the labour cost per unit if total labour cost is GHS18,000 and output is 1,500 units.",
+    options: ["GHS12", "GHS10", "GHS15", "GHS20"],
+    answer: "GHS12"
   },
   {
-    question: "What does â€˜absorption costingâ€™ include that â€˜marginal costingâ€™ excludes?",
+    question: "What doesabsorption costing include thatmarginal costing excludes?",
     options: ["Fixed production overheads", "Variable costs", "Direct labour", "Direct materials"],
     answer: "Fixed production overheads"
   },
   {
-    question: "Calculate the total cost of production if prime cost is $70,000 and overheads absorbed are $25,000.",
-    options: ["$95,000", "$90,000", "$100,000", "$75,000"],
-    answer: "$95,000"
+    question: "Calculate the total cost of production if prime cost is GHS70,000 and overheads absorbed are GHS25,000.",
+    options: ["GHS95,000", "GHS90,000", "GHS100,000", "GHS75,000"],
+    answer: "GHS95,000"
   },
   {
     question: "Which method is used to control labour costs?",
@@ -2865,12 +2865,12 @@ const costAccountingQuestions = [
     answer: "Time keeping"
   },
   {
-    question: "What is the formula for calculating â€˜labour turnover rateâ€™?",
+    question: "What is the formula for calculating labour turnover rate?",
     options: ["(Number of leavers / Average number employed) x 100", "Total wages / Number of employees", "Number of hires / Number of employees", "(Number of leavers / Total employees) x 100"],
     answer: "(Number of leavers / Average number employed) x 100"
   },
   {
-    question: "Calculate the stock turnover ratio if opening stock is $20,000, closing stock is $30,000 and cost of goods sold is $180,000.",
+    question: "Calculate the stock turnover ratio if opening stock is GHS20,000, closing stock is GHS30,000 and cost of goods sold is GHS180,000.",
     options: ["6 times", "5 times", "4 times", "7 times"],
     answer: "6 times"
   },
@@ -2880,22 +2880,22 @@ const costAccountingQuestions = [
     answer: "Factory consumables"
   },
   {
-    question: "Calculate the overhead absorption rate if estimated overheads are $60,000 and estimated labour hours are 15,000.",
-    options: ["$4 per hour", "$5 per hour", "$3 per hour", "$6 per hour"],
-    answer: "$4 per hour"
+    question: "Calculate the overhead absorption rate if estimated overheads are GHS60,000 and estimated labour hours are 15,000.",
+    options: ["GHS4 per hour", "GHS5 per hour", "GHS3 per hour", "GHS6 per hour"],
+    answer: "GHS4 per hour"
   },
   {
-    question: "Which of these is NOT included in â€˜cost accountsâ€™?",
+    question: "Which of these is NOT included in cost accounts?",
     options: ["Sales revenue", "Material cost", "Labour cost", "Overhead cost"],
     answer: "Sales revenue"
   },
   {
-    question: "What is the purpose of â€˜cost reconciliationâ€™?",
+    question: "What is the purpose of cost reconciliation?",
     options: ["To explain differences between cost and financial profit", "To prepare budgets", "To compute taxes", "To record sales"],
     answer: "To explain differences between cost and financial profit"
   },
   {
-    question: "Calculate the break-even point in sales units if fixed costs = $45,000, selling price per unit = $30, and variable cost per unit = $18.",
+    question: "Calculate the break-even point in sales units if fixed costs = GHS45,000, selling price per unit = GHS30, and variable cost per unit = GHS18.",
     options: ["3,750 units", "4,000 units", "2,500 units", "3,000 units"],
     answer: "3,750 units"
   },
@@ -2905,34 +2905,34 @@ const costAccountingQuestions = [
     answer: "Purchase order"
   },
   {
-    question: "What is â€˜standard costingâ€™ primarily used for?",
+    question: "What isstandard costing primarily used for?",
     options: ["Cost control", "Sales forecasting", "Payroll", "Tax planning"],
     answer: "Cost control"
   },
   {
-    question: "Calculate material usage variance if standard quantity is 2,500 kg, actual quantity used is 2,700 kg, and standard price is $8 per kg.",
-    options: ["$1,600 Adverse", "$1,600 Favourable", "$1,200 Adverse", "$1,200 Favourable"],
-    answer: "$1,600 Adverse"
+    question: "Calculate material usage variance if standard quantity is 2,500 kg, actual quantity used is 2,700 kg, and standard price is GHS8 per kg.",
+    options: ["GHS1,600 Adverse", "GHS1,600 Favourable", "GHS1,200 Adverse", "GHS1,200 Favourable"],
+    answer: "GHS1,600 Adverse"
   },
   {
-    question: "Which of these best describes â€˜job costingâ€™?",
+    question: "Which of these best describes job costing?",
     options: ["Costs are assigned to specific jobs", "Costs are averaged over mass production", "Costs are assigned to departments", "Costs are recorded monthly"],
     answer: "Costs are assigned to specific jobs"
   },
   {
-    question: "Calculate contribution margin if sales revenue is $150,000 and variable costs are $90,000.",
-    options: ["$60,000", "$70,000", "$50,000", "$40,000"],
-    answer: "$60,000"
+    question: "Calculate contribution margin if sales revenue is GHS150,000 and variable costs are GHS90,000.",
+    options: ["GHS60,000", "GHS70,000", "GHS50,000", "GHS40,000"],
+    answer: "GHS60,000"
   },
   {
-    question: "What does â€˜risk managementâ€™ in insurance primarily involve?",
+    question: "What doesrisk management in insurance primarily involve?",
     options: ["Minimizing financial losses", "Increasing sales", "Hiring staff", "Stock control"],
     answer: "Minimizing financial losses"
   },
   {
-    question: "Calculate the labour efficiency variance if standard hours = 1,500, actual hours = 1,600, and standard rate is $14 per hour.",
-    options: ["$1,400 Adverse", "$1,400 Favourable", "$1,600 Adverse", "$1,600 Favourable"],
-    answer: "$1,400 Adverse"
+    question: "Calculate the labour efficiency variance if standard hours = 1,500, actual hours = 1,600, and standard rate is GHS14 per hour.",
+    options: ["GHS1,400 Adverse", "GHS1,400 Favourable", "GHS1,600 Adverse", "GHS1,600 Favourable"],
+    answer: "GHS1,400 Adverse"
   },
   {
     question: "Which document records the receipt of materials into stores?",
@@ -2945,7 +2945,7 @@ const costAccountingQuestions = [
     answer: "Profit"
   },
   {
-    question: "Calculate the margin of safety ratio if expected sales are $250,000 and break-even sales are $200,000.",
+    question: "Calculate the margin of safety ratio if expected sales are GHS250,000 and break-even sales are GHS200,000.",
     options: ["20%", "25%", "15%", "30%"],
     answer: "20%"
   },
@@ -2955,22 +2955,22 @@ const costAccountingQuestions = [
     answer: "Marginal costing"
   },
   {
-    question: "Calculate the prime cost if direct materials are $40,000 and direct labour is $18,000.",
-    options: ["$58,000", "$60,000", "$50,000", "$55,000"],
-    answer: "$58,000"
+    question: "Calculate the prime cost if direct materials are GHS40,000 and direct labour is GHS18,000.",
+    options: ["GHS58,000", "GHS60,000", "GHS50,000", "GHS55,000"],
+    answer: "GHS58,000"
   },
   {
-    question: "What is the purpose of â€˜stores keepingâ€™?",
+    question: "What is the purpose of stores keeping?",
     options: ["To ensure materials are available and protected", "To sell goods", "To manufacture products", "To pay employees"],
     answer: "To ensure materials are available and protected"
   },
   {
-    question: "Calculate the contribution per unit if selling price is $45 and variable cost is $30.",
-    options: ["$15", "$20", "$10", "$12"],
-    answer: "$15"
+    question: "Calculate the contribution per unit if selling price is GHS45 and variable cost is GHS30.",
+    options: ["GHS15", "GHS20", "GHS10", "GHS12"],
+    answer: "GHS15"
   },
   {
-    question: "What is meant by â€˜variable costâ€™?",
+    question: "What is meant by variable cost?",
     options: ["Cost that changes with output", "Fixed monthly cost", "Depreciation", "Rent"],
     answer: "Cost that changes with output"
   },
@@ -2980,9 +2980,9 @@ const costAccountingQuestions = [
     answer: "Batch costing"
   },
   {
-    question: "Calculate the labour cost if 1,800 hours are worked at $7 per hour.",
-    options: ["$12,600", "$13,000", "$12,800", "$13,200"],
-    answer: "$12,600"
+    question: "Calculate the labour cost if 1,800 hours are worked at GHS7 per hour.",
+    options: ["GHS12,600", "GHS13,000", "GHS12,800", "GHS13,200"],
+    answer: "GHS12,600"
   },
   {
     question: "Which of these is NOT a component of cost?",
@@ -2990,19 +2990,19 @@ const costAccountingQuestions = [
     answer: "Revenue"
   },
   {
-    question: "Calculate the total cost if direct materials = $35,000, direct labour = $15,000, and overheads absorbed = $12,000.",
-    options: ["$62,000", "$60,000", "$55,000", "$58,000"],
-    answer: "$62,000"
+    question: "Calculate the total cost if direct materials = GHS35,000, direct labour = GHS15,000, and overheads absorbed = GHS12,000.",
+    options: ["GHS62,000", "GHS60,000", "GHS55,000", "GHS58,000"],
+    answer: "GHS62,000"
   },
   {
-    question: "Define â€˜prime costâ€™ in cost accounting.",
+    question: "Define prime cost in cost accounting.",
     options: ["Sum of direct materials and direct labour", "Sum of fixed and variable costs", "Total overhead cost", "Total manufacturing cost"],
     answer: "Sum of direct materials and direct labour"
   },
   {
-    question: "Calculate material cost variance if standard cost is $5,000, actual cost is $5,400.",
-    options: ["$400 Adverse", "$400 Favourable", "$500 Adverse", "$500 Favourable"],
-    answer: "$400 Adverse"
+    question: "Calculate material cost variance if standard cost is GHS5,000, actual cost is GHS5,400.",
+    options: ["GHS400 Adverse", "GHS400 Favourable", "GHS500 Adverse", "GHS500 Favourable"],
+    answer: "GHS400 Adverse"
   },
   {
     question: "Which document authorizes the release of materials to production?",
@@ -3010,9 +3010,9 @@ const costAccountingQuestions = [
     answer: "Material requisition note"
   },
   {
-    question: "Calculate overhead absorption rate if overheads are $80,000 and machine hours are 20,000.",
-    options: ["$4 per hour", "$5 per hour", "$6 per hour", "$3 per hour"],
-    answer: "$4 per hour"
+    question: "Calculate overhead absorption rate if overheads are GHS80,000 and machine hours are 20,000.",
+    options: ["GHS4 per hour", "GHS5 per hour", "GHS6 per hour", "GHS3 per hour"],
+    answer: "GHS4 per hour"
   },
   {
     question: "Which type of costing is used for continuous manufacturing processes?",
@@ -3020,17 +3020,17 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "Calculate labour cost variance if actual labour cost is $12,500 and standard labour cost is $13,000.",
-    options: ["$500 Favourable", "$500 Adverse", "$1,000 Favourable", "$1,000 Adverse"],
-    answer: "$500 Favourable"
+    question: "Calculate labour cost variance if actual labour cost is GHS12,500 and standard labour cost is GHS13,000.",
+    options: ["GHS500 Favourable", "GHS500 Adverse", "GHS1,000 Favourable", "GHS1,000 Adverse"],
+    answer: "GHS500 Favourable"
   },
   {
-    question: "What is â€˜absorption costingâ€™?",
+    question: "What is absorption costing.",
     options: ["Costing that includes all manufacturing costs", "Costing that includes only variable costs", "Costing that excludes overheads", "Costing that ignores labour costs"],
     answer: "Costing that includes all manufacturing costs"
   },
   {
-    question: "Calculate the break-even point in units if fixed costs are $60,000, selling price per unit $25, and variable cost per unit $15.",
+    question: "Calculate the break-even point in units if fixed costs are GHS60,000, selling price per unit GHS25, and variable cost per unit GHS15.",
     options: ["6,000 units", "4,000 units", "5,000 units", "3,000 units"],
     answer: "6,000 units"
   },
@@ -3040,34 +3040,34 @@ const costAccountingQuestions = [
     answer: "Factory rent"
   },
   {
-    question: "What is the â€˜margin of safetyâ€™?",
+    question: "What is margin of safety?",
     options: ["Difference between sales and break-even sales", "Difference between fixed and variable costs", "Total sales revenue", "Profit before tax"],
     answer: "Difference between sales and break-even sales"
   },
   {
-    question: "Calculate the contribution margin if sales are $100,000 and variable costs are $60,000.",
-    options: ["$40,000", "$50,000", "$60,000", "$30,000"],
-    answer: "$40,000"
+    question: "Calculate the contribution margin if sales are GHS100,000 and variable costs are GHS60,000.",
+    options: ["GHS40,000", "GHS50,000", "GHS60,000", "GHS30,000"],
+    answer: "GHS40,000"
   },
   {
-    question: "What is â€˜labour turnoverâ€™?",
+    question: "What is labour turnover?",
     options: ["Rate at which employees leave an organization", "Number of employees hired", "Total wages paid", "Labour productivity"],
     answer: "Rate at which employees leave an organization"
   },
   {
-    question: "Calculate stock turnover if cost of goods sold is $120,000 and average stock is $20,000.",
+    question: "Calculate stock turnover if cost of goods sold is GHS120,000 and average stock is GHS20,000.",
     options: ["6 times", "5 times", "4 times", "7 times"],
     answer: "6 times"
   },
   {
-    question: "Which costing method uses â€˜batchesâ€™ as the unit of cost?",
+    question: "Which costing method usesbatches as the unit of cost?",
     options: ["Batch costing", "Job costing", "Process costing", "Contract costing"],
     answer: "Batch costing"
   },
   {
-    question: "Calculate the labour efficiency variance if standard hours are 1,000, actual hours are 900, and standard rate is $10 per hour.",
-    options: ["$1,000 Favourable", "$1,000 Adverse", "$900 Favourable", "$900 Adverse"],
-    answer: "$1,000 Favourable"
+    question: "Calculate the labour efficiency variance if standard hours are 1,000, actual hours are 900, and standard rate is GHS10 per hour.",
+    options: ["GHS1,000 Favourable", "GHS1,000 Adverse", "GHS900 Favourable", "GHS900 Adverse"],
+    answer: "GHS1,000 Favourable"
   },
   {
     question: "Which document records the goods received from suppliers?",
@@ -3075,29 +3075,29 @@ const costAccountingQuestions = [
     answer: "Goods received note"
   },
   {
-    question: "Define â€˜cost behaviorâ€™ in cost accounting.",
+    question: "Define cost behavior in cost accounting.",
     options: ["How costs change with activity level", "Fixed monthly costs", "Costs that are controllable", "Costs excluded from budgets"],
     answer: "How costs change with activity level"
   },
   {
-    question: "Calculate the cost per unit if total cost is $150,000 for 10,000 units produced.",
-    options: ["$15", "$10", "$12", "$20"],
-    answer: "$15"
+    question: "Calculate the cost per unit if total cost is GHS150,000 for 10,000 units produced.",
+    options: ["GHS15", "GHS10", "GHS12", "GHS20"],
+    answer: "GHS15"
   },
   {
-    question: "Which of these is an example of â€˜indirect labourâ€™?",
+    question: "Which of these is an example of indirect labour?",
     options: ["Supervisor's salary", "Assembler's wages", "Machine operator's wages", "Factory cleaner's wages"],
     answer: "Supervisor's salary"
   },
   {
-    question: "What is the main objective of â€˜budgetary controlâ€™?",
+    question: "What is the main objective of budgetary control?",
     options: ["To control costs and operations", "To calculate taxes", "To prepare financial statements", "To determine sales targets"],
     answer: "To control costs and operations"
   },
   {
-    question: "Calculate the labour cost if 2,000 hours are worked at $8 per hour.",
-    options: ["$16,000", "$18,000", "$15,000", "$20,000"],
-    answer: "$16,000"
+    question: "Calculate the labour cost if 2,000 hours are worked at GHS8 per hour.",
+    options: ["GHS16,000", "GHS18,000", "GHS15,000", "GHS20,000"],
+    answer: "GHS16,000"
   },
   {
     question: "Which of these is NOT a cost element?",
@@ -3105,9 +3105,9 @@ const costAccountingQuestions = [
     answer: "Sales revenue"
   },
   {
-    question: "Calculate the total cost if direct materials are $50,000, direct labour is $25,000, and overheads absorbed are $15,000.",
-    options: ["$90,000", "$85,000", "$80,000", "$95,000"],
-    answer: "$90,000"
+    question: "Calculate the total cost if direct materials are GHS50,000, direct labour is GHS25,000, and overheads absorbed are GHS15,000.",
+    options: ["GHS90,000", "GHS85,000", "GHS80,000", "GHS95,000"],
+    answer: "GHS90,000"
   },
   {
     question: "Which costing method is best for a construction project?",
@@ -3115,32 +3115,32 @@ const costAccountingQuestions = [
     answer: "Contract costing"
   },
   {
-    question: "Calculate material usage variance if standard quantity is 1,200 kg, actual quantity used is 1,300 kg, and standard price is $4 per kg.",
-    options: ["$400 Adverse", "$400 Favourable", "$200 Adverse", "$200 Favourable"],
-    answer: "$400 Adverse"
+    question: "Calculate material usage variance if standard quantity is 1,200 kg, actual quantity used is 1,300 kg, and standard price is GHS4 per kg.",
+    options: ["GHS400 Adverse", "GHS400 Favourable", "GHS200 Adverse", "GHS200 Favourable"],
+    answer: "GHS400 Adverse"
   },
   {
-    question: "What does â€˜risk managementâ€™ in business involve?",
+    question: "What doesrisk management in business involve?",
     options: ["Identifying and reducing risks", "Increasing sales", "Hiring new staff", "Stock control"],
     answer: "Identifying and reducing risks"
   },
   {
-    question: "Calculate the break-even sales revenue if fixed costs are $30,000 and contribution margin ratio is 40%.",
-    options: ["$75,000", "$60,000", "$90,000", "$50,000"],
-    answer: "$75,000"
+    question: "Calculate the break-even sales revenue if fixed costs are GHS30,000 and contribution margin ratio is 40%.",
+    options: ["GHS75,000", "GHS60,000", "GHS90,000", "GHS50,000"],
+    answer: "GHS75,000"
   },
   {
-    question: "What is the purpose of â€˜material controlâ€™?",
+    question: "What is the purpose of material control?",
     options: ["To ensure materials are used efficiently", "To increase sales", "To pay employees", "To market products"],
     answer: "To ensure materials are used efficiently"
   },
   {
-    question: "Calculate contribution per unit if selling price is $50 and variable cost is $35.",
-    options: ["$15", "$20", "$10", "$12"],
-    answer: "$15"
+    question: "Calculate contribution per unit if selling price is GHS50 and variable cost is GHS35.",
+    options: ["GHS15", "GHS20", "GHS10", "GHS12"],
+    answer: "GHS15"
   },
   {
-    question: "What is â€˜marginal costingâ€™?",
+    question: "What is marginal costing?",
     options: ["Costing that considers variable costs only", "Costing that includes fixed and variable costs", "Costing that ignores labour costs", "Costing that excludes materials"],
     answer: "Costing that considers variable costs only"
   },
@@ -3150,19 +3150,19 @@ const costAccountingQuestions = [
     answer: "Direct materials"
   },
   {
-    question: "Calculate the closing stock if opening stock is $12,000, purchases are $50,000, and cost of goods sold is $40,000.",
-    options: ["$22,000", "$12,000", "$10,000", "$15,000"],
-    answer: "$22,000"
+    question: "Calculate the closing stock if opening stock is GHS12,000, purchases are GHS50,000, and cost of goods sold is GHS40,000.",
+    options: ["GHS22,000", "GHS12,000", "GHS10,000", "GHS15,000"],
+    answer: "GHS22,000"
   },
   {
-    question: "What is â€˜standard costingâ€™ used for?",
+    question: "What isstandard costing used for?",
     options: ["Setting cost benchmarks", "Marketing products", "Paying taxes", "Preparing financial statements"],
     answer: "Setting cost benchmarks"
   },
   {
-    question: "Calculate labour idle time variance if actual hours = 1,200, productive hours = 1,000, and standard rate = $10 per hour.",
-    options: ["$2,000 Adverse", "$2,000 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$2,000 Adverse"
+    question: "Calculate labour idle time variance if actual hours = 1,200, productive hours = 1,000, and standard rate = GHS10 per hour.",
+    options: ["GHS2,000 Adverse", "GHS2,000 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS2,000 Adverse"
   },
   {
     question: "Which document records the receipt of materials from suppliers?",
@@ -3170,34 +3170,34 @@ const costAccountingQuestions = [
     answer: "Goods received note"
   },
   {
-    question: "What is â€˜labour remunerationâ€™?",
+    question: "What is labour remuneration?",
     options: ["Payment to workers for their labour", "Cost of materials", "Factory overheads", "Sales commissions"],
     answer: "Payment to workers for their labour"
   },
   {
-    question: "Calculate the contribution margin ratio if sales are $200,000 and variable costs are $120,000.",
+    question: "Calculate the contribution margin ratio if sales are GHS200,000 and variable costs are GHS120,000.",
     options: ["40%", "50%", "60%", "30%"],
     answer: "40%"
   },
   {
-    question: "What is â€˜cost accountingâ€™?",
+    question: "What is cost accounting?",
     options: ["Accounting for costs to control and reduce them", "Accounting for profits", "Accounting for sales", "Accounting for taxes"],
     answer: "Accounting for costs to control and reduce them"
   },
   {
-    question: "Calculate the break-even point in units if fixed costs are $24,000, selling price per unit is $20, and variable cost per unit is $12.",
+    question: "Calculate the break-even point in units if fixed costs are GHS24,000, selling price per unit is GHS20, and variable cost per unit is GHS12.",
     options: ["3,000 units", "2,500 units", "4,000 units", "2,000 units"],
     answer: "3,000 units"
   },
   {
-    question: "Define â€˜cost centreâ€™ in cost accounting.",
+    question: "Define cost centre in cost accounting.",
     options: ["A location where costs are accumulated", "A profit-generating unit", "A place for storing materials", "A department for sales"],
     answer: "A location where costs are accumulated"
   },
   {
-    question: "Calculate the materials price variance if actual quantity purchased is 500 kg, actual price is $6/kg, and standard price is $5/kg.",
-    options: ["$500 Adverse", "$500 Favourable", "$600 Adverse", "$600 Favourable"],
-    answer: "$500 Adverse"
+    question: "Calculate the materials price variance if actual quantity purchased is 500 kg, actual price is GHS6/kg, and standard price is GHS5/kg.",
+    options: ["GHS500 Adverse", "GHS500 Favourable", "GHS600 Adverse", "GHS600 Favourable"],
+    answer: "GHS500 Adverse"
   },
   {
     question: "Which of the following is a period cost?",
@@ -3205,9 +3205,9 @@ const costAccountingQuestions = [
     answer: "Sales commission"
   },
   {
-    question: "Calculate factory overhead absorption rate if overheads are $90,000 and direct labour hours are 30,000 hours.",
-    options: ["$3 per hour", "$2.50 per hour", "$4 per hour", "$3.50 per hour"],
-    answer: "$3 per hour"
+    question: "Calculate factory overhead absorption rate if overheads are GHS90,000 and direct labour hours are 30,000 hours.",
+    options: ["GHS3 per hour", "GHS2.50 per hour", "GHS4 per hour", "GHS3.50 per hour"],
+    answer: "GHS3 per hour"
   },
   {
     question: "Which costing method is used when products are unique and customized?",
@@ -3215,19 +3215,19 @@ const costAccountingQuestions = [
     answer: "Job costing"
   },
   {
-    question: "Calculate labour rate variance if actual hours are 1,000, actual rate is $12/hour, and standard rate is $10/hour.",
-    options: ["$2,000 Adverse", "$2,000 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$2,000 Adverse"
+    question: "Calculate labour rate variance if actual hours are 1,000, actual rate is GHS12/hour, and standard rate is GHS10/hour.",
+    options: ["GHS2,000 Adverse", "GHS2,000 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS2,000 Adverse"
   },
   {
-    question: "What is â€˜variable costâ€™?",
+    question: "What isvariable cost?",
     options: ["Cost that changes with output", "Cost that remains constant", "Fixed manufacturing overhead", "Depreciation"],
     answer: "Cost that changes with output"
   },
   {
-    question: "Calculate break-even sales if fixed costs are $50,000 and contribution margin ratio is 40%.",
-    options: ["$125,000", "$100,000", "$150,000", "$200,000"],
-    answer: "$125,000"
+    question: "Calculate break-even sales if fixed costs are GHS50,000 and contribution margin ratio is 40%.",
+    options: ["GHS125,000", "GHS100,000", "GHS150,000", "GHS200,000"],
+    answer: "GHS125,000"
   },
   {
     question: "Which of the following is NOT a fixed cost?",
@@ -3235,9 +3235,9 @@ const costAccountingQuestions = [
     answer: "Direct labour"
   },
   {
-    question: "Calculate contribution margin if sales are $80,000 and variable costs are $50,000.",
-    options: ["$30,000", "$25,000", "$20,000", "$40,000"],
-    answer: "$30,000"
+    question: "Calculate contribution margin if sales are GHS80,000 and variable costs are GHS50,000.",
+    options: ["GHS30,000", "GHS25,000", "GHS20,000", "GHS40,000"],
+    answer: "GHS30,000"
   },
   {
     question: "What is the formula for margin of safety?",
@@ -3245,17 +3245,17 @@ const costAccountingQuestions = [
     answer: "Actual sales - Break-even sales"
   },
   {
-    question: "Calculate labour efficiency variance if standard hours are 900, actual hours are 1,000, and standard rate is $15/hour.",
-    options: ["$1,500 Adverse", "$1,500 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$1,500 Adverse"
+    question: "Calculate labour efficiency variance if standard hours are 900, actual hours are 1,000, and standard rate is GHS15/hour.",
+    options: ["GHS1,500 Adverse", "GHS1,500 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS1,500 Adverse"
   },
   {
-    question: "What is â€˜direct costâ€™?",
+    question: "What is direct cost?",
     options: ["Cost directly traceable to a product", "Fixed manufacturing overhead", "Salaries of supervisors", "Advertising expenses"],
     answer: "Cost directly traceable to a product"
   },
   {
-    question: "Calculate stock turnover ratio if cost of goods sold is $300,000 and average stock is $50,000.",
+    question: "Calculate stock turnover ratio if cost of goods sold is GHS300,000 and average stock is GHS50,000.",
     options: ["6 times", "5 times", "7 times", "8 times"],
     answer: "6 times"
   },
@@ -3265,34 +3265,34 @@ const costAccountingQuestions = [
     answer: "Process costing"
   },
   {
-    question: "Calculate material usage variance if standard quantity allowed is 2,000 kg, actual quantity used is 2,200 kg, and standard price is $3/kg.",
-    options: ["$600 Adverse", "$600 Favourable", "$660 Adverse", "$660 Favourable"],
-    answer: "$600 Adverse"
+    question: "Calculate material usage variance if standard quantity allowed is 2,000 kg, actual quantity used is 2,200 kg, and standard price is GHS3/kg.",
+    options: ["GHS600 Adverse", "GHS600 Favourable", "GHS660 Adverse", "GHS660 Favourable"],
+    answer: "GHS600 Adverse"
   },
   {
-    question: "What is the objective of â€˜budgetingâ€™ in cost accounting?",
+    question: "What is the objective ofbudgeting in cost accounting?",
     options: ["Planning and controlling costs", "Recording financial transactions", "Calculating taxes", "Preparing sales reports"],
     answer: "Planning and controlling costs"
   },
   {
-    question: "Calculate the cost per unit if total production cost is $90,000 and output is 5,000 units.",
-    options: ["$18", "$20", "$15", "$25"],
-    answer: "$18"
+    question: "Calculate the cost per unit if total production cost is GHS90,000 and output is 5,000 units.",
+    options: ["GHS18", "GHS20", "GHS15", "GHS25"],
+    answer: "GHS18"
   },
   {
-    question: "Which of these is an example of â€˜indirect materialsâ€™?",
+    question: "Which of these is an example of indirect materials?",
     options: ["Lubricants used in machinery", "Steel used to make cars", "Wood used in furniture", "Fabric used in clothing"],
     answer: "Lubricants used in machinery"
   },
   {
-    question: "What is â€˜labour turnover rateâ€™?",
+    question: "What is labour turnover rate?",
     options: ["Percentage of employees leaving the firm", "Percentage of employees hired", "Total labour cost", "Number of hours worked"],
     answer: "Percentage of employees leaving the firm"
   },
   {
-    question: "Calculate the overhead absorbed if overhead absorption rate is $5 per machine hour and machine hours used are 1,500.",
-    options: ["$7,500", "$8,000", "$6,500", "$9,000"],
-    answer: "$7,500"
+    question: "Calculate the overhead absorbed if overhead absorption rate is GHS5 per machine hour and machine hours used are 1,500.",
+    options: ["GHS7,500", "GHS8,000", "GHS6,500", "GHS9,000"],
+    answer: "GHS7,500"
   },
   {
     question: "Which document authorizes payment for purchased materials?",
@@ -3300,12 +3300,12 @@ const costAccountingQuestions = [
     answer: "Invoice"
   },
   {
-    question: "What is â€˜fixed costâ€™?",
+    question: "What is fixed cost?",
     options: ["Cost that does not change with output", "Cost that changes with output", "Direct labour cost", "Raw material cost"],
     answer: "Cost that does not change with output"
   },
   {
-    question: "Calculate the break-even point in units if fixed costs are $40,000, selling price per unit is $10, and variable cost per unit is $6.",
+    question: "Calculate the break-even point in units if fixed costs are GHS40,000, selling price per unit is GHS10, and variable cost per unit is GHS6.",
     options: ["10,000 units", "8,000 units", "12,000 units", "9,000 units"],
     answer: "10,000 units"
   },
@@ -3315,67 +3315,67 @@ const costAccountingQuestions = [
     answer: "Profit"
   },
   {
-    question: "Calculate contribution per unit if selling price is $35 and variable cost is $20.",
-    options: ["$15", "$10", "$12", "$18"],
-    answer: "$15"
+    question: "Calculate contribution per unit if selling price is GHS35 and variable cost is GHS20.",
+    options: ["GHS15", "GHS10", "GHS12", "GHS18"],
+    answer: "GHS15"
   },
   {
-    question: "What is â€˜marginal costingâ€™?",
+    question: "What is marginal costing?",
     options: ["Costing that includes only variable costs", "Costing that includes all manufacturing costs", "Costing used only for budgeting", "Costing that excludes labour"],
     answer: "Costing that includes only variable costs"
   },
   {
-    question: "Calculate closing stock if opening stock is $15,000, purchases are $45,000, and cost of goods sold is $40,000.",
-    options: ["$20,000", "$10,000", "$15,000", "$12,000"],
-    answer: "$20,000"
+    question: "Calculate closing stock if opening stock is GHS15,000, purchases are GHS45,000, and cost of goods sold is GHS40,000.",
+    options: ["GHS20,000", "GHS10,000", "GHS15,000", "GHS12,000"],
+    answer: "GHS20,000"
   },
   {
-    question: "Which costing method uses â€˜contractsâ€™ as cost units?",
+    question: "Which costing method usescontracts as cost units?",
     options: ["Contract costing", "Batch costing", "Job costing", "Process costing"],
     answer: "Contract costing"
   },
   {
-    question: "Calculate labour idle time variance if standard hours are 1,500, actual hours are 1,600, and standard rate is $12 per hour.",
-    options: ["$1,200 Adverse", "$1,200 Favourable", "$1,000 Adverse", "$1,000 Favourable"],
-    answer: "$1,200 Adverse"
+    question: "Calculate labour idle time variance if standard hours are 1,500, actual hours are 1,600, and standard rate is GHS12 per hour.",
+    options: ["GHS1,200 Adverse", "GHS1,200 Favourable", "GHS1,000 Adverse", "GHS1,000 Favourable"],
+    answer: "GHS1,200 Adverse"
   },
   {
-    question: "What is the primary purpose of â€˜cost reconciliationâ€™?",
+    question: "What is the primary purpose ofcost reconciliation?",
     options: ["To reconcile cost and financial accounts", "To prepare sales reports", "To manage inventory", "To calculate taxes"],
     answer: "To reconcile cost and financial accounts"
   },
   {
-    question: "Which of these is an example of â€˜direct labourâ€™?",
-    options: ["Wages of machine operators", "Supervisorâ€™s salary", "Factory cleanerâ€™s wages", "Accountantâ€™s salary"],
+    question: "Which of these is an example of direct labour?",
+    options: ["Wages of machine operators", "Supervisors salary", "Factory cleaners wages", "Accountants salary"],
     answer: "Wages of machine operators"
   },
   {
-    question: "Calculate the break-even sales revenue if fixed costs are $25,000 and contribution margin ratio is 50%.",
-    options: ["$50,000", "$40,000", "$60,000", "$55,000"],
-    answer: "$50,000"
+    question: "Calculate the break-even sales revenue if fixed costs are GHS25,000 and contribution margin ratio is 50%.",
+    options: ["GHS50,000", "GHS40,000", "GHS60,000", "GHS55,000"],
+    answer: "GHS50,000"
   },
   {
-    question: "What does â€˜activity based costingâ€™ focus on?",
+    question: "What does activity based costing focus on?",
     options: ["Costs related to activities that drive overhead", "Direct labour costs only", "Fixed costs only", "Sales revenue"],
     answer: "Costs related to activities that drive overhead"
   },
   {
-    question: "Calculate cost of goods sold if opening stock is $10,000, purchases are $60,000, and closing stock is $8,000.",
-    options: ["$62,000", "$58,000", "$65,000", "$68,000"],
-    answer: "$62,000"
+    question: "Calculate cost of goods sold if opening stock is GHS10,000, purchases are GHS60,000, and closing stock is GHS8,000.",
+    options: ["GHS62,000", "GHS58,000", "GHS65,000", "GHS68,000"],
+    answer: "GHS62,000"
   },
   {
-    question: "Which of the following is a benefit of â€˜standard costingâ€™?",
+    question: "Which of the following is a benefit of standard costing?",
     options: ["Identifying variances for control", "Increasing sales", "Reducing taxes", "Paying employees on time"],
     answer: "Identifying variances for control"
   },
   {
-    question: "Calculate material cost if 1,000 kg of materials is purchased at $4.50 per kg.",
-    options: ["$4,500", "$4,000", "$5,000", "$4,800"],
-    answer: "$4,500"
+    question: "Calculate material cost if 1,000 kg of materials is purchased at GHS4.50 per kg.",
+    options: ["GHS4,500", "GHS4,000", "GHS5,000", "GHS4,800"],
+    answer: "GHS4,500"
   },
   {
-    question: "What is â€˜labour remunerationâ€™?",
+    question: "What is labour remuneration.",
     options: ["Payment for work done by employees", "Material cost", "Factory overhead", "Marketing expenses"],
     answer: "Payment for work done by employees"
   }

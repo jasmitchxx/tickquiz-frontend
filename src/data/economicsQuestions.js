@@ -706,7 +706,7 @@ const economicsQuestions = [
   question: "The term 'economic welfare' refers to:",
   options: [
     "The well-being of individuals in society",
-    "The government’s income",
+    "The governmentÃ¢â‚¬â„¢s income",
     "The price of goods",
     "Total production"
   ],
@@ -1083,7 +1083,7 @@ const economicsQuestions = [
     answer: "Land"
   },
   {
-    question: "An entrepreneur’s main role is to:",
+    question: "An entrepreneurÃ¢â‚¬â„¢s main role is to:",
     options: ["Organize production and take risks", "Work in the factory", "Provide land", "Provide money"],
     answer: "Organize production and take risks"
   },
@@ -1148,12 +1148,12 @@ const economicsQuestions = [
     answer: "Capital"
   },
   {
-    question: "Which factor of production can be described as the ‘risk bearer’?",
+    question: "Which factor of production can be described as the Ã¢â‚¬Ëœrisk bearerÃ¢â‚¬â„¢?",
     options: ["Enterprise", "Labor", "Capital", "Land"],
     answer: "Enterprise"
   },
   {
-    question: "Which factor of production does a farmer’s tractor belong to?",
+    question: "Which factor of production does a farmerÃ¢â‚¬â„¢s tractor belong to?",
     options: ["Capital", "Land", "Labor", "Enterprise"],
     answer: "Capital"
   },
@@ -1198,7 +1198,7 @@ const economicsQuestions = [
     answer: "The level of production"
   },
   {
-    question: "Which factor of production is best described as ‘natural gifts’?",
+    question: "Which factor of production is best described as Ã¢â‚¬Ëœnatural giftsÃ¢â‚¬â„¢?",
     options: ["Land", "Labor", "Capital", "Enterprise"],
     answer: "Land"
   },
@@ -1453,7 +1453,7 @@ const economicsQuestions = [
     answer: "2"
   },
   {
-    question: "Calculate the price elasticity of demand if price changes from $5 to $4 and question:uantity demanded changes from 100 units to 130 units.",
+    question: "Calculate the price elasticity of demand if price changes from Ghs5 to Ghs4 and question:uantity demanded changes from 100 units to 130 units.",
     options: ["3.17", "2.43", "1.67", "0.75"],
     answer: "3.17"
   },
@@ -1493,7 +1493,7 @@ const economicsQuestions = [
     answer: "30%"
   },
   {
-    question: "Calculate the percentage change in price if price changes from $50 to $40.",
+    question: "Calculate the percentage change in price if price changes from Ghs50 to Ghs40.",
     options: ["20%", "25%", "15%", "10%"],
     answer: "20%"
   },
@@ -1613,7 +1613,7 @@ const economicsQuestions = [
     answer: "Complements"
   },
   {
-    question: "Calculate the price elasticity of demand if price changes from $8 to $10 and question:uantity demanded changes from 160 units to 120 units.",
+    question: "Calculate the price elasticity of demand if price changes from Ghs8 to Ghs10 and question:uantity demanded changes from 160 units to 120 units.",
     options: ["2.25", "1.5", "1.0", "0.75"],
     answer: "2.25"
   },
@@ -1628,7 +1628,7 @@ const economicsQuestions = [
     answer: "As price increases, question:uantity supplied increases"
   },
   {
-    question: "If the price of a good rises from $5 to $7 and question:uantity supplied rises from 100 to 140 units, what is the price elasticity of supply?",
+    question: "If the price of a good rises from Ghs5 to Ghs7 and question:uantity supplied rises from 100 to 140 units, what is the price elasticity of supply?",
     options: ["1.33", "1.0", "0.8", "1.5"],
     answer: "1.33"
   },
@@ -1653,7 +1653,7 @@ const economicsQuestions = [
     answer: "50%"
   },
   {
-    question: "Calculate the percentage change in price if price rises from $20 to $25.",
+    question: "Calculate the percentage change in price if price rises from Ghs20 to Ghs25.",
     options: ["25%", "20%", "30%", "15%"],
     answer: "25%"
   },
@@ -1748,7 +1748,7 @@ const economicsQuestions = [
     answer: "Shift right"
   },
   {
-    question: "Calculate the new question:uantity supplied if price rises from $12 to $15 and price elasticity of supply is 1.2. Initial question:uantity supplied is 180 units.",
+    question: "Calculate the new question:uantity supplied if price rises from Ghs12 to Ghs15 and price elasticity of supply is 1.2. Initial question:uantity supplied is 180 units.",
     options: ["216 units", "210 units", "230 units", "190 units"],
     answer: "216 units"
   },
@@ -1818,7 +1818,7 @@ const economicsQuestions = [
     answer: "Inelastic"
   },
   {
-    question: "Calculate the price elasticity of supply if price rises from $10 to $12 and question:uantity supplied rises from 300 to 360 units.",
+    question: "Calculate the price elasticity of supply if price rises from Ghs10 to Ghs12 and question:uantity supplied rises from 300 to 360 units.",
     options: ["1.5", "1.0", "0.8", "1.2"],
     answer: "1.5"
   },
@@ -2338,19 +2338,22 @@ const economicsQuestions = [
     answer: "Product price"
   },
   {
-    question: "If the marginal revenue product (MRP) of a worker is $100 and the wage is $90, the firm should:",
+    question: "If the marginal revenue product (MRP) of a worker is Ghs100 and the wage is Ghs90, the firm should:",
     options: ["Hire more labor", "Fire the worker", "Keep labor constant", "Increase wages"],
     answer: "Hire more labor"
   },
   {
     question: "MRP is calculated by:",
-    options: ["Marginal product × price of output", "Wage × price", "Price ÷ output", "Average product × output"],
-    answer: "Marginal product × price of output"
+    options: ["Marginal product � price of output",
+    "Wage � price",
+    "Price � output",
+    "Average product � output"],
+    answer: "Marginal product � price of output"
   },
   {
-    question: "Calculate MRP if a worker adds 10 units to output and each sells for $5.",
-    options: ["$50", "$15", "$10", "$5"],
-    answer: "$50"
+    question: "Calculate MRP if a worker adds 10 units to output and each sells for Ghs5.",
+    options: ["Ghs50", "Ghs15", "Ghs10", "Ghs5"],
+    answer: "Ghs50"
   },
   {
     question: "Which payment is made for the use of land?",
@@ -2373,9 +2376,9 @@ const economicsQuestions = [
     answer: "Decrease in product demand"
   },
   {
-    question: "If total wages paid to 4 workers is $240, what is the average wage per worker?",
-    options: ["$60", "$120", "$30", "$90"],
-    answer: "$60"
+    question: "If total wages paid to 4 workers is Ghs240, what is the average wage per worker?",
+    options: ["Ghs60", "Ghs120", "Ghs30", "Ghs90"],
+    answer: "Ghs60"
   },
   {
     question: "Which of the following is a feature of capital as a factor of production?",
@@ -2408,7 +2411,7 @@ const economicsQuestions = [
     answer: "Revenue exceeds costs"
   },
   {
-    question: "If a capital machine earns $500 annually and costs $5,000, the rate of return is:",
+    question: "If a capital machine earns Ghs500 annually and costs Ghs5,000, the rate of return is:",
     options: ["10%", "50%", "5%", "100%"],
     answer: "10%"
   },
@@ -2444,13 +2447,13 @@ const economicsQuestions = [
   },
   {
     question: "Total cost equestion:uals:",
-    options: ["Fixed cost + Variable cost", "Variable cost - Fixed cost", "Marginal cost × Quantity", "Average cost ÷ Output"],
+    options: ["Fixed cost + Variable cost", "Variable cost - Fixed cost", "Marginal cost x�Quantity", "Average cost \ Output"],
     answer: "Fixed cost + Variable cost"
   },
   {
-    question: "If a firm's fixed cost is $100 and variable cost is $300, total cost is:",
-    options: ["$400", "$200", "$100", "$600"],
-    answer: "$400"
+    question: "If a firm's fixed cost is Ghs100 and variable cost is Ghs300, total cost is:",
+    options: ["Ghs400", "Ghs200", "Ghs100", "Ghs600"],
+    answer: "Ghs400"
   },
   {
     question: "Which cost remains unchanged regardless of output level?",
@@ -2458,19 +2461,19 @@ const economicsQuestions = [
     answer: "Fixed cost"
   },
   {
-    question: "If total cost is $600 and output is 20 units, what is the average cost?",
-    options: ["$30", "$20", "$12", "$50"],
-    answer: "$30"
+    question: "If total cost is Ghs600 and output is 20 units, what is the average cost?",
+    options: ["Ghs30", "Ghs20", "Ghs12", "Ghs50"],
+    answer: "Ghs30"
   },
   {
     question: "Marginal cost is defined as:",
-    options: ["Change in total cost divided by change in output", "Total cost × output", "Variable cost per unit", "Fixed cost per unit"],
+    options: ["Change in total cost divided by change in output", "Total cost x�output", "Variable cost per unit", "Fixed cost per unit"],
     answer: "Change in total cost divided by change in output"
   },
   {
-    question: "If total cost rises from $400 to $460 when output increases from 20 to 23, what is marginal cost?",
-    options: ["$20", "$15", "$30", "$60"],
-    answer: "$20"
+    question: "If total cost rises from Ghs400 to Ghs460 when output increases from 20 to 23, what is marginal cost?",
+    options: ["Ghs20", "Ghs15", "Ghs30", "Ghs60"],
+    answer: "Ghs20"
   },
   {
     question: "Which of these costs vary with the level of output?",
@@ -2479,13 +2482,13 @@ const economicsQuestions = [
   },
   {
     question: "Average variable cost is calculated by:",
-    options: ["Variable cost ÷ Output", "Total cost ÷ Output", "Fixed cost ÷ Output", "Marginal cost × Output"],
-    answer: "Variable cost ÷ Output"
+    options: ["Variable cost \ Output", "Total cost \ Output", "Fixed cost \ Output", "Marginal cost x� Output"],
+    answer: "Variable cost \ Output"
   },
   {
-    question: "If total revenue is $1000 and total cost is $850, what is profit?",
-    options: ["$150", "$850", "$1000", "$1150"],
-    answer: "$150"
+    question: "If total revenue is Ghs1000 and total cost is Ghs850, what is profit?",
+    options: ["Ghs150", "Ghs850", "Ghs1000", "Ghs1150"],
+    answer: "Ghs150"
   },
   {
     question: "Which of the following is a revenue concept?",
@@ -2494,18 +2497,18 @@ const economicsQuestions = [
   },
   {
     question: "Total revenue equestion:uals:",
-    options: ["Price × Quantity", "Price ÷ Quantity", "Profit - Cost", "Revenue - Profit"],
-    answer: "Price × Quantity"
+    options: ["Price xQuantity", "Price \ Quantity", "Profit - Cost", "Revenue - Profit"],
+    answer: "Price xQuantity"
   },
   {
-    question: "A firm earns $5 per unit and sells 200 units. What is its total revenue?",
-    options: ["$1000", "$500", "$205", "$1500"],
-    answer: "$1000"
+    question: "A firm earns Ghs5 per unit and sells 200 units. What is its total revenue?",
+    options: ["Ghs1000", "Ghs500", "Ghs205", "Ghs1500"],
+    answer: "Ghs1000"
   },
   {
     question: "Average revenue equestion:uals:",
-    options: ["Total revenue ÷ Quantity", "Quantity ÷ Price", "Total cost ÷ Output", "Price × Output"],
-    answer: "Total revenue ÷ Quantity"
+    options: ["Total revenue \ Quantity", "Quantity \ Price", "Total cost \ Output", "Price xOutput"],
+    answer: "Total revenue \ Quantity"
   },
   {
     question: "In perfect competition, average revenue is equestion:ual to:",
@@ -2518,7 +2521,7 @@ const economicsQuestions = [
     answer: "Average cost"
   },
   {
-    question: "If a firm’s total cost is $800 and its average cost is $40, what is its output?",
+    question: "If a firmÃ¢â‚¬â„¢s total cost is Ghs800 and its average cost is Ghs40, what is its output?",
     options: ["20 units", "40 units", "50 units", "30 units"],
     answer: "20 units"
   },
@@ -2538,9 +2541,9 @@ const economicsQuestions = [
     answer: "Total cost = Total revenue"
   },
   {
-    question: "If fixed cost is $100 and output is 10 units, what is average fixed cost?",
-    options: ["$10", "$5", "$100", "$20"],
-    answer: "$10"
+    question: "If fixed cost is Ghs100 and output is 10 units, what is average fixed cost?",
+    options: ["Ghs10", "Ghs5", "Ghs100", "Ghs20"],
+    answer: "Ghs10"
   },
   {
     question: "The shut-down point in production occurs when:",
@@ -2558,14 +2561,14 @@ const economicsQuestions = [
     answer: "The next best alternative forgone"
   },
   {
-    question: "If price per unit is $25 and average cost is $20, the firm makes:",
-    options: ["Profit of $5 per unit", "Loss of $5 per unit", "Break-even", "No revenue"],
-    answer: "Profit of $5 per unit"
+    question: "If price per unit is Ghs25 and average cost is Ghs20, the firm makes:",
+    options: ["Profit of Ghs5 per unit", "Loss of Ghs5 per unit", "Break-even", "No revenue"],
+    answer: "Profit of Ghs5 per unit"
   },
   {
     question: "Which of these is an implicit cost?",
-    options: ["Owner’s salary not paid", "Rent paid", "Wages", "Electricity bill"],
-    answer: "Owner’s salary not paid"
+    options: ["OwnerÃ¢â‚¬â„¢s salary not paid", "Rent paid", "Wages", "Electricity bill"],
+    answer: "OwnerÃ¢â‚¬â„¢s salary not paid"
   },
   {
     question: "When total revenue is less than total cost, the firm incurs:",
@@ -2573,9 +2576,9 @@ const economicsQuestions = [
     answer: "Loss"
   },
   {
-    question: "If average variable cost is $15, average fixed cost is $10, what is average total cost?",
-    options: ["$25", "$20", "$10", "$15"],
-    answer: "$25"
+    question: "If average variable cost is Ghs15, average fixed cost is Ghs10, what is average total cost?",
+    options: ["Ghs25", "Ghs20", "Ghs10", "Ghs15"],
+    answer: "Ghs25"
   },
   {
     question: "Which of the following is true at the profit-maximizing output?",
@@ -2828,7 +2831,7 @@ const economicsQuestions = [
     answer: "Yes" // MUx/Px = 4, MUy/Py = 4
   },
   {
-    question: "If a consumer’s total utility from 1, 2, and 3 units of a good are 20, 38, and 54 respectively, the marginal utility of the 3rd unit is:",
+    question: "If a consumer's total utility from 1, 2, and 3 units of a good are 20, 38, and 54 respectively, the marginal utility of the 3rd unit is:",
     options: ["16", "20", "18", "12"],
     answer: "16" // MU3 = TU3 - TU2 = 54 - 38 = 16
   },
@@ -2853,7 +2856,7 @@ const economicsQuestions = [
     answer: "Income effect"
   },
   {
-    question: "If the consumer’s income is GHS 100, and prices are GHS 10 for X and GHS 5 for Y, what is the maximum question:uantity of X the consumer can buy?",
+    question: "If the consumer's income is GHS 100, and prices are GHS 10 for X and GHS 5 for Y, what is the maximum question:uantity of X the consumer can buy?",
     options: ["10", "5", "15", "20"],
     answer: "10"
   },
@@ -2863,7 +2866,7 @@ const economicsQuestions = [
     answer: "15"
   },
   {
-    question: "If a consumer’s income and prices of goods both double, the budget line:",
+    question: "If a consumer's income and prices of goods both double, the budget line:",
     options: ["Remains unchanged", "Shifts right", "Shifts left", "Becomes vertical"],
     answer: "Remains unchanged"
   },
@@ -2944,8 +2947,8 @@ const economicsQuestions = [
   },
   {
     question: "Which of the following represents the circular flow of income?",
-    options: ["Income → Expenditure → Output", "Wages → Rent → Taxes", "Imports → Exports → Trade", "Supply → Demand → Price"],
-    answer: "Income → Expenditure → Output"
+    options: ["Income ? Expenditure ? Output", "Wages ? Rent ? Taxes", "Imports ? Exports ? Trade", "Supply ? Demand ? Price"],
+    answer: "Income ? Expenditure ? Output"
   },
   {
     question: "Which sector is excluded in the two-sector model of circular flow?",
@@ -2970,7 +2973,7 @@ const economicsQuestions = [
   {
     question: "If MPC is 0.75 and government increases spending by GHS 20 million, national income will increase by:",
     options: ["GHS 80 million", "GHS 60 million", "GHS 100 million", "GHS 40 million"],
-    answer: "GHS 80 million" // Multiplier = 1 / (1 - 0.75) = 4; 4 × 20 = 80
+    answer: "GHS 80 million" // Multiplier = 1 / (1 - 0.75) = 4; 4 x20 = 80
   },
   {
     question: "Which of these statements is TRUE?",
@@ -3019,8 +3022,8 @@ const economicsQuestions = [
   },
   {
     question: "Which formula represents the expenditure method of calculating GDP?",
-    options: ["GDP = C + I + G + (X – M)", "GDP = W + R + I + P", "GDP = Output – Imports", "GDP = NNP + Subsidy"],
-    answer: "GDP = C + I + G + (X – M)"
+    options: ["GDP = C + I + G + (X - M)", "GDP = W + R + I + P", "GDP = Output - Imports", "GDP = NNP + Subsidy"],
+    answer: "GDP = C + I + G + (X - M)"
   },
   {
     question: "Which of these would increase the size of GDP?",
@@ -3135,7 +3138,7 @@ const economicsQuestions = [
   {
     question: "A farmer buys a tractor for GHS 120,000 and pays GHS 30,000 annually for fuel and maintenance. If he uses the tractor for 5 years, what is the total cost?",
     options: ["GHS 150,000", "GHS 270,000", "GHS 120,000", "GHS 30,000"],
-    answer: "GHS 270,000" // 120,000 + (30,000 × 5)
+    answer: "GHS 270,000" // 120,000 + (30,000 x5)
   },
   {
     question: "Ghana's industrial policy aims to:",
@@ -3203,7 +3206,7 @@ const economicsQuestions = [
     answer: "Cocoa"
   },
   {
-    question: "Industrialisation can reduce Ghana’s reliance on:",
+    question: "Industrialisation can reduce Ghana's reliance on:",
     options: ["Imported goods", "Local resources", "Labour", "Technology"],
     answer: "Imported goods"
   },
@@ -3384,13 +3387,13 @@ const economicsQuestions = [
   },
   {
     question: "The formula for simple interest is:",
-    options: ["I = P × R × T / 100", "I = P + R + T", "I = R/T × 100", "I = P × R × T"],
-    answer: "I = P × R × T / 100"
+    options: ["I = P xR xT / 100", "I = P + R + T", "I = R/T x100", "I = P xR xT"],
+    answer: "I = P xR xT / 100"
   },
   {
     question: "Calculate the interest on GHS 4,000 at 5% per annum for 2 years.",
     options: ["GHS 400", "GHS 300", "GHS 200", "GHS 500"],
-    answer: "GHS 400" // 4000 × 5 × 2 / 100
+    answer: "GHS 400" // 4000 x5 x2 / 100
   },
   {
     question: "Money performs the following functions EXCEPT:",
@@ -3505,7 +3508,7 @@ const economicsQuestions = [
   {
     question: "An interest rate of 10% on GHS 2,000 over 3 years gives how much simple interest?",
     options: ["GHS 600", "GHS 200", "GHS 100", "GHS 300"],
-    answer: "GHS 600" // 2000 × 10 × 3 / 100
+    answer: "GHS 600" // 2000 x10 x3 / 100
   },
   {
     question: "Which of the following is not typically a role of a central bank?",
@@ -3813,7 +3816,7 @@ const economicsQuestions = [
     answer: "Comparative advantage"
   },
   {
-    question: "A fall in the value of a country’s currency is called:",
+    question: "A fall in the value of a country's currency is called:",
     options: ["Depreciation", "Inflation", "Appreciation", "Deflation"],
     answer: "Depreciation"
   },
@@ -3839,8 +3842,8 @@ const economicsQuestions = [
   },
   {
     question: "Terms of trade is calculated as:",
-    options: ["(Index of export prices ÷ Index of import prices) × 100", "Import price ÷ Export question:uantity", "Export price × Import price", "Export value ÷ GDP"],
-    answer: "(Index of export prices ÷ Index of import prices) × 100"
+    options: ["(Index of export prices \ Index of import prices) x100", "Import price \ Export question:uantity", "Export price xImport price", "Export value \ GDP"],
+    answer: "(Index of export prices \ Index of import prices) x100"
   },
   {
     question: "Which of the following affects Ghana's trade negatively?",
@@ -3863,7 +3866,7 @@ const economicsQuestions = [
     answer: "Over-dependence on few exports"
   },
   {
-    question: "Which of these will improve Ghana’s terms of trade?",
+    question: "Which of these will improve Ghana's terms of trade?",
     options: ["Rising export prices", "Increasing imports", "Falling export prices", "Higher tariffs"],
     answer: "Rising export prices"
   },
@@ -3938,7 +3941,7 @@ const economicsQuestions = [
     answer: "World Trade Organization"
   },
   {
-    question: "If Ghana imports GHS 2 billion and exports GHS 1.5 billion, what’s the trade balance?",
+    question: "If Ghana imports GHS 2 billion and exports GHS 1.5 billion, what's the trade balance?",
     options: ["GHS 0.5 billion deficit", "GHS 0.5 billion surplus", "GHS 3.5 billion", "GHS 0"],
     answer: "GHS 0.5 billion deficit"
   },
@@ -3993,7 +3996,7 @@ const economicsQuestions = [
     answer: "Price fluctuations"
   },
   {
-    question: "Which one is a characteristic of developing countries’ trade?",
+    question: "Which one is a characteristic of developing countries' trade?",
     options: ["Export of raw materials", "High-tech exports", "Balanced trade", "High capital flows"],
     answer: "Export of raw materials"
   },
@@ -4019,7 +4022,7 @@ const economicsQuestions = [
   },
   {
     question: "The headquestion:uarters of ECOWAS is in:",
-    options: ["Abuja, Nigeria", "Accra, Ghana", "Lomé, Togo", "Dakar, Senegal"],
+    options: ["Abuja, Nigeria", "Accra, Ghana", "LomÃƒÂ©, Togo", "Dakar, Senegal"],
     answer: "Abuja, Nigeria"
   },
   {
@@ -4168,7 +4171,7 @@ const economicsQuestions = [
     answer: "Funding"
   },
   {
-    question: "What role does NEPAD play in Africa’s development?",
+    question: "What role does NEPAD play in Africa's development?",
     options: ["Promotes economic growth through partnerships", "Builds roads", "Exports oil", "Regulates immigration"],
     answer: "Promotes economic growth through partnerships"
   },
@@ -4358,7 +4361,7 @@ const economicsQuestions = [
       "A blueprint for economic growth and social progress",
       "A tax document",
       "A trade agreement",
-      "A company’s internal memo"
+      "A company's internal memo"
     ],
     answer: "A blueprint for economic growth and social progress"
   },
@@ -4535,12 +4538,12 @@ const economicsQuestions = [
   {
     question: "Which of the following is an example of economic development planning in Ghana?",
     options: [
-      "Ghana’s Medium-Term Development Plan",
+      "Ghana's Medium-Term Development Plan",
       "Random daily spending",
       "Private company plans",
       "Sports schedules"
     ],
-    answer: "Ghana’s Medium-Term Development Plan"
+    answer: "Ghana's Medium-Term Development Plan"
   },
   {
     question: "Which factor often affects the choice of sectors in development planning?",

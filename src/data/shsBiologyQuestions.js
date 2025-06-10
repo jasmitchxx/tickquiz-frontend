@@ -253,8 +253,8 @@ const biologyQuestions = [
   },
   {
     question: "What is the correct order of organization in living organisms from simplest to most complex?",
-    options: ["Organ â€“ Tissue â€“ Cell â€“ System", "Cell â€“ Tissue â€“ Organ â€“ System", "System â€“ Organ â€“ Cell â€“ Tissue", "Tissue â€“ System â€“ Organ â€“ Cell"],
-    answer: "Cell â€“ Tissue â€“ Organ â€“ System"
+    options: ["Organ – Tissue – Cell – System", "Cell – Tissue – Organ – System", "System – Organ – Cell – Tissue", "Tissue – System – Organ – Cell"],
+    answer: "Cell – Tissue – Organ – System"
   },
   {
     question: "Which element is essential for the synthesis of chlorophyll in plants?",
@@ -400,8 +400,8 @@ const biologyQuestions = [
 },
 {
   question: "The equation for aerobic respiration includes:",
-  options: ["Glucose + oxygen â†’ energy + water + carbon dioxide", "Glucose â†’ lactic acid", "Starch + oxygen â†’ sugar", "Protein + water â†’ amino acids"],
-  answer: "Glucose + oxygen â†’ energy + water + carbon dioxide"
+  options: ["Glucose + oxygen ? energy + water + carbon dioxide", "Glucose ? lactic acid", "Starch + oxygen ? sugar", "Protein + water ? amino acids"],
+  answer: "Glucose + oxygen ? energy + water + carbon dioxide"
 },
 {
   question: "Anaerobic respiration in muscles produces:",
@@ -512,7 +512,7 @@ const biologyQuestions = [
   answer: "Neurons"
 },
 {
-  question: "Which structure carries impulses away from a neuronâ€™s cell body?",
+  question: "Which structure carries impulses away from a neuron’s cell body?",
   options: ["Dendrite", "Axon", "Synapse", "Nucleus"],
   answer: "Axon"
 },
@@ -770,8 +770,8 @@ const biologyQuestions = [
 // Levels of organization
 {
   question: "The correct sequence of biological organization from smallest to largest is:",
-  options: ["Cell â†’ Organ â†’ Tissue â†’ System", "Cell â†’ Tissue â†’ Organ â†’ System", "Tissue â†’ Cell â†’ System â†’ Organ", "System â†’ Organ â†’ Cell â†’ Tissue"],
-  answer: "Cell â†’ Tissue â†’ Organ â†’ System"
+  options: ["Cell ? Organ ? Tissue ? System", "Cell ? Tissue ? Organ ? System", "Tissue ? Cell ? System ? Organ", "System ? Organ ? Cell ? Tissue"],
+  answer: "Cell ? Tissue ? Organ ? System"
 },
 {
   question: "Which of the following is a tissue?",
@@ -1699,8 +1699,8 @@ const biologyQuestions = [
 },
 {
   question: "Which part of the nephron is responsible for filtration?",
-  options: ["Bowmanâ€™s capsule", "Loop of Henle", "Collecting duct", "Distal tubule"],
-  answer: "Bowmanâ€™s capsule"
+  options: ["Bowman’s capsule", "Loop of Henle", "Collecting duct", "Distal tubule"],
+  answer: "Bowman’s capsule"
 },
 {
   question: "The skin excretes waste mainly in the form of:",
@@ -1907,7 +1907,7 @@ const biologyQuestions = [
 // Excretion
 {
   question: "The functional unit of the kidney is the:",
-  options: ["Nephron", "Glomerulus", "Bowmanâ€™s capsule", "Collecting duct"],
+  options: ["Nephron", "Glomerulus", "Bowman’s capsule", "Collecting duct"],
   answer: "Nephron"
 },
 {
@@ -2763,10 +2763,9 @@ const biologyQuestions = [
 },
  {
     question: "What is the correct order of organization in living organisms from simplest to most complex?",
-    options: ["Organ â€“ Tissue â€“ Cell â€“ System", "Cell â€“ Tissue â€“ Organ â€“ System", "System â€“ Organ â€“ Cell â€“ Tissue", "Tissue â€“ System â€“ Organ â€“ Cell"],
-    answer: "Cell â€“ Tissue â€“ Organ â€“ System"
+    options: ["Organ – Tissue – Cell – System", "Cell – Tissue – Organ – System", "System – Organ – Cell – Tissue", "Tissue – System – Organ – Cell"],
+    answer: "Cell – Tissue – Organ – System"
   }
 ];
 
 export default biologyQuestions;
-
