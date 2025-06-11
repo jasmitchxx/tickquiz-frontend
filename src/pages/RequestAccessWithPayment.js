@@ -1,7 +1,6 @@
 // src/pages/RequestAccessWithPayment.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 function RequestAccessWithPayment() {
   const [name, setName] = useState('');
@@ -63,7 +62,8 @@ function RequestAccessWithPayment() {
     >
       <h2>Buy Access Code</h2>
       <p style={{ fontSize: 14, marginBottom: 20 }}>
-        Pay <strong>20 GHS</strong> using Paystack. After payment, your access code will be sent to your phone via SMS.
+        Pay <strong>15.5 GHS</strong> using Paystack. After payment, your access
+        code will be sent to your phone via SMS.
       </p>
 
       <input
@@ -116,19 +116,6 @@ function RequestAccessWithPayment() {
       </button>
 
       {message && <p style={{ color: 'red', marginTop: 12 }}>{message}</p>}
-
-      <div style={{ marginTop: 16, textAlign: 'center' }}>
-        <Link
-          to="/use-access-code"
-          style={{
-            fontSize: 13,
-            color: '#007bff',
-            textDecoration: 'none',
-          }}
-        >
-          Already have a code?
-        </Link>
-      </div>
     </div>
   );
 }
