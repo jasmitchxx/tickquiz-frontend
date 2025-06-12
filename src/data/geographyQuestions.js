@@ -1280,9 +1280,7 @@ const geographyQuestions = [
     question: "The study of weather is called:",
     options: ["Cartography", "Seismology", "Meteorology", "Climatology"],
     answer: "Meteorology"
-  }
-];
-const geographyQuestionsBatch3 = [
+  },
   {
     question: "Which feature is formed by deposition in a river?",
     options: ["Canyon", "Meander", "Delta", "Gorge"],
