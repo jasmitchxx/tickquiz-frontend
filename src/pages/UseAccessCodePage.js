@@ -1,4 +1,3 @@
-// src/pages/UseAccessCodePage.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -41,7 +40,7 @@ function UseAccessCodePage() {
       }
     } catch (err) {
       console.error(err);
-      if (err.response && err.response.data && err.response.data.message) {
+      if (err.response?.data?.message) {
         setMessage(err.response.data.message);
       } else {
         setMessage('Something went wrong. Please try again.');
@@ -50,42 +49,37 @@ function UseAccessCodePage() {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: 400,
-        margin: '2rem auto',
-        padding: '1rem',
-        border: '1px solid #ccc',
-        borderRadius: 8,
-      }}
-    >
-      <h2>Enter Access Code</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter your code"
-          value={code}
-          onChange={(e) => setCode(e.target.value.toUpperCase())}
-          style={{ width: '100%', marginBottom: 10, padding: 8 }}
-          required
-        />
-        <button
-          type="submit"
-          style={{
-            width: '100%',
-            padding: 10,
-            backgroundColor: '#28a745',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 4,
-          }}
-        >
-          Submit Code
-        </button>
-      </form>
-      {message && (
-        <p style={{ color: success ? 'green' : 'red', marginTop: 10 }}>{message}</p>
-      )}
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          ?? Enter Access Code
+        </h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            placeholder="Enter your code"
+            value={code}
+            onChange={(e) => setCode(e.target.value.toUpperCase())}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          <button
+            type="submit"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition"
+          >
+            Submit Code
+          </button>
+        </form>
+        {message && (
+          <p
+            className={`mt-4 text-center font-medium ${
+              success ? 'text-green-600' : 'text-red-600'
+            }`}
+          >
+            {message}
+          </p>
+        )}
+      </div>
     </div>
   );
 }
