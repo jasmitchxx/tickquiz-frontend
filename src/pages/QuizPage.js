@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-import Leaderboard from '../components/Leaderboard'; // Leaderboard component
+import leaderboard from '../components/leaderboard';
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -70,7 +70,7 @@ function QuizPage() {
   useEffect(() => {
     if (finished) return;
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
           endQuiz();
@@ -86,8 +86,8 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
-    if (isCorrect) setScore(prev => prev + 1);
+    setAnswers((prev) => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
+    if (isCorrect) setScore((prev) => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
       endQuiz();
@@ -145,7 +145,7 @@ function QuizPage() {
           </button>
         </div>
 
-        <Leaderboard subject={subject} />
+        <leaderboard subject={subject} />
       </div>
     );
   }
@@ -199,4 +199,25 @@ function QuizPage() {
         </div>
       </div>
 
-      <div class
+      <div className="mb-6">
+        <h2 className="text-xl font-semibold mb-4">
+          Question {current + 1} of {shuffledQuestions.length}
+        </h2>
+        <p className="text-lg mb-4">{currentQuestion?.question}</p>
+        <div className="flex flex-wrap gap-4 justify-start">
+          {currentQuestion?.options.map((option, index) => (
+            <button
+              key={index}
+              className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+              onClick={() => handleAnswer(option)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default QuizPage;

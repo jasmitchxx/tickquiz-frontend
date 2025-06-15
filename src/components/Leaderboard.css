@@ -1,4 +1,4 @@
-.leaderboard-bar {
+.leaderboard {
   width: 100%;
   max-width: 500px;
   margin: 20px auto;
@@ -9,7 +9,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-.leaderboard-bar h3 {
+.leaderboard h3 {
   background: #0057a3;
   color: white;
   text-align: center;

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './LeaderboardBar.css';
+import './leaderboard.css';
 
-const LeaderboardBar = () => {
+const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const res = await fetch('https://tickquiz-backend.onrender.com/api/leaderboard');// Replace with your real backend URL
+        const res = await fetch('https://tickquiz-backend.onrender.com/api/leaderboard'); // Replace with your real backend URL
         const data = await res.json();
         setLeaders(data);
       } catch (error) {
@@ -40,4 +40,4 @@ const LeaderboardBar = () => {
   );
 };
 
-export default LeaderboardBar;
+export default Leaderboard;
