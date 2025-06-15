@@ -62,7 +62,7 @@ function RequestAccessWithPayment() {
     >
       <h2>Buy Access Code</h2>
       <p style={{ fontSize: 14, marginBottom: 20 }}>
-        Pay <strong>15.5 GHS</strong> using Paystack. After payment, your access
+        Pay <strong>10 GHS</strong> using Paystack. After payment, your access
         code will be sent to your phone via SMS.
       </p>
 
