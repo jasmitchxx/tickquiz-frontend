@@ -7,7 +7,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const res = await fetch('https://tickquiz-backend.onrender.com/api/leaderboard'); // Replace with your real backend URL
+        const res = await fetch('https://tickquiz-backend.onrender.com/api/leaderboard');
         const data = await res.json();
         setLeaders(data);
       } catch (error) {
@@ -18,11 +18,10 @@ const Leaderboard = () => {
     fetchLeaderboard();
   }, []);
 
-  // Duplicate list for seamless infinite scroll
-  const scrollingList = [...leaders, ...leaders];
+  const scrollingList = [...leaders, ...leaders]; // duplicate for infinite scroll
 
   return (
-    <div className="leaderboard-bar">
+    <div className="leaderboard">
       <h3>?? Top Quiz Performers</h3>
       <div className="scroll-wrapper">
         <ul className="scrolling-list">
