@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
 import Leaderboard from '../components/Leaderboard';
+
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code } = user;
+  const { name, subject, code, school } = user;
 
   const MAX_QUESTIONS = 60;
 
@@ -21,6 +22,8 @@ function QuizPage() {
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
+  const [myRank, setMyRank] = useState(null);
+  const [topLeaders, setTopLeaders] = useState([]);
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -33,12 +36,36 @@ function QuizPage() {
 
   const endQuiz = useCallback(async () => {
     setFinished(true);
+    const timestamp = new Date().toISOString();
+
     try {
       await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
+        name,
+        school,
+        subject,
+        score,
+        timestamp,
+      });
+
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
+      const leaderboard = res.data;
+
+      setTopLeaders(leaderboard);
+
+      const index = leaderboard.findIndex(
+        entry =>
+          entry.name === name &&
+          entry.school === school &&
+          entry.timestamp === timestamp
+      );
+
+      if (index !== -1) setMyRank(index + 1);
     } catch (err) {
-      console.error('Failed to update usage:', err);
+      console.error('Failed to save quiz data or fetch leaderboard:', err);
     }
-  }, [code]);
+  }, [code, name, subject, score, school]);
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -62,7 +89,15 @@ function QuizPage() {
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
+    const progress = {
+      code,
+      current,
+      answers,
+      score,
+      timeLeft,
+      finished,
+      questions: shuffledQuestions,
+    };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
@@ -85,7 +120,10 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers((prev) => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
+    setAnswers((prev) => [
+      ...prev,
+      { question: q.question, selected, correct: q.answer, isCorrect },
+    ]);
     if (isCorrect) setScore((prev) => prev + 1);
 
     if (current + 1 === shuffledQuestions.length) {
@@ -119,6 +157,7 @@ function QuizPage() {
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, level, color } = getGrade(percentage);
+
     return (
       <div className="p-6 text-center bg-blue-100 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
@@ -128,6 +167,10 @@ function QuizPage() {
         <p className={`text-xl mt-2 font-semibold ${color}`}>
           Grade: <strong>{grade}</strong> – <em>{level}</em>
         </p>
+
+        {myRank && (
+          <p className="mt-4 text-lg">?? Your Rank: <strong>#{myRank}</strong></p>
+        )}
 
         <div className="mt-6 space-x-4">
           <button
@@ -144,7 +187,7 @@ function QuizPage() {
           </button>
         </div>
 
-        <Leaderboard subject={subject} />
+        <Leaderboard subject={subject} data={topLeaders} />
       </div>
     );
   }

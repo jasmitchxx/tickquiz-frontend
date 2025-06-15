@@ -5,32 +5,31 @@ import questionsData from '../data/questionsData';
 
 function QuizStartPage() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const [selectedSubject, setSelectedSubject] = useState('');
   const subjects = Object.keys(questionsData);
 
+  // New: Inputs for user info
+  const [name, setName] = useState('');
+  const [school, setSchool] = useState('');
+  const [selectedSubject, setSelectedSubject] = useState('');
+
   const handleStartQuiz = () => {
-    if (!selectedSubject) {
-      alert('Please select a subject');
+    if (!name.trim() || !school.trim() || !selectedSubject) {
+      alert('Please enter your name, school, and select a subject.');
       return;
     }
 
-    localStorage.setItem(
-      'quizUser',
-      JSON.stringify({ ...user, subject: selectedSubject })
-    );
+    const code = `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
 
+    const user = {
+      name: name.trim(),
+      school: school.trim(),
+      subject: selectedSubject,
+      code,
+    };
+
+    localStorage.setItem('quizUser', JSON.stringify(user));
     navigate('/quiz');
   };
-
-  if (!user.code) {
-    return (
-      <div style={{ maxWidth: 400, margin: '2rem auto', textAlign: 'center' }}>
-        <h2>No Access Code Found</h2>
-        <p>Please request access or enter your code first.</p>
-      </div>
-    );
-  }
 
   return (
     <div
@@ -43,8 +42,38 @@ function QuizStartPage() {
         textAlign: 'center',
       }}
     >
-      <h2>Welcome, {user.name || 'Student'}</h2>
-      <p>Please select a subject to begin your quiz.</p>
+      <h2>Welcome to TickQuiz!</h2>
+      <p>Enter your details to begin:</p>
+
+      <input
+        type="text"
+        placeholder="Your Full Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        style={{
+          width: '100%',
+          padding: 10,
+          marginBottom: 10,
+          fontSize: 16,
+          borderRadius: 5,
+          border: '1px solid #ccc',
+        }}
+      />
+
+      <input
+        type="text"
+        placeholder="Your School"
+        value={school}
+        onChange={(e) => setSchool(e.target.value)}
+        style={{
+          width: '100%',
+          padding: 10,
+          marginBottom: 10,
+          fontSize: 16,
+          borderRadius: 5,
+          border: '1px solid #ccc',
+        }}
+      />
 
       <select
         value={selectedSubject}

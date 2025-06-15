@@ -1,3 +1,4 @@
+// src/components/Leaderboard.js
 import React, { useEffect, useState } from 'react';
 import './leaderboard.css';
 
@@ -9,7 +10,7 @@ const Leaderboard = () => {
       try {
         const res = await fetch('https://tickquiz-backend.onrender.com/api/leaderboard');
         const data = await res.json();
-        setLeaders(data);
+        setLeaders(data.slice(0, 10)); // top 10 only
       } catch (error) {
         console.error('Error fetching leaderboard:', error);
       }
@@ -18,7 +19,7 @@ const Leaderboard = () => {
     fetchLeaderboard();
   }, []);
 
-  const scrollingList = [...leaders, ...leaders]; // duplicate for infinite scroll
+  const scrollingList = [...leaders, ...leaders]; // for animation
 
   return (
     <div className="leaderboard">
