@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
+import Leaderboard from '../components/Leaderboard'; // Leaderboard component
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -105,30 +106,29 @@ function QuizPage() {
   const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
-    if (percentage >= 99) return { grade: 'A+', level: 'Advanced' };
-    if (percentage >= 96) return { grade: 'A', level: 'Advanced' };
-    if (percentage >= 93) return { grade: 'A-', level: 'Advanced' };
-    if (percentage >= 90) return { grade: 'B+', level: 'Proficient' };
-    if (percentage >= 87) return { grade: 'B', level: 'Proficient' };
-    if (percentage >= 84) return { grade: 'B-', level: 'Proficient' };
-    if (percentage >= 81) return { grade: 'C+', level: 'Developing' };
-    if (percentage >= 78) return { grade: 'C', level: 'Developing' };
-    if (percentage >= 75) return { grade: 'C-', level: 'Developing' };
-    if (percentage >= 73) return { grade: 'D', level: 'Beginning' };
-    if (percentage >= 65) return { grade: 'D-', level: 'Beginning' };
-    return { grade: 'F', level: 'Insufficient' };
+    if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
+    if (percentage >= 70) return { grade: 'B2', level: 'Very Good', color: 'text-lime-600' };
+    if (percentage >= 60) return { grade: 'B3', level: 'Good', color: 'text-yellow-500' };
+    if (percentage >= 55) return { grade: 'C4', level: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 50) return { grade: 'C5', level: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 45) return { grade: 'C6', level: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 40) return { grade: 'D7', level: 'Pass', color: 'text-orange-500' };
+    if (percentage >= 35) return { grade: 'D8', level: 'Pass', color: 'text-orange-500' };
+    return { grade: 'F9', level: 'Fail', color: 'text-red-600' };
   };
 
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
-    const { grade, level } = getGrade(percentage);
+    const { grade, level, color } = getGrade(percentage);
     return (
       <div className="p-6 text-center bg-blue-100 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
         <p className="text-lg">Name: <strong>{name}</strong></p>
         <p className="text-lg">Subject: <strong>{subject}</strong></p>
         <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-        <p className="text-xl mt-2">Grade: <strong>{grade}</strong> - <em>{level}</em></p>
+        <p className={`text-xl mt-2 font-semibold ${color}`}>
+          Grade: <strong>{grade}</strong> – <em>{level}</em>
+        </p>
 
         <div className="mt-6 space-x-4">
           <button
@@ -144,6 +144,8 @@ function QuizPage() {
             Start Over
           </button>
         </div>
+
+        <Leaderboard subject={subject} />
       </div>
     );
   }
@@ -156,7 +158,7 @@ function QuizPage() {
           <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
             <p className="font-semibold">{index + 1}. {item.question}</p>
             <p>
-              Your answer:{" "}
+              Your answer:{' '}
               <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
                 {item.selected}
               </span>
@@ -197,25 +199,4 @@ function QuizPage() {
         </div>
       </div>
 
-      <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
-        </h2>
-        <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="flex flex-wrap gap-4 justify-start">
-          {currentQuestion?.options.map((option, index) => (
-            <button
-              key={index}
-              className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default QuizPage;
+      <div class
