@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-import leaderboard from '../components/leaderboard';
+import Leaderboard from '../components/leaderboard';
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -145,7 +145,7 @@ function QuizPage() {
           </button>
         </div>
 
-        <leaderboard subject={subject} />
+        <Leaderboard subject={subject} />
       </div>
     );
   }
