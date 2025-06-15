@@ -1,0 +1,67 @@
+.leaderboard-bar {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fefefe;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.leaderboard-bar h3 {
+  background: #0057a3;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.scroll-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-list {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 12s linear infinite;
+}
+
+.scrolling-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  background: white;
+}
+
+.scrolling-list li:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.rank {
+  font-weight: bold;
+  color: #0057a3;
+}
+
+.name,
+.school,
+.score {
+  margin-left: 10px;
+  flex: 1;
+  text-align: left;
+}
+
+/* Scrolling animation */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
