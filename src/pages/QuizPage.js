@@ -19,8 +19,6 @@ function QuizPage() {
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
-  const [myRank, setMyRank] = useState(null);
-  const [topLeaders, setTopLeaders] = useState([]);
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -47,18 +45,8 @@ function QuizPage() {
         code,
       });
 
-      // Still fetch leaderboard for future use, but not displayed
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
-      const leaderboard = res.data;
-      setTopLeaders(leaderboard);
-
-      const index = leaderboard.findIndex(
-        entry =>
-          entry.name === name &&
-          entry.school === school &&
-          entry.timestamp === timestamp
-      );
-      if (index !== -1) setMyRank(index + 1);
+      // Leaderboard fetch logic retained (but no state used)
+      await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
     } catch (err) {
       console.error('Failed to save quiz data or fetch leaderboard:', err);
     }
@@ -164,8 +152,6 @@ function QuizPage() {
         <p className={`text-xl mt-2 font-semibold ${color}`}>
           Grade: <strong>{grade}</strong> – <em>{level}</em>
         </p>
-
-        {/* Removed Rank Display and Leaderboard */}
 
         <div className="mt-6 space-x-4">
           <button
