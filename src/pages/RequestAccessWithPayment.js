@@ -1,6 +1,6 @@
-// src/pages/RequestAccessWithPayment.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Leaderboard from '../components/Leaderboard'; // ? Import leaderboard
 
 function RequestAccessWithPayment() {
   const [name, setName] = useState('');
@@ -50,72 +50,80 @@ function RequestAccessWithPayment() {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: 420,
-        margin: '2rem auto',
-        padding: '1.5rem',
-        border: '1px solid #ccc',
-        borderRadius: 8,
-        backgroundColor: '#f9f9f9',
-      }}
-    >
-      <h2>Buy Access Code</h2>
-      <p style={{ fontSize: 14, marginBottom: 20 }}>
-        Pay <strong>10 GHS</strong> using Paystack. After payment, your access
-        code will be sent to your phone via SMS.
-      </p>
+    <div style={{ padding: '2rem 1rem', backgroundColor: '#f0f0f0' }}>
+      {/* ? Show leaderboard at the top */}
+      <div style={{ maxWidth: 600, margin: '0 auto' }}>
+        <Leaderboard />
+      </div>
 
-      <input
-        type="text"
-        placeholder="Full Name"
-        value={name}
-        onChange={e => setName(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 10 }}
-        required
-      />
-      <input
-        type="email"
-        placeholder="Email Address"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 10 }}
-        required
-      />
-      <input
-        type="text"
-        placeholder="+Country Code"
-        value={countryCode}
-        onChange={e => setCountryCode(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 10 }}
-      />
-      <input
-        type="tel"
-        placeholder="Phone Number"
-        value={phone}
-        onChange={e => setPhone(e.target.value)}
-        style={{ width: '100%', marginBottom: 10, padding: 10 }}
-        required
-      />
-
-      <button
-        onClick={handlePayment}
-        disabled={loading}
+      {/* Payment form below */}
+      <div
         style={{
-          width: '100%',
-          padding: '12px',
-          backgroundColor: '#28a745',
-          color: '#fff',
-          fontWeight: 'bold',
-          fontSize: 16,
-          border: 'none',
-          borderRadius: 4,
+          maxWidth: 420,
+          margin: '2rem auto',
+          padding: '1.5rem',
+          border: '1px solid #ccc',
+          borderRadius: 8,
+          backgroundColor: '#f9f9f9',
         }}
       >
-        {loading ? 'Processing Payment...' : 'Pay & Get Access Code'}
-      </button>
+        <h2>Buy Access Code</h2>
+        <p style={{ fontSize: 14, marginBottom: 20 }}>
+          Pay <strong>10 GHS</strong> using Paystack. After payment, your access
+          code will be sent to your phone via SMS.
+        </p>
 
-      {message && <p style={{ color: 'red', marginTop: 12 }}>{message}</p>}
+        <input
+          type="text"
+          placeholder="Full Name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          style={{ width: '100%', marginBottom: 10, padding: 10 }}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email Address"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          style={{ width: '100%', marginBottom: 10, padding: 10 }}
+          required
+        />
+        <input
+          type="text"
+          placeholder="+Country Code"
+          value={countryCode}
+          onChange={e => setCountryCode(e.target.value)}
+          style={{ width: '100%', marginBottom: 10, padding: 10 }}
+        />
+        <input
+          type="tel"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
+          style={{ width: '100%', marginBottom: 10, padding: 10 }}
+          required
+        />
+
+        <button
+          onClick={handlePayment}
+          disabled={loading}
+          style={{
+            width: '100%',
+            padding: '12px',
+            backgroundColor: '#28a745',
+            color: '#fff',
+            fontWeight: 'bold',
+            fontSize: 16,
+            border: 'none',
+            borderRadius: 4,
+          }}
+        >
+          {loading ? 'Processing Payment...' : 'Pay & Get Access Code'}
+        </button>
+
+        {message && <p style={{ color: 'red', marginTop: 12 }}>{message}</p>}
+      </div>
     </div>
   );
 }
