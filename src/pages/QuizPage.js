@@ -1,3 +1,4 @@
+// src/pages/QuizPage.js
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -41,14 +42,17 @@ function QuizPage() {
     try {
       await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
 
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
+      // ? UPDATED: Save result to new endpoint
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
         name,
         school,
         subject,
         score,
         timestamp,
+        code,
       });
 
+      // ? Get leaderboard for this subject
       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
       const leaderboard = res.data;
 
