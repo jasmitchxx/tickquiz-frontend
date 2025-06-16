@@ -1,9 +1,8 @@
-// src/pages/QuizPage.js
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-import Leaderboard from '../components/Leaderboard';
+// Removed: import Leaderboard from '../components/Leaderboard';
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -11,10 +10,7 @@ function QuizPage() {
   const { name, subject, code, school } = user;
 
   const MAX_QUESTIONS = 60;
-
-  const subjectQuestions = useMemo(() => {
-    return questionsData[subject] || [];
-  }, [subject]);
+  const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -42,7 +38,6 @@ function QuizPage() {
     try {
       await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
 
-      // ? UPDATED: Save result to new endpoint
       await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
         name,
         school,
@@ -52,10 +47,9 @@ function QuizPage() {
         code,
       });
 
-      // ? Get leaderboard for this subject
+      // Still fetch leaderboard for future use, but not displayed
       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
       const leaderboard = res.data;
-
       setTopLeaders(leaderboard);
 
       const index = leaderboard.findIndex(
@@ -64,7 +58,6 @@ function QuizPage() {
           entry.school === school &&
           entry.timestamp === timestamp
       );
-
       if (index !== -1) setMyRank(index + 1);
     } catch (err) {
       console.error('Failed to save quiz data or fetch leaderboard:', err);
@@ -172,9 +165,7 @@ function QuizPage() {
           Grade: <strong>{grade}</strong> – <em>{level}</em>
         </p>
 
-        {myRank && (
-          <p className="mt-4 text-lg">?? Your Rank: <strong>#{myRank}</strong></p>
-        )}
+        {/* Removed Rank Display and Leaderboard */}
 
         <div className="mt-6 space-x-4">
           <button
@@ -190,8 +181,6 @@ function QuizPage() {
             Start Over
           </button>
         </div>
-
-        <Leaderboard subject={subject} data={topLeaders} />
       </div>
     );
   }

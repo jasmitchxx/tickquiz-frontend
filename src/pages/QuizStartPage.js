@@ -7,7 +7,6 @@ function QuizStartPage() {
   const navigate = useNavigate();
   const subjects = Object.keys(questionsData);
 
-  // New: Inputs for user info
   const [name, setName] = useState('');
   const [school, setSchool] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
