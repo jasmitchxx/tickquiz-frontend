@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-// Removed: import Leaderboard from '../components/Leaderboard';
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -45,7 +44,6 @@ function QuizPage() {
         code,
       });
 
-      // Leaderboard fetch logic retained (but no state used)
       await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
     } catch (err) {
       console.error('Failed to save quiz data or fetch leaderboard:', err);
@@ -159,6 +157,12 @@ function QuizPage() {
             onClick={() => setReviewing(true)}
           >
             Review Answers
+          </button>
+          <button
+            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={() => navigate('/leaderboard')}
+          >
+            View Leaderboard
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
