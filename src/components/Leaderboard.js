@@ -26,9 +26,13 @@ const Leaderboard = () => {
   const fetchResults = async (subject) => {
     if (!subject) return;
     setLoading(true);
+    
+    // Normalize subject to lowercase with no spaces
+    const normalized = subject.toLowerCase().replace(/\s+/g, '');
+
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
-      setResults(res.data.results || []);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalized}`);
+      setResults(res.data || []); // Use data directly as backend returns an array
     } catch (err) {
       console.error('Failed to fetch leaderboard:', err);
     } finally {
@@ -37,6 +41,7 @@ const Leaderboard = () => {
   };
 
   useEffect(() => {
+    console.log('Selected subject:', selectedSubject);
     fetchResults(selectedSubject);
   }, [selectedSubject]);
 

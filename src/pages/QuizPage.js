@@ -9,6 +9,8 @@ function QuizPage() {
   const { name, subject, code, school } = user;
 
   const MAX_QUESTIONS = 60;
+  const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
+
   const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
 
   const [current, setCurrent] = useState(0);
@@ -19,7 +21,6 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
 
-  // Shuffle Questions
   const shuffleArray = (arr) => {
     const array = [...arr];
     for (let i = array.length - 1; i > 0; i--) {
@@ -29,12 +30,10 @@ function QuizPage() {
     return array;
   };
 
-  // Mark quiz as finished
   const endQuiz = useCallback(() => {
     setFinished(true);
   }, []);
 
-  // Save results after finishing
   useEffect(() => {
     if (!finished) return;
 
@@ -52,22 +51,21 @@ function QuizPage() {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
           name,
           school,
-          subject,
+          subject: normalizedSubject,
           score,
           timestamp,
           code,
         });
 
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
+        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
       } catch (err) {
         console.error('Failed to save quiz data or fetch leaderboard:', err);
       }
     };
 
     saveResults();
-  }, [finished, name, school, subject, score, code]);
+  }, [finished, name, school, subject, score, code, normalizedSubject]);
 
-  // Initial load
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
@@ -88,7 +86,6 @@ function QuizPage() {
     }
   }, [navigate, name, subject, subjectQuestions, code]);
 
-  // Save progress locally
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     const progress = {
@@ -103,10 +100,8 @@ function QuizPage() {
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
-  // Timer
   useEffect(() => {
     if (finished) return;
-
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
@@ -120,7 +115,6 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  // Handle answer click
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
@@ -159,7 +153,6 @@ function QuizPage() {
     return { grade: 'F9', level: 'Fail', color: 'text-red-600' };
   };
 
-  // Finished Screen
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, level, color } = getGrade(percentage);
@@ -198,7 +191,6 @@ function QuizPage() {
     );
   }
 
-  // Review screen
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-100 min-h-screen">
