@@ -2,19 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const subjects = [
-  "Physics",
-  "Chemistry",
-  "Add Maths",
-  "Biology",
-  "Core Maths",
-  "Core Science",
-  "Economics",
-  "Geography",
-  "Electiveict",
-  "English",
-  "Socialstudies",
-  "Accounting",
-  "Cost Accounting",
+  "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
+  "Core Science", "Economics", "Geography", "Electiveict",
+  "English", "Socialstudies", "Accounting", "Cost Accounting",
   "Business Management"
 ];
 
@@ -26,13 +16,12 @@ const Leaderboard = () => {
   const fetchResults = async (subject) => {
     if (!subject) return;
     setLoading(true);
-    
-    // Normalize subject to lowercase with no spaces
+
     const normalized = subject.toLowerCase().replace(/\s+/g, '');
 
     try {
       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalized}`);
-      setResults(res.data || []); // Use data directly as backend returns an array
+      setResults(res.data.results || []);
     } catch (err) {
       console.error('Failed to fetch leaderboard:', err);
     } finally {
@@ -41,15 +30,40 @@ const Leaderboard = () => {
   };
 
   useEffect(() => {
-    console.log('Selected subject:', selectedSubject);
     fetchResults(selectedSubject);
   }, [selectedSubject]);
+
+  const handleResetLeaderboard = async () => {
+    const password = window.prompt('Enter admin password to reset leaderboard:');
+    if (!password) return;
+
+    const normalized = selectedSubject.toLowerCase().replace(/\s+/g, '');
+
+    try {
+      const res = await axios.delete(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
+        data: {
+          secret: password,
+          subject: normalized
+        }
+      });
+
+      if (res.data.success) {
+        alert('Leaderboard reset successfully.');
+        setResults([]);
+      } else {
+        alert('Failed to reset leaderboard.');
+      }
+    } catch (err) {
+      console.error('Reset error:', err);
+      alert('Error resetting leaderboard. Please check the password or try again later.');
+    }
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-6 min-h-screen bg-gray-50">
       <h1 className="text-3xl font-bold mb-6 text-center">Leaderboard</h1>
 
-      <div className="mb-6 text-center">
+      <div className="mb-6 text-center space-y-2">
         <select
           value={selectedSubject}
           onChange={(e) => setSelectedSubject(e.target.value)}
@@ -57,11 +71,20 @@ const Leaderboard = () => {
         >
           <option value="">Select Subject</option>
           {subjects.map((subj) => (
-            <option key={subj} value={subj}>
-              {subj}
-            </option>
+            <option key={subj} value={subj}>{subj}</option>
           ))}
         </select>
+
+        {selectedSubject && (
+          <div>
+            <button
+              className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+              onClick={handleResetLeaderboard}
+            >
+              Reset Leaderboard (Admin)
+            </button>
+          </div>
+        )}
       </div>
 
       {loading ? (
@@ -81,14 +104,12 @@ const Leaderboard = () => {
           </thead>
           <tbody>
             {results.map((result, index) => (
-              <tr key={result._id} className="border-t hover:bg-gray-100">
+              <tr key={result._id || index} className="border-t hover:bg-gray-100">
                 <td className="p-3">{index + 1}</td>
                 <td className="p-3">{result.name}</td>
                 <td className="p-3">{result.school}</td>
                 <td className="p-3 font-bold">{result.score}</td>
-                <td className="p-3">
-                  {new Date(result.submittedAt).toLocaleDateString()}
-                </td>
+                <td className="p-3">{new Date(result.submittedAt).toLocaleDateString()}</td>
               </tr>
             ))}
           </tbody>

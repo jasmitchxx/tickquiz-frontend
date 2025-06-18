@@ -20,6 +20,7 @@ function QuizPage() {
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
+  const [hasSaved, setHasSaved] = useState(false);
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -35,7 +36,7 @@ function QuizPage() {
   }, []);
 
   useEffect(() => {
-    if (!finished) return;
+    if (!finished || hasSaved) return;
 
     const saveResults = async () => {
       if (!name || !school || !subject || typeof score !== 'number') {
@@ -45,26 +46,31 @@ function QuizPage() {
 
       const timestamp = new Date().toISOString();
 
+      const payload = {
+        name,
+        school,
+        subject: normalizedSubject,
+        score,
+        timestamp,
+        code,
+      };
+
+      console.log('Submitting result to backend:', payload);
+
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
-          name,
-          school,
-          subject: normalizedSubject,
-          score,
-          timestamp,
-          code,
-        });
-
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
         await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        setHasSaved(true);
+        localStorage.removeItem('quizProgress');
       } catch (err) {
         console.error('Failed to save quiz data or fetch leaderboard:', err);
+        alert('There was a problem saving your result. Please check your internet connection.');
       }
     };
 
     saveResults();
-  }, [finished, name, school, subject, score, code, normalizedSubject]);
+  }, [finished, hasSaved, name, school, subject, score, code, normalizedSubject]);
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -81,7 +87,7 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+      const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
       setShuffledQuestions(shuffled);
     }
   }, [navigate, name, subject, subjectQuestions, code]);
