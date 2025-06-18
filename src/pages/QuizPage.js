@@ -19,6 +19,7 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
 
+  // Shuffle Questions
   const shuffleArray = (arr) => {
     const array = [...arr];
     for (let i = array.length - 1; i > 0; i--) {
@@ -28,28 +29,45 @@ function QuizPage() {
     return array;
   };
 
-  const endQuiz = useCallback(async () => {
+  // Mark quiz as finished
+  const endQuiz = useCallback(() => {
     setFinished(true);
-    const timestamp = new Date().toISOString();
+  }, []);
 
-    try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+  // Save results after finishing
+  useEffect(() => {
+    if (!finished) return;
 
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
-        name,
-        school,
-        subject,
-        score,
-        timestamp,
-        code,
-      });
+    const saveResults = async () => {
+      if (!name || !school || !subject || typeof score !== 'number') {
+        console.warn('Missing or invalid quiz data. Aborting save.');
+        return;
+      }
 
-      await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
-    } catch (err) {
-      console.error('Failed to save quiz data or fetch leaderboard:', err);
-    }
-  }, [code, name, subject, score, school]);
+      const timestamp = new Date().toISOString();
 
+      try {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
+          name,
+          school,
+          subject,
+          score,
+          timestamp,
+          code,
+        });
+
+        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${subject}`);
+      } catch (err) {
+        console.error('Failed to save quiz data or fetch leaderboard:', err);
+      }
+    };
+
+    saveResults();
+  }, [finished, name, school, subject, score, code]);
+
+  // Initial load
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
@@ -70,6 +88,7 @@ function QuizPage() {
     }
   }, [navigate, name, subject, subjectQuestions, code]);
 
+  // Save progress locally
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     const progress = {
@@ -84,8 +103,10 @@ function QuizPage() {
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
+  // Timer
   useEffect(() => {
     if (finished) return;
+
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
@@ -99,6 +120,7 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
+  // Handle answer click
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
@@ -137,6 +159,7 @@ function QuizPage() {
     return { grade: 'F9', level: 'Fail', color: 'text-red-600' };
   };
 
+  // Finished Screen
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, level, color } = getGrade(percentage);
@@ -175,6 +198,7 @@ function QuizPage() {
     );
   }
 
+  // Review screen
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-100 min-h-screen">
