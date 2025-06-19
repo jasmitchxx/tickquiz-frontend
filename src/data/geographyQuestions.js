@@ -89,7 +89,7 @@ const geographyQuestions = [
       C: "Earth",
       D: "Jupiter"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which type of rock is formed from cooled molten magma?",
@@ -99,7 +99,7 @@ const geographyQuestions = [
       C: "Igneous",
       D: "Limestone"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The atmosphere is primarily composed of which gas?",
@@ -109,7 +109,7 @@ const geographyQuestions = [
       C: "Nitrogen",
       D: "Hydrogen"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The instrument used to measure atmospheric pressure is called:",
@@ -119,7 +119,7 @@ const geographyQuestions = [
       C: "Thermometer",
       D: "Hygrometer"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of the following landforms is caused by folding?",
@@ -129,7 +129,7 @@ const geographyQuestions = [
       C: "Volcanic Cone",
       D: "Fault Scarp"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "The Pacific Ring of Fire is associated with:",
@@ -139,7 +139,7 @@ const geographyQuestions = [
       C: "Droughts",
       D: "Tsunamis only"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Lava solidifies to form which type of rock?",
@@ -149,7 +149,7 @@ const geographyQuestions = [
       C: "Limestone",
       D: "Slate"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Weathering is best described as:",
@@ -159,7 +159,7 @@ const geographyQuestions = [
       C: "Melting of ice",
       D: "Creation of earthquakes"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of these is an agent of denudation?",
@@ -169,7 +169,7 @@ const geographyQuestions = [
       C: "Lava",
       D: "Fault"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which of the following results from faulting?",
@@ -179,7 +179,7 @@ const geographyQuestions = [
       C: "Rift Valleys",
       D: "Basins"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "A delta is formed at the:",
@@ -189,7 +189,7 @@ const geographyQuestions = [
       C: "Middle course of a river",
       D: "Underground water zone"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which of the following is a feature of coastal erosion?",
@@ -199,7 +199,7 @@ const geographyQuestions = [
       C: "Cliff",
       D: "Delta"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Deforestation mainly leads to:",
@@ -209,7 +209,7 @@ const geographyQuestions = [
       C: "Higher productivity",
       D: "Earthquakes"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which vegetation zone is most common in Northern Ghana?",
@@ -219,7 +219,7 @@ const geographyQuestions = [
       C: "Savanna",
       D: "Coniferous forest"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which of these is not a source of soil erosion?",
@@ -229,7 +229,7 @@ const geographyQuestions = [
       C: "Bush burning",
       D: "Excessive farming"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which type of volcano has gentle slopes?",
@@ -239,7 +239,7 @@ const geographyQuestions = [
       C: "Shield volcano",
       D: "Plug dome"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The hydrosphere refers to:",
@@ -249,7 +249,7 @@ const geographyQuestions = [
       C: "All the water bodies on Earth",
       D: "Earth’s core"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Rocks formed from sediments under pressure are called:",
@@ -259,7 +259,7 @@ const geographyQuestions = [
       C: "Sedimentary rocks",
       D: "Lava rocks"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "One main cause of mass wasting is:",
@@ -269,7 +269,7 @@ const geographyQuestions = [
       C: "Winds",
       D: "Human activities"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which type of rock can change into another type due to heat and pressure?",
@@ -279,7 +279,7 @@ const geographyQuestions = [
       C: "Sedimentary",
       D: "Minerals"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which of the following is the third planet from the sun?",
@@ -289,7 +289,7 @@ const geographyQuestions = [
       C: "Earth",
       D: "Jupiter"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which type of rock is formed from cooled molten magma?",
@@ -299,7 +299,7 @@ const geographyQuestions = [
       C: "Igneous",
       D: "Limestone"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The atmosphere is primarily composed of which gas?",
@@ -309,7 +309,7 @@ const geographyQuestions = [
       C: "Nitrogen",
       D: "Hydrogen"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The instrument used to measure atmospheric pressure is called:",
@@ -319,7 +319,7 @@ const geographyQuestions = [
       C: "Thermometer",
       D: "Hygrometer"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of the following landforms is caused by folding?",
@@ -329,7 +329,7 @@ const geographyQuestions = [
       C: "Volcanic Cone",
       D: "Fault Scarp"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "The Pacific Ring of Fire is associated with:",
@@ -339,7 +339,7 @@ const geographyQuestions = [
       C: "Droughts",
       D: "Tsunamis only"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Lava solidifies to form which type of rock?",
@@ -349,7 +349,7 @@ const geographyQuestions = [
       C: "Limestone",
       D: "Slate"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Weathering is best described as:",
@@ -359,7 +359,7 @@ const geographyQuestions = [
       C: "Melting of ice",
       D: "Creation of earthquakes"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of these is an agent of denudation?",
@@ -369,7 +369,7 @@ const geographyQuestions = [
       C: "Lava",
       D: "Fault"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which of the following results from faulting?",
@@ -379,7 +379,7 @@ const geographyQuestions = [
       C: "Rift Valleys",
       D: "Basins"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "A delta is formed at the:",
@@ -389,7 +389,7 @@ const geographyQuestions = [
       C: "Middle course of a river",
       D: "Underground water zone"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which of the following is a feature of coastal erosion?",
@@ -399,7 +399,7 @@ const geographyQuestions = [
       C: "Cliff",
       D: "Delta"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Deforestation mainly leads to:",
@@ -409,7 +409,7 @@ const geographyQuestions = [
       C: "Higher productivity",
       D: "Earthquakes"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which vegetation zone is most common in Northern Ghana?",
@@ -419,7 +419,7 @@ const geographyQuestions = [
       C: "Savanna",
       D: "Coniferous forest"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which of these is not a source of soil erosion?",
@@ -429,7 +429,7 @@ const geographyQuestions = [
       C: "Bush burning",
       D: "Excessive farming"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which type of volcano has gentle slopes?",
@@ -439,7 +439,7 @@ const geographyQuestions = [
       C: "Shield volcano",
       D: "Plug dome"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The hydrosphere refers to:",
@@ -449,7 +449,7 @@ const geographyQuestions = [
       C: "All the water bodies on Earth",
       D: "Earth’s core"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Rocks formed from sediments under pressure are called:",
@@ -459,7 +459,7 @@ const geographyQuestions = [
       C: "Sedimentary rocks",
       D: "Lava rocks"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "One main cause of mass wasting is:",
@@ -469,7 +469,7 @@ const geographyQuestions = [
       C: "Winds",
       D: "Human activities"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which type of rock can change into another type due to heat and pressure?",
@@ -479,7 +479,7 @@ const geographyQuestions = [
       C: "Sedimentary",
       D: "Minerals"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which gas in the atmosphere is most important for weather formation?",
@@ -489,7 +489,7 @@ const geographyQuestions = [
       C: "Carbon dioxide",
       D: "Water vapour"
     },
-    correctAnswer: "D"
+    answer: "D"
   },
   {
     question: "The weather element measured with a thermometer is:",
@@ -499,7 +499,7 @@ const geographyQuestions = [
       C: "Temperature",
       D: "Wind speed"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Oxbow lakes are formed by the action of:",
@@ -509,7 +509,7 @@ const geographyQuestions = [
       C: "Rivers",
       D: "Ocean waves"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which process leads to the formation of fold mountains?",
@@ -519,7 +519,7 @@ const geographyQuestions = [
       C: "Erosion",
       D: "Volcanic eruption"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of the following is a feature of glacial erosion?",
@@ -529,7 +529,7 @@ const geographyQuestions = [
       C: "Spit",
       D: "Loess"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of these activities can lead to desertification?",
@@ -539,7 +539,7 @@ const geographyQuestions = [
       C: "Composting",
       D: "Crop rotation"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "The soil type best for farming is:",
@@ -549,7 +549,7 @@ const geographyQuestions = [
       C: "Loamy",
       D: "Gravel"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which of the following is a renewable energy source?",
@@ -559,7 +559,7 @@ const geographyQuestions = [
       C: "Natural gas",
       D: "Solar"
     },
-    correctAnswer: "D"
+    answer: "D"
   },
   {
     question: "The term 'population density' refers to:",
@@ -569,7 +569,7 @@ const geographyQuestions = [
       C: "Migration rate",
       D: "Unemployment rate"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Urban settlements are mainly characterized by:",
@@ -579,7 +579,7 @@ const geographyQuestions = [
       C: "Social amenities",
       D: "Traditional leadership"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which economic activity involves the extraction of natural resources?",
@@ -589,7 +589,7 @@ const geographyQuestions = [
       C: "Tertiary",
       D: "Quaternary"
     },
-    correctAnswer: "A"
+    answer: "A"
   },
   {
     question: "Which of these is a secondary economic activity?",
@@ -599,7 +599,7 @@ const geographyQuestions = [
       C: "Farming",
       D: "Manufacturing"
     },
-    correctAnswer: "D"
+    answer: "D"
   },
   {
     question: "The capital city of Ghana is located in the:",
@@ -609,7 +609,7 @@ const geographyQuestions = [
       C: "Eastern Region",
       D: "Central Region"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Lake Volta is one of the largest artificial lakes in the world. It was created by:",
@@ -619,7 +619,7 @@ const geographyQuestions = [
       C: "Kpong Dam",
       D: "Weija Dam"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "Which river flows through both Ghana and Burkina Faso?",
@@ -629,7 +629,7 @@ const geographyQuestions = [
       C: "Volta",
       D: "Densu"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which African river is the longest?",
@@ -639,7 +639,7 @@ const geographyQuestions = [
       C: "Nile",
       D: "Congo"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "Which African country is landlocked?",
@@ -649,7 +649,7 @@ const geographyQuestions = [
       C: "Chad",
       D: "Senegal"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "The headquarters of ECOWAS is located in:",
@@ -659,7 +659,7 @@ const geographyQuestions = [
       C: "Lagos",
       D: "Dakar"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "One major aim of regional groupings in Africa is to:",
@@ -669,7 +669,7 @@ const geographyQuestions = [
       C: "Discourage education",
       D: "Close national borders"
     },
-    correctAnswer: "B"
+    answer: "B"
   },
   {
     question: "The primary goal of the African Union (AU) is:",
@@ -679,7 +679,7 @@ const geographyQuestions = [
       C: "Achieve continental unity and development",
       D: "Assist Europe"
     },
-    correctAnswer: "C"
+    answer: "C"
   },
   {
     question: "What is the term for a river that overflows its banks and spreads sediment across a wide area?",
