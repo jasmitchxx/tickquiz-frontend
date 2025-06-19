@@ -55,8 +55,6 @@ function QuizPage() {
         code,
       };
 
-      console.log('Submitting result to backend:', payload);
-
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
         await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
@@ -78,6 +76,10 @@ function QuizPage() {
       return;
     }
 
+    const validQuestions = subjectQuestions.filter(
+      q => q.question && Array.isArray(q.options) && q.options.length > 0 && q.answer
+    );
+
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
     if (saved && saved.code === code) {
       setCurrent(saved.current);
@@ -87,7 +89,7 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
+      const shuffled = shuffleArray(validQuestions).slice(0, Math.min(MAX_QUESTIONS, validQuestions.length));
       setShuffledQuestions(shuffled);
     }
   }, [navigate, name, subject, subjectQuestions, code]);
@@ -159,6 +161,8 @@ function QuizPage() {
     return { grade: 'F9', level: 'Fail', color: 'text-red-600' };
   };
 
+  const currentQuestion = shuffledQuestions[current];
+
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, level, color } = getGrade(percentage);
@@ -229,8 +233,6 @@ function QuizPage() {
     );
   }
 
-  const currentQuestion = shuffledQuestions[current];
-
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
       <div className="mb-4">
@@ -250,18 +252,27 @@ function QuizPage() {
         <h2 className="text-xl font-semibold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
         </h2>
-        <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="flex flex-wrap gap-4 justify-start">
-          {currentQuestion?.options.map((option, index) => (
-            <button
-              key={index}
-              className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
+
+        {!currentQuestion || !Array.isArray(currentQuestion.options) ? (
+          <p className="text-red-500 font-bold">
+            ?? Invalid question format. Skipping this question.
+          </p>
+        ) : (
+          <>
+            <p className="text-lg mb-4">{currentQuestion.question}</p>
+            <div className="flex flex-wrap gap-4 justify-start">
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                  onClick={() => handleAnswer(option)}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
