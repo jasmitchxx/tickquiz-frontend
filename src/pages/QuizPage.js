@@ -44,28 +44,39 @@ function QuizPage() {
         return;
       }
 
-      const timestamp = new Date().toISOString();
-
       const payload = {
         name,
         school,
         subject: normalizedSubject,
-        score,
-        timestamp,
+        score: Number(score),
+        timestamp: new Date().toISOString(),
         code,
       };
 
-      console.log('Submitting result to backend:', payload);
-
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        // Increment usage (non-blocking)
+        try {
+          await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        } catch (err) {
+          console.warn('Could not increment usage:', err.response?.data || err.message);
+        }
+
+        // Save result
+        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
+        if (!saveRes.data.success) throw new Error(saveRes.data.message);
+
+        // Fetch leaderboard (non-blocking)
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        } catch (err) {
+          console.warn('Could not load leaderboard:', err.response?.data || err.message);
+        }
+
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
       } catch (err) {
-        console.error('Failed to save quiz data or fetch leaderboard:', err);
-        alert('There was a problem saving your result. Please check your internet connection.');
+        console.error('Save error:', err.response?.data || err.message);
+        alert('There was a problem saving your result. Please try again.');
       }
     };
 
@@ -252,15 +263,25 @@ function QuizPage() {
         </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
         <div className="flex flex-wrap gap-4 justify-start">
-          {currentQuestion?.options.map((option, index) => (
-            <button
-              key={index}
-              className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
+          {Array.isArray(currentQuestion?.options)
+            ? currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                  onClick={() => handleAnswer(option)}
+                >
+                  {option}
+                </button>
+              ))
+            : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
+                <button
+                  key={key}
+                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                  onClick={() => handleAnswer(key)}
+                >
+                  {key}: {val}
+                </button>
+              ))}
         </div>
       </div>
     </div>
