@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import RequestAccessWithPayment from './pages/RequestAccessWithPayment';
 import VerifyPaymentPage from './pages/VerifyPaymentPage';
 import About from './pages/About';
