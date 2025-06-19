@@ -1,4 +1,4 @@
-// src/data/geographySHS.js
+// src/data/geography.js
 
 const geographyQuestions = [
   // A. PHYSICAL GEOGRAPHY
