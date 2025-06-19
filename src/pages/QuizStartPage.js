@@ -1,5 +1,4 @@
-// src/pages/QuizStartPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import questionsData from '../data/questionsData';
 
@@ -11,14 +10,33 @@ function QuizStartPage() {
   const [school, setSchool] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
 
+  // ?? Prevent quiz restart if already completed
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem('quizUser'));
+    if (savedUser && localStorage.getItem(`quizCompleted-${savedUser.code}`) === 'true') {
+      navigate('/result');
+    }
+  }, [navigate]);
+
   const handleStartQuiz = () => {
     if (!name.trim() || !school.trim() || !selectedSubject) {
       alert('Please enter your name, school, and select a subject.');
       return;
     }
 
-    const code = `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+    
+    const existingKey = Object.keys(localStorage).find((key) =>
+      key.startsWith('quizCompleted-')
+    );
 
+    // Check for completed quiz before proceeding
+    if (existingKey && localStorage.getItem(existingKey) === 'true') {
+      alert('You have already completed a quiz. Redirecting to your results.');
+      navigate('/result');
+      return;
+    }
+
+    const code = `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
     const user = {
       name: name.trim(),
       school: school.trim(),

@@ -19,11 +19,7 @@ function Header() {
       return;
     }
 
-    if (quizFinished) {
-      navigate('/results');
-    } else {
-      navigate('/start');
-    }
+    navigate(quizFinished ? '/results' : '/start');
   };
 
   const handleQuizClick = (e) => {
@@ -37,12 +33,29 @@ function Header() {
     <header
       style={{
         backgroundColor: '#f5f5f5',
-        padding: '1rem',
+        padding: '1rem 2rem',
         borderBottom: '1px solid #ddd',
-        marginBottom: '2rem'
+        marginBottom: '2rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}
     >
-      <nav style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', fontWeight: 'bold' }}>
+      {/* Logo Image */}
+      <img
+        src="/tickquiz-logo.png"
+        alt="TickQuiz Logo"
+        style={{
+          height: '50px',
+          objectFit: 'contain',
+          cursor: 'pointer'
+        }}
+        onClick={() => navigate('/')}
+      />
+
+      {/* Navigation Links */}
+      <nav style={{ display: 'flex', gap: '1.5rem', fontWeight: 'bold' }}>
         <button
           onClick={handleStartClick}
           style={{
