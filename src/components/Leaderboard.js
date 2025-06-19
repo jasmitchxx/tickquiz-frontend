@@ -62,20 +62,19 @@ const Leaderboard = () => {
   };
 
   const uniqueSchools = [...new Set(results.map(r => r.school).filter(Boolean))];
-
   const filteredResults = selectedSchool
     ? results.filter(r => r.school === selectedSchool)
     : results;
 
   return (
-    <div className="max-w-4xl mx-auto p-6 min-h-screen bg-gray-50">
-      <h1 className="text-3xl font-bold mb-6 text-center">Leaderboard</h1>
+    <div className="max-w-5xl mx-auto p-6 min-h-screen bg-gray-50">
+      <h1 className="text-3xl font-bold mb-8 text-center text-blue-700">Leaderboard</h1>
 
-      <div className="mb-6 text-center space-y-4">
+      <div className="mb-8 flex flex-col items-center space-y-4">
         <select
           value={selectedSubject}
           onChange={(e) => setSelectedSubject(e.target.value)}
-          className="border border-gray-300 px-4 py-2 rounded shadow"
+          className="border border-gray-300 px-4 py-2 rounded shadow-md w-64"
         >
           <option value="">Select Subject</option>
           {subjects.map((subj) => (
@@ -88,7 +87,7 @@ const Leaderboard = () => {
             <select
               value={selectedSchool}
               onChange={(e) => setSelectedSchool(e.target.value)}
-              className="border border-gray-300 px-4 py-2 rounded shadow"
+              className="border border-gray-300 px-4 py-2 rounded shadow-md w-64"
             >
               <option value="">All Schools</option>
               {uniqueSchools.map((school) => (
@@ -97,7 +96,7 @@ const Leaderboard = () => {
             </select>
 
             <button
-              className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+              className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 shadow-md"
               onClick={handleResetLeaderboard}
             >
               Reset Leaderboard (Admin)
@@ -111,28 +110,43 @@ const Leaderboard = () => {
       ) : filteredResults.length === 0 ? (
         <p className="text-center text-gray-500">No results yet for this filter.</p>
       ) : (
-        <table className="w-full table-auto bg-white shadow-md rounded">
-          <thead>
-            <tr className="bg-gray-200 text-left">
-              <th className="p-3">#</th>
-              <th className="p-3">Name</th>
-              <th className="p-3">School</th>
-              <th className="p-3">Score</th>
-              <th className="p-3">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredResults.map((result, index) => (
-              <tr key={result._id || index} className="border-t hover:bg-gray-100">
-                <td className="p-3">{index + 1}</td>
-                <td className="p-3">{result.name}</td>
-                <td className="p-3">{result.school}</td>
-                <td className="p-3 font-bold">{result.score}</td>
-                <td className="p-3">{new Date(result.submittedAt).toLocaleDateString()}</td>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow rounded-lg">
+            <thead>
+              <tr className="bg-blue-600 text-white">
+                <th className="p-3 text-left">#</th>
+                <th className="p-3 text-left">Name</th>
+                <th className="p-3 text-left">School</th>
+                <th className="p-3 text-left">Score</th>
+                <th className="p-3 text-left">Date</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {filteredResults.map((result, index) => {
+                const rowBg =
+                  index === 0
+                    ? 'bg-yellow-100'
+                    : index === 1
+                    ? 'bg-gray-100'
+                    : index === 2
+                    ? 'bg-orange-100'
+                    : index % 2 === 0
+                    ? 'bg-white'
+                    : 'bg-gray-50';
+
+                return (
+                  <tr key={result._id || index} className={`${rowBg} hover:bg-blue-50`}>
+                    <td className="p-3 font-semibold">{index + 1}</td>
+                    <td className="p-3">{result.name}</td>
+                    <td className="p-3">{result.school}</td>
+                    <td className="p-3 font-bold text-blue-700">{result.score}</td>
+                    <td className="p-3 text-sm text-gray-500">{new Date(result.submittedAt).toLocaleDateString()}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
