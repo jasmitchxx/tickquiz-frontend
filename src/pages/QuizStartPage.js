@@ -10,11 +10,14 @@ function QuizStartPage() {
   const [school, setSchool] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
 
-  // ?? Prevent quiz restart if already completed
+  // ? Prevent quiz restart if already completed
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem('quizUser'));
-    if (savedUser && localStorage.getItem(`quizCompleted-${savedUser.code}`) === 'true') {
-      navigate('/result');
+    const completedKey = savedUser?.code && `quizCompleted-${savedUser.code}`;
+    const isCompleted = completedKey && localStorage.getItem(completedKey) === 'true';
+
+    if (isCompleted) {
+      navigate('/result', { replace: true }); // ? prevents back button going back here
     }
   }, [navigate]);
 
@@ -24,15 +27,13 @@ function QuizStartPage() {
       return;
     }
 
-    
     const existingKey = Object.keys(localStorage).find((key) =>
       key.startsWith('quizCompleted-')
     );
 
-    // Check for completed quiz before proceeding
     if (existingKey && localStorage.getItem(existingKey) === 'true') {
       alert('You have already completed a quiz. Redirecting to your results.');
-      navigate('/result');
+      navigate('/result', { replace: true });
       return;
     }
 

@@ -22,7 +22,6 @@ function QuizPage() {
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
 
-  // ?? Prevent access if already completed
   useEffect(() => {
     const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
     if (quizDone) {
@@ -72,7 +71,7 @@ function QuizPage() {
 
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
-        localStorage.setItem(`quizCompleted-${code}`, 'true'); // ? Set completion flag
+        localStorage.setItem(`quizCompleted-${code}`, 'true');
       } catch (err) {
         console.error('Save error:', err.response?.data || err.message);
         alert('There was a problem saving your result. Please try again.');
@@ -174,25 +173,27 @@ function QuizPage() {
     const { grade, level, color } = getGrade(percentage);
 
     return (
-      <div className="p-6 text-center bg-blue-100 min-h-screen">
-        <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
-        <p className="text-lg">Name: <strong>{name}</strong></p>
-        <p className="text-lg">Subject: <strong>{subject}</strong></p>
-        <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-        <p className={`text-xl mt-2 font-semibold ${color}`}>
-          Grade: <strong>{grade}</strong> – <em>{level}</em>
-        </p>
+      <div className="min-h-screen bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 p-6">
+        <div className="max-w-2xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg text-center">
+          <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
+          <p className="text-lg">Name: <strong>{name}</strong></p>
+          <p className="text-lg">Subject: <strong>{subject}</strong></p>
+          <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
+          <p className={`text-xl mt-2 font-semibold ${color}`}>
+            Grade: <strong>{grade}</strong> – <em>{level}</em>
+          </p>
 
-        <div className="mt-6 space-x-4">
-          <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>
-            Review Answers
-          </button>
-          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
-            View Leaderboard
-          </button>
-          <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>
-            Start Over
-          </button>
+          <div className="mt-6 space-x-4">
+            <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>
+              Review Answers
+            </button>
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
+              View Leaderboard
+            </button>
+            <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>
+              Start Over
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -200,28 +201,30 @@ function QuizPage() {
 
   if (reviewing) {
     return (
-      <div className="p-6 bg-blue-100 min-h-screen">
-        <h2 className="text-2xl font-bold mb-4 text-center">Review Answers</h2>
-        {answers.map((item, index) => (
-          <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
-            <p className="font-semibold">{index + 1}. {item.question}</p>
-            <p>
-              Your answer:{' '}
-              <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
-                {item.selected}
-              </span>
-            </p>
-            {!item.isCorrect && (
+      <div className="min-h-screen bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 p-6">
+        <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg">
+          <h2 className="text-2xl font-bold mb-4 text-center">Review Answers</h2>
+          {answers.map((item, index) => (
+            <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
+              <p className="font-semibold">{index + 1}. {item.question}</p>
               <p>
-                Correct answer: <span className="text-green-600">{item.correct}</span>
+                Your answer:{' '}
+                <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
+                  {item.selected}
+                </span>
               </p>
-            )}
+              {!item.isCorrect && (
+                <p>
+                  Correct answer: <span className="text-green-600">{item.correct}</span>
+                </p>
+              )}
+            </div>
+          ))}
+          <div className="text-center mt-6">
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
+              Return to Start
+            </button>
           </div>
-        ))}
-        <div className="text-center mt-6">
-          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
-            Return to Start
-          </button>
         </div>
       </div>
     );
@@ -230,43 +233,45 @@ function QuizPage() {
   const currentQuestion = shuffledQuestions[current];
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      <div className="mb-4">
-        <div className="flex justify-between mb-1">
-          <span className="text-sm font-medium">Time Left</span>
-          <span className="text-sm font-mono">{formatTime()}</span>
+    <div className="min-h-screen bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 p-6">
+      <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-6">
+        <div className="mb-4">
+          <div className="flex justify-between mb-1">
+            <span className="text-sm font-medium">Time Left</span>
+            <span className="text-sm font-mono">{formatTime()}</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-4">
+            <div
+              className="bg-green-500 h-4 rounded-full transition-all duration-500"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
-          <div
-            className="bg-green-500 h-4 rounded-full transition-all duration-500"
-            style={{ width: `${progressPercent}%` }}
-          />
-        </div>
-      </div>
 
-      <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
-        <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="flex flex-wrap gap-4 justify-start">
-          {Array.isArray(currentQuestion?.options)
-            ? currentQuestion.options.map((option, index) => (
-              <button
-                key={index}
-                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                onClick={() => handleAnswer(option)}
-              >
-                {option}
-              </button>
-            ))
-            : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
-              <button
-                key={key}
-                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                onClick={() => handleAnswer(key)}
-              >
-                {key}: {val}
-              </button>
-            ))}
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
+          <p className="text-lg mb-4">{currentQuestion?.question}</p>
+          <div className="flex flex-wrap gap-4 justify-start">
+            {Array.isArray(currentQuestion?.options)
+              ? currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
+                  onClick={() => handleAnswer(option)}
+                >
+                  {option}
+                </button>
+              ))
+              : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
+                <button
+                  key={key}
+                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
+                  onClick={() => handleAnswer(key)}
+                >
+                  {key}: {val}
+                </button>
+              ))}
+          </div>
         </div>
       </div>
     </div>
