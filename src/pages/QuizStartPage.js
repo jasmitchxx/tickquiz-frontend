@@ -2,150 +2,96 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import questionsData from '../data/questionsData';
 
-function QuizStartPage() {
+const QuizStartPage = () => {
   const navigate = useNavigate();
-  const subjects = Object.keys(questionsData);
-
   const [name, setName] = useState('');
   const [school, setSchool] = useState('');
-  const [selectedSubject, setSelectedSubject] = useState('');
+  const [subject, setSubject] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    const savedUser = JSON.parse(localStorage.getItem('quizUser'));
-    const completedKey = savedUser?.code && `quizCompleted-${savedUser.code}`;
-    const isCompleted = completedKey && localStorage.getItem(completedKey) === 'true';
-
-    // ? Optional: check if user has paid (if you set it after Paystack)
-    const hasPaid = savedUser?.paid === true;
-
-    // Redirect if already completed or not paid (optional)
-    if (isCompleted) {
-      navigate('/result', { replace: true });
+    const access = localStorage.getItem('quizAccessGranted');
+    const code = localStorage.getItem('accessCodeUsed');
+    if (access !== 'true' || !code) {
+      navigate('/request-access');
     }
 
-    // ? Prevent back-button from going back here after completion
-    const blockBack = () => {
-      window.history.pushState(null, null, window.location.href);
-    };
-    window.history.pushState(null, null, window.location.href);
-    window.addEventListener('popstate', blockBack);
-
-    return () => {
-      window.removeEventListener('popstate', blockBack);
-    };
+    const completed = localStorage.getItem(`quizCompleted-${code}`) === 'true';
+    if (completed) {
+      navigate('/result');
+    }
   }, [navigate]);
 
-  const handleStartQuiz = () => {
-    if (!name.trim() || !school.trim() || !selectedSubject) {
-      alert('Please enter your name, school, and select a subject.');
+  const handleStart = () => {
+    if (!name || !school || !subject) {
+      setError('Please fill in all fields.');
       return;
     }
 
-    // Prevent retaking quiz
-    const existingKey = Object.keys(localStorage).find((key) =>
-      key.startsWith('quizCompleted-')
-    );
-
-    if (existingKey && localStorage.getItem(existingKey) === 'true') {
-      alert('You have already completed a quiz. Redirecting to your results.');
-      navigate('/result', { replace: true });
-      return;
-    }
-
-    const code = `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
-    const user = {
-      name: name.trim(),
-      school: school.trim(),
-      subject: selectedSubject,
+    const code = localStorage.getItem('accessCodeUsed');
+    const quizUser = {
+      name,
+      school,
+      subject,
       code,
-      paid: true, // ? If you want to flag payment status (optional)
     };
 
-    localStorage.setItem('quizUser', JSON.stringify(user));
+    localStorage.setItem('quizUser', JSON.stringify(quizUser));
+    localStorage.removeItem('quizProgress'); // Clear old quiz progress
     navigate('/quiz');
   };
 
+  const subjectOptions = Object.keys(questionsData);
+
   return (
-    <div
-      style={{
-        maxWidth: 400,
-        margin: '2rem auto',
-        padding: '1rem',
-        border: '1px solid #ddd',
-        borderRadius: 10,
-        textAlign: 'center',
-        background: 'white',
-      }}
-    >
-      <h2>Welcome to TickQuiz!</h2>
-      <p>Enter your details to begin:</p>
+    <div className="max-w-xl mx-auto p-6 mt-10 bg-white rounded shadow">
+      <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Welcome to TickQuiz!</h2>
+      <p className="mb-4 text-center text-gray-600">Enter your details to begin:</p>
 
-      <input
-        type="text"
-        placeholder="Your Full Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        style={{
-          width: '100%',
-          padding: 10,
-          marginBottom: 10,
-          fontSize: 16,
-          borderRadius: 5,
-          border: '1px solid #ccc',
-        }}
-      />
+      {error && <div className="mb-4 text-red-500 font-medium">{error}</div>}
 
-      <input
-        type="text"
-        placeholder="Your School"
-        value={school}
-        onChange={(e) => setSchool(e.target.value)}
-        style={{
-          width: '100%',
-          padding: 10,
-          marginBottom: 10,
-          fontSize: 16,
-          borderRadius: 5,
-          border: '1px solid #ccc',
-        }}
-      />
+      <div className="mb-4">
+        <label className="block mb-1 font-medium">Your Full Name</label>
+        <input
+          type="text"
+          className="w-full px-4 py-2 border rounded"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
 
-      <select
-        value={selectedSubject}
-        onChange={(e) => setSelectedSubject(e.target.value)}
-        style={{
-          width: '100%',
-          padding: 10,
-          marginBottom: 20,
-          fontSize: 16,
-          borderRadius: 5,
-          border: '1px solid #ccc',
-        }}
-      >
-        <option value="">-- Choose a Subject --</option>
-        {subjects.map((subject) => (
-          <option key={subject} value={subject}>
-            {subject}
-          </option>
-        ))}
-      </select>
+      <div className="mb-4">
+        <label className="block mb-1 font-medium">Your School</label>
+        <input
+          type="text"
+          className="w-full px-4 py-2 border rounded"
+          value={school}
+          onChange={(e) => setSchool(e.target.value)}
+        />
+      </div>
+
+      <div className="mb-6">
+        <label className="block mb-1 font-medium">-- Choose a Subject --</label>
+        <select
+          className="w-full px-4 py-2 border rounded"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        >
+          <option value="">Select a Subject</option>
+          {subjectOptions.map((subj) => (
+            <option key={subj} value={subj}>{subj}</option>
+          ))}
+        </select>
+      </div>
 
       <button
-        onClick={handleStartQuiz}
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          backgroundColor: '#28a745',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-semibold"
+        onClick={handleStart}
       >
         Start Quiz
       </button>
     </div>
   );
-}
+};
 
 export default QuizStartPage;

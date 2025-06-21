@@ -20,7 +20,6 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
 
   useEffect(() => {
     const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
@@ -42,7 +41,10 @@ function QuizPage() {
     if (!finished || hasSaved) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || typeof score !== 'number') return;
+      if (!name || !school || !subject || typeof score !== 'number') {
+        console.warn('Missing quiz data. Aborting save.');
+        return;
+      }
 
       const payload = {
         name,
@@ -54,18 +56,20 @@ function QuizPage() {
       };
 
       try {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
         const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-        if (!saveRes.data.success) throw new Error(saveRes.data.message || 'Save failed');
+        if (!saveRes.data.success) throw new Error(saveRes.data.message);
+
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        } catch {}
 
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
         localStorage.setItem(`quizCompleted-${code}`, 'true');
-
-        try {
-          await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        } catch {}
       } catch (err) {
-        alert('? Result could not be saved. Try again later.');
+        console.error('Save error:', err.response?.data || err.message);
+        alert('There was a problem saving your result. Please try again.');
       }
     };
 
@@ -94,7 +98,15 @@ function QuizPage() {
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
+    const progress = {
+      code,
+      current,
+      answers,
+      score,
+      timeLeft,
+      finished,
+      questions: shuffledQuestions,
+    };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
@@ -114,36 +126,22 @@ function QuizPage() {
   }, [finished, endQuiz]);
 
   const handleAnswer = (selected) => {
-    if (answers[current]) return; // Already answered
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    const updatedAnswers = [...answers];
-    updatedAnswers[current] = {
+    setAnswers((prev) => [...prev, {
       question: q.question,
       selected,
       correct: q.answer,
       isCorrect,
-    };
+    }]);
 
-    setAnswers(updatedAnswers);
     if (isCorrect) setScore((prev) => prev + 1);
-    setSelectedOption(selected);
-  };
 
-  const handleNext = () => {
     if (current + 1 === shuffledQuestions.length) {
       endQuiz();
     } else {
       setCurrent(current + 1);
-      setSelectedOption(null);
-    }
-  };
-
-  const handleBack = () => {
-    if (current > 0) {
-      setCurrent(current - 1);
-      setSelectedOption(null);
     }
   };
 
@@ -153,6 +151,8 @@ function QuizPage() {
     const secs = (safeTime % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
+
+  const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
@@ -177,12 +177,20 @@ function QuizPage() {
           <p className="text-lg">Name: <strong>{name}</strong></p>
           <p className="text-lg">Subject: <strong>{subject}</strong></p>
           <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-          <p className={`text-xl mt-2 font-semibold ${color}`}>Grade: <strong>{grade}</strong> – <em>{level}</em></p>
+          <p className={`text-xl mt-2 font-semibold ${color}`}>
+            Grade: <strong>{grade}</strong> – <em>{level}</em>
+          </p>
 
           <div className="mt-6 space-x-4">
-            <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>Review Answers</button>
-            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>View Leaderboard</button>
-            <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>Start Over</button>
+            <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>
+              Review Answers
+            </button>
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
+              View Leaderboard
+            </button>
+            <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>
+              Start Over
+            </button>
           </div>
         </div>
       </div>
@@ -198,11 +206,15 @@ function QuizPage() {
             <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
               <p className="font-semibold">{index + 1}. {item.question}</p>
               <p>Your answer: <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>{item.selected}</span></p>
-              {!item.isCorrect && <p>Correct answer: <span className="text-green-600">{item.correct}</span></p>}
+              {!item.isCorrect && (
+                <p>Correct answer: <span className="text-green-600">{item.correct}</span></p>
+              )}
             </div>
           ))}
           <div className="text-center mt-6">
-            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>Return to Start</button>
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
+              Return to Start
+            </button>
           </div>
         </div>
       </div>
@@ -210,7 +222,6 @@ function QuizPage() {
   }
 
   const currentQuestion = shuffledQuestions[current];
-  const progressPercent = (timeLeft / 3600) * 100;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 p-6">
@@ -229,40 +240,26 @@ function QuizPage() {
           <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
           <p className="text-lg mb-4">{currentQuestion?.question}</p>
           <div className="flex flex-wrap gap-4 justify-start">
-            {(Array.isArray(currentQuestion?.options) ? currentQuestion.options : Object.keys(currentQuestion.options || {})).map((option, index) => (
-              <button
-                key={index}
-                className={`border rounded-xl px-6 py-3 shadow transition duration-200 ${
-                  answers[current]?.selected === option
-                    ? answers[current].isCorrect
-                      ? 'bg-green-200 border-green-500'
-                      : 'bg-red-200 border-red-500'
-                    : 'bg-white hover:bg-gray-200'
-                }`}
-                disabled={!!answers[current]}
-                onClick={() => handleAnswer(option)}
-              >
-                {typeof option === 'string' ? option : `${option}: ${currentQuestion.options[option]}`}
-              </button>
-            ))}
+            {Array.isArray(currentQuestion?.options)
+              ? currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
+                  onClick={() => handleAnswer(option)}
+                >
+                  {option}
+                </button>
+              ))
+              : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
+                <button
+                  key={key}
+                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
+                  onClick={() => handleAnswer(key)}
+                >
+                  {key}: {val}
+                </button>
+              ))}
           </div>
-        </div>
-
-        <div className="flex justify-between mt-4">
-          <button
-            className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 disabled:opacity-50"
-            onClick={handleBack}
-            disabled={current === 0}
-          >
-            Back
-          </button>
-          <button
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
-            onClick={handleNext}
-            disabled={!answers[current]}
-          >
-            {current + 1 === shuffledQuestions.length ? 'Finish' : 'Next'}
-          </button>
         </div>
       </div>
     </div>
