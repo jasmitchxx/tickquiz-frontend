@@ -20,7 +20,7 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   useEffect(() => {
     const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
@@ -42,10 +42,7 @@ function QuizPage() {
     if (!finished || hasSaved) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || typeof score !== 'number') {
-        console.warn('Missing or invalid quiz data. Aborting save.');
-        return;
-      }
+      if (!name || !school || !subject || typeof score !== 'number') return;
 
       const payload = {
         name,
@@ -66,19 +63,9 @@ function QuizPage() {
 
         try {
           await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        } catch (err) {
-          console.warn('Usage tracking failed:', err.response?.data || err.message);
-        }
-
-        try {
-          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
-        } catch (err) {
-          console.warn('Leaderboard fetch failed:', err.response?.data || err.message);
-        }
-
+        } catch {}
       } catch (err) {
-        console.error('Save error:', err.response?.data || err.message);
-        alert('?? Your result could not be saved. Please try again later.');
+        alert('? Result could not be saved. Try again later.');
       }
     };
 
@@ -99,7 +86,6 @@ function QuizPage() {
       setTimeLeft(saved.timeLeft);
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
-      setSelectedAnswer(saved.answers[saved.current]?.selected || null);
     } else {
       const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
       setShuffledQuestions(shuffled);
@@ -127,35 +113,37 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  const handleNext = () => {
+  const handleAnswer = (selected) => {
+    if (answers[current]) return; // Already answered
     const q = shuffledQuestions[current];
-    const isCorrect = selectedAnswer === q.answer;
-    const alreadyAnswered = answers[current];
+    const isCorrect = selected === q.answer;
 
-    if (!alreadyAnswered) {
-      const updatedAnswers = [...answers];
-      updatedAnswers[current] = {
-        question: q.question,
-        selected: selectedAnswer,
-        correct: q.answer,
-        isCorrect,
-      };
-      setAnswers(updatedAnswers);
-      if (isCorrect) setScore((prev) => prev + 1);
-    }
+    const updatedAnswers = [...answers];
+    updatedAnswers[current] = {
+      question: q.question,
+      selected,
+      correct: q.answer,
+      isCorrect,
+    };
 
+    setAnswers(updatedAnswers);
+    if (isCorrect) setScore((prev) => prev + 1);
+    setSelectedOption(selected);
+  };
+
+  const handleNext = () => {
     if (current + 1 === shuffledQuestions.length) {
       endQuiz();
     } else {
       setCurrent(current + 1);
-      setSelectedAnswer(answers[current + 1]?.selected || null);
+      setSelectedOption(null);
     }
   };
 
   const handleBack = () => {
     if (current > 0) {
       setCurrent(current - 1);
-      setSelectedAnswer(answers[current - 1]?.selected || null);
+      setSelectedOption(null);
     }
   };
 
@@ -165,8 +153,6 @@ function QuizPage() {
     const secs = (safeTime % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
-
-  const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
@@ -211,20 +197,12 @@ function QuizPage() {
           {answers.map((item, index) => (
             <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
               <p className="font-semibold">{index + 1}. {item.question}</p>
-              <p>Your answer:{' '}
-                <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
-                  {item.selected}
-                </span>
-              </p>
-              {!item.isCorrect && (
-                <p>Correct answer: <span className="text-green-600">{item.correct}</span></p>
-              )}
+              <p>Your answer: <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>{item.selected}</span></p>
+              {!item.isCorrect && <p>Correct answer: <span className="text-green-600">{item.correct}</span></p>}
             </div>
           ))}
           <div className="text-center mt-6">
-            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
-              Return to Start
-            </button>
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>Return to Start</button>
           </div>
         </div>
       </div>
@@ -232,6 +210,7 @@ function QuizPage() {
   }
 
   const currentQuestion = shuffledQuestions[current];
+  const progressPercent = (timeLeft / 3600) * 100;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-200 via-sky-300 to-blue-400 p-6">
@@ -249,49 +228,41 @@ function QuizPage() {
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
           <p className="text-lg mb-4">{currentQuestion?.question}</p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {Array.isArray(currentQuestion?.options)
-              ? currentQuestion.options.map((option, index) => (
-                <button
-                  key={index}
-                  disabled={!!answers[current]}
-                  className={`border px-6 py-3 rounded-xl shadow bg-white hover:bg-gray-100
-                    ${selectedAnswer === option ? 'ring-2 ring-blue-500' : ''}`}
-                  onClick={() => setSelectedAnswer(option)}
-                >
-                  {option}
-                </button>
-              ))
-              : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
-                <button
-                  key={key}
-                  disabled={!!answers[current]}
-                  className={`border px-6 py-3 rounded-xl shadow bg-white hover:bg-gray-100
-                    ${selectedAnswer === key ? 'ring-2 ring-blue-500' : ''}`}
-                  onClick={() => setSelectedAnswer(key)}
-                >
-                  {key}: {val}
-                </button>
-              ))}
+          <div className="flex flex-wrap gap-4 justify-start">
+            {(Array.isArray(currentQuestion?.options) ? currentQuestion.options : Object.keys(currentQuestion.options || {})).map((option, index) => (
+              <button
+                key={index}
+                className={`border rounded-xl px-6 py-3 shadow transition duration-200 ${
+                  answers[current]?.selected === option
+                    ? answers[current].isCorrect
+                      ? 'bg-green-200 border-green-500'
+                      : 'bg-red-200 border-red-500'
+                    : 'bg-white hover:bg-gray-200'
+                }`}
+                disabled={!!answers[current]}
+                onClick={() => handleAnswer(option)}
+              >
+                {typeof option === 'string' ? option : `${option}: ${currentQuestion.options[option]}`}
+              </button>
+            ))}
           </div>
+        </div>
 
-          <div className="mt-6 flex justify-between">
-            <button
-              onClick={handleBack}
-              disabled={current === 0}
-              className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50"
-            >
-              Back
-            </button>
-            <button
-              onClick={handleNext}
-              disabled={!selectedAnswer}
-              className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
-            >
-              {current + 1 === shuffledQuestions.length ? 'Finish' : 'Next'}
-            </button>
-          </div>
+        <div className="flex justify-between mt-4">
+          <button
+            className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 disabled:opacity-50"
+            onClick={handleBack}
+            disabled={current === 0}
+          >
+            Back
+          </button>
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            onClick={handleNext}
+            disabled={!answers[current]}
+          >
+            {current + 1 === shuffledQuestions.length ? 'Finish' : 'Next'}
+          </button>
         </div>
       </div>
     </div>
