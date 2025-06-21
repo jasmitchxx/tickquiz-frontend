@@ -54,50 +54,44 @@ function QuizStartPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 to-white px-4">
       <form
         onSubmit={handleStart}
-        className="bg-white shadow-xl rounded-lg p-8 w-full max-w-sm"
+        className="bg-white shadow-xl rounded-xl p-10 w-full max-w-md space-y-6"
       >
-        <h2 className="text-2xl font-bold text-center text-blue-700 mb-6">
+        <h2 className="text-3xl font-bold text-center text-blue-700">
           Start Quiz
         </h2>
 
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Enter your full name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Enter your full name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full px-4 py-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
 
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Enter your school name"
-            value={school}
-            onChange={(e) => setSchool(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Enter your school name"
+          value={school}
+          onChange={(e) => setSchool(e.target.value)}
+          className="w-full px-4 py-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
 
-        <div className="mb-4">
-          <select
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            <option value="">-- Choose Subject --</option>
-            {subjects.map((subj) => (
-              <option key={subj} value={subj}>{subj}</option>
-            ))}
-          </select>
-        </div>
+        <select
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          className="w-full px-4 py-4 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <option value="">-- Choose Subject --</option>
+          {subjects.map((subj) => (
+            <option key={subj} value={subj}>{subj}</option>
+          ))}
+        </select>
 
-        {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
+        {error && <p className="text-sm text-red-600">{error}</p>}
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition"
+          className="w-full bg-green-600 text-white py-4 text-lg rounded-lg font-semibold hover:bg-green-700 transition"
         >
           Start Quiz
         </button>
