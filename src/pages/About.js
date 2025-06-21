@@ -6,13 +6,13 @@ function About() {
       <h1 className="text-3xl font-bold text-center mb-6">About TickQuiz</h1>
 
       <p>
-        <strong>TickQuiz</strong> is Ghana’s competitive, time-based online quiz platform designed to help students
+        <strong>TickQuiz</strong> is Ghanas competitive, time-based online quiz platform designed to help students
         across the country test their knowledge and prepare for exams in an exciting, interactive way.
       </p>
 
       <p>
         With a variety of subjects such as <strong>Core Maths, Science, Geography, English, Business</strong> and more,
-        students can take quizzes, earn scores instantly, and climb real-time leaderboards — creating a spirit of
+        students can take quizzes, earn scores instantly, and climb real-time leaderboards  creating a spirit of
         academic competition across schools.
       </p>
 
@@ -40,11 +40,11 @@ function About() {
         <li>Mobile-friendly and fast</li>
         <li>Real-time leaderboard boosts motivation</li>
         <li>Easy-to-use and secure</li>
-        <li>Learn by doing — instantly</li>
+        <li>Learn by reviewing results instantly</li>
       </ul>
 
       <p className="mt-4">
-        TickQuiz is more than a quiz — it’s a smart tool for academic success, school pride, and national competition.
+        TickQuiz is more than a quiz, its a smart tool for academic success, school pride, and national competition.
       </p>
 
       <p className="font-medium text-center text-gray-700">
