@@ -1,3272 +1,2921 @@
 const accountingQuestions = [
   {
-    question: "A business bought goods worth GHS2,000 and recorded it in the Purchases Day Book. What is the correct double entry?",
-    options: ["", "Debit Purchases, Credit Cash",
-      "Debit Sales, Credit Purchases",
-      "Debit Purchases, Credit Creditors",
-      "Debit Purchases, Credit Capital"],
-answer: "Debit Purchases, Credit Creditors"
+    question: "What is the accounting equation?",
+    options: [
+      "Assets + Liabilities = Capital",
+      "Assets = Liabilities + Capital",
+      "Capital = Assets - Liabilities",
+      "Assets = Capital - Liabilities"
+    ],
+    answer: "Assets = Liabilities + Capital"
   },
   {
-    question: "Calculate the VAT payable: Sales = GHS12,000, VAT rate = 15%",
-    options: ["", "GHS1,200", "GHS1,800", "GHS1,500", "GHS2,100"],
-answer: "GHS1,800"
+    question: "If total assets are GHS120,000 and liabilities are GHS45,000, what is the capital?",
+    options: ["GHS165,000", "GHS75,000", "GHS45,000", "GHS120,000"],
+    answer: "GHS75,000"
   },
   {
-    question: "In which book of original entry is the return of goods by a customer recorded?",
-    options: ["", "Sales Day Book", "Purchases Return Book", "Sales Return Book", "Journal"],
-answer: "Sales Return Book"
+    question: "What is the purpose of the cash book in accounting?",
+    options: [
+      "To record all credit sales",
+      "To record all cash and bank transactions",
+      "To record depreciation",
+      "To summarize final accounts"
+    ],
+    answer: "To record all cash and bank transactions"
   },
   {
-    question: "The total column in the Petty Cash Book is GHS500. Postage GHS150, Stationery GHS200, Transport GHS150. What is the imprest?",
-    options: ["", "GHS500", "GHS200", "GHS150", "GHS300"],
-answer: "GHS500"
+    question: "Which of the following is not a qualitative characteristic of accounting information?",
+    options: ["Reliability", "Comparability", "Relevance", "Obscurity"],
+    answer: "Obscurity"
   },
   {
-    question: "If VAT on purchases is GHS600 and VAT on sales is GHS900, what is the VAT payable?",
-    options: ["", "GHS1,500", "GHS300", "GHS600", "GHS900"],
-answer: "GHS300"
+    question: "Calculate the VAT on an item sold for GHS400 at a VAT rate of 12.5%",
+    options: ["GHS50", "GHS40", "GHS25", "GHS45"],
+    answer: "GHS50"
   },
   {
-    question: "What is the double entry for VAT charged on sales of GHS5,000 at 15%?",
-    options: ["", "Debit VAT Control GHS750, Credit Sales GHS5,750",
-      "Debit Debtors GHS5,750; Credit Sales GHS5,000; Credit VAT Control GHS750",
-      "Debit Sales GHS5,000, Credit VAT Control GHS750",
-      "Credit VAT GHS5,000; Debit Sales GHS750"],
-answer: "Debit Debtors GHS5,750; Credit Sales GHS5,000; Credit VAT Control GHS750"
+    question: "What is the double entry for the purchase of furniture for cash?",
+    options: [
+      "Debit Furniture, Credit Cash",
+      "Debit Cash, Credit Furniture",
+      "Debit Sales, Credit Furniture",
+      "Debit Purchases, Credit Cash"
+    ],
+    answer: "Debit Furniture, Credit Cash"
   },
   {
-    question: "Which of the following is not a Book of Original Entry?",
-    options: ["", "Journal", "Ledger", "Sales Day Book", "Cash Book"],
-answer: "Ledger"
+    question: "If opening stock is GHS3,000, purchases are GHS7,000 and closing stock is GHS2,000, what is the cost of goods sold?",
+    options: ["GHS12,000", "GHS8,000", "GHS9,000", "GHS10,000"],
+    answer: "GHS8,000"
   },
   {
-    question: "If a Petty Cashier is given an imprest of GHS300 and spends GHS280 during the month, how much is reimbursed?",
-    options: ["", "GHS20", "GHS280", "GHS300", "GHS0"],
-answer: "GHS280"
-  },
-  {
-    question: "Which of the following is a function of the Cash Book?",
-    options: ["", "To record depreciation", "To show outstanding expenses", "To record all cash and bank transactions", "To record credit sales"],
-answer: "To record all cash and bank transactions"
-  },
-  {
-    question: "Prepare VAT control account from the following:\nVAT on Purchases = GHS1,200, VAT on Sales = GHS1,700",
-    options: ["", "Balance c/d GHS500 (credit)", "Balance b/d GHS500 (debit)", "Balance c/d GHS1,700 (debit)", "No balance"],
-answer: "Balance c/d GHS500 (credit)"
-  },
-  {
-    question: "What is the VAT amount on a purchase of GHS2,500 if the VAT rate is 12.5%?",
-    options: ["", "GHS325", "GHS300", "GHS250", "GHS312.50"],
-answer: "GHS312.50"
-  },
-  {
-    question: "A Petty Cashier recorded: Transport GHS100, Postage GHS80, and Refreshments GHS60. Total expenditure is:",
-    options: ["", "GHS180", "GHS200", "GHS240", "GHS150"],
-answer: "GHS240"
-  },
-  {
-    question: "Which of the following will be recorded in the Purchases Day Book?",
-    options: ["", "Goods bought on credit", "Cash sales", "Asset purchase", "Returns to suppliers"],
-answer: "Goods bought on credit"
-  },
-  {
-    question: "Which of the following accounts is credited when VAT is charged on sales?",
-    options: ["", "Cash", "Sales", "VAT Control", "Debtors"],
-answer: "VAT Control"
-  },
-  {
-    question: "The Sales Day Book is used to record:",
-    options: ["", "All cash sales", "Credit purchases", "Credit sales", "Returns inwards"],
-answer: "Credit sales"
-  },
-  {
-    question: "A business sells goods at GHS4,600 including VAT at 15%. What is the net sales value?",
-    options: ["", "GHS4,000", "GHS4,300", "GHS4,600", "GHS3,800"],
-answer: "GHS4,000"
-  },
-  {
-    question: "From the following determine the closing petty cash balance:\nOpening balance: GHS400, Total expenses: GHS360",
-    options: ["", "GHS40", "GHS360", "GHS400", "GHS760"],
-answer: "GHS40"
-  },
-  {
-    question: "A cash sale of GHS2,000 including VAT at 20% is made. What amount is recorded as VAT?",
-    options: ["", "GHS333.33", "GHS400", "GHS250", "GHS166.67"],
-answer: "GHS333.33"
-  },
-  {
-    question: "What is the function of the Journal in bookkeeping?",
-    options: ["", "To record credit purchases only",
-      "To record regular cash transactions",
-      "To record transactions not captured in other books",
-      "To reconcile the bank statement"],
-answer: "To record transactions not captured in other books"
-  },
-  {
-    question: "A business purchased inventory worth GHS3,000 on credit. What is the entry in the Purchases Day Book?",
-    options: ["", "GHS3,000 in debit column", "GHS3,000 in credit column", "No entry", "GHS3,000 in VAT column"],
-answer: "GHS3,000 in debit column"
-  },
-  {
-    question: "Which of the following best defines accounting?",
-    options: ["", "The science of recording historical events",
-      "A process of preparing employee salaries",
-      "The systematic process of identifying, measuring, recording, and communicating financial information",
-      "The study of consumer behavior"],
-answer: "The systematic process of identifying, measuring, recording, and communicating financial information"
-  },
-  {
-    question: "Who among the following is considered an internal user of accounting information?",
-    options: ["", "Bank", "Supplier", "Manager", "Customer"],
-answer: "Manager"
-  },
-  {
-    question: "Which of the following is NOT a qualitative characteristic of accounting information?",
-    options: ["", "Relevance", "Comparability", "Delay", "Understandability"],
-answer: "Delay"
-  },
-  {
-    question: "Which career path involves checking financial records for accuracy and compliance?",
-    options: ["", "Auditor", "Cashier", "Receptionist", "Marketer"],
-answer: "Auditor"
-  },
-  {
-    question: "Which of the following is NOT a step in the accounting process?",
-    options: ["", "Identifying transactions", "Summarizing data", "Cooking the books", "Communicating results"],
-answer: "Cooking the books"
-  },
-  // --- Calculations start here (70% of the batch) ---
-  {
-    question: "Given: Assets = GHS25,000, Liabilities = GHS8,000. Calculate the Owner's Equity.",
-    options: ["", "GHS17,000", "GHS33,000", "GHS8,000", "GHS25,000"],
-answer: "GHS17,000"
-  },
-  {
-    question: "If Capital = GHS40,000 and Liabilities = GHS10,000, what is the total Assets?",
-    options: ["", "GHS30,000", "GHS50,000", "GHS60,000", "GHS40,000"],
-answer: "GHS50,000"
-  },
-  {
-    question: "A business started with GHS60,000 capital. It bought goods for GHS20,000 on credit and paid GHS5,000 cash for expenses. What is the closing capital?",
-    options: ["", "GHS60,000", "GHS35,000", "GHS55,000", "GHS60,000"],
-answer: "GHS55,000"
-  },
-  {
-    question: "A transaction increases assets by GHS10,000 and also increases liabilities. What is the impact on equity?",
-    options: ["", "Increase by GHS10,000", "Decrease by GHS10,000", "No change", "Cannot be determined"],
-answer: "No change"
-  },
-  {
-    question: "Given the following transactions, calculate the balance of the cash account:\n\nOpening Cash: GHS5,000\nReceived from customers: GHS12,000\nPaid rent: GHS3,000\nBought equipment: GHS4,000",
-    options: ["", "GHS10,000", "GHS11,000", "GHS9,000", "GHS8,000"],
-answer: "GHS10,000"
-  },
-  {
-    question: "A business had the following:\nCapital: GHS15,000\nBank Loan: GHS5,000\nAssets: ?\nFind the missing asset value.",
-    options: ["", "GHS10,000", "GHS20,000", "GHS15,000", "GHS25,000"],
-answer: "GHS20,000"
-  },
-  {
-    question: "If revenue = GHS22,000 and expenses = GHS14,000, what is the profit?",
-    options: ["", "GHS36,000", "GHS8,000", "GHS14,000", "GHS22,000"],
-answer: "GHS8,000"
-  },
-  {
-    question: "Which of these affects both sides of the balance sheet equally?",
-    options: ["", "Cash payment to creditor", "Cash purchase of equipment", "Depreciation", "Owner withdraws cash"],
-answer: "Cash purchase of equipment"
-  },
-  {
-    question: "A business bought goods worth GHS9,000 and paid half by cash and the rest on credit. How does it affect the accounting equation?",
-    options: ["", "Assets increase by 9,000; Cash decreases  by 4,500; Creditors increase by 4,500",
-      "Assets decreases  by 4,500; Liabilities increase by 4,500",
-      "Assets increase by 9,000; Capital increase by 4,500",
-      "No effect"],
-answer: "Assets increase by 9,000; Cash decreases  by 4,500; Creditors increase by 4,500"
+    question: "What type of account is ‘Rent Expense’?",
+    options: ["Asset", "Liability", "Expense", "Income"],
+    answer: "Expense"
   },
   {
     question: "Which of the following is NOT a book of original entry?",
-    options: ["", "Sales Journal", "Purchase Day Book", "Ledger", "Returns Inward Journal"],
-answer: "Ledger"
+    options: ["Sales Journal", "Purchase Day Book", "General Ledger", "Petty Cash Book"],
+    answer: "General Ledger"
   },
   {
-    question: "Which book is used to record cash and bank transactions?",
-    options: ["", "Sales Day Book", "Petty Cash Book", "Journal Proper", "Cash Book"],
-answer: "Cash Book"
+    question: "A trial balance is prepared to:",
+    options: [
+      "Prepare financial statements",
+      "Check arithmetical accuracy of ledger accounts",
+      "Calculate VAT",
+      "Compute depreciation"
+    ],
+    answer: "Check arithmetical accuracy of ledger accounts"
   },
   {
-    question: "The petty cash book is used for recording:",
-    options: ["", "Credit purchases", "All sales", "Minor payments", "Capital income"],
-answer: "Minor payments"
+    question: "If depreciation is GHS2,000 on an asset of cost GHS10,000, what is the net book value?",
+    options: ["GHS12,000", "GHS10,000", "GHS2,000", "GHS8,000"],
+    answer: "GHS8,000"
   },
   {
-    question: "Which division of the ledger is used for recording transactions with creditors?",
-    options: ["", "Sales Ledger", "Purchases Ledger", "Nominal Ledger", "General Ledger"],
-answer: "Purchases Ledger"
+    question: "What is the capital if assets = GHS90,000 and liabilities = GHS20,000?",
+    options: ["GHS70,000", "GHS110,000", "GHS20,000", "GHS90,000"],
+    answer: "GHS70,000"
   },
-  // --- Calculation & Working-Based Questions ---
   {
-    question: "Given: Sales on credit GHS12,000, Cash sales GHS3,000, Sales returns GHS1,500. What amount should be posted to the Sales Ledger?",
-    options: ["", "GHS13,500", "GHS12,000", "GHS10,500", "GHS14,000"],
-answer: "GHS10,500"
+    question: "Which account is used to correct errors temporarily?",
+    options: ["Suspense account", "Capital account", "Profit account", "Sales account"],
+    answer: "Suspense account"
   },
   {
-    question: "Opening petty cash float is GHS200. During the week, the following were spent: Postage GHS25, Stationery GHS30, Transport GHS20. What is the balance at the end of the week?",
-    options: ["", "GHS125", "GHS150", "GHS100", "GHS200"],
-answer: "GHS125"
+    question: "What is the effect of withdrawing cash for personal use?",
+    options: ["Increase liabilities", "Decrease assets", "Decrease capital", "Increase capital"],
+    answer: "Decrease capital"
   },
   {
-    question: "A business purchased goods worth GHS2,000 on credit. Where would this transaction be recorded first?",
-    options: ["", "Purchase Journal", "Cash Book", "Sales Ledger", "General Ledger"],
-answer: "Purchase Journal"
+    question: "Calculate gross profit: Sales = GHS15,000, Cost of Goods Sold = GHS10,000",
+    options: ["GHS5,000", "GHS25,000", "GHS10,000", "GHS15,000"],
+    answer: "GHS5,000"
   },
   {
-    question: "A cash discount of GHS300 was allowed on payment of GHS7,200. What was the original amount due?",
-    options: ["", "GHS7,500", "GHS7,200", "GHS6,900", "GHS7,300"],
-answer: "GHS7,500"
+    question: "What are drawings in accounting?",
+    options: ["Expenses paid by business", "Assets bought", "Withdrawals by owner", "Salaries paid"],
+    answer: "Withdrawals by owner"
   },
   {
-    question: "Total cash payments from the cash book amounted to GHS15,000. Cash payments include: Salaries GHS8,000, Rent GHS3,000, Electricity GHS2,000, Sundry GHS2,000. What is the amount spent on overheads?",
-    options: ["", "GHS5,000", "GHS7,000", "GHS10,000", "GHS15,000"],
-answer: "GHS7,000"
+    question: "Which of these is a liability account?",
+    options: ["Bank", "Debtors", "Creditors", "Rent"],
+    answer: "Creditors"
   },
   {
-    question: "If purchases = GHS25,000 and purchase returns = GHS2,000, what is the net purchases?",
-    options: ["", "GHS27,000", "GHS25,000", "GHS23,000", "GHS2,000"],
-answer: "GHS23,000"
+    question: "The purpose of a control account is to:",
+    options: [
+      "Track fixed assets",
+      "Summarize ledger balances",
+      "Record cash transactions",
+      "Calculate profit"
+    ],
+    answer: "Summarize ledger balances"
   },
   {
-    question: "VAT rate is 15%. If the selling price including VAT is GHS4,600, calculate the VAT amount.",
-    options: ["", "GHS600", "GHS690", "GHS400", "GHS575"],
-answer: "GHS600"
+    question: "If wages paid are GHS2,500 and outstanding wages are GHS500, what is the total expense?",
+    options: ["GHS2,000", "GHS3,000", "GHS2,500", "GHS500"],
+    answer: "GHS3,000"
   },
   {
-    question: "A trader sold goods at GHS2,300 excluding VAT. Calculate the VAT payable at 15%.",
-    options: ["", "GHS345", "GHS300", "GHS230", "GHS345.50"],
-answer: "GHS345"
+    question: "Which of the following is a capital expenditure?",
+    options: ["Payment of rent", "Purchase of equipment", "Electricity bill", "Salaries"],
+    answer: "Purchase of equipment"
   },
   {
-    question: "If VAT collected = GHS1,200 and input VAT paid = GHS950, what is the VAT payable to the tax authority?",
-    options: ["", "GHS1,200", "GHS250", "GHS950", "GHS2,150"],
-answer: "GHS250"
+    question: "A sales journal is used to record:",
+    options: ["All cash sales", "All credit sales", "All credit purchases", "All returns"],
+    answer: "All credit sales"
   },
   {
-    question: "Calculate the selling price including 15% VAT on goods worth GHS3,000.",
-    options: ["", "GHS3,450", "GHS3,000", "GHS3,300", "GHS4,000"],
-answer: "GHS3,450"
+    question: "A manufacturing account is prepared to compute:",
+    options: ["Net Profit", "Production Cost", "Sales", "Cash Balance"],
+    answer: "Production Cost"
   },
   {
-    question: "Which of the following is NOT a characteristic of VAT?",
-    options: ["", "Regressive", "Multi-stage", "Consumption-based", "Indirect"],
-answer: "Regressive"
+    question: "Cost of production is calculated as:",
+    options: [
+      "Prime cost + Factory overheads",
+      "Prime cost + Administration expenses",
+      "Sales - Profit",
+      "Cost of sales - Opening stock"
+    ],
+    answer: "Prime cost + Factory overheads"
   },
   {
-    question: "Which accounting concept requires that expenses are matched with the revenue they help to generate?",
-    options: ["", "Going Concern", "Accrual", "Consistency", "Prudence"],
-answer: "Accrual"
+    question: "Which document is issued when goods are returned to the supplier?",
+    options: ["Credit Note", "Invoice", "Receipt", "Purchase Order"],
+    answer: "Credit Note"
   },
   {
-    question: "The concept that assumes a business will continue to operate into the foreseeable future is called:",
-    options: ["", "Materiality", "Going Concern", "Consistency", "Entity"],
-answer: "Going Concern"
+    question: "Which account is credited when cash is received from a debtor?",
+    options: ["Cash", "Debtors", "Sales", "Capital"],
+    answer: "Debtors"
   },
   {
-    question: "Which accounting principle ensures that financial statements are prepared in a similar manner every year?",
-    options: ["", "Consistency", "Entity", "Duality", "Money Measurement"],
-answer: "Consistency"
+    question: "In departmental accounts, what is the main purpose?",
+    options: ["To track branch sales", "To compare department performance", "To adjust VAT", "To record fixed assets"],
+    answer: "To compare department performance"
   },
   {
-    question: "A transaction is recorded only if it can be measured in monetary terms. This is based on which concept?",
-    options: ["", "Accrual", "Entity", "Money Measurement", "Realisation"],
-answer: "Money Measurement"
+    question: "If sales are GHS20,000 and returns inwards are GHS2,000, what are the net sales?",
+    options: ["GHS22,000", "GHS18,000", "GHS20,000", "GHS2,000"],
+    answer: "GHS18,000"
   },
   {
-    question: "A business has the following balances: Capital GHS20,000, Drawings GHS2,000, Net profit GHS5,000. What is the closing capital?",
-    options: ["", "GHS23,000", "GHS25,000", "GHS27,000", "GHS30,000"],
-answer: "GHS23,000"
+    question: "Which account is debited when insurance is prepaid?",
+    options: ["Prepaid Insurance", "Insurance Expense", "Bank", "Capital"],
+    answer: "Prepaid Insurance"
   },
   {
-    question: "From the Trial Balance: Sales GHS60,000, Purchases GHS35,000, Closing Stock GHS10,000. Calculate Gross Profit.",
-    options: ["", "GHS25,000", "GHS35,000", "GHS15,000", "GHS40,000"],
-answer: "GHS35,000"
+    question: "Which of these is a direct cost in manufacturing?",
+    options: ["Factory rent", "Direct labour", "Advertising", "Interest"],
+    answer: "Direct labour"
   },
   {
-    question: "A business has Rent expense GHS1,200 prepaid. How should this be treated in the Final Accounts?",
-    options: ["", "Deduct from Rent Expense in P&L, add to Current Assets", "Add to Rent in P&L", "Ignore it", "Show as liability"],
-answer: "Deduct from Rent Expense in P&L, add to Current Assets"
+    question: "If a company buys goods on credit, the transaction affects:",
+    options: ["Cash and Sales", "Purchases and Creditors", "Sales and Debtors", "Cash and Purchases"],
+    answer: "Purchases and Creditors"
   },
   {
-    question: "Calculate Net Profit if Gross Profit is GHS45,000 and Operating Expenses are GHS20,000.",
-    options: ["", "GHS25,000", "GHS65,000", "GHS45,000", "GHS15,000"],
-answer: "GHS25,000"
+    question: "Which of these is a feature of computerized accounting?",
+    options: ["Manual data entry only", "Faster data processing", "Handwritten ledgers", "No backup needed"],
+    answer: "Faster data processing"
   },
   {
-    question: "A Trial Balance shows: Debtors GHS10,000, Creditors GHS6,000, Sales GHS50,000, Purchases GHS30,000, Expenses GHS8,000, Closing Stock GHS12,000. What is the Net Profit?",
-    options: ["", "GHS14,000", "GHS20,000", "GHS18,000", "GHS24,000"],
-answer: "GHS24,000"
+    question: "Who are internal users of accounting information?",
+    options: ["Government", "Suppliers", "Investors", "Managers"],
+    answer: "Managers"
   },
   {
-    question: "Opening capital = GHS10,000, Additional capital = GHS5,000, Net loss = GHS2,000, Drawings = GHS3,000. Compute the closing capital.",
-    options: ["", "GHS10,000", "GHS12,000", "GHS13,000", "GHS14,000"],
-answer: "GHS10,000"
+    question: "What is goodwill in partnership accounting?",
+    options: ["Profit of partners", "Fixed asset", "Intangible asset", "Credit balance"],
+    answer: "Intangible asset"
   },
   {
-    question: "If Closing Stock is GHS8,500 and is not included in the Trial Balance, how is it treated in Final Accounts?",
-    options: ["", "P&L: Credit, Balance Sheet: Current Asset", "P&L: Debit, Balance Sheet: Current Asset", "Only Balance Sheet", "Only P&L"],
-answer: "P&L: Credit, Balance Sheet: Current Asset"
+    question: "What is the purpose of a revaluation account in partnership?",
+    options: [
+      "To revalue assets and liabilities on change in partnership",
+      "To distribute net profit",
+      "To calculate goodwill",
+      "To dissolve the firm"
+    ],
+    answer: "To revalue assets and liabilities on change in partnership"
   },
   {
-    question: "From the Trial Balance: Rent income GHS4,000, Accrued income GHS500. What is the total Rent Income in the P&L?",
-    options: ["", "GHS4,500", "GHS3,500", "GHS4,000", "GHS500"],
-answer: "GHS4,500"
+    question: "Which of the following best describes accruals?",
+    options: [
+      "Cash paid in advance",
+      "Expenses incurred but not yet paid",
+      "Assets owned by firm",
+      "Income received in advance"
+    ],
+    answer: "Expenses incurred but not yet paid"
   },
   {
-    question: "Which one of these is an example of a revenue expense?",
-    options: ["", "Office Rent", "Building Purchase", "Equipment Purchase", "Vehicle Purchase"],
-answer: "Office Rent"
+    question: "Which account is used for tracking subscriptions in clubs?",
+    options: ["Income account", "Subscription account", "Receipts account", "Accumulated fund account"],
+    answer: "Subscription account"
   },
   {
-    question: "What is the purpose of preparing Final Accounts?",
-    options: ["", "To determine tax rates", "To assess customer satisfaction", "To ascertain profit/loss and financial position", "To calculate capital gains"],
-answer: "To ascertain profit/loss and financial position"
+    question: "If accumulated fund at the beginning is GHS5,000 and surplus is GHS1,200, what is the new accumulated fund?",
+    options: ["GHS3,800", "GHS5,000", "GHS6,200", "GHS1,200"],
+    answer: "GHS6,200"
   },
   {
-    question: "Trial Balance: Sales GHS80,000, Opening Stock GHS10,000, Purchases GHS50,000, Closing Stock GHS15,000. What is Gross Profit?",
-    options: ["", "GHS35,000", "GHS25,000", "GHS40,000", "GHS45,000"],
-answer: "GHS35,000"
+    question: "In single entry system, profit is calculated using:",
+    options: [
+      "Income and Expenditure Account",
+      "Statement of Affairs method",
+      "Trading Account",
+      "Ledger Accounts"
+    ],
+    answer: "Statement of Affairs method"
   },
   {
-    question: "A firm purchased equipment for GHS12,000. It depreciates at 10% per annum using the straight-line method. What is the annual depreciation charge?",
-    options: ["", "GHS1,200", "GHS1,000", "GHS2,000", "GHS1,500"],
-answer: "GHS1,200"
+    question: "What is a debit balance in the bank column of the cash book?",
+    options: ["Bank overdraft", "Cash at bank", "Loan from bank", "Bank charges"],
+    answer: "Cash at bank"
   },
   {
-    question: "What is the book value of an asset purchased at GHS10,000 after 3 years of 20% straight-line depreciation?",
-    options: ["", "GHS4,000", "GHS6,000", "GHS8,000", "GHS2,000"],
-answer: "GHS4,000"
+    question: "Which of the following increases capital?",
+    options: ["Drawings", "Profit", "Loss", "Expenses"],
+    answer: "Profit"
   },
   {
-    question: "A machine costing GHS15,000 is depreciated at 25% per annum on reducing balance. What is the depreciation for year 1?",
-    options: ["", "GHS3,750", "GHS3,000", "GHS2,500", "GHS5,000"],
-answer: "GHS3,750"
+    question: "What is carriage inwards treated as?",
+    options: ["Sales", "Expense", "Asset", "Liability"],
+    answer: "Expense"
   },
   {
-    question: "Provision for doubtful debts is GHS500. Debtors amount to GHS10,000. What is the Net Realisable Value of Debtors?",
-    options: ["", "GHS9,500", "GHS10,500", "GHS10,000", "GHS500"],
-answer: "GHS9,500"
+    question: "A creditor is a person or business to whom:",
+    options: ["We owe money", "We sell goods", "We rent property", "We give loans"],
+    answer: "We owe money"
   },
   {
-    question: "What is the journal entry to create a provision for doubtful debts of GHS300?",
-    options: ["", "Debit Bad Debts, Credit Provision for Doubtful Debts",
-      "Debit Provision for Doubtful Debts, Credit Debtors",
-      "Debit P&L, Credit Provision for Doubtful Debts",
-      "Debit Debtors, Credit P&L"],
-answer: "Debit P&L, Credit Provision for Doubtful Debts"
+    question: "The purpose of an income and expenditure account is to:",
+    options: ["Record cash receipts", "Determine surplus or deficit", "Show closing stock", "Record liabilities"],
+    answer: "Determine surplus or deficit"
   },
   {
-    question: "An old debt of GHS700 was written off. What is the correct journal entry?",
-    options: ["", "Debit Bad Debts, Credit Debtors",
-      "Debit Debtors, Credit Bad Debts",
-      "Debit Provision for Bad Debts, Credit Debtors",
-      "Debit P&L, Credit Debtors"],
-answer: "Debit Bad Debts, Credit Debtors"
+    question: "Which of these is not a function of financial accounting?",
+    options: ["Record transactions", "Prepare budgets", "Report financial position", "Summarize performance"],
+    answer: "Prepare budgets"
   },
   {
-    question: "A provision for bad debts is to be increased from GHS400 to GHS600. What amount is charged to Profit and Loss?",
-    options: ["", "GHS200", "GHS400", "GHS600", "GHS1,000"],
-answer: "GHS200"
+    question: "Which of the following is a limitation of manual accounting?",
+    options: ["Fast processing", "Real-time reporting", "Risk of errors", "Automated reports"],
+    answer: "Risk of errors"
   },
   {
-    question: "Depreciation is provided to account for:",
-    options: ["", "Market value changes", "Inflation", "Wear and tear and obsolescence", "Increase in asset value"],
-answer: "Wear and tear and obsolescence"
+    question: "What is the main purpose of preparing a trial balance?",
+    options: [
+      "To determine profit or loss",
+      "To check arithmetical accuracy of ledger entries",
+      "To calculate tax",
+      "To prepare audit report"
+    ],
+    answer: "To check arithmetical accuracy of ledger entries"
   },
   {
-    question: "Which of the following is **not** a cause of depreciation?",
-    options: ["", "Obsolescence", "Usage", "Maintenance", "Passage of time"],
-answer: "Maintenance"
+    question: "If Capital = GHS100,000 and Liabilities = GHS40,000, what are the Assets?",
+    options: ["GHS60,000", "GHS100,000", "GHS140,000", "GHS40,000"],
+    answer: "GHS140,000"
   },
   {
-    question: "Provision for depreciation is shown on the balance sheet as:",
-    options: ["", "Current liability",
-      "Current asset",
-      "Deduction from asset",
-      "Addition to liabilities"],
-answer: "Deduction from asset"
+    question: "What is the depreciation expense if a machine costing GHS50,000 has a useful life of 5 years and no scrap value?",
+    options: ["GHS5,000", "GHS10,000", "GHS25,000", "GHS50,000"],
+    answer: "GHS10,000"
   },
   {
-    question: "If Provision for Doubtful Debts is overestimated in previous year, it should be:",
-    options: ["", "Credited to P&L", "Debited to P&L", "Added to Expenses", "Written off completely"],
-answer: "Credited to P&L"
+    question: "What type of account is 'Prepaid Rent'?",
+    options: ["Income", "Liability", "Asset", "Expense"],
+    answer: "Asset"
   },
   {
-    question: "If Provision for Depreciation is GHS6,000 and the asset cost is GHS20,000, what is the book value?",
-    options: ["", "GHS14,000", "GHS16,000", "GHS26,000", "GHS6,000"],
-answer: "GHS14,000"
+    question: "Calculate purchases: Opening stock = GHS5,000, Closing stock = GHS2,000, COGS = GHS13,000",
+    options: ["GHS10,000", "GHS15,000", "GHS12,000", "GHS18,000"],
+    answer: "GHS10,000"
   },
   {
-    question: "What type of account is Provision for Bad Debts?",
-    options: ["", "Asset", "Liability", "Expense", "Contra asset"],
-answer: "Contra asset"
+    question: "What is the main book for recording daily petty expenses?",
+    options: ["Cash Book", "Ledger", "Petty Cash Book", "Journal"],
+    answer: "Petty Cash Book"
   },
   {
-    question: "Depreciation charged to profit and loss is:",
-    options: ["", "Non-cash expense", "Capital expense", "Operating income", "Liability"],
-answer: "Non-cash expense"
+    question: "A debit in the purchases account signifies:",
+    options: ["Goods sold", "Goods returned", "Goods bought", "Cash paid"],
+    answer: "Goods bought"
   },
   {
-    question: "If depreciation is undercharged in previous years, the correction involves:",
-    options: ["", "Adjusting retained earnings", "Increasing net assets", "Reversing it", "Charging extra in current year"],
-answer: "Charging extra in current year"
+    question: "If total sales are GHS30,000 and credit sales are GHS20,000, what are the cash sales?",
+    options: ["GHS50,000", "GHS10,000", "GHS20,000", "GHS30,000"],
+    answer: "GHS10,000"
   },
   {
-    question: "An error was discovered: Rent of GHS300 was debited to Equipment. What type of error is this?",
-    options: ["", "Error of Omission", "Error of Commission", "Error of Principle", "Compensating Error"],
-answer: "Error of Principle"
+    question: "What are trade receivables also known as?",
+    options: ["Creditors", "Debtors", "Investors", "Suppliers"],
+    answer: "Debtors"
   },
   {
-    question: "A credit sale of GHS500 was entered in the books as GHS50. What is the correction entry?",
-    options: ["", "Dr Sales GHS450, Cr Debtors GHS450",
-      "Dr Debtors GHS450, Cr Sales GHS450",
-      "Dr Sales GHS50, Cr Debtors GHS500",
-      "Dr Cash GHS500, Cr Sales GHS450"],
-answer: "Dr Debtors GHS450, Cr Sales GHS450"
+    question: "Which accounting concept states that revenue and expenses should be matched?",
+    options: ["Going concern", "Accrual", "Matching", "Consistency"],
+    answer: "Matching"
   },
   {
-    question: "Trial Balance failed to agree by GHS320, which was posted to a Suspense Account. Later, a discount received of GHS320 was omitted. What is the correcting entry?",
-    options: ["", "Dr Suspense GHS320, Cr Discount Received GHS320",
-      "Dr Discount Received GHS320, Cr Suspense GHS320",
-      "Dr Suspense GHS160, Cr Discount Allowed GHS160",
-      "Dr P&L GHS320, Cr Suspense GHS320"],
-answer: "Dr Suspense GHS320, Cr Discount Received GHS320"
+    question: "Which of these would be found in the capital account of a sole trader?",
+    options: ["Wages", "Interest paid", "Drawings", "Depreciation"],
+    answer: "Drawings"
   },
   {
-    question: "A GHS400 cash sale was recorded in the Purchases Day Book. Which account is wrongly debited?",
-    options: ["", "Sales Account", "Purchases Account", "Cash Account", "Capital Account"],
-answer: "Purchases Account"
+    question: "If opening capital is GHS20,000, profit for the year is GHS5,000 and drawings are GHS2,000, what is closing capital?",
+    options: ["GHS25,000", "GHS23,000", "GHS22,000", "GHS27,000"],
+    answer: "GHS23,000"
   },
   {
-    question: "What kind of error will cause the Trial Balance not to agree?",
-    options: ["", "Error of Principle",
-      "Error of Omission",
-      "Error of Commission",
-      "Single-sided error"],
-answer: "Single-sided error"
+    question: "Which of the following is a direct cost in manufacturing?",
+    options: ["Factory rent", "Depreciation", "Direct materials", "Factory insurance"],
+    answer: "Direct materials"
   },
   {
-    question: "Correct the following: Wages of GHS250 were debited to Salaries.",
-    options: ["", "Dr Wages GHS250, Cr Salaries GHS250",
-      "Dr Salaries GHS250, Cr Wages GHS250",
-      "Dr P&L GHS250, Cr Wages GHS250",                                                     
-      "Dr Salaries GHS125, Cr Wages GHS125"],  
-answer: "Dr Wages GHS250, Cr Salaries GHS250"
+    question: "Which of the following is shown in the trading account?",
+    options: ["Net profit", "Expenses", "Cost of goods sold", "Interest received"],
+    answer: "Cost of goods sold"
   },
   {
-    question: "Error: Furniture purchased for GHS2,000 was posted to Purchases. What is the correcting entry?",
-    options: ["", "Dr Furniture GHS2,000, Cr Purchases GHS2,000",
-      "Dr Purchases GHS2,000, Cr Furniture GHS2,000",
-      "Dr Sales GHS2,000, Cr Furniture GHS2,000",
-      "Dr Furniture GHS1,000, Cr Purchases GHS1,000"],
-answer: "Dr Furniture GHS2,000, Cr Purchases GHS2,000"
+    question: "If total expenses = GHS7,000 and revenue = GHS10,000, what is the net profit?",
+    options: ["GHS17,000", "GHS3,000", "GHS7,000", "GHS10,000"],
+    answer: "GHS3,000"
   },
   {
-    question: "The Suspense Account had a debit balance of GHS500. An entry to correct undercast rent expense of GHS500 is:",
-    options: ["", "Dr Rent GHS500, Cr Suspense GHS500",
-      "Dr Suspense GHS500, Cr Rent GHS500",
-      "Dr P&L GHS500, Cr Suspense GHS500",
-      "Dr Suspense GHS250, Cr Rent GHS250"],
-answer: "Dr Rent GHS500, Cr Suspense GHS500"
+    question: "Which accounting principle supports preparing accounts assuming the business will continue?",
+    options: ["Going Concern", "Matching", "Realisation", "Materiality"],
+    answer: "Going Concern"
   },
   {
-    question: "Correcting entry for cash received from Kofi GHS600 entered in Kwame's account:",
-    options: ["", "Dr Kwame GHS600, Cr Kofi GHS600",
-      "Dr Suspense GHS600, Cr Cash GHS600",
-      "Dr Cash GHS600, Cr Kwame GHS600",
-      "Dr Kofi GHS600, Cr Kwame GHS600"],
-answer: "Dr Kofi GHS600, Cr Kwame GHS600"
+    question: "What is the credit entry when goods are sold on credit?",
+    options: ["Cash", "Sales", "Debtors", "Bank"],
+    answer: "Sales"
   },
   {
-    question: "If the corrected profit is GHS12,000 and errors totaling GHS2,000 overstatement were identified, what was the original reported profit?",
-    options: ["", "GHS14,000", "GHS10,000", "GHS12,000", "GHS8,000"],
-answer: "GHS10,000"
+    question: "Calculate Net Profit: Gross profit = GHS12,000, Expenses = GHS5,000",
+    options: ["GHS7,000", "GHS12,000", "GHS5,000", "GHS17,000"],
+    answer: "GHS7,000"
   },
   {
-    question: "Which of the following errors does **not** affect the Trial Balance?",
-    options: ["", "Error of Commission", "Single entry error", "Reversal of entries", "Compensating Error"],
-answer: "Compensating Error"
+    question: "Which one of the following is a current asset?",
+    options: ["Land", "Motor vehicle", "Inventory", "Building"],
+    answer: "Inventory"
   },
   {
-    question: "A suspense account is opened when:",
-    options: ["", "Errors are not discovered",
-      "Trial Balance agrees",
-      "Accounts are balanced",
-      "Financial year ends"],
-answer: "Errors are not discovered"
+    question: "A company received GHS2,000 cash for rent in advance. How is this recorded?",
+    options: ["Credit Rent Income", "Debit Rent Income", "Credit Prepaid Rent", "Credit Rent Received in Advance"],
+    answer: "Credit Rent Received in Advance"
   },
   {
-    question: "An expense of GHS1,200 was recorded twice. What is the correction entry?",
-    options: ["", "Dr Suspense GHS1,200, Cr Expense GHS1,200",
-      "Dr Expense GHS1,200, Cr Suspense GHS1,200",
-      "Dr P&L GHS1,200, Cr Expense GHS1,200",
-      "Dr Expense GHS600, Cr Suspense GHS600"],
-answer: "Dr Suspense GHS1,200, Cr Expense GHS1,200"
+    question: "What is the purpose of the Income and Expenditure Account in a club?",
+    options: ["To record all receipts", "To calculate accumulated fund", "To determine surplus or deficit", "To show liabilities"],
+    answer: "To determine surplus or deficit"
   },
   {
-    question: "Sales of GHS900 were recorded as GHS990. What is the correcting journal?",
-    options: ["", "Dr Sales GHS90, Cr Suspense GHS90",
-      "Dr Suspense GHS90, Cr Sales GHS90",
-      "Dr Sales GHS990, Cr Suspense GHS990",
-      "Dr Debtors GHS90, Cr Sales GHS90"],
-answer: "Dr Suspense GHS90, Cr Sales GHS90"
+    question: "If provision for bad debts is increased by GHS400, what is the double entry?",
+    options: [
+      "Dr Bad debts, Cr Provision",
+      "Dr Debtors, Cr Bad Debts",
+      "Dr Provision, Cr Debtors",
+      "Dr Expenses, Cr Provision for Bad Debts"
+    ],
+    answer: "Dr Expenses, Cr Provision for Bad Debts"
   },
   {
-    question: "What is the effect of an error that increases both assets and liabilities equally?",
-    options: ["", "Trial Balance will disagree",
-      "Profit is overstated",
-      "Balance sheet remains balanced",
-      "Capital reduces"],
-answer: "Balance sheet remains balanced"
+    question: "In branch accounts, which account shows total goods sent from head office?",
+    options: ["Sales Account", "Branch Stock Account", "Goods Sent to Branch Account", "HO Account"],
+    answer: "Goods Sent to Branch Account"
   },
   {
-    question: "What is the main purpose of preparing a Bank Reconciliation Statement (BRS)?",
-    options: ["", "To check the accuracy of the cash book balance",
-      "To reconcile the cash book balance with the bank statement balance",
-      "To verify bank charges",
-      "To detect fraud"],
-answer: "To reconcile the cash book balance with the bank statement balance"
+    question: "If machinery is sold for GHS15,000 and book value is GHS12,000, what is the gain?",
+    options: ["GHS3,000", "GHS27,000", "GHS12,000", "GHS15,000"],
+    answer: "GHS3,000"
   },
   {
-    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
-    options: ["", "GHS8,500", "GHS11,500", "GHS10,000", "GHS1,500"],
-answer: "GHS8,500"
+    question: "A decrease in liability will:",
+    options: ["Increase assets", "Decrease capital", "Have no effect", "Increase drawings"],
+    answer: "Decrease capital"
   },
   {
-    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "GHS4,400", "GHS6,000", "GHS5,200", "GHS6,000"],
-answer: "GHS4,400"
+    question: "If VAT rate is 15% and selling price is GHS1,150, what is the VAT?",
+    options: ["GHS150", "GHS115", "GHS1,000", "GHS165"],
+    answer: "GHS150"
   },
   {
-    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
-      "Dr Cash book GHS50, Cr Bank charges GHS50",
-      "Dr Suspense account GHS50, Cr Cash book GHS50",
-      "No entry is required"],
-answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
+    question: "What is the effect of under-depreciating an asset?",
+    options: ["Net profit will decrease", "Asset value is overstated", "Liability increases", "Cash increases"],
+    answer: "Asset value is overstated"
   },
   {
-    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
-    options: ["", "Bank error", "Cash book error", "Suspense error", "No error"],
-answer: "Cash book error"
-  },
-  {
-    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
-      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
-      "Dr Cash book GHS2,000, Cr Suspense GHS2,000",
-      "Dr Suspense GHS2,000, Cr Cash book GHS2,000"],
-answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
-  },
-  {
-    question: "What is a self-balancing ledger?",
-    options: ["", "A ledger with control accounts that balance independently",
-      "A ledger without any control accounts",
-      "A ledger that contains only sales transactions",
-      "A ledger that contains only purchase transactions"],
-answer: "A ledger with control accounts that balance independently"
-  },
-  {
-    question: "The purpose of Control Accounts is to:",
-    options: ["", "Detect errors in the ledger",
-      "Replace the ledger",
-      "Record all transactions",
-      "Prepare final accounts"],
-answer: "Detect errors in the ledger"
-  },
-  {
-    question: "The balance on the sales ledger control account represents:",
-    options: ["", "Total credit sales for the period",
-      "Total amount owed by customers (debtors)",
-      "Total cash sales"],
-answer: "Total amount owed by customers (debtors)"
-  },
-  {
-    question: "How would you prepare a Purchases Ledger Control Account?",
-    options: ["", "By summarizing all creditor transactions",
-      "By listing all debtors' balances",
-      "By preparing the trial balance"], 
-answer: "By summarizing all creditor transactions"
-  },
-  {
-    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
-    options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
-answer: "Error in individual accounts"
-  },
-  {
-    question: "If the Sales Ledger Control Account does not agree with the total of individual debtor accounts, what is the next step?",
-    options: ["", "", "", "Investigate and reconcile differences", "Prepare financial statements", "Ignore the difference"],
-answer: "Investigate and reconcile differences"
-  },
-  {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
-    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
-answer: "GHS8,500"
-  },
-  {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
-    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
-answer: "GHS3,000"
-  },
-  {
-    question: "What are the advantages of control accounts?",
-    options: ["", "Detect errors, simplify ledger reconciliation, save time",
-      "Increase errors, complicate accounting, reduce accuracy",
-      "Replace financial statements, increase costs, require more staff"],
-answer: "Detect errors, simplify ledger reconciliation, save time"
-  },
-  {
-    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
-    options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
-answer: "Control account balance is incorrect"
-  },
-  {
-    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
-      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
-answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
-  },
-  {
-    question: "What is an unpresented cheque?",
-    options: ["", "A cheque issued by the business but not yet cleared by the bank",
-      "A cheque received but not yet recorded", "A cheque dishonored"],
-answer: "A cheque issued by the business but not yet cleared by the bank"
-  },
-  {
-    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
-answer: "GHS8,500"
-  },
-  {
-    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
-      "Dr Bank GHS200, Cr Cash book GHS200",
-      "Dr Cash book GHS200, Cr Suspense GHS200"],
-answer: "Dr Cash book GHS200, Cr Suspense GHS200"
-  },
-  {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
-    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
-answer: "GHS700"
-  },
-  {
-    question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
-    options: ["", "", "", "Outstanding lodgments", "Bank charges", "Depreciation"],
-answer: "Depreciation"
-  },
-  {
-    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
-    options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
-answer: "Errors were corrected"
-  },
-  {
-    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
-      "Dr Cash book GHS750, Cr Suspense GHS750",
-      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
-answer: "Dr Suspense GHS750, Cr Cash book GHS750"
-  },
-  {
-    question: "What is the main purpose of preparing a Bank Reconciliation Statement (BRS)?",
-    options: ["", "To check the accuracy of the cash book balance",
-      "To reconcile the cash book balance with the bank statement balance",
-      "To verify bank charges"],
-answer: "To reconcile the cash book balance with the bank statement balance"
-  },
-  {
-    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
-    options: ["", "", "", "GHS11,500", "GHS10,000", "GHS1,500"],
-answer: "GHS8,500"
-  },
-  {
-    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "", "", "GHS6,000", "GHS5,200", "GHS6,000"],
-answer: "GHS4,400"
-  },
-  {
-    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
-      "Dr Cash book GHS50, Cr Bank charges GHS50",
-      "Dr Suspense account GHS50, Cr Cash book GHS50"],
-answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
-  },
-  {
-    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
-    options: ["", "", "", "Cash book error", "Suspense error", "No error"],
-answer: "Cash book error"
-  },
-  {
-    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
-      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
-      "Dr Cash book GHS2,000, Cr Suspense GHS2,000"],
-answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
-  },
-  {
-    question: "What is a self-balancing ledger?",
-    options: ["", "A ledger with control accounts that balance independently",
-      "A ledger without any control accounts",
-      "A ledger that contains only sales transactions"],
-answer: "A ledger with control accounts that balance independently"
-  },
-  {
-    question: "The purpose of Control Accounts is to:",
-    options: ["", "Detect errors in the ledger",
-      "Replace the ledger",
-      "Record all transactions"],
-answer: "Detect errors in the ledger"
-  },
-  {
-    question: "The balance on the sales ledger control account represents:",
-    options: ["", "Total credit sales for the period",
-      "Total amount owed by customers (debtors)",
-      "Total cash sales"],
-answer: "Total amount owed by customers (debtors)"
-  },
-  {
-    question: "How would you prepare a Purchases Ledger Control Account?",
-    options: ["", "By summarizing all creditor transactions",
-      "By listing all debtors' balances",
-      "By preparing the trial balance"],
-answer: "By summarizing all creditor transactions"
-  },
-  {
-    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
-    options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
-answer: "Error in individual accounts"
-  },
-  {
-    question: "If the Sales Ledger Control Account does not agree with the total of individual debtor accounts, what is the next step?",
-    options: ["", "", "", "Investigate and reconcile differences", "Prepare financial statements", "Ignore the difference"],
-answer: "Investigate and reconcile differences"
-  },
-  {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
-    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
-answer: "GHS8,500"
-  },
-  {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
-    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
-answer: "GHS3,000"
-  },
-  {
-    question: "What are the advantages of control accounts?",
-    options: ["", "Detect errors, simplify ledger reconciliation, save time",
-      "Increase errors, complicate accounting, reduce accuracy",
-      "Replace financial statements, increase costs, require more staff"],
-answer: "Detect errors, simplify ledger reconciliation, save time"
-  },
-  {
-    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
-    options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
-answer: "Control account balance is incorrect"
-  },
-  {
-    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
-      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
-answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
-  },
-  {
-    question: "What is an unpresented cheque?",
-    options: ["", "A cheque issued by the business but not yet cleared by the bank",
-      "A cheque received but not yet recorded", "A cheque dishonored"],
-answer: "A cheque issued by the business but not yet cleared by the bank"
-  },
-  {
-    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
-answer: "GHS8,500"
-  },
-  {
-    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
-      "Dr Bank GHS200, Cr Cash book GHS200",
-      "Dr Cash book GHS200, Cr Suspense GHS200"],
-answer: "Dr Cash book GHS200, Cr Suspense GHS200"
-  },
-  {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
-    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
-answer: "GHS700"
-  },
-  {
-    question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
-    options: ["", "", "", "Outstanding lodgments", "Bank charges", "Depreciation"],
-answer: "Depreciation"
-  },
-  {
-    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
-    options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
-answer: "Errors were corrected"
-  },
-  {
-    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
-      "Dr Cash book GHS750, Cr Suspense GHS750",
-      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
-answer: "Dr Suspense GHS750, Cr Cash book GHS750"
-  },
-  {
-    question: "What is a contra entry?",
-    options: ["", "An entry affecting both cash and bank accounts",
-      "An entry to record depreciation",
-      "An entry for sales returns"],
-answer: "An entry affecting both cash and bank accounts"
-  },
-  {
-    question: "How is a dishonoured cheque treated in the cash book?",
-    options: ["", "Deducted from cash book",
-      "Added to cash book",
-      "No effect"],
-answer: "Deducted from cash book"
-  },
-  {
-    question: "What does a credit balance in the bank column of the cash book indicate?",
-    options: ["", "Bank overdraft",
-      "Bank balance",
-      "Bank error"],
-answer: "Bank overdraft"
-  },
-  {
-    question: "How do you treat a direct deposit by a customer in the bank statement but not recorded in the cash book?",
-    options: ["", "Dr Cash book",
-      "Cr Cash book",
-      "Dr Suspense account"],
-answer: "Dr Cash book"
-  },
-  {
-    question: "What is the main purpose of preparing a Bank Reconciliation Statement (BRS)?",
-    options: ["", "To check the accuracy of the cash book balance",
-      "To reconcile the cash book balance with the bank statement balance",
-      "To verify bank charges"],
-answer: "To reconcile the cash book balance with the bank statement balance"
-  },
-  {
-    question: "If the bank statement shows a balance of GHS10,000 and unpresented cheques total GHS1,500, what is the adjusted bank balance?",
-    options: ["", "", "", "GHS11,500", "GHS10,000", "GHS1,500"],
-answer: "GHS8,500"
-  },
-  {
-    question: "The cash book shows a balance of GHS5,200. Cheques totaling GHS800 issued have not yet been presented. The bank statement balance is:",
-    options: ["", "", "", "GHS6,000", "GHS5,200", "GHS6,000"],
-answer: "GHS4,400"
-  },
-  {
-    question: "Bank charges of GHS50 appear on the bank statement but have not been recorded in the cash book. How should this be adjusted in the cash book?",
-    options: ["", "Dr Bank charges GHS50, Cr Cash book GHS50",
-      "Dr Cash book GHS50, Cr Bank charges GHS50",
-      "Dr Suspense account GHS50, Cr Cash book GHS50"],
-answer: "Dr Bank charges GHS50, Cr Cash book GHS50"
-  },
-  {
-    question: "A cheque for GHS1,200 was entered in the cash book but was recorded in the bank statement as GHS1,020. What is the error?",
-    options: ["", "", "", "Cash book error", "Suspense error", "No error"],
-answer: "Cash book error"
-  },
-  {
-    question: "The bank statement shows a deposit of GHS2,000 not recorded in the cash book. What is the correct journal entry to update the cash book?",
-    options: ["", "Dr Bank GHS2,000, Cr Suspense GHS2,000",
-      "Dr Cash book GHS2,000, Cr Bank GHS2,000",
-      "Dr Cash book GHS2,000, Cr Suspense GHS2,000"],
-answer: "Dr Cash book GHS2,000, Cr Suspense GHS2,000"
-  },
-  {
-    question: "What is a self-balancing ledger?",
-    options: ["", "A ledger with control accounts that balance independently",
-      "A ledger without any control accounts",
-      "A ledger that contains only sales transactions"],
-answer: "A ledger with control accounts that balance independently"
-  },
-  {
-    question: "The purpose of Control Accounts is to:",
-    options: ["", "Detect errors in the ledger",
-      "Replace the ledger",
-      "Record all transactions"],
-answer: "Detect errors in the ledger"
-  },
-  {
-    question: "The balance on the sales ledger control account represents:",
-    options: ["", "Total credit sales for the period",
-      "Total amount owed by customers (debtors)",
-      "Total cash sales"],
-answer: "Total amount owed by customers (debtors)"
-  },
-  {
-    question: "How would you prepare a Purchases Ledger Control Account?",
-    options: ["", "By summarizing all creditor transactions",
-      "By listing all debtors' balances",
-      "By preparing the trial balance"],
-answer: "By summarizing all creditor transactions"
-  },
-  {
-    question: "The Purchases Ledger Control Account shows a balance of GHS4,000. Individual creditors total GHS3,800. What might this indicate?",
-    options: ["", "", "", "Error in control account", "Outstanding cheques", "Bank error"],
-answer: "Error in individual accounts"
-  },
-  {
-    question: "If the Sales Ledger Control Account does not agree with the total of individual debtor accounts, what is the next step?",
-    options: ["", "", "", "Investigate and reconcile differences", "Prepare financial statements", "Ignore the difference"],
-answer: "Investigate and reconcile differences"
-  },
-  {
-    question: "Calculate the closing balance of the Sales Ledger Control Account if the opening balance is GHS10,000, credit sales GHS6,000, cash received from debtors GHS7,000, and returns from debtors GHS500.",
-    options: ["", "", "", "GHS8,000", "GHS9,500", "GHS10,500"],
-answer: "GHS8,500"
-  },
-  {
-    question: "Calculate the closing balance of the Purchases Ledger Control Account if the opening balance is GHS5,000, credit purchases are GHS3,000, payments to creditors are GHS4,000, and returns to suppliers are GHS1,000.",
-    options: ["", "", "", "GHS2,000", "GHS4,000", "GHS5,000"],
-answer: "GHS3,000"
-  },
-  {
-    question: "What are the advantages of control accounts?",
-    options: ["", "Detect errors, simplify ledger reconciliation, save time",
-      "Increase errors, complicate accounting, reduce accuracy",
-      "Replace financial statements, increase costs, require more staff"],
-answer: "Detect errors, simplify ledger reconciliation, save time"
-  },
-  {
-    question: "A total of GHS12,000 was posted to the wrong ledger account. How would this affect the control account?",
-    options: ["", "", "", "Control account balance is correct", "Trial balance will not agree", "No effect"],
-answer: "Control account balance is incorrect"
-  },
-  {
-    question: "Bank statement shows a direct debit of GHS250 for insurance premium not recorded in cash book. What entry is needed?",
-    options: ["", "Dr Insurance Expense GHS250, Cr Bank GHS250",
-      "Dr Bank GHS250, Cr Insurance Expense GHS250", "Dr Suspense GHS250, Cr Bank GHS250"],
-answer: "Dr Insurance Expense GHS250, Cr Bank GHS250"
-  },
-  {
-    question: "What is an unpresented cheque?",
-    options: ["", "A cheque issued by the business but not yet cleared by the bank",
-      "A cheque received but not yet recorded", "A cheque dishonored"],
-answer: "A cheque issued by the business but not yet cleared by the bank"
-  },
-  {
-    question: "The cash book shows GHS7,500, the bank statement shows GHS8,200, and uncredited deposits total GHS1,000. What is the adjusted cash book balance?",
-    options: ["", "", "", "GHS8,500", "GHS6,500", "GHS7,200"],
-answer: "GHS8,500"
-  },
-  {
-    question: "If the bank statement shows GHS200 direct deposits not recorded in the cash book, what is the correct adjustment?",
-    options: ["", "Dr Cash book GHS200, Cr Bank GHS200",
-      "Dr Bank GHS200, Cr Cash book GHS200",
-      "Dr Cash book GHS200, Cr Suspense GHS200"],
-answer: "Dr Cash book GHS200, Cr Suspense GHS200"
-  },
-  {
-    question: "Calculate the amount of outstanding lodgments if the cash book shows GHS5,000 and the bank statement shows GHS4,300 with unpresented cheques GHS600.",
-    options: ["", "", "", "GHS700", "GHS1,200", "GHS500"],
-answer: "GHS700"
-  },
-  {
-    question: "Which of the following is NOT a reason for differences between the bank statement and the cash book?",
-    options: ["", "", "", "Outstanding lodgments", "Bank charges", "Depreciation"],
-answer: "Depreciation"
-  },
-  {
-    question: "The Suspense Account was cleared with a debit of GHS1,000 and a credit of GHS1,000. What does this indicate?",
-    options: ["", "", "", "Error still exists", "Trial balance is wrong", "No effect"],
-answer: "Errors were corrected"
-  },
-  {
-    question: "A cheque for GHS750 was entered twice in the cash book. What is the correcting entry?",
-    options: ["", "Dr Suspense GHS750, Cr Cash book GHS750",
-      "Dr Cash book GHS750, Cr Suspense GHS750",
-      "Dr Suspense GHS1,500, Cr Cash book GHS1,500"],
-answer: "Dr Suspense GHS750, Cr Cash book GHS750"
-  },
-  {
-    question: "What is a contra entry?",
-    options: ["", "An entry affecting both cash and bank accounts",
-      "An entry to record depreciation",
-      "An entry for sales returns"],
-answer: "An entry affecting both cash and bank accounts"
-  },
-  // ... previous questions from above
-  {
-    question: "How is a dishonoured cheque treated in the cash book?",
-    options: ["", "Deducted from cash book",
-      "Added to cash book",
-      "No effect"],
-answer: "Deducted from cash book"
-  },
-  {
-    question: "What does a credit balance in the bank column of the cash book indicate?",
-    options: ["", "Bank overdraft",
-      "Bank balance",
-      "Bank error"],
-answer: "Bank overdraft"
-  },
-  {
-    question: "How do you treat a direct deposit by a customer in the bank statement but not recorded in the cash book?",
-    options: ["", "Dr Cash book",
-      "Cr Cash book",
-      "Dr Suspense account"],
-answer: "Dr Cash book"
-  },
-  {
-    question: "What is the purpose of a control account trial balance?",
-    options: ["", "To verify that control accounts match individual ledger totals",
-      "To check bank charges",
-      "To detect fraud in bank statements"],
-answer: "To verify that control accounts match individual ledger totals"
-  },
-  {
-    question: "What is the effect of unrecorded bank interest received on the cash book balance?",
-    options: ["", "Cash book balance understated",
-      "Cash book balance overstated",
-      "No effect]"],
-answer: "Cash book balance understated"
-  },
-  {
-    question: "Which document is used to update the cash book when a direct debit appears on the bank statement?",
-    options: ["", "Bank statement",
-      "Cheque counterfoil",
-      "Invoice"],
-answer: "Bank statement"
-  },
-  {
-    question: "What type of error does a suspense account help to correct?",
-    options: ["", "Errors of omission",
-      "Errors of commission",
-      "Errors where debit and credit do not agree"],
-answer: "Errors where debit and credit do not agree"
-  },
-  {
-    question: "How does an outstanding lodgment affect the bank reconciliation statement?",
-    options: ["", "It is added to the bank statement balance",
-      "It is deducted from the bank statement balance",
-      "It is added to the cash book balance"],
-answer: "It is added to the bank statement balance"
-  },
-  {
-    question: "Which account is credited when a dishonoured cheque is received from a customer?",
-    options: ["", "Bank account",
-      "Debtors account",
-      "Creditors account"],
-answer: "Debtors account"
-  },
-  {
-    question: "What is the term for a cheque received but not yet deposited in the bank?",
-    options: ["", "Outstanding cheque",
-      "Uncredited lodgment",
-      "Unpresented cheque"],
-answer: "Uncredited lodgment"
-  },
-  {
-    question: "If a cheque issued by a business is lost and never presented, how is this treated in the bank reconciliation?",
-    options: ["", "It remains as an unpresented cheque",
-      "It is added back to the bank balance",
-      "It is deducted from the cash book balance"],
-answer: "It remains as an unpresented cheque"
-  },
-  {
-    question: "What does a debit balance in the purchases ledger control account indicate?",
-    options: ["", "A creditor owes money to the business",
-      "The business has overpaid a creditor",
-      "A debtor owes money to the business"],
-answer: "The business has overpaid a creditor"
-  },
-  {
-    question: "How often should bank reconciliation statements be prepared?",
-    options: ["", "Monthly",
-      "Annually",
-      "Weekly"],
-answer: "Whenever the bank statement is received"
-  },
-  {
-    question: "What is the usual effect of bank charges on the cash book balance?",
-    options: ["", "Decrease the balance",
-      "Increase the balance",
-      "No effect"],
-answer: "Decrease the balance"
-  },
-  {
-    question: "What is the control account called that summarizes all individual debtor accounts?",
-    options: ["", "Sales ledger control account",
-      "Purchases ledger control account",
-      "General ledger control account"],
-answer: "Sales ledger control account"
-  },
-  {
-    question: "Which ledger is summarized by the purchases ledger control account?",
-    options: ["", "Creditors ledger",
-      "Debtors ledger",
-      "General ledger"],
-answer: "Creditors ledger"
-  },
-  {
-    question: "When a direct debit payment appears in the bank statement but not in the cash book, which account should be debited in the cash book?",
-    options: ["", "Expense account",
-      "Bank account",
-      "Suspense account"],
-answer: "Expense account"
-  },
-  {
-    question: "Which entry would correct a bank error in recording a deposit as GHS800 instead of GHS1,000?",
-    options: ["", "Add GHS200 to the bank statement balance",
-      "Deduct GHS200 from the cash book",
-      "Add GHS200 to the cash book"],
-answer: "Add GHS200 to the bank statement balance"
-  },
-  {
-    question: "What type of error causes the trial balance to disagree, necessitating a suspense account?",
-    options: ["", "Error of principle",
-      "Error of omission",
-      "Error of casting"],
-answer: "Error of unequal debit and credit"
-  },
-  {
-    question: "What does a bank reconciliation statement help to detect?",
-    options: ["", "Errors and omissions between cash book and bank statement",
-      "Errors in sales invoices",
-      "Errors in purchase orders"],
-answer: "Errors and omissions between cash book and bank statement"
-  },
-  {
-    question: "What is an advantage of using control accounts in bookkeeping?",
-    options: ["", "Simplifies reconciliation of ledger accounts",
-      "Eliminates the need for a trial balance",
-      "Reduces the number of journal entries"],
-answer: "Simplifies reconciliation of ledger accounts"
-  },
-  {
-    question: "What is the main limitation of single entry bookkeeping?",
-    options: ["", "Does not show profit or loss clearly",
-      "Is too complex for small businesses",
-      "Requires extensive ledger accounts"],
-answer: "Does not show profit or loss clearly"
-  },
-  {
-    question: "From the following single entry records, calculate the net profit: Opening capital GHS50,000, Closing capital GHS60,000, Additional capital introduced GHS5,000, Drawings GHS3,000.",
-    options: ["", "GHS12,000",
-      "GHS8,000",
-      "GHS10,000"],
-answer: "GHS12,000"
-  },
-  {
-    question: "Calculate the credit sales if total sales are GHS150,000 and cash sales are GHS50,000.",
-    options: ["", "GHS100,000",
-      "GHS200,000",
-      "GHS50,000"],
-answer: "GHS100,000"
-  },
-  {
-    question: "What is the purpose of receipts and payments account in clubs and societies?",
-    options: ["", "To show cash inflows and outflows",
-      "To calculate net profit",
-      "To prepare balance sheet"],
-answer: "To show cash inflows and outflows"
-  },
-  {
-    question: "How is an accumulated fund in a club calculated?",
-    options: ["", "Opening fund + Income - Expenditure",
-      "Income - Expenditure only",
-      "Subscriptions - Donations"],
-answer: "Opening fund + Income - Expenditure"
-  },
-  {
-    question: "Compute the prime cost if direct materials cost GHS30,000, direct labour GHS20,000 and direct expenses GHS5,000.",
-    options: ["", "GHS55,000",
-      "GHS50,000",
-      "GHS45,000"],
-answer: "GHS55,000"
-  },
-  {
-    question: "What does the manufacturing account show?",
-    options: ["", "Cost of goods manufactured",
-      "Sales revenue",
-      "Operating expenses"],
-answer: "Cost of goods manufactured"
-  },
-  {
-    question: "Calculate the production cost if prime cost is GHS55,000, factory overheads GHS15,000.",
-    options: ["", "GHS70,000",
-      "GHS40,000",
-      "GHS85,000"],
-answer: "GHS70,000"
-  },
-  {
-    question: "What is meant by unrealized profit in manufacturing accounts?",
-    options: ["", "Profit on goods still held in closing stock",
-      "Profit from sales",
-      "Profit paid to shareholders"],
-answer: "Profit on goods still held in closing stock"
-  },
-  {
-    question: "Prepare a simple income and expenditure account given the following: Income GHS100,000, Expenditure GHS70,000.",
-    options: ["", "Net surplus GHS30,000",
-      "Net deficit GHS30,000",
-      "Net surplus GHS70,000"],
-answer: "Net surplus GHS30,000"
-  },
-  {
-    question: "How is the subscriptions account credited in clubs and societies?",
-    options: ["", "When subscriptions are received",
-      "When subscriptions are due",
-      "When subscriptions are paid to suppliers"],
-answer: "When subscriptions are due"
-  },
-  {
-    question: "What is the main difference between departmental and branch accounts?",
-    options: ["", "Departments are parts of a business; branches are separate locations",
-      "Departments sell; branches buy",
-      "Branches are divisions of a business; departments are separate companies"],
-answer: "Departments are parts of a business; branches are separate locations"
-  },
-  {
-    question: "Calculate the value of closing stock given: Opening stock GHS10,000, Purchases GHS40,000, Sales GHS70,000, Cost of goods sold GHS35,000.",
-    options: ["", "GHS15,000",
-      "GHS20,000",
-      "GHS25,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "What distinguishes public sector accounting from private sector accounting?",
-    options: ["", "Focus on accountability for public funds",
-      "Focus on profit maximization",
-      "No difference"],
-answer: "Focus on accountability for public funds"
-  },
-  {
-    question: "Identify one source of public revenue.",
-    options: ["", "Taxes",
-      "Loans",
-      "Shares"],
-answer: "Taxes"
-  },
-  {
-    question: "Which is an example of capital expenditure in the public sector?",
-    options: ["", "Purchase of a building",
-      "Payment of salaries",
-      "Payment of utilities"],
-answer: "Purchase of a building"
-  },
-  {
-    question: "What is the main advantage of computerized accounting systems?",
-    options: ["", "Speed and accuracy of data processing",
-      "Requires no training",
-      "Eliminates all errors"],
-answer: "Speed and accuracy of data processing"
-  },
-  {
-    question: "Give one demerit of manual accounting processing systems.",
-    options: ["", "Prone to human error",
-      "Faster than computerized systems",
-      "Requires no expertise"],
-answer: "Prone to human error"
-  },
-  {
-    question: "Compute the net worth of a sole proprietor with assets GHS200,000 and liabilities GHS75,000.",
-    options: ["", "GHS125,000",
-      "GHS275,000",
-      "GHS75,000"],
-answer: "GHS125,000"
-  },
-  {
-    question: "If sales are GHS100,000, cost of goods sold GHS60,000, and expenses GHS20,000, calculate the net profit.",
-    options: ["", "GHS20,000",
-      "GHS40,000",
-      "GHS80,000"],
-answer: "GHS20,000"
-  },
-  {
-    question: "What is the role of an income and expenditure account in clubs?",
-    options: ["", "To measure net surplus or deficit",
-      "To track cash inflows",
-      "To calculate tax payable"],
-answer: "To measure net surplus or deficit"
-  },
-  {
-    question: "In incomplete records, how do you compute profit using the statement of affairs method?",
-    options: ["", "Closing capital + Drawings - Opening capital",
-      "Opening capital + Drawings - Closing capital",
-      "Sales - Purchases"],
-answer: "Closing capital + Drawings - Opening capital"
-  },
-  {
-    question: "What is the double entry for recording depreciation on fixed assets?",
-    options: ["", "Debit Depreciation Expense, Credit Accumulated Depreciation",
-      "Debit Asset account, Credit Cash",
-      "Debit Accumulated Depreciation, Credit Expense"],
-answer: "Debit Depreciation Expense, Credit Accumulated Depreciation"
-  },
-  {
-    question: "Calculate depreciation on machinery costing GHS50,000 at 10% per annum using the straight-line method.",
-    options: ["", "GHS5,000",
-      "GHS500",
-      "GHS10,000"],
-answer: "GHS5,000"
-  },
-  {
-    question: "What is a suspense account used for in accounting?",
-    options: ["", "To temporarily hold unclassified transactions",
-      "To record revenue",
-      "To record assets"],
-answer: "To temporarily hold unclassified transactions"
-  },
-  {
-    question: "What is the effect of failing to record accrued expenses in final accounts?",
-    options: ["", "Overstated profit",
-      "Understated profit",
-      "No effect"],
-answer: "Overstated profit"
-  },
-  {
-    question: "How do you treat bad debts in financial statements?",
-    options: ["", "As an expense deducted from revenue",
-      "As an asset",
-      "As a liability"],
-answer: "As an expense deducted from revenue"
-  },
-  {
-    question: "What is the principle of double entry accounting?",
-    options: ["", "Every transaction affects at least two accounts, debit equals credit",
-      "Every transaction affects one account only",
-      "Credits are always more than debits"],
-answer: "Every transaction affects at least two accounts, debit equals credit"
-  },
-  {
-    question: "Explain the effect on the accounting equation when a business purchases inventory on credit.",
-    options: ["", "Increase assets and increase liabilities",
-      "Decrease assets and increase liabilities",
-      "Increase assets and decrease liabilities"],
-answer: "Increase assets and increase liabilities"
-  },
-  {
-    question: "Calculate the closing capital given: Opening capital GHS80,000, additional capital introduced GHS20,000, net profit GHS15,000, and drawings GHS10,000.",
-    options: ["", "GHS105,000",
-      "GHS125,000",
-      "GHS85,000"],
-answer: "GHS105,000"
-  },
-  {
-    question: "How do you classify expenses in the final accounts of a sole proprietorship?",
-    options: ["", "By nature or by function",
-      "Only by function",
-      "Only by nature"],
-answer: "By nature or by function"
-  },
-  {
-    question: "Prepare a simple trial balance given: Cash GHS5,000 (debit), Capital GHS20,000 (credit), Equipment GHS7,000 (debit), Accounts Payable GHS4,000 (credit).",
-    options: ["", "Trial balance agrees with total debit GHS12,000 and credit GHS24,000",
-      "Trial balance agrees with total debit GHS12,000 and credit GHS24,000",
-      "Trial balance agrees with total debit GHS12,000 and credit GHS24,000"],
-answer: "Trial balance agrees with total debit GHS12,000 and credit GHS24,000"
-  },
-  {
-    question: "What is the key purpose of preparing a bank reconciliation statement?",
-    options: ["", "To explain differences between cash book and bank statement balances",
-      "To prepare cash budgets",
-      "To record petty cash expenses"],
-answer: "To explain differences between cash book and bank statement balances"
-  },
-  {
-    question: "How does depreciation affect the profit and loss account?",
-    options: ["", "It reduces profit as an expense",
-      "It increases profit",
-      "No effect on profit"],
-answer: "It reduces profit as an expense"
-  },
-  {
-    question: "Calculate the value of closing stock using the cost formula if opening stock is GHS10,000, purchases GHS25,000, sales GHS40,000, and cost of goods sold GHS20,000.",
-    options: ["", "GHS15,000",
-      "GHS10,000",
-      "GHS25,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "In VAT accounting, if a sale of GHS100,000 attracts VAT at 12.5%, calculate the VAT payable.",
-    options: ["", "GHS12,500",
-      "GHS8,000",
-      "GHS11,250"],
-answer: "GHS12,500"
-  },
-  {
-    question: "Explain the effect on the balance sheet when depreciation is charged on fixed assets.",
-    options: ["", "Reduces asset value and reduces profit",
-      "Increases asset value and increases profit",
-      "No effect on asset or profit"],
-answer: "Reduces asset value and reduces profit"
-  },
-  {
-    question: "Which of the following is NOT a qualitative characteristic of accounting information?",
-    options: ["", "Relevance",
-      "Reliability",
-      "Complexity"],
-answer: "Complexity"
-  },
-  {
-    question: "What is the role of the petty cash book in financial accounting?",
-    options: ["", "To record small cash payments",
-      "To record all cash transactions",
-      "To prepare financial statements"],
-answer: "To record small cash payments"
-  },
-  {
-    question: "Calculate the payroll for 10 workers each paid GHS500 per week for 4 weeks.",
-    options: ["", "GHS20,000",
-      "GHS2,000",
-      "GHS50,000"],
-answer: "GHS20,000"
-  },
-  {
-    question: "Explain the difference between revenue and capital expenditure.",
-    options: ["", "Revenue expenditure is for day-to-day operations, capital expenditure is for long-term assets",
-      "Capital expenditure is for salaries, revenue expenditure is for equipment",
-      "Both are the same"],
-answer: "Revenue expenditure is for day-to-day operations, capital expenditure is for long-term assets"
-  },
-  {
-    question: "How do you treat bad debts provision in final accounts?",
-    options: ["", "Deduct from debtors and record as an expense",
-      "Add to debtors",
-      "Record as income"],
-answer: "Deduct from debtors and record as an expense"
-  },
-  {
-    question: "What is the effect of recording accrued expenses in the accounts?",
-    options: ["", "Increases liabilities and expenses",
-      "Decreases assets and liabilities",
-      "Increases assets and revenues"],
-answer: "Increases liabilities and expenses"
-  },
-  {
-    question: "Prepare a ledger account for 'Rent Expense' given the following transactions: Paid GHS1,000 cash, owing GHS200 at year-end.",
-    options: ["", "Debit Rent Expense GHS1,200 and credit Cash GHS1,000 and Accrued Expenses GHS200",
-      "Debit Rent Expense GHS1,000 and credit Cash GHS1,000",
-      "Credit Rent Expense GHS1,200 and debit Cash GHS1,200"],
-answer: "Debit Rent Expense GHS1,200 and credit Cash GHS1,000 and Accrued Expenses GHS200"
-  },
-  {
-    question: "Calculate gross profit if sales are GHS120,000, cost of goods sold is GHS70,000, and expenses are GHS30,000.",
-    options: ["", "GHS50,000",
-      "GHS20,000",
-      "GHS30,000"],
-answer: "GHS50,000"
-  },
-  {
-    question: "What are the key users of accounting information?",
-    options: ["", "Owners, managers, creditors, investors, government",
-      "Only owners",
-      "Only managers"],
-answer: "Owners, managers, creditors, investors, government"
-  },
-  {
-    question: "Explain the purpose of control accounts in accounting.",
-    options: ["", "To summarize ledger balances and detect errors",
-      "To record petty cash transactions",
-      "To prepare financial statements"],
-answer: "To summarize ledger balances and detect errors"
-  },
-  {
-    question: "Calculate VAT payable if total sales including VAT is GHS112,500 and the VAT rate is 12.5%.",
-    options: ["", "GHS12,500",
-      "GHS10,000",
-      "GHS11,250"],
-answer: "GHS12,500"
-  },
-  {
-    question: "What is the accounting equation?",
-    options: ["", "Assets = Liabilities + Capital",
-      "Assets + Liabilities = Capital",
-      "Capital = Assets - Liabilities"],
-answer: "Assets = Liabilities + Capital"
-  },
-  {
-    question: "A business has assets GHS100,000, liabilities GHS40,000. What is the owner's equity?",
-    options: ["", "GHS60,000",
-      "GHS140,000",
-      "GHS40,000"],
-answer: "GHS60,000"
-  },
-  {
-    question: "What is the main difference between financial accounting and cost accounting?",
-    options: ["", "Financial accounting focuses on external reporting; cost accounting focuses on internal control and costing",
-      "Financial accounting is optional; cost accounting is mandatory",
-      "Both are exactly the same"],
-answer: "Financial accounting focuses on external reporting; cost accounting focuses on internal control and costing"
-  },
-  {
-    question: "Explain the purpose of a trial balance.",
-    options: ["", "To check the equality of debits and credits",
-      "To prepare the income statement",
-      "To prepare the cash flow statement"],
-answer: "To check the equality of debits and credits"
-  },
-  {
-    question: "Calculate net profit if total revenue is GHS150,000 and total expenses are GHS90,000.",
-    options: ["", "GHS60,000",
-      "GHS240,000",
-      "GHS90,000"],
-answer: "GHS60,000"
-  },
-  {
-    question: "What type of account is 'Accounts Payable'?",
-    options: ["", "Liability account",
-      "Asset account",
-      "Revenue account"],
-answer: "Liability account"
-  },
-  {
-    question: "How would you treat a prepaid expense in the accounts?",
-    options: ["", "Record as an asset until used",
-      "Record as an expense immediately",
-      "Ignore it"],
-answer: "Record as an asset until used"
-  },
-  {
-    question: "Define the term 'drawings' in accounting.",
-    options: ["", "Owner's withdrawal of business assets for personal use",
-      "Payment of salaries",
-      "Money borrowed from bank"],
-answer: "Owner's withdrawal of business assets for personal use"
-  },
-  {
-    question: "A company has sales of GHS80,000, returns inwards GHS2,000, purchases GHS40,000, and returns outwards GHS1,000. Calculate net sales.",
-    options: ["", "GHS78,000",
-      "GHS79,000",
-      "GHS81,000"],
-answer: "GHS78,000"
-  },
-  {
-    question: "What is the function of the petty cash book?",
-    options: ["", "To record small cash payments",
-      "To record sales",
-      "To prepare invoices"],
-answer: "To record small cash payments"
-  },
-  {
-    question: "Calculate the accrued interest if a loan of GHS10,000 attracts 6% interest annually for 3 months.",
-    options: ["", "GHS150",
-      "GHS600",
-      "GHS500"],
-answer: "GHS150"
-  },
-  {
-    question: "What is the purpose of depreciation accounting?",
-    options: ["", "To allocate the cost of an asset over its useful life",
-      "To increase asset value",
-      "To record income"],
-answer: "To allocate the cost of an asset over its useful life"
-  },
-  {
-    question: "Define the term 'provision' in accounting.",
-    options: ["", "An estimated liability of uncertain amount",
-      "A prepaid expense",
-      "A fixed asset"],
-answer: "An estimated liability of uncertain amount"
-  },
-  {
-    question: "Explain the effect of bad debts on financial statements.",
-    options: ["", "Decrease assets and decrease profit",
-      "Increase assets and increase profit",
-      "No effect"],
-answer: "Decrease assets and decrease profit"
-  },
-  {
-    question: "What is the role of the general journal in accounting?",
-    options: ["", "To record transactions not recorded in special journals",
-      "To record cash transactions only",
-      "To prepare financial statements"],
-answer: "To record transactions not recorded in special journals"
-  },
-  {
-    question: "Calculate the book value of an asset bought for GHS20,000 with accumulated depreciation of GHS4,000.",
-    options: ["", "GHS16,000",
-      "GHS24,000",
-      "GHS20,000"],
-answer: "GHS16,000"
-  },
-  {
-    question: "What is the difference between current and fixed assets?",
-    options: ["", "Current assets are short-term, fixed assets are long-term",
-      "Current assets are non-physical, fixed assets are physical",
-      "No difference"],
-answer: "Current assets are short-term, fixed assets are long-term"
-  },
-  {
-    question: "Calculate net cash flow given cash inflows GHS100,000 and cash outflows GHS70,000.",
-    options: ["", "GHS30,000",
-      "GHS170,000",
-      "GHS70,000"],
-answer: "GHS30,000"
-  },
-  {
-    question: "Explain the accounting treatment of capital introduced by the owner.",
-    options: ["", "Increase assets and increase capital account",
-      "Increase expenses",
-      "Decrease assets"],
-answer: "Increase assets and increase capital account"
-  },
-  {
-    question: "Which financial statement shows the financial position of a business at a particular point in time?",
-    options: ["", "Balance Sheet",
-      "Income Statement",
-      "Cash Flow Statement"],
-answer: "Balance Sheet"
-  },
-  {
-    question: "What is meant by the term 'liquidity' in accounting?",
-    options: ["", "Ability to meet short-term obligations",
-      "Total assets owned",
-      "Long-term solvency"],
-answer: "Ability to meet short-term obligations"
-  },
-  {
-    question: "Calculate the straight-line depreciation on an asset costing GHS12,000 with a useful life of 4 years and no residual value.",
-    options: ["", "GHS3,000 per year",
-      "GHS4,000 per year",
-      "GHS2,000 per year"],
-answer: "GHS3,000 per year"
-  },
-  {
-    question: "What is a suspense account used for?",
-    options: ["", "To temporarily hold unclassified or doubtful transactions",
-      "To record depreciation",
-      "To summarize sales"],
-answer: "To temporarily hold unclassified or doubtful transactions"
-  },
-  {
-    question: "How is an error of omission corrected in accounting records?",
-    options: ["", "By making the correct entry in the appropriate ledger",
-      "By ignoring it",
-      "By increasing assets"],
-answer: "By making the correct entry in the appropriate ledger"
-  },
-  {
-    question: "Calculate the adjusted closing balance of the cash book if the unadjusted balance is GHS5,000, bank charges are GHS200, and a direct deposit of GHS300 was not recorded.",
-    options: ["", "GHS5,100",
-      "GHS5,100",
-      "GHS4,500"],
-answer: "GHS5,100"
-  },
-  {
-    question: "What is meant by 'deferred income'?",
-    options: ["", "Income received in advance and not yet earned",
-      "Income earned but not received",
-      "Income earned and received"],
-answer: "Income received in advance and not yet earned"
-  },
-  {
-    question: "A company has total debtors of GHS15,000 and credit sales of GHS120,000. Calculate the debtor's turnover ratio.",
-    options: ["", "8 times",
-      "0.125 times",
-      "10 times"],
-answer: "8 times"
-  },
-  {
-    question: "What is the purpose of the income statement?",
-    options: ["", "To show the company's revenues and expenses over a period, resulting in profit or loss",
-      "To show financial position at a point in time",
-      "To record cash transactions"],
-answer: "To show the company's revenues and expenses over a period, resulting in profit or loss"
-  },
-  {
-    question: "Explain the meaning of 'capital expenditure'.",
-    options: ["", "Expenditure that improves the value or life of an asset",
-      "Expenditure on day-to-day running costs",
-      "Expenditure on wages"],
-answer: "Expenditure that improves the value or life of an asset"
-  },
-  {
-    question: "Calculate profit if opening capital is GHS20,000, closing capital is GHS30,000, and drawings are GHS5,000.",
-    options: ["", "GHS15,000",
-      "GHS5,000",
-      "GHS10,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "What does a credit balance in the purchases ledger control account indicate?",
-    options: ["", "An overpayment or return to suppliers",
-      "An amount owed to suppliers",
-      "A payment due from customers"],
-answer: "An overpayment or return to suppliers"
-  },
-  {
-    question: "Describe the double entry principle.",
-    options: ["", "Every transaction affects at least two accounts with equal debit and credit entries",
-      "All transactions are recorded once",
-      "Only assets are recorded"],
-answer: "Every transaction affects at least two accounts with equal debit and credit entries"
-  },
-  {
-    question: "A petty cash book has a balance of GHS200. Expenses of GHS80 and GHS50 were paid from it. What is the new balance?",
-    options: ["", "GHS70",
-      "GHS130",
-      "GHS330"],
-answer: "GHS70"
-  },
-  {
-    question: "What is a trial balance?",
-    options: ["", "A list of all ledger balances to check debits equal credits",
-      "A financial statement",
-      "A journal entry"],
-answer: "A list of all ledger balances to check debits equal credits"
-  },
-  {
-    question: "Define 'accrual accounting'.",
-    options: ["", "Recording revenues and expenses when they are earned or incurred, regardless of cash flow",
-      "Recording transactions only when cash changes hands",
-      "Recording only assets"],
-answer: "Recording revenues and expenses when they are earned or incurred, regardless of cash flow"
-  },
-  {
-    question: "Calculate bad debt expense if total credit sales are GHS100,000 and bad debts are estimated at 3%.",
-    options: ["", "GHS3,000",
-      "GHS30,000",
-      "GHS300"],
-answer: "GHS3,000"
-  },
-  {
-    question: "What is the effect of recording depreciation on financial statements?",
-    options: ["", "Decrease assets and decrease profit",
-      "Increase assets and profit",
-      "No effect"],
-answer: "Decrease assets and decrease profit"
-  },
-  {
-    question: "Explain the difference between a ledger and a journal.",
-    options: ["", "Journal is the original book of entry; ledger summarizes transactions by account",
-      "Ledger is the original book of entry; journal summarizes transactions",
-      "Both are the same"],
-answer: "Journal is the original book of entry; ledger summarizes transactions by account"
-  },
-  {
-    question: "A business made cash sales of GHS40,000 and credit sales of GHS60,000. Calculate total sales.",
-    options: ["", "GHS100,000",
-      "GHS60,000",
-      "GHS40,000"],
-answer: "GHS100,000"
-  },
-  {
-    question: "Calculate the closing stock if opening stock was GHS10,000, purchases GHS40,000, and cost of goods sold GHS45,000.",
-    options: ["", "GHS5,000",
-      "GHS45,000",
-      "GHS50,000"],
-answer: "GHS5,000"
-  },
-  {
-    question: "What is meant by 'capital' in accounting?",
-    options: ["", "The owner's investment in the business",
-      "Borrowed funds",
-      "Sales revenue"],
-answer: "The owner's investment in the business"
-  },
-  {
-    question: "Calculate the depreciation using the reducing balance method at 20% on an asset costing GHS10,000 after 1 year.",
-    options: ["", "GHS2,000",
-      "GHS1,000",
-      "GHS8,000"],
-answer: "GHS2,000"
-  },
-  {
-    question: "What is the main purpose of a balance sheet?",
-    options: ["", "To show the financial position of a business at a specific date",
-      "To show profit or loss over a period",
-      "To record daily transactions"],
-answer: "To show the financial position of a business at a specific date"
-  },
-  {
-    question: "A company has a trial balance with debits GHS25,000 and credits GHS24,500. What does the difference of GHS500 represent?",
-    options: ["", "Suspense account balance",
-      "Profit",
-      "Loss"],
-answer: "Suspense account balance"
-  },
-  {
-    question: "Calculate gross profit if sales are GHS150,000 and cost of goods sold is GHS90,000.",
-    options: ["", "GHS60,000",
-      "GHS240,000",
-      "GHS90,000"],
-answer: "GHS60,000"
-  },
-  {
-    question: "What is meant by 'liabilities' in accounting?",
-    options: ["", "Amounts owed by the business to others",
-      "Resources owned by the business",
-      "Owner's investment"],
-answer: "Amounts owed by the business to others"
-  },
-  {
-    question: "Calculate net profit if gross profit is GHS40,000 and operating expenses are GHS25,000.",
-    options: ["", "GHS15,000",
-      "GHS65,000",
-      "GHS25,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "Explain the term 'accrued expenses'.",
-    options: ["", "Expenses incurred but not yet paid",
+    question: "What are outstanding expenses?",
+    options: [
       "Expenses paid in advance",
-      "Expenses not incurred yet"],
-answer: "Expenses incurred but not yet paid"
+      "Expenses already paid",
+      "Expenses due but unpaid",
+      "Expenses not incurred"
+    ],
+    answer: "Expenses due but unpaid"
   },
   {
-    question: "A cash book shows a balance of GHS3,200, and the bank statement shows GHS3,000. Bank charges of GHS50 are not recorded in the cash book. What is the adjusted cash book balance?",
-    options: ["", "GHS3,150",
-      "GHS3,250",
-      "GHS3,000"],
-answer: "GHS3,150"
+    question: "Which of the following is a non-current liability?",
+    options: ["Creditors", "Bank overdraft", "Bank loan (5 years)", "Rent payable"],
+    answer: "Bank loan (5 years)"
   },
   {
-    question: "Define 'accounts receivable'.",
-    options: ["", "Money owed to the business by customers",
-      "Money owed by the business to suppliers",
-      "Owner's equity"],
-answer: "Money owed to the business by customers"
+    question: "What is the entry for a cheque received from a customer?",
+    options: ["Dr Debtor, Cr Bank", "Dr Bank, Cr Debtor", "Dr Sales, Cr Debtor", "Dr Bank, Cr Sales"],
+    answer: "Dr Bank, Cr Debtor"
   },
   {
-    question: "Calculate the value of closing inventory if opening inventory is GHS5,000, purchases are GHS30,000, and cost of goods sold is GHS32,000.",
-    options: ["", "GHS3,000",
-      "GHS7,000",
-      "GHS32,000"],
-answer: "GHS3,000"
+    question: "Which of the following accounts would appear in the income statement?",
+    options: ["Drawings", "Debtors", "Sales", "Creditors"],
+    answer: "Sales"
   },
   {
-    question: "What is the purpose of a petty cash book?",
-    options: ["", "To record small cash payments",
-      "To record bank transactions",
-      "To record credit sales"],
-answer: "To record small cash payments"
+    question: "The Revaluation Account is prepared when:",
+    options: [
+      "Profit is to be distributed",
+      "New partner is admitted",
+      "Business is sold",
+      "Loan is repaid"
+    ],
+    answer: "New partner is admitted"
   },
   {
-    question: "What are intangible assets?",
-    options: ["", "Non-physical assets like patents and trademarks",
-      "Physical assets like machinery",
-      "Cash and bank balances"],
-answer: "Non-physical assets like patents and trademarks"
+    question: "Which is a major difference between manual and computerized accounting?",
+    options: [
+      "Computerized is slower",
+      "Manual is more accurate",
+      "Manual requires software",
+      "Computerized allows faster report generation"
+    ],
+    answer: "Computerized allows faster report generation"
   },
   {
-    question: "Explain 'owner's equity' in accounting.",
-    options: ["", "Owner's investment plus retained earnings",
-      "Loans owed by the business",
-      "Cash on hand"],
-answer: "Owner's investment plus retained earnings"
+    question: "A company uses a control account to:",
+    options: ["Check stock", "Summarize receivables/payables", "Track capital", "Record depreciation"],
+    answer: "Summarize receivables/payables"
   },
   {
-    question: "A business has fixed assets costing GHS50,000 and accumulated depreciation of GHS10,000. Calculate the net book value.",
-    options: ["", "GHS40,000",
-      "GHS60,000",
-      "GHS10,000"],
-answer: "GHS40,000"
+    question: "What is the accounting treatment for drawings of GHS1,000?",
+    options: ["Dr Cash, Cr Drawings", "Dr Drawings, Cr Cash", "Dr Capital, Cr Drawings", "Dr Drawings, Cr Capital"],
+    answer: "Dr Drawings, Cr Cash"
   },
   {
-    question: "What is the accounting equation?",
-    options: ["", "Assets = Liabilities + Owner's Equity",
-      "Assets = Revenue + Expenses",
-      "Assets + Liabilities = Equity"],
-answer: "Assets = Liabilities + Owner's Equity"
+    question: "If returns outward are GHS2,000, what is the effect on purchases?",
+    options: ["Decrease by GHS2,000", "Increase by GHS2,000", "No effect", "Increase capital"],
+    answer: "Decrease by GHS2,000"
   },
   {
-    question: "Calculate the amount of provision for bad debts if trade receivables are GHS20,000 and the provision rate is 5%.",
-    options: ["", "GHS1,000",
-      "GHS2,000",
-      "GHS5,000"],
-answer: "GHS1,000"
+    question: "A credit balance in the bank statement indicates:",
+    options: ["Overdraft", "Cash at bank", "Loan from bank", "Bank charges"],
+    answer: "Cash at bank"
   },
   {
-    question: "What is the difference between capital and revenue expenditure?",
-    options: ["", "Capital expenditure improves asset life; revenue expenditure is day-to-day expense",
-      "Capital expenditure is small; revenue expenditure is large",
-      "Capital expenditure is recurring; revenue expenditure is not"],
-answer: "Capital expenditure improves asset life; revenue expenditure is day-to-day expense"
+    question: "What is the main objective of public sector accounting?",
+    options: [
+      "To show profit",
+      "To satisfy shareholders",
+      "To ensure accountability",
+      "To calculate dividends"
+    ],
+    answer: "To ensure accountability"
   },
   {
-    question: "Define 'double entry bookkeeping'.",
-    options: ["", "Every transaction is recorded with equal debit and credit entries",
-      "Only credit transactions are recorded",
-      "Only debit transactions are recorded"],
-answer: "Every transaction is recorded with equal debit and credit entries"
+    question: "Which account is debited when office stationery is bought with cash?",
+    options: ["Cash", "Stationery", "Capital", "Sales"],
+    answer: "Stationery"
   },
   {
-    question: "Explain what a ledger is.",
-    options: ["", "A book where similar transactions are grouped and recorded",
-      "The original book of entry",
-      "A financial statement"],
-answer: "A book where similar transactions are grouped and recorded"
+    question: "What is included in prime cost?",
+    options: ["Direct cost + Indirect cost", "Direct wages + Direct materials", "Factory rent", "Office expenses"],
+    answer: "Direct wages + Direct materials"
   },
   {
-    question: "A company purchased machinery for GHS100,000 with an estimated useful life of 10 years and no residual value. Calculate annual straight-line depreciation.",
-    options: ["", "GHS10,000",
-      "GHS5,000",
-      "GHS20,000"],
-answer: "GHS10,000"
+    question: "Which of these best describes capital income?",
+    options: ["Income from sale of fixed asset", "Daily sales", "Subscription income", "Interest received"],
+    answer: "Income from sale of fixed asset"
   },
   {
-    question: "What is meant by 'trial balance'?",
-    options: ["", "A statement showing the debit and credit balances of ledger accounts to check equality",
-      "A list of assets and liabilities",
-      "A financial statement"],
-answer: "A statement showing the debit and credit balances of ledger accounts to check equality"
+    question: "In departmental accounts, expenses common to all departments are:",
+    options: ["Ignored", "Divided equally", "Fully charged to one department", "Capitalized"],
+    answer: "Divided equally"
   },
   {
-    question: "What does a credit balance in the sales ledger control account signify?",
-    options: ["", "Customer overpayment or credit note issued",
-      "Money owed by customers",
-      "Purchase return"],
-answer: "Customer overpayment or credit note issued"
+    question: "The balance of the income and expenditure account is transferred to:",
+    options: ["Bank", "Accumulated Fund", "Receipts and Payments Account", "Liabilities"],
+    answer: "Accumulated Fund"
   },
   {
-    question: "Calculate profit before tax if gross profit is GHS80,000, operating expenses are GHS40,000, and other income is GHS10,000.",
-    options: ["", "GHS50,000",
-      "GHS30,000",
-      "GHS40,000"],
-answer: "GHS50,000"
+    question: "Which concept requires disclosure of all material facts?",
+    options: ["Materiality", "Accrual", "Consistency", "Going Concern"],
+    answer: "Materiality"
   },
   {
-    question: "What is a bank reconciliation statement used for?",
-    options: ["", "To reconcile differences between bank statement and cash book balances",
-      "To calculate bank charges",
-      "To summarize sales"],
-answer: "To reconcile differences between bank statement and cash book balances"
+    question: "If opening stock is GHS4,000, purchases GHS6,000, closing stock GHS3,000, what is COGS?",
+    options: ["GHS7,000", "GHS13,000", "GHS6,000", "GHS8,000"],
+    answer: "GHS7,000"
   },
   {
-    question: "Explain the term 'accruals'.",
-    options: ["", "Expenses or revenues recognized before cash is received or paid",
-      "Cash payments made in advance",
-      "Income not earned"],
-answer: "Expenses or revenues recognized before cash is received or paid"
+    question: "If a machine costs GHS80,000 and is depreciated at 10% per annum on straight-line basis, what is the annual depreciation?",
+    options: ["GHS8,000", "GHS10,000", "GHS80,000", "GHS1,000"],
+    answer: "GHS8,000"
   },
   {
-    question: "Calculate net assets if total assets are GHS150,000 and total liabilities are GHS70,000.",
-    options: ["", "GHS80,000",
-      "GHS220,000",
-      "GHS70,000"],
-answer: "GHS80,000"
+    question: "Which of these is recorded in the purchases returns journal?",
+    options: ["Goods bought", "Cash purchases", "Goods returned to supplier", "Goods sold"],
+    answer: "Goods returned to supplier"
   },
   {
-    question: "What are current liabilities?",
-    options: ["", "Obligations payable within one year",
-      "Long-term debts",
-      "Owner's equity"],
-answer: "Obligations payable within one year"
+    question: "A petty cashier is given GHS500. During the week, she spends GHS350. What is the reimbursement amount?",
+    options: ["GHS500", "GHS150", "GHS350", "GHS0"],
+    answer: "GHS350"
   },
   {
-    question: "Calculate the gross profit margin if gross profit is GHS45,000 and sales revenue is GHS150,000.",
-    options: ["", "30%",
-      "25%",
-      "35%"],
-answer: "30%"
+    question: "Which account is affected when rent is paid in advance?",
+    options: ["Rent Payable", "Prepaid Rent", "Accrued Rent", "Rent Receivable"],
+    answer: "Prepaid Rent"
   },
   {
-    question: "Explain the term 'capital expenditure'.",
-    options: ["", "Spending on acquiring or improving fixed assets",
-      "Day-to-day operational expenses",
-      "Payments to suppliers"],
-answer: "Spending on acquiring or improving fixed assets"
+    question: "What does a trial balance test?",
+    options: ["Profitability", "Accuracy of transactions", "Equality of debits and credits", "Inventory levels"],
+    answer: "Equality of debits and credits"
   },
   {
-    question: "A business made sales of GHS200,000 with 5% VAT included. Calculate the VAT amount.",
-    options: ["", "GHS9,523.81",
-      "GHS10,000",
-      "GHS5,000"],
-answer: "GHS9,523.81"
+    question: "Calculate Gross Profit: Sales = GHS50,000, COGS = GHS30,000",
+    options: ["GHS20,000", "GHS30,000", "GHS80,000", "GHS50,000"],
+    answer: "GHS20,000"
   },
   {
-    question: "What is the journal entry to record payment of salaries GHS5,000?",
-    options: ["", "Debit Salaries Expense GHS5,000; Credit Cash GHS5,000",
-      "Debit Cash GHS5,000; Credit Salaries Expense GHS5,000",
-      "Debit Salaries Expense GHS5,000; Credit Salaries Payable GHS5,000"],
-answer: "Debit Salaries Expense GHS5,000; Credit Cash GHS5,000"
+    question: "If capital is GHS60,000 and assets are GHS90,000, what are liabilities?",
+    options: ["GHS30,000", "GHS60,000", "GHS90,000", "GHS150,000"],
+    answer: "GHS30,000"
   },
   {
-    question: "Calculate the debtors turnover ratio if credit sales are GHS120,000 and average trade receivables are GHS30,000.",
-    options: ["", "4 times",
-      "0.25 times",
-      "3 times"],
-answer: "4 times"
+    question: "Which of the following accounts is used to record credit purchases?",
+    options: ["Sales", "Purchases", "Cash", "Returns Inward"],
+    answer: "Purchases"
   },
   {
-    question: "Define 'accrued income'.",
-    options: ["", "Income earned but not yet received",
-      "Income received in advance",
-      "Expenses not yet paid"],
-answer: "Income earned but not yet received"
+    question: "A debit entry increases which of the following?",
+    options: ["Capital", "Revenue", "Expenses", "Liabilities"],
+    answer: "Expenses"
   },
   {
-    question: "What is the main objective of preparing a trial balance?",
-    options: ["", "To ensure total debits equal total credits",
-      "To prepare the income statement",
-      "To calculate profit"],
-answer: "To ensure total debits equal total credits"
+    question: "Which of these is a real account?",
+    options: ["Rent", "Debtors", "Bank", "Wages"],
+    answer: "Bank"
   },
   {
-    question: "Calculate closing stock if opening stock is GHS10,000, purchases GHS50,000, sales GHS70,000 and gross profit margin is 40%.",
-    options: ["", "GHS18,000",
-      "GHS20,000",
-      "GHS22,000"],
-answer: "GHS18,000"
+    question: "The accounting equation is:",
+    options: [
+      "Assets + Liabilities = Capital",
+      "Assets = Liabilities + Capital",
+      "Assets = Revenue - Expenses",
+      "Capital = Assets + Liabilities"
+    ],
+    answer: "Assets = Liabilities + Capital"
   },
   {
-    question: "What is the difference between 'provision' and 'reserve'?",
-    options: ["", "Provision is for known liabilities; reserve is for unknown contingencies",
-      "Provision is for future profits; reserve is for losses",
-      "Provision is a liability; reserve is an asset"],
-answer: "Provision is for known liabilities; reserve is for unknown contingencies"
+    question: "Calculate VAT: Sales = GHS2,300, VAT rate = 15%",
+    options: ["GHS300", "GHS345", "GHS2,645", "GHS2,000"],
+    answer: "GHS345"
   },
   {
-    question: "Calculate the straight-line depreciation for an asset costing GHS60,000 with a residual value of GHS6,000 and useful life of 6 years.",
-    options: ["", "GHS9,000",
-      "GHS10,000",
-      "GHS8,000"],
-answer: "GHS9,000"
-  },
-  {
-    question: "What does a debit balance in the purchases ledger control account indicate?",
-    options: ["", "Overpayment to suppliers",
-      "Amounts owed to suppliers",
-      "Income received"],
-answer: "Overpayment to suppliers"
-  },
-  {
-    question: "Define 'working capital'.",
-    options: ["", "Current assets minus current liabilities",
-      "Total assets minus total liabilities",
-      "Cash balance only"],
-answer: "Current assets minus current liabilities"
-  },
-  {
-    question: "Explain the term 'bad debts'.",
-    options: ["", "Debts that are unlikely to be collected",
-      "All debts owed to the business",
-      "Loans taken by the business"],
-answer: "Debts that are unlikely to be collected"
-  },
-  {
-    question: "A company received GHS500 in cash and issued a receipt. What is the double entry?",
-    options: ["", "Debit Cash GHS500; Credit Sales GHS500",
-      "Debit Sales GHS500; Credit Cash GHS500",
-      "Debit Cash GHS500; Credit Debtors GHS500"],
-answer: "Debit Cash GHS500; Credit Sales GHS500"
-  },
-  {
-    question: "Calculate the cost of goods sold if opening stock is GHS8,000, purchases GHS42,000, and closing stock GHS12,000.",
-    options: ["", "GHS38,000",
-      "GHS50,000",
-      "GHS32,000"],
-answer: "GHS38,000"
-  },
-  {
-    question: "What is the role of the petty cashier?",
-    options: ["", "To manage small day-to-day cash expenses",
-      "To prepare financial statements",
-      "To record credit sales"],
-answer: "To manage small day-to-day cash expenses"
-  },
-  {
-    question: "Explain the purpose of the income and expenditure account for clubs.",
-    options: ["", "To show surplus or deficit for the period",
-      "To record all cash received",
-      "To summarize assets"],
-answer: "To show surplus or deficit for the period"
-  },
-  {
-    question: "Calculate the net profit if total income is GHS120,000 and total expenses GHS85,000.",
-    options: ["", "GHS35,000",
-      "GHS205,000",
-      "GHS45,000"],
-answer: "GHS35,000"
-  },
-  {
-    question: "What is the purpose of the suspense account?",
-    options: ["", "To temporarily hold discrepancies in trial balance",
-      "To record all expenses",
-      "To hold capital investments"],
-answer: "To temporarily hold discrepancies in trial balance"
-  },
-  {
-    question: "A bank statement shows GHS2,000, cash book shows GHS1,850, and unpresented cheques amount to GHS100. What is the adjusted cash book balance after bank charges of GHS50?",
-    options: ["", "GHS1,800",
-      "GHS2,050",
-      "GHS1,900"],
-answer: "GHS1,800"
-  },
-  {
-    question: "Define 'ledger control account'.",
-    options: ["", "A summary account of individual accounts in a ledger",
-      "An account recording purchases only",
-      "An account used only in bank reconciliation"],
-answer: "A summary account of individual accounts in a ledger"
-  },
-  {
-    question: "What are the components of a manufacturing account?",
-    options: ["", "Direct materials, direct labor, factory overheads",
-      "Sales revenue and expenses",
-      "Assets and liabilities"],
-answer: "Direct materials, direct labor, factory overheads"
-  },
-  {
-    question: "Explain the term 'unrealized profit'.",
-    options: ["", "Profit included in stock not yet sold",
-      "Profit realized from sales",
-      "Profit on cash sales only"],
-answer: "Profit included in stock not yet sold"
-  },
-  {
-    question: "Calculate the inventory turnover ratio if cost of goods sold is GHS120,000 and average inventory is GHS30,000.",
-    options: ["", "4 times",
-      "0.25 times",
-      "3 times"],
-answer: "4 times"
-  },
-  {
-    question: "What is the purpose of a bank reconciliation statement?",
-    options: ["", "To reconcile the cash book balance with the bank statement balance",
-      "To record cash sales",
-      "To summarize purchases"],
-answer: "To reconcile the cash book balance with the bank statement balance"
-  },
-  {
-    question: "A business issues credit notes worth GHS2,000 to customers. What is the correct journal entry?",
-    options: ["", "Debit Sales Returns GHS2,000; Credit Debtors GHS2,000",
-      "Debit Debtors GHS2,000; Credit Sales GHS2,000",
-      "Debit Cash GHS2,000; Credit Sales GHS2,000"],
-answer: "Debit Sales Returns GHS2,000; Credit Debtors GHS2,000"
-  },
-  {
-    question: "Explain the purpose of the suspense account in accounting.",
-    options: ["", "To temporarily record discrepancies in the trial balance",
-      "To record expenses",
-      "To record capital investments"],
-answer: "To temporarily record discrepancies in the trial balance"
-  },
-  {
-    question: "Calculate the bank overdraft balance if the cash book shows GHS4,000 and unpresented cheques total GHS6,000.",
-    options: ["", "GHS2,000 overdraft",
-      "GHS10,000 overdraft",
-      "GHS4,000 overdraft"],
-answer: "GHS2,000 overdraft"
-  },
-  {
-    question: "What is the effect on the accounting equation when a business takes a loan of GHS10,000 from the bank?",
-    options: ["", "Assets and liabilities increase by GHS10,000",
-      "Assets decrease and liabilities increase",
-      "Owner's equity increases"],
-answer: "Assets and liabilities increase by GHS10,000"
-  },
-  {
-    question: "Calculate the net realizable value of inventory if cost is GHS20,000 and estimated selling price is GHS18,000 with disposal costs GHS1,000.",
-    options: ["", "GHS17,000",
-      "GHS18,000",
-      "GHS20,000"],
-answer: "GHS17,000"
-  },
-  {
-    question: "What type of account is 'Accumulated Depreciation'?",
-    options: ["", "Contra asset account",
-      "Liability account",
-      "Expense account"],
-answer: "Contra asset account"
-  },
-  {
-    question: "Explain the term 'trial balance suspense'.",
-    options: ["", "The amount needed to balance an unequal trial balance",
-      "Capital invested",
-      "Income earned but not received"],
-answer: "The amount needed to balance an unequal trial balance"
-  },
-  {
-    question: "Calculate the profit on disposal of an asset sold for GHS12,000, with a cost of GHS15,000 and accumulated depreciation of GHS5,000.",
-    options: ["", "Loss of GHS2,000",
-      "Profit of GHS2,000",
-      "Profit of GHS8,000"],
-answer: "Loss of GHS2,000"
-  },
-  {
-    question: "Define 'owner's drawings'.",
-    options: ["", "Withdrawals made by the owner from the business for personal use",
-      "Capital invested in the business",
-      "Business expenses"],
-answer: "Withdrawals made by the owner from the business for personal use"
-  },
-  {
-    question: "What is the journal entry to record accrued expenses of GHS1,500?",
-    options: ["", "Debit Expense account GHS1,500; Credit Accrued expenses GHS1,500",
-      "Debit Cash GHS1,500; Credit Expense account GHS1,500",
-      "Debit Accrued expenses GHS1,500; Credit Expense account GHS1,500"],
-answer: "Debit Expense account GHS1,500; Credit Accrued expenses GHS1,500"
-  },
-  {
-    question: "Calculate the closing inventory if opening inventory is GHS5,000, purchases are GHS20,000, and cost of goods sold is GHS18,000.",
-    options: ["", "GHS7,000", "GHS3,000", "GHS18,000", "GHS25,000"],
-answer: "GHS7,000"
-  },
-  {
-    question: "What is the effect on the accounting equation when the business pays off a GHS3,000 creditor?",
-    options: ["", "Assets decrease and liabilities decrease",
-      "Assets increase and liabilities increase",
-      "Assets decrease and equity decreases"],
-answer: "Assets decrease and liabilities decrease"
-  },
-  {
-    question: "Prepare the journal entry for depreciation of GHS2,000 on machinery.",
-    options: ["", "Debit Depreciation expense GHS2,000; Credit Accumulated depreciation GHS2,000",
-      "Debit Machinery account GHS2,000; Credit Accumulated depreciation GHS2,000",
-      "Debit Accumulated depreciation GHS2,000; Credit Depreciation expense GHS2,000"],
-answer: "Debit Depreciation expense GHS2,000; Credit Accumulated depreciation GHS2,000"
-  },
-  {
-    question: "Calculate the trade receivables turnover ratio given credit sales of GHS120,000 and average receivables of GHS15,000.",
-    options: ["", "8 times", "12 times", "10 times", "6 times"],
-answer: "8 times"
-  },
-  {
-    question: "What is the journal entry to record payment of salaries GHS5,000?",
-    options: ["", "Debit Salaries expense GHS5,000; Credit Cash GHS5,000",
-      "Debit Cash GHS5,000; Credit Salaries expense GHS5,000",
-      "Debit Salaries payable GHS5,000; Credit Cash GHS5,000"],
-answer: "Debit Salaries expense GHS5,000; Credit Cash GHS5,000"
-  },
-  {
-    question: "Calculate net profit if total revenue is GHS150,000, total expenses GHS110,000, and income tax is GHS10,000.",
-    options: ["", "GHS30,000", "GHS40,000", "GHS50,000", "GHS60,000"],
-answer: "GHS30,000"
-  },
-  {
-    question: "Which book records all cash receipts and payments?",
-    options: ["", "Cash book", "Sales journal", "Purchase journal", "General ledger"],
-answer: "Cash book"
-  },
-  {
-    question: "Calculate the value of goods sold on credit if total sales are GHS80,000 and cash sales are GHS30,000.",
-    options: ["", "GHS50,000", "GHS110,000", "GHS30,000", "GHS80,000"],
-answer: "GHS50,000"
-  },
-  {
-    question: "What is the main purpose of the trial balance?",
-    options: ["", "To check the equality of debits and credits",
-      "To prepare the financial statements",
-      "To record transactions"],
-answer: "To check the equality of debits and credits"
-  },
-  {
-    question: "Calculate the VAT on a sale of GHS12,000 with VAT rate of 12.5%.",
-    options: ["", "GHS1,500", "GHS1,250", "GHS1,200", "GHS1,350"],
-answer: "GHS1,500"
-  },
-  {
-    question: "Prepare the journal entry for a credit purchase of inventory worth GHS8,000.",
-    options: ["", "Debit Inventory GHS8,000; Credit Accounts Payable GHS8,000",
-      "Debit Accounts Payable GHS8,000; Credit Inventory GHS8,000",
-      "Debit Inventory GHS8,000; Credit Cash GHS8,000"],
-answer: "Debit Inventory GHS8,000; Credit Accounts Payable GHS8,000"
-  },
-  {
-    question: "Calculate gross profit if sales are GHS200,000 and cost of goods sold is GHS140,000.",
-    options: ["", "GHS60,000", "GHS340,000", "GHS140,000", "GHS200,000"],
-answer: "GHS60,000"
-  },
-  {
-    question: "Define 'accrued income'.",
-    options: ["", "Income earned but not yet received",
-      "Income received in advance",
-      "Income not yet earned"],
-answer: "Income earned but not yet received"
-  },
-  {
-    question: "What is the double entry for owner's capital introduction of GHS50,000?",
-    options: ["", "Debit Cash GHS50,000; Credit Owner's Capital GHS50,000",
-      "Debit Owner's Capital GHS50,000; Credit Cash GHS50,000",
-      "Debit Owner's Drawings GHS50,000; Credit Cash GHS50,000"],
-answer: "Debit Cash GHS50,000; Credit Owner's Capital GHS50,000"
-  },
-  {
-    question: "Calculate the provision for bad debts if total debtors are GHS15,000 and provision percentage is 5%.",
-    options: ["", "GHS750", "GHS300", "GHS1,500", "GHS7500"],
-answer: "GHS750"
-  },
-  {
-    question: "What type of account is 'Prepaid expenses'?",
-    options: ["", "Asset", "Liability", "Revenue", "Expense"],
-answer: "Asset"
-  },
-  {
-    question: "Calculate the closing balance of petty cash if opening balance was GHS500, expenses paid GHS400 and cash received GHS200.",
-    options: ["", "GHS300", "GHS100", "GHS200", "GHS700"],
-answer: "GHS300"
-  },
-  {
-    question: "Explain the term 'capital expenditure'.",
-    options: ["", "Expenditure on acquiring or improving fixed assets",
-      "Expenditure on daily running expenses",
-      "Expenditure on salaries"],
-answer: "Expenditure on acquiring or improving fixed assets"
-  },
-  {
-    question: "Prepare the journal entry for the purchase of a vehicle costing GHS25,000 by cheque.",
-    options: ["", "Debit Vehicles GHS25,000; Credit Bank GHS25,000",
-      "Debit Vehicles GHS25,000; Credit Cash GHS25,000",
-      "Debit Bank GHS25,000; Credit Vehicles GHS25,000"],
-answer: "Debit Vehicles GHS25,000; Credit Bank GHS25,000"
-  },
-  {
-    question: "Calculate the cost of goods sold using the formula: Opening Inventory + Purchases - Closing Inventory, if Opening Inventory GHS4,000, Purchases GHS16,000 and Closing Inventory GHS5,000.",
-    options: ["", "GHS15,000", "GHS25,000", "GHS20,000", "GHS17,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "What is the meaning of 'liquidity' in financial accounting?",
-    options: ["", "Ability to meet short-term obligations",
-      "Ability to earn profit",
-      "Long-term solvency"],
-answer: "Ability to meet short-term obligations"
-  },
-  {
-    question: "Calculate the depreciation expense using straight-line method for an asset costing GHS50,000 with a residual value of GHS5,000 and useful life of 9 years.",
-    options: ["", "GHS5,000", "GHS4,500", "GHS6,000", "GHS7,000"],
-answer: "GHS5,000"
-  },
-  {
-    question: "Which document records all sales made on credit?",
-    options: ["", "Sales journal", "Cash book", "Purchase journal", "General ledger"],
-answer: "Sales journal"
-  },
-  {
-    question: "Explain the purpose of a bank reconciliation statement.",
-    options: ["", "To reconcile the bank statement balance with the cash book balance",
-      "To record bank transactions",
-      "To prepare trial balance"],
-answer: "To reconcile the bank statement balance with the cash book balance"
-  },
-  {
-    question: "Calculate the net book value of an asset costing GHS30,000 with accumulated depreciation of GHS12,000.",
-    options: ["", "GHS18,000", "GHS42,000", "GHS30,000", "GHS12,000"],
-answer: "GHS18,000"
-  },
-  {
-    question: "Prepare the journal entry to record a bad debt expense of GHS1,200.",
-    options: ["", "Debit Bad debts expense GHS1,200; Credit Accounts receivable GHS1,200",
-      "Debit Accounts receivable GHS1,200; Credit Bad debts expense GHS1,200",
-      "Debit Bad debts expense GHS1,200; Credit Cash GHS1,200"],
-answer: "Debit Bad debts expense GHS1,200; Credit Accounts receivable GHS1,200"
-  },
-  {
-    question: "Calculate the net profit from the following: Sales GHS100,000; Cost of sales GHS60,000; Operating expenses GHS25,000; Interest expense GHS5,000.",
-    options: ["", "GHS10,000", "GHS15,000", "GHS20,000", "GHS25,000"],
-answer: "GHS10,000"
-  },
-  {
-    question: "What accounting concept requires that revenue be recorded when earned and expenses when incurred?",
-    options: ["", "Accrual concept",
-      "Going concern concept",
-      "Matching concept"],
-answer: "Accrual concept"
-  },
-  {
-    question: "Define 'liabilities' in accounting terms.",
-    options: ["", "Amounts owed by the business",
-      "Assets owned by the business",
-      "Owner's equity"],
-answer: "Amounts owed by the business"
-  },
-  {
-    question: "Calculate the owner's equity if assets total GHS150,000 and liabilities total GHS90,000.",
-    options: ["", "GHS60,000", "GHS240,000", "GHS90,000", "GHS150,000"],
-answer: "GHS60,000"
-  },
-  {
-    question: "Prepare the journal entry for the purchase of office supplies on credit for GHS3,000.",
-    options: ["", "Debit Office supplies GHS3,000; Credit Accounts payable GHS3,000",
-      "Debit Accounts payable GHS3,000; Credit Office supplies GHS3,000",
-      "Debit Office supplies GHS3,000; Credit Cash GHS3,000"],
-answer: "Debit Office supplies GHS3,000; Credit Accounts payable GHS3,000"
-  },
-  {
-    question: "Calculate the profit margin percentage if net profit is GHS25,000 and sales revenue is GHS100,000.",
-    options: ["", "25%", "20%", "30%", "15%"],
-answer: "25%"
-  },
-  {
-    question: "What does the term 'capital' refer to in accounting?",
-    options: ["", "Owner's investment in the business",
-      "Business debts",
-      "Business expenses"],
-answer: "Owner's investment in the business"
-  },
-  {
-    question: "Calculate the amount of bad debt provision if debtors amount to GHS10,000 and the provision rate is 3%.",
-    options: ["", "GHS300", "GHS3,000", "GHS30", "GHS100"],
-answer: "GHS300"
-  },
-  {
-    question: "What is the main function of a ledger in accounting?",
-    options: ["", "To summarize and classify transactions",
-      "To record transactions first",
-      "To prepare trial balance"],
-answer: "To summarize and classify transactions"
-  },
-  {
-    question: "Calculate the total expenses given: Rent GHS8,000; Salaries GHS15,000; Utilities GHS4,000; Depreciation GHS3,000.",
-    options: ["", "GHS30,000", "GHS25,000", "GHS26,000", "GHS29,000"],
-answer: "GHS30,000"
-  },
-  {
-    question: "Explain the meaning of 'double entry system' in accounting.",
-    options: ["", "Every transaction affects two accounts with equal debit and credit",
-      "Each transaction is recorded once",
-      "Only cash transactions are recorded"],
-answer: "Every transaction affects two accounts with equal debit and credit"
-  },
-  {
-    question: "What type of account is 'accumulated depreciation'?",
-    options: ["", "Contra asset account", "Expense account", "Liability account", "Revenue account"],
-answer: "Contra asset account"
-  },
-  {
-    question: "Calculate the value of stock at the end of the period using FIFO if the following purchases were made: 100 units at GHS5, 200 units at GHS6, and 150 units sold.",
-    options: ["", "GHS800", "GHS750", "GHS900", "GHS850"],
-answer: "GHS800"
-  },
-  {
-    question: "Prepare a bank reconciliation statement showing a cash book balance of GHS15,000, outstanding checks of GHS1,200, and deposits in transit of GHS800.",
-    options: ["", "Adjusted bank balance is GHS14,600",
-      "Adjusted bank balance is GHS16,000",
-      "Adjusted bank balance is GHS15,800"],
-answer: "Adjusted bank balance is GHS14,600"
-  },
-  {
-    question: "Calculate the return on capital employed (ROCE) if net profit is GHS40,000 and capital employed is GHS200,000.",
-    options: ["", "20%", "25%", "15%", "30%"],
-answer: "20%"
+    question: "In final accounts, carriage inwards is added to:",
+    options: ["Sales", "Purchases", "Expenses", "Assets"],
+    answer: "Purchases"
   },
   {
     question: "What is the purpose of a suspense account?",
-    options: ["", "To temporarily hold doubtful or unclear transactions",
-      "To record expenses",
-      "To record income"],
-answer: "To temporarily hold doubtful or unclear transactions"
+    options: [
+      "Record capital income",
+      "Temporarily hold discrepancies in trial balance",
+      "Record bank errors",
+      "Store fixed assets"
+    ],
+    answer: "Temporarily hold discrepancies in trial balance"
   },
   {
-    question: "Prepare the journal entry to correct an error of GHS500 overstatement of sales revenue.",
-    options: ["", "Debit Sales GHS500; Credit Suspense account GHS500",
-      "Debit Suspense account GHS500; Credit Sales GHS500",
-      "Debit Sales GHS500; Credit Purchases GHS500"],
-answer: "Debit Sales GHS500; Credit Suspense account GHS500"
+    question: "If cash at bank is GHS8,000 and overdraft is GHS2,000, what is net bank position?",
+    options: ["GHS10,000", "GHS6,000", "GHS8,000", "GHS2,000"],
+    answer: "GHS6,000"
   },
   {
-    question: "Calculate the accruals for utilities if the expense incurred during the period is GHS1,500 but only GHS1,200 was paid.",
-    options: ["", "GHS300", "GHS1,500", "GHS1,200", "GHS0"],
-answer: "GHS300"
+    question: "Which of these represents a liability?",
+    options: ["Inventory", "Trade Receivables", "Loan Payable", "Prepaid Insurance"],
+    answer: "Loan Payable"
   },
   {
-    question: "What is the difference between capital and revenue expenditure?",
-    options: ["", "Capital expenditure is for assets; revenue expenditure is for running costs",
-      "Capital expenditure is small; revenue expenditure is large",
-      "Capital expenditure is recurring; revenue expenditure is not"],
-answer: "Capital expenditure is for assets; revenue expenditure is for running costs"
+    question: "In partnership, interest on capital is:",
+    options: ["A liability", "An appropriation", "An expense", "An asset"],
+    answer: "An appropriation"
   },
   {
-    question: "Calculate the capital employed if total assets are GHS500,000 and current liabilities are GHS120,000.",
-    options: ["", "GHS380,000", "GHS620,000", "GHS500,000", "GHS120,000"],
-answer: "GHS380,000"
+    question: "Which document is issued when goods are returned by a customer?",
+    options: ["Invoice", "Credit Note", "Receipt", "Debit Note"],
+    answer: "Credit Note"
   },
   {
-    question: "Prepare the journal entry for the payment of a creditor GHS7,000 by cheque.",
-    options: ["", "Debit Accounts payable GHS7,000; Credit Bank GHS7,000",
-      "Debit Bank GHS7,000; Credit Accounts payable GHS7,000",
-      "Debit Cash GHS7,000; Credit Accounts payable GHS7,000"],
-answer: "Debit Accounts payable GHS7,000; Credit Bank GHS7,000"
+    question: "What is the result of an increase in drawings?",
+    options: ["Capital increases", "Capital decreases", "Assets increase", "Liabilities increase"],
+    answer: "Capital decreases"
   },
   {
-    question: "Calculate the net assets if total assets are GHS350,000 and total liabilities GHS150,000.",
-    options: ["", "GHS200,000", "GHS500,000", "GHS350,000", "GHS150,000"],
-answer: "GHS200,000"
+    question: "Which is not part of the double entry for a purchase of fixed asset on credit?",
+    options: ["Debit Asset", "Credit Creditor", "Debit Capital", "None of these"],
+    answer: "Debit Capital"
   },
   {
-    question: "What is the normal balance of a liability account?",
-    options: ["", "Credit",
-      "Debit",
-      "Zero"],
-answer: "Credit"
+    question: "What is meant by accrued income?",
+    options: [
+      "Income received in advance",
+      "Income not yet received but earned",
+      "Income not earned",
+      "Income fully received"
+    ],
+    answer: "Income not yet received but earned"
   },
   {
-    question: "Calculate the cost of goods manufactured if raw materials used are GHS30,000, direct labor GHS20,000, and manufacturing overhead GHS10,000.",
-    options: ["", "GHS60,000", "GHS50,000", "GHS40,000", "GHS70,000"],
-answer: "GHS60,000"
+    question: "If sales are GHS25,000 and returns inward are GHS2,000, what are net sales?",
+    options: ["GHS27,000", "GHS23,000", "GHS25,000", "GHS2,000"],
+    answer: "GHS23,000"
   },
   {
-    question: "Define the term 'fixed assets'.",
-    options: ["", "Assets used for long-term business operations",
-      "Assets held for resale",
-      "Current assets"],
-answer: "Assets used for long-term business operations"
+    question: "Which document contains all ledger accounts?",
+    options: ["Cash Book", "Trial Balance", "General Ledger", "Journal"],
+    answer: "General Ledger"
   },
   {
-    question: "Calculate the working capital if current assets are GHS80,000 and current liabilities are GHS50,000.",
-    options: ["", "GHS30,000", "GHS130,000", "GHS50,000", "GHS80,000"],
-answer: "GHS30,000"
+    question: "Which account is used in club accounting to track subscriptions?",
+    options: ["Income and Expenditure", "Accumulated Fund", "Subscriptions Account", "Receipts and Payments"],
+    answer: "Subscriptions Account"
   },
   {
-    question: "What is the effect on the accounting equation when equipment is purchased for cash?",
-    options: ["", "Assets increase and decrease by the same amount",
-      "Assets increase and equity increases",
-      "Liabilities increase and assets decrease"],
-answer: "Assets increase and decrease by the same amount"
+    question: "Which concept requires using the same accounting methods every year?",
+    options: ["Accrual", "Consistency", "Entity", "Going Concern"],
+    answer: "Consistency"
   },
   {
-    question: "Explain the matching concept in accounting.",
-    options: ["", "Expenses should be matched with the revenue they helped generate",
-      "Assets should be matched with liabilities",
-      "Capital should be matched with drawings"],
-answer: "Expenses should be matched with the revenue they helped generate"
+    question: "What is the book value of an asset costing GHS40,000 after 3 years of 10% straight-line depreciation?",
+    options: ["GHS28,000", "GHS30,000", "GHS36,000", "GHS10,000"],
+    answer: "GHS28,000"
   },
   {
-    question: "Calculate the inventory turnover ratio if cost of goods sold is GHS180,000 and average inventory is GHS30,000.",
-    options: ["", "6 times", "5 times", "4 times", "3 times"],
-answer: "6 times"
+    question: "Which account shows the result of operations for the year?",
+    options: ["Capital", "Trading and Profit & Loss", "Balance Sheet", "Cash Book"],
+    answer: "Trading and Profit & Loss"
   },
   {
-    question: "What is a contra entry in accounting?",
-    options: ["", "A transaction involving both debit and credit in cash and bank accounts",
-      "An error in recording transactions",
-      "A transaction involving only cash account"],
-answer: "A transaction involving both debit and credit in cash and bank accounts"
+    question: "Which of the following best describes fixed assets?",
+    options: [
+      "Held for resale",
+      "Intended for short-term use",
+      "Used for business operations",
+      "Not included in the balance sheet"
+    ],
+    answer: "Used for business operations"
   },
   {
-    question: "Calculate the depreciation using reducing balance method if the cost is GHS40,000, rate 10%, and accumulated depreciation is GHS5,000.",
-    options: ["", "GHS3,500", "GHS4,000", "GHS3,000", "GHS3,000"],
-answer: "GHS3,500"
+    question: "Which account is credited when a business receives a loan?",
+    options: ["Cash", "Bank Loan", "Loan Interest", "Capital"],
+    answer: "Bank Loan"
   },
   {
-    question: "Prepare the journal entry to record accrued expenses of GHS2,000.",
-    options: ["", "Debit Expense GHS2,000; Credit Accrued expenses GHS2,000",
-      "Debit Accrued expenses GHS2,000; Credit Expense GHS2,000",
-      "Debit Cash GHS2,000; Credit Expense GHS2,000"],
-answer: "Debit Expense GHS2,000; Credit Accrued expenses GHS2,000"
+    question: "Which financial statement shows a firm’s financial position at a point in time?",
+    options: ["Income Statement", "Cash Flow", "Trial Balance", "Balance Sheet"],
+    answer: "Balance Sheet"
   },
   {
-    question: "What is the normal balance side of an expense account?",
-    options: ["", "Debit", "Credit", "Zero", "Both"],
-answer: "Debit"
+    question: "The main feature of a computerized accounting system is:",
+    options: ["Manual entry", "Immediate report generation", "Ledger books", "Handwritten vouchers"],
+    answer: "Immediate report generation"
   },
   {
-    question: "Calculate the net sales if gross sales are GHS120,000 and sales returns are GHS10,000.",
-    options: ["", "GHS110,000", "GHS130,000", "GHS120,000", "GHS100,000"],
-answer: "GHS110,000"
+    question: "What is the accounting treatment for accrued expenses?",
+    options: ["Debit Asset, Credit Expense", "Debit Expense, Credit Accrued Expenses", "Credit Expense, Debit Liability", "Debit Income, Credit Expense"],
+    answer: "Debit Expense, Credit Accrued Expenses"
   },
   {
-    question: "What does the accounting equation represent?",
-    options: ["", "Assets = Liabilities + Capital",
-      "Assets = Revenue - Expenses",
-      "Assets = Liabilities - Capital"],
-answer: "Assets = Liabilities + Capital"
+    question: "What type of account is 'Accumulated Depreciation'?",
+    options: ["Asset", "Contra-Asset", "Liability", "Expense"],
+    answer: "Contra-Asset"
   },
   {
-    question: "Calculate the capital employed if total assets are GHS250,000 and total liabilities are GHS100,000.",
-    options: ["", "GHS150,000", "GHS350,000", "GHS100,000", "GHS250,000"],
-answer: "GHS150,000"
+    question: "If a business owner takes goods worth GHS500 for personal use, what is the entry?",
+    options: ["Dr Drawings, Cr Purchases", "Dr Capital, Cr Drawings", "Dr Purchases, Cr Drawings", "Dr Drawings, Cr Sales"],
+    answer: "Dr Drawings, Cr Purchases"
   },
   {
-    question: "Which book is used to record all cash receipts and payments?",
-    options: ["", "Cash Book", "Journal", "Ledger", "Petty Cash Book"],
-answer: "Cash Book"
+    question: "What is recorded in the returns outward book?",
+    options: ["Sales returns", "Goods returned to suppliers", "Credit purchases", "Cash purchases"],
+    answer: "Goods returned to suppliers"
   },
   {
-    question: "If purchases amount to GHS50,000, sales GHS80,000, and closing stock GHS10,000, calculate cost of goods sold.",
-    options: ["", "GHS40,000",
-      "GHS70,000",
-      "GHS90,000"],
-answer: "GHS40,000"
+    question: "In manufacturing accounts, which of these is included in factory overheads?",
+    options: ["Raw materials", "Direct labor", "Indirect wages", "Sales commission"],
+    answer: "Indirect wages"
   },
   {
-    question: "What is the effect on the accounting equation when the owner withdraws cash for personal use?",
-    options: ["", "Assets and Capital decrease",
-      "Assets and Liabilities increase",
-      "Assets increase and Capital decreases"],
-answer: "Assets and Capital decrease"
+    question: "The closing entries are passed:",
+    options: ["At the beginning of the year", "During the year", "At year-end", "Never"],
+    answer: "At year-end"
   },
   {
-    question: "Define depreciation.",
-    options: ["", "Allocation of cost of a fixed asset over its useful life",
-      "Increase in asset value",
-      "Loss due to theft"],
-answer: "Allocation of cost of a fixed asset over its useful life"
+    question: "How is net profit determined?",
+    options: ["Sales - Purchases", "Gross Profit - Expenses", "Assets - Liabilities", "Capital - Drawings"],
+    answer: "Gross Profit - Expenses"
   },
   {
-    question: "Calculate net profit if total revenue is GHS100,000 and total expenses are GHS60,000.",
-    options: ["", "GHS40,000",
-      "GHS160,000",
-      "GHS60,000"],
-answer: "GHS40,000"
+    question: "A company with multiple departments prepares separate accounts for each under:",
+    options: ["Branch Accounting", "Control Accounts", "Departmental Accounting", "Public Sector Accounting"],
+    answer: "Departmental Accounting"
   },
   {
-    question: "What is the purpose of a trial balance?",
-    options: ["", "To check the equality of debit and credit balances",
-      "To prepare the income statement",
-      "To record transactions"],
-answer: "To check the equality of debit and credit balances"
+    question: "In single entry bookkeeping, which item is commonly missing?",
+    options: ["Sales", "Expenses", "Assets", "Complete double entry"],
+    answer: "Complete double entry"
   },
   {
-    question: "Prepare the journal entry for the purchase of inventory on credit for GHS5,000.",
-    options: ["", "Debit Inventory GHS5,000; Credit Accounts Payable GHS5,000",
-      "Debit Accounts Payable GHS5,000; Credit Inventory GHS5,000",
-      "Debit Cash GHS5,000; Credit Inventory GHS5,000"],
-answer: "Debit Inventory GHS5,000; Credit Accounts Payable GHS5,000"
+    question: "Which of these items increases the balance of the bank account?",
+    options: ["Bank charges", "Cash paid", "Cheque received", "Direct debit"],
+    answer: "Cheque received"
   },
   {
-    question: "Calculate closing capital if opening capital is GHS60,000, net profit GHS15,000, and drawings GHS5,000.",
-    options: ["", "GHS70,000",
-      "GHS80,000",
-      "GHS65,000"],
-answer: "GHS70,000"
+    question: "Which of the following is a capital expenditure?",
+    options: ["Rent paid", "Wages", "Purchase of machinery", "Electricity bill"],
+    answer: "Purchase of machinery"
   },
   {
-    question: "Which financial statement shows the financial position of a business at a given date?",
-    options: ["", "Balance Sheet",
+    question: "Which of these is used to reconcile differences between bank and cash book balances?",
+    options: ["Cash Flow Statement", "Bank Reconciliation Statement", "Ledger", "Petty Cash Book"],
+    answer: "Bank Reconciliation Statement"
+  },
+  {
+    question: "What is the correct entry for receiving GHS1,000 rent income?",
+    options: ["Dr Cash, Cr Rent Income", "Dr Rent Expense, Cr Cash", "Dr Income, Cr Cash", "Dr Cash, Cr Debtor"],
+    answer: "Dr Cash, Cr Rent Income"
+  },
+  {
+    question: "What is the accounting treatment of carriage outwards?",
+    options: ["Added to purchases", "Shown as sales", "Recorded as selling expense", "Added to inventory"],
+    answer: "Recorded as selling expense"
+  },
+  {
+    question: "Which of the following is a source of finance for a business?",
+    options: ["Depreciation", "Sales returns", "Bank loan", "Drawings"],
+    answer: "Bank loan"
+  },
+  {
+    question: "A business buys goods worth GHS12,000. VAT is 15%. What is the total cost?",
+    options: ["GHS12,000", "GHS13,800", "GHS14,000", "GHS1,800"],
+    answer: "GHS13,800"
+  },
+  {
+    question: "Which of the following is an intangible asset?",
+    options: ["Equipment", "Goodwill", "Stock", "Vehicle"],
+    answer: "Goodwill"
+  },
+  {
+    question: "Calculate net profit: Gross profit = GHS18,000, Expenses = GHS5,000",
+    options: ["GHS13,000", "GHS23,000", "GHS18,000", "GHS5,000"],
+    answer: "GHS13,000"
+  },
+  {
+    question: "Which ledger would you record wages paid?",
+    options: ["Sales Ledger", "Purchases Ledger", "General Ledger", "Nominal Ledger"],
+    answer: "Nominal Ledger"
+  },
+  {
+    question: "A customer pays GHS2,000 on account. Which account is credited?",
+    options: ["Cash", "Debtors", "Sales", "Creditors"],
+    answer: "Debtors"
+  },
+  {
+    question: "In partnership, how is interest on drawings treated?",
+    options: [
+      "As an income to the partnership",
+      "As an expense to the firm",
+      "As an expense to the partner",
+      "As a liability"
+    ],
+    answer: "As an income to the partnership"
+  },
+  {
+    question: "Sales = GHS100,000, Returns Inwards = GHS5,000, Purchases = GHS60,000. Calculate Gross Profit if COGS = GHS60,000",
+    options: ["GHS35,000", "GHS40,000", "GHS45,000", "GHS55,000"],
+    answer: "GHS35,000"
+  },
+  {
+    question: "Which of the following is a current asset?",
+    options: ["Building", "Fixtures", "Cash in Hand", "Capital"],
+    answer: "Cash in Hand"
+  },
+  {
+    question: "Depreciation is considered as:",
+    options: ["An income", "A liability", "An expense", "A current asset"],
+    answer: "An expense"
+  },
+  {
+    question: "What is the accounting entry for goods sold on credit?",
+    options: ["Dr Cash, Cr Sales", "Dr Sales, Cr Debtors", "Dr Debtors, Cr Sales", "Dr Purchases, Cr Sales"],
+    answer: "Dr Debtors, Cr Sales"
+  },
+  {
+    question: "GHS4,500 is paid for insurance for 12 months, but only 6 months fall in the current period. What is the prepaid amount?",
+    options: ["GHS4,500", "GHS2,250", "GHS1,500", "GHS3,000"],
+    answer: "GHS2,250"
+  },
+  {
+    question: "Which is a source document for purchases?",
+    options: ["Invoice", "Cheque", "Credit Note", "Receipt"],
+    answer: "Invoice"
+  },
+  {
+    question: "Which of the following is included in prime cost?",
+    options: ["Factory Rent", "Direct Materials", "Depreciation", "Selling Expenses"],
+    answer: "Direct Materials"
+  },
+  {
+    question: "If Debtors = GHS20,000 and Bad Debts = GHS2,000, what is Net Debtors?",
+    options: ["GHS18,000", "GHS22,000", "GHS20,000", "GHS2,000"],
+    answer: "GHS18,000"
+  },
+  {
+    question: "Credit purchases = GHS35,000, Returns Outwards = GHS5,000. Calculate Net Purchases.",
+    options: ["GHS40,000", "GHS30,000", "GHS35,000", "GHS25,000"],
+    answer: "GHS30,000"
+  },
+  {
+    question: "Which of the following is an indirect expense?",
+    options: ["Direct labor", "Factory electricity", "Raw materials", "Production supervisor salary"],
+    answer: "Factory electricity"
+  },
+  {
+    question: "Which account is affected by the depreciation of machinery?",
+    options: ["Asset Account", "Cash Account", "Drawings Account", "Capital Account"],
+    answer: "Asset Account"
+  },
+  {
+    question: "What type of account is ‘Commission Received’?",
+    options: ["Asset", "Expense", "Income", "Liability"],
+    answer: "Income"
+  },
+  {
+    question: "Which document supports a return of goods to supplier?",
+    options: ["Debit Note", "Credit Note", "Invoice", "Receipt"],
+    answer: "Debit Note"
+  },
+  {
+    question: "What is meant by working capital?",
+    options: [
+      "Capital invested in fixed assets",
+      "Current Assets - Current Liabilities",
+      "Cash + Debtors",
+      "Gross Profit - Expenses"
+    ],
+    answer: "Current Assets - Current Liabilities"
+  },
+  {
+    question: "An asset costing GHS20,000 is depreciated at 25% reducing balance. What is depreciation for year 1?",
+    options: ["GHS5,000", "GHS4,000", "GHS2,500", "GHS15,000"],
+    answer: "GHS5,000"
+  },
+  {
+    question: "Which account is NOT found in the control account?",
+    options: ["Debtors", "Creditors", "Bank", "Discounts"],
+    answer: "Bank"
+  },
+  {
+    question: "A balance sheet is prepared to show:",
+    options: [
+      "Trading results over a year",
+      "Cash flow during the year",
+      "Financial position at a specific date",
+      "VAT liabilities"
+    ],
+    answer: "Financial position at a specific date"
+  },
+  {
+    question: "A factory pays GHS1,200 monthly rent. How much rent is charged to the factory account for one year?",
+    options: ["GHS14,400", "GHS12,000", "GHS1,200", "GHS1,400"],
+    answer: "GHS14,400"
+  },
+  {
+    question: "Which of the following is a ledger division?",
+    options: ["Nominal", "Trade", "Trial", "Purchase"],
+    answer: "Nominal"
+  },
+  {
+    question: "Provision for doubtful debts is:",
+    options: ["An expense", "An income", "A liability", "A reduction from debtors"],
+    answer: "A reduction from debtors"
+  },
+  {
+    question: "Which of these best describes a control account?",
+    options: [
+      "Account used for correction of errors",
+      "Summarizes ledger balances",
+      "Tracks cash flow",
+      "Records VAT only"
+    ],
+    answer: "Summarizes ledger balances"
+  },
+  {
+    question: "In single entry, profit is found by:",
+    options: [
+      "Calculating income - expenses",
+      "Comparing opening and closing capital",
+      "Bank statement review",
+      "Receipts minus payments"
+    ],
+    answer: "Comparing opening and closing capital"
+  },
+  {
+    question: "If a GHS1,500 sale is recorded as GHS15,000, what error has occurred?",
+    options: ["Error of commission", "Error of principle", "Error of original entry", "Transposition error"],
+    answer: "Error of original entry"
+  },
+  {
+    question: "Which of the following is a reason for preparing a bank reconciliation?",
+    options: ["To update inventory records", "To reconcile VAT", "To identify discrepancies", "To record credit sales"],
+    answer: "To identify discrepancies"
+  },
+  {
+    question: "The receipts and payments account is used in:",
+    options: ["Limited Companies", "Sole Traders", "Partnerships", "Clubs and Societies"],
+    answer: "Clubs and Societies"
+  },
+  {
+    question: "What is the accounting treatment for bad debts written off?",
+    options: ["Dr Bad Debts, Cr Debtors", "Dr Debtors, Cr Bad Debts", "Dr Capital, Cr Debtors", "Dr Purchases, Cr Debtors"],
+    answer: "Dr Bad Debts, Cr Debtors"
+  },
+  {
+    question: "Which of the following is a limitation of financial accounting?",
+    options: [
+      "Provides cash flow info",
+      "Gives profitability data",
+      "Focuses on past events",
+      "Summarizes cost elements"
+    ],
+    answer: "Focuses on past events"
+  },
+  {
+    question: "Depreciation affects which financial statement(s)?",
+    options: ["Only Balance Sheet", "Only Income Statement", "Both Income and Balance Sheet", "None"],
+    answer: "Both Income and Balance Sheet"
+  },
+  {
+    question: "A GHS5,000 machine is depreciated 10% annually on straight line. What is the book value after 2 years?",
+    options: ["GHS4,000", "GHS3,500", "GHS5,000", "GHS4,500"],
+    answer: "GHS4,000"
+  },
+  {
+    question: "What is the purpose of the cash book?",
+    options: [
+      "To record credit transactions",
+      "To record non-financial data",
+      "To record all cash and bank transactions",
+      "To summarize assets and liabilities"
+    ],
+    answer: "To record all cash and bank transactions"
+  },
+  {
+    question: "Which of these is not included in the Trading Account?",
+    options: ["Opening Stock", "Sales", "Office Rent", "Purchases"],
+    answer: "Office Rent"
+  },
+  {
+    question: "Which principle ensures that revenue is matched to the period it is earned?",
+    options: ["Consistency", "Matching", "Entity", "Accrual"],
+    answer: "Matching"
+  },
+  {
+    question: "Which of these is NOT a function of accounting?",
+    options: ["Recording transactions", "Analyzing data", "Measuring inflation", "Communicating results"],
+    answer: "Measuring inflation"
+  },
+  {
+    question: "What is the primary use of the purchases journal?",
+    options: [
+      "To record cash purchases",
+      "To record all sales",
+      "To record credit purchases of goods",
+      "To record credit sales"
+    ],
+    answer: "To record credit purchases of goods"
+  },
+  {
+    question: "Goods worth GHS1,000 were returned to the supplier. What is the correct journal entry?",
+    options: ["Dr Supplier, Cr Returns Outwards", "Dr Returns Inwards, Cr Supplier", "Dr Returns Outwards, Cr Supplier", "Dr Purchases, Cr Supplier"],
+    answer: "Dr Returns Outwards, Cr Supplier"
+  },
+  {
+    question: "Which account records the profit or loss made by a club?",
+    options: ["Receipts and Payments", "Subscriptions", "Income and Expenditure", "Accumulated Fund"],
+    answer: "Income and Expenditure"
+  },
+  {
+    question: "Which accounting standard deals with inventories?",
+    options: ["IAS 7", "IAS 2", "IAS 16", "IAS 10"],
+    answer: "IAS 2"
+  },
+  {
+    question: "The value of fixed assets after depreciation is called:",
+    options: ["Residual Value", "Scrap Value", "Net Book Value", "Written Down Value"],
+    answer: "Net Book Value"
+  },
+  {
+    question: "A business bought equipment for GHS30,000 and expects to use it for 5 years with no residual value. What is the annual depreciation using straight-line method?",
+    options: ["GHS3,000", "GHS5,000", "GHS6,000", "GHS7,500"],
+    answer: "GHS6,000"
+  },
+  {
+    question: "Which concept requires revenue to be recorded when it is earned and not when cash is received?",
+    options: ["Prudence", "Matching", "Accrual", "Consistency"],
+    answer: "Accrual"
+  },
+  {
+    question: "Calculate the VAT amount on a taxable sale of GHS4,600 at 15%.",
+    options: ["GHS690", "GHS460", "GHS610", "GHS600"],
+    answer: "GHS690"
+  },
+  {
+    question: "What is the purpose of the trial balance?",
+    options: [
+      "To prepare final accounts",
+      "To check arithmetical accuracy",
+      "To show net profit",
+      "To summarize cash flows"
+    ],
+    answer: "To check arithmetical accuracy"
+  },
+  {
+    question: "Which of the following errors will affect the trial balance?",
+    options: [
+      "Error of omission",
+      "Error of principle",
+      "Transposition error",
+      "Error of commission"
+    ],
+    answer: "Transposition error"
+  },
+  {
+    question: "Which account is credited when goods are sold on credit?",
+    options: ["Sales Account", "Purchases Account", "Cash Account", "Capital Account"],
+    answer: "Sales Account"
+  },
+  {
+    question: "A firm’s capital at the beginning was GHS40,000. During the year, the owner introduced GHS10,000 and withdrew GHS5,000. If the closing capital is GHS60,000, what is the profit?",
+    options: ["GHS15,000", "GHS10,000", "GHS20,000", "GHS25,000"],
+    answer: "GHS15,000"
+  },
+  {
+    question: "Which of these is a liability?",
+    options: ["Prepaid Rent", "Debtors", "Bank Overdraft", "Stock"],
+    answer: "Bank Overdraft"
+  },
+  {
+    question: "What does the prudence concept require?",
+    options: [
+      "Recording revenue only when received",
+      "Understating income and overstating assets",
+      "Not anticipating profits but providing for all probable losses",
+      "Ignoring expenses until cash is paid"
+    ],
+    answer: "Not anticipating profits but providing for all probable losses"
+  },
+  {
+    question: "What is the total cost of production if prime cost is GHS30,000 and factory overheads are GHS10,000?",
+    options: ["GHS20,000", "GHS30,000", "GHS40,000", "GHS10,000"],
+    answer: "GHS40,000"
+  },
+  {
+    question: "What is the accounting treatment for a carriage inwards expense?",
+    options: [
+      "Added to purchases",
+      "Subtracted from sales",
+      "Recorded as an asset",
+      "Recorded under administrative expenses"
+    ],
+    answer: "Added to purchases"
+  },
+  {
+    question: "If accumulated depreciation on machinery is GHS12,000 and the original cost is GHS50,000, what is the net book value?",
+    options: ["GHS38,000", "GHS62,000", "GHS12,000", "GHS50,000"],
+    answer: "GHS38,000"
+  },
+  {
+    question: "Which document is issued by a seller to reduce the amount owed by a buyer?",
+    options: ["Credit note", "Debit note", "Invoice", "Quotation"],
+    answer: "Credit note"
+  },
+  {
+    question: "The trial balance totals do not agree. What is the first action to take?",
+    options: [
+      "Prepare final accounts anyway",
+      "Ignore the difference",
+      "Check the additions of the trial balance",
+      "Prepare a bank reconciliation statement"
+    ],
+    answer: "Check the additions of the trial balance"
+  },
+  {
+    question: "Which of the following is not included in the calculation of cost of goods sold?",
+    options: [
+      "Opening stock",
+      "Closing stock",
+      "Sales",
+      "Purchases"
+    ],
+    answer: "Sales"
+  },
+  // 201
+  {
+    question: "A business bought equipment for GHS30,000 and expects to use it for 5 years with no residual value. What is the annual depreciation using straight-line method?",
+    options: ["GHS3,000", "GHS5,000", "GHS6,000", "GHS7,500"],
+    answer: "GHS6,000"
+  },
+  // 202
+  {
+    question: "Which concept requires revenue to be recorded when it is earned, not when received?",
+    options: ["Prudence", "Matching", "Accrual", "Consistency"],
+    answer: "Accrual"
+  },
+  // 203
+  {
+    question: "Calculate VAT: GHS4,600 sale, VAT at 15%",
+    options: ["GHS690", "GHS460", "GHS610", "GHS600"],
+    answer: "GHS690"
+  },
+  // 204
+  {
+    question: "What is the purpose of preparing a trial balance?",
+    options: [
+      "To prepare final accounts",
+      "To check arithmetical accuracy",
+      "To show net profit",
+      "To summarize cash flows"
+    ],
+    answer: "To check arithmetical accuracy"
+  },
+  // 205
+  {
+    question: "Which error will affect the trial balance totals?",
+    options: ["Error of omission", "Error of principle", "Transposition", "Error of commission"],
+    answer: "Transposition"
+  },
+  // 206
+  {
+    question: "Which account is credited when goods are sold on credit?",
+    options: ["Sales Account", "Purchases", "Cash", "Capital"],
+    answer: "Sales Account"
+  },
+  // 207
+  {
+    question: "Capital at start GHS40,000, introduced GHS10,000, drawings GHS5,000, closing capital GHS60,000. Profit?",
+    options: ["GHS15,000", "GHS10,000", "GHS20,000", "GHS25,000"],
+    answer: "GHS15,000"
+  },
+  // 208
+  {
+    question: "Which of these is a current liability?",
+    options: ["Bank overdraft", "Debtors", "Stock", "Plant"],
+    answer: "Bank Overdraft"
+  },
+  // 209
+  {
+    question: "What is the prudence concept?",
+    options: [
+      "Record revenue only when received",
+      "Understate liabilities",
+      "Not anticipate profits but provide for probable losses",
+      "Ignore future costs"
+    ],
+    answer: "Not anticipate profits but provide for probable losses"
+  },
+  // 210
+  {
+    question: "Prime cost GHS30,000, factory overheads GHS10,000. Total production cost?",
+    options: ["GHS20,000", "GHS30,000", "GHS40,000", "GHS10,000"],
+    answer: "GHS40,000"
+  },
+  // 211
+  {
+    question: "Accounting treatment for carriage inwards expense?",
+    options: [
+      "Added to purchases",
+      "Subtracted from sales",
+      "Recorded as an asset",
+      "Admin expense"
+    ],
+    answer: "Added to purchases"
+  },
+  // 212
+  {
+    question: "Accumulated depreciation GHS12,000, cost GHS50,000. Net book value?",
+    options: ["GHS38,000", "GHS62,000", "GHS12,000", "GHS50,000"],
+    answer: "GHS38,000"
+  },
+  // 213
+  {
+    question: "Seller issues a document reducing buyer’s liability. It’s a:",
+    options: ["Credit note", "Debit note", "Invoice", "Receipt"],
+    answer: "Credit note"
+  },
+  // 214
+  {
+    question: "Trial balance doesn’t agree. First action?",
+    options: [
+      "Prepare accounts anyway",
+      "Ignore it",
+      "Re-add trial balance",
+      "Do bank reconciliation"
+    ],
+    answer: "Re-add trial balance"
+  },
+  // 215
+  {
+    question: "Which is NOT included in cost of goods sold?",
+    options: ["Opening stock", "Closing stock", "Purchases", "Sales"],
+    answer: "Sales"
+  },
+  // 216
+  {
+    question: "Intangible asset example:",
+    options: ["Equipment", "Goodwill", "Stock", "Vehicle"],
+    answer: "Goodwill"
+  },
+  // 217
+  {
+    question: "Net profit: Gross GHS18,000, expenses GHS5,000?",
+    options: ["GHS13,000", "GHS23,000", "GHS18,000", "GHS5,000"],
+    answer: "GHS13,000"
+  },
+  // 218
+  {
+    question: "Ledger for wages:",
+    options: ["Sales ledger", "Purchases ledger", "General ledger", "Nominal ledger"],
+    answer: "Nominal ledger"
+  },
+  // 219
+  {
+    question: "Customer pays GHS2,000 on account. Credit which account?",
+    options: ["Cash", "Debtors", "Sales", "Creditors"],
+    answer: "Debtors"
+  },
+  // 220
+  {
+    question: "In partnership, interest on drawings is treated as:",
+    options: ["Income to firm", "Expense to firm", "Expense to partner", "Liability"],
+    answer: "Income to firm"
+  },
+  // 221
+  {
+    question: "Sales GHS100k, returns inwards GHS5k, COGS GHS60k. Gross profit?",
+    options: ["GHS35,000", "GHS40,000", "GHS45,000", "GHS55,000"],
+    answer: "GHS35,000"
+  },
+  // 222
+  {
+    question: "Which is a current asset?",
+    options: ["Building", "Fixtures", "Cash in hand", "Capital"],
+    answer: "Cash in hand"
+  },
+  // 223
+  {
+    question: "Depreciation is classified as a(n):",
+    options: ["Income", "Liability", "Expense", "Current Asset"],
+    answer: "Expense"
+  },
+  // 224
+  {
+    question: "Credit entry for goods sold on credit?",
+    options: ["Dr Cash, Cr Sales", "Dr Sales, Cr Debtors", "Dr Debtors, Cr Sales", "Dr Purchases, Cr Sales"],
+    answer: "Dr Debtors, Cr Sales"
+  },
+  // 225
+  {
+    question: "Prepaid insurance out of GHS4,500 (12 months) – current period 6 months?",
+    options: ["GHS2,250", "GHS4,500", "GHS1,500", "GHS3,000"],
+    answer: "GHS2,250"
+  },
+  // 226
+  {
+    question: "Which is source document for purchases?",
+    options: ["Invoice", "Cheque", "Credit note", "Receipt"],
+    answer: "Invoice"
+  },
+  // 227
+  {
+    question: "Included in prime cost:",
+    options: ["Factory rent", "Direct materials", "Depreciation", "Admin"],
+    answer: "Direct materials"
+  },
+  // 228
+  {
+    question: "Debtors GHS20,000, bad debts GHS2,000. Net debtors?",
+    options: ["GHS18,000", "GHS22,000", "GHS20,000", "GHS2,000"],
+    answer: "GHS18,000"
+  },
+  // 229
+  {
+    question: "Credit purchases GHS35,000, returns outwards GHS5,000. Net purchases?",
+    options: ["GHS30,000", "GHS40,000", "GHS35,000", "GHS25,000"],
+    answer: "GHS30,000"
+  },
+  // 230
+  {
+    question: "Which is an indirect manufacturing expense?",
+    options: ["Direct labour", "Factory electricity", "Raw materials", "Sales commission"],
+    answer: "Factory electricity"
+  },
+  // 231
+  {
+    question: "Depreciation affects which statements?",
+    options: ["Income only", "Balance only", "Both", "Neither"],
+    answer: "Both"
+  },
+  // 232
+  {
+    question: "Book value of GHS5k asset after 2 years of 10% SL depreciation?",
+    options: ["GHS4,000", "GHS3,500", "GHS5,000", "GHS4,500"],
+    answer: "GHS4,000"
+  },
+  // 233
+  {
+    question: "Purpose of a cash book:",
+    options: [
+      "Record credit transactions",
+      "Record non-financial data",
+      "Record all cash/bank transactions",
+      "Summarize position"
+    ],
+    answer: "Record all cash/bank transactions"
+  },
+  // 234
+  {
+    question: "Which is excluded from the trading account?",
+    options: ["Opening stock", "Sales", "Office rent", "Purchases"],
+    answer: "Office rent"
+  },
+  // 235
+  {
+    question: "Which principle matches revenue in correct period?",
+    options: ["Consistency", "Matching", "Entity", "Accrual"],
+    answer: "Matching"
+  },
+  // 236
+  {
+    question: "Which is NOT a function of accounting?",
+    options: ["Recording transactions", "Analyzing data", "Measuring inflation", "Communicating results"],
+    answer: "Measuring inflation"
+  },
+  // 237
+  {
+    question: "Primary use of purchases journal?",
+    options: [
+      "Record cash purchases",
+      "Record all sales",
+      "Record credit purchases",
+      "Record credit sales"
+    ],
+    answer: "Record credit purchases"
+  },
+  // 238
+  {
+    question: "Goods worth GHS1,000 returned to supplier. Entry?",
+    options: [
+      "Dr Supplier, Cr Returns Outwards",
+      "Dr Returns Inwards, Cr Supplier",
+      "Dr Returns Outwards, Cr Supplier",
+      "Dr Purchases, Cr Supplier"
+    ],
+    answer: "Dr Returns Outwards, Cr Supplier"
+  },
+  // 239
+  {
+    question: "Profit or loss in club appears in which account?",
+    options: ["Receipts & Payments", "Subscriptions", "Income & Expenditure", "Accumulated Fund"],
+    answer: "Income & Expenditure"
+  },
+  // 240
+  {
+    question: "IAS dealing with inventories?",
+    options: ["IAS 7", "IAS 2", "IAS 16", "IAS 10"],
+    answer: "IAS 2"
+  },
+  // 241
+  {
+    question: "Value of fixed assets after depreciation is called?",
+    options: ["Residual value", "Scrap value", "Net book value", "Disposed value"],
+    answer: "Net book value"
+  },
+  // 242
+  {
+    question: "Accumulated depreciation GHS12,000 for GHS50,000 asset: net book?",
+    options: ["GHS38,000", "GHS12,000", "GHS50,000", "GHS62,000"],
+    answer: "GHS38,000"
+  },
+  // 243
+  {
+    question: "What’s the role of a suspense account?",
+    options: [
+      "Hold ledger totals",
+      "Temporarily store trial balance differences",
+      "Record VAT entries",
+      "Store capital receipts"
+    ],
+    answer: "Temporarily store trial balance differences"
+  },
+  // 244
+  {
+    question: "Which concept assumes business will continue?",
+    options: ["Consistency", "Going concern", "Realisation", "Materiality"],
+    answer: "Going concern"
+  },
+  // 245
+  {
+    question: "Club has opening accumulated fund GHS5,000, surplus GHS1,200. New fund?",
+    options: ["GHS5,000", "GHS6,200", "GHS3,800", "GHS1,200"],
+    answer: "GHS6,200"
+  },
+  // 246
+  {
+    question: "Single entry profit determined by?",
+    options: [
+      "Income & Expenditure",
+      "Statement of affairs method",
+      "Ledger accounts",
+      "Trading account"
+    ],
+    answer: "Statement of affairs method"
+  },
+  // 247
+  {
+    question: "Capital income example?",
+    options: ["Depreciation", "Sales returns", "Bank loan", "Sale of fixed asset"],
+    answer: "Sale of fixed asset"
+  },
+  // 248
+  {
+    question: "Which account records subscriptions in clubs?",
+    options: [
+      "Receipts",
+      "Subscriptions Account",
       "Income Statement",
-      "Cash Flow Statement"],
-answer: "Balance Sheet"
+      "Capital"
+    ],
+    answer: "Subscriptions Account"
   },
+  // 249
   {
-    question: "What is goodwill in accounting?",
-    options: ["", "Intangible asset representing business reputation",
-      "Physical asset",
-      "Liability"],
-answer: "Intangible asset representing business reputation"
+    question: "Which financial statement shows performance over time?",
+    options: ["Balance sheet", "Income statement", "Cash flow statement", "Trial balance"],
+    answer: "Income statement"
   },
+  // 250
   {
-    question: "Define accrual basis of accounting.",
-    options: ["", "Transactions are recorded when they occur, not when cash is received or paid",
-      "Transactions are recorded only when cash is received or paid",
-      "Only revenues are recorded"],
-answer: "Transactions are recorded when they occur, not when cash is received or paid"
+    question: "Bank reconciliation statement is prepared to:",
+    options: [
+      "Update stock records",
+      "Identify bank–book differences",
+      "Prepare final accounts",
+      "Record credit sales"
+    ],
+    answer: "Identify bank–book differences"
   },
+  // 251
   {
-    question: "Calculate gross profit if sales are GHS200,000 and cost of goods sold is GHS120,000.",
-    options: ["", "GHS80,000",
-      "GHS320,000",
-      "GHS120,000"],
-answer: "GHS80,000"
+    question: "Opening stock is GHS10,000, purchases GHS50,000, and closing stock is GHS12,000. What is the cost of goods sold?",
+    options: ["GHS48,000", "GHS50,000", "GHS52,000", "GHS60,000"],
+    answer: "GHS48,000"
   },
+  // 252
   {
-    question: "Which of the following is NOT a current asset?",
-    options: ["", "Machinery",
-      "Cash",
-      "Inventory"],
-answer: "Machinery"
+    question: "What is the main purpose of Control Accounts?",
+    options: ["To detect errors", "To record assets", "To avoid trial balance", "To record liabilities"],
+    answer: "To detect errors"
   },
+  // 253
   {
-    question: "Prepare the journal entry to record depreciation of GHS3,000 on equipment.",
-    options: ["", "Debit Depreciation Expense GHS3,000; Credit Accumulated Depreciation GHS3,000",
-      "Debit Equipment GHS3,000; Credit Depreciation Expense GHS3,000",
-      "Debit Accumulated Depreciation GHS3,000; Credit Equipment GHS3,000"],
-answer: "Debit Depreciation Expense GHS3,000; Credit Accumulated Depreciation GHS3,000"
+    question: "Which of these accounts is not part of the cash book?",
+    options: ["Bank", "Cash", "Discount", "Sales"],
+    answer: "Sales"
   },
+  // 254
   {
-    question: "Define the term 'liabilities'.",
-    options: ["", "Obligations or debts owed by the business",
-      "Resources owned by the business",
-      "Owner's investment"],
-answer: "Obligations or debts owed by the business"
+    question: "If assets are GHS150,000 and liabilities GHS90,000, what is the capital?",
+    options: ["GHS60,000", "GHS90,000", "GHS240,000", "GHS150,000"],
+    answer: "GHS60,000"
   },
+  // 255
   {
-    question: "What is petty cash used for?",
-    options: ["", "Small daily expenses",
-      "Large purchases",
-      "Paying salaries"],
-answer: "Small daily expenses"
+    question: "In departmental accounts, common expenses are usually:",
+    options: ["Ignored", "Divided equally", "Allocated based on usage", "Added to one department"],
+    answer: "Allocated based on usage"
   },
+  // 256
   {
-    question: "Calculate the bank reconciliation if cash book balance is GHS10,000 and outstanding checks are GHS1,500.",
-    options: ["", "GHS8,500",
-      "GHS11,500",
-      "GHS10,000"],
-answer: "GHS8,500"
+    question: "Which account is debited when a customer settles their debt in cash?",
+    options: ["Debtors", "Sales", "Cash", "Bank"],
+    answer: "Cash"
   },
+  // 257
   {
-    question: "What is the primary purpose of an income statement?",
-    options: ["", "To show profit or loss over a period",
-      "To show assets and liabilities",
-      "To record transactions"],
-answer: "To show profit or loss over a period"
+    question: "What is the purpose of an income and expenditure account in a club?",
+    options: [
+      "To record cash received and paid",
+      "To show the financial position",
+      "To determine surplus or deficit",
+      "To show accumulated fund"
+    ],
+    answer: "To determine surplus or deficit"
   },
+  // 258
   {
-    question: "Prepare the ledger entry for credit sales of GHS15,000.",
-    options: ["", "Debit Accounts Receivable GHS15,000; Credit Sales GHS15,000",
-      "Debit Sales GHS15,000; Credit Accounts Receivable GHS15,000",
-      "Debit Cash GHS15,000; Credit Sales GHS15,000"],
-answer: "Debit Accounts Receivable GHS15,000; Credit Sales GHS15,000"
+    question: "A company buys machinery worth GHS80,000 and estimates a residual value of GHS8,000 after 6 years. Annual depreciation (straight-line)?",
+    options: ["GHS12,000", "GHS10,000", "GHS8,000", "GHS9,000"],
+    answer: "GHS12,000"
   },
+  // 259
   {
-    question: "Define the term 'capital expenditure'.",
-    options: ["", "Expenditure on acquiring or improving fixed assets",
-      "Day-to-day operational expenses",
-      "Expenses that are recurring"],
-answer: "Expenditure on acquiring or improving fixed assets"
+    question: "The matching principle requires:",
+    options: [
+      "Revenue matches with expenses in the same period",
+      "Assets = liabilities + equity",
+      "Cash equals net profit",
+      "Prepaid expenses recorded as revenue"
+    ],
+    answer: "Revenue matches with expenses in the same period"
   },
+  // 260
   {
-    question: "Calculate gross profit margin if gross profit is GHS50,000 and sales are GHS250,000.",
-    options: ["", "20%",
-      "25%",
-      "15%"],
-answer: "20%"
+    question: "Which of the following is not a user of accounting information?",
+    options: ["Investors", "Suppliers", "Customers", "Librarians"],
+    answer: "Librarians"
   },
+  // 261
   {
-    question: "What is the effect of recording accrued income?",
-    options: ["", "Assets increase and income increases",
-      "Assets decrease and income decreases",
-      "Liabilities increase"],
-answer: "Assets increase and income increases"
+    question: "Sales GHS120,000; Debtors GHS20,000; Returns Inward GHS5,000; What is net sales?",
+    options: ["GHS125,000", "GHS100,000", "GHS115,000", "GHS120,000"],
+    answer: "GHS115,000"
   },
+  // 262
   {
-    question: "What type of account is 'Drawings'?",
-    options: ["", "Contra Capital Account",
-      "Asset Account",
-      "Liability Account"],
-answer: "Contra Capital Account"
+    question: "The ledger which includes capital, sales, and expenses is called:",
+    options: ["General Ledger", "Sales Ledger", "Purchases Ledger", "Subsidiary Ledger"],
+    answer: "General Ledger"
   },
+  // 263
   {
-    question: "Calculate the debtors turnover period if credit sales are GHS180,000 and average debtors GHS15,000.",
-    options: ["", "30 days",
-      "45 days",
-      "60 days"],
-answer: "30 days"
+    question: "A payment received from a customer is recorded in the:",
+    options: ["Journal", "Sales Day Book", "Cash Book", "Trial Balance"],
+    answer: "Cash Book"
   },
+  // 264
   {
-    question: "Define 'provision for doubtful debts'.",
-    options: ["", "Estimated amount of receivables unlikely to be collected",
-      "Actual bad debts written off",
-      "Cash received from debtors"],
-answer: "Estimated amount of receivables unlikely to be collected"
+    question: "A GHS5,000 debt is written off. What is the journal entry?",
+    options: [
+      "Dr Bad Debts, Cr Debtors",
+      "Dr Debtors, Cr Bad Debts",
+      "Dr Cash, Cr Debtors",
+      "Dr Debtors, Cr Sales"
+    ],
+    answer: "Dr Bad Debts, Cr Debtors"
   },
+  // 265
   {
-    question: "What is the normal balance of a capital account?",
-    options: ["", "Credit",
-      "Debit",
-      "Zero"],
-answer: "Credit"
+    question: "Purchases ledger is also known as:",
+    options: ["Sales ledger", "General ledger", "Creditors ledger", "Nominal ledger"],
+    answer: "Creditors ledger"
   },
+  // 266
   {
-    question: "Calculate net assets if total assets are GHS500,000 and total liabilities GHS200,000.",
-    options: ["", "GHS300,000",
-      "GHS700,000",
-      "GHS200,000"],
-answer: "GHS300,000"
+    question: "A club's receipts and payments account is a type of:",
+    options: ["Income statement", "Cash account", "Balance sheet", "Trial balance"],
+    answer: "Cash account"
   },
+  // 267
+  {
+    question: "What are accruals?",
+    options: ["Prepaid expenses", "Income received in advance", "Expenses due but unpaid", "Assets"],
+    answer: "Expenses due but unpaid"
+  },
+  // 268
+  {
+    question: "If cash received is GHS2,500 and not recorded, what is the impact on the trial balance?",
+    options: ["Overstated", "Understated", "It will not agree", "No effect"],
+    answer: "It will not agree"
+  },
+  // 269
+  {
+    question: "Which of the following is an intangible asset?",
+    options: ["Furniture", "Debtors", "Goodwill", "Vehicles"],
+    answer: "Goodwill"
+  },
+  // 270
+  {
+    question: "Which of these is a capital expenditure?",
+    options: ["Purchasing a delivery van", "Rent paid", "Stationery", "Wages"],
+    answer: "Purchasing a delivery van"
+  },
+  // 271
+  {
+    question: "Petty cash is kept under which system?",
+    options: ["Credit system", "Banking system", "Imprest system", "General ledger system"],
+    answer: "Imprest system"
+  },
+  // 272
+  {
+    question: "Which concept requires the same accounting treatment year to year?",
+    options: ["Accrual", "Prudence", "Consistency", "Entity"],
+    answer: "Consistency"
+  },
+  // 273
+  {
+    question: "A ledger account with more debits than credits has:",
+    options: ["A credit balance", "A debit balance", "A nil balance", "An overdraft"],
+    answer: "A debit balance"
+  },
+  // 274
+  {
+    question: "If bad debts of GHS1,000 are to be written off, and provision is already GHS1,200, what happens?",
+    options: ["Increase provision", "Reduce provision", "No adjustment", "Create new account"],
+    answer: "Reduce provision"
+  },
+  // 275
+  {
+    question: "Control accounts help in:",
+    options: ["Recording payroll", "Verifying individual balances", "Recording assets", "Producing income statement"],
+    answer: "Verifying individual balances"
+  },
+  // 276
+  {
+    question: "A partnership revalues assets before admission of a new partner. The account used is:",
+    options: ["Capital", "Goodwill", "Revaluation", "Profit and Loss"],
+    answer: "Revaluation"
+  },
+  // 277
+  {
+    question: "Which statement best explains ‘substance over form’?",
+    options: [
+      "Transactions are recorded by legal form",
+      "Transactions are recorded by appearance",
+      "Economic reality takes precedence over legal form",
+      "Only physical transactions are recorded"
+    ],
+    answer: "Economic reality takes precedence over legal form"
+  },
+  // 278
+  {
+    question: "Credit sales for the month are GHS40,000 and cash sales are GHS15,000. Total sales?",
+    options: ["GHS55,000", "GHS25,000", "GHS40,000", "GHS15,000"],
+    answer: "GHS55,000"
+  },
+  // 279
+  {
+    question: "Gross profit is calculated as:",
+    options: ["Revenue - Expenses", "Revenue - COGS", "COGS - Expenses", "Revenue - Assets"],
+    answer: "Revenue - COGS"
+  },
+  // 280
+  {
+    question: "Capital + Liabilities equals:",
+    options: ["Assets", "Equity", "Revenue", "Expenses"],
+    answer: "Assets"
+  },
+  // 281
+  {
+    question: "Which of these is not a direct cost?",
+    options: ["Raw materials", "Direct wages", "Factory rent", "Machine operator wages"],
+    answer: "Factory rent"
+  },
+  // 282
+  {
+    question: "In a cash flow statement, ‘purchase of fixed assets’ appears under:",
+    options: ["Operating activities", "Financing activities", "Investing activities", "Capital activities"],
+    answer: "Investing activities"
+  },
+  // 283
+  {
+    question: "A business paid GHS3,000 rent in advance. It is recorded as:",
+    options: ["Accrued expense", "Prepaid expense", "Capital expense", "Deferred revenue"],
+    answer: "Prepaid expense"
+  },
+  // 284
+  {
+    question: "The ledger used for assets and expenses is:",
+    options: ["General ledger", "Purchases ledger", "Sales ledger", "Nominal ledger"],
+    answer: "General ledger"
+  },
+  // 285
+  {
+    question: "The double entry for cash paid to a creditor is:",
+    options: ["Dr Creditor, Cr Cash", "Dr Purchases, Cr Cash", "Dr Cash, Cr Creditor", "Dr Cash, Cr Purchases"],
+    answer: "Dr Creditor, Cr Cash"
+  },
+  // 286
+  {
+    question: "Which is a function of accounting software?",
+    options: ["Cook meals", "Process payroll", "Clean storage", "Repair machinery"],
+    answer: "Process payroll"
+  },
+  // 287
+  {
+    question: "Capital expenditure appears in the:",
+    options: ["Income Statement", "Balance Sheet", "Cash Flow Statement", "Bank Reconciliation"],
+    answer: "Balance Sheet"
+  },
+  // 288
+  {
+    question: "A manufacturing account shows:",
+    options: ["Net profit", "Gross profit", "Cost of goods produced", "Sales"],
+    answer: "Cost of goods produced"
+  },
+  // 289
+  {
+    question: "What is GHS5,000 of electricity unpaid at year end classified as?",
+    options: ["Accrued income", "Prepaid expense", "Accrued expense", "Deferred income"],
+    answer: "Accrued expense"
+  },
+  // 290
+  {
+    question: "Which of the following is a liability?",
+    options: ["Stock", "Prepaid rent", "Trade creditors", "Wages"],
+    answer: "Trade creditors"
+  },
+  // 291
+  {
+    question: "An asset with a long life used in operations is called:",
+    options: ["Fixed asset", "Current asset", "Intangible asset", "Liquid asset"],
+    answer: "Fixed asset"
+  },
+  // 292
+  {
+    question: "Total expenses = GHS24,000, revenue = GHS50,000. Net profit?",
+    options: ["GHS26,000", "GHS76,000", "GHS24,000", "GHS50,000"],
+    answer: "GHS26,000"
+  },
+  // 293
+  {
+    question: "Prepaid insurance is an example of a(n):",
+    options: ["Asset", "Liability", "Revenue", "Expense"],
+    answer: "Asset"
+  },
+  // 294
+  {
+    question: "The book of prime entry for credit sales is the:",
+    options: ["Cash Book", "Journal", "Sales Day Book", "Ledger"],
+    answer: "Sales Day Book"
+  },
+  // 295
+  {
+    question: "Depreciation is based on which concept?",
+    options: ["Matching", "Accrual", "Going concern", "Materiality"],
+    answer: "Matching"
+  },
+  // 296
   {
     question: "What is a suspense account used for?",
-    options: ["", "To temporarily hold unclassified or uncertain transactions",
-      "To record cash transactions",
-      "To balance the trial balance permanently"],
-answer: "To temporarily hold unclassified or uncertain transactions"
+    options: ["Store assets", "Hide errors", "Temporarily hold differences", "Create liabilities"],
+    answer: "Temporarily hold differences"
+  },
+  // 297
+  {
+    question: "Which of these is not a book of original entry?",
+    options: ["Journal", "Ledger", "Cash Book", "Sales Day Book"],
+    answer: "Ledger"
+  },
+  // 298
+  {
+    question: "Which ledger would you find ‘sales returns’?",
+    options: ["Nominal ledger", "Sales ledger", "Purchases ledger", "General ledger"],
+    answer: "Nominal ledger"
+  },
+  // 299
+  {
+    question: "Which concept assumes the business is separate from owner?",
+    options: ["Going concern", "Consistency", "Business entity", "Materiality"],
+    answer: "Business entity"
+  },
+  // 300
+  {
+    question: "What type of account is a Drawings Account?",
+    options: ["Expense", "Liability", "Capital", "Contra-capital"],
+    answer: "Contra-capital"
+  },
+  // 301
+  {
+    question: "If purchases are GHS60,000, purchase returns GHS5,000, and carriage inwards GHS3,000, what is the net cost of purchases?",
+    options: ["GHS55,000", "GHS58,000", "GHS60,000", "GHS62,000"],
+    answer: "GHS58,000"
+  },
+  // 302
+  {
+    question: "In partnership accounts, interest on drawings is treated as:",
+    options: ["An expense", "An income", "A liability", "A capital reduction"],
+    answer: "An income"
+  },
+  // 303
+  {
+    question: "Which of the following is a feature of a manufacturing account?",
+    options: ["Closing stock of finished goods", "Prime cost", "Net profit", "Dividends"],
+    answer: "Prime cost"
+  },
+  // 304
+  {
+    question: "A machine costs GHS100,000 with a residual value of GHS10,000 after 5 years. What is the annual depreciation (straight-line)?",
+    options: ["GHS18,000", "GHS20,000", "GHS22,000", "GHS25,000"],
+    answer: "GHS18,000"
+  },
+  // 305
+  {
+    question: "What is the purpose of a trial balance?",
+    options: [
+      "To show profits",
+      "To detect fraud",
+      "To check arithmetic accuracy of double entry",
+      "To display net assets"
+    ],
+    answer: "To check arithmetic accuracy of double entry"
+  },
+  // 306
+  {
+    question: "What type of asset is inventory?",
+    options: ["Non-current", "Tangible", "Intangible", "Current"],
+    answer: "Current"
+  },
+  // 307
+  {
+    question: "What is the double entry for cash sales?",
+    options: ["Dr Cash, Cr Sales", "Dr Sales, Cr Cash", "Dr Cash, Cr Debtors", "Dr Debtors, Cr Sales"],
+    answer: "Dr Cash, Cr Sales"
+  },
+  // 308
+  {
+    question: "A bank statement shows GHS1,000 more than the cash book. What could cause this?",
+    options: ["Unpresented cheques", "Bank charges", "Direct debit", "Standing order"],
+    answer: "Unpresented cheques"
+  },
+  // 309
+  {
+    question: "Which of the following is NOT a characteristic of VAT?",
+    options: ["Charged on value addition", "Collected by government", "Paid by final consumer", "Charged on wages"],
+    answer: "Charged on wages"
+  },
+  // 310
+  {
+    question: "Provision for doubtful debts is created to:",
+    options: ["Write off all debtors", "Reduce profits", "Reflect realistic receivables", "Show bad debts"],
+    answer: "Reflect realistic receivables"
+  },
+  // 311
+  {
+    question: "If total assets are GHS200,000 and liabilities are GHS70,000, what is capital?",
+    options: ["GHS270,000", "GHS130,000", "GHS200,000", "GHS70,000"],
+    answer: "GHS130,000"
+  },
+  // 312
+  {
+    question: "Drawings by owners decrease:",
+    options: ["Assets", "Liabilities", "Capital", "Expenses"],
+    answer: "Capital"
+  },
+  // 313
+  {
+    question: "Which of these is NOT an accounting concept?",
+    options: ["Going concern", "Matching", "Flexibility", "Accrual"],
+    answer: "Flexibility"
+  },
+  // 314
+  {
+    question: "What is the book where credit purchases are first recorded?",
+    options: ["Sales Day Book", "Purchases Day Book", "General Journal", "Cash Book"],
+    answer: "Purchases Day Book"
+  },
+  // 315
+  {
+    question: "In computerized accounting, which of these is a benefit?",
+    options: ["Slower processing", "Increased errors", "Real-time reporting", "Manual posting"],
+    answer: "Real-time reporting"
+  },
+  // 316
+  {
+    question: "Which account is debited when a business pays telephone bills?",
+    options: ["Telephone expense", "Cash", "Bank", "Capital"],
+    answer: "Telephone expense"
+  },
+  // 317
+  {
+    question: "If rent is paid in advance, what is the accounting treatment?",
+    options: ["Accrued income", "Prepaid expense", "Capital income", "Liability"],
+    answer: "Prepaid expense"
+  },
+  // 318
+  {
+    question: "In control accounts, what does the credit side of the sales ledger control show?",
+    options: ["Receipts from debtors", "Sales returns", "Opening debtors", "Closing debtors"],
+    answer: "Receipts from debtors"
+  },
+  // 319
+  {
+    question: "A club received GHS5,000 in subscriptions, GHS500 was for next year. Income to report?",
+    options: ["GHS5,500", "GHS4,500", "GHS5,000", "GHS500"],
+    answer: "GHS4,500"
+  },
+  // 320
+  {
+    question: "Which financial statement shows assets and liabilities?",
+    options: ["Income statement", "Trial balance", "Cash flow", "Statement of financial position"],
+    answer: "Statement of financial position"
+  },
+  // 321
+  {
+    question: "If provision for depreciation is GHS12,000 and the asset costs GHS40,000, what is the net book value?",
+    options: ["GHS28,000", "GHS40,000", "GHS12,000", "GHS52,000"],
+    answer: "GHS28,000"
+  },
+  // 322
+  {
+    question: "Capital introduced GHS30,000, profit GHS10,000, and drawings GHS5,000. What is closing capital?",
+    options: ["GHS30,000", "GHS35,000", "GHS40,000", "GHS45,000"],
+    answer: "GHS35,000"
+  },
+  // 323
+  {
+    question: "VAT on purchases is:",
+    options: ["An asset", "An expense", "A liability", "Not recorded"],
+    answer: "An asset"
+  },
+  // 324
+  {
+    question: "What type of account is 'bank overdraft'?",
+    options: ["Asset", "Liability", "Capital", "Income"],
+    answer: "Liability"
+  },
+  // 325
+  {
+    question: "Which ledger is used to record wages and salaries?",
+    options: ["Sales ledger", "Purchases ledger", "Nominal ledger", "Control account"],
+    answer: "Nominal ledger"
+  },
+  // 326
+  {
+    question: "Cost of raw materials GHS25,000; direct wages GHS10,000. What is prime cost?",
+    options: ["GHS35,000", "GHS25,000", "GHS10,000", "GHS15,000"],
+    answer: "GHS35,000"
+  },
+  // 327
+  {
+    question: "A factory machine is purchased for GHS50,000. Which account is debited?",
+    options: ["Machinery", "Cash", "Purchases", "Capital"],
+    answer: "Machinery"
+  },
+  // 328
+  {
+    question: "Which of the following is a feature of public sector accounting?",
+    options: ["Profit-driven", "Private ownership", "Budget focus", "Unlimited liability"],
+    answer: "Budget focus"
+  },
+  // 329
+  {
+    question: "Which financial statement would you consult to calculate liquidity ratio?",
+    options: ["Income statement", "Balance sheet", "Cash flow", "VAT returns"],
+    answer: "Balance sheet"
+  },
+  // 330
+  {
+    question: "What is the main source of income for clubs?",
+    options: ["Sales", "Subscriptions", "Investments", "Rent"],
+    answer: "Subscriptions"
+  },
+  // 331
+  {
+    question: "A transaction is first recorded in a:",
+    options: ["Journal", "Ledger", "Trial balance", "Control account"],
+    answer: "Journal"
+  },
+  // 332
+  {
+    question: "Cost of goods manufactured is transferred to:",
+    options: ["Trading account", "Profit and loss", "Balance sheet", "Manufacturing account"],
+    answer: "Trading account"
+  },
+  // 333
+  {
+    question: "If depreciation is omitted, which statement is overstated?",
+    options: ["Expenses", "Assets", "Liabilities", "Revenue"],
+    answer: "Assets"
+  },
+  // 334
+  {
+    question: "What is the function of a purchases ledger control account?",
+    options: ["Control sales", "Track debtors", "Summarize creditors", "Calculate profit"],
+    answer: "Summarize creditors"
+  },
+  // 335
+  {
+    question: "Capital is increased by:",
+    options: ["Drawings", "Losses", "Expenses", "Profits"],
+    answer: "Profits"
+  },
+  // 336
+  {
+    question: "A non-current asset is:",
+    options: ["To be sold in 1 year", "Held for short term", "Used in operations", "Cash equivalent"],
+    answer: "Used in operations"
+  },
+  // 337
+  {
+    question: "Rent owing GHS2,000 is recorded as:",
+    options: ["Prepaid expense", "Accrued expense", "Accrued income", "Deferred revenue"],
+    answer: "Accrued expense"
+  },
+  // 338
+  {
+    question: "Factory insurance is classified as:",
+    options: ["Administrative expense", "Selling expense", "Factory overhead", "Capital expense"],
+    answer: "Factory overhead"
+  },
+  // 339
+  {
+    question: "What is the total cost if raw materials = GHS15,000, direct labor = GHS10,000, and overheads = GHS5,000?",
+    options: ["GHS30,000", "GHS25,000", "GHS20,000", "GHS15,000"],
+    answer: "GHS30,000"
+  },
+  // 340
+  {
+    question: "When a debtor becomes insolvent, which account is credited?",
+    options: ["Bad debts", "Debtors", "Cash", "Bank"],
+    answer: "Debtors"
+  },
+  // 341
+  {
+    question: "Goodwill is shown under:",
+    options: ["Current assets", "Intangible assets", "Liabilities", "Capital"],
+    answer: "Intangible assets"
+  },
+  // 342
+  {
+    question: "A branch's net profit is transferred to:",
+    options: ["General reserve", "Head office", "Cash flow", "Revaluation account"],
+    answer: "Head office"
+  },
+  // 343
+  {
+    question: "The unit of measurement in accounting is:",
+    options: ["Length", "Volume", "Currency", "Quantity"],
+    answer: "Currency"
+  },
+  // 344
+  {
+    question: "A cheque dishonored is recorded as:",
+    options: ["Credit bank, debit debtor", "Credit debtor, debit bank", "Credit bank, debit sales", "No entry"],
+    answer: "Credit bank, debit debtor"
+  },
+  // 345
+  {
+    question: "What is the purpose of an income statement?",
+    options: ["To show financial position", "To show profit or loss", "To show cash flows", "To show assets"],
+    answer: "To show profit or loss"
+  },
+  // 346
+  {
+    question: "Which item appears in both manufacturing and income statements?",
+    options: ["Factory rent", "Prime cost", "Cost of goods sold", "Sales"],
+    answer: "Cost of goods sold"
+  },
+  // 347
+  {
+    question: "Petty cash balance appears in the:",
+    options: ["Income statement", "Cash flow", "Balance sheet", "Petty cash book only"],
+    answer: "Balance sheet"
+  },
+  // 348
+  {
+    question: "Discount received is classified as:",
+    options: ["Income", "Expense", "Asset", "Liability"],
+    answer: "Income"
+  },
+  // 349
+  {
+    question: "Unit cost = GHS4, quantity produced = 1,200. Total cost?",
+    options: ["GHS4,800", "GHS4,200", "GHS3,800", "GHS5,000"],
+    answer: "GHS4,800"
+  },
+  // 350
+  {
+    question: "Which of the following is not a qualitative characteristic of financial info?",
+    options: ["Reliability", "Relevance", "Cost", "Comparability"],
+    answer: "Cost"
   },
   {
-    question: "Explain the term 'double entry'.",
-    options: ["", "Every transaction affects at least two accounts with equal debit and credit",
-      "Recording only debit entries",
-      "Recording only credit entries"],
-answer: "Every transaction affects at least two accounts with equal debit and credit"
-  },
-{
-  question: "What is the purpose of adjusting entries?",
-  options: ["", "To update accounts before preparing financial statements",
-    "To record cash transactions",
-    "To close temporary accounts"],
-answer: "To update accounts before preparing financial statements"
-},
-{
-  question: "Calculate the VAT payable if sales are GHS120,000 and VAT rate is 15%.",
-  options: ["", "GHS18,000",
-    "GHS8,000",
-    "GHS15,000"],
-answer: "GHS18,000"
-},
-{
-  question: "What is the effect of a credit purchase on the accounting equation?",
-  options: ["", "Assets and Liabilities increase",
-    "Assets and Capital increase",
-    "Liabilities and Capital decrease"],
-answer: "Assets and Liabilities increase"
-},
-{
-  question: "Which account is credited when a business pays off its accounts payable?",
-  options: ["", "Cash",
-    "Accounts Payable",
-    "Purchases"],
-answer: "Cash"
-},
-{
-  question: "Calculate depreciation using the straight-line method for an asset costing GHS50,000 with a useful life of 10 years and residual value of GHS5,000.",
-  options: ["", "GHS4,500 per year",
-    "GHS5,000 per year",
-    "GHS45,000 per year"],
-answer: "GHS4,500 per year"
-},
-{
-  question: "Explain the term 'contra entry'.",
-  options: ["", "An entry that involves both debit and credit to cash and bank accounts",
-    "Recording of expenses",
-    "Transfer of profits"],
-answer: "An entry that involves both debit and credit to cash and bank accounts"
-},
-{
-  question: "If opening stock is GHS20,000, purchases GHS80,000, and closing stock GHS25,000, calculate cost of goods sold.",
-  options: ["", "GHS75,000",
-    "GHS85,000",
-    "GHS95,000"],
-answer: "GHS75,000"
-},
-{
-  question: "What is the normal balance of the sales account?",
-  options: ["", "Credit",
-    "Debit",
-    "Zero"],
-answer: "Credit"
-},
-{
-  question: "Describe the users of accounting information and their primary needs.",
-  options: ["", "Owners need profit info; creditors need solvency info; management needs control info",
-    "Only management needs accounting info",
-    "Government only"],
-answer: "Owners need profit info; creditors need solvency info; management needs control info"
-},
-[
-  {
-    question: "Define the term 'trial balance'.",
-    options: ["", "A statement showing debit and credit balances to check equality",
-      "A list of all cash transactions",
-      "An account of expenses only"],
-answer: "A statement showing debit and credit balances to check equality"
+    question: "What are the main characteristics of a manufacturing account?",
+    options: [
+      "It records personal expenses of the owner",
+      "It includes prime cost and cost of production",
+      "It includes dividends and interest",
+      "It tracks only administrative costs"
+    ],
+    answer: "It includes prime cost and cost of production"
   },
   {
-    question: "Calculate the adjusted net profit if the unadjusted profit is GHS50,000 and depreciation of GHS5,000 is charged.",
-    options: ["", "GHS45,000",
-      "GHS55,000",
-      "GHS50,000"],
-answer: "GHS45,000"
+    question: "Calculate the production cost given: Prime cost = GHS40,000, Factory overhead = GHS10,000.",
+    options: ["GHS30,000", "GHS50,000", "GHS40,000", "GHS60,000"],
+    answer: "GHS50,000"
   },
   {
-    question: "Which book of original entry records credit sales?",
-    options: ["", "Sales Journal",
-      "Purchases Journal",
-      "Cash Book"],
-answer: "Sales Journal"
+    question: "Which of the following is a direct cost in manufacturing?",
+    options: [
+      "Factory rent",
+      "Factory supervisor's salary",
+      "Raw materials",
+      "Depreciation on machinery"
+    ],
+    answer: "Raw materials"
   },
   {
-    question: "Explain the term 'double entry principle'.",
-    options: ["", "Every transaction affects at least two accounts with equal debit and credit",
-      "Only cash transactions are recorded",
-      "Every transaction is recorded once"],
-answer: "Every transaction affects at least two accounts with equal debit and credit"
+    question: "Which account helps separate profits made in the manufacturing department from general business profits?",
+    options: [
+      "Trading account",
+      "Manufacturing account",
+      "Profit and Loss account",
+      "Capital account"
+    ],
+    answer: "Manufacturing account"
   },
   {
-    question: "What is the purpose of a petty cash book?",
-    options: ["", "To record small day-to-day expenses",
-      "To record sales",
-      "To record purchases"],
-answer: "To record small day-to-day expenses"
+    question: "How are unrealized profits on stock treated in manufacturing accounts?",
+    options: [
+      "They are added to gross profit",
+      "They are ignored",
+      "They are deducted from inventory",
+      "They are included in closing stock valuation"
+    ],
+    answer: "They are deducted from inventory"
   },
   {
-    question: "Calculate VAT on a sale of GHS30,000 at a rate of 12.5%.",
-    options: ["", "GHS3,750",
-      "GHS2,500",
-      "GHS4,000"],
-answer: "GHS3,750"
+    question: "What does departmental accounting allow businesses to do?",
+    options: [
+      "Track competitor performance",
+      "Allocate total profit without details",
+      "Measure performance of each segment",
+      "Prepare manufacturing statements"
+    ],
+    answer: "Measure performance of each segment"
   },
   {
-    question: "What effect does payment of salaries have on the accounting equation?",
-    options: ["", "Assets decrease and expenses increase",
-      "Assets increase and liabilities decrease",
-      "Liabilities increase"],
-answer: "Assets decrease and expenses increase"
+    question: "Which document tracks inter-branch transfers in branch accounting?",
+    options: [
+      "Transfer journal",
+      "Branch adjustment account",
+      "Stock register",
+      "Bank reconciliation"
+    ],
+    answer: "Transfer journal"
   },
   {
-    question: "Define 'accrued expenses'.",
-    options: ["", "Expenses incurred but not yet paid",
-      "Expenses paid in advance",
-      "Expenses budgeted for next year"],
-answer: "Expenses incurred but not yet paid"
+    question: "Calculate total revenue from two branches: Branch A = GHS120,000, Branch B = GHS80,000.",
+    options: ["GHS180,000", "GHS160,000", "GHS200,000", "GHS100,000"],
+    answer: "GHS200,000"
   },
   {
-    question: "Which of the following is a qualitative characteristic of accounting information?",
-    options: ["", "Relevance",
-      "Size",
-      "Quantity"],
-answer: "Relevance"
+    question: "What is a major feature of partnership accounting?",
+    options: [
+      "Equal capital contribution",
+      "Separation of ownership and control",
+      "Profit sharing ratios",
+      "Use of manufacturing accounts"
+    ],
+    answer: "Profit sharing ratios"
   },
   {
-    question: "Calculate closing capital if opening capital is GHS100,000, net profit GHS20,000, and drawings GHS15,000.",
-    options: ["", "GHS105,000",
-      "GHS135,000",
-      "GHS85,000"],
-answer: "GHS105,000"
+    question: "How is goodwill treated in partnership admission?",
+    options: [
+      "It is ignored",
+      "It is shown only in dissolution",
+      "It is adjusted in old partners’ capital accounts",
+      "It is paid to new partner"
+    ],
+    answer: "It is adjusted in old partners’ capital accounts"
   },
   {
-    question: "Which ledger division contains all personal accounts?",
-    options: ["", "Sales ledger",
-      "Purchase ledger",
-      "General ledger"],
-answer: "Sales ledger"
+    question: "A partnership firm is dissolved. Which account is used to record asset realization?",
+    options: [
+      "Capital account",
+      "Revaluation account",
+      "Realization account",
+      "Cash account"
+    ],
+    answer: "Realization account"
   },
   {
-    question: "What does the term 'capital expenditure' refer to?",
-    options: ["", "Expenditure on acquiring fixed assets",
-      "Daily operating expenses",
-      "Salaries and wages"],
-answer: "Expenditure on acquiring fixed assets"
+    question: "How is depreciation charged in partnership accounts?",
+    options: [
+      "Only on tangible current assets",
+      "On capital contributions",
+      "On fixed assets based on usage",
+      "On drawings"
+    ],
+    answer: "On fixed assets based on usage"
   },
   {
-    question: "Prepare the journal entry for the purchase of inventory on credit for GHS10,000.",
-    options: ["", "Debit Inventory GHS10,000; Credit Accounts Payable GHS10,000",
-      "Debit Cash GHS10,000; Credit Inventory GHS10,000",
-      "Debit Accounts Payable GHS10,000; Credit Inventory GHS10,000"],
-answer: "Debit Inventory GHS10,000; Credit Accounts Payable GHS10,000"
+    question: "Which is not a type of company?",
+    options: [
+      "Sole trader company",
+      "Private limited company",
+      "Public limited company",
+      "Company limited by guarantee"
+    ],
+    answer: "Sole trader company"
   },
   {
-    question: "What is meant by the term 'debtors'?",
-    options: ["", "Customers who owe money to the business",
-      "Suppliers who owe money to the business",
-      "Owners of the business"],
-answer: "Customers who owe money to the business"
+    question: "What distinguishes public sector accounting from private sector accounting?",
+    options: [
+      "Focus on profit maximization",
+      "Emphasis on service delivery",
+      "Use of ledger books",
+      "Tracking manufacturing costs"
+    ],
+    answer: "Emphasis on service delivery"
   },
   {
-    question: "Which accounting concept assumes that a business will continue to operate indefinitely?",
-    options: ["", "Going concern concept",
-      "Matching concept",
-      "Accrual concept"],
-answer: "Going concern concept"
+    question: "What is the key component in cash flow statements?",
+    options: [
+      "Profit and loss",
+      "Income summary",
+      "Operating, investing, and financing activities",
+      "Working capital ratio"
+    ],
+    answer: "Operating, investing, and financing activities"
   },
   {
-    question: "Explain the term 'provision for doubtful debts'.",
-    options: ["", "An estimated amount of receivables expected to be uncollectible",
-      "Amount of bad debts paid",
-      "Total sales on credit"],
-answer: "An estimated amount of receivables expected to be uncollectible"
+    question: "Calculate working capital: Current assets = GHS25,000, Current liabilities = GHS10,000.",
+    options: ["GHS35,000", "GHS10,000", "GHS15,000", "GHS25,000"],
+    answer: "GHS15,000"
   },
   {
-    question: "Calculate gross profit if sales are GHS150,000 and cost of goods sold is GHS100,000.",
-    options: ["", "GHS50,000",
-      "GHS250,000",
-      "GHS100,000"],
-answer: "GHS50,000"
+    question: "What is capital expenditure?",
+    options: [
+      "Expenses on routine operations",
+      "Expenses for daily needs",
+      "Spending on assets that last over a year",
+      "Salaries and wages"
+    ],
+    answer: "Spending on assets that last over a year"
   },
   {
-    question: "Which financial statement shows the financial position of a business at a specific date?",
-    options: ["", "Balance sheet",
-      "Income statement",
-      "Cash flow statement"],
-answer: "Balance sheet"
+    question: "What is the source of government revenue?",
+    options: ["Internal borrowing", "Capital reserve", "Taxation", "Reserves"],
+    answer: "Taxation"
   },
   {
-    question: "What is meant by 'capital introduced'?",
-    options: ["", "Additional money invested by the owner",
-      "Money withdrawn by owner",
-      "Revenue earned"],
-answer: "Additional money invested by the owner"
+    question: "What distinguishes capital expenditure from recurrent expenditure?",
+    options: [
+      "Capital is routine and short-term",
+      "Capital is long-term investment; recurrent is regular operational",
+      "Capital is for daily expenses",
+      "There is no difference"
+    ],
+    answer: "Capital is long-term investment; recurrent is regular operational"
   },
   {
-    question: "Explain the term 'contra account' in relation to accounts receivable.",
-    options: ["", "An account that offsets the accounts receivable balance",
-      "An account showing additional sales",
-      "An account recording purchases"],
-answer: "An account that offsets the accounts receivable balance"
+    question: "Which software is commonly used in computerized accounting?",
+    options: ["CorelDraw", "Tally", "Photoshop", "Windows Media Player"],
+    answer: "Tally"
   },
   {
-    question: "What is the effect on the accounting equation when cash is received from a debtor?",
-    options: ["", "Assets increase and assets decrease",
-      "Liabilities increase and assets decrease",
-      "Assets increase and liabilities increase"],
-answer: "Assets increase and assets decrease"
+    question: "Which of the following is an advantage of computerized accounting?",
+    options: [
+      "High error rate",
+      "Slower processes",
+      "Reduced need for auditing",
+      "Quick and accurate reports"
+    ],
+    answer: "Quick and accurate reports"
   },
   {
-    question: "Define 'revenue expenditure'.",
-    options: ["", "Expenditure incurred for the day-to-day running of the business",
-      "Expenditure on fixed assets",
-      "Long-term investment"],
-answer: "Expenditure incurred for the day-to-day running of the business"
+    question: "What is a primary drawback of manual accounting?",
+    options: [
+      "Requires no training",
+      "Prone to human errors",
+      "Fast data retrieval",
+      "Secured backup"
+    ],
+    answer: "Prone to human errors"
   },
   {
-    question: "What is the main purpose of the cash book?",
-    options: ["", "To record all cash receipts and payments",
-      "To record credit sales",
-      "To summarize expenses"],
-answer: "To record all cash receipts and payments"
+    question: "Which component helps ensure accountability in public sector accounting?",
+    options: [
+      "Private balance sheet",
+      "Auditing and reporting",
+      "Stock valuation",
+      "Branch profit analysis"
+    ],
+    answer: "Auditing and reporting"
   },
   {
-    question: "Calculate the total sales if the VAT charged is GHS7,500 and the VAT rate is 15%.",
-    options: ["", "GHS50,000",
-      "GHS55,000",
-      "GHS45,000"],
-answer: "GHS50,000"
+    question: "Which report is submitted by District Assemblies for financial accountability?",
+    options: [
+      "Cash flow forecast",
+      "Receipts and Payments Account",
+      "Petty cash statement",
+      "Trial balance"
+    ],
+    answer: "Receipts and Payments Account"
   },
   {
-    question: "What is the effect of an increase in accounts payable on the accounting equation?",
-    options: ["", "Liabilities increase and assets increase",
-      "Assets increase and liabilities decrease",
-      "Capital increases"],
-answer: "Liabilities increase and assets increase"
+    question: "If opening capital = GHS30,000, closing capital = GHS40,000, drawings = GHS5,000, what is profit?",
+    options: ["GHS5,000", "GHS15,000", "GHS10,000", "GHS35,000"],
+    answer: "GHS15,000"
   },
   {
-    question: "Explain the term 'accounting standards'.",
-    options: ["", "Rules and guidelines for preparing financial statements",
-      "A book of original entry",
-      "A ledger account"],
-answer: "Rules and guidelines for preparing financial statements"
+    question: "Which book records VAT collected from customers?",
+    options: [
+      "Sales day book",
+      "VAT output book",
+      "Cash book",
+      "Trial balance"
+    ],
+    answer: "VAT output book"
   },
   {
-    question: "Calculate net profit if gross profit is GHS40,000 and expenses are GHS15,000.",
-    options: ["", "GHS25,000",
-      "GHS55,000",
-      "GHS40,000"],
-answer: "GHS25,000"
+    question: "Calculate VAT: Selling price = GHS1,000, VAT rate = 15%",
+    options: ["GHS150", "GHS115", "GHS1,150", "GHS850"],
+    answer: "GHS150"
   },
   {
-    question: "Which document is used as evidence for credit purchases?",
-    options: ["", "Purchase invoice",
+    question: "Which document records discounts allowed to customers?",
+    options: [
       "Sales invoice",
-      "Receipt"],
-answer: "Purchase invoice"
-  },
-  {
-    question: "Define the term 'ledger'.",
-    options: ["", "A book containing all accounts of the business",
-      "A list of cash transactions",
-      "A financial statement"],
-answer: "A book containing all accounts of the business"
-  },
-  {
-    question: "What is the purpose of the suspense account?",
-    options: ["", "To temporarily hold unclassified or doubtful transactions",
-      "To record sales",
-      "To record purchases"],
-answer: "To temporarily hold unclassified or doubtful transactions"
-  },
-  {
-    question: "Calculate the profit or loss from single entry records if opening capital is GHS100,000, closing capital GHS120,000, and drawings GHS10,000.",
-    options: ["", "GHS30,000 profit",
-      "GHS10,000 loss",
-      "GHS20,000 profit"],
-answer: "GHS30,000 profit",
-    working: "Profit = Closing Capital + Drawings - Opening Capital = 120,000 + 10,000 - 100,000 = GHS30,000 profit"
-  },
-  {
-    question: "Prepare a journal entry to record depreciation of GHS4,000 on equipment.",
-    options: ["", "Debit Depreciation Expense GHS4,000; Credit Accumulated Depreciation GHS4,000",
-      "Debit Equipment GHS4,000; Credit Cash GHS4,000",
-      "Debit Accumulated Depreciation GHS4,000; Credit Equipment GHS4,000"],
-answer: "Debit Depreciation Expense GHS4,000; Credit Accumulated Depreciation GHS4,000"
-  },
-  {
-    question: "Define 'bad debts'.",
-    options: ["", "Debts that cannot be collected",
-      "Debts paid on time",
-      "Advance payments"],
-answer: "Debts that cannot be collected"
-  },
-  {
-    question: "A company has sales of GHS200,000, returns inwards GHS10,000, purchases GHS120,000, and returns outwards GHS5,000. Calculate net sales and net purchases.",
-    options: ["", "Net sales = GHS190,000; Net purchases = GHS115,000",
-      "Net sales = GHS210,000; Net purchases = GHS125,000",
-      "Net sales = GHS200,000; Net purchases = GHS120,000"],
-answer: "Net sales = GHS190,000; Net purchases = GHS115,000",
-    working: "Net sales = 200,000 - 10,000 = 190,000; Net purchases = 120,000 - 5,000 = 115,000"
-  },
-  {
-    question: "What is the accounting treatment for provision for bad debts?",
-    options: ["", "It is deducted from debtors in the balance sheet",
-      "It is added to debtors",
-      "It is shown as an expense"],
-answer: "It is deducted from debtors in the balance sheet"
-  },
-  {
-    question: "Explain the purpose of the bank reconciliation statement.",
-    options: ["", "To reconcile differences between bank statement and cash book balances",
-      "To record cash transactions",
-      "To calculate net profit"],
-answer: "To reconcile differences between bank statement and cash book balances"
-  },
-  {
-    question: "Calculate the adjusted cash book balance if the unadjusted cash book balance is GHS12,000, bank charges of GHS200 have not been recorded, and a direct deposit of GHS500 was not recorded.",
-    options: ["", "GHS12,300",
-      "GHS11,700",
-      "GHS12,500"],
-answer: "GHS12,300",
-    working: "Adjusted balance = 12,000 - 200 + 500 = GHS12,300"
-  },
-  {
-    question: "What is a control account?",
-    options: ["", "A summary account in the general ledger for a group of subsidiary accounts",
-      "An account that tracks cash only",
-      "An account for recording expenses"],
-answer: "A summary account in the general ledger for a group of subsidiary accounts"
-  },
-  {
-    question: "Prepare a sales ledger control account balance given total sales GHS150,000, receipts from debtors GHS130,000, and discounts allowed GHS5,000.",
-    options: ["", "Closing balance GHS15,000 debit",
-      "Closing balance GHS25,000 debit",
-      "Closing balance GHS20,000 debit"],
-answer: "Closing balance GHS15,000 debit",
-    working: "Opening + Sales - Receipts - Discounts = Closing balance; assuming opening nil: 150,000 - 130,000 - 5,000 = 15,000 debit balance"
-  },
-  {
-    question: "What is meant by 'incomplete records'?",
-    options: ["", "Accounting records that are partial and not fully maintained",
-      "Complete financial statements",
-      "Fully audited accounts"],
-answer: "Accounting records that are partial and not fully maintained"
-  },
-  {
-    question: "How do you compute profit from incomplete records if opening capital is GHS80,000, closing capital GHS100,000, and drawings GHS15,000?",
-    options: ["", "Profit = Closing capital + Drawings - Opening capital = GHS35,000",
-      "Profit = Opening capital + Drawings - Closing capital = GHS5,000",
-      "Profit = Closing capital - Drawings - Opening capital = GHS5,000"],
-answer: "Profit = Closing capital + Drawings - Opening capital = GHS35,000",
-    working: "Profit = 100,000 + 15,000 - 80,000 = GHS35,000"
-  },
-  {
-    question: "Explain the nature of the accumulated fund in clubs and societies.",
-    options: ["", "It is the net assets belonging to the club after liabilities",
-      "It is the amount owed by members",
-      "It is capital introduced by members"],
-answer: "It is the net assets belonging to the club after liabilities"
-  },
-  {
-    question: "Prepare an income and expenditure account given subscription income GHS25,000, donations GHS5,000, expenses GHS20,000, and depreciation GHS2,000.",
-    options: ["", "Surplus of GHS8,000",
-      "Deficit of GHS8,000",
-      "Surplus of GHS2,000"],
-answer: "Surplus of GHS8,000",
-    working: "Income = 25,000 + 5,000 = 30,000; Expenses = 20,000 + 2,000 = 22,000; Surplus = 30,000 - 22,000 = GHS8,000"
-  },
-  {
-    question: "What is the main purpose of manufacturing accounts?",
-    options: ["", "To ascertain the cost of production",
-      "To record sales only",
-      "To track cash receipts"],
-answer: "To ascertain the cost of production"
-  },
-  {
-    question: "Calculate the prime cost if direct materials are GHS50,000, direct labor GHS30,000, and factory overheads GHS20,000.",
-    options: ["", "GHS80,000",
-      "GHS100,000",
-      "GHS70,000"],
-answer: "GHS80,000",
-    working: "Prime cost = Direct materials + Direct labor = 50,000 + 30,000 = GHS80,000"
-  },
-  {
-    question: "Explain the treatment of unrealized profit in inter-branch transactions.",
-    options: ["", "It should be eliminated in the final accounts",
-      "It is recorded as revenue",
-      "It is ignored"],
-answer: "It should be eliminated in the final accounts"
-  },
-  {
-    question: "What is the difference between capital and recurrent expenditure in the public sector?",
-    options: ["", "Capital expenditure is for assets, recurrent is for day-to-day running",
-      "Both are the same",
-      "Recurrent expenditure is for assets, capital is for salaries"],
-answer: "Capital expenditure is for assets, recurrent is for day-to-day running"
-  },
-  {
-    question: "Describe one advantage of computerized accounting systems over manual systems.",
-    options: ["", "Faster data processing and error reduction",
-      "Higher error rates",
-      "More paperwork"],
-answer: "Faster data processing and error reduction"
-  },
-  {
-    question: "Calculate the net assets of a club with total assets GHS100,000 and total liabilities GHS30,000.",
-    options: ["", "GHS70,000",
-      "GHS130,000",
-      "GHS30,000"],
-answer: "GHS70,000",
-    working: "Net assets = Total assets - Total liabilities = 100,000 - 30,000 = GHS70,000"
-  },
-  {
-    question: "What is the effect on capital if the owner withdraws GHS5,000 for personal use?",
-    options: ["", "Capital decreases by GHS5,000",
-      "Capital increases by GHS5,000",
-      "No effect"],
-answer: "Capital decreases by GHS5,000"
-  },
-  {
-    question: "What is the effect on capital if the owner withdraws GHS5,000 for personal use?",
-    options: ["", "Capital decreases by GHS5,000",
-      "Capital increases by GHS5,000",
-      "No effect"],
-answer: "Capital decreases by GHS5,000"
-  },
-  {
-    question: "What is the purpose of suspense accounts in accounting?",
-    options: ["", "To temporarily hold transactions when there is uncertainty",
-      "To record all cash payments",
-      "To track sales returns"],
-answer: "To temporarily hold transactions when there is uncertainty"
-  },
-  {
-    question: "Which document is used to authorize payment to a creditor?",
-    options: ["", "Purchase order",
-      "Payment voucher",
-      "Sales invoice"],
-answer: "Payment voucher"
-  },
-  {
-    question: "Calculate the closing stock using the formula: Opening Stock + Purchases - Cost of Sales = Closing Stock. Given: Opening Stock GHS10,000, Purchases GHS50,000, Cost of Sales GHS45,000.",
-    options: ["", "GHS15,000",
-      "GHS5,000",
-      "GHS55,000"],
-answer: "GHS15,000"
-  },
-  {
-    question: "What is meant by 'matching concept' in accounting?",
-    options: ["", "Expenses should be matched with the revenues they help generate",
-      "Cash receipts should be matched with cash payments",
-      "Assets should be matched with liabilities"],
-answer: "Expenses should be matched with the revenues they help generate"
-  },
-  {
-    question: "Identify the primary users of financial statements.",
-    options: ["", "Investors, creditors, management",
-      "Only the government",
-      "Suppliers only"],
-answer: "Investors, creditors, management"
-  },
-  {
-    question: "Explain the purpose of depreciation.",
-    options: ["", "To allocate the cost of a fixed asset over its useful life",
-      "To increase the value of an asset",
-      "To record cash paid"],
-answer: "To allocate the cost of a fixed asset over its useful life"
-  },
-  {
-    question: "Calculate the net realizable value of stock if cost is GHS20,000 and net realizable value is GHS18,000.",
-    options: ["", "GHS18,000",
-      "GHS20,000",
-      "GHS38,000"],
-answer: "GHS18,000"
-  },
-  {
-    question: "What does the term 'liquidity' refer to in accounting?",
-    options: [
-      "",
-      "Ability of a business to meet short-term obligations",
-      "Profitability of a business",
-      "Capital structure"
+      "Cash book (debit side)",
+      "Returns inward book",
+      "Journal proper"
     ],
-    answer: "Ability of a business to meet short-term obligations"
+    answer: "Cash book (debit side)"
   },
   {
-    question: "Which financial statement shows income and expenses for a specific period?",
+    question: "Which qualitative characteristic ensures accounting info is timely?",
     options: [
-      "",
-      "Income statement (profit and loss account)",
-      "Balance sheet",
-      "Cash flow statement"
+      "Faithful representation",
+      "Comparability",
+      "Timeliness",
+      "Verifiability"
     ],
-    answer: "Income statement (profit and loss account)"
-   },
+    answer: "Timeliness"
+  },
+  {
+    question: "A trial balance fails to balance. What may help identify the issue?",
+    options: [
+      "Control accounts",
+      "Petty cash voucher",
+      "Sales ledger",
+      "Suspense account"
+    ],
+    answer: "Suspense account"
+  },
+  {
+    question: "What is the formula for computing credit sales using control accounts?",
+    options: [
+      "Opening debtors + Cash received - Closing debtors",
+      "Closing creditors - Purchases + Cash paid",
+      "Closing stock + Purchases - Sales",
+      "Sales + Returns - Discounts"
+    ],
+    answer: "Closing debtors - Opening debtors + Cash received"
+  },
+  {
+    question: "Which ledger would contain accumulated fund account for clubs?",
+    options: [
+      "General ledger",
+      "Cash book",
+      "Creditors ledger",
+      "Income ledger"
+    ],
+    answer: "General ledger"
+  },
+  {
+    question: "Subscriptions due but not received are classified as:",
+    options: ["Prepaid expense", "Liability", "Accrued income", "Drawings"],
+    answer: "Accrued income"
+  },
+  {
+    question: "How do you calculate prime cost?",
+    options: [
+      "Direct materials + Direct labor + Factory overhead",
+      "Direct materials + Direct labor",
+      "Indirect expenses + Salaries",
+      "Cost of production - Factory expenses"
+    ],
+    answer: "Direct materials + Direct labor"
+  },
+  {
+    question: "Which of the following is an indirect cost?",
+    options: ["Raw materials", "Factory rent", "Direct wages", "Royalties"],
+    answer: "Factory rent"
+  },
+  {
+    question: "What is depreciation?",
+    options: [
+      "Reduction in inventory value",
+      "Loss from sales returns",
+      "Allocation of cost of asset over useful life",
+      "Increase in capital"
+    ],
+    answer: "Allocation of cost of asset over useful life"
+  },
+  {
+    question: "Which book is not a book of original entry?",
+    options: [
+      "Cash book",
+      "Journal",
+      "Trial balance",
+      "Sales day book"
+    ],
+    answer: "Trial balance"
+  },
+  {
+    question: "How is petty cash replenished?",
+    options: [
+      "Credit sales",
+      "Cash withdrawals",
+      "Imprest system",
+      "Ledger transfers"
+    ],
+    answer: "Imprest system"
+  },
+  {
+    question: "Calculate closing stock: Opening stock = GHS5,000, Purchases = GHS15,000, Cost of sales = GHS10,000",
+    options: ["GHS5,000", "GHS10,000", "GHS15,000", "GHS20,000"],
+    answer: "GHS10,000"
+  },
+  {
+    question: "Bad debts are classified under:",
+    options: ["Fixed assets", "Revenue", "Expenses", "Capital"],
+    answer: "Expenses"
+  },
+  {
+    question: "Why are control accounts prepared?",
+    options: [
+      "To record fixed assets",
+      "To help locate errors",
+      "To replace ledgers",
+      "To track petty cash"
+    ],
+    answer: "To help locate errors"
+  },
+  {
+    question: "What is a distinguishing feature of computerized accounting?",
+    options: [
+      "Use of vouchers",
+      "Manual calculation",
+      "Automated error checking",
+      "Ledger balancing"
+    ],
+    answer: "Automated error checking"
+  },
+  {
+    question: "Which ledger contains the wages account?",
+    options: ["Sales ledger", "General ledger", "Purchases ledger", "Cash book"],
+    answer: "General ledger"
+  },
+  {
+    question: "Which type of account is 'Rent received'?",
+    options: ["Asset", "Expense", "Income", "Liability"],
+    answer: "Income"
+  },
+  {
+    question: "What type of asset is goodwill?",
+    options: ["Tangible", "Current", "Fictitious", "Intangible"],
+    answer: "Intangible"
+  },
+  {
+    question: "What is the main difference between capital and revenue expenditure?",
+    options: [
+      "Capital expenditure recurs annually",
+      "Revenue expenditure is recorded in balance sheet",
+      "Capital expenditure benefits more than one accounting period",
+      "Revenue expenditure creates assets"
+    ],
+    answer: "Capital expenditure benefits more than one accounting period"
+  },
+  {
+    question: "Which of the following best describes a partnership?",
+    options: [
+      "Owned by one person",
+      "Run by the government",
+      "Owned by two or more persons sharing profits and liabilities",
+      "A limited liability company"
+    ],
+    answer: "Owned by two or more persons sharing profits and liabilities"
+  },
+  {
+    question: "Calculate goodwill if purchase price = GHS80,000 and net assets = GHS65,000.",
+    options: ["GHS15,000", "GHS80,000", "GHS65,000", "GHS145,000"],
+    answer: "GHS15,000"
+  },
+  {
+    question: "Which statement is affected when bad debts are written off?",
+    options: ["Cash Flow Statement", "Income Statement", "Balance Sheet", "Bank Reconciliation"],
+    answer: "Income Statement"
+  },
+  {
+    question: "In company accounts, which document outlines the company’s objectives?",
+    options: ["Articles of Association", "Memorandum of Association", "Prospectus", "Cash Flow Statement"],
+    answer: "Memorandum of Association"
+  },
+  {
+    question: "What is the key characteristic of the public sector?",
+    options: [
+      "Profit motive",
+      "Personal gain of owners",
+      "Provision of public goods and services",
+      "Owned by shareholders"
+    ],
+    answer: "Provision of public goods and services"
+  },
+  {
+    question: "In public sector accounting, what does recurrent expenditure refer to?",
+    options: ["Spending on buildings", "Spending on salaries and administration", "Spending on investments", "Spending on new equipment"],
+    answer: "Spending on salaries and administration"
+  },
+  {
+    question: "Which of the following is not a department in a departmental account?",
+    options: ["Sales", "Transport", "Stationery", "Creditors"],
+    answer: "Creditors"
+  },
+  {
+    question: "Calculate gross profit: Sales = GHS100,000, Cost of sales = GHS70,000.",
+    options: ["GHS170,000", "GHS30,000", "GHS100,000", "GHS70,000"],
+    answer: "GHS30,000"
+  },
+  {
+    question: "Which of the following is an intangible asset?",
+    options: ["Building", "Goodwill", "Machinery", "Inventory"],
+    answer: "Goodwill"
+  },
+
+  // Continue from question 461 to 500...
+
+  {
+    question: "What is the double entry for receiving interest income in bank?",
+    options: [
+      "Debit Interest Income, Credit Bank",
+      "Debit Bank, Credit Interest Income",
+      "Credit Interest Income, Credit Cash",
+      "Debit Capital, Credit Bank"
+    ],
+    answer: "Debit Bank, Credit Interest Income"
+  },
+  {
+    question: "In VAT accounting, if output VAT is GHS2,000 and input VAT is GHS500, how much VAT is payable?",
+    options: ["GHS2,500", "GHS500", "GHS1,500", "GHS1,000"],
+    answer: "GHS1,500"
+  },
+  {
+    question: "What is the main use of control accounts?",
+    options: [
+      "To replace ledgers",
+      "To detect errors and omissions",
+      "To record capital income",
+      "To track employee payments"
+    ],
+    answer: "To detect errors and omissions"
+  },
+  {
+    question: "Which ledger contains accounts of suppliers?",
+    options: ["General ledger", "Sales ledger", "Purchases ledger", "Nominal ledger"],
+    answer: "Purchases ledger"
+  },
+  {
+    question: "Calculate net profit: Gross profit = GHS50,000, Expenses = GHS30,000.",
+    options: ["GHS80,000", "GHS30,000", "GHS20,000", "GHS50,000"],
+    answer: "GHS20,000"
+  },
+  {
+    question: "Which financial statement shows the financial position at a point in time?",
+    options: ["Cash Flow Statement", "Income Statement", "Balance Sheet", "Ledger"],
+    answer: "Balance Sheet"
+  },
+  {
+    question: "Which principle is applied when expenses are recorded in the same period as the related revenues?",
+    options: ["Matching", "Going concern", "Consistency", "Prudence"],
+    answer: "Matching"
+  },
+  {
+    question: "Calculate production cost: Prime cost = GHS40,000, Factory overheads = GHS10,000.",
+    options: ["GHS30,000", "GHS10,000", "GHS50,000", "GHS60,000"],
+    answer: "GHS50,000"
+  },
+  {
+    question: "Which of the following is prepared by non-profit organizations?",
+    options: ["Income Statement", "Profit and Loss", "Income and Expenditure", "Trading Account"],
+    answer: "Income and Expenditure"
+  },
+  {
+    question: "Which entry closes off expense accounts at year end?",
+    options: [
+      "Debit Expense, Credit Capital",
+      "Debit Profit and Loss, Credit Expense",
+      "Debit Expense, Credit Profit and Loss",
+      "Credit Expense, Credit Profit and Loss"
+    ],
+    answer: "Debit Profit and Loss, Credit Expense"
+  },
+  {
+    question: "Which concept assumes a business will continue to operate indefinitely?",
+    options: [
+      "Matching concept",
+      "Accrual concept",
+      "Going concern concept",
+      "Consistency concept"
+    ],
+    answer: "Going concern concept"
+  },
+  {
+    question: "Calculate the total assets: Capital = GHS25,000, Liabilities = GHS15,000.",
+    options: ["GHS10,000", "GHS25,000", "GHS40,000", "GHS30,000"],
+    answer: "GHS40,000"
+  },
+  {
+    question: "Which ledger records individual debtors’ accounts?",
+    options: ["Sales Ledger", "General Ledger", "Purchases Ledger", "Nominal Ledger"],
+    answer: "Sales Ledger"
+  },
+  {
+    question: "What is the effect of drawing cash for personal use?",
+    options: [
+      "Increase in liabilities",
+      "Increase in capital",
+      "Reduction in assets and capital",
+      "Increase in revenue"
+    ],
+    answer: "Reduction in assets and capital"
+  },
+  {
+    question: "Which book of original entry is used to record goods sold on credit?",
+    options: ["Sales Day Book", "Cash Book", "Purchases Journal", "Returns Inwards Book"],
+    answer: "Sales Day Book"
+  },
+  {
+    question: "Calculate depreciation: Cost = GHS12,000, Useful life = 4 years.",
+    options: ["GHS4,000", "GHS3,000", "GHS2,500", "GHS5,000"],
+    answer: "GHS3,000"
+  },
+  {
+    question: "Which of the following is a current liability?",
+    options: ["Loan (10 years)", "Creditors", "Building", "Capital"],
+    answer: "Creditors"
+  },
+  {
+    question: "In club accounts, what does the accumulated fund represent?",
+    options: [
+      "Liabilities owed",
+      "The club’s surplus",
+      "Net assets of the club",
+      "Subscription income"
+    ],
+    answer: "Net assets of the club"
+  },
+  {
+    question: "What is the role of a cash flow statement?",
+    options: [
+      "To determine profitability",
+      "To record transactions",
+      "To show cash inflows and outflows",
+      "To calculate VAT"
+    ],
+    answer: "To show cash inflows and outflows"
+  },
+  {
+    question: "If prime cost = GHS60,000 and factory overheads = GHS20,000, what is the production cost?",
+    options: ["GHS40,000", "GHS80,000", "GHS60,000", "GHS100,000"],
+    answer: "GHS80,000"
+  },
+  {
+    question: "Which concept requires expenses to be recognized when incurred, not when paid?",
+    options: [
+      "Accrual concept",
+      "Prudence concept",
+      "Realization concept",
+      "Consistency concept"
+    ],
+    answer: "Accrual concept"
+  },
+  {
+    question: "Calculate interest: GHS5,000 at 10% per annum for 2 years.",
+    options: ["GHS500", "GHS1,000", "GHS1,200", "GHS2,000"],
+    answer: "GHS1,000"
+  },
+  {
+    question: "Which of the following reduces gross profit?",
+    options: ["Rent", "Discount Allowed", "Sales Returns", "Interest Expense"],
+    answer: "Sales Returns"
+  },
+  {
+    question: "What is the entry for goods bought on credit?",
+    options: [
+      "Debit Purchases, Credit Bank",
+      "Debit Cash, Credit Purchases",
+      "Debit Purchases, Credit Creditors",
+      "Debit Capital, Credit Sales"
+    ],
+    answer: "Debit Purchases, Credit Creditors"
+  },
+  {
+    question: "In a manufacturing account, which of the following is part of factory overheads?",
+    options: ["Raw materials", "Factory Rent", "Sales Expenses", "Distribution Cost"],
+    answer: "Factory Rent"
+  },
+  {
+    question: "Calculate VAT: Selling price = GHS150, VAT rate = 15%",
+    options: ["GHS15", "GHS22.50", "GHS30", "GHS25"],
+    answer: "GHS22.50"
+  },
+  {
+    question: "A business purchased a machine for GHS30,000 with expected scrap value GHS6,000 over 6 years. Calculate annual depreciation.",
+    options: ["GHS6,000", "GHS5,000", "GHS4,000", "GHS3,000"],
+    answer: "GHS4,000"
+  },
+  {
+    question: "Which principle requires the same accounting methods to be used every year?",
+    options: ["Matching", "Consistency", "Accrual", "Prudence"],
+    answer: "Consistency"
+  },
+  {
+    question: "If capital at start = GHS40,000, drawings = GHS5,000, profit = GHS10,000, what is closing capital?",
+    options: ["GHS55,000", "GHS45,000", "GHS50,000", "GHS35,000"],
+    answer: "GHS45,000"
+  },
+  {
+    question: "What is the effect of over-depreciation on profit?",
+    options: ["No effect", "Increases profit", "Decreases profit", "Increases asset value"],
+    answer: "Decreases profit"
+  },
+  {
+    question: "Which of these is an indirect expense?",
+    options: ["Factory wages", "Rent", "Raw materials", "Direct labor"],
+    answer: "Rent"
+  },
+  {
+    question: "In single entry, if opening capital = GHS20,000, closing capital = GHS25,000, and drawings = GHS2,000, what is profit?",
+    options: ["GHS3,000", "GHS5,000", "GHS7,000", "GHS2,000"],
+    answer: "GHS7,000"
+  },
+  {
+    question: "Which of these items appears in the trading account?",
+    options: ["Rent", "Sales", "Debtors", "Bank overdraft"],
+    answer: "Sales"
+  },
+  {
+    question: "Which of the following is a fixed cost in manufacturing?",
+    options: ["Direct materials", "Wages", "Depreciation of machinery", "Commission on sales"],
+    answer: "Depreciation of machinery"
+  },
+  {
+    question: "Calculate net sales: Sales = GHS120,000, Sales returns = GHS10,000.",
+    options: ["GHS130,000", "GHS110,000", "GHS120,000", "GHS100,000"],
+    answer: "GHS110,000"
+  },
+  {
+    question: "Which of these is a feature of computerized accounting?",
+    options: [
+      "Manual recording",
+      "Delayed reporting",
+      "Real-time processing",
+      "Handwritten ledgers"
+    ],
+    answer: "Real-time processing"
+  },
+  {
+    question: "In VAT returns, output VAT is VAT on:",
+    options: ["Purchases", "Sales", "Expenses", "Returns"],
+    answer: "Sales"
+  },
+  {
+    question: "Which source document is used for recording credit purchases?",
+    options: ["Invoice", "Receipt", "Cheque", "Debit note"],
+    answer: "Invoice"
+  },
+  {
+    question: "Which account shows money spent and received by a club?",
+    options: [
+      "Income and Expenditure Account",
+      "Trading Account",
+      "Receipts and Payments Account",
+      "Cash Flow Statement"
+    ],
+    answer: "Receipts and Payments Account"
+  },
+  {
+    question: "Calculate profit: Revenue = GHS90,000, Expenses = GHS75,000.",
+    options: ["GHS20,000", "GHS15,000", "GHS10,000", "GHS5,000"],
+    answer: "GHS15,000"
+  },
+  {
+    question: "What is the double entry for payment of rent by cheque?",
+    options: [
+      "Debit Rent, Credit Cash",
+      "Debit Rent, Credit Bank",
+      "Debit Bank, Credit Rent",
+      "Debit Cash, Credit Rent"
+    ],
+    answer: "Debit Rent, Credit Bank"
+  },
+  {
+    question: "What is the accounting treatment for a provision for doubtful debts?",
+    options: [
+      "It increases revenue",
+      "It reduces net profit",
+      "It is added to trade receivables",
+      "It is ignored"
+    ],
+    answer: "It reduces net profit"
+  },
+  {
+    question: "What are factory overheads?",
+    options: [
+      "Direct material costs",
+      "Costs not directly traceable to a unit",
+      "Selling costs",
+      "Office costs"
+    ],
+    answer: "Costs not directly traceable to a unit"
+  },
+  {
+    question: "Which account is credited when capital is introduced in cash?",
+    options: ["Cash", "Capital", "Sales", "Bank"],
+    answer: "Capital"
+  },
+  {
+    question: "Which is a capital expenditure?",
+    options: ["Wages", "Rent", "Purchase of machinery", "Telephone bill"],
+    answer: "Purchase of machinery"
+  },
+  {
+    question: "In partnership accounts, what is a revaluation account used for?",
+    options: [
+      "To distribute profits",
+      "To adjust asset values before admission or retirement",
+      "To pay off creditors",
+      "To record drawings"
+    ],
+    answer: "To adjust asset values before admission or retirement"
+  },
+  {
+    question: "Calculate total production cost: Prime Cost = GHS70,000, Factory Overheads = GHS30,000.",
+    options: ["GHS100,000", "GHS90,000", "GHS70,000", "GHS30,000"],
+    answer: "GHS100,000"
+  },
+  {
+    question: "What is a trial balance?",
+    options: [
+      "A statement showing profit or loss",
+      "A summary of all transactions",
+      "A statement listing debit and credit balances",
+      "A record of fixed assets"
+    ],
+    answer: "A statement listing debit and credit balances"
+  },
+  {
+    question: "Which type of expenditure appears in the income and expenditure account?",
+    options: ["Capital", "Revenue", "Investments", "Drawings"],
+    answer: "Revenue"
+  },
+  {
+    question: "Which of the following is not a qualitative characteristic of financial statements?",
+    options: ["Relevance", "Comparability", "Complexity", "Faithful representation"],
+    answer: "Complexity"
+  },
+  {
+    question: "What does prudence in accounting mean?",
+    options: [
+      "Overstating profits",
+      "Ignoring losses",
+      "Anticipating profits early",
+      "Recording losses as soon as they are expected"
+    ],
+    answer: "Recording losses as soon as they are expected"
+  },
+  {
+    question: "If Credit Sales = GHS80,000 and Returns Inwards = GHS5,000, what are net sales?",
+    options: ["GHS85,000", "GHS75,000", "GHS80,000", "GHS70,000"],
+    answer: "GHS75,000"
+  },
+  {
+    question: "Which book records goods returned by customers?",
+    options: ["Returns Inwards Book", "Sales Book", "Purchases Book", "Petty Cash Book"],
+    answer: "Returns Inwards Book"
+  }
 ];
 export default accountingQuestions;
