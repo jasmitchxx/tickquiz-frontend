@@ -40,13 +40,13 @@ function UseAccessCodePage() {
           })
         );
 
-        // Redirect to subject selection or quiz start
+        // Redirect to start page directly
         setTimeout(() => {
           if (usageCount >= 2) {
             alert('You have used all your attempts.');
             navigate('/request-access');
           } else {
-            navigate('/select-subject'); // or `/start` if you skip subject choice
+            navigate('/start'); // ? go straight to quiz start
           }
         }, 1500);
       } else {
