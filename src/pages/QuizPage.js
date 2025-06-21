@@ -3,62 +3,80 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
 
-// Define allowed subjects to match QuizStartPage
-const allowedSubjects = [
-  "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
-  "Core Science", "Economics", "Geography", "Electiveict",
-  "English", "Socialstudies", "Accounting", "Cost Accounting",
-  "Business Management"
-];
-
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name = '', subject = '', code = '', school = '' } = user;
-
-  const normalize = (str) => str.trim().toLowerCase().replace(/\s+/g, '');
-  const normalizedSubject = normalize(subject);
-  const allowedSubjectsMap = useMemo(
-    () => Object.fromEntries(allowedSubjects.map(subj => [normalize(subj), subj])),
-    []
-  );
-
-  const subjectKey = allowedSubjectsMap[normalizedSubject];
+  const { name, subject, code, school } = user;
 
   const MAX_QUESTIONS = 60;
-
-  const subjectQuestions = useMemo(() => {
-    const questions = questionsData[normalizedSubject];
-    if (!questions) {
-      console.warn(`No questions found for normalized subject: "${normalizedSubject}"`);
-    }
-    return questions || [];
-  }, [normalizedSubject]);
+  const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
+  const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(3600);
+  const [timeLeft, setTimeLeft] = useState(60 * 60);
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
 
-  const endQuiz = useCallback(() => setFinished(true), []);
-
-  // Prevent access with invalid subject
-  useEffect(() => {
-    const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
-    if (quizDone) return navigate('/result');
-
-    if (!name || !school || !subject || !subjectKey) {
-      alert("Invalid or missing quiz details. Please start again.");
-      return navigate('/');
+  const shuffleArray = (arr) => {
+    const array = [...arr];
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+  };
 
-    if (!subjectQuestions || subjectQuestions.length === 0) {
-      alert("No questions found for the selected subject.");
-      return navigate('/');
+  const endQuiz = useCallback(() => {
+    setFinished(true);
+  }, []);
+
+  useEffect(() => {
+    if (!finished || hasSaved) return;
+
+    const saveResults = async () => {
+      if (!name || !school || !subject || typeof score !== 'number') {
+        console.warn('Missing or invalid quiz data. Aborting save.');
+        return;
+      }
+
+      const payload = {
+        name,
+        school,
+        subject: normalizedSubject,
+        score: Number(score),
+        timestamp: new Date().toISOString(),
+        code,
+      };
+
+      try {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
+        if (!saveRes.data.success) throw new Error(saveRes.data.message);
+
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        } catch {}
+
+        setHasSaved(true);
+        localStorage.removeItem('quizProgress');
+        localStorage.setItem(`quizCompleted-${code}`, 'true');
+      } catch (err) {
+        console.error('Save error:', err.response?.data || err.message);
+        alert('There was a problem saving your result. Please try again.');
+      }
+    };
+
+    saveResults();
+  }, [finished, hasSaved, name, school, subject, score, code, normalizedSubject]);
+
+  useEffect(() => {
+    if (!name || !subject || subjectQuestions.length === 0) {
+      navigate('/');
+      return;
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
@@ -70,47 +88,29 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+      const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, name, subject, subjectKey, subjectQuestions, school, code]);
+  }, [navigate, name, subject, subjectQuestions, code]);
 
   useEffect(() => {
-    if (!finished || hasSaved) return;
-
-    const saveResults = async () => {
-      try {
-        const payload = {
-          name,
-          school,
-          subject: subjectKey,
-          score,
-          timestamp: new Date().toISOString(),
-          code,
-        };
-
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-
-        if (!saveRes.data.success) throw new Error(saveRes.data.message);
-
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
-        setHasSaved(true);
-        localStorage.removeItem('quizProgress');
-        localStorage.setItem(`quizCompleted-${code}`, 'true');
-      } catch (err) {
-        console.error('Save error:', err.response?.data || err.message);
-        alert('Problem saving your result. Please try again.');
-      }
+    if (!code || shuffledQuestions.length === 0) return;
+    const progress = {
+      code,
+      current,
+      answers,
+      score,
+      timeLeft,
+      finished,
+      questions: shuffledQuestions,
     };
-
-    saveResults();
-  }, [finished, hasSaved, name, school, subjectKey, score, code, normalizedSubject]);
+    localStorage.setItem('quizProgress', JSON.stringify(progress));
+  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
   useEffect(() => {
     if (finished) return;
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
           endQuiz();
@@ -122,49 +122,31 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  useEffect(() => {
-    if (!code || shuffledQuestions.length === 0) return;
-    localStorage.setItem('quizProgress', JSON.stringify({
-      code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions,
-    }));
-  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
-
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers(prev => [...prev, {
-      question: q.question,
-      selected,
-      correct: q.answer,
-      isCorrect
-    }]);
+    setAnswers((prev) => [
+      ...prev,
+      { question: q.question, selected, correct: q.answer, isCorrect },
+    ]);
+    if (isCorrect) setScore((prev) => prev + 1);
 
-    if (isCorrect) setScore(prev => prev + 1);
-    if (current + 1 === shuffledQuestions.length) endQuiz();
-    else setCurrent(current + 1);
-  };
-
-  const shuffleArray = (arr) => {
-    const array = [...arr];
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    if (current + 1 === shuffledQuestions.length) {
+      endQuiz();
+    } else {
+      setCurrent(current + 1);
     }
-    return array;
   };
 
   const formatTime = () => {
-    const mins = Math.floor(timeLeft / 60).toString().padStart(2, '0');
-    const secs = (timeLeft % 60).toString().padStart(2, '0');
+    const safeTime = Number.isFinite(timeLeft) ? timeLeft : 0;
+    const mins = Math.floor(safeTime / 60).toString().padStart(2, '0');
+    const secs = (safeTime % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
+
+  const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
@@ -183,19 +165,25 @@ function QuizPage() {
     const { grade, level, color } = getGrade(percentage);
 
     return (
-      <div className="min-h-screen bg-blue-100 p-6 text-center">
-        <div className="max-w-xl mx-auto bg-white shadow-md rounded-xl p-6">
-          <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
-          <p className="text-lg">Name: <strong>{name}</strong></p>
-          <p className="text-lg">Subject: <strong>{subjectKey}</strong></p>
-          <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-          <p className={`text-xl mt-2 font-semibold ${color}`}>
-            Grade: <strong>{grade}</strong> – <em>{level}</em>
-          </p>
-          <div className="mt-6 space-x-4">
-            <button onClick={() => setReviewing(true)} className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700">Review Answers</button>
-            <button onClick={() => navigate('/leaderboard')} className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Leaderboard</button>
-          </div>
+      <div className="p-6 text-center bg-blue-100 min-h-screen">
+        <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
+        <p className="text-lg">Name: <strong>{name}</strong></p>
+        <p className="text-lg">Subject: <strong>{subject}</strong></p>
+        <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
+        <p className={`text-xl mt-2 font-semibold ${color}`}>
+          Grade: <strong>{grade}</strong> – <em>{level}</em>
+        </p>
+
+        <div className="mt-6 space-x-4">
+          <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>
+            Review Answers
+          </button>
+          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
+            View Leaderboard
+          </button>
+          <button className="px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700" onClick={() => navigate('/request-access')}>
+            Back to Home
+          </button>
         </div>
       </div>
     );
@@ -203,19 +191,31 @@ function QuizPage() {
 
   if (reviewing) {
     return (
-      <div className="min-h-screen bg-gray-100 p-6">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4">Review Answers</h2>
-          {answers.map((item, index) => (
-            <div key={index} className="mb-4 p-4 bg-white border rounded shadow">
-              <p className="font-semibold">{index + 1}. {item.question}</p>
-              <p>Your answer: <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>{item.selected}</span></p>
-              {!item.isCorrect && <p>Correct: <span className="text-green-600">{item.correct}</span></p>}
-            </div>
-          ))}
-          <div className="text-center mt-6">
-            <button onClick={() => navigate('/start')} className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Start Again</button>
+      <div className="p-6 bg-blue-100 min-h-screen">
+        <h2 className="text-2xl font-bold mb-4 text-center">Review Answers</h2>
+        {answers.map((item, index) => (
+          <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
+            <p className="font-semibold">{index + 1}. {item.question}</p>
+            <p>
+              Your answer:{' '}
+              <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
+                {item.selected}
+              </span>
+            </p>
+            {!item.isCorrect && (
+              <p>
+                Correct answer: <span className="text-green-600">{item.correct}</span>
+              </p>
+            )}
           </div>
+        ))}
+        <div className="text-center mt-6 space-x-4">
+          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
+            Return to Start
+          </button>
+          <button className="px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700" onClick={() => navigate('/request-access')}>
+            Back to Home
+          </button>
         </div>
       </div>
     );
@@ -224,34 +224,38 @@ function QuizPage() {
   const currentQuestion = shuffledQuestions[current];
 
   return (
-    <div className="min-h-screen bg-blue-50 p-6">
-      <div className="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-lg">
-        <div className="mb-4">
-          <div className="flex justify-between text-sm font-medium mb-2">
-            <span>Time Left</span>
-            <span className="font-mono">{formatTime()}</span>
-          </div>
-          <div className="w-full bg-gray-200 rounded-full h-4">
-            <div className="bg-green-500 h-4 rounded-full" style={{ width: `${(timeLeft / 3600) * 100}%` }} />
-          </div>
+    <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
+      <div className="mb-4">
+        <div className="flex justify-between mb-1">
+          <span className="text-sm font-medium">Time Left</span>
+          <span className="text-sm font-mono">{formatTime()}</span>
         </div>
+        <div className="w-full bg-gray-200 rounded-full h-4">
+          <div
+            className="bg-green-500 h-4 rounded-full transition-all duration-500"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+      </div>
+
+      <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-start">
           {Array.isArray(currentQuestion?.options)
-            ? currentQuestion.options.map((opt, idx) => (
+            ? currentQuestion.options.map((option, index) => (
               <button
-                key={idx}
-                className="bg-white border px-6 py-3 rounded shadow hover:bg-gray-200 transition"
-                onClick={() => handleAnswer(opt)}
+                key={index}
+                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                onClick={() => handleAnswer(option)}
               >
-                {opt}
+                {option}
               </button>
             ))
             : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
               <button
                 key={key}
-                className="bg-white border px-6 py-3 rounded shadow hover:bg-gray-200 transition"
+                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
                 onClick={() => handleAnswer(key)}
               >
                 {key}: {val}
