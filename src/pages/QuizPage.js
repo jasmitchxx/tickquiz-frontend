@@ -10,6 +10,7 @@ function QuizPage() {
 
   const MAX_QUESTIONS = 60;
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
+
   const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
 
   const [current, setCurrent] = useState(0);
@@ -20,6 +21,12 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
+
+  // ?? Redirect immediately if quiz already completed
+  if (localStorage.getItem(`quizCompleted-${code}`) === 'true') {
+    navigate('/result');
+    return null;
+  }
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -56,10 +63,6 @@ function QuizPage() {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
         const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
         if (!saveRes.data.success) throw new Error(saveRes.data.message);
-
-        try {
-          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
-        } catch {}
 
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
@@ -181,8 +184,8 @@ function QuizPage() {
           <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
             View Leaderboard
           </button>
-          <button className="px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700" onClick={() => navigate('/request-access')}>
-            Back to Home
+          <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/request-access')}>
+            Go to Home
           </button>
         </div>
       </div>
@@ -209,11 +212,8 @@ function QuizPage() {
             )}
           </div>
         ))}
-        <div className="text-center mt-6 space-x-4">
-          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/start')}>
-            Return to Start
-          </button>
-          <button className="px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700" onClick={() => navigate('/request-access')}>
+        <div className="text-center mt-6">
+          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/request-access')}>
             Back to Home
           </button>
         </div>
@@ -239,28 +239,30 @@ function QuizPage() {
       </div>
 
       <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
+        <h2 className="text-xl font-semibold mb-4">
+          Question {current + 1} of {shuffledQuestions.length}
+        </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
         <div className="flex flex-wrap gap-4 justify-start">
           {Array.isArray(currentQuestion?.options)
             ? currentQuestion.options.map((option, index) => (
-              <button
-                key={index}
-                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                onClick={() => handleAnswer(option)}
-              >
-                {option}
-              </button>
-            ))
+                <button
+                  key={index}
+                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                  onClick={() => handleAnswer(option)}
+                >
+                  {option}
+                </button>
+              ))
             : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
-              <button
-                key={key}
-                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                onClick={() => handleAnswer(key)}
-              >
-                {key}: {val}
-              </button>
-            ))}
+                <button
+                  key={key}
+                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                  onClick={() => handleAnswer(key)}
+                >
+                  {key}: {val}
+                </button>
+              ))}
         </div>
       </div>
     </div>
