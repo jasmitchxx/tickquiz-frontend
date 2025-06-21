@@ -20,12 +20,11 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   useEffect(() => {
     const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
-    if (quizDone) {
-      navigate('/result');
-    }
+    if (quizDone) navigate('/result');
   }, [code, navigate]);
 
   const shuffleArray = (arr) => {
@@ -58,7 +57,6 @@ function QuizPage() {
       };
 
       try {
-        // Save result first — must succeed
         const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
         if (!saveRes.data.success) throw new Error(saveRes.data.message || 'Save failed');
 
@@ -66,14 +64,12 @@ function QuizPage() {
         localStorage.removeItem('quizProgress');
         localStorage.setItem(`quizCompleted-${code}`, 'true');
 
-        // Optional: increment usage (background)
         try {
           await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
         } catch (err) {
           console.warn('Usage tracking failed:', err.response?.data || err.message);
         }
 
-        // Optional: leaderboard fetch
         try {
           await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
         } catch (err) {
@@ -103,6 +99,7 @@ function QuizPage() {
       setTimeLeft(saved.timeLeft);
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
+      setSelectedAnswer(saved.answers[saved.current]?.selected || null);
     } else {
       const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
       setShuffledQuestions(shuffled);
@@ -130,14 +127,36 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  const handleAnswer = (selected) => {
+  const handleNext = () => {
     const q = shuffledQuestions[current];
-    const isCorrect = selected === q.answer;
+    const isCorrect = selectedAnswer === q.answer;
+    const alreadyAnswered = answers[current];
 
-    setAnswers((prev) => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
-    if (isCorrect) setScore((prev) => prev + 1);
+    if (!alreadyAnswered) {
+      const updatedAnswers = [...answers];
+      updatedAnswers[current] = {
+        question: q.question,
+        selected: selectedAnswer,
+        correct: q.answer,
+        isCorrect,
+      };
+      setAnswers(updatedAnswers);
+      if (isCorrect) setScore((prev) => prev + 1);
+    }
 
-    current + 1 === shuffledQuestions.length ? endQuiz() : setCurrent(current + 1);
+    if (current + 1 === shuffledQuestions.length) {
+      endQuiz();
+    } else {
+      setCurrent(current + 1);
+      setSelectedAnswer(answers[current + 1]?.selected || null);
+    }
+  };
+
+  const handleBack = () => {
+    if (current > 0) {
+      setCurrent(current - 1);
+      setSelectedAnswer(answers[current - 1]?.selected || null);
+    }
   };
 
   const formatTime = () => {
@@ -230,13 +249,16 @@ function QuizPage() {
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
           <p className="text-lg mb-4">{currentQuestion?.question}</p>
-          <div className="flex flex-wrap gap-4 justify-start">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {Array.isArray(currentQuestion?.options)
               ? currentQuestion.options.map((option, index) => (
                 <button
                   key={index}
-                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
-                  onClick={() => handleAnswer(option)}
+                  disabled={!!answers[current]}
+                  className={`border px-6 py-3 rounded-xl shadow bg-white hover:bg-gray-100
+                    ${selectedAnswer === option ? 'ring-2 ring-blue-500' : ''}`}
+                  onClick={() => setSelectedAnswer(option)}
                 >
                   {option}
                 </button>
@@ -244,12 +266,31 @@ function QuizPage() {
               : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
                 <button
                   key={key}
-                  className="bg-white border rounded-xl px-6 py-3 shadow hover:bg-gray-200 transition duration-200"
-                  onClick={() => handleAnswer(key)}
+                  disabled={!!answers[current]}
+                  className={`border px-6 py-3 rounded-xl shadow bg-white hover:bg-gray-100
+                    ${selectedAnswer === key ? 'ring-2 ring-blue-500' : ''}`}
+                  onClick={() => setSelectedAnswer(key)}
                 >
                   {key}: {val}
                 </button>
               ))}
+          </div>
+
+          <div className="mt-6 flex justify-between">
+            <button
+              onClick={handleBack}
+              disabled={current === 0}
+              className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50"
+            >
+              Back
+            </button>
+            <button
+              onClick={handleNext}
+              disabled={!selectedAnswer}
+              className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+            >
+              {current + 1 === shuffledQuestions.length ? 'Finish' : 'Next'}
+            </button>
           </div>
         </div>
       </div>

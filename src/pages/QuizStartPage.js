@@ -10,15 +10,29 @@ function QuizStartPage() {
   const [school, setSchool] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
 
-  // ? Prevent quiz restart if already completed
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem('quizUser'));
     const completedKey = savedUser?.code && `quizCompleted-${savedUser.code}`;
     const isCompleted = completedKey && localStorage.getItem(completedKey) === 'true';
 
+    // ? Optional: check if user has paid (if you set it after Paystack)
+    const hasPaid = savedUser?.paid === true;
+
+    // Redirect if already completed or not paid (optional)
     if (isCompleted) {
-      navigate('/result', { replace: true }); // ? prevents back button going back here
+      navigate('/result', { replace: true });
     }
+
+    // ? Prevent back-button from going back here after completion
+    const blockBack = () => {
+      window.history.pushState(null, null, window.location.href);
+    };
+    window.history.pushState(null, null, window.location.href);
+    window.addEventListener('popstate', blockBack);
+
+    return () => {
+      window.removeEventListener('popstate', blockBack);
+    };
   }, [navigate]);
 
   const handleStartQuiz = () => {
@@ -27,6 +41,7 @@ function QuizStartPage() {
       return;
     }
 
+    // Prevent retaking quiz
     const existingKey = Object.keys(localStorage).find((key) =>
       key.startsWith('quizCompleted-')
     );
@@ -43,6 +58,7 @@ function QuizStartPage() {
       school: school.trim(),
       subject: selectedSubject,
       code,
+      paid: true, // ? If you want to flag payment status (optional)
     };
 
     localStorage.setItem('quizUser', JSON.stringify(user));
@@ -58,6 +74,7 @@ function QuizStartPage() {
         border: '1px solid #ddd',
         borderRadius: 10,
         textAlign: 'center',
+        background: 'white',
       }}
     >
       <h2>Welcome to TickQuiz!</h2>

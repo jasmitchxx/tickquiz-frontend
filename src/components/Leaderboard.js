@@ -22,7 +22,8 @@ const Leaderboard = () => {
 
     try {
       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalized}`);
-      setResults(res.data.results || []);
+      // ? Safely support both array and object response formats
+      setResults(Array.isArray(res.data) ? res.data : res.data.results || []);
     } catch (err) {
       console.error('Failed to fetch leaderboard:', err);
     } finally {
@@ -43,10 +44,7 @@ const Leaderboard = () => {
 
     try {
       const res = await axios.delete(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
-        data: {
-          secret: password,
-          subject: normalized
-        }
+        data: { secret: password, subject: normalized }
       });
 
       if (res.data.success) {

@@ -3261,17 +3261,6 @@ answer: "Ability of a business to meet short-term obligations"
       "Balance sheet",
       "Cash flow statement"],
 answer: "Income statement (profit and loss account)"
-  },  
-// Add more questions here
-  {
-    question: "What is the purpose of a trial balance?",
-    options: {
-      A: "To calculate profit",
-      B: "To verify that debits equal credits",
-      C: "To prepare bank reconciliation",
-      D: "To determine VAT"},  
-    answer: "B"
-  }
-],
+  }  
 ];
 export default accountingQuestions;
