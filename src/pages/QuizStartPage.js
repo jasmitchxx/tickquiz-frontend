@@ -9,10 +9,10 @@ function QuizStartPage() {
   const [error, setError] = useState('');
 
   const subjects = [
-    "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
-    "Core Science", "Economics", "Geography", "Electiveict",
-    "English", "Socialstudies", "Accounting", "Cost Accounting",
-    "Business Management"
+    'Physics', 'Chemistry', 'Add Maths', 'Biology', 'Core Maths',
+    'Core Science', 'Economics', 'Geography', 'Electiveict',
+    'English', 'Socialstudies', 'Accounting', 'Cost Accounting',
+    'Business Management'
   ];
 
   useEffect(() => {
@@ -31,20 +31,14 @@ function QuizStartPage() {
   const handleStart = (e) => {
     e.preventDefault();
 
-    if (!name || !school || !subject) {
+    if (!name.trim() || !school.trim() || !subject.trim()) {
       setError('All fields are required.');
       return;
     }
 
-    const userData = JSON.parse(localStorage.getItem('quizUser')) || {};
     localStorage.setItem(
       'quizUser',
-      JSON.stringify({
-        ...userData,
-        name,
-        school,
-        subject,
-      })
+      JSON.stringify({ name, school, subject })
     );
 
     navigate('/quiz');
@@ -99,7 +93,7 @@ function QuizStartPage() {
         </form>
       </div>
 
-      {/* Right Side Content */}
+      {/* Right Info Section */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-10 bg-blue-50">
         <div className="text-center max-w-md">
           <h1 className="text-4xl font-extrabold text-blue-800 mb-4">Ready to Challenge Yourself?</h1>

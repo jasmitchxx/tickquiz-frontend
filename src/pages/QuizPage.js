@@ -3,94 +3,62 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
 
+// Define allowed subjects to match QuizStartPage
+const allowedSubjects = [
+  "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
+  "Core Science", "Economics", "Geography", "Electiveict",
+  "English", "Socialstudies", "Accounting", "Cost Accounting",
+  "Business Management"
+];
+
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject = '', code, school } = user;
+  const { name = '', subject = '', code = '', school = '' } = user;
 
-  const cleanedSubject = subject.trim();
-  console.log("?? Loaded subject from quizUser:", cleanedSubject);
+  const normalize = (str) => str.trim().toLowerCase().replace(/\s+/g, '');
+  const normalizedSubject = normalize(subject);
+  const allowedSubjectsMap = useMemo(
+    () => Object.fromEntries(allowedSubjects.map(subj => [normalize(subj), subj])),
+    []
+  );
+
+  const subjectKey = allowedSubjectsMap[normalizedSubject];
 
   const MAX_QUESTIONS = 60;
-  const normalizedSubject = cleanedSubject?.toLowerCase().replace(/\s+/g, '');
 
-  const subjectQuestions = useMemo(
-    () => questionsData[cleanedSubject] || [],
-    [cleanedSubject]
-  );
+  const subjectQuestions = useMemo(() => {
+    const questions = questionsData[normalizedSubject];
+    if (!questions) {
+      console.warn(`No questions found for normalized subject: "${normalizedSubject}"`);
+    }
+    return questions || [];
+  }, [normalizedSubject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60);
+  const [timeLeft, setTimeLeft] = useState(3600);
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
 
-  // Prevent access if quiz is already done
-  useEffect(() => {
-    const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
-    if (quizDone) {
-      navigate('/result');
-    }
-  }, [code, navigate]);
-
-  const shuffleArray = (arr) => {
-    const array = [...arr];
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
-
   const endQuiz = useCallback(() => setFinished(true), []);
 
-  // Save result once quiz is finished
+  // Prevent access with invalid subject
   useEffect(() => {
-    if (!finished || hasSaved) return;
+    const quizDone = localStorage.getItem(`quizCompleted-${code}`) === 'true';
+    if (quizDone) return navigate('/result');
 
-    const saveResults = async () => {
-      if (!name || !school || !subject || typeof score !== 'number') {
-        console.warn('Missing or invalid quiz data. Aborting save.');
-        return;
-      }
+    if (!name || !school || !subject || !subjectKey) {
+      alert("Invalid or missing quiz details. Please start again.");
+      return navigate('/');
+    }
 
-      const payload = {
-        name,
-        school,
-        subject: normalizedSubject,
-        score: Number(score),
-        timestamp: new Date().toISOString(),
-        code,
-      };
-
-      try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-        if (!saveRes.data.success) throw new Error(saveRes.data.message);
-
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
-        setHasSaved(true);
-
-        localStorage.removeItem('quizProgress');
-        localStorage.setItem(`quizCompleted-${code}`, 'true');
-      } catch (err) {
-        console.error('? Save error:', err.response?.data || err.message);
-        alert('There was a problem saving your result. Please try again.');
-      }
-    };
-
-    saveResults();
-  }, [finished, hasSaved, name, school, subject, score, code, normalizedSubject]);
-
-  // Setup initial questions
-  useEffect(() => {
-    if (!name || !cleanedSubject || subjectQuestions.length === 0) {
-      alert("Quiz data is missing or subject is invalid.");
-      navigate('/');
-      return;
+    if (!subjectQuestions || subjectQuestions.length === 0) {
+      alert("No questions found for the selected subject.");
+      return navigate('/');
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
@@ -102,31 +70,47 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions).slice(0, Math.min(MAX_QUESTIONS, subjectQuestions.length));
+      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, name, cleanedSubject, subjectQuestions, code]);
+  }, [navigate, name, subject, subjectKey, subjectQuestions, school, code]);
 
-  // Save progress
   useEffect(() => {
-    if (!code || shuffledQuestions.length === 0) return;
-    const progress = {
-      code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions,
-    };
-    localStorage.setItem('quizProgress', JSON.stringify(progress));
-  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
+    if (!finished || hasSaved) return;
 
-  // Timer
+    const saveResults = async () => {
+      try {
+        const payload = {
+          name,
+          school,
+          subject: subjectKey,
+          score,
+          timestamp: new Date().toISOString(),
+          code,
+        };
+
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
+
+        if (!saveRes.data.success) throw new Error(saveRes.data.message);
+
+        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        setHasSaved(true);
+        localStorage.removeItem('quizProgress');
+        localStorage.setItem(`quizCompleted-${code}`, 'true');
+      } catch (err) {
+        console.error('Save error:', err.response?.data || err.message);
+        alert('Problem saving your result. Please try again.');
+      }
+    };
+
+    saveResults();
+  }, [finished, hasSaved, name, school, subjectKey, score, code, normalizedSubject]);
+
   useEffect(() => {
     if (finished) return;
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 1) {
           clearInterval(timer);
           endQuiz();
@@ -138,31 +122,49 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
+  useEffect(() => {
+    if (!code || shuffledQuestions.length === 0) return;
+    localStorage.setItem('quizProgress', JSON.stringify({
+      code,
+      current,
+      answers,
+      score,
+      timeLeft,
+      finished,
+      questions: shuffledQuestions,
+    }));
+  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
+
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers((prev) => [
-      ...prev,
-      { question: q.question, selected, correct: q.answer, isCorrect },
-    ]);
-    if (isCorrect) setScore((prev) => prev + 1);
+    setAnswers(prev => [...prev, {
+      question: q.question,
+      selected,
+      correct: q.answer,
+      isCorrect
+    }]);
 
-    if (current + 1 === shuffledQuestions.length) {
-      endQuiz();
-    } else {
-      setCurrent(current + 1);
+    if (isCorrect) setScore(prev => prev + 1);
+    if (current + 1 === shuffledQuestions.length) endQuiz();
+    else setCurrent(current + 1);
+  };
+
+  const shuffleArray = (arr) => {
+    const array = [...arr];
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
   };
 
   const formatTime = () => {
-    const safeTime = Number.isFinite(timeLeft) ? timeLeft : 0;
-    const mins = Math.floor(safeTime / 60).toString().padStart(2, '0');
-    const secs = (safeTime % 60).toString().padStart(2, '0');
+    const mins = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    const secs = (timeLeft % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
-
-  const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
@@ -185,7 +187,7 @@ function QuizPage() {
         <div className="max-w-xl mx-auto bg-white shadow-md rounded-xl p-6">
           <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
           <p className="text-lg">Name: <strong>{name}</strong></p>
-          <p className="text-lg">Subject: <strong>{cleanedSubject}</strong></p>
+          <p className="text-lg">Subject: <strong>{subjectKey}</strong></p>
           <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
           <p className={`text-xl mt-2 font-semibold ${color}`}>
             Grade: <strong>{grade}</strong> – <em>{level}</em>
@@ -230,7 +232,7 @@ function QuizPage() {
             <span className="font-mono">{formatTime()}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4">
-            <div className="bg-green-500 h-4 rounded-full" style={{ width: `${progressPercent}%` }} />
+            <div className="bg-green-500 h-4 rounded-full" style={{ width: `${(timeLeft / 3600) * 100}%` }} />
           </div>
         </div>
         <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
