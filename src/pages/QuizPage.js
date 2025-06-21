@@ -10,7 +10,6 @@ function QuizPage() {
 
   const MAX_QUESTIONS = 60;
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
-
   const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
 
   const [current, setCurrent] = useState(0);
@@ -38,9 +37,7 @@ function QuizPage() {
     return array;
   };
 
-  const endQuiz = useCallback(() => {
-    setFinished(true);
-  }, []);
+  const endQuiz = useCallback(() => setFinished(true), []);
 
   useEffect(() => {
     if (!finished || hasSaved) return;
@@ -61,20 +58,31 @@ function QuizPage() {
       };
 
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        // Save result first — must succeed
         const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-        if (!saveRes.data.success) throw new Error(saveRes.data.message);
-
-        try {
-          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
-        } catch {}
+        if (!saveRes.data.success) throw new Error(saveRes.data.message || 'Save failed');
 
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
         localStorage.setItem(`quizCompleted-${code}`, 'true');
+
+        // Optional: increment usage (background)
+        try {
+          await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        } catch (err) {
+          console.warn('Usage tracking failed:', err.response?.data || err.message);
+        }
+
+        // Optional: leaderboard fetch
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        } catch (err) {
+          console.warn('Leaderboard fetch failed:', err.response?.data || err.message);
+        }
+
       } catch (err) {
         console.error('Save error:', err.response?.data || err.message);
-        alert('There was a problem saving your result. Please try again.');
+        alert('?? Your result could not be saved. Please try again later.');
       }
     };
 
@@ -103,15 +111,7 @@ function QuizPage() {
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = {
-      code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions,
-    };
+    const progress = { code, current, answers, score, timeLeft, finished, questions: shuffledQuestions };
     localStorage.setItem('quizProgress', JSON.stringify(progress));
   }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
 
@@ -134,17 +134,10 @@ function QuizPage() {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers((prev) => [
-      ...prev,
-      { question: q.question, selected, correct: q.answer, isCorrect },
-    ]);
+    setAnswers((prev) => [...prev, { question: q.question, selected, correct: q.answer, isCorrect }]);
     if (isCorrect) setScore((prev) => prev + 1);
 
-    if (current + 1 === shuffledQuestions.length) {
-      endQuiz();
-    } else {
-      setCurrent(current + 1);
-    }
+    current + 1 === shuffledQuestions.length ? endQuiz() : setCurrent(current + 1);
   };
 
   const formatTime = () => {
@@ -179,20 +172,12 @@ function QuizPage() {
           <p className="text-lg">Name: <strong>{name}</strong></p>
           <p className="text-lg">Subject: <strong>{subject}</strong></p>
           <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-          <p className={`text-xl mt-2 font-semibold ${color}`}>
-            Grade: <strong>{grade}</strong> – <em>{level}</em>
-          </p>
+          <p className={`text-xl mt-2 font-semibold ${color}`}>Grade: <strong>{grade}</strong> – <em>{level}</em></p>
 
           <div className="mt-6 space-x-4">
-            <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>
-              Review Answers
-            </button>
-            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>
-              View Leaderboard
-            </button>
-            <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>
-              Start Over
-            </button>
+            <button className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700" onClick={() => setReviewing(true)}>Review Answers</button>
+            <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/leaderboard')}>View Leaderboard</button>
+            <button className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" onClick={() => navigate('/start')}>Start Over</button>
           </div>
         </div>
       </div>
@@ -207,16 +192,13 @@ function QuizPage() {
           {answers.map((item, index) => (
             <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
               <p className="font-semibold">{index + 1}. {item.question}</p>
-              <p>
-                Your answer:{' '}
+              <p>Your answer:{' '}
                 <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
                   {item.selected}
                 </span>
               </p>
               {!item.isCorrect && (
-                <p>
-                  Correct answer: <span className="text-green-600">{item.correct}</span>
-                </p>
+                <p>Correct answer: <span className="text-green-600">{item.correct}</span></p>
               )}
             </div>
           ))}
@@ -241,10 +223,7 @@ function QuizPage() {
             <span className="text-sm font-mono">{formatTime()}</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4">
-            <div
-              className="bg-green-500 h-4 rounded-full transition-all duration-500"
-              style={{ width: `${progressPercent}%` }}
-            />
+            <div className="bg-green-500 h-4 rounded-full transition-all duration-500" style={{ width: `${progressPercent}%` }} />
           </div>
         </div>
 
