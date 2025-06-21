@@ -1,97 +1,102 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import questionsData from '../data/questionsData';
 
-const QuizStartPage = () => {
+function QuizStartPage() {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [school, setSchool] = useState('');
   const [subject, setSubject] = useState('');
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    const access = localStorage.getItem('quizAccessGranted');
-    const code = localStorage.getItem('accessCodeUsed');
-    if (access !== 'true' || !code) {
-      navigate('/request-access');
-    }
+  const subjects = [
+    "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
+    "Core Science", "Economics", "Geography", "Electiveict",
+    "English", "Socialstudies", "Accounting", "Cost Accounting",
+    "Business Management"
+  ];
 
-    const completed = localStorage.getItem(`quizCompleted-${code}`) === 'true';
-    if (completed) {
-      navigate('/result');
+  useEffect(() => {
+    const usageCount = Number(localStorage.getItem('quizUsageCount')) || 0;
+    const accessGranted = localStorage.getItem('quizAccessGranted') === 'true';
+
+    if (!accessGranted) {
+      alert('Access denied. Please use a valid access code.');
+      navigate('/use-access-code');
+    } else if (usageCount >= 2) {
+      alert('You have already used your access code twice.');
+      navigate('/request-access');
     }
   }, [navigate]);
 
-  const handleStart = () => {
+  const handleStart = (e) => {
+    e.preventDefault();
+
     if (!name || !school || !subject) {
-      setError('Please fill in all fields.');
+      setError('All fields are required.');
       return;
     }
 
-    const code = localStorage.getItem('accessCodeUsed');
-    const quizUser = {
-      name,
-      school,
-      subject,
-      code,
-    };
+    const userData = JSON.parse(localStorage.getItem('quizUser')) || {};
+    localStorage.setItem(
+      'quizUser',
+      JSON.stringify({
+        ...userData,
+        name,
+        school,
+        subject,
+      })
+    );
 
-    localStorage.setItem('quizUser', JSON.stringify(quizUser));
-    localStorage.removeItem('quizProgress'); // Clear old quiz progress
     navigate('/quiz');
   };
 
-  const subjectOptions = Object.keys(questionsData);
-
   return (
-    <div className="max-w-xl mx-auto p-6 mt-10 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">Welcome to TickQuiz!</h2>
-      <p className="mb-4 text-center text-gray-600">Enter your details to begin:</p>
+    <div className="min-h-screen flex items-center justify-center bg-blue-100 px-4">
+      <form
+        onSubmit={handleStart}
+        className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md space-y-4"
+      >
+        <h2 className="text-2xl font-bold text-center text-gray-700">Welcome to TickQuiz!</h2>
+        <p className="text-sm text-center text-gray-500 mb-2">Enter your details to begin:</p>
 
-      {error && <div className="mb-4 text-red-500 font-medium">{error}</div>}
-
-      <div className="mb-4">
-        <label className="block mb-1 font-medium">Your Full Name</label>
         <input
           type="text"
-          className="w-full px-4 py-2 border rounded"
+          placeholder="Your Full Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-      </div>
 
-      <div className="mb-4">
-        <label className="block mb-1 font-medium">Your School</label>
         <input
           type="text"
-          className="w-full px-4 py-2 border rounded"
+          placeholder="Your School"
           value={school}
           onChange={(e) => setSchool(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-      </div>
 
-      <div className="mb-6">
-        <label className="block mb-1 font-medium">-- Choose a Subject --</label>
         <select
-          className="w-full px-4 py-2 border rounded"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
+          className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="">Select a Subject</option>
-          {subjectOptions.map((subj) => (
+          <option value="">-- Choose a Subject --</option>
+          {subjects.map((subj) => (
             <option key={subj} value={subj}>{subj}</option>
           ))}
         </select>
-      </div>
 
-      <button
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-semibold"
-        onClick={handleStart}
-      >
-        Start Quiz
-      </button>
+        {error && <p className="text-red-600 text-sm">{error}</p>}
+
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition"
+        >
+          Start Quiz
+        </button>
+      </form>
     </div>
   );
-};
+}
 
 export default QuizStartPage;

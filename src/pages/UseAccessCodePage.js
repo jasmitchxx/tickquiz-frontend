@@ -22,6 +22,14 @@ function UseAccessCodePage() {
         setMessage(res.data.message);
         setSuccess(true);
 
+        const usageCount = res.data.usageCount || 0;
+
+        // Store access flag and usage count
+        localStorage.setItem('quizAccessGranted', 'true');
+        localStorage.setItem('quizUsageCount', usageCount);
+        localStorage.setItem('quizAccessCode', code);
+
+        // Store or update quizUser
         const storedUser = JSON.parse(localStorage.getItem('quizUser')) || {};
         localStorage.setItem(
           'quizUser',
@@ -32,19 +40,21 @@ function UseAccessCodePage() {
           })
         );
 
+        // Redirect to subject selection or quiz start
         setTimeout(() => {
-          navigate('/start');
-        }, 2000);
+          if (usageCount >= 2) {
+            alert('You have used all your attempts.');
+            navigate('/request-access');
+          } else {
+            navigate('/select-subject'); // or `/start` if you skip subject choice
+          }
+        }, 1500);
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
       }
     } catch (err) {
       console.error(err);
-      if (err.response?.data?.message) {
-        setMessage(err.response.data.message);
-      } else {
-        setMessage('Something went wrong. Please try again.');
-      }
+      setMessage(err.response?.data?.message || 'Something went wrong. Please try again.');
     }
   };
 
@@ -71,11 +81,7 @@ function UseAccessCodePage() {
           </button>
         </form>
         {message && (
-          <p
-            className={`mt-4 text-center font-medium ${
-              success ? 'text-green-600' : 'text-red-600'
-            }`}
-          >
+          <p className={`mt-4 text-center font-medium ${success ? 'text-green-600' : 'text-red-600'}`}>
             {message}
           </p>
         )}
