@@ -47,7 +47,7 @@ function QuizPage() {
       const payload = {
         name,
         school,
-        subject: normalizedSubject,
+        subject, // ? Send proper full label
         score: Number(score),
         timestamp: new Date().toISOString(),
         code,
@@ -68,7 +68,7 @@ function QuizPage() {
     };
 
     saveResults();
-  }, [finished, hasSaved, name, school, subject, score, code, normalizedSubject]);
+  }, [finished, hasSaved, name, school, subject, score, code]);
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -206,6 +206,11 @@ function QuizPage() {
             )}
           </div>
         ))}
+        <div className="text-center mt-6">
+          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/request-access')}>
+            Back to Home
+          </button>
+        </div>
       </div>
     );
   }
@@ -228,28 +233,30 @@ function QuizPage() {
       </div>
 
       <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
+        <h2 className="text-xl font-semibold mb-4">
+          Question {current + 1} of {shuffledQuestions.length}
+        </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
         <div className="flex flex-wrap gap-4 justify-start">
           {Array.isArray(currentQuestion?.options)
             ? currentQuestion.options.map((option, index) => (
-                <button
-                  key={index}
-                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                  onClick={() => handleAnswer(option)}
-                >
-                  {option}
-                </button>
-              ))
+              <button
+                key={index}
+                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                onClick={() => handleAnswer(option)}
+              >
+                {option}
+              </button>
+            ))
             : Object.entries(currentQuestion?.options || {}).map(([key, val]) => (
-                <button
-                  key={key}
-                  className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
-                  onClick={() => handleAnswer(key)}
-                >
-                  {key}: {val}
-                </button>
-              ))}
+              <button
+                key={key}
+                className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"
+                onClick={() => handleAnswer(key)}
+              >
+                {key}: {val}
+              </button>
+            ))}
         </div>
       </div>
     </div>
