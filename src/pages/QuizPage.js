@@ -10,8 +10,7 @@ function QuizPage() {
 
   const MAX_QUESTIONS = 60;
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
-
-  const subjectQuestions = useMemo(() => questionsData[subject] || [], [subject]);
+  const subjectQuestions = useMemo(() => questionsData[normalizedSubject] || [], [normalizedSubject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -22,11 +21,11 @@ function QuizPage() {
   const [reviewing, setReviewing] = useState(false);
   const [hasSaved, setHasSaved] = useState(false);
 
-  // ?? Redirect immediately if quiz already completed
-  if (localStorage.getItem(`quizCompleted-${code}`) === 'true') {
-    navigate('/result');
-    return null;
-  }
+  useEffect(() => {
+    if (localStorage.getItem(`quizCompleted-${code}`) === 'true') {
+      navigate('/result');
+    }
+  }, [code, navigate]);
 
   const shuffleArray = (arr) => {
     const array = [...arr];
@@ -37,18 +36,13 @@ function QuizPage() {
     return array;
   };
 
-  const endQuiz = useCallback(() => {
-    setFinished(true);
-  }, []);
+  const endQuiz = useCallback(() => setFinished(true), []);
 
   useEffect(() => {
     if (!finished || hasSaved) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || typeof score !== 'number') {
-        console.warn('Missing or invalid quiz data. Aborting save.');
-        return;
-      }
+      if (!name || !school || !subject || typeof score !== 'number') return;
 
       const payload = {
         name,
@@ -61,14 +55,14 @@ function QuizPage() {
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-        const saveRes = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
-        if (!saveRes.data.success) throw new Error(saveRes.data.message);
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, payload);
+        if (!res.data.success) throw new Error(res.data.message);
 
         setHasSaved(true);
         localStorage.removeItem('quizProgress');
         localStorage.setItem(`quizCompleted-${code}`, 'true');
       } catch (err) {
-        console.error('Save error:', err.response?.data || err.message);
+        console.error('Save error:', err);
         alert('There was a problem saving your result. Please try again.');
       }
     };
@@ -212,11 +206,6 @@ function QuizPage() {
             )}
           </div>
         ))}
-        <div className="text-center mt-6">
-          <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onClick={() => navigate('/request-access')}>
-            Back to Home
-          </button>
-        </div>
       </div>
     );
   }
@@ -239,9 +228,7 @@ function QuizPage() {
       </div>
 
       <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
-        </h2>
+        <h2 className="text-xl font-semibold mb-4">Question {current + 1} of {shuffledQuestions.length}</h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
         <div className="flex flex-wrap gap-4 justify-start">
           {Array.isArray(currentQuestion?.options)

@@ -15,20 +15,20 @@ import costAccountingQuestions from './costAccountingQuestions';
 import businessManagementQuestions from './businessManagementQuestions';
 
 const questionsData = {
-  Physics: physicsQuestions,
-  Chemistry: chemistryQuestions,
-  "Add Maths": addMathsQuestions,
-  Biology: biologyQuestions,
-  "Core Maths": coreMathsQuestions,
-  "Core Science": coreScienceQuestions,
-  Economics: economicsQuestions,
-  Geography: geographyQuestions,
-  Electiveict: electiveictQuestions,
-  English: englishQuestions,
-  Socialstudies: socialstudiesQuestions,
-  Accounting: accountingQuestions,
-  "Cost Accounting": costAccountingQuestions,
-  "Business Management": businessManagementQuestions,
+  physics: physicsQuestions,
+  chemistry: chemistryQuestions,
+  addmaths: addMathsQuestions,
+  biology: biologyQuestions,
+  coremaths: coreMathsQuestions,
+  corescience: coreScienceQuestions,
+  economics: economicsQuestions,
+  geography: geographyQuestions,
+  electiveict: electiveictQuestions,
+  english: englishQuestions,
+  socialstudies: socialstudiesQuestions,
+  accounting: accountingQuestions,
+  costaccounting: costAccountingQuestions,
+  businessmanagement: businessManagementQuestions,
 };
 
 export default questionsData;
