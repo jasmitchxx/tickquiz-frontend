@@ -18,7 +18,7 @@ function Leaderboard() {
       const res = await axios.get(
         `${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${selectedSubject}`
       );
-      setResults(res.data.leaderboard || []);
+      setResults(res.data.results || []);
     } catch (err) {
       console.error(err);
       setError('? Failed to load leaderboard. Please try again later.');
