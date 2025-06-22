@@ -1,0 +1,149 @@
+.leaderboard {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leaderboard h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Subject selector */
+.subject-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  gap: 0.5rem;
+}
+
+.subject-selector label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+}
+
+.subject-selector select {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Scrollable leaderboard list */
+.scroll-wrapper {
+  overflow: hidden;
+  height: 280px;
+  position: relative;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.scrolling-list {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 20s linear infinite;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.scrolling-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.scrolling-list li:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Highlight current user */
+.scrolling-list li.highlight {
+  background-color: #fff3cd;
+  font-weight: bold;
+}
+
+/* Emojis for top ranks */
+.rank::before {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+.rank.gold::before {
+  content: "🥇";
+}
+.rank.silver::before {
+  content: "🥈";
+}
+.rank.bronze::before {
+  content: "🥉";
+}
+
+.rank {
+  width: 50px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.name {
+  flex: 1;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+
+.school {
+  flex: 1;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.score {
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Dynamic percentage color classes */
+.percent-high {
+  color: #28a745; /* green */
+}
+.percent-medium {
+  color: #ffc107; /* yellow */
+}
+.percent-low {
+  color: #dc3545; /* red */
+}
+
+/* Error and status messages */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
