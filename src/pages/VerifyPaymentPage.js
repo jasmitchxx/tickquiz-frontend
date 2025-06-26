@@ -12,7 +12,6 @@ export default function VerifyPaymentPage() {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const verify = async () => {
@@ -41,7 +40,7 @@ export default function VerifyPaymentPage() {
         }
       } catch (err) {
         console.error('Payment verification error:', err);
-        setError('?? Something went wrong verifying payment.');
+        setError('? Something went wrong verifying payment.');
       } finally {
         setLoading(false);
       }
@@ -53,16 +52,6 @@ export default function VerifyPaymentPage() {
       setLoading(false);
     }
   }, [reference]);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(accessCode);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("?? Clipboard copy failed", err);
-    }
-  };
 
   if (loading) {
     return (
@@ -96,22 +85,9 @@ export default function VerifyPaymentPage() {
         <p className="text-gray-700 mb-2">?? An SMS has been sent to <strong>{phone}</strong>.</p>
         <p className="text-gray-700 mb-4">In case it delays, here’s your access code:</p>
 
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow">
-            {accessCode}
-          </div>
-          <button
-            onClick={handleCopy}
-            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
-            title="Copy to clipboard"
-          >
-            ?? Copy
-          </button>
+        <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-6">
+          {accessCode}
         </div>
-
-        {copied && (
-          <p className="text-green-600 font-medium mb-4">? Copied to clipboard!</p>
-        )}
 
         <button
           onClick={() => navigate('/use-access-code')}
