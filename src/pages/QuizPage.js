@@ -6,21 +6,19 @@ import questionsData from '../data/questionsData';
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code, school } = user;
+  const { name, subject, code, school, level: rawLevel } = user;
 
   const MAX_QUESTIONS = 60;
-
-  // ? Normalize subject and resolve to key in questionsData
+  const level = rawLevel?.toUpperCase(); // JHS or SHS
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
-  const subjectKey = useMemo(() => {
-    return Object.keys(questionsData).find(
-      key => key.toLowerCase().replace(/\s+/g, '') === normalizedSubject
-    );
-  }, [normalizedSubject]);
 
   const subjectQuestions = useMemo(() => {
-    return questionsData[subjectKey] || [];
-  }, [subjectKey]);
+    if (!level || !questionsData[level]) return [];
+    const subjectKey = Object.keys(questionsData[level]).find(
+      key => key.toLowerCase().replace(/\s+/g, '') === normalizedSubject
+    );
+    return questionsData[level]?.[subjectKey] || [];
+  }, [level, normalizedSubject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -106,13 +104,14 @@ function QuizPage() {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
           name,
           school,
+          level,
           subject: normalizedSubject,
           score,
           timestamp,
           code,
         });
 
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}`);
+        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}&level=${level}`);
       } catch (err) {
         console.error('Failed to save quiz data or fetch leaderboard:', err);
       }
@@ -161,16 +160,17 @@ function QuizPage() {
 
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
-    const { grade, level, color } = getGrade(percentage);
+    const { grade, level: gradeLevel, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-100 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
         <p className="text-lg">Name: <strong>{name}</strong></p>
+        <p className="text-lg">Level: <strong>{level}</strong></p>
         <p className="text-lg">Subject: <strong>{subject}</strong></p>
         <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
         <p className={`text-xl mt-2 font-semibold ${color}`}>
-          Grade: <strong>{grade}</strong> – <em>{level}</em>
+          Grade: <strong>{grade}</strong> – <em>{gradeLevel}</em>
         </p>
 
         <div className="mt-6 space-x-4">

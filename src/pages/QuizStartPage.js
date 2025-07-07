@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const subjects = [
+const shsSubjects = [
   "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
   "Core Science", "Economics", "Geography", "Electiveict",
   "English", "Socialstudies", "Accounting", "Cost Accounting",
   "Business Management"
+];
+
+const jhsSubjects = [
+  "English Language", "Maths", "Core Science", "Social Studies",
+  "Career Tech", "Computing", "RME", "French", "Creative Arts and Design"
 ];
 
 function QuizStartPage() {
@@ -13,7 +18,8 @@ function QuizStartPage() {
   const [formData, setFormData] = useState({
     name: '',
     school: '',
-    subject: ''
+    subject: '',
+    level: ''
   });
   const [error, setError] = useState('');
 
@@ -37,20 +43,23 @@ function QuizStartPage() {
 
   const handleStart = (e) => {
     e.preventDefault();
-    const { name, school, subject } = formData;
+    const { name, school, subject, level } = formData;
 
-    if (!name || !school || !subject) {
+    if (!name || !school || !subject || !level) {
       setError('All fields are required.');
       return;
     }
 
     const userData = JSON.parse(localStorage.getItem('quizUser')) || {};
-    localStorage.setItem(
-      'quizUser',
-      JSON.stringify({ ...userData, ...formData })
-    );
+    localStorage.setItem('quizUser', JSON.stringify({ ...userData, ...formData }));
 
     navigate('/quiz');
+  };
+
+  const getSubjects = () => {
+    if (formData.level === 'JHS') return jhsSubjects;
+    if (formData.level === 'SHS') return shsSubjects;
+    return [];
   };
 
   return (
@@ -82,13 +91,25 @@ function QuizStartPage() {
         />
 
         <select
-          name="subject"
-          value={formData.subject}
+          name="level"
+          value={formData.level}
           onChange={handleChange}
           className="w-full px-6 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
+          <option value="">-- Choose Level --</option>
+          <option value="SHS">SHS</option>
+          <option value="JHS">JHS</option>
+        </select>
+
+        <select
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          disabled={!formData.level}
+          className="w-full px-6 py-4 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
           <option value="">-- Choose Subject --</option>
-          {subjects.map((subj) => (
+          {getSubjects().map((subj) => (
             <option key={subj} value={subj}>{subj}</option>
           ))}
         </select>

@@ -15,7 +15,7 @@ function Header() {
 
   const handleStartClick = () => {
     if (!accessGranted) {
-      alert('? Please complete payment before starting the quiz.');
+      alert('?? Please complete payment before starting the quiz.');
       return;
     }
 
@@ -25,8 +25,14 @@ function Header() {
   const handleQuizClick = (e) => {
     if (!accessGranted) {
       e.preventDefault();
-      alert('? Access denied. Please make payment first.');
+      alert('?? Access denied. Please make payment first.');
     }
+  };
+
+  const navLinkStyle = {
+    fontSize: '1rem',
+    textDecoration: 'none',
+    fontWeight: 'bold',
   };
 
   return (
@@ -39,23 +45,26 @@ function Header() {
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
       }}
     >
-      {/* Logo Image */}
+      {/* Logo */}
       <img
         src="/tickquiz-logo.png"
         alt="TickQuiz Logo"
         style={{
           height: '50px',
           objectFit: 'contain',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
         onClick={() => navigate('/')}
       />
 
-      {/* Navigation Links */}
-      <nav style={{ display: 'flex', gap: '1.5rem', fontWeight: 'bold' }}>
+      {/* Navigation */}
+      <nav
+        aria-label="Main navigation"
+        style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}
+      >
         <button
           onClick={handleStartClick}
           style={{
@@ -63,7 +72,7 @@ function Header() {
             border: 'none',
             color: accessGranted ? '#007bff' : '#888',
             cursor: accessGranted ? 'pointer' : 'not-allowed',
-            fontSize: '1rem'
+            ...navLinkStyle,
           }}
         >
           ?? Start Quiz
@@ -75,18 +84,17 @@ function Header() {
           style={{
             color: accessGranted ? '#007bff' : '#888',
             pointerEvents: accessGranted ? 'auto' : 'none',
-            textDecoration: 'none',
-            fontSize: '1rem'
+            ...navLinkStyle,
           }}
         >
           ?? Quiz
         </Link>
 
-        <Link to="/about" style={{ fontSize: '1rem' }}>
+        <Link to="/about" style={navLinkStyle}>
           ?? About
         </Link>
 
-        <Link to="/contact" style={{ fontSize: '1rem' }}>
+        <Link to="/contact" style={navLinkStyle}>
           ?? Contact
         </Link>
       </nav>

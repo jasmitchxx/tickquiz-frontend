@@ -5,19 +5,45 @@ import { useNavigate } from 'react-router-dom';
 function Leaderboard() {
   const [results, setResults] = useState([]);
   const [subject, setSubject] = useState('');
+  const [level, setLevel] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [resetMessage, setResetMessage] = useState('');
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const isAdmin = user.email === 'jasmitch2014@gmail.com';
 
-  const fetchResults = async (selectedSubject) => {
+  const shsSubjects = [
+    "Physics", "Chemistry", "Biology", "CoreMaths", "AddMaths",
+    "English", "SocialStudies", "Geography", "Economics",
+    "ElectiveICT", "Accounting", "CostAccounting", "BusinessManagement"
+  ];
+
+  const jhsSubjects = [
+    "EnglishLanguage", "Maths", "CoreScience", "SocialStudies",
+    "CareerTech", "Computing", "RME", "French", "CreativeArtsAndDesign"
+  ];
+
+  const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
+
+  const fetchResults = async () => {
+    if (!subject || !level) return;
     setLoading(true);
     setError(null);
+
     try {
-      const res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${selectedSubject}`
-      );
+      const queryParams = new URLSearchParams({
+        subject,
+        level,
+        ...(startDate && { startDate }),
+        ...(endDate && { endDate }),
+      });
+
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?${queryParams.toString()}`);
       setResults(res.data.results || []);
     } catch (err) {
       console.error(err);
@@ -28,111 +54,178 @@ function Leaderboard() {
   };
 
   useEffect(() => {
-    if (subject) fetchResults(subject);
-  }, [subject]);
+    fetchResults();
+  }, [subject, level, startDate, endDate]);
+
+  const handleReset = async () => {
+    if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
+
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
+        subject,
+        level,
+        password: adminPassword
+      });
+
+      setResetMessage('? Leaderboard reset successfully.');
+      setResults([]);
+    } catch (err) {
+      console.error(err);
+      setResetMessage('? Reset failed. Incorrect password or server error.');
+    }
+  };
+
+  const scrollList = [...results, ...results];
 
   return (
-    <div className="min-h-screen bg-blue-50 p-6">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
-        <h1 className="text-3xl font-bold mb-6 text-center">?? Quiz Leaderboard</h1>
+    <>
+      <div className="leaderboard">
+        <h3>?? Quiz Leaderboard</h3>
 
-        {/* Subject Dropdown */}
-        <div className="mb-4 text-center">
-          <select
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className="border px-4 py-2 rounded shadow text-lg"
-          >
-            <option value="">?? Select Subject</option>
-            <option value="Physics">Physics</option>
-            <option value="Chemistry">Chemistry</option>
-            <option value="Biology">Biology</option>
-            <option value="CoreMaths">Core Maths</option>
-            <option value="AddMaths">Add Maths</option>
-            <option value="English">English</option>
-            <option value="SocialStudies">Social Studies</option>
-            <option value="Geography">Geography</option>
-            <option value="Economics">Economics</option>
-            <option value="ElectiveICT">Elective ICT</option>
-            <option value="Accounting">Accounting</option>
-            <option value="CostAccounting">Cost Accounting</option>
-            <option value="BusinessManagement">Business Management</option>
-          </select>
+        <div className="subject-selector">
+          <label>
+            Level:
+            <select value={level} onChange={(e) => {
+              setLevel(e.target.value);
+              setSubject('');
+            }}>
+              <option value="">Select Level</option>
+              <option value="SHS">SHS</option>
+              <option value="JHS">JHS</option>
+            </select>
+          </label>
+
+          <label>
+            Subject:
+            <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
+              <option value="">Select Subject</option>
+              {getSubjects().map((subj) => (
+                <option key={subj} value={subj}>{subj}</option>
+              ))}
+            </select>
+          </label>
+
+          <label>
+            Start Date:
+            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+          </label>
+
+          <label>
+            End Date:
+            <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+          </label>
         </div>
 
         {loading ? (
-          <p className="text-center text-gray-500">? Loading leaderboard...</p>
+          <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
+            ? Loading leaderboard...
+          </p>
         ) : error ? (
-          <p className="text-center text-red-600">{error}</p>
+          <p className="error">{error}</p>
         ) : results.length === 0 ? (
-          <p className="text-center text-gray-500">?? No results available.</p>
+          <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
+            ?? No results available.
+          </p>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full table-auto border-collapse">
-              <thead>
-                <tr className="bg-blue-100 text-left">
-                  <th className="p-3">#</th>
-                  <th className="p-3">Name</th>
-                  <th className="p-3">School</th>
-                  <th className="p-3">Score</th>
-                  <th className="p-3">Percentage (%)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {results.map((result, index) => {
-                  const percentage = (result.score / (result.total || 60)) * 100;
-                  const isCurrentUser = result.code === user.code;
+          <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
+            <ul className="scrolling-list">
+              {scrollList.map((result, index) => {
+                const originalIndex = index % results.length;
+                const res = results[originalIndex];
+                const percentage = (res.score / (res.total || 60)) * 100;
+                const isCurrentUser = res.code === user.code;
 
-                  // Rank emojis for top 3
-                  let rankIcon = '';
-                  if (index === 0) rankIcon = '??';
-                  else if (index === 1) rankIcon = '??';
-                  else if (index === 2) rankIcon = '??';
+                const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                });
 
-                  // Color based on percentage
-                  const percentageColor =
-                    percentage >= 80
-                      ? 'text-green-600'
-                      : percentage >= 60
-                      ? 'text-yellow-600'
-                      : 'text-red-600';
+                let rankClass = '';
+                if (originalIndex === 0) rankClass = 'gold';
+                else if (originalIndex === 1) rankClass = 'silver';
+                else if (originalIndex === 2) rankClass = 'bronze';
 
-                  return (
-                    <tr
-                      key={index}
-                      className={`border-t ${
-                        isCurrentUser
-                          ? 'bg-yellow-100 font-bold'
-                          : index % 2 === 0
-                          ? 'bg-white'
-                          : 'bg-blue-50'
-                      }`}
-                    >
-                      <td className="p-3 font-mono">{rankIcon || index + 1}</td>
-                      <td className="p-3">{result.name}</td>
-                      <td className="p-3">{result.school}</td>
-                      <td className="p-3">{result.score}</td>
-                      <td className={`p-3 ${percentageColor}`}>
-                        {percentage.toFixed(1)}%
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                let percentClass = 'percent-low';
+                if (percentage >= 80) percentClass = 'percent-high';
+                else if (percentage >= 60) percentClass = 'percent-medium';
+
+                return (
+                  <li
+                    key={index}
+                    className={isCurrentUser ? 'highlight' : ''}
+                    role="listitem"
+                  >
+                    <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
+                    <div className="name">{res.name}</div>
+                    <div className="school">{res.school}</div>
+                    <div className="score">{res.score}</div>
+                    <div className={percentClass}>{percentage.toFixed(1)}%</div>
+                    <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
+                      {formattedDate}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         )}
 
-        <div className="text-center mt-6">
+        {/* ?? Admin Panel */}
+        {isAdmin && (
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <h4>??? Admin Panel</h4>
+            <input
+              type="password"
+              placeholder="Enter Admin Password"
+              value={adminPassword}
+              onChange={(e) => setAdminPassword(e.target.value)}
+              style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
+            />
+            <br />
+            <button
+              onClick={handleReset}
+              style={{
+                padding: '0.6rem 1.5rem',
+                background: '#ef4444',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '0.5rem',
+                fontWeight: 'bold',
+                cursor: 'pointer'
+              }}
+            >
+              ?? Reset Leaderboard
+            </button>
+            <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
+              {resetMessage}
+            </p>
+          </div>
+        )}
+
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            style={{
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
+              borderRadius: '1rem',
+              color: '#fff',
+              fontWeight: '700',
+              fontSize: '1.1rem',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
+              transition: 'background 0.3s ease',
+            }}
             onClick={() => navigate('/request-access')}
+            onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
           >
             ?? Back to Home
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

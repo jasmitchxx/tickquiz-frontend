@@ -6,20 +6,21 @@ function About() {
       <h1 className="text-3xl font-bold text-center mb-6">About TickQuiz</h1>
 
       <p>
-        <strong>TickQuiz</strong> is Ghanas competitive, time-based online quiz platform designed to help students
-        across the country test their knowledge and prepare for exams in an exciting, interactive way.
+        <strong>TickQuiz</strong> is a competitive, time-based quiz platform designed to help students across Ghana test their knowledge and prepare for exams in an exciting, interactive way.
       </p>
 
       <p>
-        With a variety of subjects such as <strong>Core Maths, Science, Geography, English, Business</strong> and more,
-        students can take quizzes, earn scores instantly, and climb real-time leaderboards  creating a spirit of
-        academic competition across schools.
+        With quizzes tailored for both <strong>SHS (Senior High School)</strong> and <strong>JHS (Junior High School)</strong> levels, students can practice a wide variety of subjects such as <strong>Core Mathematics, Integrated Science, English, Geography, Business, Social Studies, Religious and Moral Education (RME)</strong>, and more.
       </p>
 
-      <h2 className="text-xl font-semibold mt-4">? How It Works</h2>
+      <p>
+        Students can take quizzes, view instant results, and climb real-time leaderboards,  creating a fun and competitive academic atmosphere across schools in Ghana.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-4">How It Works</h2>
       <ul className="list-disc list-inside space-y-2">
         <li>
-          Visit <a href="https://tickquiz.com" className="text-blue-600 underline">tickquiz.com</a> and fill in your <strong>name, school, phone number, and subject</strong>.
+          Visit <a href="https://tickquiz.com" className="text-blue-600 underline">tickquiz.com</a> and fill in your <strong>name, email, and phone number</strong>.
         </li>
         <li>
           Make a secure one-time payment via Paystack to receive a <strong>unique access code via SMS</strong>.
@@ -35,20 +36,21 @@ function About() {
         </li>
       </ul>
 
-      <h2 className="text-xl font-semibold mt-4">?? Why Students Love TickQuiz</h2>
+      <h2 className="text-xl font-semibold mt-4">Why Students Love TickQuiz</h2>
       <ul className="list-disc list-inside space-y-2">
-        <li>Mobile-friendly and fast</li>
+        <li>Available for both JHS and SHS students</li>
+        <li>Mobile-friendly, fast, and reliable</li>
         <li>Real-time leaderboard boosts motivation</li>
-        <li>Easy-to-use and secure</li>
-        <li>Learn by reviewing results instantly</li>
+        <li>Learn from your mistakes with instant feedback</li>
+        <li>Simple to use — just plug in and play</li>
       </ul>
 
       <p className="mt-4">
-        TickQuiz is more than a quiz, its a smart tool for academic success, school pride, and national competition.
+        TickQuiz is more than a quiz — it’s a smart tool for academic excellence, national pride, and school spirit.
       </p>
 
       <p className="font-medium text-center text-gray-700">
-        ?? Search for us online: <strong>TickQuiz Ghana</strong> or visit <a href="https://tickquiz.com" className="text-blue-600 underline">tickquiz.com</a>
+        Search online: <strong>TickQuiz Ghana</strong> or visit <a href="https://tickquiz.com" className="text-blue-600 underline">tickquiz.com</a>
       </p>
     </div>
   );

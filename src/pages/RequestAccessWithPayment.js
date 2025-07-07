@@ -1,4 +1,3 @@
-// src/pages/RequestAccessWithPayment.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -50,7 +49,7 @@ function RequestAccessWithPayment() {
       console.error('Payment initialization error:', error);
       setMessage(
         error.response?.data?.message ||
-          'Payment failed to initialize. Please try again.'
+        'Payment failed to initialize. Please try again.'
       );
     } finally {
       setLoading(false);
@@ -93,13 +92,26 @@ function RequestAccessWithPayment() {
         required
       />
 
-      <input
-        type="text"
-        placeholder="+Country Code"
+      <select
         value={countryCode}
         onChange={(e) => setCountryCode(e.target.value)}
         style={{ width: '100%', marginBottom: 10, padding: 10 }}
-      />
+        required
+      >
+        <option value="">Select Country Code</option>
+        <option value="+233">Ghana (+233)</option>
+        <option value="+234">Nigeria (+234)</option>
+        <option value="+254">Kenya (+254)</option>
+        <option value="+27">South Africa (+27)</option>
+        <option value="+225">Ivory Coast (+225)</option>
+        <option value="+44">United Kingdom (+44)</option>
+        <option value="+1">United States (+1)</option>
+        <option value="+91">India (+91)</option>
+        <option value="+49">Germany (+49)</option>
+        <option value="+33">France (+33)</option>
+        <option value="+971">United Arab Emirates (+971)</option>
+        <option value="+61">Australia (+61)</option>
+      </select>
 
       <input
         type="tel"
