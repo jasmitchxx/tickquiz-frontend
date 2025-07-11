@@ -48,7 +48,7 @@ function Leaderboard() {
       setResults(res.data.results || []);
     } catch (err) {
       console.error(err);
-      setError('? Failed to load leaderboard. Please try again later.');
+      setError('?? Failed to load leaderboard. Please try again later.');
     } finally {
       setLoading(false);
     }
@@ -62,7 +62,7 @@ function Leaderboard() {
     if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
 
     try {
-      const res = await axios.delete(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
         data: {
           subject,
           secret: adminPassword
@@ -80,91 +80,79 @@ function Leaderboard() {
   const scrollList = [...results, ...results];
 
   return (
-    <div className="leaderboard">
-      <h3>?? Quiz Leaderboard</h3>
+    <div className="p-4 max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-6">?? Quiz Leaderboard</h2>
 
-      <div className="subject-selector">
-        <label>
-          Level:
+      <div className="grid md:grid-cols-4 gap-4 mb-6">
+        <div>
+          <label className="block text-sm font-medium">Level:</label>
           <select value={level} onChange={(e) => {
             setLevel(e.target.value);
             setSubject('');
-          }}>
+          }} className="w-full p-2 border rounded">
             <option value="">Select Level</option>
             <option value="SHS">SHS</option>
             <option value="JHS">JHS</option>
           </select>
-        </label>
+        </div>
 
-        <label>
-          Subject:
-          <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
+        <div>
+          <label className="block text-sm font-medium">Subject:</label>
+          <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level} className="w-full p-2 border rounded">
             <option value="">Select Subject</option>
             {getSubjects().map((subj) => (
               <option key={subj} value={subj}>{subj}</option>
             ))}
           </select>
-        </label>
+        </div>
 
-        <label>
-          Start Date:
-          <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-        </label>
+        <div>
+          <label className="block text-sm font-medium">Start Date:</label>
+          <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="w-full p-2 border rounded" />
+        </div>
 
-        <label>
-          End Date:
-          <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-        </label>
+        <div>
+          <label className="block text-sm font-medium">End Date:</label>
+          <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className="w-full p-2 border rounded" />
+        </div>
       </div>
 
       {loading ? (
-        <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
-          ? Loading leaderboard...
-        </p>
+        <p className="text-center text-blue-500 font-semibold">Loading leaderboard...</p>
       ) : error ? (
-        <p className="error">{error}</p>
+        <p className="text-center text-red-500">{error}</p>
       ) : results.length === 0 ? (
-        <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
-          ?? No results available.
-        </p>
+        <p className="text-center text-gray-500 font-medium">No results available.</p>
       ) : (
-        <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
-          <ul className="scrolling-list">
-            {scrollList.map((result, index) => {
+        <div className="overflow-x-auto bg-white rounded shadow-md">
+          <ul className="divide-y">
+            {scrollList.map((res, index) => {
               const originalIndex = index % results.length;
-              const res = results[originalIndex];
-              const percentage = (res.score / (res.total || 60)) * 100;
-              const isCurrentUser = res.code === user.code;
+              const entry = results[originalIndex];
+              const percentage = (entry.score / (entry.total || 60)) * 100;
+              const isCurrentUser = entry.code === user.code;
 
-              const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
+              const formattedDate = new Date(entry.submittedAt).toLocaleDateString(undefined, {
+                year: 'numeric', month: 'short', day: 'numeric'
               });
 
               let rankClass = '';
-              if (originalIndex === 0) rankClass = 'gold';
-              else if (originalIndex === 1) rankClass = 'silver';
-              else if (originalIndex === 2) rankClass = 'bronze';
+              if (originalIndex === 0) rankClass = 'text-yellow-500 font-bold';
+              else if (originalIndex === 1) rankClass = 'text-gray-400 font-semibold';
+              else if (originalIndex === 2) rankClass = 'text-orange-400 font-semibold';
 
-              let percentClass = 'percent-low';
-              if (percentage >= 80) percentClass = 'percent-high';
-              else if (percentage >= 60) percentClass = 'percent-medium';
+              let percentClass = 'text-red-500';
+              if (percentage >= 80) percentClass = 'text-green-600 font-bold';
+              else if (percentage >= 60) percentClass = 'text-yellow-500';
 
               return (
-                <li
-                  key={index}
-                  className={isCurrentUser ? 'highlight' : ''}
-                  role="listitem"
-                >
-                  <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
-                  <div className="name">{res.name}</div>
-                  <div className="school">{res.school}</div>
-                  <div className="score">{res.score}</div>
-                  <div className={percentClass}>{percentage.toFixed(1)}%</div>
-                  <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
-                    {formattedDate}
-                  </div>
+                <li key={index} className={`flex items-center justify-between px-4 py-3 ${isCurrentUser ? 'bg-blue-50' : ''}`}>
+                  <div className={`w-6 text-center ${rankClass}`}>{originalIndex + 1}</div>
+                  <div className="flex-1 ml-4 font-medium">{entry.name}</div>
+                  <div className="flex-1 text-sm text-gray-600">{entry.school}</div>
+                  <div className="w-12 text-center">{entry.score}</div>
+                  <div className={`w-20 text-center ${percentClass}`}>{percentage.toFixed(1)}%</div>
+                  <div className="text-xs text-gray-400 ml-4">{formattedDate}</div>
                 </li>
               );
             })}
@@ -172,57 +160,39 @@ function Leaderboard() {
         </div>
       )}
 
-      {/* ????? Admin Panel */}
+      {/* Admin Panel */}
       {isAdmin && (
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <h4>??? Admin Panel</h4>
+        <div className="mt-10 text-center">
+          <h4 className="text-lg font-semibold mb-2">?? Admin Panel</h4>
           <input
             type="password"
             placeholder="Enter Admin Password"
             value={adminPassword}
             onChange={(e) => setAdminPassword(e.target.value)}
-            style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
+            className="p-2 border rounded w-64 mb-2"
           />
           <br />
           <button
             onClick={handleReset}
-            style={{
-              padding: '0.6rem 1.5rem',
-              background: '#ef4444',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '0.5rem',
-              fontWeight: 'bold',
-              cursor: 'pointer'
-            }}
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded"
           >
             ?? Reset Leaderboard
           </button>
-          <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
-            {resetMessage}
-          </p>
+          {resetMessage && (
+            <p className={`mt-2 ${resetMessage.startsWith('?') ? 'text-green-600' : 'text-red-500'}`}>
+              {resetMessage}
+            </p>
+          )}
         </div>
       )}
 
-      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      {/* Back to Home */}
+      <div className="text-center mt-10">
         <button
-          style={{
-            padding: '0.75rem 2rem',
-            background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
-            borderRadius: '1rem',
-            color: '#fff',
-            fontWeight: '700',
-            fontSize: '1.1rem',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
-            transition: 'background 0.3s ease',
-          }}
           onClick={() => navigate('/request-access')}
-          onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
+          className="bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-500 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-full shadow"
         >
-          ?? Back to Home
+          ? Back to Home
         </button>
       </div>
     </div>
