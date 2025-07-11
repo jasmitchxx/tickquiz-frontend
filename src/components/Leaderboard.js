@@ -18,14 +18,31 @@ function Leaderboard() {
   const isAdmin = user.email === 'jasmitch2014@gmail.com';
 
   const shsSubjects = [
-    "Physics", "Chemistry", "Biology", "CoreMaths", "AddMaths",
-    "English", "SocialStudies", "Geography", "Economics",
-    "ElectiveICT", "Accounting", "CostAccounting", "BusinessManagement"
+    "Core Maths",
+  "English",
+  "Integrated Science",
+  "Social Studies",
+  "Biology",
+  "Chemistry",
+  "Physics",
+  "Elective ICT",
+  "Economics",
+  "Geography",
+  "Cost Accounting",
+  "Accounting",
+  "Business Management"
   ];
 
   const jhsSubjects = [
-    "EnglishLanguage", "Maths", "CoreScience", "SocialStudies",
-    "CareerTech", "Computing", "RME", "French", "CreativeArtsAndDesign"
+    "Maths",
+  "English Language",
+  "Core Science",
+  "Social Studies",
+  "RME",
+  "Career Technology",
+  "Creative Arts and Design",
+  "French",
+  "Computing"
   ];
 
   const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
