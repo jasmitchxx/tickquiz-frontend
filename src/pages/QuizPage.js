@@ -105,7 +105,7 @@ function QuizPage() {
   name,
   school,
   level,
-  subject: normalizedSubject,
+  subject,
   score,
   total: 60, // Or whatever your quiz total is
   code,
