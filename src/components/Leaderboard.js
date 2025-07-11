@@ -18,31 +18,15 @@ function Leaderboard() {
   const isAdmin = user.email === 'jasmitch2014@gmail.com';
 
   const shsSubjects = [
-    "Core Maths",
-  "English",
-  "Integrated Science",
-  "Social Studies",
-  "Biology",
-  "Chemistry",
-  "Physics",
-  "Elective ICT",
-  "Economics",
-  "Geography",
-  "Cost Accounting",
-  "Accounting",
-  "Business Management"
+    "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths",
+    "Core Science", "Economics", "Geography", "Electiveict",
+    "English", "Socialstudies", "Accounting", "Cost Accounting",
+    "Business Management"
   ];
 
   const jhsSubjects = [
-    "Maths",
-  "English Language",
-  "Core Science",
-  "Social Studies",
-  "RME",
-  "Career Technology",
-  "Creative Arts and Design",
-  "French",
-  "Computing"
+    "English Language", "Maths", "Socialstudies", "Career Tech",
+    "Computing", "RME", "French", "Creative Arts and Design", "Core Science"
   ];
 
   const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
@@ -78,10 +62,11 @@ function Leaderboard() {
     if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
-        subject,
-        level,
-        password: adminPassword
+      const res = await axios.delete(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
+        data: {
+          subject,
+          secret: adminPassword
+        }
       });
 
       setResetMessage('? Leaderboard reset successfully.');
@@ -95,154 +80,152 @@ function Leaderboard() {
   const scrollList = [...results, ...results];
 
   return (
-    <>
-      <div className="leaderboard">
-        <h3>?? Quiz Leaderboard</h3>
+    <div className="leaderboard">
+      <h3>?? Quiz Leaderboard</h3>
 
-        <div className="subject-selector">
-          <label>
-            Level:
-            <select value={level} onChange={(e) => {
-              setLevel(e.target.value);
-              setSubject('');
-            }}>
-              <option value="">Select Level</option>
-              <option value="SHS">SHS</option>
-              <option value="JHS">JHS</option>
-            </select>
-          </label>
+      <div className="subject-selector">
+        <label>
+          Level:
+          <select value={level} onChange={(e) => {
+            setLevel(e.target.value);
+            setSubject('');
+          }}>
+            <option value="">Select Level</option>
+            <option value="SHS">SHS</option>
+            <option value="JHS">JHS</option>
+          </select>
+        </label>
 
-          <label>
-            Subject:
-            <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
-              <option value="">Select Subject</option>
-              {getSubjects().map((subj) => (
-                <option key={subj} value={subj}>{subj}</option>
-              ))}
-            </select>
-          </label>
+        <label>
+          Subject:
+          <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
+            <option value="">Select Subject</option>
+            {getSubjects().map((subj) => (
+              <option key={subj} value={subj}>{subj}</option>
+            ))}
+          </select>
+        </label>
 
-          <label>
-            Start Date:
-            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-          </label>
+        <label>
+          Start Date:
+          <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+        </label>
 
-          <label>
-            End Date:
-            <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-          </label>
-        </div>
-
-        {loading ? (
-          <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
-            ? Loading leaderboard...
-          </p>
-        ) : error ? (
-          <p className="error">{error}</p>
-        ) : results.length === 0 ? (
-          <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
-            ?? No results available.
-          </p>
-        ) : (
-          <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
-            <ul className="scrolling-list">
-              {scrollList.map((result, index) => {
-                const originalIndex = index % results.length;
-                const res = results[originalIndex];
-                const percentage = (res.score / (res.total || 60)) * 100;
-                const isCurrentUser = res.code === user.code;
-
-                const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
-                });
-
-                let rankClass = '';
-                if (originalIndex === 0) rankClass = 'gold';
-                else if (originalIndex === 1) rankClass = 'silver';
-                else if (originalIndex === 2) rankClass = 'bronze';
-
-                let percentClass = 'percent-low';
-                if (percentage >= 80) percentClass = 'percent-high';
-                else if (percentage >= 60) percentClass = 'percent-medium';
-
-                return (
-                  <li
-                    key={index}
-                    className={isCurrentUser ? 'highlight' : ''}
-                    role="listitem"
-                  >
-                    <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
-                    <div className="name">{res.name}</div>
-                    <div className="school">{res.school}</div>
-                    <div className="score">{res.score}</div>
-                    <div className={percentClass}>{percentage.toFixed(1)}%</div>
-                    <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
-                      {formattedDate}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
-
-        {/* ?? Admin Panel */}
-        {isAdmin && (
-          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <h4>??? Admin Panel</h4>
-            <input
-              type="password"
-              placeholder="Enter Admin Password"
-              value={adminPassword}
-              onChange={(e) => setAdminPassword(e.target.value)}
-              style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
-            />
-            <br />
-            <button
-              onClick={handleReset}
-              style={{
-                padding: '0.6rem 1.5rem',
-                background: '#ef4444',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '0.5rem',
-                fontWeight: 'bold',
-                cursor: 'pointer'
-              }}
-            >
-              ?? Reset Leaderboard
-            </button>
-            <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
-              {resetMessage}
-            </p>
-          </div>
-        )}
-
-        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <button
-            style={{
-              padding: '0.75rem 2rem',
-              background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
-              borderRadius: '1rem',
-              color: '#fff',
-              fontWeight: '700',
-              fontSize: '1.1rem',
-              border: 'none',
-              cursor: 'pointer',
-              boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
-              transition: 'background 0.3s ease',
-            }}
-            onClick={() => navigate('/request-access')}
-            onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
-            onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
-          >
-            ?? Back to Home
-          </button>
-        </div>
+        <label>
+          End Date:
+          <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+        </label>
       </div>
-    </>
+
+      {loading ? (
+        <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
+          ? Loading leaderboard...
+        </p>
+      ) : error ? (
+        <p className="error">{error}</p>
+      ) : results.length === 0 ? (
+        <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
+          ?? No results available.
+        </p>
+      ) : (
+        <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
+          <ul className="scrolling-list">
+            {scrollList.map((result, index) => {
+              const originalIndex = index % results.length;
+              const res = results[originalIndex];
+              const percentage = (res.score / (res.total || 60)) * 100;
+              const isCurrentUser = res.code === user.code;
+
+              const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              });
+
+              let rankClass = '';
+              if (originalIndex === 0) rankClass = 'gold';
+              else if (originalIndex === 1) rankClass = 'silver';
+              else if (originalIndex === 2) rankClass = 'bronze';
+
+              let percentClass = 'percent-low';
+              if (percentage >= 80) percentClass = 'percent-high';
+              else if (percentage >= 60) percentClass = 'percent-medium';
+
+              return (
+                <li
+                  key={index}
+                  className={isCurrentUser ? 'highlight' : ''}
+                  role="listitem"
+                >
+                  <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
+                  <div className="name">{res.name}</div>
+                  <div className="school">{res.school}</div>
+                  <div className="score">{res.score}</div>
+                  <div className={percentClass}>{percentage.toFixed(1)}%</div>
+                  <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
+                    {formattedDate}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
+      {/* ????? Admin Panel */}
+      {isAdmin && (
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+          <h4>??? Admin Panel</h4>
+          <input
+            type="password"
+            placeholder="Enter Admin Password"
+            value={adminPassword}
+            onChange={(e) => setAdminPassword(e.target.value)}
+            style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
+          />
+          <br />
+          <button
+            onClick={handleReset}
+            style={{
+              padding: '0.6rem 1.5rem',
+              background: '#ef4444',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '0.5rem',
+              fontWeight: 'bold',
+              cursor: 'pointer'
+            }}
+          >
+            ?? Reset Leaderboard
+          </button>
+          <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
+            {resetMessage}
+          </p>
+        </div>
+      )}
+
+      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <button
+          style={{
+            padding: '0.75rem 2rem',
+            background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
+            borderRadius: '1rem',
+            color: '#fff',
+            fontWeight: '700',
+            fontSize: '1.1rem',
+            border: 'none',
+            cursor: 'pointer',
+            boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
+            transition: 'background 0.3s ease',
+          }}
+          onClick={() => navigate('/request-access')}
+          onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
+          onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
+        >
+          ?? Back to Home
+        </button>
+      </div>
+    </div>
   );
 }
 
