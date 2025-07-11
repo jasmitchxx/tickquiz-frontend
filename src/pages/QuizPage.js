@@ -101,7 +101,7 @@ function QuizPage() {
       try {
         // Removed increment-usage call because endpoint is unavailable
 
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
   name,
   school,
   level,
