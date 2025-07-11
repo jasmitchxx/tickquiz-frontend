@@ -1,91 +1,231 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Leaderboard() {
-  const [leaderboard, setLeaderboard] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [levelFilter, setLevelFilter] = useState('');
-  const [subjectFilter, setSubjectFilter] = useState('');
+  const [results, setResults] = useState([]);
+  const [subject, setSubject] = useState('');
+  const [level, setLevel] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [resetMessage, setResetMessage] = useState('');
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const isAdmin = user.email === 'jasmitch2014@gmail.com';
+
+  const shsSubjects = [
+    "Physics", "Chemistry", "Biology", "CoreMaths", "AddMaths",
+    "English", "SocialStudies", "Geography", "Economics",
+    "ElectiveICT", "Accounting", "CostAccounting", "BusinessManagement"
+  ];
+
+  const jhsSubjects = [
+    "EnglishLanguage", "Maths", "CoreScience", "SocialStudies",
+    "CareerTech", "Computing", "RME", "French", "CreativeArtsAndDesign"
+  ];
+
+  const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
+
+  const fetchResults = async () => {
+    if (!subject || !level) return;
+    setLoading(true);
+    setError(null);
+
+    try {
+      const queryParams = new URLSearchParams({
+        subject,
+        level,
+        ...(startDate && { startDate }),
+        ...(endDate && { endDate }),
+      });
+
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?${queryParams.toString()}`);
+      setResults(res.data.results || []);
+    } catch (err) {
+      console.error(err);
+      setError('? Failed to load leaderboard. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchLeaderboard = async () => {
-      try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard`);
-        setLeaderboard(res.data || []);
-        setLoading(false);
-      } catch (err) {
-        console.error('Failed to fetch leaderboard:', err);
-        setLoading(false);
-      }
-    };
+    fetchResults();
+  }, [subject, level, startDate, endDate]);
 
-    fetchLeaderboard();
-  }, []);
+  const handleReset = async () => {
+    if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
 
-  const filteredData = leaderboard.filter(entry => {
-    const matchesLevel = levelFilter ? entry.level === levelFilter : true;
-    const matchesSubject = subjectFilter ? entry.subject === subjectFilter : true;
-    return matchesLevel && matchesSubject;
-  });
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
+        subject,
+        level,
+        password: adminPassword
+      });
+
+      setResetMessage('? Leaderboard reset successfully.');
+      setResults([]);
+    } catch (err) {
+      console.error(err);
+      setResetMessage('? Reset failed. Incorrect password or server error.');
+    }
+  };
+
+  const scrollList = [...results, ...results];
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Leaderboard</h1>
+    <>
+      <div className="leaderboard">
+        <h3>?? Quiz Leaderboard</h3>
 
-      <div className="mb-4 flex gap-4">
-        <select
-          className="border px-4 py-2 rounded"
-          value={levelFilter}
-          onChange={(e) => setLevelFilter(e.target.value)}
-        >
-          <option value="">All Levels</option>
-          <option value="JHS">JHS</option>
-          <option value="SHS">SHS</option>
-        </select>
+        <div className="subject-selector">
+          <label>
+            Level:
+            <select value={level} onChange={(e) => {
+              setLevel(e.target.value);
+              setSubject('');
+            }}>
+              <option value="">Select Level</option>
+              <option value="SHS">SHS</option>
+              <option value="JHS">JHS</option>
+            </select>
+          </label>
 
-        <select
-          className="border px-4 py-2 rounded"
-          value={subjectFilter}
-          onChange={(e) => setSubjectFilter(e.target.value)}
-        >
-          <option value="">All Subjects</option>
-          {[...new Set(leaderboard.map((entry) => entry.subject))].map((subject, index) => (
-            <option key={index} value={subject}>{subject}</option>
-          ))}
-        </select>
-      </div>
-
-      {loading ? (
-        <p>Loading leaderboard...</p>
-      ) : (
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200 shadow-md rounded">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="px-4 py-2 border-b">#</th>
-                <th className="px-4 py-2 border-b">Name</th>
-                <th className="px-4 py-2 border-b">School</th>
-                <th className="px-4 py-2 border-b">Level</th>
-                <th className="px-4 py-2 border-b">Subject</th>
-                <th className="px-4 py-2 border-b">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredData.slice(0, 100).map((entry, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-4 py-2 border-b">{index + 1}</td>
-                  <td className="px-4 py-2 border-b">{entry.name}</td>
-                  <td className="px-4 py-2 border-b">{entry.school}</td>
-                  <td className="px-4 py-2 border-b">{entry.level}</td>
-                  <td className="px-4 py-2 border-b">{entry.subject}</td>
-                  <td className="px-4 py-2 border-b">{entry.score}</td>
-                </tr>
+          <label>
+            Subject:
+            <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
+              <option value="">Select Subject</option>
+              {getSubjects().map((subj) => (
+                <option key={subj} value={subj}>{subj}</option>
               ))}
-            </tbody>
-          </table>
+            </select>
+          </label>
+
+          <label>
+            Start Date:
+            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+          </label>
+
+          <label>
+            End Date:
+            <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+          </label>
         </div>
-      )}
-    </div>
+
+        {loading ? (
+          <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
+            ? Loading leaderboard...
+          </p>
+        ) : error ? (
+          <p className="error">{error}</p>
+        ) : results.length === 0 ? (
+          <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
+            ?? No results available.
+          </p>
+        ) : (
+          <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
+            <ul className="scrolling-list">
+              {scrollList.map((result, index) => {
+                const originalIndex = index % results.length;
+                const res = results[originalIndex];
+                const percentage = (res.score / (res.total || 60)) * 100;
+                const isCurrentUser = res.code === user.code;
+
+                const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                });
+
+                let rankClass = '';
+                if (originalIndex === 0) rankClass = 'gold';
+                else if (originalIndex === 1) rankClass = 'silver';
+                else if (originalIndex === 2) rankClass = 'bronze';
+
+                let percentClass = 'percent-low';
+                if (percentage >= 80) percentClass = 'percent-high';
+                else if (percentage >= 60) percentClass = 'percent-medium';
+
+                return (
+                  <li
+                    key={index}
+                    className={isCurrentUser ? 'highlight' : ''}
+                    role="listitem"
+                  >
+                    <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
+                    <div className="name">{res.name}</div>
+                    <div className="school">{res.school}</div>
+                    <div className="score">{res.score}</div>
+                    <div className={percentClass}>{percentage.toFixed(1)}%</div>
+                    <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
+                      {formattedDate}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+
+        {/* ?? Admin Panel */}
+        {isAdmin && (
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <h4>??? Admin Panel</h4>
+            <input
+              type="password"
+              placeholder="Enter Admin Password"
+              value={adminPassword}
+              onChange={(e) => setAdminPassword(e.target.value)}
+              style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
+            />
+            <br />
+            <button
+              onClick={handleReset}
+              style={{
+                padding: '0.6rem 1.5rem',
+                background: '#ef4444',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '0.5rem',
+                fontWeight: 'bold',
+                cursor: 'pointer'
+              }}
+            >
+              ?? Reset Leaderboard
+            </button>
+            <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
+              {resetMessage}
+            </p>
+          </div>
+        )}
+
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button
+            style={{
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
+              borderRadius: '1rem',
+              color: '#fff',
+              fontWeight: '700',
+              fontSize: '1.1rem',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
+              transition: 'background 0.3s ease',
+            }}
+            onClick={() => navigate('/request-access')}
+            onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
+          >
+            ?? Back to Home
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
 
