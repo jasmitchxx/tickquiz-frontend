@@ -99,7 +99,7 @@ function QuizPage() {
       const timestamp = new Date().toISOString();
 
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
+        // Removed increment-usage call because endpoint is unavailable
 
         await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
           name,
