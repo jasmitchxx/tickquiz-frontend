@@ -1,106 +1,92 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function LeaderboardPage() {
-  const [entries, setEntries] = useState([]);
+function Leaderboard() {
+  const [leaderboard, setLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [level, setLevel] = useState('SHS');
+  const [levelFilter, setLevelFilter] = useState('');
+  const [subjectFilter, setSubjectFilter] = useState('');
 
   useEffect(() => {
     const fetchLeaderboard = async () => {
-      setLoading(true);
       try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/leaderboard?level=${level}`
-        );
-        // ? FIX: Access results properly from API response
-        setEntries(res.data.results || []);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard`);
+        setLeaderboard(res.data || []);
+        setLoading(false);
       } catch (err) {
         console.error('Failed to fetch leaderboard:', err);
-        setEntries([]);
-      } finally {
         setLoading(false);
       }
     };
 
     fetchLeaderboard();
-  }, [level]);
+  }, []);
 
-  // Group and sort top 10 per subject
-  const topEntriesBySubject = () => {
-    const grouped = {};
-
-    for (const entry of entries) {
-      const subject = entry.subject.toLowerCase();
-      if (!grouped[subject]) grouped[subject] = [];
-      grouped[subject].push(entry);
-    }
-
-    const sortedTop = {};
-    for (const subject in grouped) {
-      sortedTop[subject] = grouped[subject]
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 10);
-    }
-
-    return sortedTop;
-  };
-
-  const groupedData = topEntriesBySubject();
+  const filteredData = leaderboard.filter(entry => {
+    const matchesLevel = levelFilter ? entry.level === levelFilter : true;
+    const matchesSubject = subjectFilter ? entry.subject === subjectFilter : true;
+    return matchesLevel && matchesSubject;
+  });
 
   return (
-    <div className="p-6 max-w-5xl mx-auto bg-white min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">
-        Leaderboard – Top 10 by Subject
-      </h1>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">Leaderboard</h1>
 
-      <div className="mb-4 text-center">
-        <label className="mr-2 font-medium">Select Level:</label>
+      <div className="mb-4 flex gap-4">
         <select
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-          className="border p-2 rounded"
+          className="border px-4 py-2 rounded"
+          value={levelFilter}
+          onChange={(e) => setLevelFilter(e.target.value)}
         >
-          <option value="SHS">SHS</option>
+          <option value="">All Levels</option>
           <option value="JHS">JHS</option>
+          <option value="SHS">SHS</option>
+        </select>
+
+        <select
+          className="border px-4 py-2 rounded"
+          value={subjectFilter}
+          onChange={(e) => setSubjectFilter(e.target.value)}
+        >
+          <option value="">All Subjects</option>
+          {[...new Set(leaderboard.map((entry) => entry.subject))].map((subject, index) => (
+            <option key={index} value={subject}>{subject}</option>
+          ))}
         </select>
       </div>
 
       {loading ? (
-        <p className="text-center">Loading...</p>
-      ) : Object.keys(groupedData).length === 0 ? (
-        <p className="text-center">No results found for {level}.</p>
+        <p>Loading leaderboard...</p>
       ) : (
-        Object.entries(groupedData).map(([subject, records]) => (
-          <div key={subject} className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 capitalize border-b pb-1">
-              {subject}
-            </h2>
-            <table className="min-w-full border-collapse border text-sm">
-              <thead className="bg-blue-200">
-                <tr>
-                  <th className="p-2 border text-left">#</th>
-                  <th className="p-2 border text-left">Name</th>
-                  <th className="p-2 border text-left">School</th>
-                  <th className="p-2 border text-left">Score</th>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-200 shadow-md rounded">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="px-4 py-2 border-b">#</th>
+                <th className="px-4 py-2 border-b">Name</th>
+                <th className="px-4 py-2 border-b">School</th>
+                <th className="px-4 py-2 border-b">Level</th>
+                <th className="px-4 py-2 border-b">Subject</th>
+                <th className="px-4 py-2 border-b">Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredData.slice(0, 100).map((entry, index) => (
+                <tr key={index} className="hover:bg-gray-50">
+                  <td className="px-4 py-2 border-b">{index + 1}</td>
+                  <td className="px-4 py-2 border-b">{entry.name}</td>
+                  <td className="px-4 py-2 border-b">{entry.school}</td>
+                  <td className="px-4 py-2 border-b">{entry.level}</td>
+                  <td className="px-4 py-2 border-b">{entry.subject}</td>
+                  <td className="px-4 py-2 border-b">{entry.score}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {records.map((entry, index) => (
-                  <tr key={index} className="odd:bg-white even:bg-blue-50">
-                    <td className="p-2 border">{index + 1}</td>
-                    <td className="p-2 border">{entry.name}</td>
-                    <td className="p-2 border">{entry.school}</td>
-                    <td className="p-2 border font-bold">{entry.score}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ))
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
 }
 
-export default LeaderboardPage;
+export default Leaderboard;
