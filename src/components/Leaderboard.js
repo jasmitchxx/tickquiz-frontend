@@ -1,114 +1,250 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-function LeaderboardPage() {
+function Leaderboard() {
+  const [results, setResults] = useState([]);
   const [subject, setSubject] = useState('');
   const [level, setLevel] = useState('');
-  const [leaderboard, setLeaderboard] = useState([]);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [resetMessage, setResetMessage] = useState('');
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const isAdmin = user.email === 'jasmitch2014@gmail.com';
 
   const shsSubjects = [
-    'Physics', 'Chemistry', 'Biology', 'Core Maths', 'Add Maths',
-    'English', 'Social Studies', 'Geography', 'Economics',
-    'Elective ICT', 'Accounting', 'Cost Accounting', 'Business Management'
+    "Physics",
+  "Chemistry",
+  "Biology",
+  "Core Maths",
+  "Add Maths",
+  "English",
+  "Social Studies",
+  "Geography",
+  "Economics",
+  "Elective ICT",
+  "Accounting",
+  "Cost Accounting",
+  "Business Management",
+
   ];
 
-  const jhsSubjects = [
-    'English Language', 'Maths', 'Core Science', 'Career Tech', 'Computing',
-    'RME', 'French', 'Creative Arts and Design', 'Social Studies'
+  const jhsSubjects = ["English Language",
+  "Maths",
+  "Core Science",
+  "Career Tech",
+  "Computing",
+  "RME",
+  "French",
+  "Creative Arts and Design",
+  "Social Studies"
+
   ];
 
-  const allSubjects = [...new Set([...shsSubjects, ...jhsSubjects])];
+  const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
 
-  const levels = ['JHS', 'SHS'];
-
-  const normalize = (str) => str?.toLowerCase().replace(/\s+/g, '');
-
-  const fetchLeaderboard = async () => {
+  const fetchResults = async () => {
     if (!subject || !level) return;
-
     setLoading(true);
-    const normalizedSubject = normalize(subject);
-    const normalizedLevel = level.toUpperCase();
+    setError(null);
 
     try {
-      const res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}&level=${normalizedLevel}`
-      );
-      setLeaderboard(res.data);
+      const queryParams = new URLSearchParams({
+        subject,
+        level,
+        ...(startDate && { startDate }),
+        ...(endDate && { endDate }),
+      });
+
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?${queryParams.toString()}`);
+      setResults(res.data.results || []);
     } catch (err) {
-      console.error('Error fetching leaderboard:', err);
+      console.error(err);
+      setError('? Failed to load leaderboard. Please try again later.');
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchLeaderboard();
-  }, [subject, level]);
+    fetchResults();
+  }, [subject, level, startDate, endDate]);
+
+  const handleReset = async () => {
+    if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
+
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
+        subject,
+        level,
+        password: adminPassword
+      });
+
+      setResetMessage('? Leaderboard reset successfully.');
+      setResults([]);
+    } catch (err) {
+      console.error(err);
+      setResetMessage('? Reset failed. Incorrect password or server error.');
+    }
+  };
+
+  const scrollList = [...results, ...results];
 
   return (
-    <div className="p-6 max-w-5xl mx-auto min-h-screen bg-blue-50">
-      <h1 className="text-3xl font-bold text-center mb-6">Leaderboard</h1>
+    <>
+      <div className="leaderboard">
+        <h3>?? Quiz Leaderboard</h3>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
-        <select
-          className="px-4 py-2 rounded border bg-white shadow"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        >
-          <option value="">Select Subject</option>
-          {allSubjects.map((subj) => (
-            <option key={subj} value={subj}>{subj}</option>
-          ))}
-        </select>
+        <div className="subject-selector">
+          <label>
+            Level:
+            <select value={level} onChange={(e) => {
+              setLevel(e.target.value);
+              setSubject('');
+            }}>
+              <option value="">Select Level</option>
+              <option value="SHS">SHS</option>
+              <option value="JHS">JHS</option>
+            </select>
+          </label>
 
-        <select
-          className="px-4 py-2 rounded border bg-white shadow"
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-        >
-          <option value="">Select Level</option>
-          {levels.map((lvl) => (
-            <option key={lvl} value={lvl}>{lvl}</option>
-          ))}
-        </select>
-      </div>
-
-      {loading ? (
-        <p className="text-center text-lg">Loading...</p>
-      ) : leaderboard.length === 0 ? (
-        <p className="text-center text-gray-600">No results found. Try a different subject or level.</p>
-      ) : (
-        <div className="overflow-x-auto">
-          <table className="w-full table-auto bg-white shadow rounded">
-            <thead>
-              <tr className="bg-blue-200 text-left">
-                <th className="px-4 py-2">Rank</th>
-                <th className="px-4 py-2">Name</th>
-                <th className="px-4 py-2">School</th>
-                <th className="px-4 py-2">Score</th>
-                <th className="px-4 py-2">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {leaderboard.map((entry, index) => (
-                <tr key={index} className="border-t hover:bg-blue-100">
-                  <td className="px-4 py-2 font-bold">{index + 1}</td>
-                  <td className="px-4 py-2">{entry.name}</td>
-                  <td className="px-4 py-2">{entry.school}</td>
-                  <td className="px-4 py-2">{entry.score}</td>
-                  <td className="px-4 py-2">
-                    {new Date(entry.timestamp).toLocaleDateString()}
-                  </td>
-                </tr>
+          <label>
+            Subject:
+            <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
+              <option value="">Select Subject</option>
+              {getSubjects().map((subj) => (
+                <option key={subj} value={subj}>{subj}</option>
               ))}
-            </tbody>
-          </table>
+            </select>
+          </label>
+
+          <label>
+            Start Date:
+            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+          </label>
+
+          <label>
+            End Date:
+            <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+          </label>
         </div>
-      )}
-    </div>
+
+        {loading ? (
+          <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
+            ? Loading leaderboard...
+          </p>
+        ) : error ? (
+          <p className="error">{error}</p>
+        ) : results.length === 0 ? (
+          <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
+            ?? No results available.
+          </p>
+        ) : (
+          <div className="scroll-wrapper" aria-live="polite" aria-label="Leaderboard results scrolling list">
+            <ul className="scrolling-list">
+              {scrollList.map((result, index) => {
+                const originalIndex = index % results.length;
+                const res = results[originalIndex];
+                const percentage = (res.score / (res.total || 60)) * 100;
+                const isCurrentUser = res.code === user.code;
+
+                const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                });
+
+                let rankClass = '';
+                if (originalIndex === 0) rankClass = 'gold';
+                else if (originalIndex === 1) rankClass = 'silver';
+                else if (originalIndex === 2) rankClass = 'bronze';
+
+                let percentClass = 'percent-low';
+                if (percentage >= 80) percentClass = 'percent-high';
+                else if (percentage >= 60) percentClass = 'percent-medium';
+
+                return (
+                  <li
+                    key={index}
+                    className={isCurrentUser ? 'highlight' : ''}
+                    role="listitem"
+                  >
+                    <div className={`rank ${rankClass}`}>{originalIndex + 1}</div>
+                    <div className="name">{res.name}</div>
+                    <div className="school">{res.school}</div>
+                    <div className="score">{res.score}</div>
+                    <div className={percentClass}>{percentage.toFixed(1)}%</div>
+                    <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginLeft: '1rem' }}>
+                      {formattedDate}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+
+        {/* ?? Admin Panel */}
+        {isAdmin && (
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <h4>??? Admin Panel</h4>
+            <input
+              type="password"
+              placeholder="Enter Admin Password"
+              value={adminPassword}
+              onChange={(e) => setAdminPassword(e.target.value)}
+              style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
+            />
+            <br />
+            <button
+              onClick={handleReset}
+              style={{
+                padding: '0.6rem 1.5rem',
+                background: '#ef4444',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '0.5rem',
+                fontWeight: 'bold',
+                cursor: 'pointer'
+              }}
+            >
+              ?? Reset Leaderboard
+            </button>
+            <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
+              {resetMessage}
+            </p>
+          </div>
+        )}
+
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button
+            style={{
+              padding: '0.75rem 2rem',
+              background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
+              borderRadius: '1rem',
+              color: '#fff',
+              fontWeight: '700',
+              fontSize: '1.1rem',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
+              transition: 'background 0.3s ease',
+            }}
+            onClick={() => navigate('/request-access')}
+            onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
+          >
+            ?? Back to Home
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default LeaderboardPage;
+export default Leaderboard;
