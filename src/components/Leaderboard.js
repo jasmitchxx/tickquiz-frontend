@@ -19,17 +19,25 @@ function Leaderboard() {
   const isAdmin = user.email === 'jasmitch2014@gmail.com';
   const navigate = useNavigate();
 
+  const subjects = [
+    "Physics", "Chemistry", "Add Maths", "Biology", "Core Maths", "Core Science",
+    "Economics", "Geography", "Electiveict", "English", "Socialstudies",
+    "Accounting", "Cost Accounting", "Business Management",
+    "RME", "Bdt", "Creative Art", "History", "Ghanaian Language", "French",
+    "Science", "Mathematics"
+  ];
+
   useEffect(() => {
     const fetchResults = async () => {
-      if (!subject && !level) return;
+      if (!subject) return;
 
       setLoading(true);
       setError(null);
 
       try {
         const queryParams = new URLSearchParams({
-          ...(subject && { subject: subject.toLowerCase().trim() }),
-          ...(level && { level: level.toUpperCase().trim() }),
+          subject: subject.trim(),
+          ...(level && { level: level.trim() }),
           ...(startDate && { startDate }),
           ...(endDate && { endDate }),
         });
@@ -47,21 +55,22 @@ function Leaderboard() {
     fetchResults();
   }, [subject, level, startDate, endDate]);
 
-  const scrollList = [...results, ...results]; // for infinite scroll animation
+  const scrollList = [...results, ...results]; // infinite scroll animation
 
   return (
     <div className="leaderboard">
       <h3 style={{ textAlign: 'center' }}>?? Quiz Leaderboard</h3>
 
       <Filters
-        level={level}
         subject={subject}
+        level={level}
         startDate={startDate}
         endDate={endDate}
-        onLevelChange={setLevel}
         onSubjectChange={setSubject}
+        onLevelChange={setLevel}
         onStartDateChange={setStartDate}
         onEndDateChange={setEndDate}
+        subjects={subjects} // Pass subject list to Filters
       />
 
       {loading ? (
