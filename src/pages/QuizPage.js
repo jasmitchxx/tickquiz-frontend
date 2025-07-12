@@ -9,7 +9,7 @@ function QuizPage() {
   const { name, subject, code, school, level: rawLevel } = user;
 
   const MAX_QUESTIONS = 60;
-  const level = rawLevel?.toUpperCase(); // JHS or SHS
+  const level = rawLevel?.toUpperCase();
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
 
   const subjectQuestions = useMemo(() => {
@@ -23,7 +23,7 @@ function QuizPage() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60);
+  const [timeLeft, setTimeLeft] = useState(60 * 60); // 1 hour
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
@@ -60,26 +60,29 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
-  }, [navigate, name, subject, subjectQuestions, code]);
+  }, [name, subject, subjectQuestions, code, navigate]);
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-    const progress = {
-      code,
-      current,
-      answers,
-      score,
-      timeLeft,
-      finished,
-      questions: shuffledQuestions,
-    };
-    localStorage.setItem('quizProgress', JSON.stringify(progress));
-  }, [current, answers, score, timeLeft, finished, shuffledQuestions, code]);
+    localStorage.setItem(
+      'quizProgress',
+      JSON.stringify({
+        code,
+        current,
+        answers,
+        score,
+        timeLeft,
+        finished,
+        questions: shuffledQuestions,
+      })
+    );
+  }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
   useEffect(() => {
     if (finished) return;
+
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 1) {
           clearInterval(timer);
           endQuiz();
@@ -88,6 +91,7 @@ function QuizPage() {
         return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
@@ -96,41 +100,32 @@ function QuizPage() {
 
     const saveResults = async () => {
       if (!name || !school || !subject || typeof score !== 'number') return;
-      const timestamp = new Date().toISOString();
-
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/increment-usage`, { code });
-
         await axios.post(`${process.env.REACT_APP_API_URL}/api/save-result`, {
           name,
           school,
-          level,
-          subject: normalizedSubject,
+          subject,
           score,
-          timestamp,
-          code,
         });
-
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?subject=${normalizedSubject}&level=${level}`);
       } catch (err) {
-        console.error('Failed to save quiz data or fetch leaderboard:', err);
+        console.error('? Failed to save result:', err);
       }
     };
 
     saveResults();
-  }, [finished]);
+  }, [finished, name, school, subject, score]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
 
-    setAnswers((prev) => [
+    setAnswers(prev => [
       ...prev,
       { question: q.question, selected, correct: q.answer, isCorrect },
     ]);
-    if (isCorrect) setScore((prev) => prev + 1);
+    if (isCorrect) setScore(prev => prev + 1);
 
-    if (current + 1 === shuffledQuestions.length) {
+    if (current + 1 >= shuffledQuestions.length) {
       endQuiz();
     } else {
       setCurrent(current + 1);
@@ -138,39 +133,38 @@ function QuizPage() {
   };
 
   const formatTime = () => {
-    const safeTime = Number.isFinite(timeLeft) ? timeLeft : 0;
-    const mins = Math.floor(safeTime / 60).toString().padStart(2, '0');
-    const secs = (safeTime % 60).toString().padStart(2, '0');
+    const mins = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    const secs = (timeLeft % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
 
   const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
-    if (percentage >= 80) return { grade: 'A1', level: 'Excellent', color: 'text-green-600' };
-    if (percentage >= 70) return { grade: 'B2', level: 'Very Good', color: 'text-lime-600' };
-    if (percentage >= 60) return { grade: 'B3', level: 'Good', color: 'text-yellow-500' };
-    if (percentage >= 55) return { grade: 'C4', level: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 50) return { grade: 'C5', level: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 45) return { grade: 'C6', level: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 40) return { grade: 'D7', level: 'Pass', color: 'text-orange-500' };
-    if (percentage >= 35) return { grade: 'D8', level: 'Pass', color: 'text-orange-500' };
-    return { grade: 'F9', level: 'Fail', color: 'text-red-600' };
+    if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
+    if (percentage >= 70) return { grade: 'B2', label: 'Very Good', color: 'text-lime-600' };
+    if (percentage >= 60) return { grade: 'B3', label: 'Good', color: 'text-yellow-500' };
+    if (percentage >= 55) return { grade: 'C4', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 50) return { grade: 'C5', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 45) return { grade: 'C6', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 40) return { grade: 'D7', label: 'Pass', color: 'text-orange-500' };
+    if (percentage >= 35) return { grade: 'D8', label: 'Pass', color: 'text-orange-500' };
+    return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
-    const { grade, level: gradeLevel, color } = getGrade(percentage);
+    const { grade, label, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-100 min-h-screen">
-        <h1 className="text-3xl font-bold mb-4">Quiz Finished</h1>
+        <h1 className="text-3xl font-bold mb-4">Quiz Completed</h1>
         <p className="text-lg">Name: <strong>{name}</strong></p>
         <p className="text-lg">Level: <strong>{level}</strong></p>
         <p className="text-lg">Subject: <strong>{subject}</strong></p>
         <p className="text-xl mt-2">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
         <p className={`text-xl mt-2 font-semibold ${color}`}>
-          Grade: <strong>{grade}</strong> – <em>{gradeLevel}</em>
+          Grade: <strong>{grade}</strong> – <em>{label}</em>
         </p>
 
         <div className="mt-6 space-x-4">
@@ -188,7 +182,10 @@ function QuizPage() {
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-            onClick={() => navigate('/start')}
+            onClick={() => {
+              setReviewing(false);
+              navigate('/start');
+            }}
           >
             Start Over
           </button>
@@ -220,7 +217,10 @@ function QuizPage() {
         <div className="text-center mt-6">
           <button
             className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            onClick={() => navigate('/start')}
+            onClick={() => {
+              setReviewing(false);
+              navigate('/start');
+            }}
           >
             Return to Start
           </button>
@@ -252,7 +252,7 @@ function QuizPage() {
         </h2>
         <p className="text-lg mb-4">{currentQuestion?.question}</p>
         <div className="flex flex-wrap gap-4 justify-start">
-          {currentQuestion?.options.map((option, index) => (
+          {currentQuestion?.options?.map((option, index) => (
             <button
               key={index}
               className="bg-white border rounded-lg px-6 py-3 shadow hover:bg-gray-100 text-center min-w-[120px]"

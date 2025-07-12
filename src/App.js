@@ -9,6 +9,8 @@ import QuizPage from './pages/QuizPage';
 import PaymentFailedPage from './pages/PaymentFailedPage';
 import UseAccessCodePage from './pages/UseAccessCodePage';
 import QuizStartPage from './pages/QuizStartPage';
+
+// ? UPDATED paths here:
 import Header from './components/Header';
 import Leaderboard from './components/Leaderboard';
 
@@ -19,7 +21,6 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        {/* Default redirect to /request-access */}
         <Route path="/" element={<Navigate to="/request-access" replace />} />
 
         {/* Public Routes */}

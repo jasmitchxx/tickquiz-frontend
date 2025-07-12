@@ -1,21 +1,21 @@
 .leaderboard {
-  padding: 2rem; /* increased padding */
-  max-width: 900px; /* wider for bigger screens */
-  margin: 2rem auto; /* vertical spacing */
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd); /* subtle blue gradient */
-  border-radius: 1rem; /* more rounded corners */
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15); /* softer blue shadow */
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b; /* a dark slate blue for text */
+  color: #1e293b;
   display: flex;
   flex-direction: column;
 }
 
 .leaderboard h3 {
-  font-size: 2.2rem; /* larger */
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: #1e40af; /* a rich blue */
+  color: #1e40af;
   font-weight: 800;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1.8rem;
-  gap: 1rem; /* more spacing */
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -36,9 +36,10 @@
   color: #1e293b;
 }
 
-.subject-selector select {
-  padding: 0.6rem 1rem; /* bigger click area */
-  border: 2px solid #3b82f6; /* bright blue border */
+.subject-selector select,
+.subject-selector input[type="date"] {
+  padding: 0.6rem 1rem;
+  border: 2px solid #3b82f6;
   border-radius: 0.75rem;
   font-size: 1.1rem;
   background-color: #f0f9ff;
@@ -47,7 +48,9 @@
 }
 
 .subject-selector select:hover,
-.subject-selector select:focus {
+.subject-selector select:focus,
+.subject-selector input[type="date"]:hover,
+.subject-selector input[type="date"]:focus {
   border-color: #2563eb;
   box-shadow: 0 0 8px #2563ebaa;
   outline: none;
@@ -56,13 +59,17 @@
 /* Scrollable leaderboard list */
 .scroll-wrapper {
   overflow: hidden;
-  height: 320px; /* taller for more content */
+  height: 320px;
   position: relative;
   border-top: 2px solid #bfdbfe;
   border-bottom: 2px solid #bfdbfe;
   background: #ffffff;
   border-radius: 1rem;
   box-shadow: inset 0 0 10px #e0f2fe;
+}
+
+.scroll-wrapper:focus {
+  outline: 2px solid #2563eb;
 }
 
 .scrolling-list {
@@ -72,6 +79,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.scroll-wrapper:hover .scrolling-list {
+  animation-play-state: paused;
 }
 
 @keyframes scrollUp {
@@ -87,7 +98,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem; /* bigger padding */
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #e0e7ff;
   font-size: 1.1rem;
   color: #1e293b;
@@ -96,43 +107,55 @@
 }
 
 .scrolling-list li:nth-child(even) {
-  background-color: #f0f9ff; /* subtle blue highlight on even rows */
+  background-color: #f0f9ff;
 }
 
 .scrolling-list li:hover {
   background-color: #dbeafe;
 }
 
+/* Sticky header row */
+.header-row {
+  position: sticky;
+  top: 0;
+  background: #e0f2fe;
+  font-weight: 800;
+  border-bottom: 2px solid #3b82f6;
+  z-index: 2;
+  color: #1e40af;
+}
+
 /* Highlight current user */
 .scrolling-list li.highlight {
-  background-color: #fef3c7; /* warm yellow */
+  background-color: #fef3c7;
   font-weight: 700;
   color: #92400e;
   box-shadow: 0 0 10px #fbbf24aa;
   border-radius: 0.75rem;
+  animation: glowPulse 2s infinite;
 }
 
-/* Emojis for top ranks */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px #facc15; }
+  50% { box-shadow: 0 0 20px #facc15aa; }
+  100% { box-shadow: 0 0 10px #facc15; }
+}
+
+/* Rank emoji styles */
 .rank::before {
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 1.3rem;
 }
 
-.rank.gold::before {
-  content: "🥇";
-}
-.rank.silver::before {
-  content: "🥈";
-}
-.rank.bronze::before {
-  content: "🥉";
-}
+.rank.gold::before { content: "🥇"; }
+.rank.silver::before { content: "🥈"; }
+.rank.bronze::before { content: "🥉"; }
 
 .rank {
   width: 60px;
   font-weight: 700;
-  color: #2563eb; /* blue */
+  color: #2563eb;
   text-align: center;
 }
 
@@ -154,20 +177,32 @@
   width: 70px;
   text-align: right;
   font-weight: 700;
-  color: #16a34a; /* green */
+  color: #16a34a;
+}
+
+.percentage {
+  width: 80px;
+  text-align: right;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  min-width: 90px;
+  text-align: right;
 }
 
 /* Dynamic percentage color classes */
 .percent-high {
-  color: #16a34a; /* bright green */
+  color: #16a34a;
   font-weight: 700;
 }
 .percent-medium {
-  color: #f59e0b; /* amber */
+  color: #f59e0b;
   font-weight: 600;
 }
 .percent-low {
-  color: #dc2626; /* red */
+  color: #dc2626;
   font-weight: 600;
 }
 
@@ -185,15 +220,26 @@
     padding: 1rem;
     max-width: 95%;
   }
+
   .subject-selector {
     flex-direction: column;
     gap: 1rem;
   }
+
   .scroll-wrapper {
     height: 250px;
   }
+
   .scrolling-list li {
     font-size: 1rem;
     padding: 0.8rem 1rem;
+  }
+
+  .rank, .score, .percentage, .date {
+    font-size: 0.9rem;
+  }
+
+  .name, .school {
+    padding-left: 0.8rem;
   }
 }
