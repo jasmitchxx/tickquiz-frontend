@@ -82,8 +82,8 @@ export default function VerifyPaymentPage() {
         <p className="text-gray-700 mb-2">
           Hi <span className="font-semibold">{name}</span>, your payment was successful.
         </p>
-        <p className="text-gray-700 mb-2">?? An SMS has been sent to <strong>{phone}</strong>.</p>
-        <p className="text-gray-700 mb-4">In case it delays, here’s your access code:</p>
+        <p className="text-gray-700 mb-2">?? Save this access code somewhere safe.</p>
+        <p className="text-gray-700 mb-4">You’ll need it to access the quiz.</p>
 
         <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-6">
           {accessCode}
