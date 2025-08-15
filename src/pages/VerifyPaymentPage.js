@@ -36,11 +36,11 @@ export default function VerifyPaymentPage() {
           setPhone(phone);
           setName(name || 'User');
         } else {
-          setError('? Payment verification failed. Please try again.');
+          setError("\u274C Payment verification failed. Please try again.");
         }
       } catch (err) {
         console.error('Payment verification error:', err);
-        setError('? Something went wrong verifying payment.');
+        setError("\u26A0 Something went wrong verifying payment.");
       } finally {
         setLoading(false);
       }
@@ -48,7 +48,7 @@ export default function VerifyPaymentPage() {
 
     if (reference) verify();
     else {
-      setError('?? Missing payment reference.');
+      setError("\u26D4 Missing payment reference.");
       setLoading(false);
     }
   }, [reference]);
@@ -56,7 +56,7 @@ export default function VerifyPaymentPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen text-lg font-medium text-gray-600">
-        ? Verifying your payment, please wait...
+        {"\u23F3"} Verifying your payment, please wait...
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default function VerifyPaymentPage() {
           onClick={() => window.location.reload()}
           className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition"
         >
-          ?? Retry
+          {"\u21BA"} Retry
         </button>
       </div>
     );
@@ -78,12 +78,19 @@ export default function VerifyPaymentPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
-        <h2 className="text-2xl font-bold text-green-600 mb-4">? Payment Verified!</h2>
+        <h2 className="text-2xl font-bold text-green-600 mb-4">
+          {"\u2705"} Payment Verified!
+        </h2>
         <p className="text-gray-700 mb-2">
           Hi <span className="font-semibold">{name}</span>, your payment was successful.
         </p>
-        <p className="text-gray-700 mb-2">?? Save this access code somewhere safe.</p>
+        <p className="text-gray-700 mb-2">Save this access code somewhere safe.</p>
         <p className="text-gray-700 mb-4">You’ll need it to access the quiz.</p>
+
+        <p className="text-gray-700 mb-2">
+          {"\uD83D\uDCE7"} An SMS has been sent to <strong>{phone}</strong>.
+        </p>
+        <p className="text-gray-700 mb-4">In case it delays, here’s your access code:</p>
 
         <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-6">
           {accessCode}
@@ -93,7 +100,7 @@ export default function VerifyPaymentPage() {
           onClick={() => navigate('/use-access-code')}
           className="mt-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition"
         >
-          ?? Continue to Quiz
+          {"\u27A1"} Continue to Quiz
         </button>
       </div>
     </div>

@@ -107,14 +107,14 @@ function QuizPage() {
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
-  name: String(name),
-  school: String(school),
-  subject: normalizedSubject,
-  level: String(level),
-  score: Number(score),
-  total: Number(shuffledQuestions.length),
-  code: String(code),
-});
+          name: String(name),
+          school: String(school),
+          subject: normalizedSubject,
+          level: String(level),
+          score: Number(score),
+          total: Number(shuffledQuestions.length),
+          code: String(code),
+        });
       } catch (err) {
         console.error('? Failed to save result:', err);
       }
@@ -129,7 +129,7 @@ function QuizPage() {
 
     setAnswers(prev => [
       ...prev,
-      { question: q.question, selected, correct: q.answer, isCorrect },
+      { question: q.question, selected, correct: q.answer, isCorrect, options: q.options },
     ]);
     if (isCorrect) setScore(prev => prev + 1);
 
@@ -209,17 +209,23 @@ function QuizPage() {
         {answers.map((item, index) => (
           <div key={index} className="mb-4 p-4 border rounded bg-white shadow">
             <p className="font-semibold">{index + 1}. {item.question}</p>
-            <p>
-              Your answer:{' '}
-              <span className={item.isCorrect ? 'text-green-600' : 'text-red-600'}>
-                {item.selected}
-              </span>
-            </p>
-            {!item.isCorrect && (
-              <p>
-                Correct answer: <span className="text-green-600">{item.correct}</span>
-              </p>
-            )}
+            <div className="mt-2 space-y-2">
+              {item.options.map((opt, i) => {
+                let btnClass = "border rounded-lg px-4 py-2 w-full text-left";
+                if (opt === item.correct) {
+                  btnClass += " bg-green-100 border-green-500 text-green-700 font-semibold";
+                } else if (opt === item.selected && opt !== item.correct) {
+                  btnClass += " bg-red-100 border-red-500 text-red-700 font-semibold";
+                } else {
+                  btnClass += " bg-gray-50";
+                }
+                return (
+                  <div key={i} className={btnClass}>
+                    {opt}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ))}
         <div className="text-center mt-6">

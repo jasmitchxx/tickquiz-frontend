@@ -1,38 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 function Header() {
   const navigate = useNavigate();
-  const [accessGranted, setAccessGranted] = useState(false);
-  const [quizFinished, setQuizFinished] = useState(false);
-
-  useEffect(() => {
-    const granted = localStorage.getItem('quizAccessGranted') === 'true';
-    const progress = JSON.parse(localStorage.getItem('quizProgress')) || {};
-    setAccessGranted(granted);
-    setQuizFinished(progress.finished === true);
-  }, []);
-
-  const handleStartClick = () => {
-    if (!accessGranted) {
-      alert('?? Please complete payment before starting the quiz.');
-      return;
-    }
-
-    navigate(quizFinished ? '/results' : '/start');
-  };
-
-  const handleQuizClick = (e) => {
-    if (!accessGranted) {
-      e.preventDefault();
-      alert('?? Access denied. Please make payment first.');
-    }
-  };
 
   const navLinkStyle = {
     fontSize: '1rem',
     textDecoration: 'none',
     fontWeight: 'bold',
+    color: '#333',
   };
 
   return (
@@ -41,63 +16,54 @@ function Header() {
         backgroundColor: '#f5f5f5',
         padding: '1rem 2rem',
         borderBottom: '1px solid #ddd',
-        marginBottom: '2rem',
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'space-between',
       }}
     >
-      {/* Logo */}
-      <img
-        src="/tickquiz-logo.png"
-        alt="TickQuiz Logo"
+      <div
         style={{
-          height: '50px',
-          objectFit: 'contain',
-          cursor: 'pointer',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center', // ? centers vertically
         }}
-        onClick={() => navigate('/')}
-      />
-
-      {/* Navigation */}
-      <nav
-        aria-label="Main navigation"
-        style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}
       >
-        <button
-          onClick={handleStartClick}
+        {/* Logo */}
+        <img
+          src="/tickquiz-logo.png"
+          alt="TickQuiz Logo"
           style={{
-            background: 'none',
-            border: 'none',
-            color: accessGranted ? '#007bff' : '#888',
-            cursor: accessGranted ? 'pointer' : 'not-allowed',
-            ...navLinkStyle,
+            height: '50px',
+            objectFit: 'contain',
+            cursor: 'pointer',
           }}
-        >
-          ?? Start Quiz
-        </button>
+          onClick={() => navigate('/')}
+        />
 
-        <Link
-          to="/quiz"
-          onClick={handleQuizClick}
-          style={{
-            color: accessGranted ? '#007bff' : '#888',
-            pointerEvents: accessGranted ? 'auto' : 'none',
-            ...navLinkStyle,
-          }}
-        >
-          ?? Quiz
-        </Link>
-
-        <Link to="/about" style={navLinkStyle}>
-          ?? About
-        </Link>
-
-        <Link to="/contact" style={navLinkStyle}>
-          ?? Contact
-        </Link>
-      </nav>
+        {/* Navigation */}
+        <nav aria-label="Main navigation">
+          <ul
+            style={{
+              display: 'flex',
+              gap: '2rem',
+              listStyle: 'none',
+              margin: 0,
+              padding: 0,
+              alignItems: 'center', // ? extra safeguard for vertical alignment
+            }}
+          >
+            <li>
+              <Link to="/about" style={navLinkStyle}>
+                {"\u2139"} About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" style={navLinkStyle}>
+                {"\u2709"} Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
