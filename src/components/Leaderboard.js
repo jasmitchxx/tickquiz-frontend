@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Leaderboard() {
   const [results, setResults] = useState([]);
-  const [subject, setSubject] = useState('');
-  const [level, setLevel] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [subject, setSubject] = useState("");
+  const [level, setLevel] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [adminPassword, setAdminPassword] = useState('');
-  const [resetMessage, setResetMessage] = useState('');
+  const [adminPassword, setAdminPassword] = useState("");
+  const [resetMessage, setResetMessage] = useState("");
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const isAdmin = user.email === 'jasmitch2014@gmail.com';
+  const user = JSON.parse(localStorage.getItem("quizUser")) || {};
+  const isAdmin = user.email === "jasmitch2014@gmail.com";
 
   const shsSubjects = [
     "Physics", "Chemistry", "Biology", "Core Maths", "Add Maths", "English",
@@ -25,10 +25,10 @@ function Leaderboard() {
 
   const jhsSubjects = [
     "English Language", "Maths", "Core Science", "Career Tech", "Computing",
-    "RME", "French", "Creative Arts and Design", "Social Studies"
+    "RME", "French", "Creative Arts and Design", "Social Studies",
   ];
 
-  const getSubjects = () => (level === 'SHS' ? shsSubjects : level === 'JHS' ? jhsSubjects : []);
+  const getSubjects = () => (level === "SHS" ? shsSubjects : level === "JHS" ? jhsSubjects : []);
 
   const fetchResults = async () => {
     if (!subject || !level) return;
@@ -43,11 +43,13 @@ function Leaderboard() {
         ...(endDate && { endDate }),
       });
 
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/leaderboard?${queryParams.toString()}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/leaderboard?${queryParams.toString()}`
+      );
       setResults(res.data.results || []);
     } catch (err) {
       console.error(err);
-      setError('? Failed to load leaderboard. Please try again later.');
+      setError("Failed to load leaderboard. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -58,202 +60,165 @@ function Leaderboard() {
   }, [subject, level, startDate, endDate]);
 
   const handleReset = async () => {
-    if (!window.confirm('Are you sure you want to reset the leaderboard?')) return;
+    if (!window.confirm("Are you sure you want to reset the leaderboard?")) return;
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard/reset`, {
         subject,
         level,
-        password: adminPassword
+        password: adminPassword,
       });
 
-      setResetMessage('? Leaderboard reset successfully.');
+      setResetMessage("? Leaderboard reset successfully.");
       setResults([]);
     } catch (err) {
       console.error(err);
-      setResetMessage('? Reset failed. Incorrect password or server error.');
+      setResetMessage("? Reset failed. Incorrect password or server error.");
     }
   };
 
-  const scrollList = results;
-
   return (
-    <div className="leaderboard">
-      <h3>?? Quiz Leaderboard</h3>
+    <div className="min-h-screen bg-gray-50 px-4 py-6">
+      <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
+        Quiz Leaderboard
+      </h2>
 
-      <div className="subject-selector">
-        <label>
-          Level:
-          <select value={level} onChange={(e) => {
+      {/* Filters */}
+      <div className="flex flex-wrap gap-4 justify-center mb-6">
+        <select
+          className="p-2 border rounded-lg"
+          value={level}
+          onChange={(e) => {
             setLevel(e.target.value);
-            setSubject('');
-          }}>
-            <option value="">Select Level</option>
-            <option value="SHS">SHS</option>
-            <option value="JHS">JHS</option>
-          </select>
-        </label>
-
-        <label>
-          Subject:
-          <select value={subject} onChange={(e) => setSubject(e.target.value)} disabled={!level}>
-            <option value="">Select Subject</option>
-            {getSubjects().map((subj) => (
-              <option key={subj} value={subj}>{subj}</option>
-            ))}
-          </select>
-        </label>
-
-        <label>
-          Start Date:
-          <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-        </label>
-
-        <label>
-          End Date:
-          <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-        </label>
-      </div>
-
-      {loading ? (
-        <p style={{ textAlign: 'center', fontWeight: '700', color: '#2563eb' }}>
-          ? Loading leaderboard...
-        </p>
-      ) : error ? (
-        <p className="error">{error}</p>
-      ) : results.length === 0 ? (
-        <p style={{ textAlign: 'center', color: '#64748b', fontWeight: '600' }}>
-          ?? No results available.
-        </p>
-      ) : (
-        <div
-          className="scroll-wrapper"
-          aria-live="polite"
-          aria-label="Leaderboard results scrolling list"
-          style={{
-            overflowX: 'auto',
-            whiteSpace: 'nowrap',
-            padding: '1rem',
-            display: 'flex',
-            gap: '1rem',
-            scrollSnapType: 'x mandatory',
+            setSubject("");
           }}
         >
-          {scrollList.map((result, index) => {
-            const originalIndex = index % results.length;
-            const res = results[originalIndex];
+          <option value="">Select Level</option>
+          <option value="SHS">SHS</option>
+          <option value="JHS">JHS</option>
+        </select>
+
+        <select
+          className="p-2 border rounded-lg"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          disabled={!level}
+        >
+          <option value="">Select Subject</option>
+          {getSubjects().map((subj) => (
+            <option key={subj} value={subj}>
+              {subj}
+            </option>
+          ))}
+        </select>
+
+        <input
+          type="date"
+          className="p-2 border rounded-lg"
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+        />
+        <input
+          type="date"
+          className="p-2 border rounded-lg"
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+        />
+      </div>
+
+      {/* Results */}
+      {loading ? (
+        <p className="text-center font-semibold text-blue-600">
+          Loading leaderboard...
+        </p>
+      ) : error ? (
+        <p className="text-center text-red-600 font-medium">{error}</p>
+      ) : results.length === 0 ? (
+        <p className="text-center text-gray-500 font-semibold">
+          No results available.
+        </p>
+      ) : (
+        <div className="flex overflow-x-auto gap-4 p-4">
+          {results.map((res, index) => {
             const percentage = (res.score / (res.total || 60)) * 100;
             const isCurrentUser = res.code === user.code;
 
-            const formattedDate = new Date(res.submittedAt).toLocaleDateString(undefined, {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
+            const formattedDate = new Date(res.submittedAt).toLocaleDateString(
+              undefined,
+              { year: "numeric", month: "short", day: "numeric" }
+            );
 
-            let rankClass = '';
-            let rankLabel = '';
-            if (originalIndex === 0) {
-              rankClass = 'gold';
-              rankLabel = '??';
-            } else if (originalIndex === 1) {
-              rankClass = 'silver';
-              rankLabel = '??';
-            } else if (originalIndex === 2) {
-              rankClass = 'bronze';
-              rankLabel = '??';
-            }
-
-            let percentClass = 'percent-low';
-            if (percentage >= 80) percentClass = 'percent-high';
-            else if (percentage >= 60) percentClass = 'percent-medium';
+            let borderColor = "border-gray-200";
+            if (index === 0) borderColor = "border-yellow-400";
+            else if (index === 1) borderColor = "border-gray-400";
+            else if (index === 2) borderColor = "border-orange-500";
 
             return (
               <div
                 key={index}
-                className={`scroll-card ${isCurrentUser ? 'highlight' : ''}`}
-                role="listitem"
-                style={{
-                  minWidth: '250px',
-                  background: '#fff',
-                  borderRadius: '1rem',
-                  padding: '1rem',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                  scrollSnapAlign: 'start',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  border: rankClass ? `2px solid ${rankClass === 'gold' ? '#facc15' : rankClass === 'silver' ? '#a1a1aa' : '#f97316'}` : '1px solid #e2e8f0'
-                }}
+                className={`min-w-[250px] bg-white border-2 ${borderColor} rounded-xl shadow-md p-4 flex flex-col gap-2 ${
+                  isCurrentUser ? "ring-2 ring-blue-500" : ""
+                }`}
               >
-                <div style={{ fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '1.2rem' }}>
-                  {rankLabel || `#${originalIndex + 1}`}
+                <div className="font-bold text-lg">
+                  #{index + 1} {index === 0 ? "??" : index === 1 ? "??" : index === 2 ? "??" : ""}
                 </div>
-                <div className="name" style={{ fontSize: '1.1rem', fontWeight: '600' }}>{res.name}</div>
-                <div className="school" style={{ fontSize: '0.95rem', color: '#64748b' }}>{res.school}</div>
-                <div className="score" style={{ fontSize: '0.95rem' }}>Score: {res.score}</div>
-                <div className={percentClass} style={{ fontSize: '0.95rem', fontWeight: '500' }}>
+                <div className="font-semibold text-gray-800">{res.name}</div>
+                <div className="text-sm text-gray-500">{res.school}</div>
+                <div className="text-sm font-medium">Score: {res.score}</div>
+                <div
+                  className={`text-sm font-bold ${
+                    percentage >= 80
+                      ? "text-green-600"
+                      : percentage >= 60
+                      ? "text-yellow-600"
+                      : "text-red-600"
+                  }`}
+                >
                   {percentage.toFixed(1)}%
                 </div>
-                <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-                  {formattedDate}
-                </div>
+                <div className="text-xs text-gray-400">{formattedDate}</div>
               </div>
             );
           })}
         </div>
       )}
 
+      {/* Admin Panel */}
       {isAdmin && (
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <h4>??? Admin Panel</h4>
+        <div className="mt-8 text-center">
+          <h3 className="text-lg font-bold mb-2">Admin Panel</h3>
           <input
             type="password"
             placeholder="Enter Admin Password"
+            className="border p-2 rounded-lg mb-2"
             value={adminPassword}
             onChange={(e) => setAdminPassword(e.target.value)}
-            style={{ padding: '0.5rem', borderRadius: '0.5rem', marginBottom: '0.5rem' }}
           />
           <br />
           <button
             onClick={handleReset}
-            style={{
-              padding: '0.6rem 1.5rem',
-              background: '#ef4444',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '0.5rem',
-              fontWeight: 'bold',
-              cursor: 'pointer'
-            }}
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg shadow"
           >
-            ?? Reset Leaderboard
+            Reset Leaderboard
           </button>
-          <p style={{ marginTop: '0.5rem', color: resetMessage.includes('?') ? 'green' : 'red' }}>
+          <p
+            className={`mt-2 font-medium ${
+              resetMessage.includes("?") ? "text-green-600" : "text-red-600"
+            }`}
+          >
             {resetMessage}
           </p>
         </div>
       )}
 
-      <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      {/* Back button */}
+      <div className="text-center mt-6">
         <button
-          style={{
-            padding: '0.75rem 2rem',
-            background: 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)',
-            borderRadius: '1rem',
-            color: '#fff',
-            fontWeight: '700',
-            fontSize: '1.1rem',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 5px 15px rgba(37, 99, 235, 0.4)',
-            transition: 'background 0.3s ease',
-          }}
-          onClick={() => navigate('/request-access')}
-          onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(90deg, #3b82f6 0%, #2563eb 100%)'}
-          onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2563eb 0%, #3b82f6 100%)'}
+          onClick={() => navigate("/request-access")}
+          className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg"
         >
-          ?? Back to Home
+          Back to Home
         </button>
       </div>
     </div>
@@ -261,4 +226,3 @@ function Leaderboard() {
 }
 
 export default Leaderboard;
-
