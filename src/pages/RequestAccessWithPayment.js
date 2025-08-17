@@ -64,7 +64,7 @@ function RequestAccessWithPayment() {
         </h2>
         <p className="text-center text-gray-600 text-sm mb-6">
           Pay <span className="font-bold text-green-600">10 GHS</span> via Paystack. 
-          Your <span className="font-semibold">access code</span> will be sent via SMS after payment.
+          Your <span className="font-semibold">access code</span> will be shown on the verification page after payment.
         </p>
 
         <input

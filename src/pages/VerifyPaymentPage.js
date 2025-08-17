@@ -15,13 +15,15 @@ export default function VerifyPaymentPage() {
   useEffect(() => {
     const verify = async () => {
       try {
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/verify-payment`, {
-          reference,
-        });
+        const res = await axios.post(
+          `${process.env.REACT_APP_API_URL}/api/verify-payment`,
+          { reference }
+        );
 
         if (res.data.success && res.data.accessCode) {
           const { accessCode, name } = res.data;
 
+          // Save user info locally
           localStorage.setItem(
             'quizUser',
             JSON.stringify({
@@ -33,11 +35,11 @@ export default function VerifyPaymentPage() {
           setAccessCode(accessCode);
           setName(name || 'User');
         } else {
-          setError("Payment verification failed. Please try again.");
+          setError('Payment verification failed. Please try again.');
         }
       } catch (err) {
         console.error('Payment verification error:', err);
-        setError("Something went wrong verifying payment.");
+        setError('Something went wrong verifying your payment.');
       } finally {
         setLoading(false);
       }
@@ -45,7 +47,7 @@ export default function VerifyPaymentPage() {
 
     if (reference) verify();
     else {
-      setError("Missing payment reference.");
+      setError('Missing payment reference.');
       setLoading(false);
     }
   }, [reference]);
@@ -81,12 +83,14 @@ export default function VerifyPaymentPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-green-600 mb-4">
-          Payment Verified!
+          Payment Verified ?
         </h2>
         <p className="text-gray-700 mb-2">
           Hi <span className="font-semibold">{name}</span>, your payment was successful.
         </p>
-        <p className="text-gray-700 mb-2">Here is your access code:</p>
+        <p className="text-gray-700 mb-2">
+          Your <span className="font-semibold">access code</span> is shown below:
+        </p>
 
         <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-4">
           {accessCode}
