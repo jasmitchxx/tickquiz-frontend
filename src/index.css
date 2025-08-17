@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 
-    'Segoe UI Emoji', 'Segoe UI Symbol', /* Windows emoji support */
-    'Noto Color Emoji',                  /* Linux/Android emoji support */
-    'Apple Color Emoji',                 /* macOS/iOS emoji support */
-    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

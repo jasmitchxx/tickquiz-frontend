@@ -33,18 +33,25 @@ function SubjectSelectionPage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 text-center bg-blue-50 rounded-lg shadow">
-      <h2 className="text-2xl font-bold mb-6 text-blue-800">Select a Subject</h2>
-      <div className="grid grid-cols-2 gap-4">
-        {Object.keys(questionsData).map((subject, index) => (
-          <button
-            key={index}
-            onClick={() => handleSelectSubject(subject)}
-            className="bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition"
-          >
-            {formatSubject(subject)}
-          </button>
-        ))}
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8">
+        <h2 className="text-3xl font-extrabold mb-6 text-blue-700 text-center">
+          ?? Select a Subject
+        </h2>
+        <p className="text-gray-600 mb-8 text-center">
+          Choose your subject to begin the quiz
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {Object.keys(questionsData).map((subject, index) => (
+            <button
+              key={index}
+              onClick={() => handleSelectSubject(subject)}
+              className="py-4 px-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow hover:from-blue-600 hover:to-indigo-700 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+            >
+              {formatSubject(subject)}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
