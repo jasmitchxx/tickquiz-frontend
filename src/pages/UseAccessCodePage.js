@@ -46,7 +46,7 @@ function UseAccessCodePage() {
             alert('You have used all your attempts.');
             navigate('/request-access');
           } else {
-            navigate('/start'); // ? go straight to quiz start
+            navigate('/start'); 
           }
         }, 1500);
       } else {
@@ -58,30 +58,52 @@ function UseAccessCodePage() {
     }
   };
 
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setCode(text.toUpperCase());
+    } catch (err) {
+      alert('Failed to paste from clipboard.');
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          ?? Enter Access Code
+          Enter Access Code
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="Enter your code"
-            value={code}
-            onChange={(e) => setCode(e.target.value.toUpperCase())}
-            required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
+          <div className="flex items-center space-x-2">
+            <input
+              type="text"
+              placeholder="Enter your code"
+              value={code}
+              onChange={(e) => setCode(e.target.value.toUpperCase())}
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <button
+              type="button"
+              onClick={handlePaste}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg shadow"
+            >
+              Paste
+            </button>
+          </div>
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition"
           >
             Submit Code
           </button>
         </form>
         {message && (
-          <p className={`mt-4 text-center font-medium ${success ? 'text-green-600' : 'text-red-600'}`}>
+          <p
+            className={`mt-4 text-center font-medium ${
+              success ? 'text-green-600' : 'text-red-600'
+            }`}
+          >
             {message}
           </p>
         )}
