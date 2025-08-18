@@ -116,7 +116,7 @@ function QuizPage() {
           code: String(code),
         });
       } catch (err) {
-        console.error('? Failed to save result:', err);
+        console.error('Failed to save result:', err);
       }
     };
 
@@ -160,13 +160,19 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('quizUser');
+    localStorage.removeItem('quizProgress');
+    navigate('/');
+  };
+
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
         <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
           <p className="text-lg"><strong>Name:</strong> {name}</p>
           <p className="text-lg"><strong>Level:</strong> {level}</p>
@@ -177,7 +183,7 @@ function QuizPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
             className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
             onClick={() => setReviewing(true)}
@@ -185,19 +191,16 @@ function QuizPage() {
             Review Answers
           </button>
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => navigate('/leaderboard')}
+            className="px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700"
+            onClick={() => navigate('/select-subject')}
           >
-            View Leaderboard
+            Choose Another Subject
           </button>
           <button
-            className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            className="px-6 py-2 bg-red-600 text-white rounded-lg shadow hover:bg-red-700"
+            onClick={handleLogout}
           >
-            Start Over
+            Logout
           </button>
         </div>
       </div>
@@ -230,15 +233,21 @@ function QuizPage() {
             </div>
           </div>
         ))}
-        <div className="text-center mt-6">
+        <div className="text-center mt-6 flex gap-4 justify-center">
           <button
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
             onClick={() => {
               setReviewing(false);
-              navigate('/start');
+              navigate('/select-subject');
             }}
           >
-            Return to Start
+            Choose Another Subject
+          </button>
+          <button
+            className="px-6 py-2 bg-red-600 text-white rounded-lg shadow hover:bg-red-700"
+            onClick={handleLogout}
+          >
+            Logout
           </button>
         </div>
       </div>
