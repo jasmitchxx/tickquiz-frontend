@@ -22,16 +22,19 @@ function QuizStartPage() {
     level: ''
   });
   const [error, setError] = useState('');
+  const [usageCount, setUsageCount] = useState(0);
 
+  // Ensure valid access and track usage
   useEffect(() => {
-    const usageCount = Number(localStorage.getItem('quizUsageCount')) || 0;
+    const count = Number(localStorage.getItem('quizUsageCount')) || 0;
+    setUsageCount(count);
     const accessGranted = localStorage.getItem('quizAccessGranted') === 'true';
 
     if (!accessGranted) {
       alert('Access denied. Please use a valid access code.');
       navigate('/use-access-code');
-    } else if (usageCount >= 2) {
-      alert('You have already used your access code twice.');
+    } else if (count >= 6) { // Allow up to 6 quizzes
+      alert('You have already used your access code 6 times.');
       navigate('/request-access');
     }
   }, [navigate]);
@@ -50,8 +53,13 @@ function QuizStartPage() {
       return;
     }
 
+    // Save user info
     const userData = JSON.parse(localStorage.getItem('quizUser')) || {};
     localStorage.setItem('quizUser', JSON.stringify({ ...userData, ...formData }));
+
+    // Reset progress for the selected subject
+    const normalizedSubject = subject.toLowerCase().replace(/\s+/g, '');
+    localStorage.removeItem(`quizProgress_${userData.code || ''}_${normalizedSubject}`);
 
     navigate('/quiz');
   };
@@ -63,7 +71,7 @@ function QuizStartPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 px-4">
       <form
         onSubmit={handleStart}
         className="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-lg space-y-6 border border-gray-100"
@@ -72,7 +80,12 @@ function QuizStartPage() {
           ?? Start Your Quiz
         </h2>
         <p className="text-gray-600 text-center mb-6">
-          Fill in your details below to get started
+          Fill in your details and select a subject
+        </p>
+
+        {/* Show remaining attempts */}
+        <p className="text-center text-sm text-gray-600 mb-4">
+          You can attempt {6 - usageCount} more quiz{6 - usageCount > 1 ? 'zes' : ''} with this code.
         </p>
 
         <input

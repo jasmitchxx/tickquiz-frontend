@@ -8,7 +8,7 @@ function SubjectSelectionPage() {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
     if (!user || !user.code) {
-      navigate('/use-access-code');
+      navigate('/use-access-code'); // redirect if no access code
     }
   }, [navigate]);
 
@@ -26,9 +26,17 @@ function SubjectSelectionPage() {
 
   const handleSelectSubject = (subjectKey) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+
+    // Save selected subject
     user.subject = formatSubject(subjectKey);
     user.subjectKey = subjectKey;
+
+    // Remove previous progress for this subject (so new questions load)
+    const progressKey = `quizProgress_${user.code}_${subjectKey.toLowerCase()}`;
+    localStorage.removeItem(progressKey);
+
     localStorage.setItem('quizUser', JSON.stringify(user));
+
     navigate('/quiz');
   };
 

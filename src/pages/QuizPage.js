@@ -9,8 +9,10 @@ function QuizPage() {
   const { name, subject, code, school, level: rawLevel } = user;
 
   const MAX_QUESTIONS = 60;
+  const MAX_USAGE = 6; // Max quizzes per code
   const level = rawLevel?.toUpperCase();
   const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
+  const progressKey = `quizProgress_${code}_${normalizedSubject}`;
 
   const subjectQuestions = useMemo(() => {
     if (!level || !questionsData[level]) return [];
@@ -28,6 +30,7 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
 
+  // Shuffle function
   const shuffleArray = (arr) => {
     const array = [...arr];
     for (let i = array.length - 1; i > 0; i--) {
@@ -37,19 +40,29 @@ function QuizPage() {
     return array;
   };
 
+  // End quiz
   const endQuiz = useCallback(() => {
     setFinished(true);
-    localStorage.removeItem('quizProgress');
-  }, []);
 
+    // Increment quiz usage count
+    const usageCount = Number(localStorage.getItem('quizUsageCount')) || 0;
+    if (usageCount < MAX_USAGE) {
+      localStorage.setItem('quizUsageCount', usageCount + 1);
+    } else {
+      alert(`?? You have reached the maximum of ${MAX_USAGE} quizzes.`);
+      navigate('/request-access');
+    }
+  }, [navigate]);
+
+  // Load progress or start fresh
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
       return;
     }
 
-    const saved = JSON.parse(localStorage.getItem('quizProgress'));
-    if (saved && saved.code === code) {
+    const saved = JSON.parse(localStorage.getItem(progressKey));
+    if (saved) {
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
@@ -60,12 +73,13 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
-  }, [name, subject, subjectQuestions, code, navigate]);
+  }, [name, subject, subjectQuestions, progressKey, navigate]);
 
+  // Save progress per subject
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     localStorage.setItem(
-      'quizProgress',
+      progressKey,
       JSON.stringify({
         code,
         current,
@@ -76,8 +90,9 @@ function QuizPage() {
         questions: shuffledQuestions,
       })
     );
-  }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
+  }, [code, current, answers, score, timeLeft, finished, shuffledQuestions, progressKey]);
 
+  // Timer
   useEffect(() => {
     if (finished) return;
 
@@ -95,15 +110,12 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
+  // Save results to backend
   useEffect(() => {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (
-        !name || !school || !subject || !code ||
-        typeof score !== 'number' ||
-        !Array.isArray(shuffledQuestions)
-      ) return;
+      if (!name || !school || !subject || !code || typeof score !== 'number' || !Array.isArray(shuffledQuestions)) return;
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
@@ -123,6 +135,7 @@ function QuizPage() {
     saveResults();
   }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
 
+  // Answer question
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
@@ -160,6 +173,7 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
+  // Quiz Finished UI
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
@@ -177,7 +191,7 @@ function QuizPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
             className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
             onClick={() => setReviewing(true)}
@@ -192,18 +206,16 @@ function QuizPage() {
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            onClick={() => navigate('/start')}
           >
-            Start Over
+            Select New Subject
           </button>
         </div>
       </div>
     );
   }
 
+  // Reviewing UI
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-50 min-h-screen">
@@ -233,12 +245,9 @@ function QuizPage() {
         <div className="text-center mt-6">
           <button
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            onClick={() => navigate('/start')}
           >
-            Return to Start
+            Return to Subject Selection
           </button>
         </div>
       </div>
