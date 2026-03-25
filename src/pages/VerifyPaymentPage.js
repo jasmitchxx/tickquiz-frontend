@@ -18,45 +18,44 @@ export default function VerifyPaymentPage() {
       return;
     }
 
-    let interval;
-
-    const checkPayment = async () => {
+    const verifyPayment = async () => {
       try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/check-payment/${reference}`
+        // Call backend to verify payment
+        const res = await axios.post(
+          `${process.env.REACT_APP_API_URL}/api/verify-payment`,
+          { reference }
         );
 
         if (res.data.success) {
-          const code = res.data.accessCode;
-
-          // Save locally for quiz
-          localStorage.setItem(
-            'quizUser',
-            JSON.stringify({ code, name: 'User' })
+          // After successful payment, check if an access code exists
+          const codeRes = await axios.get(
+            `${process.env.REACT_APP_API_URL}/api/check-payment/${reference}`
           );
 
-          setAccessCode(code);
-          setLoading(false);
-          clearInterval(interval); // Stop polling immediately
+          if (codeRes.data.success) {
+            setAccessCode(codeRes.data.accessCode);
+
+            // Save locally for quiz
+            localStorage.setItem(
+              'quizUser',
+              JSON.stringify({ code: codeRes.data.accessCode, name: 'User' })
+            );
+          } else {
+            setError('Payment verified but access code not generated. Contact support.');
+          }
+        } else {
+          setError('Payment verification failed. Please try again.');
         }
       } catch (err) {
-        console.error('Check payment error:', err);
-        setError('Error checking payment. Try refreshing.');
+        console.error('Verification error:', err);
+        setError('Error verifying payment. Try refreshing.');
+      } finally {
         setLoading(false);
-        clearInterval(interval);
       }
     };
 
-    // Run immediately
-    checkPayment();
-
-    // Poll every 3 seconds only if not found
-    interval = setInterval(() => {
-      if (!accessCode) checkPayment();
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [reference, accessCode]);
+    verifyPayment();
+  }, [reference]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(accessCode);
