@@ -8,66 +8,70 @@ export default function VerifyPaymentPage() {
   const reference = new URLSearchParams(location.search).get('reference');
 
   const [accessCode, setAccessCode] = useState('');
+  const [name, setName] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!reference) {
-      setError('Missing payment reference.');
-      setLoading(false);
-      return;
-    }
-
-    const verifyPayment = async () => {
+    const verify = async () => {
       try {
-        // Call backend to verify payment and generate access code
         const res = await axios.post(
           `${process.env.REACT_APP_API_URL}/api/verify-payment`,
           { reference }
         );
 
         if (res.data.success && res.data.accessCode) {
-          setAccessCode(res.data.accessCode);
+          const { accessCode, name } = res.data;
 
-          // Save locally for quiz usage
+          // Save user info locally
           localStorage.setItem(
             'quizUser',
-            JSON.stringify({ code: res.data.accessCode, name: 'User' })
+            JSON.stringify({
+              code: accessCode,
+              name: name || 'User',
+            })
           );
+
+          setAccessCode(accessCode);
+          setName(name || 'User');
         } else {
-          setError('Payment verified but access code not generated. Contact support.');
+          setError('Payment verification failed. Please try again.');
         }
       } catch (err) {
-        console.error('Verification error:', err);
-        setError('Error verifying payment. Try refreshing.');
+        console.error('Payment verification error:', err);
+        setError('Something went wrong verifying your payment.');
       } finally {
         setLoading(false);
       }
     };
 
-    verifyPayment();
+    if (reference) verify();
+    else {
+      setError('Missing payment reference.');
+      setLoading(false);
+    }
   }, [reference]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(accessCode);
-    alert('Access code copied!');
+    alert('Access code copied to clipboard!');
   };
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen text-lg text-gray-600">
-        Processing your payment, please wait...
+      <div className="flex items-center justify-center h-screen text-lg font-medium text-gray-600">
+        Verifying your payment, please wait...
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen text-red-600 text-center px-4">
+      <div className="flex flex-col items-center justify-center h-screen text-red-600 text-lg font-semibold text-center px-4">
         {error}
         <button
           onClick={() => window.location.reload()}
-          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full"
+          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition"
         >
           Retry
         </button>
@@ -79,11 +83,13 @@ export default function VerifyPaymentPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-green-600 mb-4">
-          Payment Successful ?
+          Payment Verified ?
         </h2>
-
         <p className="text-gray-700 mb-2">
-          Your <span className="font-semibold">access code</span> is ready:
+          Hi <span className="font-semibold">{name}</span>, your payment was successful.
+        </p>
+        <p className="text-gray-700 mb-2">
+          Your <span className="font-semibold">access code</span> is shown below:
         </p>
 
         <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-4">
@@ -99,7 +105,7 @@ export default function VerifyPaymentPage() {
 
         <button
           onClick={() => navigate('/use-access-code')}
-          className="mt-4 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full"
+          className="mt-4 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition"
         >
           Continue to Quiz
         </button>
