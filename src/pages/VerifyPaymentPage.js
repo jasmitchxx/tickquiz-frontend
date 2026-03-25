@@ -37,7 +37,7 @@ export default function VerifyPaymentPage() {
 
           setAccessCode(code);
           setLoading(false);
-          clearInterval(interval); // Stop polling
+          clearInterval(interval); // Stop polling immediately
         }
       } catch (err) {
         console.error('Check payment error:', err);
@@ -50,11 +50,13 @@ export default function VerifyPaymentPage() {
     // Run immediately
     checkPayment();
 
-    // Poll every 3 seconds
-    interval = setInterval(checkPayment, 3000);
+    // Poll every 3 seconds only if not found
+    interval = setInterval(() => {
+      if (!accessCode) checkPayment();
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, [reference]);
+  }, [reference, accessCode]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(accessCode);
@@ -87,7 +89,7 @@ export default function VerifyPaymentPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-green-600 mb-4">
-          Payment Successful ??
+          Payment Successful ?
         </h2>
 
         <p className="text-gray-700 mb-2">
