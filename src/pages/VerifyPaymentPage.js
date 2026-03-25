@@ -13,43 +13,52 @@ export default function VerifyPaymentPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const verify = async () => {
+    if (!reference) {
+      setError('Missing payment reference.');
+      setLoading(false);
+      return;
+    }
+
+    let interval;
+
+    const checkPayment = async () => {
       try {
-        const res = await axios.post(
-          `${process.env.REACT_APP_API_URL}/api/verify-payment`,
-          { reference }
+        const res = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/check-payment/${reference}`
         );
 
-        if (res.data.success && res.data.accessCode) {
-          const { accessCode, name } = res.data;
+        if (res.data.success) {
+          const code = res.data.accessCode;
 
           // Save user info locally
           localStorage.setItem(
             'quizUser',
             JSON.stringify({
-              code: accessCode,
-              name: name || 'User',
+              code,
+              name: 'User', // webhook doesn't return name here
             })
           );
 
-          setAccessCode(accessCode);
-          setName(name || 'User');
-        } else {
-          setError('Payment verification failed. Please try again.');
+          setAccessCode(code);
+          setName('User');
+          setLoading(false);
+          clearInterval(interval);
         }
       } catch (err) {
-        console.error('Payment verification error:', err);
-        setError('Something went wrong verifying your payment.');
-      } finally {
+        console.error('Check payment error:', err);
+        setError('Something went wrong checking your payment.');
         setLoading(false);
+        clearInterval(interval);
       }
     };
 
-    if (reference) verify();
-    else {
-      setError('Missing payment reference.');
-      setLoading(false);
-    }
+    // Run immediately
+    checkPayment();
+
+    // Then poll every 3 seconds
+    interval = setInterval(checkPayment, 3000);
+
+    return () => clearInterval(interval);
   }, [reference]);
 
   const handleCopy = () => {
@@ -60,7 +69,7 @@ export default function VerifyPaymentPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen text-lg font-medium text-gray-600">
-        Verifying your payment, please wait...
+        Processing your payment, please wait...
       </div>
     );
   }
@@ -83,13 +92,11 @@ export default function VerifyPaymentPage() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
       <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-green-600 mb-4">
-          Payment Verified ?
+          Payment Successful ??
         </h2>
+
         <p className="text-gray-700 mb-2">
-          Hi <span className="font-semibold">{name}</span>, your payment was successful.
-        </p>
-        <p className="text-gray-700 mb-2">
-          Your <span className="font-semibold">access code</span> is shown below:
+          Your <span className="font-semibold">access code</span> is ready:
         </p>
 
         <div className="text-4xl font-extrabold tracking-wider text-blue-700 bg-blue-100 py-4 px-6 rounded-xl border border-blue-300 shadow mb-4">
