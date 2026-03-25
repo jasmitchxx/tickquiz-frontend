@@ -20,31 +20,22 @@ export default function VerifyPaymentPage() {
 
     const verifyPayment = async () => {
       try {
-        // Call backend to verify payment
+        // Call backend to verify payment and generate access code
         const res = await axios.post(
           `${process.env.REACT_APP_API_URL}/api/verify-payment`,
           { reference }
         );
 
-        if (res.data.success) {
-          // After successful payment, check if an access code exists
-          const codeRes = await axios.get(
-            `${process.env.REACT_APP_API_URL}/api/check-payment/${reference}`
+        if (res.data.success && res.data.accessCode) {
+          setAccessCode(res.data.accessCode);
+
+          // Save locally for quiz usage
+          localStorage.setItem(
+            'quizUser',
+            JSON.stringify({ code: res.data.accessCode, name: 'User' })
           );
-
-          if (codeRes.data.success) {
-            setAccessCode(codeRes.data.accessCode);
-
-            // Save locally for quiz
-            localStorage.setItem(
-              'quizUser',
-              JSON.stringify({ code: codeRes.data.accessCode, name: 'User' })
-            );
-          } else {
-            setError('Payment verified but access code not generated. Contact support.');
-          }
         } else {
-          setError('Payment verification failed. Please try again.');
+          setError('Payment verified but access code not generated. Contact support.');
         }
       } catch (err) {
         console.error('Verification error:', err);
