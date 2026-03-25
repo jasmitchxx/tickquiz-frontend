@@ -25,15 +25,23 @@ function RequestAccessWithPayment() {
     }
 
     setLoading(true);
-    setMessage('');
+    setMessage('Waking server, please wait...');
 
     try {
+      // ? STEP 1: Wake up backend
+      await fetch(`${API_URL}/api/health`);
+
+      // ? Small delay to allow server fully wake
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // ? STEP 2: Initiate payment
       const response = await axios.post(`${API_URL}/api/initiate-payment`, {
         name: name.trim(),
         email: email.trim(),
         phone: countryCode + phone.trim(),
       });
 
+      // Save user temporarily
       localStorage.setItem(
         'pendingUser',
         JSON.stringify({
@@ -43,10 +51,12 @@ function RequestAccessWithPayment() {
         })
       );
 
-      // Redirect to Paystack authorization URL
+      // ? STEP 3: Redirect to Paystack
       window.location.href = response.data.authorization_url;
+
     } catch (error) {
       console.error('Payment initialization error:', error);
+
       setMessage(
         error.response?.data?.message ||
         'Payment failed to initialize. Please try again.'
@@ -64,7 +74,7 @@ function RequestAccessWithPayment() {
         </h2>
         <p className="text-center text-gray-600 text-sm mb-6">
           Pay <span className="font-bold text-green-600">10 GHS</span> via Paystack. 
-          Your <span className="font-semibold">access code</span> will be shown on the verification page after payment.
+          Your <span className="font-semibold">access code</span> will be shown after payment.
         </p>
 
         <input
@@ -89,9 +99,7 @@ function RequestAccessWithPayment() {
           value={countryCode}
           onChange={(e) => setCountryCode(e.target.value)}
           className="w-full mb-3 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          required
         >
-          <option value="">Select Country Code</option>
           <option value="+233">Ghana (+233)</option>
           <option value="+234">Nigeria (+234)</option>
           <option value="+254">Kenya (+254)</option>
@@ -124,11 +132,11 @@ function RequestAccessWithPayment() {
               : 'bg-green-600 hover:bg-green-700'
           }`}
         >
-          {loading ? 'Processing Payment...' : 'Pay & Get Access Code'}
+          {loading ? 'Preparing Payment...' : 'Pay & Get Access Code'}
         </button>
 
         {message && (
-          <p className="mt-4 text-center text-sm text-red-600 font-medium">
+          <p className="mt-4 text-center text-sm text-blue-600 font-medium">
             {message}
           </p>
         )}
