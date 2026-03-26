@@ -9,7 +9,7 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code, school, level: rawLevel } = user;
 
-  const { remaining, startAttempt } = useQuizAttempts(); // hook for tracking attempts
+  const { remaining, startAttempt } = useQuizAttempts();
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
@@ -54,7 +54,7 @@ function QuizPage() {
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
 
-    // Resume unfinished attempt
+    // Resume unfinished quiz
     if (saved && saved.code === code && !saved.finished) {
       setCurrent(saved.current);
       setAnswers(saved.answers);
@@ -65,27 +65,32 @@ function QuizPage() {
       return;
     }
 
-    // Start new attempt if attempts remain
-    if (!startAttempt()) {
-      alert('You have used all 6 attempts. Please log out to reset.');
-      navigate('/start');
-      return;
+    // Start new attempt ONLY if not resuming
+    if (!saved || saved.finished) {
+      if (!startAttempt()) {
+        alert('You have used all 6 attempts.');
+        navigate('/start');
+        return;
+      }
     }
 
-    // Clear previous progress and start fresh
+    // Start fresh quiz
     localStorage.removeItem('quizProgress');
     const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+
     setShuffledQuestions(shuffled);
     setCurrent(0);
     setAnswers([]);
     setScore(0);
     setTimeLeft(60 * 60);
     setFinished(false);
-  }, [name, subject, subjectQuestions, code, navigate, startAttempt]);
+
+  }, [name, subject, subjectQuestions, code, navigate]); // ? FIXED (removed startAttempt)
 
   // ---------------- Save Progress ----------------
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
+
     localStorage.setItem(
       'quizProgress',
       JSON.stringify({
@@ -118,7 +123,7 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  // ---------------- Save Result on Finish ----------------
+  // ---------------- Save Result ----------------
   useEffect(() => {
     if (!finished) return;
 
@@ -139,7 +144,7 @@ function QuizPage() {
     };
 
     saveResults();
-  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+  }, [finished]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
@@ -171,23 +176,11 @@ function QuizPage() {
   if (finished && !reviewing) {
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
 
         <p className="mb-4 text-red-600 font-semibold">
           Attempts Remaining: {remaining} / 6
         </p>
-
-        {remaining === 1 && (
-          <p className="text-yellow-600 font-bold mb-2">
-            ?? This is your LAST attempt!
-          </p>
-        )}
-
-        {remaining === 0 && (
-          <p className="text-red-700 font-bold mb-2">
-            ? No attempts left. Please log out to reset.
-          </p>
-        )}
 
         <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
@@ -198,55 +191,19 @@ function QuizPage() {
           </button>
 
           <button
-            className={`px-6 py-2 rounded-lg text-white ${
-              remaining === 0
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-gray-500 hover:bg-gray-600'
-            }`}
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg"
             disabled={remaining === 0}
             onClick={() => {
               if (remaining === 0) {
-                alert('No attempts left. Please log out to reset.');
-                return;
-              }
-              setReviewing(false);
-              navigate('/start');
-            }}
-          >
-            Start Over
-          </button>
-
-          {/* ---------------- Retake Quiz Button ---------------- */}
-          <button
-            className={`px-6 py-2 rounded-lg text-white ${
-              remaining === 0
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700'
-            }`}
-            disabled={remaining === 0}
-            onClick={() => {
-              if (remaining === 0) {
-                alert('No attempts left. Please log out to reset.');
-                return;
-              }
-
-              // Start a fresh quiz
-              if (!startAttempt()) {
                 alert('No attempts left.');
                 return;
               }
 
-              const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
-              setShuffledQuestions(shuffled);
-              setCurrent(0);
-              setAnswers([]);
-              setScore(0);
-              setTimeLeft(60 * 60);
-              setFinished(false);
-              setReviewing(false);
+              localStorage.removeItem('quizProgress');
+              navigate('/quiz'); // ? clean restart
             }}
           >
-            Retake Quiz
+            Start Another Quiz
           </button>
         </div>
       </div>
@@ -259,20 +216,12 @@ function QuizPage() {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
 
-      {/* Attempts Display */}
       <div className="mb-4 text-center">
         <p className="text-sm font-semibold text-red-600">
           Attempts Remaining: {remaining} / 6
         </p>
-
-        {remaining === 1 && (
-          <p className="text-yellow-600 font-bold">
-            ?? This is your LAST attempt!
-          </p>
-        )}
       </div>
 
-      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
           <span>Time Left</span>
@@ -286,7 +235,6 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question */}
       <div className="bg-white p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">
           Question {current + 1}
