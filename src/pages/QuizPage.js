@@ -2,14 +2,11 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-import useQuizAttempts from '../hooks/useQuizAttempts';
 
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code, school, level: rawLevel } = user;
-
-  const { remaining, startAttempt } = useQuizAttempts();
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
@@ -45,7 +42,6 @@ function QuizPage() {
     localStorage.removeItem('quizProgress');
   }, []);
 
-  // ---------------- Initialize or Resume Quiz ----------------
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
@@ -53,37 +49,21 @@ function QuizPage() {
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
-
-    // Resume unfinished quiz
-    if (saved && saved.code === code && !saved.finished) {
+    if (saved && saved.code === code) {
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
       setTimeLeft(saved.timeLeft);
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
-      return;
+    } else {
+      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+      setShuffledQuestions(shuffled);
     }
-
-    // ? REMOVED startAttempt FROM HERE
-
-    // Start fresh quiz
-    localStorage.removeItem('quizProgress');
-    const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
-
-    setShuffledQuestions(shuffled);
-    setCurrent(0);
-    setAnswers([]);
-    setScore(0);
-    setTimeLeft(60 * 60);
-    setFinished(false);
-
   }, [name, subject, subjectQuestions, code, navigate]);
 
-  // ---------------- Save Progress ----------------
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
-
     localStorage.setItem(
       'quizProgress',
       JSON.stringify({
@@ -98,7 +78,6 @@ function QuizPage() {
     );
   }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
-  // ---------------- Timer ----------------
   useEffect(() => {
     if (finished) return;
 
@@ -116,11 +95,16 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  // ---------------- Save Result ----------------
   useEffect(() => {
     if (!finished) return;
 
     const saveResults = async () => {
+      if (
+        !name || !school || !subject || !code ||
+        typeof score !== 'number' ||
+        !Array.isArray(shuffledQuestions)
+      ) return;
+
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
@@ -137,7 +121,7 @@ function QuizPage() {
     };
 
     saveResults();
-  }, [finished]);
+  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
@@ -147,7 +131,6 @@ function QuizPage() {
       ...prev,
       { question: q.question, selected, correct: q.answer, isCorrect, options: q.options },
     ]);
-
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 >= shuffledQuestions.length) {
@@ -165,92 +148,158 @@ function QuizPage() {
 
   const progressPercent = (timeLeft / 3600) * 100;
 
-  // ---------------- Finished Screen ----------------
+  const getGrade = (percentage) => {
+    if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
+    if (percentage >= 70) return { grade: 'B2', label: 'Very Good', color: 'text-lime-600' };
+    if (percentage >= 60) return { grade: 'B3', label: 'Good', color: 'text-yellow-500' };
+    if (percentage >= 55) return { grade: 'C4', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 50) return { grade: 'C5', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 45) return { grade: 'C6', label: 'Credit', color: 'text-amber-500' };
+    if (percentage >= 40) return { grade: 'D7', label: 'Pass', color: 'text-orange-500' };
+    if (percentage >= 35) return { grade: 'D8', label: 'Pass', color: 'text-orange-500' };
+    return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
+  };
+
   if (finished && !reviewing) {
+    const percentage = Math.round((score / shuffledQuestions.length) * 100);
+    const { grade, label, color } = getGrade(percentage);
+
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
+        <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
+          <p className="text-lg"><strong>Name:</strong> {name}</p>
+          <p className="text-lg"><strong>Level:</strong> {level}</p>
+          <p className="text-lg"><strong>Subject:</strong> {subject}</p>
+          <p className="text-xl mt-4 font-bold">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
+          <p className={`text-xl mt-2 font-semibold ${color}`}>
+            Grade: <strong>{grade}</strong> – <em>{label}</em>
+          </p>
+        </div>
 
-        <p className="mb-4 text-red-600 font-semibold">
-          Attempts Remaining: {remaining} / 6
-        </p>
-
-        <div className="mt-6 flex gap-4 flex-wrap justify-center">
+        <div className="mt-6 flex gap-4">
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg"
+            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
             onClick={() => setReviewing(true)}
           >
             Review Answers
           </button>
-
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg"
-            disabled={remaining === 0}
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+            onClick={() => navigate('/leaderboard')}
+          >
+            View Leaderboard
+          </button>
+          <button
+            className="px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700"
             onClick={() => {
-              if (remaining === 0) {
-                alert('No attempts left.');
-                return;
-              }
-
-              // ? Deduct attempt HERE
-              if (!startAttempt()) {
-                alert('No attempts left.');
-                return;
-              }
-
               localStorage.removeItem('quizProgress');
-              navigate('/quiz');
+              setCurrent(0);
+              setAnswers([]);
+              setScore(0);
+              setTimeLeft(60 * 60);
+              setFinished(false);
+              setShuffledQuestions([]);
+              setReviewing(false);
+              navigate('/subjects');
             }}
           >
-            Start Another Quiz
+            Take Another Quiz
           </button>
         </div>
       </div>
     );
   }
 
-  // ? Loading protection
-  if (!shuffledQuestions.length) {
-    return <p className="text-center mt-10">Loading quiz...</p>;
+  if (reviewing) {
+    return (
+      <div className="p-6 bg-blue-50 min-h-screen">
+        <h2 className="text-2xl font-extrabold mb-6 text-center">Review Answers</h2>
+        {answers.map((item, index) => (
+          <div key={index} className="mb-4 p-4 border rounded-lg bg-white shadow">
+            <p className="font-semibold">{index + 1}. {item.question}</p>
+            <div className="mt-2 space-y-2">
+              {item.options.map((opt, i) => {
+                let btnClass = "border rounded-lg px-4 py-2 w-full text-left";
+                if (opt === item.correct) {
+                  btnClass += " bg-green-100 border-green-500 text-green-700 font-bold";
+                } else if (opt === item.selected && opt !== item.correct) {
+                  btnClass += " bg-red-100 border-red-500 text-red-700 font-bold";
+                } else {
+                  btnClass += " bg-gray-50";
+                }
+                return (
+                  <div key={i} className={btnClass}>
+                    {opt}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+        <div className="text-center mt-6">
+          <button
+            className="px-6 py-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700"
+            onClick={() => {
+              localStorage.removeItem('quizProgress');
+              setCurrent(0);
+              setAnswers([]);
+              setScore(0);
+              setTimeLeft(60 * 60);
+              setFinished(false);
+              setShuffledQuestions([]);
+              setReviewing(false);
+              navigate('/subjects');
+            }}
+          >
+            Take Another Quiz
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const currentQuestion = shuffledQuestions[current];
 
-  // ---------------- Quiz Screen ----------------
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-
-      <div className="mb-4 text-center">
-        <p className="text-sm font-semibold text-red-600">
-          Attempts Remaining: {remaining} / 6
-        </p>
+      {/* Header */}
+      <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
+        <div>
+          <p className="font-bold text-lg">{subject}</p>
+          <p className="text-sm text-gray-600">Level: {level}</p>
+        </div>
+        <div className="text-right">
+          <p className="font-semibold">Candidate: {name}</p>
+          <p className="font-mono text-sm">Code: {code}</p>
+        </div>
       </div>
 
+      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
-          <span>Time Left</span>
-          <span>{formatTime()}</span>
+          <span className="text-sm font-medium">Time Left</span>
+          <span className="text-sm font-mono">{formatTime()}</span>
         </div>
-        <div className="w-full bg-gray-200 h-4 rounded">
+        <div className="w-full bg-gray-200 rounded-full h-4">
           <div
-            className="bg-green-500 h-4 rounded"
+            className="bg-green-500 h-4 rounded-full transition-all duration-500"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded shadow">
+      {/* Question */}
+      <div className="bg-white p-6 rounded-lg shadow">
         <h2 className="text-xl font-bold mb-4">
-          Question {current + 1}
+          Question {current + 1} of {shuffledQuestions.length}
         </h2>
-
-        <p className="mb-6">{currentQuestion?.question}</p>
-
-        <div className="grid gap-4">
+        <p className="text-lg mb-6 font-medium">{currentQuestion?.question}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {currentQuestion?.options?.map((option, index) => (
             <button
               key={index}
-              className="bg-gray-100 p-3 rounded hover:bg-gray-200"
+              className="bg-gray-50 border rounded-lg px-6 py-3 shadow hover:bg-gray-100 font-medium transition"
               onClick={() => handleAnswer(option)}
             >
               {option}
