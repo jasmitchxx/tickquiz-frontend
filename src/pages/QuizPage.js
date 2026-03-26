@@ -2,14 +2,14 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
-import useQuizAttempts from '../hooks/useQuizAttempts'; // ? NEW
+import useQuizAttempts from '../hooks/useQuizAttempts';
 
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code, school, level: rawLevel } = user;
 
-  const { remaining, startAttempt } = useQuizAttempts(); // ? NEW
+  const { remaining, startAttempt } = useQuizAttempts();
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
@@ -45,36 +45,46 @@ function QuizPage() {
     localStorage.removeItem('quizProgress');
   }, []);
 
+  // ================= MAIN INIT =================
   useEffect(() => {
-    if (!name || !subject || subjectQuestions.length === 0) {
-      navigate('/');
+    // 1?? Check if user info exists
+    if (!name || !subject || !code) {
+      navigate('/'); // redirect to access code page
       return;
     }
 
-    const saved = JSON.parse(localStorage.getItem('quizProgress'));
+    // 2?? Check if subject questions exist
+    if (!subjectQuestions || subjectQuestions.length === 0) {
+      alert('No questions found for this subject.');
+      return;
+    }
 
+    // 3?? Check saved progress
+    const saved = JSON.parse(localStorage.getItem('quizProgress'));
     if (saved && saved.code === code) {
-      // Resume existing attempt
+      // Resume quiz
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
       setTimeLeft(saved.timeLeft);
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
-    } else {
-      // ? NEW: BLOCK if attempts finished
-      if (!startAttempt()) {
-        alert('You have used all 6 attempts. Please log out to reset.');
-        navigate('/start');
-        return;
-      }
-
-      // Start new attempt
-      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
-      setShuffledQuestions(shuffled);
+      return;
     }
-  }, [name, subject, subjectQuestions, code, navigate, startAttempt]);
 
+    // 4?? Start new attempt (if attempts remain)
+    if (!startAttempt()) {
+      // No attempts left: show finished screen
+      setFinished(true);
+      return;
+    }
+
+    const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+    setShuffledQuestions(shuffled);
+
+  }, [name, subject, code, subjectQuestions, navigate, startAttempt]);
+
+  // ================= SAVE PROGRESS =================
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     localStorage.setItem(
@@ -91,9 +101,9 @@ function QuizPage() {
     );
   }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
+  // ================= TIMER =================
   useEffect(() => {
     if (finished) return;
-
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 1) {
@@ -104,13 +114,12 @@ function QuizPage() {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
+  // ================= SAVE RESULTS =================
   useEffect(() => {
     if (!finished) return;
-
     const saveResults = async () => {
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
@@ -126,10 +135,10 @@ function QuizPage() {
         console.error('Failed to save result:', err);
       }
     };
-
     saveResults();
-  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+  }, [finished, name, school, score, code, level, normalizedSubject, shuffledQuestions.length]);
 
+  // ================= HANDLE ANSWERS =================
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
@@ -159,20 +168,16 @@ function QuizPage() {
   // ================= FINISHED SCREEN =================
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
-
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
 
-        {/* ? NEW: Attempt Info */}
         <p className="mb-4 text-red-600 font-semibold">
           Attempts Remaining: {remaining} / 6
         </p>
 
         {remaining === 1 && (
-          <p className="text-yellow-600 font-bold mb-2">
-            ?? This is your LAST attempt!
-          </p>
+          <p className="text-yellow-600 font-bold mb-2">?? This is your LAST attempt!</p>
         )}
 
         {remaining === 0 && (
@@ -189,7 +194,6 @@ function QuizPage() {
             Review Answers
           </button>
 
-          {/* ? UPDATED BUTTON */}
           <button
             className={`px-6 py-2 rounded-lg text-white ${
               remaining === 0
@@ -215,23 +219,20 @@ function QuizPage() {
 
   const currentQuestion = shuffledQuestions[current];
 
+  // ================= QUIZ SCREEN =================
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
 
-      {/* ? NEW: Attempt Display */}
       <div className="mb-4 text-center">
         <p className="text-sm font-semibold text-red-600">
           Attempts Remaining: {remaining} / 6
         </p>
 
         {remaining === 1 && (
-          <p className="text-yellow-600 font-bold">
-            ?? This is your LAST attempt!
-          </p>
+          <p className="text-yellow-600 font-bold">?? This is your LAST attempt!</p>
         )}
       </div>
 
-      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
           <span>Time Left</span>
@@ -245,10 +246,9 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question */}
       <div className="bg-white p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">
-          Question {current + 1}
+          Question {current + 1} / {shuffledQuestions.length}
         </h2>
 
         <p className="mb-6">{currentQuestion?.question}</p>
