@@ -9,7 +9,7 @@ function QuizPage() {
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code, school, level: rawLevel } = user;
 
-  const { remaining, startAttempt } = useQuizAttempts();
+  const { remaining, startAttempt } = useQuizAttempts(); // hook for tracking attempts
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
@@ -45,24 +45,17 @@ function QuizPage() {
     localStorage.removeItem('quizProgress');
   }, []);
 
-  // ================= MAIN INIT =================
+  // ---------------- Initialize or Resume Quiz ----------------
   useEffect(() => {
-    // 1?? Check if user info exists
-    if (!name || !subject || !code) {
-      navigate('/'); // redirect to access code page
+    if (!name || !subject || subjectQuestions.length === 0) {
+      navigate('/');
       return;
     }
 
-    // 2?? Check if subject questions exist
-    if (!subjectQuestions || subjectQuestions.length === 0) {
-      alert('No questions found for this subject.');
-      return;
-    }
-
-    // 3?? Check saved progress
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
-    if (saved && saved.code === code) {
-      // Resume quiz
+
+    // Resume unfinished attempt
+    if (saved && saved.code === code && !saved.finished) {
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
@@ -72,19 +65,25 @@ function QuizPage() {
       return;
     }
 
-    // 4?? Start new attempt (if attempts remain)
+    // Start new attempt if attempts remain
     if (!startAttempt()) {
-      // No attempts left: show finished screen
-      setFinished(true);
+      alert('You have used all 6 attempts. Please log out to reset.');
+      navigate('/start');
       return;
     }
 
+    // Clear previous progress and start fresh
+    localStorage.removeItem('quizProgress');
     const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
     setShuffledQuestions(shuffled);
+    setCurrent(0);
+    setAnswers([]);
+    setScore(0);
+    setTimeLeft(60 * 60);
+    setFinished(false);
+  }, [name, subject, subjectQuestions, code, navigate, startAttempt]);
 
-  }, [name, subject, code, subjectQuestions, navigate, startAttempt]);
-
-  // ================= SAVE PROGRESS =================
+  // ---------------- Save Progress ----------------
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     localStorage.setItem(
@@ -101,9 +100,10 @@ function QuizPage() {
     );
   }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
-  // ================= TIMER =================
+  // ---------------- Timer ----------------
   useEffect(() => {
     if (finished) return;
+
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 1) {
@@ -114,12 +114,14 @@ function QuizPage() {
         return prev - 1;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  // ================= SAVE RESULTS =================
+  // ---------------- Save Result on Finish ----------------
   useEffect(() => {
     if (!finished) return;
+
     const saveResults = async () => {
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
@@ -135,10 +137,10 @@ function QuizPage() {
         console.error('Failed to save result:', err);
       }
     };
-    saveResults();
-  }, [finished, name, school, score, code, level, normalizedSubject, shuffledQuestions.length]);
 
-  // ================= HANDLE ANSWERS =================
+    saveResults();
+  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
     const isCorrect = selected === q.answer;
@@ -165,19 +167,20 @@ function QuizPage() {
 
   const progressPercent = (timeLeft / 3600) * 100;
 
-  // ================= FINISHED SCREEN =================
+  // ---------------- Finished Screen ----------------
   if (finished && !reviewing) {
-    const percentage = Math.round((score / shuffledQuestions.length) * 100);
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
 
         <p className="mb-4 text-red-600 font-semibold">
           Attempts Remaining: {remaining} / 6
         </p>
 
         {remaining === 1 && (
-          <p className="text-yellow-600 font-bold mb-2">?? This is your LAST attempt!</p>
+          <p className="text-yellow-600 font-bold mb-2">
+            ?? This is your LAST attempt!
+          </p>
         )}
 
         {remaining === 0 && (
@@ -186,7 +189,7 @@ function QuizPage() {
           </p>
         )}
 
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
             className="px-6 py-2 bg-green-600 text-white rounded-lg"
             onClick={() => setReviewing(true)}
@@ -212,6 +215,39 @@ function QuizPage() {
           >
             Start Over
           </button>
+
+          {/* ---------------- Retake Quiz Button ---------------- */}
+          <button
+            className={`px-6 py-2 rounded-lg text-white ${
+              remaining === 0
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-blue-600 hover:bg-blue-700'
+            }`}
+            disabled={remaining === 0}
+            onClick={() => {
+              if (remaining === 0) {
+                alert('No attempts left. Please log out to reset.');
+                return;
+              }
+
+              // Start a fresh quiz
+              if (!startAttempt()) {
+                alert('No attempts left.');
+                return;
+              }
+
+              const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+              setShuffledQuestions(shuffled);
+              setCurrent(0);
+              setAnswers([]);
+              setScore(0);
+              setTimeLeft(60 * 60);
+              setFinished(false);
+              setReviewing(false);
+            }}
+          >
+            Retake Quiz
+          </button>
         </div>
       </div>
     );
@@ -219,20 +255,24 @@ function QuizPage() {
 
   const currentQuestion = shuffledQuestions[current];
 
-  // ================= QUIZ SCREEN =================
+  // ---------------- Quiz Screen ----------------
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
 
+      {/* Attempts Display */}
       <div className="mb-4 text-center">
         <p className="text-sm font-semibold text-red-600">
           Attempts Remaining: {remaining} / 6
         </p>
 
         {remaining === 1 && (
-          <p className="text-yellow-600 font-bold">?? This is your LAST attempt!</p>
+          <p className="text-yellow-600 font-bold">
+            ?? This is your LAST attempt!
+          </p>
         )}
       </div>
 
+      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
           <span>Time Left</span>
@@ -246,9 +286,10 @@ function QuizPage() {
         </div>
       </div>
 
+      {/* Question */}
       <div className="bg-white p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">
-          Question {current + 1} / {shuffledQuestions.length}
+          Question {current + 1}
         </h2>
 
         <p className="mb-6">{currentQuestion?.question}</p>
