@@ -2,11 +2,14 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import questionsData from '../data/questionsData';
+import useQuizAttempts from '../hooks/useQuizAttempts'; // ? NEW
 
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
   const { name, subject, code, school, level: rawLevel } = user;
+
+  const { remaining, startAttempt } = useQuizAttempts(); // ? NEW
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
@@ -49,7 +52,9 @@ function QuizPage() {
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
+
     if (saved && saved.code === code) {
+      // Resume existing attempt
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
@@ -57,10 +62,18 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
+      // ? NEW: BLOCK if attempts finished
+      if (!startAttempt()) {
+        alert('You have used all 6 attempts. Please log out to reset.');
+        navigate('/start');
+        return;
+      }
+
+      // Start new attempt
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
-  }, [name, subject, subjectQuestions, code, navigate]);
+  }, [name, subject, subjectQuestions, code, navigate, startAttempt]);
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
@@ -99,12 +112,6 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (
-        !name || !school || !subject || !code ||
-        typeof score !== 'number' ||
-        !Array.isArray(shuffledQuestions)
-      ) return;
-
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
@@ -116,7 +123,7 @@ function QuizPage() {
           code: String(code),
         });
       } catch (err) {
-        console.error('? Failed to save result:', err);
+        console.error('Failed to save result:', err);
       }
     };
 
@@ -131,6 +138,7 @@ function QuizPage() {
       ...prev,
       { question: q.question, selected, correct: q.answer, isCorrect, options: q.options },
     ]);
+
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 >= shuffledQuestions.length) {
@@ -148,51 +156,52 @@ function QuizPage() {
 
   const progressPercent = (timeLeft / 3600) * 100;
 
-  const getGrade = (percentage) => {
-    if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
-    if (percentage >= 70) return { grade: 'B2', label: 'Very Good', color: 'text-lime-600' };
-    if (percentage >= 60) return { grade: 'B3', label: 'Good', color: 'text-yellow-500' };
-    if (percentage >= 55) return { grade: 'C4', label: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 50) return { grade: 'C5', label: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 45) return { grade: 'C6', label: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 40) return { grade: 'D7', label: 'Pass', color: 'text-orange-500' };
-    if (percentage >= 35) return { grade: 'D8', label: 'Pass', color: 'text-orange-500' };
-    return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
-  };
-
+  // ================= FINISHED SCREEN =================
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
-    const { grade, label, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
-        <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
-          <p className="text-lg"><strong>Name:</strong> {name}</p>
-          <p className="text-lg"><strong>Level:</strong> {level}</p>
-          <p className="text-lg"><strong>Subject:</strong> {subject}</p>
-          <p className="text-xl mt-4 font-bold">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-          <p className={`text-xl mt-2 font-semibold ${color}`}>
-            Grade: <strong>{grade}</strong> – <em>{label}</em>
+
+        {/* ? NEW: Attempt Info */}
+        <p className="mb-4 text-red-600 font-semibold">
+          Attempts Remaining: {remaining} / 6
+        </p>
+
+        {remaining === 1 && (
+          <p className="text-yellow-600 font-bold mb-2">
+            ?? This is your LAST attempt!
           </p>
-        </div>
+        )}
+
+        {remaining === 0 && (
+          <p className="text-red-700 font-bold mb-2">
+            ? No attempts left. Please log out to reset.
+          </p>
+        )}
 
         <div className="mt-6 flex gap-4">
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+            className="px-6 py-2 bg-green-600 text-white rounded-lg"
             onClick={() => setReviewing(true)}
           >
             Review Answers
           </button>
+
+          {/* ? UPDATED BUTTON */}
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => navigate('/leaderboard')}
-          >
-            View Leaderboard
-          </button>
-          <button
-            className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
+            className={`px-6 py-2 rounded-lg text-white ${
+              remaining === 0
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-gray-500 hover:bg-gray-600'
+            }`}
+            disabled={remaining === 0}
             onClick={() => {
+              if (remaining === 0) {
+                alert('No attempts left. Please log out to reset.');
+                return;
+              }
               setReviewing(false);
               navigate('/start');
             }}
@@ -204,88 +213,51 @@ function QuizPage() {
     );
   }
 
-  if (reviewing) {
-    return (
-      <div className="p-6 bg-blue-50 min-h-screen">
-        <h2 className="text-2xl font-extrabold mb-6 text-center">Review Answers</h2>
-        {answers.map((item, index) => (
-          <div key={index} className="mb-4 p-4 border rounded-lg bg-white shadow">
-            <p className="font-semibold">{index + 1}. {item.question}</p>
-            <div className="mt-2 space-y-2">
-              {item.options.map((opt, i) => {
-                let btnClass = "border rounded-lg px-4 py-2 w-full text-left";
-                if (opt === item.correct) {
-                  btnClass += " bg-green-100 border-green-500 text-green-700 font-bold";
-                } else if (opt === item.selected && opt !== item.correct) {
-                  btnClass += " bg-red-100 border-red-500 text-red-700 font-bold";
-                } else {
-                  btnClass += " bg-gray-50";
-                }
-                return (
-                  <div key={i} className={btnClass}>
-                    {opt}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-        <div className="text-center mt-6">
-          <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
-          >
-            Return to Start
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   const currentQuestion = shuffledQuestions[current];
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      {/* Header */}
-      <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
-        <div>
-          <p className="font-bold text-lg">{subject}</p>
-          <p className="text-sm text-gray-600">Level: {level}</p>
-        </div>
-        <div className="text-right">
-          <p className="font-semibold">Candidate: {name}</p>
-          <p className="font-mono text-sm">Code: {code}</p>
-        </div>
+
+      {/* ? NEW: Attempt Display */}
+      <div className="mb-4 text-center">
+        <p className="text-sm font-semibold text-red-600">
+          Attempts Remaining: {remaining} / 6
+        </p>
+
+        {remaining === 1 && (
+          <p className="text-yellow-600 font-bold">
+            ?? This is your LAST attempt!
+          </p>
+        )}
       </div>
 
       {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
-          <span className="text-sm font-medium">Time Left</span>
-          <span className="text-sm font-mono">{formatTime()}</span>
+          <span>Time Left</span>
+          <span>{formatTime()}</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
+        <div className="w-full bg-gray-200 h-4 rounded">
           <div
-            className="bg-green-500 h-4 rounded-full transition-all duration-500"
+            className="bg-green-500 h-4 rounded"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </div>
 
       {/* Question */}
-      <div className="bg-white p-6 rounded-lg shadow">
+      <div className="bg-white p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
+          Question {current + 1}
         </h2>
-        <p className="text-lg mb-6 font-medium">{currentQuestion?.question}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <p className="mb-6">{currentQuestion?.question}</p>
+
+        <div className="grid gap-4">
           {currentQuestion?.options?.map((option, index) => (
             <button
               key={index}
-              className="bg-gray-50 border rounded-lg px-6 py-3 shadow hover:bg-gray-100 font-medium transition"
+              className="bg-gray-100 p-3 rounded hover:bg-gray-200"
               onClick={() => handleAnswer(option)}
             >
               {option}
