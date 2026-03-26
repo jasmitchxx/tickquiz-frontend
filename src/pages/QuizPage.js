@@ -65,14 +65,7 @@ function QuizPage() {
       return;
     }
 
-    // Start new attempt ONLY if not resuming
-    if (!saved || saved.finished) {
-      if (!startAttempt()) {
-        alert('You have used all 6 attempts.');
-        navigate('/start');
-        return;
-      }
-    }
+    // ? REMOVED startAttempt FROM HERE
 
     // Start fresh quiz
     localStorage.removeItem('quizProgress');
@@ -85,7 +78,7 @@ function QuizPage() {
     setTimeLeft(60 * 60);
     setFinished(false);
 
-  }, [name, subject, subjectQuestions, code, navigate]); // ? FIXED (removed startAttempt)
+  }, [name, subject, subjectQuestions, code, navigate]);
 
   // ---------------- Save Progress ----------------
   useEffect(() => {
@@ -199,8 +192,14 @@ function QuizPage() {
                 return;
               }
 
+              // ? Deduct attempt HERE
+              if (!startAttempt()) {
+                alert('No attempts left.');
+                return;
+              }
+
               localStorage.removeItem('quizProgress');
-              navigate('/quiz'); // ? clean restart
+              navigate('/quiz');
             }}
           >
             Start Another Quiz
@@ -208,6 +207,11 @@ function QuizPage() {
         </div>
       </div>
     );
+  }
+
+  // ? Loading protection
+  if (!shuffledQuestions.length) {
+    return <p className="text-center mt-10">Loading quiz...</p>;
   }
 
   const currentQuestion = shuffledQuestions[current];
