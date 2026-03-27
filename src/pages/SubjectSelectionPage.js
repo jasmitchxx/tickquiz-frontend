@@ -5,21 +5,12 @@ import questionsData from '../data/questionsData';
 function SubjectSelectionPage() {
   const navigate = useNavigate();
 
-  // ? Get user safely
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const level = user.level?.toUpperCase();
-
   useEffect(() => {
-    if (!user || !user.code) {
+    const user = JSON.parse(localStorage.getItem('quizUser'));
+    if (!user || !user.code || !user.level) {
       navigate('/use-access-code');
-      return;
     }
-
-    // ? FORCE level selection before subject
-    if (!level) {
-      navigate('/start');
-    }
-  }, [navigate, user, level]);
+  }, [navigate]);
 
   const formatSubject = (key) =>
     key
@@ -34,45 +25,29 @@ function SubjectSelectionPage() {
       .replace(/\b\w/g, (c) => c.toUpperCase());
 
   const handleSelectSubject = (subjectKey) => {
-    const storedUser = JSON.parse(localStorage.getItem('quizUser')) || {};
-
-    // ? CLEAR ONLY QUIZ DATA
-    localStorage.removeItem('quizProgress');
-
-    // ? KEEP LEVEL, CHANGE SUBJECT ONLY
-    localStorage.setItem(
-      'quizUser',
-      JSON.stringify({
-        ...storedUser,
-        level: storedUser.level,
-        subject: formatSubject(subjectKey),
-        subjectKey: subjectKey
-      })
-    );
-
+    const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+    user.subject = formatSubject(subjectKey); // Display name
+    user.subjectKey = subjectKey;            // Exact key in questionsData
+    localStorage.setItem('quizUser', JSON.stringify(user));
     navigate('/quiz');
   };
 
-  // ? FILTER SUBJECTS BY LEVEL
-  const subjects =
-    level && questionsData[level]
-      ? Object.keys(questionsData[level])
-      : [];
+  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const level = user.level?.toUpperCase();
+
+  const availableSubjects = level && questionsData[level] ? Object.keys(questionsData[level]) : [];
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8">
-
         <h2 className="text-3xl font-extrabold mb-6 text-blue-700 text-center">
           Select a Subject
         </h2>
-
         <p className="text-gray-600 mb-8 text-center">
-          Choose your next subject
+          Choose your subject to begin the quiz
         </p>
-
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {subjects.map((subject, index) => (
+          {availableSubjects.map((subject, index) => (
             <button
               key={index}
               onClick={() => handleSelectSubject(subject)}
@@ -82,7 +57,6 @@ function SubjectSelectionPage() {
             </button>
           ))}
         </div>
-
       </div>
     </div>
   );

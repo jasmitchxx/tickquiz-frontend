@@ -6,19 +6,15 @@ import questionsData from '../data/questionsData';
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code, school, level: rawLevel } = user;
+  const { name, subject, code, school, level: rawLevel, subjectKey } = user;
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
-  const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
 
   const subjectQuestions = useMemo(() => {
-    if (!level || !questionsData[level]) return [];
-    const subjectKey = Object.keys(questionsData[level]).find(
-      key => key.toLowerCase().replace(/\s+/g, '') === normalizedSubject
-    );
-    return questionsData[level]?.[subjectKey] || [];
-  }, [level, normalizedSubject]);
+    if (!level || !subjectKey || !questionsData[level]) return [];
+    return questionsData[level][subjectKey] || [];
+  }, [level, subjectKey]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -28,7 +24,6 @@ function QuizPage() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
 
-  // ? RESET ONLY QUIZ (NOT USER)
   const resetQuizOnly = () => {
     localStorage.removeItem('quizProgress');
     setCurrent(0);
@@ -49,11 +44,9 @@ function QuizPage() {
     return array;
   };
 
-  // ? END QUIZ + TRACK USAGE
   const endQuiz = useCallback(() => {
     setFinished(true);
     localStorage.removeItem('quizProgress');
-
     const usage = Number(localStorage.getItem('quizUsageCount')) || 0;
     localStorage.setItem('quizUsageCount', usage + 1);
   }, []);
@@ -121,7 +114,7 @@ function QuizPage() {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
           school: String(school),
-          subject: normalizedSubject,
+          subject: subjectKey,
           level: String(level),
           score: Number(score),
           total: Number(shuffledQuestions.length),
@@ -133,7 +126,7 @@ function QuizPage() {
     };
 
     saveResults();
-  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+  }, [finished, name, school, subjectKey, score, code, level, shuffledQuestions.length]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
@@ -158,8 +151,6 @@ function QuizPage() {
     const secs = (timeLeft % 60).toString().padStart(2, '0');
     return `${mins}:${secs}`;
   };
-
-  const progressPercent = (timeLeft / 3600) * 100;
 
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
@@ -200,7 +191,6 @@ function QuizPage() {
             Leaderboard
           </button>
 
-          {/* ? FIXED BUTTON */}
           <button
             className="px-6 py-2 bg-purple-600 text-white rounded"
             onClick={() => {
@@ -259,7 +249,11 @@ function QuizPage() {
       <p>{currentQuestion?.question}</p>
 
       {currentQuestion?.options?.map((opt, i) => (
-        <button key={i} onClick={() => handleAnswer(opt)}>
+        <button
+          key={i}
+          onClick={() => handleAnswer(opt)}
+          className="block w-full text-left px-4 py-2 mt-2 bg-white rounded shadow hover:bg-blue-100 transition"
+        >
           {opt}
         </button>
       ))}
