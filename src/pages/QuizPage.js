@@ -6,19 +6,15 @@ import questionsData from '../data/questionsData';
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code, school, level: rawLevel } = user;
+  const { name, subjectKey, code, school, level: rawLevel } = user;
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
-  const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
 
   const subjectQuestions = useMemo(() => {
-    if (!level || !questionsData[level]) return [];
-    const subjectKey = Object.keys(questionsData[level]).find(
-      key => key.toLowerCase().replace(/\s+/g, '') === normalizedSubject
-    );
-    return questionsData[level]?.[subjectKey] || [];
-  }, [level, normalizedSubject]);
+    if (!level || !questionsData[level] || !subjectKey) return [];
+    return questionsData[level][subjectKey] || [];
+  }, [level, subjectKey]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -43,7 +39,7 @@ function QuizPage() {
   }, []);
 
   useEffect(() => {
-    if (!name || !subject || subjectQuestions.length === 0) {
+    if (!name || !subjectKey || subjectQuestions.length === 0) {
       navigate('/start');
       return;
     }
@@ -60,7 +56,7 @@ function QuizPage() {
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
     }
-  }, [name, subject, subjectQuestions, code, navigate]);
+  }, [name, subjectKey, subjectQuestions, code, navigate]);
 
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
@@ -99,13 +95,13 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || !code) return;
+      if (!name || !school || !subjectKey || !code) return;
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
           school: String(school),
-          subject: normalizedSubject,
+          subject: subjectKey,
           level: String(level),
           score: Number(score),
           total: Number(shuffledQuestions.length),
@@ -117,7 +113,7 @@ function QuizPage() {
     };
 
     saveResults();
-  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+  }, [finished, name, school, subjectKey, score, code, level, shuffledQuestions.length]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
@@ -164,7 +160,7 @@ function QuizPage() {
         <div className="bg-white p-6 rounded shadow max-w-md w-full">
           <p><strong>Name:</strong> {name}</p>
           <p><strong>Level:</strong> {level}</p>
-          <p><strong>Subject:</strong> {subject}</p>
+          <p><strong>Subject:</strong> {subjectKey.toUpperCase()}</p>
           <p className="mt-4 font-bold">
             Score: {score} / {shuffledQuestions.length} ({percentage}%)
           </p>
@@ -192,7 +188,7 @@ function QuizPage() {
             className="px-6 py-2 bg-purple-600 text-white rounded"
             onClick={() => {
               localStorage.removeItem('quizProgress');
-              navigate('/start'); // ? GO TO START PAGE
+              navigate('/start');
             }}
           >
             Take Quiz Again
@@ -223,7 +219,7 @@ function QuizPage() {
             onClick={() => {
               setReviewing(false);
               localStorage.removeItem('quizProgress');
-              navigate('/start'); // ? ALSO GO TO START
+              navigate('/start');
             }}
           >
             Take Quiz Again
@@ -237,7 +233,7 @@ function QuizPage() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <p>{subject} | {level}</p>
+      <p>{subjectKey.toUpperCase()} | {level}</p>
       <p>{name}</p>
       <p>{formatTime()}</p>
 
@@ -245,7 +241,11 @@ function QuizPage() {
       <p>{currentQuestion?.question}</p>
 
       {currentQuestion?.options?.map((opt, i) => (
-        <button key={i} onClick={() => handleAnswer(opt)}>
+        <button
+          key={i}
+          onClick={() => handleAnswer(opt)}
+          className="block mt-2 px-4 py-2 bg-white border rounded w-full text-left"
+        >
           {opt}
         </button>
       ))}
