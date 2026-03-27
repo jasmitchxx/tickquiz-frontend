@@ -59,16 +59,6 @@ function RequestAccessWithPayment() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-6">
-
-        {/*  INFO NOTICE */}
-        <div className="bg-yellow-200 p-4 rounded mb-6 border-l-4 border-yellow-500">
-          <h2 className="text-lg font-bold mb-2">?? Important Notice</h2>
-          <p className="text-yellow-900 text-sm">
-            Each student is allowed <strong>up to 6 quiz attempts</strong>. 
-            Please answer carefully, as your attempts decrease with each session.
-          </p>
-        </div>
-
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
           Buy Access Code
         </h2>

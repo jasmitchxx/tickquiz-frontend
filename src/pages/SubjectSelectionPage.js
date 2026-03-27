@@ -7,7 +7,7 @@ function SubjectSelectionPage() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
-    if (!user || !user.code || !user.level) {
+    if (!user || !user.code) {
       navigate('/use-access-code');
     }
   }, [navigate]);
@@ -26,28 +26,23 @@ function SubjectSelectionPage() {
 
   const handleSelectSubject = (subjectKey) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-    user.subject = formatSubject(subjectKey); // Display name
-    user.subjectKey = subjectKey;            // Exact key in questionsData
+    user.subject = formatSubject(subjectKey);
+    user.subjectKey = subjectKey;
     localStorage.setItem('quizUser', JSON.stringify(user));
     navigate('/quiz');
   };
-
-  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const level = user.level?.toUpperCase();
-
-  const availableSubjects = level && questionsData[level] ? Object.keys(questionsData[level]) : [];
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8">
         <h2 className="text-3xl font-extrabold mb-6 text-blue-700 text-center">
-          Select a Subject
+          ?? Select a Subject
         </h2>
         <p className="text-gray-600 mb-8 text-center">
           Choose your subject to begin the quiz
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {availableSubjects.map((subject, index) => (
+          {Object.keys(questionsData).map((subject, index) => (
             <button
               key={index}
               onClick={() => handleSelectSubject(subject)}
