@@ -6,24 +6,25 @@ import questionsData from '../data/questionsData';
 function QuizPage() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const { name, subject, code, school, level: rawLevel } = user;
+  const { name, subject, subjectKey, code, school, level: rawLevel } = user;
 
   const MAX_QUESTIONS = 60;
   const level = rawLevel?.toUpperCase();
-  const normalizedSubject = subject?.toLowerCase().replace(/\s+/g, '');
+  const normalizedSubject = subjectKey?.toLowerCase().replace(/\s+/g, '');
 
+  // Get questions for this level + subject
   const subjectQuestions = useMemo(() => {
     if (!level || !questionsData[level]) return [];
-    const subjectKey = Object.keys(questionsData[level]).find(
+    const subjectKeyFound = Object.keys(questionsData[level]).find(
       key => key.toLowerCase().replace(/\s+/g, '') === normalizedSubject
     );
-    return questionsData[level]?.[subjectKey] || [];
+    return questionsData[level]?.[subjectKeyFound] || [];
   }, [level, normalizedSubject]);
 
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60);
+  const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 min default
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
@@ -39,17 +40,18 @@ function QuizPage() {
 
   const endQuiz = useCallback(() => {
     setFinished(true);
-    localStorage.removeItem('quizProgress');
   }, []);
 
+  // Initialize quiz
   useEffect(() => {
-    if (!name || !subject || subjectQuestions.length === 0) {
-      navigate('/select-subject');
+    if (!code || !subject || !level || subjectQuestions.length === 0) {
+      navigate('/start-quiz');
       return;
     }
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
-    if (saved && saved.code === code) {
+    if (saved && saved.code === code && saved.subjectKey === subjectKey) {
+      // Resume previous progress for this subject
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
@@ -57,17 +59,25 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
+      // Fresh quiz for this subject
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
+      setCurrent(0);
+      setAnswers([]);
+      setScore(0);
+      setTimeLeft(60 * 60);
+      setFinished(false);
     }
-  }, [name, subject, subjectQuestions, code, navigate]);
+  }, [code, subject, subjectKey, level, subjectQuestions, navigate]);
 
+  // Save progress
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     localStorage.setItem(
       'quizProgress',
       JSON.stringify({
         code,
+        subjectKey,
         current,
         answers,
         score,
@@ -76,11 +86,11 @@ function QuizPage() {
         questions: shuffledQuestions,
       })
     );
-  }, [code, current, answers, score, timeLeft, finished, shuffledQuestions]);
+  }, [code, subjectKey, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
+  // Timer
   useEffect(() => {
     if (finished) return;
-
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 1) {
@@ -91,10 +101,10 @@ function QuizPage() {
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
+  // Send results to backend
   useEffect(() => {
     if (!finished) return;
 
@@ -156,6 +166,7 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
+  // Render finished page
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
@@ -188,18 +199,16 @@ function QuizPage() {
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={() => {
-              localStorage.removeItem('quizProgress');
-              navigate('/select-subject'); // <- updated path
-            }}
+            onClick={() => navigate('/select-subject')}
           >
-            Start Over
+            Take Another Subject
           </button>
         </div>
       </div>
     );
   }
 
+  // Review answers page
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-50 min-h-screen">
@@ -218,9 +227,7 @@ function QuizPage() {
                   btnClass += " bg-gray-50";
                 }
                 return (
-                  <div key={i} className={btnClass}>
-                    {opt}
-                  </div>
+                  <div key={i} className={btnClass}>{opt}</div>
                 );
               })}
             </div>
@@ -231,11 +238,10 @@ function QuizPage() {
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
             onClick={() => {
               setReviewing(false);
-              localStorage.removeItem('quizProgress');
-              navigate('/select-subject'); // <- updated path
+              navigate('/select-subject');
             }}
           >
-            Return to Start
+            Return to Subject Selection
           </button>
         </div>
       </div>
@@ -244,6 +250,7 @@ function QuizPage() {
 
   const currentQuestion = shuffledQuestions[current];
 
+  // Quiz running page
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
       <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
@@ -257,6 +264,7 @@ function QuizPage() {
         </div>
       </div>
 
+      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
           <span className="text-sm font-medium">Time Left</span>
@@ -270,6 +278,7 @@ function QuizPage() {
         </div>
       </div>
 
+      {/* Question */}
       <div className="bg-white p-6 rounded-lg shadow">
         <h2 className="text-xl font-bold mb-4">
           Question {current + 1} of {shuffledQuestions.length}

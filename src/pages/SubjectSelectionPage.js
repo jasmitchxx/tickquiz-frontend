@@ -7,8 +7,8 @@ function SubjectSelectionPage() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
-    if (!user || !user.code) {
-      navigate('/use-access-code');
+    if (!user || !user.code || !user.level) {
+      navigate('/start-quiz');
     }
   }, [navigate]);
 
@@ -28,13 +28,15 @@ function SubjectSelectionPage() {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
     user.subject = formatSubject(subjectKey);
     user.subjectKey = subjectKey;
+    // Remove any previous quiz progress for this new subject
+    localStorage.removeItem('quizProgress');
     localStorage.setItem('quizUser', JSON.stringify(user));
-
-    // ? Grant access so /quiz route works
-    localStorage.setItem('quizAccessGranted', 'true');
-
     navigate('/quiz');
   };
+
+  // Filter subjects by selected level
+  const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+  const levelSubjects = user.level ? Object.keys(questionsData[user.level] || {}) : [];
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
@@ -46,7 +48,7 @@ function SubjectSelectionPage() {
           Choose your subject to begin the quiz
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {Object.keys(questionsData).map((subject, index) => (
+          {levelSubjects.map((subject, index) => (
             <button
               key={index}
               onClick={() => handleSelectSubject(subject)}
