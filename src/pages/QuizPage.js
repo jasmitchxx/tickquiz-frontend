@@ -37,28 +37,10 @@ function QuizPage() {
     return array;
   };
 
-  // Ends the current quiz
   const endQuiz = useCallback(() => {
     setFinished(true);
-    localStorage.removeItem('quizProgress');
+    localStorage.removeItem('quizProgress'); // clear progress on finish
   }, []);
-
-  // Fully reset quiz to start a new one
-  const restartQuiz = () => {
-    // Clear all relevant quiz data
-    localStorage.removeItem('quizProgress');
-    localStorage.removeItem('quizUser');       // optional: if you want user to pick subject/level again
-    setCurrent(0);
-    setAnswers([]);
-    setScore(0);
-    setTimeLeft(60 * 60);
-    setFinished(false);
-    setShuffledQuestions([]);
-    setReviewing(false);
-
-    // Redirect to subject selection
-    navigate('/subject-select');
-  };
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -117,7 +99,7 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || !code || typeof score !== 'number' || !Array.isArray(shuffledQuestions)) return;
+      if (!name || !school || !subject || !code || typeof score !== 'number') return;
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
@@ -206,9 +188,13 @@ function QuizPage() {
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={restartQuiz}  // <-- full restart
+            onClick={() => {
+              // Clear quiz user and progress for a completely fresh quiz
+              localStorage.removeItem('quizProgress');
+              navigate('/subject-select');
+            }}
           >
-            Start New Quiz
+            Start Over
           </button>
         </div>
       </div>
@@ -244,7 +230,11 @@ function QuizPage() {
         <div className="text-center mt-6">
           <button
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={restartQuiz}  // <-- full restart
+            onClick={() => {
+              setReviewing(false);
+              localStorage.removeItem('quizProgress');
+              navigate('/subject-select');
+            }}
           >
             Return to Start
           </button>
