@@ -42,6 +42,16 @@ function QuizPage() {
     localStorage.removeItem('quizProgress');
   }, []);
 
+  const restartQuiz = () => {
+    setCurrent(0);
+    setAnswers([]);
+    setScore(0);
+    setTimeLeft(60 * 60);
+    setFinished(false);
+    setShuffledQuestions(shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS));
+    setReviewing(false);
+  };
+
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
@@ -57,8 +67,7 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
-      setShuffledQuestions(shuffled);
+      setShuffledQuestions(shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS));
     }
   }, [name, subject, subjectQuestions, code, navigate]);
 
@@ -99,12 +108,7 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (
-        !name || !school || !subject || !code ||
-        typeof score !== 'number' ||
-        !Array.isArray(shuffledQuestions)
-      ) return;
-
+      if (!name || !school || !subject || !code || typeof score !== 'number' || !Array.isArray(shuffledQuestions)) return;
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
@@ -160,13 +164,14 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
+  // ================= RESULT SCREEN =================
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
         <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
           <p className="text-lg"><strong>Name:</strong> {name}</p>
           <p className="text-lg"><strong>Level:</strong> {level}</p>
@@ -177,9 +182,9 @@ function QuizPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+            className="px-6 py-2 bg-yellow-600 text-white rounded-lg shadow hover:bg-yellow-700"
             onClick={() => setReviewing(true)}
           >
             Review Answers
@@ -191,19 +196,17 @@ function QuizPage() {
             View Leaderboard
           </button>
           <button
-            className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+            onClick={restartQuiz}
           >
-            Start Over
+            Take Quiz Again
           </button>
         </div>
       </div>
     );
   }
 
+  // ================= REVIEW =================
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-50 min-h-screen">
@@ -232,13 +235,10 @@ function QuizPage() {
         ))}
         <div className="text-center mt-6">
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
+            onClick={restartQuiz}
           >
-            Return to Start
+            Take Quiz Again
           </button>
         </div>
       </div>
