@@ -8,7 +8,7 @@ function SubjectSelectionPage() {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
     if (!user || !user.code) {
-      navigate('/use-access-code'); // redirect if user hasn't entered code
+      navigate('/use-access-code');
     }
   }, [navigate]);
 
@@ -28,14 +28,11 @@ function SubjectSelectionPage() {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
     user.subject = formatSubject(subjectKey);
     user.subjectKey = subjectKey;
-
-    // Save user
     localStorage.setItem('quizUser', JSON.stringify(user));
 
-    // Clear any previous quiz progress
-    localStorage.removeItem('quizProgress');
+    // ? Grant access so /quiz route works
+    localStorage.setItem('quizAccessGranted', 'true');
 
-    // Go to quiz page
     navigate('/quiz');
   };
 
