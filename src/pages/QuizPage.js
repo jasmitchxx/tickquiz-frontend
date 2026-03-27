@@ -37,10 +37,28 @@ function QuizPage() {
     return array;
   };
 
+  // Ends the current quiz
   const endQuiz = useCallback(() => {
     setFinished(true);
     localStorage.removeItem('quizProgress');
   }, []);
+
+  // Fully reset quiz to start a new one
+  const restartQuiz = () => {
+    // Clear all relevant quiz data
+    localStorage.removeItem('quizProgress');
+    localStorage.removeItem('quizUser');       // optional: if you want user to pick subject/level again
+    setCurrent(0);
+    setAnswers([]);
+    setScore(0);
+    setTimeLeft(60 * 60);
+    setFinished(false);
+    setShuffledQuestions([]);
+    setReviewing(false);
+
+    // Redirect to subject selection
+    navigate('/subject-select');
+  };
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
@@ -99,11 +117,7 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (
-        !name || !school || !subject || !code ||
-        typeof score !== 'number' ||
-        !Array.isArray(shuffledQuestions)
-      ) return;
+      if (!name || !school || !subject || !code || typeof score !== 'number' || !Array.isArray(shuffledQuestions)) return;
 
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
@@ -166,7 +180,7 @@ function QuizPage() {
 
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">?? Quiz Completed</h1>
+        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
         <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
           <p className="text-lg"><strong>Name:</strong> {name}</p>
           <p className="text-lg"><strong>Level:</strong> {level}</p>
@@ -177,7 +191,7 @@ function QuizPage() {
           </p>
         </div>
 
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
             className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
             onClick={() => setReviewing(true)}
@@ -192,12 +206,9 @@ function QuizPage() {
           </button>
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            onClick={restartQuiz}  // <-- full restart
           >
-            Start Over
+            Start New Quiz
           </button>
         </div>
       </div>
@@ -233,10 +244,7 @@ function QuizPage() {
         <div className="text-center mt-6">
           <button
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-            onClick={() => {
-              setReviewing(false);
-              navigate('/start');
-            }}
+            onClick={restartQuiz}  // <-- full restart
           >
             Return to Start
           </button>

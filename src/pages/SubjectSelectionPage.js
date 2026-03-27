@@ -8,7 +8,7 @@ function SubjectSelectionPage() {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
     if (!user || !user.code) {
-      navigate('/use-access-code');
+      navigate('/use-access-code'); // redirect if user hasn't entered code
     }
   }, [navigate]);
 
@@ -28,7 +28,14 @@ function SubjectSelectionPage() {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
     user.subject = formatSubject(subjectKey);
     user.subjectKey = subjectKey;
+
+    // Save user
     localStorage.setItem('quizUser', JSON.stringify(user));
+
+    // Clear any previous quiz progress
+    localStorage.removeItem('quizProgress');
+
+    // Go to quiz page
     navigate('/quiz');
   };
 
@@ -36,7 +43,7 @@ function SubjectSelectionPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8">
         <h2 className="text-3xl font-extrabold mb-6 text-blue-700 text-center">
-          ?? Select a Subject
+          Select a Subject
         </h2>
         <p className="text-gray-600 mb-8 text-center">
           Choose your subject to begin the quiz
