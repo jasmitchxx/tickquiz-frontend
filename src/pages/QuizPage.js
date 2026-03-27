@@ -44,7 +44,7 @@ function QuizPage() {
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
-      navigate('/');
+      navigate('/start');
       return;
     }
 
@@ -143,8 +143,6 @@ function QuizPage() {
     return `${mins}:${secs}`;
   };
 
-  const progressPercent = (timeLeft / 3600) * 100;
-
   const getGrade = (percentage) => {
     if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
     if (percentage >= 70) return { grade: 'B2', label: 'Very Good', color: 'text-lime-600' };
@@ -154,57 +152,47 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
-  // ===== RESULT SCREEN =====
+  // ================= RESULT =================
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
 
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
+        <h1 className="text-3xl font-bold mb-4">Quiz Completed</h1>
 
-        <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
+        <div className="bg-white p-6 rounded shadow max-w-md w-full">
           <p><strong>Name:</strong> {name}</p>
           <p><strong>Level:</strong> {level}</p>
           <p><strong>Subject:</strong> {subject}</p>
           <p className="mt-4 font-bold">
             Score: {score} / {shuffledQuestions.length} ({percentage}%)
           </p>
-          <p className={`mt-2 font-semibold ${color}`}>
+          <p className={`mt-2 ${color}`}>
             Grade: {grade} – {label}
           </p>
         </div>
 
         <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg"
+            className="px-6 py-2 bg-green-600 text-white rounded"
             onClick={() => setReviewing(true)}
           >
             Review Answers
           </button>
 
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg"
+            className="px-6 py-2 bg-blue-600 text-white rounded"
             onClick={() => navigate('/leaderboard')}
           >
             View Leaderboard
           </button>
 
           <button
-            className="px-6 py-2 bg-purple-600 text-white rounded-lg"
+            className="px-6 py-2 bg-purple-600 text-white rounded"
             onClick={() => {
               localStorage.removeItem('quizProgress');
-
-              const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-              localStorage.setItem(
-                'quizUser',
-                JSON.stringify({
-                  name: user.name,
-                  code: user.code
-                })
-              );
-
-              navigate('/start');
+              navigate('/start'); // ? GO TO START PAGE
             }}
           >
             Take Quiz Again
@@ -214,11 +202,11 @@ function QuizPage() {
     );
   }
 
-  // ===== REVIEW SCREEN =====
+  // ================= REVIEW =================
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-50 min-h-screen">
-        <h2 className="text-2xl font-bold text-center mb-6">Review Answers</h2>
+        <h2 className="text-2xl text-center mb-6">Review Answers</h2>
 
         {answers.map((item, index) => (
           <div key={index} className="mb-4 p-4 bg-white rounded shadow">
@@ -234,17 +222,8 @@ function QuizPage() {
             className="px-6 py-2 bg-purple-600 text-white rounded"
             onClick={() => {
               setReviewing(false);
-
-              const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-              localStorage.setItem(
-                'quizUser',
-                JSON.stringify({
-                  name: user.name,
-                  code: user.code
-                })
-              );
-
-              navigate('/start');
+              localStorage.removeItem('quizProgress');
+              navigate('/start'); // ? ALSO GO TO START
             }}
           >
             Take Quiz Again
@@ -257,12 +236,10 @@ function QuizPage() {
   const currentQuestion = shuffledQuestions[current];
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      <div className="mb-4">
-        <p>{subject} | {level}</p>
-        <p>{name}</p>
-        <p>{formatTime()}</p>
-      </div>
+    <div className="max-w-3xl mx-auto p-6">
+      <p>{subject} | {level}</p>
+      <p>{name}</p>
+      <p>{formatTime()}</p>
 
       <h2>Question {current + 1}</h2>
       <p>{currentQuestion?.question}</p>
