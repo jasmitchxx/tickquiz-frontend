@@ -42,16 +42,6 @@ function QuizPage() {
     localStorage.removeItem('quizProgress');
   }, []);
 
-  const restartQuiz = () => {
-    setCurrent(0);
-    setAnswers([]);
-    setScore(0);
-    setTimeLeft(60 * 60);
-    setFinished(false);
-    setShuffledQuestions(shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS));
-    setReviewing(false);
-  };
-
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
       navigate('/');
@@ -67,7 +57,8 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      setShuffledQuestions(shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS));
+      const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
+      setShuffledQuestions(shuffled);
     }
   }, [name, subject, subjectQuestions, code, navigate]);
 
@@ -108,7 +99,8 @@ function QuizPage() {
     if (!finished) return;
 
     const saveResults = async () => {
-      if (!name || !school || !subject || !code || typeof score !== 'number' || !Array.isArray(shuffledQuestions)) return;
+      if (!name || !school || !subject || !code) return;
+
       try {
         await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
           name: String(name),
@@ -120,7 +112,7 @@ function QuizPage() {
           code: String(code),
         });
       } catch (err) {
-        console.error('? Failed to save result:', err);
+        console.error('Failed to save result:', err);
       }
     };
 
@@ -135,6 +127,7 @@ function QuizPage() {
       ...prev,
       { question: q.question, selected, correct: q.answer, isCorrect, options: q.options },
     ]);
+
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 >= shuffledQuestions.length) {
@@ -156,15 +149,12 @@ function QuizPage() {
     if (percentage >= 80) return { grade: 'A1', label: 'Excellent', color: 'text-green-600' };
     if (percentage >= 70) return { grade: 'B2', label: 'Very Good', color: 'text-lime-600' };
     if (percentage >= 60) return { grade: 'B3', label: 'Good', color: 'text-yellow-500' };
-    if (percentage >= 55) return { grade: 'C4', label: 'Credit', color: 'text-amber-500' };
     if (percentage >= 50) return { grade: 'C5', label: 'Credit', color: 'text-amber-500' };
-    if (percentage >= 45) return { grade: 'C6', label: 'Credit', color: 'text-amber-500' };
     if (percentage >= 40) return { grade: 'D7', label: 'Pass', color: 'text-orange-500' };
-    if (percentage >= 35) return { grade: 'D8', label: 'Pass', color: 'text-orange-500' };
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
-  // ================= RESULT SCREEN =================
+  // ===== RESULT SCREEN =====
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
@@ -172,32 +162,50 @@ function QuizPage() {
     return (
       <div className="p-6 text-center bg-blue-50 min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-3xl font-extrabold mb-4">Quiz Completed</h1>
+
         <div className="bg-white p-6 rounded-lg shadow w-full max-w-md">
-          <p className="text-lg"><strong>Name:</strong> {name}</p>
-          <p className="text-lg"><strong>Level:</strong> {level}</p>
-          <p className="text-lg"><strong>Subject:</strong> {subject}</p>
-          <p className="text-xl mt-4 font-bold">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
-          <p className={`text-xl mt-2 font-semibold ${color}`}>
-            Grade: <strong>{grade}</strong> – <em>{label}</em>
+          <p><strong>Name:</strong> {name}</p>
+          <p><strong>Level:</strong> {level}</p>
+          <p><strong>Subject:</strong> {subject}</p>
+          <p className="mt-4 font-bold">
+            Score: {score} / {shuffledQuestions.length} ({percentage}%)
+          </p>
+          <p className={`mt-2 font-semibold ${color}`}>
+            Grade: {grade} – {label}
           </p>
         </div>
 
         <div className="mt-6 flex gap-4 flex-wrap justify-center">
           <button
-            className="px-6 py-2 bg-yellow-600 text-white rounded-lg shadow hover:bg-yellow-700"
+            className="px-6 py-2 bg-green-600 text-white rounded-lg"
             onClick={() => setReviewing(true)}
           >
             Review Answers
           </button>
+
           <button
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg"
             onClick={() => navigate('/leaderboard')}
           >
             View Leaderboard
           </button>
+
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
-            onClick={restartQuiz}
+            className="px-6 py-2 bg-purple-600 text-white rounded-lg"
+            onClick={() => {
+              localStorage.removeItem('quizProgress');
+
+              const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+              localStorage.setItem(
+                'quizUser',
+                JSON.stringify({
+                  name: user.name,
+                  code: user.code
+                })
+              );
+
+              navigate('/start');
+            }}
           >
             Take Quiz Again
           </button>
@@ -206,37 +214,38 @@ function QuizPage() {
     );
   }
 
-  // ================= REVIEW =================
+  // ===== REVIEW SCREEN =====
   if (reviewing) {
     return (
       <div className="p-6 bg-blue-50 min-h-screen">
-        <h2 className="text-2xl font-extrabold mb-6 text-center">Review Answers</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Review Answers</h2>
+
         {answers.map((item, index) => (
-          <div key={index} className="mb-4 p-4 border rounded-lg bg-white shadow">
-            <p className="font-semibold">{index + 1}. {item.question}</p>
-            <div className="mt-2 space-y-2">
-              {item.options.map((opt, i) => {
-                let btnClass = "border rounded-lg px-4 py-2 w-full text-left";
-                if (opt === item.correct) {
-                  btnClass += " bg-green-100 border-green-500 text-green-700 font-bold";
-                } else if (opt === item.selected && opt !== item.correct) {
-                  btnClass += " bg-red-100 border-red-500 text-red-700 font-bold";
-                } else {
-                  btnClass += " bg-gray-50";
-                }
-                return (
-                  <div key={i} className={btnClass}>
-                    {opt}
-                  </div>
-                );
-              })}
-            </div>
+          <div key={index} className="mb-4 p-4 bg-white rounded shadow">
+            <p>{index + 1}. {item.question}</p>
+            {item.options.map((opt, i) => (
+              <div key={i}>{opt}</div>
+            ))}
           </div>
         ))}
+
         <div className="text-center mt-6">
           <button
-            className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
-            onClick={restartQuiz}
+            className="px-6 py-2 bg-purple-600 text-white rounded"
+            onClick={() => {
+              setReviewing(false);
+
+              const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+              localStorage.setItem(
+                'quizUser',
+                JSON.stringify({
+                  name: user.name,
+                  code: user.code
+                })
+              );
+
+              navigate('/start');
+            }}
           >
             Take Quiz Again
           </button>
@@ -249,50 +258,20 @@ function QuizPage() {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      {/* Header */}
-      <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
-        <div>
-          <p className="font-bold text-lg">{subject}</p>
-          <p className="text-sm text-gray-600">Level: {level}</p>
-        </div>
-        <div className="text-right">
-          <p className="font-semibold">Candidate: {name}</p>
-          <p className="font-mono text-sm">Code: {code}</p>
-        </div>
+      <div className="mb-4">
+        <p>{subject} | {level}</p>
+        <p>{name}</p>
+        <p>{formatTime()}</p>
       </div>
 
-      {/* Timer */}
-      <div className="mb-6">
-        <div className="flex justify-between mb-1">
-          <span className="text-sm font-medium">Time Left</span>
-          <span className="text-sm font-mono">{formatTime()}</span>
-        </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
-          <div
-            className="bg-green-500 h-4 rounded-full transition-all duration-500"
-            style={{ width: `${progressPercent}%` }}
-          />
-        </div>
-      </div>
+      <h2>Question {current + 1}</h2>
+      <p>{currentQuestion?.question}</p>
 
-      {/* Question */}
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h2 className="text-xl font-bold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
-        </h2>
-        <p className="text-lg mb-6 font-medium">{currentQuestion?.question}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {currentQuestion?.options?.map((option, index) => (
-            <button
-              key={index}
-              className="bg-gray-50 border rounded-lg px-6 py-3 shadow hover:bg-gray-100 font-medium transition"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
+      {currentQuestion?.options?.map((opt, i) => (
+        <button key={i} onClick={() => handleAnswer(opt)}>
+          {opt}
+        </button>
+      ))}
     </div>
   );
 }
