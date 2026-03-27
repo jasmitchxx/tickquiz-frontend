@@ -39,12 +39,12 @@ function QuizPage() {
 
   const endQuiz = useCallback(() => {
     setFinished(true);
-    localStorage.removeItem('quizProgress'); // clear progress on finish
+    localStorage.removeItem('quizProgress');
   }, []);
 
   useEffect(() => {
     if (!name || !subject || subjectQuestions.length === 0) {
-      navigate('/');
+      navigate('/select-subject');
       return;
     }
 
@@ -112,7 +112,7 @@ function QuizPage() {
           code: String(code),
         });
       } catch (err) {
-        console.error('? Failed to save result:', err);
+        console.error('Failed to save result:', err);
       }
     };
 
@@ -189,9 +189,8 @@ function QuizPage() {
           <button
             className="px-6 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-600"
             onClick={() => {
-              // Clear quiz user and progress for a completely fresh quiz
               localStorage.removeItem('quizProgress');
-              navigate('/subject-select');
+              navigate('/select-subject'); // <- updated path
             }}
           >
             Start Over
@@ -233,7 +232,7 @@ function QuizPage() {
             onClick={() => {
               setReviewing(false);
               localStorage.removeItem('quizProgress');
-              navigate('/subject-select');
+              navigate('/select-subject'); // <- updated path
             }}
           >
             Return to Start
@@ -247,7 +246,6 @@ function QuizPage() {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      {/* Header */}
       <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
         <div>
           <p className="font-bold text-lg">{subject}</p>
@@ -259,7 +257,6 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Timer */}
       <div className="mb-6">
         <div className="flex justify-between mb-1">
           <span className="text-sm font-medium">Time Left</span>
@@ -273,7 +270,6 @@ function QuizPage() {
         </div>
       </div>
 
-      {/* Question */}
       <div className="bg-white p-6 rounded-lg shadow">
         <h2 className="text-xl font-bold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
