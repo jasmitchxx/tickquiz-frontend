@@ -7,26 +7,44 @@ function StartQuizPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('quizUser'));
-    if (!user || !user.code) {
-      // Redirect to access code page if no code
-      navigate('/use-access-code');
-    }
+    // ?? FIX: Delay check slightly
+    const timer = setTimeout(() => {
+      const user = JSON.parse(localStorage.getItem('quizUser'));
+      const accessGranted = localStorage.getItem('quizAccessGranted') === 'true';
+
+      if (!accessGranted || !user || !user.code) {
+        navigate('/use-access-code');
+      }
+    }, 300); // ? small delay fixes first attempt bug
+
+    return () => clearTimeout(timer);
   }, [navigate]);
 
   const handleLevelSelect = (level) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-    user.level = level;
-    // Clear any previous quiz progress but keep code
+
+    // ? Save level properly
+    localStorage.setItem(
+      'quizUser',
+      JSON.stringify({
+        ...user,
+        level,
+      })
+    );
+
+    // ? Clear only quiz progress
     localStorage.removeItem('quizProgress');
-    localStorage.setItem('quizUser', JSON.stringify(user));
+
     navigate('/select-subject');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 p-6">
       <div className="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-8 text-center">
-        <h2 className="text-3xl font-extrabold mb-6 text-blue-700">Select Your Level</h2>
+        <h2 className="text-3xl font-extrabold mb-6 text-blue-700">
+          Select Your Level
+        </h2>
+
         <div className="grid grid-cols-2 gap-6">
           {levels.map((level) => (
             <button

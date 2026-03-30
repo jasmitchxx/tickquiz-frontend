@@ -19,17 +19,16 @@ function UseAccessCodePage() {
       const res = await axios.post(`${API_URL}/api/use-access-code`, { code });
 
       if (res.data.success) {
-        setMessage(res.data.message);
         setSuccess(true);
+        setMessage('Access granted! Redirecting...');
 
         const usageCount = res.data.usageCount || 0;
 
-        // Store access flag and usage count
+        // ? SAVE EVERYTHING FIRST
         localStorage.setItem('quizAccessGranted', 'true');
         localStorage.setItem('quizUsageCount', usageCount);
         localStorage.setItem('quizAccessCode', code);
 
-        // Store or update quizUser
         const storedUser = JSON.parse(localStorage.getItem('quizUser')) || {};
         localStorage.setItem(
           'quizUser',
@@ -40,15 +39,14 @@ function UseAccessCodePage() {
           })
         );
 
-        // Redirect to start page directly
+        // ? FIX: Give time for storage before navigating
         setTimeout(() => {
           if (usageCount >= 2) {
-            alert('You have used all your attempts.');
             navigate('/request-access');
           } else {
-            navigate('/start'); 
+            navigate('/start');
           }
-        }, 1500);
+        }, 500); // ?? reduced + stable
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
       }
@@ -73,6 +71,7 @@ function UseAccessCodePage() {
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Enter Access Code
         </h2>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex items-center space-x-2">
             <input
@@ -86,24 +85,22 @@ function UseAccessCodePage() {
             <button
               type="button"
               onClick={handlePaste}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg shadow"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg"
             >
               Paste
             </button>
           </div>
+
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg"
           >
             Submit Code
           </button>
         </form>
+
         {message && (
-          <p
-            className={`mt-4 text-center font-medium ${
-              success ? 'text-green-600' : 'text-red-600'
-            }`}
-          >
+          <p className={`mt-4 text-center font-medium ${success ? 'text-green-600' : 'text-red-600'}`}>
             {message}
           </p>
         )}
