@@ -6,12 +6,17 @@ function UseAccessCodePage() {
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState(false);
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (loading) return; // ?? prevent double click
+
+    setLoading(true);
     setMessage('');
     setSuccess(false);
 
@@ -19,47 +24,55 @@ function UseAccessCodePage() {
       const res = await axios.post(`${API_URL}/api/use-access-code`, { code });
 
       if (res.data.success) {
-        setSuccess(true);
-        setMessage('Access granted! Redirecting...');
-
         const usageCount = res.data.usageCount || 0;
 
-        // ? SAVE EVERYTHING FIRST
+        // ?? CLEAR OLD DATA (VERY IMPORTANT)
+        localStorage.removeItem('quizUser');
+        localStorage.removeItem('quizProgress');
+
+        // ?? SAVE CLEAN USER DATA
+        const newUser = {
+          name: res.data.name || 'Student',
+          code: code,
+        };
+
+        localStorage.setItem('quizUser', JSON.stringify(newUser));
         localStorage.setItem('quizAccessGranted', 'true');
         localStorage.setItem('quizUsageCount', usageCount);
         localStorage.setItem('quizAccessCode', code);
 
-        const storedUser = JSON.parse(localStorage.getItem('quizUser')) || {};
-        localStorage.setItem(
-          'quizUser',
-          JSON.stringify({
-            ...storedUser,
-            name: res.data.name || storedUser.name || 'Student',
-            code: code,
-          })
-        );
+        // ?? VERIFY STORAGE BEFORE NAVIGATING
+        const checkUser = JSON.parse(localStorage.getItem('quizUser'));
+        const accessGranted = localStorage.getItem('quizAccessGranted');
 
-        // ? FIX: Give time for storage before navigating
-        setTimeout(() => {
+        if (checkUser?.code && accessGranted === 'true') {
+          setSuccess(true);
+          setMessage('Access granted! Redirecting...');
+
           if (usageCount >= 2) {
             navigate('/request-access');
           } else {
             navigate('/start');
           }
-        }, 500); // ?? reduced + stable
+        } else {
+          setMessage('Storage error. Please try again.');
+        }
+
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
       }
     } catch (err) {
       console.error(err);
-      setMessage(err.response?.data?.message || 'Something went wrong. Please try again.');
+      setMessage(err.response?.data?.message || 'Something went wrong.');
+    } finally {
+      setLoading(false);
     }
   };
 
   const handlePaste = async () => {
     try {
       const text = await navigator.clipboard.readText();
-      setCode(text.toUpperCase());
+      setCode(text.toUpperCase().trim());
     } catch (err) {
       alert('Failed to paste from clipboard.');
     }
@@ -82,6 +95,7 @@ function UseAccessCodePage() {
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
+
             <button
               type="button"
               onClick={handlePaste}
@@ -93,14 +107,23 @@ function UseAccessCodePage() {
 
           <button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg"
+            disabled={loading}
+            className={`w-full py-3 rounded-lg font-bold text-white transition ${
+              loading
+                ? 'bg-gray-400 cursor-not-allowed'
+                : 'bg-green-600 hover:bg-green-700'
+            }`}
           >
-            Submit Code
+            {loading ? 'Verifying...' : 'Submit Code'}
           </button>
         </form>
 
         {message && (
-          <p className={`mt-4 text-center font-medium ${success ? 'text-green-600' : 'text-red-600'}`}>
+          <p
+            className={`mt-4 text-center font-medium ${
+              success ? 'text-green-600' : 'text-red-600'
+            }`}
+          >
             {message}
           </p>
         )}

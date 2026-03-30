@@ -7,15 +7,16 @@ function StartQuizPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // ?? FIX: Delay check slightly
+    // ?? Small delay ensures localStorage from UseAccessCodePage is ready
     const timer = setTimeout(() => {
       const user = JSON.parse(localStorage.getItem('quizUser'));
       const accessGranted = localStorage.getItem('quizAccessGranted') === 'true';
 
-      if (!accessGranted || !user || !user.code) {
+      if (!accessGranted || !user?.code) {
+        // ?? Redirect if access not granted or no code
         navigate('/use-access-code');
       }
-    }, 300); // ? small delay fixes first attempt bug
+    }, 300); // 0.3s delay fixes first-attempt redirect issue
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -23,18 +24,18 @@ function StartQuizPage() {
   const handleLevelSelect = (level) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
 
-    // ? Save level properly
-    localStorage.setItem(
-      'quizUser',
-      JSON.stringify({
-        ...user,
-        level,
-      })
-    );
+    // ?? Save the selected level
+    const updatedUser = {
+      ...user,
+      level,
+    };
 
-    // ? Clear only quiz progress
+    localStorage.setItem('quizUser', JSON.stringify(updatedUser));
+
+    // ?? Clear only previous quiz progress
     localStorage.removeItem('quizProgress');
 
+    // ?? Navigate to subject selection
     navigate('/select-subject');
   };
 
