@@ -100,7 +100,7 @@ export default function VerifyPaymentPage() {
           onClick={handleCopy}
           className="mb-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full shadow"
         >
-          Copy Code
+          Write Code Down
         </button>
 
         <button
