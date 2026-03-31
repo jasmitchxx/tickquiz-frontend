@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function UseAccessCodePage() {
@@ -8,55 +7,65 @@ function UseAccessCodePage() {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
   const API_URL = process.env.REACT_APP_API_URL;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // ? AUTO-READ CODE FROM URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlCode = params.get('code');
 
-    if (loading) return; // ?? prevent double click
+    if (urlCode) {
+      const cleanCode = urlCode.trim().toUpperCase();
+      setCode(cleanCode);
+
+      // ?? AUTO SUBMIT
+      verifyCode(cleanCode);
+    }
+  }, []);
+
+  // ? MOVE LOGIC INTO FUNCTION (REUSABLE)
+  const verifyCode = async (inputCode) => {
+    if (loading) return;
 
     setLoading(true);
     setMessage('');
     setSuccess(false);
 
     try {
-      const res = await axios.post(`${API_URL}/api/use-access-code`, { code });
+      const res = await axios.post(`${API_URL}/api/use-access-code`, {
+        code: inputCode,
+      });
 
       if (res.data.success) {
         const usageCount = res.data.usageCount || 0;
 
-        // ?? CLEAR OLD DATA (VERY IMPORTANT)
-        localStorage.removeItem('quizUser');
-        localStorage.removeItem('quizProgress');
+        // ?? CLEAR OLD DATA
+        localStorage.clear();
 
-        // ?? SAVE CLEAN USER DATA
-        const newUser = {
-          name: res.data.name || 'Student',
-          code: code,
-        };
+        // ?? SAVE USER
+        localStorage.setItem(
+          'quizUser',
+          JSON.stringify({
+            name: res.data.name || 'Student',
+            code: inputCode,
+          })
+        );
 
-        localStorage.setItem('quizUser', JSON.stringify(newUser));
         localStorage.setItem('quizAccessGranted', 'true');
         localStorage.setItem('quizUsageCount', usageCount);
-        localStorage.setItem('quizAccessCode', code);
+        localStorage.setItem('quizAccessCode', inputCode);
 
-        // ?? VERIFY STORAGE BEFORE NAVIGATING
-        const checkUser = JSON.parse(localStorage.getItem('quizUser'));
-        const accessGranted = localStorage.getItem('quizAccessGranted');
+        setSuccess(true);
+        setMessage('Access granted! Redirecting...');
 
-        if (checkUser?.code && accessGranted === 'true') {
-          setSuccess(true);
-          setMessage('Access granted! Redirecting...');
-
+        // ?? HARD REDIRECT
+        setTimeout(() => {
           if (usageCount >= 2) {
-            navigate('/request-access');
+            window.location.href = '/request-access';
           } else {
-            navigate('/start');
+            window.location.href = '/start';
           }
-        } else {
-          setMessage('Storage error. Please try again.');
-        }
+        }, 800);
 
       } else {
         setMessage(res.data.message || 'Invalid or expired code.');
@@ -69,49 +78,32 @@ function UseAccessCodePage() {
     }
   };
 
-  const handlePaste = async () => {
-    try {
-      const text = await navigator.clipboard.readText();
-      setCode(text.toUpperCase().trim());
-    } catch (err) {
-      alert('Failed to paste from clipboard.');
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    verifyCode(code.trim().toUpperCase());
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+        <h2 className="text-2xl font-bold text-center mb-6">
           Enter Access Code
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex items-center space-x-2">
-            <input
-              type="text"
-              placeholder="Enter your code"
-              value={code}
-              onChange={(e) => setCode(e.target.value.toUpperCase())}
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-
-            <button
-              type="button"
-              onClick={handlePaste}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg"
-            >
-              Paste
-            </button>
-          </div>
+          <input
+            type="text"
+            value={code}
+            onChange={(e) => setCode(e.target.value.toUpperCase())}
+            placeholder="Enter your code"
+            className="w-full px-4 py-3 border rounded-lg"
+          />
 
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-3 rounded-lg font-bold text-white transition ${
-              loading
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-green-600 hover:bg-green-700'
+            className={`w-full py-3 rounded-lg text-white font-bold ${
+              loading ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-700'
             }`}
           >
             {loading ? 'Verifying...' : 'Submit Code'}
@@ -119,11 +111,7 @@ function UseAccessCodePage() {
         </form>
 
         {message && (
-          <p
-            className={`mt-4 text-center font-medium ${
-              success ? 'text-green-600' : 'text-red-600'
-            }`}
-          >
+          <p className={`mt-4 text-center ${success ? 'text-green-600' : 'text-red-600'}`}>
             {message}
           </p>
         )}
