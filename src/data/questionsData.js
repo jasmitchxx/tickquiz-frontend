@@ -9,6 +9,7 @@ import economicsQuestions from './economicsQuestions';
 import geographyQuestions from './geographyQuestions';
 import electiveictQuestions from './electiveictQuestions';
 import englishQuestions from './englishQuestions';
+import crsQuestions from './crsQuestions';
 import socialstudiesQuestions from './socialstudiesQuestions';
 import accountingQuestions from './accountingQuestions';
 import costAccountingQuestions from './costAccountingQuestions';
@@ -38,6 +39,7 @@ const questionsData = {
     electiveict: electiveictQuestions,
     english: englishQuestions,
     socialstudies: socialstudiesQuestions,
+    crs: crsQuestions,
     accounting: accountingQuestions,
     costaccounting: costAccountingQuestions,
     businessmanagement: businessManagementQuestions,
