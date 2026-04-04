@@ -6,6 +6,7 @@ import biologyQuestions from './shsBiologyQuestions';
 import coreMathsQuestions from './coreMathsQuestions';
 import coreScienceQuestions from './coreScienceQuestions';
 import economicsQuestions from './economicsQuestions';
+import governmentQuestions from './governmentQuestions';
 import geographyQuestions from './geographyQuestions';
 import electiveictQuestions from './electiveictQuestions';
 import englishQuestions from './englishQuestions';
@@ -35,6 +36,7 @@ const questionsData = {
     coremaths: coreMathsQuestions,
     corescience: coreScienceQuestions,
     economics: economicsQuestions,
+    government: governmentQuestions,
     geography: geographyQuestions,
     electiveict: electiveictQuestions,
     english: englishQuestions,
