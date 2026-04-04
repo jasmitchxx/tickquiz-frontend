@@ -11,6 +11,8 @@ import geographyQuestions from './geographyQuestions';
 import electiveictQuestions from './electiveictQuestions';
 import englishQuestions from './englishQuestions';
 import crsQuestions from './crsQuestions';
+import historyQuestions from './historyQuestions';
+import agricQuestions from './agricQuestions';
 import socialstudiesQuestions from './socialstudiesQuestions';
 import accountingQuestions from './accountingQuestions';
 import costAccountingQuestions from './costAccountingQuestions';
@@ -42,6 +44,8 @@ const questionsData = {
     english: englishQuestions,
     socialstudies: socialstudiesQuestions,
     crs: crsQuestions,
+    history: historyQuestions,
+    agric: agricQuestions,
     accounting: accountingQuestions,
     costaccounting: costAccountingQuestions,
     businessmanagement: businessManagementQuestions,
