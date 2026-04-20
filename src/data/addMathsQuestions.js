@@ -1,1973 +1,2558 @@
 const addMathsQuestions = [
-  {
-    question: "The universal set U = {1,2,3,4,5,6,7,8,9}, A = {2,4,6}, B = {3,4,5,6}. Find A ∪ B.",
-    options: ["{2,3,4,5,6}", "{2,4,6,3,5}", "{2,3,4,5,6}", "{1,2,3,4,5,6,7,8,9}"],
-    answer: "{2,3,4,5,6}"
-  },
-  {
-    question: "Simplify ?12 + ?27 - ?3.",
-    options: ["4?3", "5?3", "6?3", "2?3"],
-    answer: "4?3"
-  },
-  {
-    question: "If * is defined on real numbers by a * b = ab + a, find 2 * 3.",
-    options: ["6", "8", "9", "7"],
-    answer: "8"
-  },
-  {
-    question: "Let f(x) = 3x + 2. What is f(4)?",
-    options: ["10", "14", "12", "8"],
-    answer: "14"
-  },
-  {
-    question: "The function f(x) = x� + 3x - 4 is a:",
-    options: ["Polynomial of degree 1", "Polynomial of degree 2", "Rational function", "Binomial"],
-    answer: "Polynomial of degree 2"
-  },
-  {
-    question: "What is the remainder when x� + 2x� - 3x + 4 is divided by x - 2?",
-    options: ["0", "4", "10", "6"],
-    answer: "10"
-  },
-  {
-    question: "If f(x) = 1/(x - 2), what is the domain of f(x)?",
-    options: ["x ? 0", "x ? -2", "x ? 2", "x ? 1"],
-    answer: "x ? 2"
-  },
-  {
-    question: "Find the constant term in the expansion of (2x - 3)�.",
-    options: ["-27", "-54", "-36", "-81"],
-    answer: "-27"
-  },
-  {
-    question: "Simplify (2?3)�.",
-    options: ["6", "12", "4", "3"],
-    answer: "12"
-  },
-  {
-    question: "If A = {1,2,3,4}, B = {3,4,5,6}, find A ∩ B.",
-    options: ["{3,4}", "{1,2}", "{5,6}", "{1,2,3,4}"],
-    answer: "{3,4}"
-  },
-  {
-    question: "What is the coefficient of x� in the expansion of (x + 2)�?",
-    options: ["6", "4", "12", "3"],
-    answer: "12"
-  },
-  {
-    question: "Simplify: (x� - 1)/(x + 1).",
-    options: ["x - 1", "x + 1", "x� - 1", "x - 2"],
-    answer: "x - 1"
-  },
-  {
-    question: "If g(x) = x� and h(x) = x + 1, find g(h(x)).",
-    options: ["x� + 1", "(x + 1)�", "x� + 2x + 1", "x + 2"],
-    answer: "x� + 2x + 1"
-  },
-  {
-    question: "Simplify: ?(50) + ?(8).",
-    options: ["?58", "7?2", "5?2 + 2?2", "6?2"],
-    answer: "7?2"
-  },
-  {
-    question: "In binary operation, if a ⊗ b = a + 2b, what is 2 ⊗ 3?",
-    options: ["6", "8", "10", "12"],
-    answer: "8"
-  },
-  {
-    question: "Which of the following is a rational function?",
-    options: ["x� + 1", "1/(x - 1)", "?x", "x� - 2x"],
-    answer: "1/(x - 1)"
-  },
-  {
-    question: "Evaluate (3 - ?2)(3 + ?2).",
-    options: ["7", "9", "11", "5"],
-    answer: "7"
-  },
-  {
-    question: "The inverse of the function f(x) = 2x + 1 is:",
-    options: ["(x - 1)/2", "2x - 1", "1/(2x)", "x/2 + 1"],
-    answer: "(x - 1)/2"
-  },
-  {
-    question: "Simplify: (x + 1)(x� - x + 1).",
-    options: ["x� + 1", "x� - 1", "x� + 1", "x� - x� + x + 1"],
-    answer: "x� + 1"
-  },
-  {
-    question: "The nth term of a polynomial is 2n� - 3n + 1. Find the third term.",
-    options: ["4", "7", "10", "1"],
-    answer: "4"
-  },
 
-  // (30 more questions below follow similar format)
-
-  {
-    question: "What is the coefficient of x?� in the expansion of (1 + x)??",
-    options: ["5", "10", "1", "15"],
-    answer: "5"
-  },
-  {
-    question: "Which of the following is NOT a function?",
-    options: ["f(x) = x�", "f(x) = ?x", "f(x) = 1/x", "f(x) = �?x"],
-    answer: "f(x) = �?x"
-  },
-  {
-    question: "Solve: (x - 1)/(x + 2) = 2.",
-    options: ["x = -4", "x = 4", "x = 2", "x = 1"],
-    answer: "x = 4"
-  },
-  {
-    question: "If f(x) = x� - 2x and g(x) = x + 1, find f(g(x)).",
-    options: ["x� + 2x + 1", "x� + 1", "x�", "x� + 4x + 1"],
-    answer: "x� + 2x + 1"
-  },
-  {
-    question: "Find the value of x in the inequality: 2x - 3 < 7.",
-    options: ["x < 5", "x < 2", "x > 5", "x > 2"],
-    answer: "x < 5"
-  },
-  {
-    question: "Which of the following is a binomial expression?",
-    options: ["x� + x", "x + 1", "x", "x� + 2x + 1"],
-    answer: "x + 1"
-  },
-  {
-    question: "What is the inverse of the function f(x) = (x - 2)/3?",
-    options: ["3x + 2", "3x - 2", "3x + 6", "3x + 1"],
-    answer: "3x + 2"
-  },
-  {
-    question: "If x + 1 is a factor of f(x) = x� + 2x� - 5x - 6, find the remainder when f(x) is divided by x + 1.",
-    options: ["0", "-2", "1", "-1"],
-    answer: "0"
-  },
-  {
-    question: "Find the middle term in the expansion of (x + 2)?�.",
-    options: ["12x�", "6x�", "4x�", "8x�"],
-    answer: "6x�"
-  },
-  {
-    question: "What is the least common multiple of ?18 and ?8?",
-    options: ["2?2", "6?2", "12", "12?2"],
-    answer: "12"
-  },
-  {
-    question: "The domain of f(x) = ?(x - 3) is:",
-    options: ["x ≥ 3", "x > 3", "x ? 3", "x ≤ 3"],
-    answer: "x ≥ 3"
-  },
-  {
-    question: "Find the constant term in (x - 1)?�.",
-    options: ["-1", "4", "1", "0"],
-    answer: "1"
-  },
-  {
-    question: "Solve: 5x� + 6x + 1 = 0.",
-    options: ["x = -1, -1/5", "x = -1/5, -1", "x = 1/5, 1", "x = 1, 1/5"],
-    answer: "x = -1, -1/5"
-  },
-  {
-    question: "What is the simplified form of (x + 1)(x - 1)?",
-    options: ["x� + 1", "x� - 1", "x�", "x� - 2"],
-    answer: "x� - 1"
-  },
-  {
-    question: "If a binary operation ? is defined by a ? b = ab - b, find 3 ? 4.",
-    options: ["8", "12", "9", "10"],
-    answer: "8"
-  },
-  {
-    question: "What is the domain of the rational function f(x) = (x + 2)/(x - 3)?",
-    options: ["x ? 2", "x ? 3", "x ? -2", "x x ? ?"],
-    answer: "x ? 3"
-  },
-  {
-    question: "Which of the following expressions is a surd?",
-    options: ["?7", "7", "?9", "3"],
-    answer: "?7"
-  },
-  {
-    question: "Evaluate (3?2)�.",
-    options: ["6", "12", "9", "18"],
-    answer: "18"
-  },
-  {
-    question: "What is the value of n in the binomial expansion (1 + x)^n if the 4th term is 120x�?",
-    options: ["6", "7", "8", "5"],
-    answer: "5"
-  },
-  {
-    question: "Simplify (x� - 9)/(x + 3).",
-    options: ["x - 3", "x + 3", "x� - 3", "x - 9"],
-    answer: "x - 3"
-  },
-  {
-    question: "101. The value of (3 + ?2)(3 - ?2) is:",
-    options: ["7", "9", "11", "13"],
-    answer: "7"
-  },
-  {
-    question: "102. If x ∈ A = {2, 4, 6} and x ∈ B = {4, 6, 8}, find A ∩ B.",
-    options: ["{2, 4, 6, 8}", "{4, 6}", "{2, 8}", "{2, 4}"],
-    answer: "{4, 6}"
-  },
-  {
-    question: "103. Simplify: (?50 + ?8)",
-    options: ["3?2", "4?2", "5?2 + 2?2", "5?2 + ?8"],
-    answer: "5?2 + 2?2"
-  },
-  {
-    question: "104. What is the inverse of the function f(x) = 2x - 5?",
-    options: ["f?��(x) = (x + 5)/2", "f?��(x) = 2x + 5", "f?��(x) = (x - 5)/2", "f?��(x) = (x + 5)*2"],
-    answer: "f?��(x) = (x + 5)/2"
-  },
-  {
-    question: "105. Expand and simplify: (x + 2)^3",
-    options: ["x^3 + 6x^2 + 12x + 8", "x^3 + 3x^2 + 6x + 8", "x^3 + 3x^2 + 6x + 6", "x^3 + 4x^2 + 4x + 8"],
-    answer: "x^3 + 6x^2 + 12x + 8"
-  },
-  {
-    question: "106. Which of the following represents a binary operation?",
-    options: ["Addition", "Subtraction", "Multiplication", "All of the above"],
-    answer: "All of the above"
-  },
-  {
-    question: "107. Solve the inequality: 3x - 7 < 8",
-    options: ["x < 5", "x > 5", "x < 3", "x > 3"],
-    answer: "x < 5"
-  },
-  {
-    question: "108. The gradient of the line 2x + 3y = 6 is:",
-    options: ["-2/3", "-3/2", "2/3", "3/2"],
-    answer: "-2/3"
-  },
-  {
-    question: "109. A vector of magnitude 5 units pointing due East is represented as:",
-    options: ["5i", "5j", "-5i", "-5j"],
-    answer: "5i"
-  },
-  {
-    question: "110. The nth term of a sequence is given by Tn = 2n + 3. What is T4?",
-    options: ["9", "10", "11", "12"],
-    answer: "11"
-  },
-  {
-    question: "111. Rationalize the denominator: 5 / ?3",
-    options: ["5?3 / 3", "?3 / 5", "5 / 3?3", "5?3 / ?3"],
-    answer: "5?3 / 3"
-  },
-  {
-    question: "112. Evaluate: log₂(32)",
-    options: ["3", "4", "5", "6"],
-    answer: "5"
-  },
-  {
-    question: "113. If A = {1, 2, 3}, then the power set P(A) has how many elements?",
-    options: ["3", "6", "8", "9"],
-    answer: "8"
-  },
-  {
-    question: "114. Find the coefficient of x^2 in the expansion of (x + 3)^4.",
-    options: ["27", "36", "54", "108"],
-    answer: "54"
-  },
-  {
-    question: "115. The sum of the first 10 terms of the arithmetic sequence 2, 5, 8, ... is:",
-    options: ["145", "150", "155", "160"],
-    answer: "155"
-  },
-  {
-    question: "116. Solve: 3^x = 81",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "117. Find the equation of the line passing through (0, 2) with gradient 3.",
-    options: ["y = 3x + 2", "y = 2x + 3", "y = 3x - 2", "y = x + 2"],
-    answer: "y = 3x + 2"
-  },
-  {
-    question: "118. Which is a one-to-one function?",
-    options: ["f(x) = x^2", "f(x) = x^3", "f(x) = sin x", "f(x) = |x|"],
-    answer: "f(x) = x^3"
-  },
-  {
-    question: "119. The domain of f(x) = 1/(x - 3) is:",
-    options: ["x ? 3", "x ≥ 3", "x > 0", "x ? 0"],
-    answer: "x ? 3"
-  },
-  {
-    question: "120. What is the value of n in 2?� = 128?",
-    options: ["6", "7", "8", "9"],
-    answer: "7"
-  },
-  {
-    question: "121. What is the determinant of the matrix [[1, 2], [3, 4]]?",
-    options: ["-2", "-1", "2", "1"],
-    answer: "-2"
-  },
-  {
-    question: "122. Evaluate: ∫3x� dx",
-    options: ["x^3 + C", "x^3", "3x + C", "x� + C"],
-    answer: "x^3 + C"
-  },
-  {
-    question: "123. If a vector has components (4, 3), its magnitude is:",
-    options: ["5", "6", "7", "25"],
-    answer: "5"
-  },
-  {
-    question: "124. If f(x) = x� + 2x + 1, find f(-1).",
-    options: ["0", "1", "-1", "2"],
-    answer: "0"
-  },
-  {
-    question: "125. The solution to log₅(x) = 3 is:",
-    options: ["x = 15", "x = 125", "x = 25", "x = 5"],
-    answer: "x = 125"
-  },
-  {
-    question: "126. Convert 64 to base 2.",
-    options: ["1000000", "111111", "100000", "1100000"],
-    answer: "1000000"
-  },
-  {
-    question: "127. Which of these is a surd?",
-    options: ["?5", "3", "1/2", "4"],
-    answer: "?5"
-  },
-  {
-    question: "128. Find the midpoint between (1, 4) and (5, 10).",
-    options: ["(3, 6)", "(2, 7)", "(4, 8)", "(5, 7)"],
-    answer: "(3, 7)"
-  },
-  {
-    question: "129. The quadratic expression x� - 5x + 6 factors into:",
-    options: ["(x - 2)(x - 3)", "(x + 2)(x + 3)", "(x - 1)(x - 6)", "(x + 1)(x - 6)"],
-    answer: "(x - 2)(x - 3)"
-  },
-  {
-    question: "130. How many terms are in the expansion of (x + y)^5?",
-    options: ["5", "6", "7", "10"],
-    answer: "6"
-  },
-  // 20 more to complete the part
-  // Questions 131-150 (you can ask to continue anytime)
-  {
-    question: "The value of (3 + ?2)(3 - ?2) is:",
-    options: ["7", "9", "11", "13"],
-    answer: "7"
-  },
-  {
-    question: "If x ∈ A = {2, 4, 6} and x ∈ B = {4, 6, 8}, find A ∩ B.",
-    options: ["{2, 4, 6, 8}", "{4, 6}", "{2, 8}", "{2, 4}"],
-    answer: "{4, 6}"
-  },
-  {
-    question: "Simplify: (?50 + ?8)",
-    options: ["3?2", "4?2", "5?2 + 2?2", "5?2 + ?8"],
-    answer: "5?2 + 2?2"
-  },
-  {
-    question: "What is the inverse of the function f(x) = 2x - 5?",
-    options: ["f?�(x) = (x + 5)/2", "f?�(x) = 2x + 5", "f?�(x) = (x - 5)/2", "f?�(x) = (x + 5)*2"],
-    answer: "f?�(x) = (x + 5)/2"
-  },
-  {
-    question: "Expand and simplify: (x + 2)^3",
-    options: ["x^3 + 6x^2 + 12x + 8", "x^3 + 3x^2 + 6x + 8", "x^3 + 3x^2 + 6x + 6", "x^3 + 4x^2 + 4x + 8"],
-    answer: "x^3 + 6x^2 + 12x + 8"
-  },
-  {
-    question: "Which of the following represents a binary operation?",
-    options: ["Addition", "Subtraction", "Multiplication", "All of the above"],
-    answer: "All of the above"
-  },
-  {
-    question: "Solve the inequality: 3x - 7 < 8",
-    options: ["x < 5", "x > 5", "x < 3", "x > 3"],
-    answer: "x < 5"
-  },
-  {
-    question: "The gradient of the line 2x + 3y = 6 is:",
-    options: ["-2/3", "-3/2", "2/3", "3/2"],
-    answer: "-2/3"
-  },
-  {
-    question: "A vector of magnitude 5 units pointing due East is represented as:",
-    options: ["5i", "5j", "-5i", "-5j"],
-    answer: "5i"
-  },
-  {
-    question: "The nth term of a sequence is given by Tn = 2n + 3. What is T4?",
-    options: ["9", "10", "11", "12"],
-    answer: "11"
-  },
-  {
-    question: "Rationalize the denominator: 5 / ?3",
-    options: ["5?3 / 3", "?3 / 5", "5 / 3?3", "5?3 / ?3"],
-    answer: "5?3 / 3"
-  },
-  {
-    question: "Evaluate: log₂(32)",
-    options: ["3", "4", "5", "6"],
-    answer: "5"
-  },
-  {
-    question: "If A = {1, 2, 3}, then the power set P(A) has how many elements?",
-    options: ["3", "6", "8", "9"],
-    answer: "8"
-  },
-  {
-    question: "Find the coefficient of x^2 in the expansion of (x + 3)^4.",
-    options: ["27", "36", "54", "108"],
-    answer: "54"
-  },
-  {
-    question: "The sum of the first 10 terms of the arithmetic sequence 2, 5, 8, ... is:",
-    options: ["145", "150", "155", "160"],
-    answer: "155"
-  },
-  {
-    question: "Solve: 3^x = 81",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Find the equation of the line passing through (0, 2) with gradient 3.",
-    options: ["y = 3x + 2", "y = 2x + 3", "y = 3x - 2", "y = x + 2"],
-    answer: "y = 3x + 2"
-  },
-  {
-    question: "Which is a one-to-one function?",
-    options: ["f(x) = x^2", "f(x) = x^3", "f(x) = sin x", "f(x) = |x|"],
-    answer: "f(x) = x^3"
-  },
-  {
-    question: "The domain of f(x) = 1/(x - 3) is:",
-    options: ["x ? 3", "x ≥ 3", "x > 0", "x ? 0"],
-    answer: "x ? 3"
-  },
-  {
-    question: "What is the value of n in 2?� = 128?",
-    options: ["6", "7", "8", "9"],
-    answer: "7"
-  },
-  {
-    question: "What is the determinant of the matrix [[1, 2], [3, 4]]?",
-    options: ["-2", "-1", "2", "1"],
-    answer: "-2"
-  },
-  {
-    question: "Evaluate: ∫3x� dx",
-    options: ["x^3 + C", "x^3", "3x + C", "x� + C"],
-    answer: "x^3 + C"
-  },
-  {
-    question: "If a vector has components (4, 3), its magnitude is:",
-    options: ["5", "6", "7", "25"],
-    answer: "5"
-  },
-  {
-    question: "If f(x) = x� + 2x + 1, find f(-1).",
-    options: ["0", "1", "-1", "2"],
-    answer: "0"
-  },
-  {
-    question: "The solution to log₅(x) = 3 is:",
-    options: ["x = 15", "x = 125", "x = 25", "x = 5"],
-    answer: "x = 125"
-  },
-  {
-    question: "Convert 64 to base 2.",
-    options: ["1000000", "111111", "100000", "1100000"],
-    answer: "1000000"
-  },
-  {
-    question: "Which of these is a surd?",
-    options: ["?5", "3", "1/2", "4"],
-    answer: "?5"
-  },
-  {
-    question: "Find the midpoint between (1, 4) and (5, 10).",
-    options: ["(3, 6)", "(2, 7)", "(4, 8)", "(5, 7)"],
-    answer: "(3, 7)"
-  },
-  {
-    question: "The quadratic expression x� - 5x + 6 factors into:",
-    options: ["(x - 2)(x - 3)", "(x + 2)(x + 3)", "(x - 1)(x - 6)", "(x + 1)(x - 6)"],
-    answer: "(x - 2)(x - 3)"
-  },
-  {
-    question: "How many terms are in the expansion of (x + y)^5?",
-    options: ["5", "6", "7", "10"],
-    answer: "6"
-  },
-  {
-    question: "Evaluate: log??(1000)",
-    options: ["1", "2", "3", "4"],
-    answer: "3"
-  },
-  {
-    question: "Simplify: (2 + ?3)(2 - ?3)",
-    options: ["1", "4", "3", "?3"],
-    answer: "1"
-  },
-  {
-    question: "If f(x) = x� + 4 and g(x) = x - 1, find f(g(x))",
-    options: ["x� - 2x + 5", "x� - 1", "(x - 1)� + 4", "x� + x - 5"],
-    answer: "(x - 1)� + 4"
-  },
-  {
-    question: "What is the 5th term of the geometric sequence 2, 4, 8, ...?",
-    options: ["16", "32", "64", "128"],
-    answer: "32"
-  },
-  {
-    question: "Solve the inequality: 2x + 5 > 1",
-    options: ["x > -2", "x > -1", "x < 2", "x > 3"],
-    answer: "x > -2"
-  },
-  {
-    question: "Which of these functions is not one-to-one?",
-    options: ["f(x) = x�", "f(x) = 2x + 1", "f(x) = |x|", "f(x) = x - 7"],
-    answer: "f(x) = |x|"
-  },
-  {
-    question: "Find the slope of the line passing through (1, 2) and (3, 6).",
-    options: ["1", "2", "3", "4"],
-    answer: "2"
-  },
-  {
-    question: "Differentiate y = 3x� + 2x - 1",
-    options: ["6x + 2", "6x - 2", "3x + 2", "2x + 3"],
-    answer: "6x + 2"
-  },
-  {
-    question: "Integrate: ∫x dx",
-    options: ["x", "x�", "x� / 2", "x / 2"],
-    answer: "x� / 2"
-  },
-  {
-    question: "Which of the following is not a surd?",
-    options: ["?2", "?3", "?4", "?5"],
-    answer: "?4"
-  },
-  {
-    question: "What is the inverse of f(x) = 1/x?",
-    options: ["f?�(x) = x", "f?�(x) = 1/x", "f?�(x) = x�", "f?�(x) = ?x"],
-    answer: "f?�(x) = 1/x"
-  },
-  {
-    question: "Find the sum of the first 6 terms of the geometric series: 2, 4, 8, ...",
-    options: ["62", "63", "64", "66"],
-    answer: "126"
-  },
-  {
-    question: "If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∪ B?",
-    options: ["{1, 2, 3, 4, 5}", "{3}", "{1, 2}", "{4, 5}"],
-    answer: "{1, 2, 3, 4, 5}"
-  },
-  {
-    question: "Simplify: (x� - 9)/(x - 3)",
-    options: ["x + 3", "x - 3", "x� - 3", "x� + 3"],
-    answer: "x + 3"
-  },
-  {
-    question: "Evaluate the determinant of [[3, 2], [1, 4]]",
-    options: ["10", "14", "12", "8"],
-    answer: "10"
-  },
-  {
-    question: "What is the binomial coefficient of x�y� in (x + y)^4?",
-    options: ["6", "4", "12", "24"],
-    answer: "6"
-  },
-  {
-    question: "If sin x = 1/2 and x is acute, find x.",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "30�"
-  },
-  {
-    question: "The midpoint of points A(2, 3) and B(6, 7) is:",
-    options: ["(4, 5)", "(3, 5)", "(5, 6)", "(6, 7)"],
-    answer: "(4, 5)"
-  },
-  {
-    question: "Which of these is a function?",
-    options: ["A = {(1,2), (2,3), (1,3)}", "B = {(1,2), (2,4)}", "C = {(1,2), (1,2)}", "D = {(2,3), (2,3)}"],
-    answer: "B = {(1,2), (2,4)}"
-  },
-  {
-    question: "Solve: x� - 16 = 0",
-    options: ["x = �4", "x = �8", "x = 4", "x = -4"],
-    answer: "x = �4"
-  },
-  {
-    question: "Which of the following is not a binary operation on real numbers?",
-    options: ["Addition", "Multiplication", "Subtraction", "Square Root"],
-    answer: "Square Root"
-  },
-  {
-    question: "What is the range of f(x) = x�?",
-    options: ["All real numbers", "x > 0", "x ?0", "x < 0"],
-    answer: "x ?0"
-  },
-  {
-    question: "If a sequence is defined as Tn = n�, what is the 6th term?",
-    options: ["36", "30", "25", "49"],
-    answer: "36"
-  },
-  {
-    question: "Convert 45 to base 2.",
-    options: ["101101", "110101", "100101", "111001"],
-    answer: "101101"
-  },
-  {
-    question: "Simplify: (3x�y)(2xy�)",
-    options: ["6x�y�", "6x�y�", "5x�y�", "5x�y�"],
-    answer: "6x�y�"
-  },
-  {
-    question: "Factor completely: x� - 25",
-    options: ["(x - 5)(x + 5)", "(x - 25)(x + 25)", "x(x - 25)", "(x + 5)�"],
-    answer: "(x - 5)(x + 5)"
-  },
-  {
-    question: "If A = [[1, 0], [0, 1]], what type of matrix is A?",
-    options: ["Identity matrix", "Zero matrix", "Diagonal matrix", "Singular matrix"],
-    answer: "Identity matrix"
-  },
-  {
-    question: "Find the gradient of the line y = -3x + 7",
-    options: ["-3", "3", "7", "-7"],
-    answer: "-3"
-  },
-  {
-    question: "What is the solution to 2^x = 16?",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Solve: x/3 = 5",
-    options: ["x = 15", "x = 10", "x = 8", "x = 5"],
-    answer: "x = 15"
-  },
-  {
-    question: "Find the value of x if 3x + 2 = 11.",
-    options: ["2", "3", "4", "5"],
-    answer: "3"
-  },
-  {
-    question: "What is the sum of the interior angles of a pentagon?",
-    options: ["540�", "360�", "180�", "720�"],
-    answer: "540�"
-  },
-  {
-    question: "If f(x) = 2x + 1, find f?�(x).",
-    options: ["(x - 1)/2", "2x - 1", "(x + 1)/2", "1 - 2x"],
-    answer: "(x - 1)/2"
-  },
-  {
-    question: "Solve the quadratic equation x� - 5x + 6 = 0.",
-    options: ["x = 2 or 3", "x = -2 or -3", "x = 1 or 6", "x = -1 or -6"],
-    answer: "x = 2 or 3"
-  },
-  {
-    question: "Which of the following is a rational function?",
-    options: ["f(x) = (x + 1)/(x - 2)", "f(x) = x� + 1", "f(x) = ?x", "f(x) = sin x"],
-    answer: "f(x) = (x + 1)/(x - 2)"
-  },
-  {
-    question: "Find the vector sum of u = 3i + 2j and v = -i + 4j.",
-    options: ["2i + 6j", "4i + 6j", "2i - 2j", "4i - 2j"],
-    answer: "2i + 6j"
-  },
-  {
-    question: "What is the binomial expansion of (1 + x)�?",
-    options: [
-      "1 + 3x + 3x� + x�",
-      "1 + x + x� + x�",
-      "1 + 2x + 3x� + 4x�",
-      "1 + 3x + x� + x�"
-    ],
-    answer: "1 + 3x + 3x� + x�"
-  },
-  {
-    question: "If log? 8 = x, find the value of x.",
-    options: ["1", "2", "3", "4"],
-    answer: "3"
-  },
-  {
-    question: "Simplify: (x�y�)�",
-    options: ["x?y?", "x?y?", "x?y�", "x�y�"],
-    answer: "x?y?�"
-  },
-  {
-    question: "If two events are independent, what is P(A ∩ B)?",
-    options: [
-      "P(A) × P(B)",
-      "P(A) + P(B)",
-      "P(A) - P(B)",
-      "P(A) / P(B)"
-    ],
-    answer: "P(A) × P(B)"
-  },
-  {
-    question: "Find the derivative of y = sin x.",
-    options: ["cos x", "-cos x", "sin x", "-sin x"],
-    answer: "cos x"
-  },
-  {
-    question: "What is the integral of 1/x dx?",
-    options: ["ln|x| + C", "x + C", "1/x + C", "e^x + C"],
-    answer: "ln|x| + C"
-  },
-  {
-    question: "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 2]], find A + B.",
-    options: [
-      "[[3, 2], [4, 6]]",
-      "[[2, 2], [3, 2]]",
-      "[[3, 0], [4, 6]]",
-      "[[1, 2], [3, 4]]"
-    ],
-    answer: "[[3, 2], [4, 6]]"
-  },
-  {
-    question: "What is the probability of getting a head in a single toss of a fair coin?",
-    options: ["1/2", "1/4", "1/3", "1"],
-    answer: "1/2"
-  },
-  {
-    question: "Find the equation of the line with slope 2 passing through (1, 3).",
-    options: [
-      "y = 2x + 1",
-      "y = 2x + 3",
-      "y = 2x + 2",
-      "y = 3x + 2"
-    ],
-    answer: "y = 2x + 1"
-  },
-  {
-    question: "Expand (2x - 3)�.",
-    options: [
-      "4x� - 12x + 9",
-      "4x� + 12x + 9",
-      "2x� - 9",
-      "4x� - 6x + 9"
-    ],
-    answer: "4x� - 12x + 9"
-  },
-  {
-    question: "What is the solution set of |x - 3| < 5?",
-    options: [
-      "-2 < x < 8",
-      "x > 8",
-      "x < -2",
-      "-8 < x < 2"
-    ],
-    answer: "-2 < x < 8"
-  },
-  {
-    question: "If the sum of an arithmetic series is 50 and the number of terms is 5, what is the average term?",
-    options: ["10", "5", "15", "50"],
-    answer: "10"
-  },
-  {
-    question: "Find the determinant of the matrix [[2, 3], [4, 5]].",
-    options: ["-2", "10", "-7", "23"],
-    answer: "-2"
-  },
-  {
-    question: "Find the third term in the arithmetic progression 4, 7, 10, ...",
-    options: ["7", "10", "13", "16"],
-    answer: "10"
-  },
-  {
-    question: "Simplify (x + 2)(x - 3).",
-    options: ["x� - x - 6", "x� + x - 6", "x� - 5x + 6", "x� + 5x + 6"],
-    answer: "x� - x - 6"
-  },
-  {
-    question: "If sin A = 3/5 and A is acute, find cos A.",
-    options: ["4/5", "3/4", "5/3", "1/5"],
-    answer: "4/5"
-  },
-  {
-    question: "Find the sum of the first 20 natural numbers.",
-    options: ["210", "200", "190", "180"],
-    answer: "210"
-  },
-  {
-    question: "Evaluate log₅ 25.",
-    options: ["2", "5", "10", "1"],
-    answer: "2"
-  },
-  {
-    question: "If the vector u = 2i - 3j, find its magnitude.",
-    options: ["?13", "5", "1", "6"],
-    answer: "?13"
-  },
-  {
-    question: "Find the binomial coefficient for the term containing x� in the expansion of (1 + x)?�.",
-    options: ["6", "4", "3", "1"],
-    answer: "6"
-  },
-  {
-    question: "Solve for x: 2^x = 16.",
-    options: ["4", "8", "2", "16"],
-    answer: "4"
-  },
-  {
-    question: "Differentiate y = x� + 2x.",
-    options: ["3x� + 2", "x� + 2", "3x + 2", "3x�"],
-    answer: "3x� + 2"
-  },
-  {
-    question: "Find the integral of 3x� dx.",
-    options: ["x� + C", "x� + C", "3x + C", "x�"],
-    answer: "x� + C"
-  },
-  {
-    question: "Find the solution to the inequality 3x - 5 > 1.",
-    options: ["x > 2", "x < 2", "x > -2", "x < -2"],
-    answer: "x > 2"
-  },
-  {
-    question: "Find the length of the vector 5i + 12j.",
-    options: ["13", "17", "12", "10"],
-    answer: "13"
-  },
-  {
-    question: "If P(A) = 0.6 and P(B) = 0.5, find P(A ∪ B) if A and B are mutually exclusive.",
-    options: ["1.1", "0.3", "0.6", "0.5"],
-    answer: "1.1"
-  },
-  {
-    question: "Expand and simplify (x - 2)(x + 5).",
-    options: ["x� + 3x - 10", "x� - 3x + 10", "x� + 7x - 10", "x� - 7x + 10"],
-    answer: "x� + 3x - 10"
-  },
-  {
-    question: "What is the sum of the interior angles of a hexagon?",
-    options: ["720�", "540�", "360�", "900�"],
-    answer: "720�"
-  },
-  {
-    question: "Find the next term in the sequence: 2, 6, 12, 20, ...",
-    options: ["30", "32", "40", "36"],
-    answer: "30"
-  },
-  {
-    question: "If cos θ = 0.6 and θ is acute, find sin θ.",
-    options: ["0.8", "0.6", "0.4", "0.5"],
-    answer: "0.8"
-  },
-  {
-    question: "Find the value of k if the vectors 3i + kj and 6i + 4j are perpendicular.",
-    options: ["-2", "2", "3", "-3"],
-    answer: "-2"
-  },
-  {
-    question: "What is the solution to the equation 4x� - 9 = 0?",
-    options: ["x = �3/2", "x = �2/3", "x = 3", "x = -3"],
-    answer: "x = �3/2"
-  },
-  {
-    question: "Find the value of the binomial coefficient C(5,3).",
-    options: ["10", "5", "15", "20"],
-    answer: "10"
-  },
-  {
-    question: "Find the sum of the geometric series 3 + 6 + 12 + ... + 96.",
-    options: ["189", "192", "195", "198"],
-    answer: "189"
-  },
-  {
-    question: "Find the remainder when x� + 2x� - 5x + 6 is divided by x - 1.",
-    options: ["4", "2", "0", "3"],
-    answer: "6"
-  },
-  {
-    question: "Solve for x: log₃(x) + log₃(x - 2) = 1.",
-    options: ["3", "2", "1", "4"],
-    answer: "3"
-  },
-  {
-    question: "If vectors a = 2i + 3j and b = i - 4j, find a � b.",
-    options: ["-10", "14", "0", "12"],
-    answer: "-10"
-  },
-  {
-    question: "Find the maximum value of the quadratic function f(x) = -2x� + 4x + 1.",
-    options: ["3", "5", "4", "6"],
-    answer: "3"
-  },
-  {
-    question: "If sin A = 1/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30�", "60�", "45�", "90�"],
-    answer: "30�"
-  },
-  {
-    question: "Differentiate y = 5x?� - 3x� + 2.",
-    options: ["20x� - 6x", "20x?� - 6x", "5x� - 3x", "20x� + 6x"],
-    answer: "20x� - 6x"
-  },
-  {
-    question: "Integrate ∫(4x� - 2x) dx.",
-    options: ["x?� - x� + C", "x?� - 2x + C", "x?� + x� + C", "x� - x + C"],
-    answer: "x?� - x� + C"
-  },
-  {
-    question: "Find the next term in the arithmetic sequence 7, 13, 19, 25, ...",
-    options: ["31", "32", "33", "30"],
-    answer: "31"
-  },
-  {
-    question: "What is the probability of getting exactly 2 heads in 3 tosses of a fair coin?",
-    options: ["3/8", "1/8", "1/2", "1/4"],
-    answer: "3/8"
-  },
-  {
-    question: "Find the sum of the first 10 terms of the arithmetic sequence 2, 5, 8, 11, ...",
-    options: ["155", "140", "130", "120"],
-    answer: "155"
-  },
-  {
-    question: "If cos 2θ = 1/2, find θ in degrees where 0� ≤ θ ≤ 90�.",
-    options: ["30�", "45�", "60�", "15�"],
-    answer: "30�"
-  },
-  {
-    question: "Find the equation of the line passing through (2,3) with gradient 4.",
-    options: ["y = 4x - 5", "y = 4x + 5", "y = -4x + 3", "y = x + 3"],
-    answer: "y = 4x - 5"
-  },
-  {
-    question: "Calculate the determinant of the matrix [[3, 4], [2, 5]].",
-    options: ["7", "23", "2", "11"],
-    answer: "7"
-  },
-  {
-    question: "Find the expansion of (1 - x)�.",
-    options: ["1 - 3x + 3x� - x�", "1 + 3x + 3x� + x�", "1 - x�", "1 - 3x�"],
-    answer: "1 - 3x + 3x� - x�"
-  },
-  {
-    question: "If log?? 2 = 0.3010 and log?? 3 = 0.4771, find log?? 6.",
-    options: ["0.7781", "0.1761", "0.9542", "0.5230"],
-    answer: "0.7781"
-  },
-  {
-    question: "Solve the inequality |2x - 5| < 3.",
-    options: ["1 < x < 4", "x < 1 or x > 4", "2 < x < 3", "x > 1 and x < 4"],
-    answer: "1 < x < 4"
-  },
-  {
-    question: "Find the coordinates of the midpoint of the line segment joining points A(2,5) and B(6,9).",
-    options: ["(4,7)", "(8,14)", "(3,4)", "(2,9)"],
-    answer: "(4,7)"
-  },
-  {
-    question: "What is the scalar product of vectors 3i + 2j and 4i - j?",
-    options: ["10", "14", "12", "8"],
-    answer: "10"
-  },
-  {
-    question: "Find the sum of the infinite geometric series 5 + 3 + 1.8 + ...",
-    options: ["12.5", "10", "8", "15"],
-    answer: "12.5"
-  },
-  {
-    question: "If tan θ = 1, find θ in degrees (0� < θ < 90�).",
-    options: ["45�", "30�", "60�", "90�"],
-    answer: "45�"
-  },
-  {
-    question: "Calculate the length of the vector 7i - 24j.",
-    options: ["25", "31", "24", "7"],
-    answer: "25"
-  },
-  {
-    question: "Expand (2x - 3)�.",
-    options: ["4x� - 12x + 9", "4x� + 12x + 9", "2x� - 3x + 9", "4x� - 9"],
-    answer: "4x� - 12x + 9"
-  },
-  {
-    question: "Differentiate y = sin x.",
-    options: ["cos x", "-cos x", "-sin x", "tan x"],
-    answer: "cos x"
-  },
-  {
-    question: "Integrate ∫cos x dx.",
-    options: ["sin x + C", "-sin x + C", "cos x + C", "-cos x + C"],
-    answer: "sin x + C"
-  },
-  {
-    question: "If f(x) = 2x + 1 and g(x) = x�, find (f ∘ g)(x).",
-    options: ["2x� + 1", "x� + 2x + 1", "2x + x�", "2x + 1"],
-    answer: "2x� + 1"
-  },
-  {
-    question: "Find the sum to n terms of the arithmetic series where first term a = 3 and common difference d = 5.",
-    options: ["n/2 (6 + 5(n-1))", "n/2 (3 + 5(n-1))", "n(3 + 5n)", "n(3 + 5)"],
-    answer: "n/2 (6 + 5(n-1))"
-  },
-  {
-    question: "If a matrix A = [[2, 3], [1, 4]], find A�.",
-    options: [
-      "[[7, 18], [6, 19]]",
-      "[[5, 7], [5, 7]]",
-      "[[4, 6], [2, 8]]",
-      "[[8, 15], [7, 16]]"
-    ],
-    answer: "[[7, 18], [6, 19]]"
-  },
-  {
-    question: "Solve the equation x� - 5x + 6 = 0.",
-    options: ["x = 2 or 3", "x = 1 or 6", "x = -2 or -3", "x = -1 or -6"],
-    answer: "x = 2 or 3"
-  },
-  {
-    question: "Find the next term in the geometric sequence 3, 6, 12, 24, ...",
-    options: ["48", "36", "30", "60"],
-    answer: "48"
-  },
-  {
-    question: "If log?? x = 2, find x in terms of a.",
-    options: ["a�", "2a", "a", "2"],
-    answer: "a�"
-  },
-  {
-    question: "What is the probability of drawing a red card from a standard deck of 52 cards?",
-    options: ["1/2", "1/4", "1/3", "1/13"],
-    answer: "1/2"
-  },
-  {
-    question: "Find the remainder when x� + 4x� - x + 7 is divided by x + 2.",
-    options: ["3", "5", "7", "9"],
-    answer: "3"
-  },
-  {
-    question: "Solve for x: log₂(x) + log₂(x - 3) = 3.",
-    options: ["4", "5", "6", "7"],
-    answer: "5"
-  },
-  {
-    question: "If vectors a = 4i - j and b = 2i + 3j, find a � b.",
-    options: ["5", "11", "1", "10"],
-    answer: "5"
-  },
-  {
-    question: "Find the minimum value of the quadratic function f(x) = 3x� - 12x + 7.",
-    options: ["-11", "-5", "7", "1"],
-    answer: "-11"
-  },
-  {
-    question: "If sin A = ?3/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "60�"
-  },
-  {
-    question: "Differentiate y = 7x� - 2x + 5.",
-    options: ["21x� - 2", "21x� - 2", "7x� - 2", "21x� + 2"],
-    answer: "21x� - 2"
-  },
-  {
-    question: "Integrate ∫(6x� - 4x + 1) dx.",
-    options: ["2x� - 2x� + x + C", "2x� - 4x + C", "6x� - 2x� + x + C", "2x� + 2x� + x + C"],
-    answer: "2x� - 2x� + x + C"
-  },
-  {
-    question: "Find the 8th term of the arithmetic sequence 5, 8, 11, 14, ...",
-    options: ["26", "29", "30", "31"],
-    answer: "26"
-  },
-  {
-    question: "What is the probability of getting at least one head in two tosses of a fair coin?",
-    options: ["3/4", "1/4", "1/2", "1"],
-    answer: "3/4"
-  },
-  {
-    question: "Find the sum of the first 15 terms of the arithmetic sequence 4, 7, 10, 13, ...",
-    options: ["345", "300", "325", "360"],
-    answer: "345"
-  },
-  {
-    question: "If cos 3θ = 1/2, find θ in degrees where 0� ≤ θ ≤ 90�.",
-    options: ["20�", "30�", "45�", "60�"],
-    answer: "20�"
-  },
-  {
-    question: "Find the equation of the line passing through (3, -1) with gradient -2.",
-    options: ["y = -2x + 5", "y = 2x - 7", "y = -2x - 5", "y = 2x + 1"],
-    answer: "y = -2x + 5"
-  },
-  {
-    question: "Calculate the determinant of the matrix [[1, 2], [3, 4]].",
-    options: ["-2", "10", "7", "5"],
-    answer: "-2"
-  },
-  {
-    question: "Find the expansion of (2 + x)�.",
-    options: ["8 + 12x + 6x� + x�", "8 + 6x + 3x� + x�", "2 + 3x + 3x� + x�", "8 + 9x + 3x� + x�"],
-    answer: "8 + 12x + 6x� + x�"
-  },
-  {
-    question: "If log?? 4 = 0.6021 and log?? 5 = 0.6990, find log?? 20.",
-    options: ["1.3011", "1.3010", "1.3012", "1.3009"],
-    answer: "1.3011"
-  },
-  {
-    question: "Solve the inequality |3x + 1| ?4.",
-    options: ["x ≤ -5/3 or x ?1", "-5/3 ≤ x ≤ 1", "x > -5/3 and x < 1", "x ≤ 5/3 or x ?-1"],
-    answer: "x ≤ -5/3 or x ?1"
-  },
-  {
-    question: "Find the coordinates of the midpoint of the line segment joining points A(-1,4) and B(7,-2).",
-    options: ["(3, 1)", "(4, 2)", "(2, 1)", "(3, -1)"],
-    answer: "(3, 1)"
-  },
-  {
-    question: "What is the scalar product of vectors 5i - 3j and 2i + j?",
-    options: ["7", "10", "4", "13"],
-    answer: "7"
-  },
-  {
-    question: "Find the sum of the infinite geometric series 8 + 4 + 2 + ...",
-    options: ["16", "14", "18", "20"],
-    answer: "16"
-  },
-  {
-    question: "If tan θ = ?3, find θ in degrees (0� < θ < 90�).",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "60�"
-  },
-  {
-    question: "Calculate the length of the vector 9i - 12j.",
-    options: ["15", "21", "12", "9"],
-    answer: "15"
-  },
-  {
-    question: "Expand (x - 4)�.",
-    options: ["x� - 8x + 16", "x� + 8x + 16", "x� - 4x + 16", "x� - 16"],
-    answer: "x� - 8x + 16"
-  },
-  {
-    question: "Differentiate y = cos x.",
-    options: ["-sin x", "cos x", "-cos x", "sin x"],
-    answer: "-sin x"
-  },
-  {
-    question: "Integrate ∫sec� x dx.",
-    options: ["tan x + C", "-tan x + C", "sec x + C", "-sec x + C"],
-    answer: "tan x + C"
-  },
-  {
-    question: "If f(x) = 3x - 2 and g(x) = x� + 1, find (g ∘ f)(x).",
-    options: ["(3x - 2)� + 1", "3x� - 2x + 1", "3x� - 2 + 1", "3x - 2 + 1"],
-    answer: "(3x - 2)� + 1"
-  },
-  {
-    question: "Find the sum to n terms of the geometric series with first term 5 and common ratio 2.",
-    options: ["5(2?� - 1)", "5(2?� + 1)", "5(2?� - 2)", "5(2?�)"],
-    answer: "5(2?� - 1)"
-  },
-  {
-    question: "If A = [[1, 2], [3, 4]], find the inverse of A.",
-    options: [
-      "[[-2, 1], [1.5, -0.5]]",
-      "[[4, -2], [-3, 1]]",
-      "[[2, -1], [-1.5, 0.5]]",
-      "[[-1, 2], [3, -4]]"
-    ],
-    answer: "[[-2, 1], [1.5, -0.5]]"
-  },
-  {
-    question: "Solve the quadratic equation x� - 4x - 5 = 0.",
-    options: ["x = 5 or -1", "x = -5 or 1", "x = 4 or -5", "x = -4 or 5"],
-    answer: "x = 5 or -1"
-  },
-  {
-    question: "Find the next term in the geometric sequence 5, 10, 20, 40, ...",
-    options: ["80", "100", "90", "70"],
-    answer: "80"
-  },
-  {
-    question: "If log?? x = 3, find x in terms of a.",
-    options: ["a�", "3a", "a", "3"],
-    answer: "a�"
-  },
-  {
-    question: "What is the probability of drawing an ace from a standard deck of 52 cards?",
-    options: ["1/13", "1/52", "1/4", "1/26"],
-    answer: "1/13"
-  },
-  {
-    question: "Find the remainder when x� + 4x� - x + 7 is divided by x + 2.",
-    options: ["3", "5", "7", "9"],
-    answer: "3"
-  },
-  {
-    question: "Solve for x: log₂(x) + log₂(x - 3) = 3.",
-    options: ["4", "5", "6", "7"],
-    answer: "5"
-  },
-  {
-    question: "If vectors a = 4i - j and b = 2i + 3j, find a � b.",
-    options: ["5", "11", "1", "10"],
-    answer: "5"
-  },
-  {
-    question: "Find the minimum value of the quadratic function f(x) = 3x� - 12x + 7.",
-    options: ["-11", "-5", "7", "1"],
-    answer: "-11"
-  },
-  {
-    question: "If sin A = ?3/2 and A is in the first quadrant, find A in degrees.",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "60�"
-  },
-  {
-    question: "Differentiate y = 7x� - 2x + 5.",
-    options: ["21x� - 2", "21x� - 2", "7x� - 2", "21x� + 2"],
-    answer: "21x� - 2"
-  },
-  {
-    question: "Integrate ∫(6x� - 4x + 1) dx.",
-    options: ["2x� - 2x� + x + C", "2x� - 4x + C", "6x� - 2x� + x + C", "2x� + 2x� + x + C"],
-    answer: "2x� - 2x� + x + C"
-  },
-  {
-    question: "Find the 8th term of the arithmetic sequence 5, 8, 11, 14, ...",
-    options: ["26", "29", "30", "31"],
-    answer: "26"
-  },
-  {
-    question: "What is the probability of getting at least one head in two tosses of a fair coin?",
-    options: ["3/4", "1/4", "1/2", "1"],
-    answer: "3/4"
-  },
-  {
-    question: "Find the sum of the first 15 terms of the arithmetic sequence 4, 7, 10, 13, ...",
-    options: ["345", "300", "325", "360"],
-    answer: "345"
-  },
-  {
-    question: "If cos 3θ = 1/2, find θ in degrees where 0� ≤ θ ≤ 90�.",
-    options: ["20�", "30�", "45�", "60�"],
-    answer: "20�"
-  },
-  {
-    question: "Find the equation of the line passing through (3, -1) with gradient -2.",
-    options: ["y = -2x + 5", "y = 2x - 7", "y = -2x - 5", "y = 2x + 1"],
-    answer: "y = -2x + 5"
-  },
-  {
-    question: "Calculate the determinant of the matrix [[1, 2], [3, 4]].",
-    options: ["-2", "10", "7", "5"],
-    answer: "-2"
-  },
-  {
-    question: "Find the expansion of (2 + x)�.",
-    options: ["8 + 12x + 6x� + x�", "8 + 6x + 3x� + x�", "2 + 3x + 3x� + x�", "8 + 9x + 3x� + x�"],
-    answer: "8 + 12x + 6x� + x�"
-  },
-  {
-    question: "If log?? 4 = 0.6021 and log?? 5 = 0.6990, find log?? 20.",
-    options: ["1.3011", "1.3010", "1.3012", "1.3009"],
-    answer: "1.3011"
-  },
-  {
-    question: "Solve the inequality |3x + 1| ?4.",
-    options: ["x ? -5/3 or x ?1", "-5/3 ? x ? 1", "x > -5/3 and x < 1", "x ? 5/3 or x ?-1"],
-    answer: "x ? -5/3 or x ?1"
-  },
-  {
-    question: "Find the coordinates of the midpoint of the line segment joining points A(-1,4) and B(7,-2).",
-    options: ["(3, 1)", "(4, 2)", "(2, 1)", "(3, -1)"],
-    answer: "(3, 1)"
-  },
-  {
-    question: "What is the scalar product of vectors 5i - 3j and 2i + j?",
-    options: ["7", "10", "4", "13"],
-    answer: "7"
-  },
-  {
-    question: "Find the sum of the infinite geometric series 8 + 4 + 2 + ...",
-    options: ["16", "14", "18", "20"],
-    answer: "16"
-  },
-  {
-    question: "If tan θ = ?3, find θ in degrees (0� < θ < 90�).",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "60�"
-  },
-  {
-    question: "Calculate the length of the vector 9i - 12j.",
-    options: ["15", "21", "12", "9"],
-    answer: "15"
-  },
-  {
-    question: "Expand (x - 4)�.",
-    options: ["x� - 8x + 16", "x� + 8x + 16", "x� - 4x + 16", "x� - 16"],
-    answer: "x� - 8x + 16"
-  },
-  {
-    question: "Differentiate y = cos x.",
-    options: ["-sin x", "cos x", "-cos x", "sin x"],
-    answer: "-sin x"
-  },
-  {
-    question: "Integrate ∫sec� x dx.",
-    options: ["tan x + C", "-tan x + C", "sec x + C", "-sec x + C"],
-    answer: "tan x + C"
-  },
-  {
-    question: "If f(x) = 3x - 2 and g(x) = x� + 1, find (g ∘ f)(x).",
-    options: ["(3x - 2)� + 1", "3x� - 2x + 1", "3x� - 2 + 1", "3x - 2 + 1"],
-    answer: "(3x - 2)� + 1"
-  },
-  {
-    question: "Find the sum to n terms of the geometric series with first term 5 and common ratio 2.",
-    options: ["5(2?� - 1)", "5(2?� + 1)", "5(2?� - 2)", "5(2?�)"],
-    answer: "5(2?� - 1)"
-  },
-  {
-    question: "If A = [[1, 2], [3, 4]], find the inverse of A.",
-    options: [
-      "[[-2, 1], [1.5, -0.5]]",
-      "[[4, -2], [-3, 1]]",
-      "[[2, -1], [-1.5, 0.5]]",
-      "[[-1, 2], [3, -4]]"
-    ],
-    answer: "[[-2, 1], [1.5, -0.5]]"
-  },
-  {
-    question: "Solve the quadratic equation x� - 4x - 5 = 0.",
-    options: ["x = 5 or -1", "x = -5 or 1", "x = 4 or -5", "x = -4 or 5"],
-    answer: "x = 5 or -1"
-  },
-  {
-    question: "Find the next term in the geometric sequence 5, 10, 20, 40, ...",
-    options: ["80", "100", "90", "70"],
-    answer: "80"
-  },
-  {
-    question: "If log?? x = 3, find x in terms of a.",
-    options: ["a�", "3a", "a", "3"],
-    answer: "a�"
-  },
-  {
-    question: "What is the probability of drawing an ace from a standard deck of 52 cards?",
-    options: ["1/13", "1/52", "1/4", "1/26"],
-    answer: "1/13"
-  },
-  {
-    question: "Find the angle between the vectors 2i + 5j and 3i - j.",
-    options: ["60�", "45�", "90�", "30�"],
-    answer: "60�"
-  },
-  {
-    question: "Find the coordinates of the focus of the parabola y� = 8x.",
-    options: ["(2, 0)", "(4, 0)", "(0, 2)", "(0, 4)"],
-    answer: "(2, 0)"
-  },
-  {
-    question: "Solve the system of equations: 2x + 3y = 7 and 4x - y = 5.",
-    options: [
-      "x = 2, y = 1",
-      "x = 1, y = 2",
-      "x = 3, y = -1",
-      "x = 0, y = 7"
-    ],
-    answer: "x = 2, y = 1"
-  },
-  {
-    question: "Express sin 2?� in terms of sin ?� and cos ?�.",
-    options: [
-      "2 sin ?� cos ?�",
-      "sin� ?� - cos� ?�",
-      "2 cos� ?� - 1",
-      "1 - 2 sin� ?�"
-    ],
-    answer: "2 sin ?� cos ?�"
-  },
-  {
-    question: "Find the inverse of the function f(x) = (2x - 3)/5.",
-    options: [
-      "f?�(x) = (5x + 3)/2",
-      "f?�(x) = (2x + 3)/5",
-      "f?�(x) = (5x - 3)/2",
-      "f?�(x) = (3x + 2)/5"
-    ],
-    answer: "f?�(x) = (5x + 3)/2"
-  },
-  {
-    question: "Differentiate y = ln(x� + 1).",
-    options: [
-      "2x / (x� + 1)",
-      "1 / (x� + 1)",
-      "2 / (x + 1)",
-      "x / (x� + 1)"
-    ],
-    answer: "2x / (x� + 1)"
-  },
-  {
-    question: "Find the limit: limₓ→2 (x� - 4)/(x - 2).",
-    options: ["4", "2", "0", "Undefined"],
-    answer: "4"
-  },
-  {
-    question: "Find the next term in the sequence defined by aₙ = 3n + 2.",
-    options: ["20", "21", "22", "23"],
-    answer: "20"
-  },
-  {
-    question: "Calculate the angle between two vectors a = 3i + 4j and b = 4i + 3j.",
-    options: ["30�", "45�", "60�", "90�"],
-    answer: "30�"
-  },
-  {
-    question: "If cos A = 3/5 and A is in the first quadrant, find sin A.",
-    options: ["4/5", "3/5", "5/3", "1/5"],
-    answer: "4/5"
-  },
-  {
-    question: "Find the area of a triangle with vertices at (0,0), (4,0) and (4,3).",
-    options: ["6", "12", "7", "5"],
-    answer: "6"
-  },
-  {
-    question: "Find the derivative of y = e^(3x).",
-    options: ["3e^(3x)", "e^(3x)", "3xe^(3x)", "e^(x)"],
-    answer: "3e^(3x)"
-  },
-  {
-    question: "Evaluate ∫₀� (3x�) dx.",
-    options: ["1", "3", "0", "1/3"],
-    answer: "1"
-  },
-  {
-    question: "Find the sum of the first 10 terms of the geometric series 2, 6, 18, ...",
-    options: ["59,048", "59,047", "59,049", "59,050"],
-    answer: "59,048"
-  },
-  {
-    question: "Solve for x: 2^x = 16.",
-    options: ["4", "2", "8", "16"],
-    answer: "4"
-  },
-  {
-    question: "Find the determinant of the matrix [[3, 2], [1, 4]].",
-    options: ["10", "14", "6", "12"],
-    answer: "10"
-  },
-  {
-    question: "Find the projection of vector a = 3i + 4j onto vector b = i.",
-    options: ["3", "4", "5", "1"],
-    answer: "3"
-  },
-  {
-    question: "If the sum to infinity of a geometric series is 12 and the first term is 8, find the common ratio.",
-    options: ["2/3", "3/2", "1/3", "1/2"],
-    answer: "1/3"
-  },
-  {
-    question: "Find the general solution of sin x = 1/2.",
-    options: [
-      "x = 30� + 360�n or 150� + 360�n",
-      "x = 45� + 360�n or 135� + 360�n",
-      "x = 60� + 360�n or 120� + 360�n",
-      "x = 0� + 360�n or 180� + 360�n"
-    ],
-    answer: "x = 30� + 360�n or 150� + 360�n"
-  },
-  {
-    question: "Find the inverse matrix of [[2, 0], [0, 3]].",
-    options: [
-      "[[1/2, 0], [0, 1/3]]",
-      "[[2, 0], [0, 3]]",
-      "[[0, 2], [3, 0]]",
-      "[[3, 0], [0, 2]]"
-    ],
-    answer: "[[1/2, 0], [0, 1/3]]"
-  },
-  {
-    question: "If log?? 9 = 2, find a.",
-    options: ["3", "9", "81", "2"],
-    answer: "3"
-  },
-  {
-    question: "Find the solution set for the inequality 3x - 7 < 2.",
-    options: [
-      "x < 3",
-      "x > 3",
-      "x < 5",
-      "x > 5"
-    ],
-    answer: "x < 3"
-  },
-  {
-    question: "Find the angle between the line y = 3x + 2 and the x-axis.",
-    options: ["71.57�", "45�", "30�", "60�"],
-    answer: "71.57�"
-  },
-  {
-    question: "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 2]], find AB.",
-    options: [
-      "[[4, 4], [10, 8]]",
-      "[[3, 4], [5, 8]]",
-      "[[2, 4], [3, 6]]",
-      "[[1, 2], [3, 4]]"
-    ],
-    answer: "[[4, 4], [10, 8]]"
-  },
-  {
-    question: "Find the sum of the arithmetic series 5 + 8 + 11 + ... + 32.",
-    options: ["165", "175", "180", "185"],
-    answer: "165"
-  },
-  {
-    question: "Solve the inequality |2x - 3| < 7.",
-    options: [
-      "-2 < x < 5",
-      "x < -2 or x > 5",
-      "x > -2 and x < 5",
-      "x < 2 or x > 3"
-    ],
-    answer: "-2 < x < 5"
-  },
-  {
-    question: "If f(x) = 2x� - 3x + 1, find f'(x).",
-    options: ["4x - 3", "2x - 3", "2x� - 3", "4x + 3"],
-    answer: "4x - 3"
-  },
-  {
-    question: "Evaluate ∫ (2x + 1) dx.",
-    options: ["x� + x + C", "x� + C", "2x� + x + C", "x + C"],
-    answer: "x� + x + C"
-  },
-  {
-    question: "Find the coefficient of x� in the expansion of (2x - 3)?�.",
-    options: ["-432", "432", "-108", "108"],
-    answer: "-432"
-  },
-  {
-    question: "Calculate the distance between points A(3, 4) and B(7, 1).",
-    options: ["5", "6", "7", "8"],
-    answer: "5"
-  },
-  {
-    question: "If the vectors a = i + 2j and b = 3i - j, find a � b.",
-    options: ["1", "3", "1", "5"],
-    answer: "1"
-  },
-  {
-    question: "Find the general solution of cos x = 1/2.",
-    options: [
-      "x = 60� + 360�n or 300� + 360�n",
-      "x = 45� + 360�n or 315� + 360�n",
-      "x = 30� + 360�n or 150� + 360�n",
-      "x = 0� + 360�n or 180� + 360�n"
-    ],
-    answer: "x = 60� + 360�n or 300� + 360�n"
-  },
-  {
-    question: "Find the determinant of the matrix [[4, 5], [2, 3]].",
-    options: ["2", "7", "2", "17"],
-    answer: "2"
-  },
-  {
-    question: "Simplify: log?? (x�) + log?? (x�).",
-    options: [
-      "5 log?? x",
-      "6 log?? x",
-      "2 log?? x + 3 log?? x",
-      "log?? (x?�)"
-    ],
-    answer: "5 log?? x"
-  },
-  {
-    question: "If the sum to infinity of a geometric series is 20 and the first term is 16, find the common ratio.",
-    options: ["1/4", "4/5", "1/5", "3/4"],
-    answer: "1/5"
-  },
-  {
-    question: "Find the projection of vector a = 4i + 3j onto vector b = i + j.",
-    options: ["3.5", "3", "4", "2.5"],
-    answer: "3.5"
-  },
-  {
-    question: "Find the inverse of the function f(x) = (3x + 2)/5.",
-    options: [
-      "f?�(x) = (5x - 2)/3",
-      "f?�(x) = (5x + 2)/3",
-      "f?�(x) = (3x - 2)/5",
-      "f?�(x) = (2x + 3)/5"
-    ],
-    answer: "f?�(x) = (5x - 2)/3"
-  },
-  {
-    question: "Solve for x: logₓ 16 = 2.",
-    options: ["4", "2", "16", "8"],
-    answer: "4"
-  },
-  {
-    question: "Find the solution set for 2x� - 5x + 3 = 0.",
-    options: [
-      "x = 1 or x = 1.5",
-      "x = -1 or x = 1.5",
-      "x = 3 or x = 2",
-      "x = -3 or x = 2"
-    ],
-    answer: "x = 1 or x = 1.5"
-  },
-  {
-    question: "Calculate the angle between the vectors a = 2i + 3j and b = i + j.",
-    options: ["16.26�", "30�", "45�", "60�"],
-    answer: "16.26�"
-  },
-  {
-    question: "Differentiate y = sin(3x).",
-    options: ["3 cos(3x)", "cos(3x)", "3 sin(3x)", "-3 cos(3x)"],
-    answer: "3 cos(3x)"
-  },
-  {
-    question: "Evaluate ??� (x�) dx.",
-    options: ["15/4", "7.5", "5", "16"],
-    answer: "15/4"
-  },
-  {
-    question: "Find the sum of the first 8 terms of the series 1, 3, 5, 7, ...",
-    options: ["64", "36", "48", "40"],
-    answer: "64"
-  },
-  {
-    question: "Solve the system: x + y = 4, 2x - y = 1.",
-    options: [
-      "x = 1, y = 3",
-      "x = 3, y = 1",
-      "x = 2, y = 2",
-      "x = 4, y = 0"
-    ],
-    answer: "x = 1, y = 3"
-  },
-  {
-    question: "Find the vertex of the parabola y = x� - 4x + 3.",
-    options: [
-      "(2, -1)",
-      "(1, 0)",
-      "(3, 0)",
-      "(2, 1)"
-    ],
-    answer: "(2, -1)"
-  },
-  {
-    question: "If A = [[2, 3], [1, 4]] and B = [[1, 0], [0, 1]], find A + B.",
-    options: [
-      "[[3, 3], [1, 5]]",
-      "[[2, 3], [1, 4]]",
-      "[[1, 3], [1, 5]]",
-      "[[3, 0], [1, 5]]"
-    ],
-    answer: "[[3, 3], [1, 5]]"
-  },
-  {
-    question: "Find the binomial expansion of (1 + 2x)�.",
-    options: [
-      "1 + 6x + 12x� + 8x�",
-      "1 + 3x + 6x� + 8x�",
-      "1 + 6x + 8x� + 12x�",
-      "1 + 3x + 12x� + 8x�"
-    ],
-    answer: "1 + 6x + 12x� + 8x�"
-  },
-  {
-    question: "Find the domain of the function f(x) = 1/(x - 2).",
-    options: [
-      "x ? 2",
-      "x ? -2",
-      "x > 2",
-      "x < 2"
-    ],
-    answer: "x ? 2"
-  },
-  {
-    question: "Calculate the gradient of the line passing through points (1, 2) and (3, 8).",
-    options: ["3", "2", "4", "6"],
-    answer: "3"
-  },
-  {
-    question: "If log₃ x = 4, find x.",
-    options: ["81", "64", "27", "12"],
-    answer: "81"
-  },
-  {
-    question: "Find the sum of the geometric series: 2 + 6 + 18 + ... + 486.",
-    options: ["728", "728", "1458", "1094"],
-    answer: "728"
-  },
-  {
-    question: "Solve for x: 3^x = 81.",
-    options: ["4", "3", "5", "2"],
-    answer: "4"
-  },
-  {
-    question: "Evaluate the limit: lim (x → 2) (x� - 4)/(x - 2).",
-    options: ["4", "2", "0", "Undefined"],
-    answer: "4"
-  },
-  {
-    question: "Find the area of a triangle with vertices at (0,0), (4,0), and (4,3).",
-    options: ["6", "12", "7", "8"],
-    answer: "6"
-  },
-  {
-    question: "Calculate the determinant of matrix [[1, 2], [3, 4]].",
-    options: ["-2", "2", "10", "-10"],
-    answer: "-2"
-  },
-  {
-    question: "Simplify: sin�?� + cos�?�.",
-    options: ["1", "0", "sin ?�", "cos ?�"],
-    answer: "1"
-  },
-  {
-    question: "Find the derivative of y = e^(3x).",
-    options: ["3e^(3x)", "e^(3x)", "3xe^(3x)", "e^(x)"],
-    answer: "3e^(3x)"
-  },
-  {
-    question: "If A = 5 and B = 12, find the length of the hypotenuse in a right triangle.",
-    options: ["13", "14", "17", "12"],
-    answer: "13"
-  },
-  {
-    question: "Evaluate the integral ∫ 3x� dx.",
-    options: ["x� + C", "x�", "3x� + C", "x� + C"],
-    answer: "x� + C"
-  },
-  {
-    question: "Find the sum of the infinite geometric series 8 + 4 + 2 + ...",
-    options: ["16", "14", "12", "18"],
-    answer: "16"
-  },
-  {
-    question: "If vectors a = 3i + 4j and b = 6i + 8j, find the scalar multiple k such that b = ka.",
-    options: ["2", "3", "4", "5"],
-    answer: "2"
-  },
-  {
-    question: "Calculate the cosine of the angle between vectors a = i + 2j and b = 3i + 6j.",
-    options: ["1", "0.5", "0.67", "0.33"],
-    answer: "1"
-  },
-  {
-    question: "Solve for x: 2 sin x = 1 for 0� ? x ? 360�.",
-    options: ["30�, 150�", "45�, 135�", "60�, 120�", "90�, 180�"],
-    answer: "30�, 150�"
-  },
-  {
-    question: "Find the inverse of the function f(x) = (x - 3)/2.",
-    options: [
-      "f?�(x) = 2x + 3",
-      "f?�(x) = (x + 3)/2",
-      "f?�(x) = (2x - 3)",
-      "f?�(x) = (x - 3)/2"
-    ],
-    answer: "f?�(x) = 2x + 3"
-  },
-  {
-    question: "Determine the middle term in the expansion of (2x + 3)^6.",
-    options: [
-      "540x�",
-      "720x�",
-      "360x�",
-      "480x�"
-    ],
-    answer: "540x�"
-  },
-  {
-    question: "Find the inverse of matrix [[2, 3], [1, 4]].",
-    options: [
-      "[[4/5, -3/5], [-1/5, 2/5]]",
-      "[[2, 3], [1, 4]]",
-      "[[3/5, 4/5], [1/5, 2/5]]",
-      "[[-4/5, 3/5], [1/5, -2/5]]"
-    ],
-    answer: "[[4/5, -3/5], [-1/5, 2/5]]"
-  },
-  {
-    question: "Solve the inequality: 3x - 5 > 7.",
-    options: [
-      "x > 4",
-      "x < 4",
-      "x > -4",
-      "x < -4"
-    ],
-    answer: "x > 4"
-  },
-  {
-    question: "Find the sum of the first 10 terms of the arithmetic progression: 2, 5, 8, ...",
-    options: ["140", "130", "115", "110"],
-    answer: "140"
-  },
-  {
-    question: "Find the value of k for which the system of equations has infinitely many solutions: 2x + ky = 4 and 4x + 6y = 8.",
-    options: ["3", "2", "1", "4"],
-    answer: "3"
-  },
-  {
-    question: "Evaluate the determinant of matrix [[1, 2, 3], [0, 4, 5], [1, 0, 6]].",
-    options: ["22", "24", "18", "20"],
-    answer: "22"
-  },
-  {
-    question: "Find the derivative of y = ln(3x + 1).",
-    options: [
-      "3/(3x + 1)",
-      "1/(3x + 1)",
-      "ln(3)",
-      "3x + 1"
-    ],
-    answer: "3/(3x + 1)"
-  },
-  {
-    question: "Find the next term in the sequence: 2, 6, 12, 20, ...",
-    options: ["30", "28", "26", "32"],
-    answer: "30"
-  },
-  {
-    question: "Simplify: (sin ?�)/(1 - cos ?�) + (sin ?�)/(1 + cos ?�).",
-    options: [
-      "2 csc ?�",
-      "2 sec ?�",
-      "tan ?�",
-      "cot ?�"
-    ],
-    answer: "2 csc ?�"
-  },
-  {
-    question: "Find the solution set of the equation: |x - 3| < 5.",
-    options: [
-      "-2 < x < 8",
-      "x > 8",
-      "x < -2",
-      "x > 3"
-    ],
-    answer: "-2 < x < 8"
-  },
-  {
-    question: "Evaluate the integral ∫ (2x + 3) dx.",
-    options: [
-      "x� + 3x + C",
-      "x� + 6x + C",
-      "x� + 3x + C",
-      "2x + 3 + C"
-    ],
-    answer: "x� + 3x + C"
-  },
-  {
-    question: "Find the equation of the line perpendicular to y = 2x + 3 and passing through (1, 4).",
-    options: [
-      "y = -1/2 x + 9/2",
-      "y = 1/2 x + 9/2",
-      "y = -2x + 6",
-      "y = 2x + 1"
-    ],
-    answer: "y = -1/2 x + 9/2"
-  },
-  {
-    question: "Find the probability of getting exactly 3 heads in 5 tosses of a fair coin.",
-    options: [
-      "10/32",
-      "5/32",
-      "15/32",
-      "20/32"
-    ],
-    answer: "10/32"
-  },
-  {
-    question: "Calculate the angle between two vectors a = 3i - 2j and b = i + 4j.",
-    options: [
-      "45�",
-      "60�",
-      "90�",
-      "30�"
-    ],
-    answer: "60�"
-  },
-  {
-    question: "Determine the rank of the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]].",
-    options: [
-      "2",
-      "3",
-      "1",
-      "0"
-    ],
-    answer: "2"
-  },
-  {
-    question: "If the correlation coefficient between variables X and Y is 0.8, interpret the relationship.",
-    options: [
-      "Strong positive correlation",
-      "Weak positive correlation",
-      "Strong negative correlation",
-      "No correlation"
-    ],
-    answer: "Strong positive correlation"
-  },
-  {
-    question: "Find the log base 2 of 32.",
-    options: ["5", "4", "6", "7"],
-    answer: "5"
-  },
-  {
-    question: "Find the equation of the circle with center (3, -4) and radius 5.",
-    options: [
-      "(x - 3)� + (y + 4)� = 25",
-      "(x + 3)� + (y - 4)� = 25",
-      "(x - 3)� + (y - 4)� = 25",
-      "(x + 3)� + (y + 4)� = 25"
-    ],
-    answer: "(x - 3)� + (y + 4)� = 25"
-  },
-  {
-    question: "Calculate the work done when a force of 10N moves an object 5m in the direction of the force.",
-    options: [
-      "50 J",
-      "15 J",
-      "5 J",
-      "10 J"
-    ],
-    answer: "50 J"
-  },
-  {
-    question: "Find the sum of the series: 1 + 3 + 5 + ... + 19.",
-    options: [
-      "100",
-      "90",
-      "95",
-      "105"
-    ],
-    answer: "100"
-  },
 {
-    question: "10. Find the value of x: 3x + 2 = 17",
-    options: ["5", "6", "7", "8"],
-    answer: "5"
-  }
-  // Add more questions here
+  question: "Simplify: √18",
+  options: ["3√2", "9√2", "6√3", "2√9"],
+  answer: "3√2"
+},
+{
+  question: "Simplify: √50",
+  options: ["5√2", "10√5", "25√2", "2√25"],
+  answer: "5√2"
+},
+{
+  question: "Simplify: (√3)(√12)",
+  options: ["6", "12", "3", "√36"],
+  answer: "6"
+},
+{
+  question: "Simplify: √8 + √18",
+  options: ["5√2", "6√2", "4√2", "3√2"],
+  answer: "5√2"
+},
+{
+  question: "Rationalize: 1/√5",
+  options: ["√5/5", "1/5", "√5", "5"],
+  answer: "√5/5"
+},
+{
+  question: "Rationalize: 3/√7",
+  options: ["3√7/7", "√7/3", "3/7", "7√3"],
+  answer: "3√7/7"
+},
+{
+  question: "Simplify: (2 + √3)(2 − √3)",
+  options: ["1", "4 − 3", "7", "5"],
+  answer: "1"
+},
+{
+  question: "Simplify: √20 − √5",
+  options: ["√5", "2√5", "3√5", "4√5"],
+  answer: "√5"
+},
+{
+  question: "Simplify: (√2 + √3)^2",
+  options: ["5 + 2√6", "5 + √6", "2 + 3√6", "5"],
+  answer: "5 + 2√6"
+},
+{
+  question: "Simplify: (√5 − √2)^2",
+  options: ["7 − 2√10", "3", "5 − 2√2", "7"],
+  answer: "7 − 2√10"
+},
+{
+  question: "Simplify: √45 ÷ √5",
+  options: ["3", "9", "√9", "5"],
+  answer: "3"
+},
+{
+  question: "Simplify: √75 ÷ √3",
+  options: ["5", "25", "√25", "15"],
+  answer: "5"
+},
+{
+  question: "Simplify: (√6)(√10)",
+  options: ["√60", "2√15", "√16", "6√10"],
+  answer: "2√15"
+},
+{
+  question: "Rationalize: 1/(√3 + √2)",
+  options: ["√3 − √2", "1/(√3 − √2)", "√3 + √2", "2"],
+  answer: "√3 − √2"
+},
+{
+  question: "Simplify: (√7 + √5)(√7 − √5)",
+  options: ["2", "49 − 25", "24", "12"],
+  answer: "24"
+},
+{
+  question: "Simplify: √12 + √27",
+  options: ["5√3", "6√3", "4√3", "3√3"],
+  answer: "5√3"
+},
+{
+  question: "Simplify: √32",
+  options: ["4√2", "8√2", "16√2", "2√8"],
+  answer: "4√2"
+},
+{
+  question: "Simplify: √48",
+  options: ["4√3", "8√3", "2√12", "6√3"],
+  answer: "4√3"
+},
+{
+  question: "Simplify: (√2 + 1)(√2 − 1)",
+  options: ["1", "2", "3", "0"],
+  answer: "1"
+},
+{
+  question: "Simplify: (3 + √2)(3 − √2)",
+  options: ["7", "9 − 2", "11", "5"],
+  answer: "7"
+},
+{
+  question: "Simplify: √98",
+  options: ["7√2", "14√2", "49√2", "2√49"],
+  answer: "7√2"
+},
+{
+  question: "Simplify: √72",
+  options: ["6√2", "12√2", "36√2", "4√18"],
+  answer: "6√2"
+},
+{
+  question: "Simplify: √27 + √12",
+  options: ["5√3", "6√3", "4√3", "7√3"],
+  answer: "5√3"
+},
+{
+  question: "Simplify: √125",
+  options: ["5√5", "25√5", "10√5", "√25"],
+  answer: "5√5"
+},
+{
+  question: "Simplify: √(49/9)",
+  options: ["7/3", "49/3", "7/9", "3/7"],
+  answer: "7/3"
+},
+{
+  question: "Simplify: √(16/25)",
+  options: ["4/5", "16/5", "2/5", "5/4"],
+  answer: "4/5"
+},
+{
+  question: "Simplify: (√3)^2 + (√4)^2",
+  options: ["7", "5", "3", "6"],
+  answer: "7"
+},
+{
+  question: "Simplify: √81 − √16",
+  options: ["5", "9", "65", "7"],
+  answer: "5"
+},
+{
+  question: "Simplify: (√9 + √4)^2",
+  options: ["49", "25", "13", "36"],
+  answer: "49"
+},
+{
+  question: "Simplify: (√16 − √9)^2",
+  options: ["1", "7", "25", "49"],
+  answer: "1"
+},
+
+{
+  question: "If n(A)=20, n(B)=15, n(A∩B)=5, find n(A∪B)",
+  options: ["30", "25", "35", "40"],
+  answer: "30"
+},
+{
+  question: "If n(U)=50, n(A)=20, n(B)=25, n(A∩B)=10, find n(A'∩B')",
+  options: ["15", "10", "5", "20"],
+  answer: "15"
+},
+{
+  question: "If n(A∪B)=40, n(A)=25, n(B)=20, find n(A∩B)",
+  options: ["5", "10", "15", "20"],
+  answer: "5"
+},
+{
+  question: "If n(A)=30, n(B)=20, n(C)=15, n(A∩B)=10, n(B∩C)=5, n(A∩C)=6, n(A∩B∩C)=3, find n(A∪B∪C)",
+  options: ["47", "48", "49", "50"],
+  answer: "47"
+},
+{
+  question: "If A={1,2,3}, B={2,3,4}, find A∩B",
+  options: ["{2,3}", "{1,2}", "{3,4}", "{1,4}"],
+  answer: "{2,3}"
+},
+{
+  question: "If A={1,2,3}, B={2,3,4}, find A∪B",
+  options: ["{1,2,3,4}", "{2,3}", "{1,4}", "{1,2,3}"],
+  answer: "{1,2,3,4}"
+},
+{
+  question: "If U={1,2,3,4,5}, A={2,3}, find A'",
+  options: ["{1,4,5}", "{2,3}", "{1,2}", "{4,5}"],
+  answer: "{1,4,5}"
+},
+{
+  question: "If A={1,2,3,4}, B={3,4,5,6}, find A−B",
+  options: ["{1,2}", "{3,4}", "{5,6}", "{1,6}"],
+  answer: "{1,2}"
+},
+{
+  question: "If A={1,2,3,4}, B={3,4,5,6}, find B−A",
+  options: ["{5,6}", "{1,2}", "{3,4}", "{6}"],
+  answer: "{5,6}"
+},
+{
+  question: "If n(U)=60, n(A)=25, find n(A')",
+  options: ["35", "25", "60", "30"],
+  answer: "35"
+},
+{
+  question: "If f(x)=2x+3, find f(5)",
+  options: ["13", "10", "7", "8"],
+  answer: "13"
+},
+{
+  question: "If f(x)=x²−1, find f(3)",
+  options: ["8", "9", "10", "7"],
+  answer: "8"
+},
+{
+  question: "If g(x)=3x−2, find g(4)",
+  options: ["10", "12", "14", "8"],
+  answer: "10"
+},
+{
+  question: "If f(x)=2x+1, g(x)=x², find (f∘g)(2)",
+  options: ["9", "5", "8", "6"],
+  answer: "9"
+},
+{
+  question: "If f(x)=x+2, g(x)=2x, find (g∘f)(3)",
+  options: ["10", "8", "12", "6"],
+  answer: "10"
+},
+{
+  question: "If f(x)=x², find f⁻¹(x)",
+  options: ["√x", "x²", "1/x", "x"],
+  answer: "√x"
+},
+{
+  question: "If f(x)=3x, find f⁻¹(x)",
+  options: ["x/3", "3x", "1/x", "x²"],
+  answer: "x/3"
+},
+{
+  question: "If f(x)=2x+5, find f⁻¹(x)",
+  options: ["(x−5)/2", "(x+5)/2", "2x−5", "x/2"],
+  answer: "(x−5)/2"
+},
+{
+  question: "Find domain of f(x)=1/(x−2)",
+  options: ["x≠2", "x=2", "all x", "x>2"],
+  answer: "x≠2"
+},
+{
+  question: "Find domain of f(x)=√(x−3)",
+  options: ["x≥3", "x>3", "x≤3", "all x"],
+  answer: "x≥3"
+},
+{
+  question: "Find range of f(x)=x²",
+  options: ["y≥0", "all y", "y≤0", "y>0"],
+  answer: "y≥0"
+},
+{
+  question: "If f(x)=x+1, find f(2)+f(3)",
+  options: ["7", "6", "5", "8"],
+  answer: "7"
+},
+{
+  question: "If f(x)=x², find f(2)+f(3)",
+  options: ["13", "10", "9", "8"],
+  answer: "13"
+},
+{
+  question: "If f(x)=x−1, g(x)=x+2, find f(g(3))",
+  options: ["4", "5", "6", "3"],
+  answer: "4"
+},
+{
+  question: "If f(x)=2x, g(x)=x+1, find g(f(2))",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "If f(x)=x²+1, find f(−2)",
+  options: ["5", "3", "4", "6"],
+  answer: "5"
+},
+{
+  question: "If f(x)=x³, find f(−2)",
+  options: ["−8", "8", "4", "−4"],
+  answer: "−8"
+},
+{
+  question: "If f(x)=2x−3, find x when f(x)=5",
+  options: ["4", "3", "2", "1"],
+  answer: "4"
+},
+{
+  question: "If f(x)=x², find x when f(x)=16",
+  options: ["±4", "4", "−4", "±8"],
+  answer: "±4"
+},
+{
+  question: "If f(x)=3x+2, find x when f(x)=11",
+  options: ["3", "2", "4", "5"],
+  answer: "3"
+},
+
+{
+  question: "Solve: x² − 5x + 6 = 0",
+  options: ["2,3", "1,6", "−2,−3", "−1,−6"],
+  answer: "2,3"
+},
+{
+  question: "Solve: x² − 9 = 0",
+  options: ["±3", "3", "−3", "±9"],
+  answer: "±3"
+},
+{
+  question: "Solve: x² + 7x + 10 = 0",
+  options: ["−5,−2", "5,2", "−10,−1", "10,1"],
+  answer: "−5,−2"
+},
+{
+  question: "Solve: 2x² − 7x + 3 = 0",
+  options: ["3,1/2", "−3,−1/2", "1,3", "−1,−3"],
+  answer: "3,1/2"
+},
+{
+  question: "Solve: x² − 4x − 5 = 0",
+  options: ["5,−1", "−5,1", "5,1", "−5,−1"],
+  answer: "5,−1"
+},
+{
+  question: "Find discriminant of x² − 4x + 4",
+  options: ["0", "16", "8", "4"],
+  answer: "0"
+},
+{
+  question: "Find discriminant of x² + 2x + 5",
+  options: ["−16", "4", "16", "−4"],
+  answer: "−16"
+},
+{
+  question: "Nature of roots if discriminant < 0:",
+  options: ["complex", "real equal", "real distinct", "zero"],
+  answer: "complex"
+},
+{
+  question: "Nature of roots if discriminant = 0:",
+  options: ["equal", "complex", "distinct", "negative"],
+  answer: "equal"
+},
+{
+  question: "Nature of roots if discriminant > 0:",
+  options: ["real distinct", "equal", "complex", "zero"],
+  answer: "real distinct"
+},
+{
+  question: "Solve: x² + x − 12 = 0",
+  options: ["3,−4", "4,−3", "6,−2", "−6,2"],
+  answer: "3,−4"
+},
+{
+  question: "Solve: 3x² − 12x = 0",
+  options: ["0,4", "1,3", "2,6", "−2,−6"],
+  answer: "0,4"
+},
+{
+  question: "Solve: x² − 2x − 8 = 0",
+  options: ["4,−2", "−4,2", "8,−1", "−8,1"],
+  answer: "4,−2"
+},
+{
+  question: "If α and β are roots of x² − 5x + 6=0, α+β:",
+  options: ["5", "6", "−5", "−6"],
+  answer: "5"
+},
+{
+  question: "If α and β are roots of x² − 5x + 6=0, αβ:",
+  options: ["6", "5", "−6", "−5"],
+  answer: "6"
+},
+{
+  question: "Find equation with roots 2 and 3",
+  options: ["x²−5x+6=0", "x²+5x+6=0", "x²−6x+5=0", "x²+6x+5=0"],
+  answer: "x²−5x+6=0"
+},
+{
+  question: "Find equation with roots −1 and 4",
+  options: ["x²−3x−4=0", "x²+3x−4=0", "x²−4x−1=0", "x²+4x−1=0"],
+  answer: "x²−3x−4=0"
+},
+{
+  question: "Factor: x³ − 3x² − 4x + 12",
+  options: ["(x−3)(x²−4)", "(x+3)(x²−4)", "(x−3)(x²+4)", "(x+3)(x²+4)"],
+  answer: "(x−3)(x²−4)"
+},
+{
+  question: "If f(x)=x³−4x, find f(2)",
+  options: ["0", "8", "4", "−4"],
+  answer: "0"
+},
+{
+  question: "If f(1)=0 for f(x)=x³+ax²+bx+1, find a+b",
+  options: ["−2", "2", "−1", "1"],
+  answer: "−2"
+},
+{
+  question: "Remainder when x³−2x²+3 divided by (x−1)",
+  options: ["2", "1", "0", "3"],
+  answer: "2"
+},
+{
+  question: "If (x−2) is factor of x³−ax²+bx−8, find a+b",
+  options: ["12", "10", "8", "6"],
+  answer: "12"
+},
+{
+  question: "Solve: x² = 16",
+  options: ["±4", "4", "−4", "±8"],
+  answer: "±4"
+},
+{
+  question: "Solve: 2x² = 18",
+  options: ["±3", "±9", "3", "9"],
+  answer: "±3"
+},
+{
+  question: "Solve: x² − 6x + 9 = 0",
+  options: ["3", "−3", "±3", "6"],
+  answer: "3"
+},
+{
+  question: "Factor: x² − 16",
+  options: ["(x−4)(x+4)", "(x−8)(x+2)", "(x−2)(x+8)", "(x−16)(x+1)"],
+  answer: "(x−4)(x+4)"
+},
+{
+  question: "Solve: x² + 4x = 0",
+  options: ["0,−4", "4,0", "−2,2", "1,−4"],
+  answer: "0,−4"
+},
+{
+  question: "Solve: x² − x − 20 = 0",
+  options: ["5,−4", "−5,4", "10,−2", "−10,2"],
+  answer: "5,−4"
+},
+{
+  question: "If roots are 1 and −6, equation:",
+  options: ["x²+5x−6=0", "x²−5x−6=0", "x²+6x−1=0", "x²−6x+1=0"],
+  answer: "x²+5x−6=0"
+},
+{
+  question: "Solve: x² − 3x + 2 = 0",
+  options: ["1,2", "−1,−2", "2,−1", "−2,1"],
+  answer: "1,2"
+},
+
+{
+  question: "Expand: (x + 2)^2",
+  options: ["x² + 4x + 4", "x² + 2x + 4", "x² + 4", "x² + 2x"],
+  answer: "x² + 4x + 4"
+},
+{
+  question: "Expand: (x − 3)^2",
+  options: ["x² − 6x + 9", "x² − 3x + 9", "x² − 6x − 9", "x² + 6x + 9"],
+  answer: "x² − 6x + 9"
+},
+{
+  question: "Expand: (2x + 1)^2",
+  options: ["4x² + 4x + 1", "4x² + 2x + 1", "2x² + 4x + 1", "4x² + 1"],
+  answer: "4x² + 4x + 1"
+},
+{
+  question: "Expand: (x + 1)^3",
+  options: ["x³ + 3x² + 3x + 1", "x³ + x² + x + 1", "x³ + 3x + 1", "x³ + 1"],
+  answer: "x³ + 3x² + 3x + 1"
+},
+{
+  question: "Expand: (x − 2)^3",
+  options: ["x³ − 6x² + 12x − 8", "x³ − 2x² + 4x − 8", "x³ − 6x² + 8", "x³ − 2x³"],
+  answer: "x³ − 6x² + 12x − 8"
+},
+{
+  question: "Coefficient of x² in (x + 2)^3",
+  options: ["6", "3", "2", "4"],
+  answer: "6"
+},
+{
+  question: "Constant term in (x − 1)^3",
+  options: ["−1", "1", "0", "−3"],
+  answer: "−1"
+},
+{
+  question: "Coefficient of x in (2x + 1)^3",
+  options: ["6", "12", "3", "8"],
+  answer: "12"
+},
+{
+  question: "Expand: (1 + 3x)^2",
+  options: ["1 + 6x + 9x²", "1 + 3x + 9x²", "1 + 9x²", "1 + 6x"],
+  answer: "1 + 6x + 9x²"
+},
+{
+  question: "Expand: (2 + x)^3",
+  options: ["8 + 12x + 6x² + x³", "8 + 6x + x³", "2 + x³", "4 + x³"],
+  answer: "8 + 12x + 6x² + x³"
+},
+{
+  question: "Solve: 2x − 5 > 3",
+  options: ["x > 4", "x > 2", "x < 4", "x < 2"],
+  answer: "x > 4"
+},
+{
+  question: "Solve: 3x + 2 ≤ 11",
+  options: ["x ≤ 3", "x ≥ 3", "x < 3", "x > 3"],
+  answer: "x ≤ 3"
+},
+{
+  question: "Solve: 5 − x > 2",
+  options: ["x < 3", "x > 3", "x < 2", "x > 2"],
+  answer: "x < 3"
+},
+{
+  question: "Solve: 2x + 1 < 7",
+  options: ["x < 3", "x > 3", "x < 4", "x > 4"],
+  answer: "x < 3"
+},
+{
+  question: "Solve: 4x − 3 ≥ 5",
+  options: ["x ≥ 2", "x ≤ 2", "x > 2", "x < 2"],
+  answer: "x ≥ 2"
+},
+{
+  question: "Solve: x² − 4 < 0",
+  options: ["−2 < x < 2", "x > 2", "x < −2", "x ≥ 2"],
+  answer: "−2 < x < 2"
+},
+{
+  question: "Solve: x² − 9 > 0",
+  options: ["x < −3 or x > 3", "−3 < x < 3", "x > 3", "x < 3"],
+  answer: "x < −3 or x > 3"
+},
+{
+  question: "Solve: x² + 2x − 3 ≥ 0",
+  options: ["x ≤ −3 or x ≥ 1", "−3 < x < 1", "x ≥ −3", "x ≤ 1"],
+  answer: "x ≤ −3 or x ≥ 1"
+},
+{
+  question: "Solve: x² − x − 6 ≤ 0",
+  options: ["−2 ≤ x ≤ 3", "x ≤ −2 or x ≥ 3", "x ≥ −2", "x ≤ 3"],
+  answer: "−2 ≤ x ≤ 3"
+},
+{
+  question: "Solve: x² + x − 2 > 0",
+  options: ["x < −2 or x > 1", "−2 < x < 1", "x > 2", "x < 1"],
+  answer: "x < −2 or x > 1"
+},
+{
+  question: "If (1 + x)^n expansion has 6 terms, n =",
+  options: ["5", "6", "4", "7"],
+  answer: "5"
+},
+{
+  question: "Coefficient of x³ in (x + 1)^4",
+  options: ["4", "6", "3", "1"],
+  answer: "4"
+},
+{
+  question: "Constant term in (2x + 3)^2",
+  options: ["9", "4", "6", "12"],
+  answer: "9"
+},
+{
+  question: "Coefficient of x² in (2x + 1)^3",
+  options: ["6", "12", "3", "8"],
+  answer: "6"
+},
+{
+  question: "Expand first 3 terms: (1 + x)^4",
+  options: ["1 + 4x + 6x²", "1 + 4x + 4x²", "1 + x + x²", "1 + 2x + x²"],
+  answer: "1 + 4x + 6x²"
+},
+{
+  question: "Solve: 2x² − 8 ≥ 0",
+  options: ["x ≤ −2 or x ≥ 2", "−2 ≤ x ≤ 2", "x ≥ 2", "x ≤ −2"],
+  answer: "x ≤ −2 or x ≥ 2"
+},
+{
+  question: "Solve: x² + 4x + 4 ≤ 0",
+  options: ["x = −2", "x ≤ −2", "x ≥ −2", "all x"],
+  answer: "x = −2"
+},
+{
+  question: "Solve: x² − 5x + 6 > 0",
+  options: ["x < 2 or x > 3", "2 < x < 3", "x > 3", "x < 2"],
+  answer: "x < 2 or x > 3"
+},
+{
+  question: "If coefficient of x in (1 + ax)^2 is 10, a =",
+  options: ["5", "10", "2", "4"],
+  answer: "5"
+},
+{
+  question: "If constant term in (x + a)^2 is 16, a =",
+  options: ["±4", "4", "−4", "16"],
+  answer: "±4"
+},
+
+{
+  question: "Find gradient between (1,2) and (3,6)",
+  options: ["2", "1", "3", "4"],
+  answer: "2"
+},
+{
+  question: "Find gradient between (2,5) and (6,13)",
+  options: ["2", "3", "4", "1"],
+  answer: "2"
+},
+{
+  question: "Find equation of line with slope 3 passing through (0,2)",
+  options: ["y=3x+2", "y=2x+3", "y=3x−2", "y=2x−3"],
+  answer: "y=3x+2"
+},
+{
+  question: "Find equation of line through (1,2) with slope 2",
+  options: ["y=2x", "y=2x+1", "y=2x−1", "y=2x+2"],
+  answer: "y=2x"
+},
+{
+  question: "Find distance between (0,0) and (3,4)",
+  options: ["5", "7", "4", "6"],
+  answer: "5"
+},
+{
+  question: "Find midpoint of (2,4) and (6,8)",
+  options: ["(4,6)", "(3,5)", "(5,7)", "(2,8)"],
+  answer: "(4,6)"
+},
+{
+  question: "Find equation of line parallel to y=2x+3 through (1,1)",
+  options: ["y=2x−1", "y=2x+1", "y=3x+1", "y=x+1"],
+  answer: "y=2x−1"
+},
+{
+  question: "Find equation of line perpendicular to y=2x through origin",
+  options: ["y=−1/2x", "y=2x", "y=1/2x", "y=−2x"],
+  answer: "y=−1/2x"
+},
+{
+  question: "Find slope of line 2x+3y=6",
+  options: ["−2/3", "2/3", "−3/2", "3/2"],
+  answer: "−2/3"
+},
+{
+  question: "Find intercept of y=3x+6 on y-axis",
+  options: ["6", "3", "−6", "0"],
+  answer: "6"
+},
+{
+  question: "Find x-intercept of y=2x−4",
+  options: ["2", "−2", "4", "0"],
+  answer: "2"
+},
+{
+  question: "Find distance between (1,1) and (4,5)",
+  options: ["5", "4", "3", "6"],
+  answer: "5"
+},
+{
+  question: "Find midpoint of (−2,4) and (2,6)",
+  options: ["(0,5)", "(1,5)", "(0,4)", "(2,5)"],
+  answer: "(0,5)"
+},
+{
+  question: "Find gradient of line perpendicular to slope 3",
+  options: ["−1/3", "3", "1/3", "−3"],
+  answer: "−1/3"
+},
+{
+  question: "Find equation of line through (0,−3) slope 4",
+  options: ["y=4x−3", "y=4x+3", "y=3x−4", "y=4x"],
+  answer: "y=4x−3"
+},
+{
+  question: "Find distance between (2,3) and (2,7)",
+  options: ["4", "5", "3", "2"],
+  answer: "4"
+},
+{
+  question: "Find gradient between (−1,2) and (3,6)",
+  options: ["1", "2", "3", "4"],
+  answer: "1"
+},
+{
+  question: "Find equation of line through (2,3) and (4,7)",
+  options: ["y=2x−1", "y=2x+1", "y=3x−1", "y=2x−3"],
+  answer: "y=2x−1"
+},
+{
+  question: "Find midpoint of (1,2) and (3,10)",
+  options: ["(2,6)", "(1,6)", "(2,5)", "(3,6)"],
+  answer: "(2,6)"
+},
+{
+  question: "Find gradient of vertical line",
+  options: ["undefined", "0", "1", "∞"],
+  answer: "undefined"
+},
+{
+  question: "Find gradient of horizontal line",
+  options: ["0", "undefined", "1", "∞"],
+  answer: "0"
+},
+{
+  question: "Find equation of horizontal line through y=5",
+  options: ["y=5", "x=5", "y=0", "x=0"],
+  answer: "y=5"
+},
+{
+  question: "Find equation of vertical line through x=3",
+  options: ["x=3", "y=3", "x=0", "y=0"],
+  answer: "x=3"
+},
+{
+  question: "If midpoint is (3,4) and one point is (1,2), find other point",
+  options: ["(5,6)", "(4,5)", "(3,6)", "(2,6)"],
+  answer: "(5,6)"
+},
+{
+  question: "Find equation of line with slope 1 passing through (2,2)",
+  options: ["y=x", "y=x+2", "y=x−2", "y=2x"],
+  answer: "y=x"
+},
+{
+  question: "Find distance between (−1,−1) and (2,3)",
+  options: ["5", "4", "3", "6"],
+  answer: "5"
+},
+{
+  question: "Find gradient between (0,3) and (3,3)",
+  options: ["0", "1", "−1", "3"],
+  answer: "0"
+},
+{
+  question: "Find equation of line slope −2 through (0,4)",
+  options: ["y=−2x+4", "y=2x+4", "y=−2x−4", "y=2x−4"],
+  answer: "y=−2x+4"
+},
+{
+  question: "Find midpoint of (0,0) and (4,4)",
+  options: ["(2,2)", "(4,4)", "(0,0)", "(1,1)"],
+  answer: "(2,2)"
+},
+{
+  question: "Find distance between (−3,0) and (3,0)",
+  options: ["6", "3", "9", "0"],
+  answer: "6"
+},
+
+{
+  question: "Find centre of circle (x−2)² + (y−3)² = 25",
+  options: ["(2,3)", "(−2,−3)", "(5,5)", "(3,2)"],
+  answer: "(2,3)"
+},
+{
+  question: "Find radius of (x−2)² + (y−3)² = 25",
+  options: ["5", "25", "10", "3"],
+  answer: "5"
+},
+{
+  question: "Find centre of x² + y² = 16",
+  options: ["(0,0)", "(4,4)", "(2,2)", "(1,1)"],
+  answer: "(0,0)"
+},
+{
+  question: "Find radius of x² + y² = 16",
+  options: ["4", "16", "8", "2"],
+  answer: "4"
+},
+{
+  question: "Find radius of x² + y² − 4x − 6y + 9 = 0",
+  options: ["√( (2²+3²)−9 )", "√4", "5", "3"],
+  answer: "√( (2²+3²)−9 )"
+},
+{
+  question: "Find centre of x² + y² − 6x − 8y = 0",
+  options: ["(3,4)", "(−3,−4)", "(6,8)", "(4,3)"],
+  answer: "(3,4)"
+},
+{
+  question: "Find radius of x² + y² − 6x − 8y = 0",
+  options: ["5", "10", "4", "3"],
+  answer: "5"
+},
+{
+  question: "Find equation of circle centre (1,2) radius 3",
+  options: ["(x−1)²+(y−2)²=9", "(x+1)²+(y+2)²=9", "(x−1)²+(y−2)²=3", "(x+1)²+(y−2)²=9"],
+  answer: "(x−1)²+(y−2)²=9"
+},
+{
+  question: "Find equation centre (0,0) radius 5",
+  options: ["x²+y²=25", "x²+y²=5", "x²+y²=10", "x²+y²=20"],
+  answer: "x²+y²=25"
+},
+{
+  question: "Find equation centre (2,−1) radius 4",
+  options: ["(x−2)²+(y+1)²=16", "(x+2)²+(y−1)²=16", "(x−2)²+(y−1)²=16", "(x+2)²+(y+1)²=16"],
+  answer: "(x−2)²+(y+1)²=16"
+},
+{
+  question: "Expand (x−1)²+(y−2)²=9",
+  options: ["x²+y²−2x−4y−4=0", "x²+y²−2x−4y+5=0", "x²+y²+2x+4y−4=0", "x²+y²−2x−4y+1=0"],
+  answer: "x²+y²−2x−4y−4=0"
+},
+{
+  question: "Check if (3,4) lies on x²+y²=25",
+  options: ["Yes", "No", "Maybe", "Undefined"],
+  answer: "Yes"
+},
+{
+  question: "Check if (2,2) lies on x²+y²=8",
+  options: ["Yes", "No", "Undefined", "Maybe"],
+  answer: "Yes"
+},
+{
+  question: "Find distance from centre (0,0) to (3,4)",
+  options: ["5", "7", "4", "6"],
+  answer: "5"
+},
+{
+  question: "Find diameter if radius = 6",
+  options: ["12", "6", "18", "3"],
+  answer: "12"
+},
+{
+  question: "Find radius if diameter = 10",
+  options: ["5", "10", "20", "2"],
+  answer: "5"
+},
+{
+  question: "Find centre of x²+y²+4x−6y+9=0",
+  options: ["(−2,3)", "(2,−3)", "(−4,6)", "(4,−6)"],
+  answer: "(−2,3)"
+},
+{
+  question: "Find radius of x²+y²+4x−6y+9=0",
+  options: ["√(4+9−9)", "√13", "5", "3"],
+  answer: "√(4+9−9)"
+},
+{
+  question: "If tangent at point is perpendicular to radius, angle is:",
+  options: ["90°", "45°", "180°", "0°"],
+  answer: "90°"
+},
+{
+  question: "Equation of tangent to x²+y²=25 at (3,4)",
+  options: ["3x+4y=25", "3x−4y=25", "4x+3y=25", "x+y=25"],
+  answer: "3x+4y=25"
+},
+{
+  question: "Find slope of radius to point (3,4)",
+  options: ["4/3", "3/4", "−4/3", "−3/4"],
+  answer: "4/3"
+},
+{
+  question: "Slope of tangent at (3,4)",
+  options: ["−3/4", "4/3", "3/4", "−4/3"],
+  answer: "−3/4"
+},
+{
+  question: "Find equation of tangent slope −1 through (2,3)",
+  options: ["y=−x+5", "y=x+5", "y=−x−5", "y=x−5"],
+  answer: "y=−x+5"
+},
+{
+  question: "Find equation of circle diameter endpoints (0,0) and (4,0)",
+  options: ["(x−2)²+y²=4", "(x+2)²+y²=4", "x²+y²=4", "x²+y²=16"],
+  answer: "(x−2)²+y²=4"
+},
+{
+  question: "Find centre midpoint of diameter (2,2) and (6,6)",
+  options: ["(4,4)", "(2,6)", "(6,2)", "(3,3)"],
+  answer: "(4,4)"
+},
+{
+  question: "Find radius from endpoints (2,2) and (6,6)",
+  options: ["2√2", "4√2", "2", "4"],
+  answer: "2√2"
+},
+{
+  question: "If circle centre (0,0) passes through (1,√3), radius:",
+  options: ["2", "√2", "√3", "1"],
+  answer: "2"
+},
+{
+  question: "Find equation centre (0,0) passing (1,√3)",
+  options: ["x²+y²=4", "x²+y²=3", "x²+y²=2", "x²+y²=1"],
+  answer: "x²+y²=4"
+},
+{
+  question: "Distance between centres (0,0) and (6,8)",
+  options: ["10", "8", "6", "12"],
+  answer: "10"
+},
+{
+  question: "If two circles touch externally, distance =",
+  options: ["sum of radii", "difference", "product", "zero"],
+  answer: "sum of radii"
+},
+
+{
+  question: "Evaluate: sin²30° + cos²30°",
+  options: ["1", "0", "1/2", "2"],
+  answer: "1"
+},
+{
+  question: "Evaluate: sin 30°",
+  options: ["1/2", "√3/2", "1", "0"],
+  answer: "1/2"
+},
+{
+  question: "Evaluate: cos 60°",
+  options: ["1/2", "√3/2", "1", "0"],
+  answer: "1/2"
+},
+{
+  question: "Evaluate: tan 45°",
+  options: ["1", "0", "√3", "2"],
+  answer: "1"
+},
+{
+  question: "Evaluate: sin 90°",
+  options: ["1", "0", "1/2", "√3/2"],
+  answer: "1"
+},
+{
+  question: "Evaluate: cos 0°",
+  options: ["1", "0", "1/2", "√3/2"],
+  answer: "1"
+},
+{
+  question: "Solve: sin x = 0 for 0°≤x≤360°",
+  options: ["0°,180°,360°", "90°,270°", "45°,135°", "60°,120°"],
+  answer: "0°,180°,360°"
+},
+{
+  question: "Solve: cos x = 0 for 0°≤x≤360°",
+  options: ["90°,270°", "0°,180°", "45°,135°", "60°,120°"],
+  answer: "90°,270°"
+},
+{
+  question: "Solve: tan x = 1 for 0°≤x≤360°",
+  options: ["45°,225°", "90°,270°", "0°,180°", "30°,210°"],
+  answer: "45°,225°"
+},
+{
+  question: "Solve: sin x = 1/2",
+  options: ["30°,150°", "45°,135°", "60°,120°", "0°,180°"],
+  answer: "30°,150°"
+},
+{
+  question: "Solve: cos x = 1/2",
+  options: ["60°,300°", "30°,150°", "45°,315°", "90°,270°"],
+  answer: "60°,300°"
+},
+{
+  question: "Solve: tan x = √3",
+  options: ["60°,240°", "30°,210°", "45°,225°", "90°,270°"],
+  answer: "60°,240°"
+},
+{
+  question: "If sin x = 3/5, cos x =",
+  options: ["4/5", "5/4", "3/4", "√2"],
+  answer: "4/5"
+},
+{
+  question: "If cos x = 5/13, sin x =",
+  options: ["12/13", "5/12", "13/5", "√5"],
+  answer: "12/13"
+},
+{
+  question: "Simplify: (sin x)/(cos x)",
+  options: ["tan x", "cot x", "sec x", "cosec x"],
+  answer: "tan x"
+},
+{
+  question: "Simplify: (1)/(cos x)",
+  options: ["sec x", "cosec x", "tan x", "cot x"],
+  answer: "sec x"
+},
+{
+  question: "Simplify: (1)/(sin x)",
+  options: ["cosec x", "sec x", "tan x", "cot x"],
+  answer: "cosec x"
+},
+{
+  question: "Evaluate: sin²45°",
+  options: ["1/2", "1", "√2", "2"],
+  answer: "1/2"
+},
+{
+  question: "Evaluate: cos²45°",
+  options: ["1/2", "1", "√2", "2"],
+  answer: "1/2"
+},
+{
+  question: "Solve: 2sin x = 1",
+  options: ["30°,150°", "45°,135°", "60°,120°", "0°,180°"],
+  answer: "30°,150°"
+},
+{
+  question: "Solve: 2cos x = √3",
+  options: ["30°,330°", "60°,300°", "45°,315°", "90°,270°"],
+  answer: "30°,330°"
+},
+{
+  question: "Solve: tan x = 0",
+  options: ["0°,180°,360°", "90°,270°", "45°,225°", "30°,210°"],
+  answer: "0°,180°,360°"
+},
+{
+  question: "If tan x = 3/4, sin x =",
+  options: ["3/5", "4/5", "5/3", "5/4"],
+  answer: "3/5"
+},
+{
+  question: "If tan x = 3/4, cos x =",
+  options: ["4/5", "3/5", "5/4", "5/3"],
+  answer: "4/5"
+},
+{
+  question: "Evaluate: sin 60°",
+  options: ["√3/2", "1/2", "1", "0"],
+  answer: "√3/2"
+},
+{
+  question: "Evaluate: cos 30°",
+  options: ["√3/2", "1/2", "1", "0"],
+  answer: "√3/2"
+},
+{
+  question: "Evaluate: tan 60°",
+  options: ["√3", "1", "1/√3", "2"],
+  answer: "√3"
+},
+{
+  question: "Evaluate: tan 30°",
+  options: ["1/√3", "√3", "1", "0"],
+  answer: "1/√3"
+},
+{
+  question: "If sin x = 1, x =",
+  options: ["90°", "0°", "180°", "270°"],
+  answer: "90°"
+},
+{
+  question: "If cos x = −1, x =",
+  options: ["180°", "0°", "90°", "270°"],
+  answer: "180°"
+},
+
+{
+  question: "Solve: sin2x = 0 for 0°≤x≤360°",
+  options: ["0°,90°,180°,270°,360°", "45°,135°", "30°,150°", "60°,120°"],
+  answer: "0°,90°,180°,270°,360°"
+},
+{
+  question: "Solve: cos2x = 1",
+  options: ["0°,180°,360°", "90°,270°", "45°,135°", "30°,150°"],
+  answer: "0°,180°,360°"
+},
+{
+  question: "Solve: sin2x = 1",
+  options: ["45°,225°", "90°,270°", "30°,150°", "60°,120°"],
+  answer: "45°,225°"
+},
+{
+  question: "Solve: cos2x = 0",
+  options: ["45°,135°,225°,315°", "90°,270°", "0°,180°", "30°,150°"],
+  answer: "45°,135°,225°,315°"
+},
+{
+  question: "Solve: tan2x = 0",
+  options: ["0°,90°,180°,270°,360°", "45°,225°", "90°,270°", "30°,150°"],
+  answer: "0°,90°,180°,270°,360°"
+},
+{
+  question: "Solve: sin²x = 1/4",
+  options: ["30°,150°,210°,330°", "45°,135°", "60°,120°", "0°,180°"],
+  answer: "30°,150°,210°,330°"
+},
+{
+  question: "Solve: cos²x = 1/2",
+  options: ["45°,135°,225°,315°", "30°,150°", "60°,120°", "0°,180°"],
+  answer: "45°,135°,225°,315°"
+},
+{
+  question: "Solve: tan²x = 1",
+  options: ["45°,135°,225°,315°", "30°,150°", "60°,120°", "0°,180°"],
+  answer: "45°,135°,225°,315°"
+},
+{
+  question: "Solve: sin x cos x = 0",
+  options: ["0°,90°,180°,270°,360°", "45°,135°", "30°,150°", "60°,120°"],
+  answer: "0°,90°,180°,270°,360°"
+},
+{
+  question: "Solve: 2sin x cos x = 1",
+  options: ["45°,135°", "30°,150°", "60°,120°", "0°,180°"],
+  answer: "45°,135°"
+},
+{
+  question: "Solve: sin x = cos x",
+  options: ["45°,225°", "30°,150°", "60°,120°", "90°,270°"],
+  answer: "45°,225°"
+},
+{
+  question: "Solve: tan x = 1 for 0°≤x≤180°",
+  options: ["45°", "45°,225°", "90°", "135°"],
+  answer: "45°"
+},
+{
+  question: "Solve: sin x = cos x for 0°≤x≤180°",
+  options: ["45°", "135°", "90°", "0°"],
+  answer: "45°"
+},
+{
+  question: "Period of sin x graph:",
+  options: ["360°", "180°", "90°", "720°"],
+  answer: "360°"
+},
+{
+  question: "Period of sin2x:",
+  options: ["180°", "360°", "90°", "720°"],
+  answer: "180°"
+},
+{
+  question: "Amplitude of y=2sin x:",
+  options: ["2", "1", "4", "3"],
+  answer: "2"
+},
+{
+  question: "Amplitude of y=3cos x:",
+  options: ["3", "1", "2", "4"],
+  answer: "3"
+},
+{
+  question: "Range of y=sin x:",
+  options: ["−1 to 1", "0 to 1", "−2 to 2", "0 to 2"],
+  answer: "−1 to 1"
+},
+{
+  question: "Range of y=2cos x:",
+  options: ["−2 to 2", "−1 to 1", "0 to 2", "−3 to 3"],
+  answer: "−2 to 2"
+},
+{
+  question: "y=sin x shifted up by 2:",
+  options: ["y=sin x+2", "y=2sin x", "y=sin(x+2)", "y=sin2x"],
+  answer: "y=sin x+2"
+},
+{
+  question: "y=cos x shifted right by 90°:",
+  options: ["y=cos(x−90°)", "y=cos(x+90°)", "y=cos2x", "y=2cos x"],
+  answer: "y=cos(x−90°)"
+},
+{
+  question: "Maximum value of sin x:",
+  options: ["1", "0", "−1", "2"],
+  answer: "1"
+},
+{
+  question: "Minimum value of cos x:",
+  options: ["−1", "1", "0", "2"],
+  answer: "−1"
+},
+{
+  question: "Solve: sin x = 0.707",
+  options: ["45°,135°", "30°,150°", "60°,120°", "90°"],
+  answer: "45°,135°"
+},
+{
+  question: "Solve: cos x = 0.5",
+  options: ["60°,300°", "30°,150°", "45°,135°", "90°,270°"],
+  answer: "60°,300°"
+},
+{
+  question: "Solve: tan x = −1",
+  options: ["135°,315°", "45°,225°", "30°,150°", "60°,240°"],
+  answer: "135°,315°"
+},
+{
+  question: "Solve: 2sin²x = 1",
+  options: ["45°,135°,225°,315°", "30°,150°", "60°,120°", "0°,180°"],
+  answer: "45°,135°,225°,315°"
+},
+{
+  question: "Solve: 1 − cos²x = 0",
+  options: ["0°,180°,360°", "90°,270°", "45°,135°", "30°,150°"],
+  answer: "0°,180°,360°"
+},
+{
+  question: "Solve: sec²x = 2",
+  options: ["45°,135°,225°,315°", "30°,150°", "60°,120°", "0°,180°"],
+  answer: "45°,135°,225°,315°"
+},
+{
+  question: "Solve: tan²x = 3",
+  options: ["60°,120°,240°,300°", "30°,150°", "45°,135°", "0°,180°"],
+  answer: "60°,120°,240°,300°"
+},
+
+{
+  question: "Differentiate: x²",
+  options: ["2x", "x", "x²", "2"],
+  answer: "2x"
+},
+{
+  question: "Differentiate: x³",
+  options: ["3x²", "x²", "x³", "3x"],
+  answer: "3x²"
+},
+{
+  question: "Differentiate: 5x",
+  options: ["5", "x", "5x", "0"],
+  answer: "5"
+},
+{
+  question: "Differentiate: 7",
+  options: ["0", "7", "1", "x"],
+  answer: "0"
+},
+{
+  question: "Differentiate: 3x² + 4x",
+  options: ["6x + 4", "3x + 4", "6x", "4x"],
+  answer: "6x + 4"
+},
+{
+  question: "Differentiate: x³ + 2x²",
+  options: ["3x² + 4x", "3x² + 2x", "x² + 4x", "3x²"],
+  answer: "3x² + 4x"
+},
+{
+  question: "Differentiate: 4x³ − 2x",
+  options: ["12x² − 2", "4x² − 2", "12x² − 2x", "4x³"],
+  answer: "12x² − 2"
+},
+{
+  question: "Differentiate: x⁴",
+  options: ["4x³", "x³", "x⁴", "4x"],
+  answer: "4x³"
+},
+{
+  question: "Differentiate: 2x⁵",
+  options: ["10x⁴", "5x⁴", "2x⁴", "10x"],
+  answer: "10x⁴"
+},
+{
+  question: "Differentiate: x² + 3",
+  options: ["2x", "2x + 3", "x", "3"],
+  answer: "2x"
+},
+{
+  question: "Differentiate: (x²)(x³)",
+  options: ["5x⁴", "x⁵", "4x⁴", "3x⁴"],
+  answer: "5x⁴"
+},
+{
+  question: "Differentiate: sin x",
+  options: ["cos x", "−cos x", "sin x", "−sin x"],
+  answer: "cos x"
+},
+{
+  question: "Differentiate: cos x",
+  options: ["−sin x", "sin x", "cos x", "−cos x"],
+  answer: "−sin x"
+},
+{
+  question: "Differentiate: 2sin x",
+  options: ["2cos x", "cos x", "2sin x", "−2cos x"],
+  answer: "2cos x"
+},
+{
+  question: "Differentiate: 3cos x",
+  options: ["−3sin x", "3sin x", "−cos x", "3cos x"],
+  answer: "−3sin x"
+},
+{
+  question: "Differentiate: x² sin x",
+  options: ["2x sin x + x² cos x", "x² cos x", "2x cos x", "sin x"],
+  answer: "2x sin x + x² cos x"
+},
+{
+  question: "Find gradient of y=x² at x=2",
+  options: ["4", "2", "6", "8"],
+  answer: "4"
+},
+{
+  question: "Find gradient of y=3x² at x=1",
+  options: ["6", "3", "9", "2"],
+  answer: "6"
+},
+{
+  question: "Find gradient of y=x³ at x=2",
+  options: ["12", "8", "6", "4"],
+  answer: "12"
+},
+{
+  question: "Equation of tangent to y=x² at x=1",
+  options: ["y=2x−1", "y=x−1", "y=2x+1", "y=x+1"],
+  answer: "y=2x−1"
+},
+{
+  question: "Equation of tangent to y=x² at x=2",
+  options: ["y=4x−4", "y=2x−2", "y=4x−8", "y=2x−4"],
+  answer: "y=4x−4"
+},
+{
+  question: "Find stationary point of y=x²",
+  options: ["(0,0)", "(1,1)", "(2,4)", "(−1,1)"],
+  answer: "(0,0)"
+},
+{
+  question: "Find stationary point of y=x³",
+  options: ["(0,0)", "(1,1)", "(−1,−1)", "(2,8)"],
+  answer: "(0,0)"
+},
+{
+  question: "If dy/dx = 0, point is:",
+  options: ["stationary", "increasing", "decreasing", "undefined"],
+  answer: "stationary"
+},
+{
+  question: "Differentiate: (2x+1)²",
+  options: ["4(2x+1)", "2(2x+1)", "4x+2", "2x+1"],
+  answer: "4(2x+1)"
+},
+{
+  question: "Differentiate: (x²+1)²",
+  options: ["4x(x²+1)", "2x(x²+1)", "2(x²+1)", "x²+1"],
+  answer: "4x(x²+1)"
+},
+{
+  question: "Find gradient of y=sin x at x=0",
+  options: ["1", "0", "−1", "2"],
+  answer: "1"
+},
+{
+  question: "Find gradient of y=cos x at x=0",
+  options: ["0", "1", "−1", "2"],
+  answer: "0"
+},
+{
+  question: "Differentiate: x⁻¹",
+  options: ["−x⁻²", "x⁻²", "−1/x", "1/x"],
+  answer: "−x⁻²"
+},
+{
+  question: "Differentiate: x^(1/2)",
+  options: ["1/(2√x)", "√x", "1/x", "2√x"],
+  answer: "1/(2√x)"
+},
+
+{
+  question: "Find stationary point of y = x² − 4x + 3",
+  options: ["(2,−1)", "(1,0)", "(2,1)", "(−2,3)"],
+  answer: "(2,−1)"
+},
+{
+  question: "Nature of y = x² − 4x + 3",
+  options: ["minimum", "maximum", "inflection", "none"],
+  answer: "minimum"
+},
+{
+  question: "Find stationary point of y = −x² + 4x",
+  options: ["(2,4)", "(−2,4)", "(2,−4)", "(1,2)"],
+  answer: "(2,4)"
+},
+{
+  question: "Nature of y = −x² + 4x",
+  options: ["maximum", "minimum", "inflection", "none"],
+  answer: "maximum"
+},
+{
+  question: "Find stationary point of y = x³ − 3x²",
+  options: ["(0,0),(2,−4)", "(0,0),(2,0)", "(1,−2),(2,0)", "(0,1),(2,4)"],
+  answer: "(0,0),(2,−4)"
+},
+{
+  question: "Solve dy/dx = 0 for y = x³ − 3x²",
+  options: ["x=0,2", "x=1,2", "x=0,1", "x=2,3"],
+  answer: "x=0,2"
+},
+{
+  question: "Find max of y = −x² + 6x − 5",
+  options: ["4", "5", "6", "3"],
+  answer: "4"
+},
+{
+  question: "Find x at maximum for y = −x² + 6x − 5",
+  options: ["3", "2", "4", "1"],
+  answer: "3"
+},
+{
+  question: "Find minimum of y = x² + 2x + 1",
+  options: ["0", "1", "−1", "2"],
+  answer: "0"
+},
+{
+  question: "Find x at minimum of y = x² + 2x + 1",
+  options: ["−1", "1", "2", "0"],
+  answer: "−1"
+},
+{
+  question: "If dy/dx > 0, function is:",
+  options: ["increasing", "decreasing", "constant", "stationary"],
+  answer: "increasing"
+},
+{
+  question: "If dy/dx < 0, function is:",
+  options: ["decreasing", "increasing", "constant", "stationary"],
+  answer: "decreasing"
+},
+{
+  question: "Turning point occurs when:",
+  options: ["dy/dx = 0", "dy/dx > 0", "dy/dx < 0", "dy/dx undefined"],
+  answer: "dy/dx = 0"
+},
+{
+  question: "Find stationary point of y = x² + 4x + 5",
+  options: ["(−2,1)", "(2,1)", "(−2,−1)", "(2,−1)"],
+  answer: "(−2,1)"
+},
+{
+  question: "Nature of y = x² + 4x + 5",
+  options: ["minimum", "maximum", "inflection", "none"],
+  answer: "minimum"
+},
+{
+  question: "Find turning point of y = 2x² − 8x + 3",
+  options: ["(2,−5)", "(2,5)", "(−2,5)", "(4,3)"],
+  answer: "(2,−5)"
+},
+{
+  question: "Nature of y = 2x² − 8x + 3",
+  options: ["minimum", "maximum", "inflection", "none"],
+  answer: "minimum"
+},
+{
+  question: "Find stationary point of y = −2x² + 4x + 1",
+  options: ["(1,3)", "(−1,3)", "(2,1)", "(1,−3)"],
+  answer: "(1,3)"
+},
+{
+  question: "Nature of y = −2x² + 4x + 1",
+  options: ["maximum", "minimum", "inflection", "none"],
+  answer: "maximum"
+},
+{
+  question: "If y = x³, stationary point is:",
+  options: ["(0,0)", "(1,1)", "(−1,−1)", "(2,8)"],
+  answer: "(0,0)"
+},
+{
+  question: "Nature of y = x³ at (0,0)",
+  options: ["inflection", "maximum", "minimum", "none"],
+  answer: "inflection"
+},
+{
+  question: "Maximum occurs when second derivative is:",
+  options: ["negative", "positive", "zero", "undefined"],
+  answer: "negative"
+},
+{
+  question: "Minimum occurs when second derivative is:",
+  options: ["positive", "negative", "zero", "undefined"],
+  answer: "positive"
+},
+{
+  question: "Find dy/dx of y = x² − 6x + 8 at x=3",
+  options: ["0", "3", "6", "−3"],
+  answer: "0"
+},
+{
+  question: "If dy/dx changes from + to −, point is:",
+  options: ["maximum", "minimum", "inflection", "none"],
+  answer: "maximum"
+},
+{
+  question: "If dy/dx changes from − to +, point is:",
+  options: ["minimum", "maximum", "inflection", "none"],
+  answer: "minimum"
+},
+{
+  question: "Find maximum value of y = −x² + 2x + 3",
+  options: ["4", "3", "2", "5"],
+  answer: "4"
+},
+{
+  question: "Find x at max of y = −x² + 2x + 3",
+  options: ["1", "2", "−1", "0"],
+  answer: "1"
+},
+{
+  question: "Find minimum value of y = x² − 2x + 4",
+  options: ["3", "4", "2", "1"],
+  answer: "3"
+},
+{
+  question: "Find x at minimum of y = x² − 2x + 4",
+  options: ["1", "2", "−1", "0"],
+  answer: "1"
+},
+
+{
+  question: "Integrate: ∫x dx",
+  options: ["x²/2 + C", "x² + C", "2x + C", "x + C"],
+  answer: "x²/2 + C"
+},
+{
+  question: "Integrate: ∫x² dx",
+  options: ["x³/3 + C", "x³ + C", "2x² + C", "x²/2 + C"],
+  answer: "x³/3 + C"
+},
+{
+  question: "Integrate: ∫3x² dx",
+  options: ["x³ + C", "3x³ + C", "x² + C", "6x + C"],
+  answer: "x³ + C"
+},
+{
+  question: "Integrate: ∫5 dx",
+  options: ["5x + C", "x + C", "5 + C", "x² + C"],
+  answer: "5x + C"
+},
+{
+  question: "Integrate: ∫2x dx",
+  options: ["x² + C", "2x² + C", "x + C", "2 + C"],
+  answer: "x² + C"
+},
+{
+  question: "Integrate: ∫x³ dx",
+  options: ["x⁴/4 + C", "x⁴ + C", "4x³ + C", "x³/3 + C"],
+  answer: "x⁴/4 + C"
+},
+{
+  question: "Integrate: ∫x⁻¹ dx",
+  options: ["ln x + C", "x² + C", "1/x + C", "x + C"],
+  answer: "ln x + C"
+},
+{
+  question: "Integrate: ∫1/x dx",
+  options: ["ln x + C", "x² + C", "1/x + C", "x + C"],
+  answer: "ln x + C"
+},
+{
+  question: "Integrate: ∫(2x + 3) dx",
+  options: ["x² + 3x + C", "2x² + 3x + C", "x² + C", "2x + C"],
+  answer: "x² + 3x + C"
+},
+{
+  question: "Integrate: ∫(4x³ − 2x) dx",
+  options: ["x⁴ − x² + C", "4x⁴ − 2x² + C", "x⁴ − x + C", "x³ + C"],
+  answer: "x⁴ − x² + C"
+},
+{
+  question: "Integrate: ∫sin x dx",
+  options: ["−cos x + C", "cos x + C", "sin x + C", "−sin x + C"],
+  answer: "−cos x + C"
+},
+{
+  question: "Integrate: ∫cos x dx",
+  options: ["sin x + C", "−sin x + C", "cos x + C", "−cos x + C"],
+  answer: "sin x + C"
+},
+{
+  question: "Integrate: ∫2sin x dx",
+  options: ["−2cos x + C", "2cos x + C", "−cos x + C", "sin x + C"],
+  answer: "−2cos x + C"
+},
+{
+  question: "Integrate: ∫3cos x dx",
+  options: ["3sin x + C", "−3sin x + C", "sin x + C", "cos x + C"],
+  answer: "3sin x + C"
+},
+{
+  question: "Find ∫(x + 1)² dx",
+  options: ["(x+1)³/3 + C", "(x+1)² + C", "2(x+1) + C", "x² + C"],
+  answer: "(x+1)³/3 + C"
+},
+{
+  question: "Find ∫(2x + 1) dx",
+  options: ["x² + x + C", "2x² + x + C", "x² + C", "2x + C"],
+  answer: "x² + x + C"
+},
+{
+  question: "Find ∫x⁴ dx",
+  options: ["x⁵/5 + C", "x⁵ + C", "5x⁴ + C", "x⁴/4 + C"],
+  answer: "x⁵/5 + C"
+},
+{
+  question: "Find ∫x⁻² dx",
+  options: ["−x⁻¹ + C", "x⁻¹ + C", "−1/x² + C", "1/x + C"],
+  answer: "−x⁻¹ + C"
+},
+{
+  question: "Find ∫(3x² + 2x + 1) dx",
+  options: ["x³ + x² + x + C", "3x³ + 2x² + x + C", "x² + x + C", "x³ + C"],
+  answer: "x³ + x² + x + C"
+},
+{
+  question: "Find ∫(x³ + 4x) dx",
+  options: ["x⁴/4 + 2x² + C", "x⁴ + 4x² + C", "x³ + 4x + C", "x² + C"],
+  answer: "x⁴/4 + 2x² + C"
+},
+{
+  question: "Evaluate: ∫₀² x dx",
+  options: ["2", "4", "1", "3"],
+  answer: "2"
+},
+{
+  question: "Evaluate: ∫₀¹ x² dx",
+  options: ["1/3", "1/2", "1", "2"],
+  answer: "1/3"
+},
+{
+  question: "Evaluate: ∫₀² 2x dx",
+  options: ["4", "2", "6", "8"],
+  answer: "4"
+},
+{
+  question: "Evaluate: ∫₁² x dx",
+  options: ["3/2", "2", "1", "4"],
+  answer: "3/2"
+},
+{
+  question: "Evaluate: ∫₀π sin x dx",
+  options: ["2", "1", "0", "π"],
+  answer: "2"
+},
+{
+  question: "Evaluate: ∫₀π cos x dx",
+  options: ["0", "1", "2", "π"],
+  answer: "0"
+},
+{
+  question: "Find area under y=x from 0 to 2",
+  options: ["2", "4", "1", "3"],
+  answer: "2"
+},
+{
+  question: "Find area under y=x² from 0 to 1",
+  options: ["1/3", "1/2", "1", "2"],
+  answer: "1/3"
+},
+{
+  question: "Find ∫(2x+1) from 0 to 2",
+  options: ["6", "5", "4", "3"],
+  answer: "6"
+},
+{
+  question: "If ∫f(x)dx = x² + C, then f(x)=",
+  options: ["2x", "x", "x²", "1"],
+  answer: "2x"
+},
+
+{
+  question: "Find area under y = x from 0 to 4",
+  options: ["8", "16", "4", "12"],
+  answer: "8"
+},
+{
+  question: "Find area under y = x² from 0 to 2",
+  options: ["8/3", "4", "2", "16/3"],
+  answer: "8/3"
+},
+{
+  question: "Find area under y = 2x from 0 to 3",
+  options: ["9", "6", "3", "12"],
+  answer: "9"
+},
+{
+  question: "Find area under y = 3x² from 0 to 2",
+  options: ["8", "4", "6", "12"],
+  answer: "8"
+},
+{
+  question: "Find area under y = x + 1 from 0 to 2",
+  options: ["4", "3", "2", "5"],
+  answer: "4"
+},
+{
+  question: "Find area under y = x² + 1 from 0 to 1",
+  options: ["4/3", "1", "2", "3/2"],
+  answer: "4/3"
+},
+{
+  question: "Find area under y = 4x − x² from 0 to 4",
+  options: ["32/3", "16", "8", "24"],
+  answer: "32/3"
+},
+{
+  question: "Find area between y = x and x-axis from 0 to 3",
+  options: ["9/2", "9", "6", "3"],
+  answer: "9/2"
+},
+{
+  question: "Find area between y = x² and x-axis from 0 to 3",
+  options: ["9", "27", "3", "6"],
+  answer: "9"
+},
+{
+  question: "Find area between y = x and y = 0 from 1 to 3",
+  options: ["4", "3", "2", "6"],
+  answer: "4"
+},
+{
+  question: "Find area between y = x² and y = x from 0 to 1",
+  options: ["1/6", "1/2", "1/3", "1/4"],
+  answer: "1/6"
+},
+{
+  question: "Find area between y = x² and y = x from 0 to 2",
+  options: ["2/3", "4/3", "2", "1"],
+  answer: "2/3"
+},
+{
+  question: "Find area between y = 2x and y = x² from 0 to 2",
+  options: ["4/3", "2", "3", "1"],
+  answer: "4/3"
+},
+{
+  question: "Find area between y = x² and y = 4 from 0 to 2",
+  options: ["16/3", "8", "4", "12"],
+  answer: "16/3"
+},
+{
+  question: "Find area between y = 4 − x² and x-axis from −2 to 2",
+  options: ["16/3", "8", "4", "12"],
+  answer: "16/3"
+},
+{
+  question: "Find ∫₀² (x² + x) dx",
+  options: ["14/3", "6", "8/3", "4"],
+  answer: "14/3"
+},
+{
+  question: "Find ∫₀³ (x + 2) dx",
+  options: ["15/2", "6", "12", "9"],
+  answer: "15/2"
+},
+{
+  question: "Find ∫₁² (2x) dx",
+  options: ["3", "4", "2", "5"],
+  answer: "3"
+},
+{
+  question: "Find ∫₀¹ (3x² + 2) dx",
+  options: ["3", "2", "1", "4"],
+  answer: "3"
+},
+{
+  question: "Find ∫₀² (x³ − x) dx",
+  options: ["2", "4", "1", "3"],
+  answer: "2"
+},
+{
+  question: "Find ∫₀π (sin x + cos x) dx",
+  options: ["2", "1", "0", "π"],
+  answer: "2"
+},
+{
+  question: "Find ∫₀π sin x dx",
+  options: ["2", "1", "0", "π"],
+  answer: "2"
+},
+{
+  question: "Find ∫₀π cos x dx",
+  options: ["0", "1", "2", "π"],
+  answer: "0"
+},
+{
+  question: "Find area under y = x² from 1 to 2",
+  options: ["7/3", "8/3", "5/3", "2"],
+  answer: "7/3"
+},
+{
+  question: "Find area under y = 2x + 1 from 1 to 3",
+  options: ["10", "8", "6", "12"],
+  answer: "10"
+},
+{
+  question: "Find area between y = x² and y = 2x from 0 to 2",
+  options: ["4/3", "2", "1", "3"],
+  answer: "4/3"
+},
+{
+  question: "Find area under y = 1/x from 1 to e",
+  options: ["1", "e", "ln e", "0"],
+  answer: "1"
+},
+{
+  question: "Find ∫₀¹ x⁴ dx",
+  options: ["1/5", "1/4", "1/3", "1/2"],
+  answer: "1/5"
+},
+{
+  question: "Find ∫₀² x² dx",
+  options: ["8/3", "4", "2", "16/3"],
+  answer: "8/3"
+},
+{
+  question: "Find ∫₀³ x dx",
+  options: ["9/2", "9", "6", "3"],
+  answer: "9/2"
+},
+
+{
+  question: "Find magnitude of vector (3,4)",
+  options: ["5", "7", "4", "6"],
+  answer: "5"
+},
+{
+  question: "Find magnitude of vector (5,12)",
+  options: ["13", "17", "12", "25"],
+  answer: "13"
+},
+{
+  question: "Find magnitude of (1,1)",
+  options: ["√2", "2", "1", "√3"],
+  answer: "√2"
+},
+{
+  question: "Find magnitude of (6,8)",
+  options: ["10", "12", "14", "8"],
+  answer: "10"
+},
+{
+  question: "Find vector AB if A(1,2), B(4,6)",
+  options: ["(3,4)", "(−3,−4)", "(5,8)", "(2,4)"],
+  answer: "(3,4)"
+},
+{
+  question: "Find vector AB if A(2,3), B(5,7)",
+  options: ["(3,4)", "(5,7)", "(−3,−4)", "(2,4)"],
+  answer: "(3,4)"
+},
+{
+  question: "Find midpoint of A(2,4), B(6,8)",
+  options: ["(4,6)", "(2,6)", "(6,4)", "(3,5)"],
+  answer: "(4,6)"
+},
+{
+  question: "Find vector sum (1,2) + (3,4)",
+  options: ["(4,6)", "(3,6)", "(4,5)", "(2,4)"],
+  answer: "(4,6)"
+},
+{
+  question: "Find (2,3) − (1,1)",
+  options: ["(1,2)", "(3,4)", "(1,1)", "(2,2)"],
+  answer: "(1,2)"
+},
+{
+  question: "Find 2(3,4)",
+  options: ["(6,8)", "(3,8)", "(6,4)", "(2,4)"],
+  answer: "(6,8)"
+},
+{
+  question: "Find −(2,3)",
+  options: ["(−2,−3)", "(2,3)", "(−3,−2)", "(3,2)"],
+  answer: "(−2,−3)"
+},
+{
+  question: "Find dot product (1,2)·(3,4)",
+  options: ["11", "10", "12", "8"],
+  answer: "11"
+},
+{
+  question: "Find dot product (2,3)·(4,5)",
+  options: ["23", "20", "25", "18"],
+  answer: "23"
+},
+{
+  question: "If a·b = 0, vectors are:",
+  options: ["perpendicular", "parallel", "equal", "zero"],
+  answer: "perpendicular"
+},
+{
+  question: "Find angle between (1,0) and (0,1)",
+  options: ["90°", "0°", "45°", "180°"],
+  answer: "90°"
+},
+{
+  question: "Find unit vector of (3,4)",
+  options: ["(3/5,4/5)", "(4/5,3/5)", "(5,5)", "(1,1)"],
+  answer: "(3/5,4/5)"
+},
+{
+  question: "Find magnitude of unit vector",
+  options: ["1", "0", "2", "√2"],
+  answer: "1"
+},
+{
+  question: "Find scalar k if k(2,3)=(4,6)",
+  options: ["2", "3", "1", "4"],
+  answer: "2"
+},
+{
+  question: "Find vector parallel to (2,3)",
+  options: ["(4,6)", "(3,2)", "(1,1)", "(2,4)"],
+  answer: "(4,6)"
+},
+{
+  question: "Find vector perpendicular to (1,0)",
+  options: ["(0,1)", "(1,1)", "(2,0)", "(1,0)"],
+  answer: "(0,1)"
+},
+{
+  question: "Find magnitude of (0,5)",
+  options: ["5", "0", "10", "2"],
+  answer: "5"
+},
+{
+  question: "Find (1,2)+(−1,−2)",
+  options: ["(0,0)", "(2,4)", "(−2,−4)", "(1,1)"],
+  answer: "(0,0)"
+},
+{
+  question: "If |a|=5, |b|=4, and a·b=20, angle:",
+  options: ["0°", "90°", "45°", "60°"],
+  answer: "0°"
+},
+{
+  question: "If |a|=3, |b|=4, and a·b=0, angle:",
+  options: ["90°", "0°", "45°", "180°"],
+  answer: "90°"
+},
+{
+  question: "Find projection of (3,4) on (1,0)",
+  options: ["3", "4", "5", "2"],
+  answer: "3"
+},
+{
+  question: "Find magnitude of (2,−2)",
+  options: ["2√2", "4", "√2", "2"],
+  answer: "2√2"
+},
+{
+  question: "Find vector from (0,0) to (5,5)",
+  options: ["(5,5)", "(0,0)", "(−5,−5)", "(5,0)"],
+  answer: "(5,5)"
+},
+{
+  question: "Find 3(1,−2)",
+  options: ["(3,−6)", "(1,−6)", "(3,−2)", "(−3,6)"],
+  answer: "(3,−6)"
+},
+{
+  question: "Find dot product (0,1)·(1,0)",
+  options: ["0", "1", "2", "−1"],
+  answer: "0"
+},
+{
+  question: "If vectors are parallel, dot product is:",
+  options: ["maximum", "zero", "negative", "undefined"],
+  answer: "maximum"
+},
+
+{
+  question: "Find mean of 2,4,6,8",
+  options: ["5", "6", "4", "8"],
+  answer: "5"
+},
+{
+  question: "Find mean of 1,3,5,7,9",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "Find median of 2,4,6,8,10",
+  options: ["6", "5", "4", "8"],
+  answer: "6"
+},
+{
+  question: "Find range of 2,5,8,10",
+  options: ["8", "10", "6", "5"],
+  answer: "8"
+},
+{
+  question: "Find variance of 1,1,1,1",
+  options: ["0", "1", "2", "4"],
+  answer: "0"
+},
+{
+  question: "Find probability of head in one coin toss",
+  options: ["1/2", "1", "0", "2"],
+  answer: "1/2"
+},
+{
+  question: "Find probability of 3 in fair die",
+  options: ["1/6", "1/3", "1/2", "1"],
+  answer: "1/6"
+},
+{
+  question: "Find probability of even number in die",
+  options: ["1/2", "1/3", "2/3", "1"],
+  answer: "1/2"
+},
+{
+  question: "Find probability of getting tail",
+  options: ["1/2", "1", "0", "2"],
+  answer: "1/2"
+},
+{
+  question: "Total outcomes of two coins",
+  options: ["4", "2", "3", "6"],
+  answer: "4"
+},
+{
+  question: "Probability of two heads (2 coins)",
+  options: ["1/4", "1/2", "1/3", "1"],
+  answer: "1/4"
+},
+{
+  question: "Probability of at least one head (2 coins)",
+  options: ["3/4", "1/4", "1/2", "1"],
+  answer: "3/4"
+},
+{
+  question: "Total outcomes of two dice",
+  options: ["36", "12", "6", "24"],
+  answer: "36"
+},
+{
+  question: "Probability sum = 7 (two dice)",
+  options: ["1/6", "1/12", "1/36", "2/6"],
+  answer: "1/6"
+},
+{
+  question: "Probability of getting 1 on die",
+  options: ["1/6", "1/3", "1/2", "1"],
+  answer: "1/6"
+},
+
+{
+  question: "Find variance of constant data",
+  options: ["0", "1", "2", "3"],
+  answer: "0"
+},
+{
+  question: "Find probability of impossible event",
+  options: ["0", "1", "1/2", "2"],
+  answer: "0"
+},
+{
+  question: "Find probability of certain event",
+  options: ["1", "0", "1/2", "2"],
+  answer: "1"
+},
+{
+  question: "Probability lies between:",
+  options: ["0 and 1", "1 and 2", "−1 and 1", "0 and 2"],
+  answer: "0 and 1"
+},
+
+{
+  question: "Find median of 1,2,3,4,5",
+  options: ["3", "2", "4", "5"],
+  answer: "3"
+},
+{
+  question: "Find probability of odd number (die)",
+  options: ["1/2", "1/3", "2/3", "1"],
+  answer: "1/2"
+},
+{
+  question: "Find probability of getting 2 heads (3 coins)",
+  options: ["3/8", "1/4", "1/2", "1/8"],
+  answer: "3/8"
+},
+{
+  question: "Find total outcomes of 3 coins",
+  options: ["8", "6", "4", "12"],
+  answer: "8"
+},
+{
+  question: "Find mean of 10,20,30,40",
+  options: ["25", "20", "30", "40"],
+  answer: "25"
+},
+{
+  question: "Find range of 5,10,15",
+  options: ["10", "15", "5", "20"],
+  answer: "10"
+},
+{
+  question: "Find probability of red card (52 cards)",
+  options: ["1/2", "1/4", "1/13", "1"],
+  answer: "1/2"
+},
+
+{
+  question: "Add matrices [[1,2],[3,4]] + [[2,1],[0,1]]",
+  options: ["[[3,3],[3,5]]", "[[2,3],[3,4]]", "[[1,1],[3,5]]", "[[3,2],[3,5]]"],
+  answer: "[[3,3],[3,5]]"
+},
+{
+  question: "Multiply [[1,2],[3,4]] × [[1,0],[0,1]]",
+  options: ["same matrix", "zero matrix", "identity", "transpose"],
+  answer: "same matrix"
+},
+{
+  question: "Find determinant of [[2,3],[1,4]]",
+  options: ["5", "11", "8", "7"],
+  answer: "5"
+},
+{
+  question: "Find determinant of [[3,1],[2,2]]",
+  options: ["4", "5", "6", "3"],
+  answer: "4"
+},
+{
+  question: "Find inverse determinant condition:",
+  options: ["det ≠ 0", "det = 0", "det = 1", "det > 1"],
+  answer: "det ≠ 0"
+},
+{
+  question: "Solve using matrix: x+y=5, x−y=1",
+  options: ["x=3,y=2", "x=2,y=3", "x=4,y=1", "x=1,y=4"],
+  answer: "x=3,y=2"
+},
+{
+  question: "Reflection in x-axis changes (x,y) to:",
+  options: ["(x,−y)", "(−x,y)", "(y,x)", "(−x,−y)"],
+  answer: "(x,−y)"
+},
+{
+  question: "Reflection in y-axis:",
+  options: ["(−x,y)", "(x,−y)", "(y,x)", "(−x,−y)"],
+  answer: "(−x,y)"
+},
+{
+  question: "Translation by (2,3) moves (1,1) to:",
+  options: ["(3,4)", "(2,3)", "(1,4)", "(4,3)"],
+  answer: "(3,4)"
+},
+{
+  question: "Rotation 90° anticlockwise:",
+  options: ["(−y,x)", "(y,−x)", "(x,y)", "(−x,−y)"],
+  answer: "(−y,x)"
+},
+{
+  question: "If p=true, q=false, p∧q:",
+  options: ["false", "true", "undefined", "none"],
+  answer: "false"
+},
+{
+  question: "If p=true, q=false, p∨q:",
+  options: ["true", "false", "undefined", "none"],
+  answer: "true"
+},
+{
+  question: "If p→q when p=true q=false:",
+  options: ["false", "true", "undefined", "none"],
+  answer: "false"
+},
+{
+  question: "Convert 180° to radians",
+  options: ["π", "2π", "π/2", "π/4"],
+  answer: "π"
+},
+{
+  question: "Convert 90° to radians",
+  options: ["π/2", "π", "2π", "π/4"],
+  answer: "π/2"
+},
+{
+  question: "Arc length formula:",
+  options: ["rθ", "θ/r", "r/θ", "θ²"],
+  answer: "rθ"
+},
+{
+  question: "Area sector formula:",
+  options: ["1/2 r²θ", "rθ", "θ²", "2rθ"],
+  answer: "1/2 r²θ"
+},
+{
+  question: "Use sine rule: a/sinA =",
+  options: ["b/sinB", "bcosB", "b+sinB", "b−sinB"],
+  answer: "b/sinB"
+},
+{
+  question: "If a=5, b=7, C=60°, find c (cosine rule approx)",
+  options: ["~6", "~8", "~10", "~4"],
+  answer: "~6"
+},
+{
+  question: "Mean of grouped data uses:",
+  options: ["midpoint", "raw data", "sum only", "range"],
+  answer: "midpoint"
+},
+{
+  question: "Standard deviation measures:",
+  options: ["spread", "mean", "median", "mode"],
+  answer: "spread"
+},
+{
+  question: "If speed=distance/time, find speed for 100m in 10s",
+  options: ["10 m/s", "5 m/s", "20 m/s", "100 m/s"],
+  answer: "10 m/s"
+},
+{
+  question: "Acceleration =",
+  options: ["change in velocity/time", "distance/time", "force/mass", "velocity"],
+  answer: "change in velocity/time"
+},
+{
+  question: "Force =",
+  options: ["mass × acceleration", "mass/time", "velocity/time", "distance/time"],
+  answer: "mass × acceleration"
+},
+{
+  question: "If v=20 m/s, t=5s, acceleration:",
+  options: ["4 m/s²", "5 m/s²", "2 m/s²", "10 m/s²"],
+  answer: "4 m/s²"
+},
+{
+  question: "Find det [[1,2],[3,5]]",
+  options: ["−1", "1", "5", "7"],
+  answer: "−1"
+},
+{
+  question: "Inverse exists when determinant:",
+  options: ["≠0", "=0", ">1", "<1"],
+  answer: "≠0"
+},
+{
+  question: "Find translation (x+3,y−2) of (1,1)",
+  options: ["(4,−1)", "(3,−1)", "(1,−2)", "(4,1)"],
+  answer: "(4,−1)"
+},
+{
+  question: "If P(A)=0.5, P(A')=",
+  options: ["0.5", "1", "0", "0.25"],
+  answer: "0.5"
+},
+{
+  question: "If events are independent, P(A∩B)=",
+  options: ["P(A)P(B)", "P(A)+P(B)", "P(A−B)", "0"],
+  answer: "P(A)P(B)"
+},
+
+{
+  question: "The diagram shows a Venn diagram of sets A, B, and C. Which region represents A âˆ© B âˆ© C?",
+  image: "/images/addmath1.png",
+  options: ["Common intersection", "A only", "B only", "Outside region"],
+  answer: "Common intersection"
+},
+
+{
+  question: "The diagram shows a Venn diagram. Which law is illustrated by (A âˆª B)' = A' âˆ© B'?",
+  image: "/images/addmath2.png",
+  options: ["De Morganâ€™s law", "Associative law", "Commutative law", "Distributive law"],
+  answer: "De Morganâ€™s law"
+},
+
+
+{
+  question: "The diagram shows a function graph. What is the domain?",
+  image: "/images/addmath5.png",
+  options: ["All x values", "All y values", "Positive only", "Negative only"],
+  answer: "All x values"
+},
+
+{
+  question: "The diagram shows a quadratic graph. What is the axis of symmetry?",
+  image: "/images/addmath9.png",
+  options: ["x = -b/2a", "y = mx + c", "x = 0", "y = 0"],
+  answer: "x = -b/2a"
+},
+
+{
+  question: "The diagram shows a cubic function. What is the degree of the polynomial?",
+  image: "/images/addmath10.png",
+  options: ["3", "2", "1", "4"],
+  answer: "3"
+},
+
+{
+  question: "The diagram shows a cubic graph. How many real roots does the function have?",
+  image: "/images/addmath11.png",
+  options: ["3", "2", "1", "0"],
+  answer: "3"
+},
+
+
+{
+  question: "Using the remainder theorem, find the remainder when f(x)=2xÂ³+3xÂ²-5 is divided by (x-1).",
+  image: "/images/addmath13.png",
+  options: ["0", "5", "2", "-1"],
+  answer: "0"
+},
+
+{
+  question: "The diagram shows a polynomial graph. What is the turning point?",
+  image: "/images/addmath14.png",
+  options: ["Maximum or minimum point", "Intercept", "Root", "Gradient"],
+  answer: "Maximum or minimum point"
+},
+
+
+
+{
+  question: "The diagram shows a rational function. Where is the function undefined?",
+  image: "/images/addmath16.png",
+  options: ["Denominator = 0", "Numerator = 0", "x = 0", "y = 0"],
+  answer: "Denominator = 0"
+},
+
+{
+  question: "The diagram shows asymptotes of a rational function. What is a vertical asymptote?",
+  image: "/images/addmath17.png",
+  options: ["x = constant", "y = constant", "Origin", "Curve"],
+  answer: "x = constant"
+},
+
+{
+  question: "The diagram shows linear inequalities. What region represents the solution?",
+  image: "/images/addmath18.png",
+  options: ["Shaded region", "Line only", "Points only", "Outside region"],
+  answer: "Shaded region"
+},
+
+{
+  question: "The diagram shows feasible region in linear programming. What determines the optimal solution?",
+  image: "/images/addmath19.png",
+  options: ["Corner points", "Edges", "Centre", "Any point"],
+  answer: "Corner points"
+},
+
+{
+  question: "The diagram shows simultaneous inequalities. What is the solution set?",
+  image: "/images/addmath20.png",
+  options: ["Intersection region", "Union", "Separate regions", "Lines"],
+  answer: "Intersection region"
+},
+
+{
+  question: "The diagram shows a right-angled triangle. What is sin Î¸?",
+  image: "/images/addmath21.png",
+  options: ["Opp/Hyp", "Adj/Hyp", "Opp/Adj", "Hyp/Adj"],
+  answer: "Opp/Hyp"
+},
+
+{
+  question: "The diagram shows a triangle. Which ratio represents cos Î¸?",
+  image: "/images/addmath22.png",
+  options: ["Adj/Hyp", "Opp/Hyp", "Opp/Adj", "Hyp/Opp"],
+  answer: "Adj/Hyp"
+},
+
+{
+  question: "The diagram shows a unit circle. What is the value of sin 90Â°?",
+  image: "/images/addmath23.png",
+  options: ["1", "0", "-1", "1/2"],
+  answer: "1"
+},
+
+{
+  question: "The diagram shows a unit circle. What is cos 0Â°?",
+  image: "/images/addmath24.png",
+  options: ["1", "0", "-1", "1/2"],
+  answer: "1"
+},
+
+{
+  question: "The diagram shows sin x graph. What is the amplitude?",
+  image: "/images/addmath25.png",
+  options: ["1", "2", "0", "Ï€"],
+  answer: "1"
+},
+
+{
+  question: "The diagram shows tan x graph. Where are the asymptotes located?",
+  image: "/images/addmath26.png",
+  options: ["x = 90Â° + n180Â°", "x = 0", "x = 180Â°", "x = 360Â°"],
+  answer: "x = 90Â° + n180Â°"
+},
+
+{
+  question: "The diagram shows triangle ABC. Which rule is applied?",
+  image: "/images/addmath27.png",
+  options: ["Sine rule", "Cosine rule", "Pythagoras", "Identity"],
+  answer: "Sine rule"
+},
+
+{
+  question: "The diagram shows triangle with 3 sides known. Which rule is used?",
+  image: "/images/addmath28.png",
+  options: ["Cosine rule", "Sine rule", "Tan rule", "Identity"],
+  answer: "Cosine rule"
+},
+
+{
+  question: "The diagram shows angle sum. What identity is used?",
+  image: "/images/addmath29.png",
+  options: ["sin(A+B)", "cos(A+B)", "tan(A+B)", "All"],
+  answer: "sin(A+B)"
+},
+
+{
+  question: "The diagram shows graph of y = cos x. What is the period?",
+  image: "/images/addmath30.png",
+  options: ["360Â°", "180Â°", "90Â°", "720Â°"],
+  answer: "360Â°"
+},
+
+{
+  question: "The diagram shows a curve with a tangent at point P. What does the gradient represent?",
+  image: "/images/addmath31.png",
+  options: ["Rate of change", "Area", "Distance", "Intercept"],
+  answer: "Rate of change"
+},
+
+{
+  question: "The diagram shows a curve. At which point is the gradient zero?",
+  image: "/images/addmath32.png",
+  options: ["Turning point", "Intercept", "End point", "Any point"],
+  answer: "Turning point"
+},
+
+{
+  question: "The diagram shows a maximum point on a curve. What is true at this point?",
+  image: "/images/addmath33.png",
+  options: ["Gradient = 0", "Gradient > 0", "Gradient < 0", "Undefined"],
+  answer: "Gradient = 0"
+},
+
+{
+  question: "The diagram shows a minimum point. What is true about the curve?",
+  image: "/images/addmath34.png",
+  options: ["Slope changes from negative to positive", "Slope always positive", "Slope constant", "Slope zero everywhere"],
+  answer: "Slope changes from negative to positive"
+},
+
+{
+  question: "The diagram shows a normal to a curve. What is the relationship with tangent?",
+  image: "/images/addmath35.png",
+  options: ["Perpendicular", "Parallel", "Equal", "Opposite"],
+  answer: "Perpendicular"
+},
+
+{
+  question: "The diagram shows area under a curve. What does it represent?",
+  image: "/images/addmath36.png",
+  options: ["Integration", "Differentiation", "Gradient", "Intercept"],
+  answer: "Integration"
+},
+
+{
+  question: "The diagram shows a curve and shaded region. How is the area calculated?",
+  image: "/images/addmath37.png",
+  options: ["Integration", "Differentiation", "Multiplication", "Division"],
+  answer: "Integration"
+},
+
+{
+  question: "The diagram shows a curve increasing. What is the sign of the gradient?",
+  image: "/images/addmath38.png",
+  options: ["Positive", "Negative", "Zero", "Undefined"],
+  answer: "Positive"
+},
+
+{
+  question: "The diagram shows a curve decreasing. What is the gradient?",
+  image: "/images/addmath39.png",
+  options: ["Negative", "Positive", "Zero", "Constant"],
+  answer: "Negative"
+},
+
+{
+  question: "The diagram shows point of inflection. What happens at this point?",
+  image: "/images/addmath40.png",
+  options: ["Curve changes concavity", "Gradient is zero", "Maximum occurs", "Minimum occurs"],
+  answer: "Curve changes concavity"
+},
+
+{
+  question: "The diagram shows vectors AB and BC. What is the resultant vector AC?",
+  image: "/images/addmath41.png",
+  options: ["AB + BC", "AB - BC", "BC - AB", "AC only"],
+  answer: "AB + BC"
+},
+
+{
+  question: "The diagram shows a triangle with vectors. Which rule is applied?",
+  image: "/images/addmath42.png",
+  options: ["Triangle law", "Parallelogram law", "Cosine rule", "Sine rule"],
+  answer: "Triangle law"
+},
+
+{
+  question: "The diagram shows two vectors forming a parallelogram. What is the diagonal?",
+  image: "/images/addmath43.png",
+  options: ["Resultant vector", "Difference vector", "Zero vector", "Unit vector"],
+  answer: "Resultant vector"
+},
+
+{
+  question: "The diagram shows vectors in opposite directions. What is the result?",
+  image: "/images/addmath44.png",
+  options: ["Zero vector", "Maximum vector", "Positive vector", "Negative vector"],
+  answer: "Zero vector"
+},
+
+{
+  question: "The diagram shows a force acting on a body. What does the arrow represent?",
+  image: "/images/addmath45.png",
+  options: ["Magnitude and direction", "Mass", "Speed", "Time"],
+  answer: "Magnitude and direction"
+},
+
+{
+  question: "The diagram shows forces in equilibrium. What is the resultant force?",
+  image: "/images/addmath46.png",
+  options: ["Zero", "Maximum", "Minimum", "Undefined"],
+  answer: "Zero"
+},
+
+{
+  question: "The diagram shows motion graph (distance-time). What does slope represent?",
+  image: "/images/addmath47.png",
+  options: ["Speed", "Acceleration", "Force", "Energy"],
+  answer: "Speed"
+},
+
+{
+  question: "The diagram shows velocity-time graph. What does area under the graph represent?",
+  image: "/images/addmath48.png",
+  options: ["Displacement", "Speed", "Acceleration", "Force"],
+  answer: "Displacement"
+},
+
+{
+  question: "The diagram shows a triangle. Which theorem relates sides?",
+  image: "/images/addmath49.png",
+  options: ["Pythagoras theorem", "Sine rule", "Cosine rule", "Vector rule"],
+  answer: "Pythagoras theorem"
+},
+
+{
+  question: "The diagram shows angles in a triangle. What is the sum of angles?",
+  image: "/images/addmath50.png",
+  options: ["180°", "360°", "90°", "270°"],
+  answer: "180°"
+}
 ];
 
 export default addMathsQuestions;
-
-
-
-
-
-
 
 

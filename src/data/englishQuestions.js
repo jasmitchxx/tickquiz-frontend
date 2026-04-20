@@ -1,1761 +1,1951 @@
 const englishQuestions = [
-  {
-    question: "Which of the following is in the simple past tense?",
-    options: [
-      "He eats rice.",
-      "He ate rice.",
-      "He will eat rice.",
-      "He is eating rice."
-    ],
-    answer: "He ate rice."
-  },
-  {
-    question: "Identify the past continuous form:",
-    options: [
-      "She sang a song.",
-      "She had sung a song.",
-      "She was singing a song.",
-      "She will sing a song."
-    ],
-    answer: "She was singing a song."
-  },
-  {
-    question: "Choose the sentence in the past perfect tense:",
-    options: [
-      "He has written the letter.",
-      "He had written the letter.",
-      "He wrote the letter.",
-      "He writes the letter."
-    ],
-    answer: "He had written the letter."
-  },
-  {
-    question: "Which sentence is in the past perfect continuous tense?",
-    options: [
-      "She had been reading for two hours.",
-      "She was reading a book.",
-      "She reads every day.",
-      "She had read the book."
-    ],
-    answer: "She had been reading for two hours."
-  },
-  {
-    question: "Which of the following expresses future time?",
-    options: [
-      "I go to school.",
-      "I will go to school.",
-      "I have gone to school.",
-      "I went to school."
-    ],
-    answer: "I will go to school."
-  },
-  {
-    question: "Identify the sentence that uses the future perfect tense:",
-    options: [
-      "I will be going to town.",
-      "I will have finished by noon.",
-      "I will go to the market.",
-      "I shall go now."
-    ],
-    answer: "I will have finished by noon."
-  },
-  {
-    question: "Which word in the sentence is an adverb? 'She sings beautifully.'",
-    options: [
-      "She",
-      "Sings",
-      "Beautifully",
-      "Song"
-    ],
-    answer: "Beautifully"
-  },
-  {
-    question: "Identify the sentence with an adverb of frequency:",
-    options: [
-      "He quickly ran home.",
-      "He always comes late.",
-      "He ran slowly.",
-      "He spoke softly."
-    ],
-    answer: "He always comes late."
-  },
-  {
-    question: "Choose the correct preposition: 'He is good ___ mathematics.'",
-    options: [
-      "in",
-      "at",
-      "on",
-      "with"
-    ],
-    answer: "at"
-  },
-  {
-    question: "Identify the preposition in this sentence: 'The book is under the table.'",
-    options: [
-      "book",
-      "is",
-      "under",
-      "table"
-    ],
-    answer: "under"
-  },
-  {
-    question: "Which of the following is in the simple past tense?",
-    options: ["He eats rice.", "He ate rice.", "He will eat rice.", "He is eating rice."],
-    answer: "He ate rice."
-  },
-  {
-    question: "Identify the past continuous form:",
-    options: ["She sang a song.", "She had sung a song.", "She was singing a song.", "She will sing a song."],
-    answer: "She was singing a song."
-  },
-  {
-    question: "Choose the sentence in the past perfect tense:",
-    options: ["He has written the letter.", "He had written the letter.", "He wrote the letter.", "He writes the letter."],
-    answer: "He had written the letter."
-  },
-  {
-    question: "Which sentence is in the past perfect continuous tense?",
-    options: ["She had been reading for two hours.", "She was reading a book.", "She reads every day.", "She had read the book."],
-    answer: "She had been reading for two hours."
-  },
 
-  // Future Time
-  {
-    question: "Which of the following expresses future time?",
-    options: ["I go to school.", "I will go to school.", "I have gone to school.", "I went to school."],
-    answer: "I will go to school."
-  },
-  {
-    question: "Identify the sentence that uses the future perfect tense:",
-    options: ["I will be going to town.", "I will have finished by noon.", "I will go to the market.", "I shall go now."],
-    answer: "I will have finished by noon."
-  },
 
-  // Adverbs
-  {
-    question: "Which word in the sentence is an adverb? 'She sings beautifully.'",
-    options: ["She", "Sings", "Beautifully", "Song"],
-    answer: "Beautifully"
-  },
-  {
-    question: "Identify the sentence with an adverb of frequency:",
-    options: ["He quickly ran home.", "He always comes late.", "He ran slowly.", "He spoke softly."],
-    answer: "He always comes late."
-  },
+{
+  question: "My father ___ a teacher.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The children ___ playing outside.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "She has ___ her bag.",
+  options: ["lose", "lost", "losing", "loses"],
+  answer: "lost"
+},
+{
+  question: "We ___ the work yesterday.",
+  options: ["finish", "finished", "finishing", "finishes"],
+  answer: "finished"
+},
+{
+  question: "Kofi and Kojo ___ friends.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "The teacher ___ the lesson.",
+  options: ["explain", "explains", "explained", "explaining"],
+  answer: "explains"
+},
+{
+  question: "I ___ watching TV when he came.",
+  options: ["was", "were", "is", "be"],
+  answer: "was"
+},
+{
+  question: "They ___ already left.",
+  options: ["has", "have", "had", "having"],
+  answer: "have"
+},
+{
+  question: "A dog ___ barking loudly.",
+  options: ["is", "are", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Everyone ___ happy.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The man ___ eating.",
+  options: ["is", "are", "were", "be"],
+  answer: "is"
+},
+{
+  question: "She ___ a letter now.",
+  options: ["write", "writes", "is writing", "written"],
+  answer: "is writing"
+},
+{
+  question: "We ___ our work already.",
+  options: ["finish", "have finished", "finished", "finishing"],
+  answer: "have finished"
+},
+{
+  question: "He ___ football every Sunday.",
+  options: ["play", "plays", "played", "playing"],
+  answer: "plays"
+},
+{
+  question: "The baby ___ crying.",
+  options: ["is", "are", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Ama ___ to the market.",
+  options: ["go", "goes", "went", "going"],
+  answer: "goes"
+},
+{
+  question: "We ___ studying English.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "He ___ never been there.",
+  options: ["has", "have", "had", "having"],
+  answer: "has"
+},
+{
+  question: "The girl ___ singing.",
+  options: ["is", "are", "were", "be"],
+  answer: "is"
+},
+{
+  question: "I ___ a book yesterday.",
+  options: ["read", "reads", "reading", "readed"],
+  answer: "read"
+},
+{
+  question: "They ___ going home.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Kofi ___ eaten.",
+  options: ["has", "have", "had", "having"],
+  answer: "has"
+},
+{
+  question: "We ___ to school daily.",
+  options: ["go", "goes", "went", "gone"],
+  answer: "go"
+},
+{
+  question: "She ___ finished eating.",
+  options: ["has", "have", "had", "having"],
+  answer: "has"
+},
+{
+  question: "The boys ___ running.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "I ___ tired.",
+  options: ["is", "am", "are", "be"],
+  answer: "am"
+},
+{
+  question: "You ___ late.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "He ___ a car.",
+  options: ["have", "has", "had", "having"],
+  answer: "has"
+},
+{
+  question: "We ___ seen him.",
+  options: ["has", "have", "had", "having"],
+  answer: "have"
+},
+{
+  question: "The dog ___ barking.",
+  options: ["is", "are", "was", "be"],
+  answer: "is"
+},
+
+{
+  question: "Neither the teacher nor the students ___ aware of the change.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "The number of applicants ___ increasing every year.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "A number of students ___ absent today.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "By this time next year, she ___ her degree.",
+  options: ["completes", "will complete", "will have completed", "has completed"],
+  answer: "will have completed"
+},
+{
+  question: "Hardly had he arrived ___ the rain started.",
+  options: ["when", "than", "that", "then"],
+  answer: "when"
+},
+{
+  question: "No sooner had they left ___ the accident occurred.",
+  options: ["when", "than", "that", "then"],
+  answer: "than"
+},
+{
+  question: "If he ___ harder, he would have passed.",
+  options: ["studies", "studied", "had studied", "study"],
+  answer: "had studied"
+},
+{
+  question: "Were I you, I ___ the offer.",
+  options: ["accept", "would accept", "accepted", "will accept"],
+  answer: "would accept"
+},
+{
+  question: "She behaves as if she ___ everything.",
+  options: ["knows", "knew", "known", "know"],
+  answer: "knew"
+},
+{
+  question: "It is high time we ___ home.",
+  options: ["go", "went", "gone", "going"],
+  answer: "went"
+},
+{
+  question: "The committee ___ divided in their opinions.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Bread and butter ___ his favorite meal.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Each of the players ___ given a medal.",
+  options: ["were", "are", "was", "have"],
+  answer: "was"
+},
+{
+  question: "Either the manager or the workers ___ responsible.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "The news ___ surprising.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Mathematics ___ my best subject.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The police ___ investigating the case.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Ten dollars ___ enough for the book.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Not only the teacher but also the students ___ excited.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "He, as well as his friends, ___ present.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "She would rather you ___ earlier.",
+  options: ["come", "came", "coming", "comes"],
+  answer: "came"
+},
+{
+  question: "If I ___ you, I would reconsider.",
+  options: ["am", "were", "was", "be"],
+  answer: "were"
+},
+{
+  question: "The more he studies, the ___ he becomes.",
+  options: ["intelligent", "more intelligent", "most intelligent", "intelligence"],
+  answer: "more intelligent"
+},
+{
+  question: "Scarcely had he spoken ___ they interrupted him.",
+  options: ["when", "than", "that", "then"],
+  answer: "when"
+},
+{
+  question: "She is one of the girls who ___ always punctual.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "This is the only one of the boys who ___ completed the task.",
+  options: ["have", "has", "had", "having"],
+  answer: "has"
+},
+{
+  question: "I wish I ___ taller.",
+  options: ["am", "were", "was", "be"],
+  answer: "were"
+},
+{
+  question: "He talks as though he ___ the owner.",
+  options: ["is", "was", "were", "be"],
+  answer: "were"
+},
+{
+  question: "If she ___ earlier, she would catch the bus.",
+  options: ["leaves", "left", "had left", "leave"],
+  answer: "left"
+},
+{
+  question: "Neither of the answers ___ correct.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "A bouquet of flowers ___ on the table.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The quality of the goods ___ poor.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "My friend and colleague ___ arriving today.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The teacher together with the students ___ going on a trip.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "It is required that every student ___ present.",
+  options: ["is", "be", "was", "are"],
+  answer: "be"
+},
+{
+  question: "He demanded that she ___ immediately.",
+  options: ["leave", "leaves", "left", "leaving"],
+  answer: "leave"
+},
+{
+  question: "She suggested that he ___ harder.",
+  options: ["study", "studies", "studied", "studying"],
+  answer: "study"
+},
+{
+  question: "The jury ___ divided in their verdict.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Time and tide ___ for no man.",
+  options: ["wait", "waits", "waiting", "waited"],
+  answer: "wait"
+},
+{
+  question: "The rich ___ getting richer.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+
+{
+  question: "Neither the principal nor the teachers ___ aware of the new policy.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "The number of candidates ___ increased significantly.",
+  options: ["have", "has", "are", "were"],
+  answer: "has"
+},
+{
+  question: "A number of issues ___ yet to be resolved.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "By next month, she ___ in this office for ten years.",
+  options: ["works", "will work", "will have worked", "has worked"],
+  answer: "will have worked"
+},
+{
+  question: "Hardly had the meeting started ___ the lights went off.",
+  options: ["when", "than", "that", "then"],
+  answer: "when"
+},
+{
+  question: "No sooner had he entered ___ everyone stood up.",
+  options: ["when", "than", "that", "then"],
+  answer: "than"
+},
+{
+  question: "If she ___ the instructions, she would not have failed.",
+  options: ["follows", "followed", "had followed", "follow"],
+  answer: "had followed"
+},
+{
+  question: "Were he more careful, he ___ fewer mistakes.",
+  options: ["makes", "would make", "made", "will make"],
+  answer: "would make"
+},
+{
+  question: "She speaks as if she ___ the whole story.",
+  options: ["knows", "knew", "known", "know"],
+  answer: "knew"
+},
+{
+  question: "It is time we ___ the matter seriously.",
+  options: ["take", "took", "taken", "taking"],
+  answer: "took"
+},
+{
+  question: "The committee ___ divided in its opinion.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Bread and eggs ___ his usual breakfast.",
+  options: ["are", "is", "was", "be"],
+  answer: "is"
+},
+{
+  question: "Each of the candidates ___ given equal opportunity.",
+  options: ["were", "are", "was", "have"],
+  answer: "was"
+},
+{
+  question: "Either the manager or his assistants ___ to blame.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "The information ___ not accurate.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Physics ___ considered a difficult subject.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "The police ___ searching the area.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Five thousand cedis ___ a large amount.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "Not only the players but also the coach ___ satisfied.",
+  options: ["is", "are", "was", "be"],
+  answer: "is"
+},
+{
+  question: "The teacher, along with the students, ___ attending the seminar.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+
+{
+  question: "Identify the error: She did not went to school yesterday.",
+  options: ["did not", "went", "school", "yesterday"],
+  answer: "went"
+},
+{
+  question: "Identify the error: He has ate the food already.",
+  options: ["has", "ate", "food", "already"],
+  answer: "ate"
+},
+{
+  question: "Identify the error: The teacher along with the students are going.",
+  options: ["teacher", "along with", "are", "going"],
+  answer: "are"
+},
+{
+  question: "Identify the error: Each of the boys have a pen.",
+  options: ["each", "boys", "have", "pen"],
+  answer: "have"
+},
+{
+  question: "Identify the error: She is more smarter than her sister.",
+  options: ["is", "more", "smarter", "than"],
+  answer: "more"
+},
+{
+  question: "Choose the correct sentence:",
+  options: [
+    "He donâ€™t know the answer",
+    "He doesnâ€™t knows the answer",
+    "He doesnâ€™t know the answer",
+    "He not know the answer"
+  ],
+  answer: "He doesnâ€™t know the answer"
+},
+{
+  question: "Choose the correct sentence:",
+  options: [
+    "I am used to wake early",
+    "I am used to waking early",
+    "I am use to waking early",
+    "I am used waking early"
+  ],
+  answer: "I am used to waking early"
+},
+{
+  question: "Identify the error: She prefers tea than coffee.",
+  options: ["prefers", "tea", "than", "coffee"],
+  answer: "than"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "He is good in Mathematics",
+    "He is good at Mathematics",
+    "He is good on Mathematics",
+    "He is good with Mathematics"
+  ],
+  answer: "He is good at Mathematics"
+},
+{
+  question: "Identify the error: One of the girls have lost her book.",
+  options: ["one", "girls", "have", "lost"],
+  answer: "have"
+},
+{
+  question: "Identify the error: The equipments are new.",
+  options: ["equipments", "are", "new", "the"],
+  answer: "equipments"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "She is married with a doctor",
+    "She is married to a doctor",
+    "She is married by a doctor",
+    "She is married from a doctor"
+  ],
+  answer: "She is married to a doctor"
+},
+{
+  question: "Identify the error: I am looking forward to see you.",
+  options: ["looking", "forward", "to see", "you"],
+  answer: "to see"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "He insisted to go",
+    "He insisted on going",
+    "He insisted go",
+    "He insisted for going"
+  ],
+  answer: "He insisted on going"
+},
+{
+  question: "Identify the error: She has less books than me.",
+  options: ["has", "less", "books", "me"],
+  answer: "less"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "Between you and I",
+    "Between you and me",
+    "Between I and you",
+    "Between me and I"
+  ],
+  answer: "Between you and me"
+},
+{
+  question: "Identify the error: He is capable to do the work.",
+  options: ["capable", "to do", "work", "he"],
+  answer: "to do"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "She is afraid from dogs",
+    "She is afraid of dogs",
+    "She is afraid on dogs",
+    "She is afraid with dogs"
+  ],
+  answer: "She is afraid of dogs"
+},
+{
+  question: "Identify the error: The sceneries are beautiful.",
+  options: ["sceneries", "are", "beautiful", "the"],
+  answer: "sceneries"
+},
+{
+  question: "Correct sentence:",
+  options: [
+    "He denied to steal the money",
+    "He denied stealing the money",
+    "He denied steal the money",
+    "He denied for stealing the money"
+  ],
+  answer: "He denied stealing the money"
+},
+
+{
+  question: "He is fond ___ playing football.",
+  options: ["of", "in", "on", "with"],
+  answer: "of"
+},
+{
+  question: "She is married ___ a doctor.",
+  options: ["with", "to", "by", "from"],
+  answer: "to"
+},
+{
+  question: "We arrived ___ the airport early.",
+  options: ["in", "at", "on", "to"],
+  answer: "at"
+},
+{
+  question: "He insisted ___ paying the bill.",
+  options: ["to", "on", "for", "at"],
+  answer: "on"
+},
+{
+  question: "She is afraid ___ snakes.",
+  options: ["of", "from", "on", "with"],
+  answer: "of"
+},
+{
+  question: "He is good ___ Mathematics.",
+  options: ["in", "on", "at", "with"],
+  answer: "at"
+},
+{
+  question: "The book belongs ___ me.",
+  options: ["to", "with", "for", "at"],
+  answer: "to"
+},
+{
+  question: "He is tired ___ working.",
+  options: ["from", "of", "with", "by"],
+  answer: "of"
+},
+{
+  question: "She apologized ___ being late.",
+  options: ["for", "to", "with", "at"],
+  answer: "for"
+},
+{
+  question: "He is interested ___ music.",
+  options: ["on", "in", "at", "with"],
+  answer: "in"
+},
+{
+  question: "Choose the correct idiom: He finally kicked the bucket.",
+  options: ["died", "ran away", "won", "failed"],
+  answer: "died"
+},
+{
+  question: "Choose the correct idiom: She spilled the beans.",
+  options: ["revealed a secret", "cooked food", "made a mess", "cried"],
+  answer: "revealed a secret"
+},
+{
+  question: "Choose the correct idiom: He is under the weather.",
+  options: ["sick", "happy", "angry", "busy"],
+  answer: "sick"
+},
+{
+  question: "Choose the correct idiom: They hit the nail on the head.",
+  options: ["correct", "wrong", "angry", "late"],
+  answer: "correct"
+},
+{
+  question: "Choose the correct idiom: He let the cat out of the bag.",
+  options: ["revealed secret", "caught animal", "ran away", "lied"],
+  answer: "revealed secret"
+},
+{
+  question: "Choose the correct idiom: She is on cloud nine.",
+  options: ["very happy", "sad", "angry", "confused"],
+  answer: "very happy"
+},
+{
+  question: "Choose the correct idiom: He broke the ice.",
+  options: ["started conversation", "destroyed", "fell", "failed"],
+  answer: "started conversation"
+},
+{
+  question: "Choose the correct idiom: They burned the midnight oil.",
+  options: ["studied late", "burned house", "slept", "worked morning"],
+  answer: "studied late"
+},
+{
+  question: "Choose the correct idiom: She once in a blue moon visits.",
+  options: ["rarely", "often", "daily", "always"],
+  answer: "rarely"
+},
+{
+  question: "Choose the correct idiom: He is a black sheep.",
+  options: ["bad member", "good member", "leader", "strong"],
+  answer: "bad member"
+},
+
+{
+  question: "The managerâ€™s decision was arbitrary. 'Arbitrary' means:",
+  options: ["random", "planned", "fair", "legal"],
+  answer: "random"
+},
+{
+  question: "He gave a vague explanation. 'Vague' means:",
+  options: ["unclear", "detailed", "correct", "precise"],
+  answer: "unclear"
+},
+{
+  question: "The results were astounding. 'Astounding' means:",
+  options: ["surprising", "boring", "expected", "simple"],
+  answer: "surprising"
+},
+{
+  question: "She is very diligent in her work. 'Diligent' means:",
+  options: ["hardworking", "lazy", "careless", "slow"],
+  answer: "hardworking"
+},
+{
+  question: "The boy was reprimanded for his actions. 'Reprimanded' means:",
+  options: ["scolded", "praised", "ignored", "rewarded"],
+  answer: "scolded"
+},
+{
+  question: "He is notorious for lying. 'Notorious' means:",
+  options: ["well-known (bad)", "famous (good)", "unknown", "honest"],
+  answer: "well-known (bad)"
+},
+{
+  question: "Her answer was concise. 'Concise' means:",
+  options: ["brief", "long", "confusing", "incorrect"],
+  answer: "brief"
+},
+{
+  question: "The task was tedious. 'Tedious' means:",
+  options: ["boring", "easy", "exciting", "short"],
+  answer: "boring"
+},
+{
+  question: "He is very arrogant. 'Arrogant' means:",
+  options: ["proud", "humble", "kind", "polite"],
+  answer: "proud"
+},
+{
+  question: "She was reluctant to speak. 'Reluctant' means:",
+  options: ["unwilling", "eager", "happy", "ready"],
+  answer: "unwilling"
+},
+{
+  question: "Choose the opposite of 'abundant':",
+  options: ["scarce", "plenty", "many", "full"],
+  answer: "scarce"
+},
+{
+  question: "Choose the opposite of 'expand':",
+  options: ["contract", "grow", "increase", "develop"],
+  answer: "contract"
+},
+{
+  question: "Choose the opposite of 'ancient':",
+  options: ["modern", "old", "historic", "aged"],
+  answer: "modern"
+},
+{
+  question: "Choose the opposite of 'generous':",
+  options: ["selfish", "kind", "friendly", "giving"],
+  answer: "selfish"
+},
+{
+  question: "Choose the opposite of 'victory':",
+  options: ["defeat", "success", "win", "triumph"],
+  answer: "defeat"
+},
+{
+  question: "The weather was harsh. 'Harsh' means:",
+  options: ["severe", "mild", "pleasant", "soft"],
+  answer: "severe"
+},
+{
+  question: "The speech was inspiring. 'Inspiring' means:",
+  options: ["motivating", "boring", "confusing", "dull"],
+  answer: "motivating"
+},
+{
+  question: "He made a deliberate mistake. 'Deliberate' means:",
+  options: ["intentional", "accidental", "careless", "quick"],
+  answer: "intentional"
+},
+{
+  question: "She showed compassion. 'Compassion' means:",
+  options: ["kindness", "anger", "fear", "hate"],
+  answer: "kindness"
+},
+{
+  question: "The plan was feasible. 'Feasible' means:",
+  options: ["possible", "impossible", "difficult", "wrong"],
+  answer: "possible"
+},
+
+{
+  question: "Passage: The student studied consistently and avoided distractions, which helped him excel in his exams.\n\nQuestion: What mainly led to his success?",
+  options: ["luck", "consistent study", "teacher support", "natural ability"],
+  answer: "consistent study"
+},
+{
+  question: "Passage: Although the road was rough, the driver maintained control of the vehicle.\n\nQuestion: What quality did the driver show?",
+  options: ["fear", "skill", "anger", "carelessness"],
+  answer: "skill"
+},
+{
+  question: "Passage: The manager reduced prices to attract more customers to the business.\n\nQuestion: Why were prices reduced?",
+  options: ["to increase costs", "to attract customers", "to reduce profit", "to compete poorly"],
+  answer: "to attract customers"
+},
+{
+  question: "Passage: The boy refused to apologize despite being clearly at fault.\n\nQuestion: What trait does the boy display?",
+  options: ["honesty", "stubbornness", "kindness", "fear"],
+  answer: "stubbornness"
+},
+{
+  question: "Passage: The team worked together effectively, leading to a successful outcome.\n\nQuestion: What caused their success?",
+  options: ["individual effort", "teamwork", "luck", "resources"],
+  answer: "teamwork"
+},
+{
+  question: "Passage: She spoke softly so as not to disturb others in the room.\n\nQuestion: Why did she speak softly?",
+  options: ["fear", "respect", "anger", "weakness"],
+  answer: "respect"
+},
+{
+  question: "Passage: The farmer harvested more crops due to adequate rainfall during the season.\n\nQuestion: What contributed to the high yield?",
+  options: ["fertilizer", "rainfall", "labor", "tools"],
+  answer: "rainfall"
+},
+{
+  question: "Passage: He ignored the warning signs and continued the dangerous activity.\n\nQuestion: What does this show?",
+  options: ["wisdom", "carelessness", "discipline", "intelligence"],
+  answer: "carelessness"
+},
+{
+  question: "Passage: The teacher explained the lesson clearly, making it easy for students to understand.\n\nQuestion: What made the lesson effective?",
+  options: ["student effort", "clear explanation", "short time", "notes"],
+  answer: "clear explanation"
+},
+{
+  question: "Passage: She saved money regularly to prepare for future needs.\n\nQuestion: What quality does she show?",
+  options: ["greed", "planning", "fear", "wastefulness"],
+  answer: "planning"
+},
+{
+  question: "Passage: The child cried after falling from the bicycle.\n\nQuestion: Why did the child cry?",
+  options: ["fear", "pain", "anger", "hunger"],
+  answer: "pain"
+},
+{
+  question: "Passage: The company introduced new technology, increasing efficiency significantly.\n\nQuestion: What was the effect of the new technology?",
+  options: ["reduced efficiency", "increased efficiency", "higher cost", "worker loss"],
+  answer: "increased efficiency"
+},
+{
+  question: "Passage: The athlete trained daily, which improved his performance.\n\nQuestion: What improved his performance?",
+  options: ["training", "diet", "coach", "luck"],
+  answer: "training"
+},
+{
+  question: "Passage: The environment was polluted due to improper waste disposal.\n\nQuestion: What caused the pollution?",
+  options: ["weather", "waste disposal", "industry", "traffic"],
+  answer: "waste disposal"
+},
+{
+  question: "Passage: She completed the task despite facing many challenges.\n\nQuestion: What does this show?",
+  options: ["weakness", "determination", "fear", "anger"],
+  answer: "determination"
+},
+{
+  question: "Passage: The match was postponed because of heavy rainfall.\n\nQuestion: Why was the match postponed?",
+  options: ["lack of players", "rainfall", "poor planning", "injury"],
+  answer: "rainfall"
+},
+{
+  question: "Passage: He answered confidently, even though he was unsure.\n\nQuestion: What does 'confidently' suggest?",
+  options: ["fear", "boldness", "confusion", "weakness"],
+  answer: "boldness"
+},
+{
+  question: "Passage: The students celebrated after passing their exams.\n\nQuestion: Why did they celebrate?",
+  options: ["they were tired", "they passed", "they traveled", "they rested"],
+  answer: "they passed"
+},
+{
+  question: "Passage: The road was slippery, so drivers reduced speed.\n\nQuestion: Why did drivers slow down?",
+  options: ["traffic", "slippery road", "police", "darkness"],
+  answer: "slippery road"
+},
+{
+  question: "Passage: The boy hesitated before answering because he was unsure.\n\nQuestion: Why did he hesitate?",
+  options: ["confidence", "uncertainty", "anger", "fear"],
+  answer: "uncertainty"
+},
+
+{
+  question: "Passage: Technology has improved communication but has also reduced face-to-face interaction.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Technology improves communication but reduces personal interaction",
+    "Technology is bad",
+    "Communication is slow",
+    "People do not talk anymore"
+  ],
+  answer: "Technology improves communication but reduces personal interaction"
+},
+{
+  question: "Passage: Regular exercise improves health, increases energy, and reduces stress.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Exercise has many health benefits",
+    "Exercise is stressful",
+    "Exercise wastes time",
+    "Exercise is difficult"
+  ],
+  answer: "Exercise has many health benefits"
+},
+{
+  question: "Passage: Discipline and consistency help students achieve success more than natural intelligence alone.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Success depends more on discipline than intelligence",
+    "Intelligence is everything",
+    "Students are lazy",
+    "Success is impossible"
+  ],
+  answer: "Success depends more on discipline than intelligence"
+},
+{
+  question: "Passage: Pollution from factories and vehicles has led to environmental damage and health problems.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Pollution causes environmental and health issues",
+    "Factories are useful",
+    "Vehicles are fast",
+    "Health is improving"
+  ],
+  answer: "Pollution causes environmental and health issues"
+},
+{
+  question: "Passage: Saving money regularly helps individuals prepare for emergencies and future needs.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Saving money is important for the future",
+    "Money is not useful",
+    "Spending is better",
+    "People save daily"
+  ],
+  answer: "Saving money is important for the future"
+},
+{
+  question: "Passage: Teamwork improves productivity because people combine skills and support one another.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Teamwork increases productivity",
+    "Working alone is better",
+    "People dislike teamwork",
+    "Skills are useless"
+  ],
+  answer: "Teamwork increases productivity"
+},
+{
+  question: "Passage: Reading regularly expands vocabulary, improves comprehension, and develops critical thinking.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Reading improves language and thinking skills",
+    "Reading is boring",
+    "Reading wastes time",
+    "Reading is difficult"
+  ],
+  answer: "Reading improves language and thinking skills"
+},
+{
+  question: "Passage: Poor time management leads to stress, missed deadlines, and reduced performance.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Poor time management causes problems",
+    "Time is not important",
+    "Deadlines are useless",
+    "Stress is good"
+  ],
+  answer: "Poor time management causes problems"
+},
+{
+  question: "Passage: Good leadership involves communication, decision-making, and responsibility.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Leadership requires key skills",
+    "Leaders talk too much",
+    "Leaders are strict",
+    "Leadership is easy"
+  ],
+  answer: "Leadership requires key skills"
+},
+{
+  question: "Passage: Education provides knowledge, builds character, and prepares individuals for the future.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Education is essential for development",
+    "Education is difficult",
+    "Education is optional",
+    "Knowledge is useless"
+  ],
+  answer: "Education is essential for development"
+},
+{
+  question: "Passage: Hard work and persistence enable individuals to overcome challenges and achieve their goals.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Hard work leads to success",
+    "Challenges are impossible",
+    "Goals are useless",
+    "Persistence is weak"
+  ],
+  answer: "Hard work leads to success"
+},
+{
+  question: "Passage: Social media allows communication but can lead to distraction and reduced productivity.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Social media has benefits and drawbacks",
+    "Social media is perfect",
+    "Social media is useless",
+    "Communication is bad"
+  ],
+  answer: "Social media has benefits and drawbacks"
+},
+{
+  question: "Passage: Healthy eating habits improve body function and reduce the risk of disease.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Healthy eating improves health",
+    "Food is unnecessary",
+    "Eating causes illness",
+    "Health is automatic"
+  ],
+  answer: "Healthy eating improves health"
+},
+{
+  question: "Passage: Effective communication prevents misunderstandings and strengthens relationships.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Communication improves relationships",
+    "Misunderstanding is good",
+    "Talking is unnecessary",
+    "Relationships are weak"
+  ],
+  answer: "Communication improves relationships"
+},
+{
+  question: "Passage: Laziness often leads to failure because tasks are not completed on time.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Laziness leads to failure",
+    "Failure is good",
+    "Time is not important",
+    "Tasks are useless"
+  ],
+  answer: "Laziness leads to failure"
+},
+{
+  question: "Passage: Planning helps individuals organize tasks and use time efficiently.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Planning improves efficiency",
+    "Planning wastes time",
+    "Time is unlimited",
+    "Organization is useless"
+  ],
+  answer: "Planning improves efficiency"
+},
+{
+  question: "Passage: Excessive use of mobile phones can negatively affect concentration and productivity.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Too much phone use reduces productivity",
+    "Phones improve concentration",
+    "Phones are harmless",
+    "Phones are necessary"
+  ],
+  answer: "Too much phone use reduces productivity"
+},
+{
+  question: "Passage: Cooperation among workers leads to faster completion of tasks and better results.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Cooperation improves results",
+    "Workers should compete",
+    "Tasks are difficult",
+    "Results are random"
+  ],
+  answer: "Cooperation improves results"
+},
+{
+  question: "Passage: Confidence helps individuals express themselves clearly and succeed in communication.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Confidence improves communication",
+    "Confidence causes failure",
+    "Speaking is difficult",
+    "Expression is unnecessary"
+  ],
+  answer: "Confidence improves communication"
+},
+{
+  question: "Passage: Environmental conservation is necessary to protect natural resources for future generations.\n\nQuestion: Which is the best summary?",
+  options: [
+    "Conservation protects the future",
+    "Resources are unlimited",
+    "Environment is not important",
+    "Future is uncertain"
+  ],
+  answer: "Conservation protects the future"
+},
+
+{
+  question: "Which word has a different vowel sound?\n\nseat, beat, sit, meat",
+  options: ["seat", "beat", "sit", "meat"],
+  answer: "sit"
+},
+{
+  question: "Which word has a different consonant sound?\n\nship, shop, chair, shoe",
+  options: ["ship", "shop", "chair", "shoe"],
+  answer: "chair"
+},
+{
+  question: "Which word is stressed on the first syllable?",
+  options: ["PHOtograph", "phoTOGraphy", "photoGRAphic", "phoTOgrapher"],
+  answer: "PHOtograph"
+},
+{
+  question: "Which word is stressed on the second syllable?",
+  options: ["TAble", "beGIN", "DOCtor", "WINdow"],
+  answer: "beGIN"
+},
+{
+  question: "Which word has the /Êƒ/ sound?",
+  options: ["shoe", "see", "go", "tea"],
+  answer: "shoe"
+},
+{
+  question: "Which word has the /tÊƒ/ sound?",
+  options: ["chair", "ship", "zoo", "sun"],
+  answer: "chair"
+},
+{
+  question: "Which word contains a diphthong?",
+  options: ["boy", "cat", "pen", "sit"],
+  answer: "boy"
+},
+{
+  question: "Which word has the same vowel sound as 'cat'?",
+  options: ["bat", "sit", "cut", "cot"],
+  answer: "bat"
+},
+{
+  question: "Which word has a silent letter?",
+  options: ["knife", "dog", "cat", "run"],
+  answer: "knife"
+},
+{
+  question: "Which word ends with /Å‹/ sound?",
+  options: ["sing", "sin", "sit", "sip"],
+  answer: "sing"
+},
+{
+  question: "Which word has stress on the last syllable?",
+  options: ["enterTAIN", "TAble", "DOCtor", "WINdow"],
+  answer: "enterTAIN"
+},
+{
+  question: "Which word has the /Î¸/ sound?",
+  options: ["think", "this", "that", "then"],
+  answer: "think"
+},
+{
+  question: "Which word has the /Ã°/ sound?",
+  options: ["this", "think", "thin", "thank"],
+  answer: "this"
+},
+{
+  question: "Which word has a long vowel sound?",
+  options: ["seat", "sit", "set", "sat"],
+  answer: "seat"
+},
+{
+  question: "Which word has a short vowel sound?",
+  options: ["sit", "seat", "boot", "moon"],
+  answer: "sit"
+},
+{
+  question: "Which word is correctly stressed?",
+  options: ["ecoNOmic", "EConomic", "ecoNOmics", "ECOnomics"],
+  answer: "ecoNOmic"
+},
+{
+  question: "Which word contains /k/ sound?",
+  options: ["cat", "city", "circle", "cease"],
+  answer: "cat"
+},
+{
+  question: "Which word has different vowel sound?",
+  options: ["food", "mood", "good", "pool"],
+  answer: "good"
+},
+{
+  question: "Which word contains /dÊ’/ sound?",
+  options: ["judge", "ship", "cat", "pen"],
+  answer: "judge"
+},
+{
+  question: "Which word has stress on the third syllable?",
+  options: ["engiNEER", "ENgineer", "engineER", "ENgineER"],
+  answer: "engiNEER"
+},
+
+{
+  question: "Passage: An essay should have an introduction, body, and conclusion.\n\nQuestion: What is the purpose of the introduction?",
+  options: [
+    "to summarize",
+    "to introduce the topic",
+    "to give examples",
+    "to conclude"
+  ],
+  answer: "to introduce the topic"
+},
+{
+  question: "Passage: A good paragraph contains a topic sentence and supporting details.\n\nQuestion: What is the function of the topic sentence?",
+  options: [
+    "introduce the main idea",
+    "end the paragraph",
+    "give examples only",
+    "repeat ideas"
+  ],
+  answer: "introduce the main idea"
+},
+{
+  question: "Passage: Essays should be logically arranged to ensure clarity.\n\nQuestion: What does 'logically arranged' mean?",
+  options: [
+    "organized clearly",
+    "random order",
+    "confusing structure",
+    "long sentences"
+  ],
+  answer: "organized clearly"
+},
+{
+  question: "Passage: The conclusion summarizes the main points of the essay.\n\nQuestion: What is the role of the conclusion?",
+  options: [
+    "introduce topic",
+    "summarize ideas",
+    "add new ideas",
+    "give examples"
+  ],
+  answer: "summarize ideas"
+},
+{
+  question: "Passage: Linking words help connect ideas in writing.\n\nQuestion: What is the function of linking words?",
+  options: [
+    "connect ideas",
+    "confuse readers",
+    "end sentences",
+    "repeat words"
+  ],
+  answer: "connect ideas"
+},
+{
+  question: "Passage: Formal writing avoids slang and informal expressions.\n\nQuestion: What should be avoided in formal writing?",
+  options: [
+    "slang",
+    "clear language",
+    "correct grammar",
+    "proper structure"
+  ],
+  answer: "slang"
+},
+{
+  question: "Passage: Descriptive essays use vivid language to create images.\n\nQuestion: What is the purpose of vivid language?",
+  options: [
+    "create images",
+    "confuse readers",
+    "shorten essay",
+    "repeat ideas"
+  ],
+  answer: "create images"
+},
+{
+  question: "Passage: Argumentative essays require evidence to support claims.\n\nQuestion: Why is evidence important?",
+  options: [
+    "support arguments",
+    "confuse readers",
+    "reduce ideas",
+    "avoid writing"
+  ],
+  answer: "support arguments"
+},
+{
+  question: "Passage: Narrative essays tell a story in sequence.\n\nQuestion: What is important in narrative writing?",
+  options: [
+    "sequence",
+    "random ideas",
+    "no structure",
+    "no conclusion"
+  ],
+  answer: "sequence"
+},
+{
+  question: "Passage: Good writing uses correct punctuation to avoid confusion.\n\nQuestion: Why is punctuation important?",
+  options: [
+    "clarity",
+    "length",
+    "speed",
+    "decoration"
+  ],
+  answer: "clarity"
+},
+{
+  question: "Passage: Essays should stay focused on the topic.\n\nQuestion: What happens if an essay loses focus?",
+  options: [
+    "becomes unclear",
+    "becomes better",
+    "shorter",
+    "easier"
+  ],
+  answer: "becomes unclear"
+},
+{
+  question: "Passage: A good essay uses examples to support ideas.\n\nQuestion: What is the role of examples?",
+  options: [
+    "support ideas",
+    "replace ideas",
+    "confuse readers",
+    "shorten essay"
+  ],
+  answer: "support ideas"
+},
+{
+  question: "Passage: Editing helps improve grammar and clarity.\n\nQuestion: What is the purpose of editing?",
+  options: [
+    "improve writing",
+    "reduce length",
+    "add errors",
+    "ignore mistakes"
+  ],
+  answer: "improve writing"
+},
+{
+  question: "Passage: Unity in writing means all parts relate to the main idea.\n\nQuestion: What does unity ensure?",
+  options: [
+    "relevance",
+    "confusion",
+    "length",
+    "random ideas"
+  ],
+  answer: "relevance"
+},
+{
+  question: "Passage: Coherence means ideas flow smoothly.\n\nQuestion: What does coherence improve?",
+  options: [
+    "flow of ideas",
+    "length",
+    "grammar only",
+    "punctuation only"
+  ],
+  answer: "flow of ideas"
+},
+{
+  question: "Passage: A descriptive essay appeals to the senses.\n\nQuestion: What does this mean?",
+  options: [
+    "uses sensory details",
+    "uses facts only",
+    "uses arguments",
+    "uses questions"
+  ],
+  answer: "uses sensory details"
+},
+{
+  question: "Passage: Argumentative writing presents both sides before concluding.\n\nQuestion: Why present both sides?",
+  options: [
+    "balanced argument",
+    "confusion",
+    "long essay",
+    "no reason"
+  ],
+  answer: "balanced argument"
+},
+{
+  question: "Passage: A narrative should have a clear beginning, middle, and end.\n\nQuestion: What does this ensure?",
+  options: [
+    "structure",
+    "confusion",
+    "length",
+    "difficulty"
+  ],
+  answer: "structure"
+},
+{
+  question: "Passage: Topic relevance is important in essay writing.\n\nQuestion: What happens if ideas are irrelevant?",
+  options: [
+    "marks are lost",
+    "marks increase",
+    "essay improves",
+    "no effect"
+  ],
+  answer: "marks are lost"
+},
+{
+  question: "Passage: Clear expression helps readers understand ideas easily.\n\nQuestion: What is the benefit of clear expression?",
+  options: [
+    "better understanding",
+    "confusion",
+    "long writing",
+    "complexity"
+  ],
+  answer: "better understanding"
+},
+
+{
+  question: "Neither the teacher nor the students ___ ready.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "She ___ her homework before going out.",
+  options: ["has finish", "has finished", "have finished", "had finishing"],
+  answer: "has finished"
+},
+{
+  question: "Choose the correct sentence:",
+  options: [
+    "He donâ€™t like food",
+    "He doesnâ€™t likes food",
+    "He doesnâ€™t like food",
+    "He not like food"
+  ],
+  answer: "He doesnâ€™t like food"
+},
+{
+  question: "He is fond ___ music.",
+  options: ["of", "in", "on", "with"],
+  answer: "of"
+},
+{
+  question: "Choose the opposite of 'scarce':",
+  options: ["abundant", "rare", "few", "little"],
+  answer: "abundant"
+},
+{
+  question: "She was very reluctant. 'Reluctant' means:",
+  options: ["unwilling", "happy", "eager", "ready"],
+  answer: "unwilling"
+},
+{
+  question: "The news ___ shocking.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "One of the boys ___ missing.",
+  options: ["are", "is", "were", "be"],
+  answer: "is"
+},
+{
+  question: "He apologized ___ being late.",
+  options: ["for", "to", "with", "on"],
+  answer: "for"
+},
+{
+  question: "Choose the correct idiom: He kicked the bucket.",
+  options: ["died", "ran", "won", "cried"],
+  answer: "died"
+},
+{
+  question: "Identify the error: She did not went there.",
+  options: ["did", "not", "went", "there"],
+  answer: "went"
+},
+{
+  question: "Choose correct:",
+  options: [
+    "She is married with a doctor",
+    "She is married to a doctor",
+    "She is married by a doctor",
+    "She is married from a doctor"
+  ],
+  answer: "She is married to a doctor"
+},
+{
+  question: "The boys ___ playing outside.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "He is capable ___ doing the work.",
+  options: ["of", "to", "for", "with"],
+  answer: "of"
+},
+{
+  question: "Choose synonym of 'concise':",
+  options: ["brief", "long", "confusing", "dull"],
+  answer: "brief"
+},
+{
+  question: "Which word has /Êƒ/ sound?",
+  options: ["ship", "sip", "zip", "tip"],
+  answer: "ship"
+},
+{
+  question: "Which word has different vowel sound?",
+  options: ["sit", "bit", "seat", "fit"],
+  answer: "seat"
+},
+{
+  question: "She ___ already left.",
+  options: ["has", "have", "had", "having"],
+  answer: "has"
+},
+{
+  question: "Time and tide ___ for no man.",
+  options: ["wait", "waits", "waiting", "waited"],
+  answer: "wait"
+},
+{
+  question: "Choose correct:",
+  options: [
+    "Between you and I",
+    "Between you and me",
+    "Between I and you",
+    "Between me and I"
+  ],
+  answer: "Between you and me"
+},
+
+{
+  question: "He is afraid ___ dogs.",
+  options: ["of", "from", "with", "on"],
+  answer: "of"
+},
+{
+  question: "She ___ to school daily.",
+  options: ["go", "goes", "went", "gone"],
+  answer: "goes"
+},
+{
+  question: "Choose antonym of 'expand':",
+  options: ["contract", "grow", "increase", "develop"],
+  answer: "contract"
+},
+{
+  question: "He spoke as if he ___ everything.",
+  options: ["knows", "knew", "known", "know"],
+  answer: "knew"
+},
+{
+  question: "Which has silent letter?",
+  options: ["knife", "cat", "dog", "run"],
+  answer: "knife"
+},
+{
+  question: "She insisted ___ going.",
+  options: ["on", "to", "for", "with"],
+  answer: "on"
+},
+{
+  question: "The police ___ investigating.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Choose correct idiom: once in a blue moon",
+  options: ["rarely", "always", "daily", "often"],
+  answer: "rarely"
+},
+{
+  question: "He ___ never been there.",
+  options: ["has", "have", "had", "having"],
+  answer: "has"
+},
+{
+  question: "Which word has /tÊƒ/?",
+  options: ["chair", "ship", "sip", "zip"],
+  answer: "chair"
+},
+{
+  question: "The committee ___ divided.",
+  options: ["is", "are", "was", "be"],
+  answer: "are"
+},
+{
+  question: "Choose synonym of 'arrogant':",
+  options: ["proud", "humble", "kind", "gentle"],
+  answer: "proud"
+},
+{
+  question: "He denied ___ the money.",
+  options: ["stealing", "to steal", "steal", "for stealing"],
+  answer: "stealing"
+},
+{
+  question: "Which word stressed first syllable?",
+  options: ["PHOtograph", "phoTOGraphy", "photoGRAphic", "phoTOgrapher"],
+  answer: "PHOtograph"
+},
+{
+  question: "Choose correct:",
+  options: [
+    "She has less books",
+    "She has fewer books",
+    "She has little books",
+    "She has small books"
+  ],
+  answer: "She has fewer books"
+},
+{
+  question: "He is interested ___ science.",
+  options: ["in", "on", "at", "with"],
+  answer: "in"
+},
+{
+  question: "The child ___ crying.",
+  options: ["is", "are", "was", "be"],
+  answer: "is"
+},
+{
+  question: "Choose antonym of 'victory':",
+  options: ["defeat", "success", "win", "triumph"],
+  answer: "defeat"
+},
+{
+  question: "He arrived ___ the station early.",
+  options: ["at", "in", "on", "to"],
+  answer: "at"
+},
+{
+  question: "Which word has diphthong?",
+  options: ["boy", "cat", "pen", "sit"],
+  answer: "boy"
+},
+
+{
+  question: "Passage: The character showed kindness despite being treated badly.\n\nQuestion: What literary trait is shown?",
+  options: ["compassion", "greed", "anger", "fear"],
+  answer: "compassion"
+},
+{
+  question: "Passage: \"The sun smiled upon the land.\"\n\nQuestion: What literary device is used?",
+  options: ["personification", "metaphor", "simile", "hyperbole"],
+  answer: "personification"
+},
+{
+  question: "Passage: \"He fought like a lion.\"\n\nQuestion: What device is used?",
+  options: ["simile", "metaphor", "irony", "alliteration"],
+  answer: "simile"
+},
+{
+  question: "Passage: \"Time is a thief.\"\n\nQuestion: What device is used?",
+  options: ["metaphor", "simile", "personification", "oxymoron"],
+  answer: "metaphor"
+},
+{
+  question: "Passage: The audience laughed at the characterâ€™s foolish actions.\n\nQuestion: What type of character is this?",
+  options: ["comic", "heroic", "tragic", "villain"],
+  answer: "comic"
+},
+{
+  question: "Passage: He said, \"I will return tomorrow.\"\n\nQuestion: Which punctuation is correctly used?",
+  options: ["quotation marks", "semicolon", "colon", "dash"],
+  answer: "quotation marks"
+},
+{
+  question: "Passage: The boy's book was missing.\n\nQuestion: What does the apostrophe show?",
+  options: ["possession", "plural", "question", "exclamation"],
+  answer: "possession"
+},
+{
+  question: "Passage: Let's go to school.\n\nQuestion: What does the apostrophe indicate?",
+  options: ["contraction", "possession", "plural", "question"],
+  answer: "contraction"
+},
+{
+  question: "Passage: Wow! That was amazing.\n\nQuestion: Which punctuation is used?",
+  options: ["exclamation mark", "comma", "full stop", "colon"],
+  answer: "exclamation mark"
+},
+{
+  question: "Passage: I bought apples, oranges, and bananas.\n\nQuestion: What is the function of commas here?",
+  options: ["list items", "pause only", "end sentence", "question"],
+  answer: "list items"
+},
+{
+  question: "Passage: Choose the correctly punctuated sentence.\n\nHe said ___ I am ready.",
+  options: [
+    "He said, \"I am ready.\"",
+    "He said \"I am ready\"",
+    "He said: I am ready",
+    "He said I am ready"
+  ],
+  answer: "He said, \"I am ready.\""
+},
+{
+  question: "Passage: The word 'record' (noun vs verb) changes stress.\n\nQuestion: Which is correct?",
+  options: ["REcord (noun)", "reCORD (noun)", "REcord (verb)", "same stress"],
+  answer: "REcord (noun)"
+},
+{
+  question: "Passage: The word 'present' changes stress by meaning.\n\nQuestion: Which is verb form?",
+  options: ["preSENT", "PREsent", "PRESENT", "same"],
+  answer: "preSENT"
+},
+{
+  question: "Passage: Which pair are minimal pairs?\n\nship / sheep",
+  options: ["different vowel sound", "same sound", "same spelling", "none"],
+  answer: "different vowel sound"
+},
+{
+  question: "Passage: Which word has stress on second syllable?\n\nreLAX",
+  options: ["correct", "incorrect"],
+  answer: "correct"
+},
+{
+  question: "Passage: \"The wind whispered through the trees.\"\n\nQuestion: What device is used?",
+  options: ["personification", "metaphor", "simile", "irony"],
+  answer: "personification"
+},
+{
+  question: "Passage: The story ended sadly with the heroâ€™s death.\n\nQuestion: What type of ending is this?",
+  options: ["tragic", "comic", "happy", "neutral"],
+  answer: "tragic"
+},
+{
+  question: "Passage: He said he was coming.\n\nQuestion: This is an example of:",
+  options: ["indirect speech", "direct speech", "question", "command"],
+  answer: "indirect speech"
+},
+{
+  question: "Passage: She said, \"I am tired.\"\n\nQuestion: This is:",
+  options: ["direct speech", "indirect speech", "statement", "phrase"],
+  answer: "direct speech"
+},
+{
+  question: "Passage: Choose correct punctuation.\n\n___ are you going?",
+  options: ["Where", "where", "WHERE", "were"],
+  answer: "Where"
+},
+
+{
+  question: "Passage: \"The stars danced in the night sky.\"\n\nQuestion: What literary device is used?",
+  options: ["personification", "metaphor", "simile", "hyperbole"],
+  answer: "personification"
+},
+{
+  question: "Passage: \"Her voice was as sweet as honey.\"\n\nQuestion: Identify the device.",
+  options: ["simile", "metaphor", "irony", "alliteration"],
+  answer: "simile"
+},
+{
+  question: "Passage: \"The classroom was a zoo.\"\n\nQuestion: What device is used?",
+  options: ["metaphor", "simile", "personification", "pun"],
+  answer: "metaphor"
+},
+{
+  question: "Passage: The villain showed cruelty throughout the story.\n\nQuestion: What type of character is this?",
+  options: ["antagonist", "protagonist", "comic", "hero"],
+  answer: "antagonist"
+},
+{
+  question: "Passage: The main character struggled but eventually succeeded.\n\nQuestion: What type of character is this?",
+  options: ["protagonist", "villain", "minor", "comic"],
+  answer: "protagonist"
+},
+{
+  question: "Passage: \"The thunder roared loudly.\"\n\nQuestion: What device is used?",
+  options: ["personification", "simile", "metaphor", "irony"],
+  answer: "personification"
+},
+{
+  question: "Passage: She said, \"Where are you going?\"\n\nQuestion: What punctuation marks are used?",
+  options: ["quotation + question mark", "comma only", "semicolon", "colon"],
+  answer: "quotation + question mark"
+},
+{
+  question: "Passage: The girls' uniforms were neat.\n\nQuestion: The apostrophe shows:",
+  options: ["plural possession", "singular possession", "contraction", "error"],
+  answer: "plural possession"
+},
+{
+  question: "Passage: Itâ€™s a beautiful day.\n\nQuestion: The apostrophe indicates:",
+  options: ["contraction", "possession", "plural", "emphasis"],
+  answer: "contraction"
+},
+{
+  question: "Passage: Choose correct punctuation.\n\nMy brother who lives in Kumasi is visiting.",
+  options: [
+    "My brother, who lives in Kumasi, is visiting.",
+    "My brother who lives, in Kumasi is visiting.",
+    "My brother who lives in Kumasi, is visiting.",
+    "My brother who lives in Kumasi is, visiting."
+  ],
+  answer: "My brother, who lives in Kumasi, is visiting."
+},
+{
+  question: "Passage: Choose correct sentence.\n\nshe is going to school",
+  options: [
+    "She is going to school.",
+    "she is going to school.",
+    "She is going to school",
+    "she Is going to school."
+  ],
+  answer: "She is going to school."
+},
+{
+  question: "Passage: Which word has stress on the first syllable?\n\nTAble, beGIN, reLAX, deCIDE",
+  options: ["TAble", "beGIN", "reLAX", "deCIDE"],
+  answer: "TAble"
+},
+{
+  question: "Passage: Which word has stress on the last syllable?\n\nenterTAIN, TAble, DOCtor, WINdow",
+  options: ["enterTAIN", "TAble", "DOCtor", "WINdow"],
+  answer: "enterTAIN"
+},
+{
+  question: "Passage: Which pair has different vowel sounds?\n\npool / pull",
+  options: ["different vowel sound", "same vowel sound", "same consonant", "none"],
+  answer: "different vowel sound"
+},
+{
+  question: "Passage: Which word contains /z/ sound?\n\nzoo, sip, tip, cat",
+  options: ["zoo", "sip", "tip", "cat"],
+  answer: "zoo"
+},
+{
+  question: "Passage: \"He was so hungry he could eat a horse.\"\n\nQuestion: What device is used?",
+  options: ["hyperbole", "simile", "metaphor", "personification"],
+  answer: "hyperbole"
+},
+{
+  question: "Passage: The story creates suspense before revealing the ending.\n\nQuestion: What technique is this?",
+  options: ["suspense", "irony", "satire", "flashback"],
+  answer: "suspense"
+},
+{
+  question: "Passage: Choose correct punctuation.\n\nI have three goals study hard succeed and help others",
+  options: [
+    "I have three goals: study hard, succeed, and help others.",
+    "I have three goals study hard succeed and help others.",
+    "I have three goals; study hard succeed and help others.",
+    "I have three goals study hard, succeed and help others"
+  ],
+  answer: "I have three goals: study hard, succeed, and help others."
+},
+{
+  question: "Passage: Which word has silent 'b'?\n\nthumb, cat, run, sit",
+  options: ["thumb", "cat", "run", "sit"],
+  answer: "thumb"
+},
+{
+  question: "Passage: Which word has the /f/ sound?\n\nphone, gone, tone, zone",
+  options: ["phone", "gone", "tone", "zone"],
+  answer: "phone"
+},
+
+{
+  question: "Passage: The main character struggles against poverty but remains hopeful.\n\nQuestion: What is the central theme?",
+  options: ["hope amidst hardship", "wealth", "anger", "fear"],
+  answer: "hope amidst hardship"
+},
+{
+  question: "Passage: The story is told from the narratorâ€™s personal perspective using 'I'.\n\nQuestion: What narrative style is used?",
+  options: ["first person", "third person", "omniscient", "dramatic"],
+  answer: "first person"
+},
+{
+  question: "Passage: The narrator knows the thoughts of all characters.\n\nQuestion: What point of view is this?",
+  options: ["omniscient", "first person", "limited", "objective"],
+  answer: "omniscient"
+},
+{
+  question: "Passage: The story moves back to earlier events to explain a characterâ€™s past.\n\nQuestion: What technique is used?",
+  options: ["flashback", "foreshadowing", "climax", "conflict"],
+  answer: "flashback"
+},
+{
+  question: "Passage: The turning point of the story where tension is highest.\n\nQuestion: What is this called?",
+  options: ["climax", "exposition", "resolution", "theme"],
+  answer: "climax"
+},
+{
+  question: "Passage: The hero faces internal struggle about making a decision.\n\nQuestion: What type of conflict is this?",
+  options: ["internal conflict", "external conflict", "social conflict", "physical conflict"],
+  answer: "internal conflict"
+},
+{
+  question: "Passage: \"The river swallowed the village whole.\"\n\nQuestion: What literary device is used?",
+  options: ["personification", "metaphor", "simile", "irony"],
+  answer: "metaphor"
+},
+{
+  question: "Passage: \"The wind whispered softly.\"\n\nQuestion: Identify the device.",
+  options: ["personification", "simile", "hyperbole", "alliteration"],
+  answer: "personification"
+},
+{
+  question: "Passage: \"He ran faster than the wind.\"\n\nQuestion: What device is used?",
+  options: ["simile", "metaphor", "irony", "pun"],
+  answer: "simile"
+},
+{
+  question: "Passage: The poet describes nature using vivid sensory details.\n\nQuestion: What technique is used?",
+  options: ["imagery", "irony", "satire", "dialogue"],
+  answer: "imagery"
+},
+{
+  question: "Passage: The poem expresses deep sadness about loss.\n\nQuestion: What is the tone?",
+  options: ["sad", "joyful", "angry", "humorous"],
+  answer: "sad"
+},
+{
+  question: "Passage: The repeated use of consonant sounds at the beginning of words.\n\nQuestion: What is this device?",
+  options: ["alliteration", "assonance", "metaphor", "irony"],
+  answer: "alliteration"
+},
+{
+  question: "Passage: Words that imitate natural sounds like 'buzz' and 'hiss'.\n\nQuestion: What device is this?",
+  options: ["onomatopoeia", "imagery", "simile", "irony"],
+  answer: "onomatopoeia"
+},
+{
+  question: "Passage: A character who changes significantly during the story.\n\nQuestion: What type of character is this?",
+  options: ["dynamic", "static", "minor", "flat"],
+  answer: "dynamic"
+},
+{
+  question: "Passage: A character who does not change throughout the story.\n\nQuestion: What type is this?",
+  options: ["static", "dynamic", "round", "heroic"],
+  answer: "static"
+},
+{
+  question: "Passage: The author hints at events that will happen later.\n\nQuestion: What technique is used?",
+  options: ["foreshadowing", "flashback", "climax", "conflict"],
+  answer: "foreshadowing"
+},
+{
+  question: "Passage: The events after the climax that lead to resolution.\n\nQuestion: What is this stage?",
+  options: ["falling action", "rising action", "exposition", "theme"],
+  answer: "falling action"
+},
+{
+  question: "Passage: The lesson or message conveyed in a story.\n\nQuestion: What is this called?",
+  options: ["theme", "plot", "character", "setting"],
+  answer: "theme"
+},
+{
+  question: "Passage: The time and place where a story occurs.\n\nQuestion: What is this element?",
+  options: ["setting", "theme", "plot", "conflict"],
+  answer: "setting"
+},
+{
+  question: "Passage: The sequence of events in a story.\n\nQuestion: What is this called?",
+  options: ["plot", "theme", "setting", "tone"],
+  answer: "plot"
+}
 
-  // Prepositions
-  {
-    question: "Choose the correct preposition: 'He is good ___ mathematics.'",
-    options: ["in", "at", "on", "with"],
-    answer: "at"
-  },
-  {
-    question: "Identify the preposition in this sentence: 'The book is under the table.'",
-    options: ["book", "is", "under", "table"],
-    answer: "under"
-  },
-
-  // Conjunctions
-  {
-    question: "Which of these is a coordinating conjunction?",
-    options: ["Although", "Because", "And", "Unless"],
-    answer: "And"
-  },
-
-  // Interjections
-  {
-    question: "Which of the following is an interjection?",
-    options: ["Wow!", "Go", "Quickly", "Run"],
-    answer: "Wow!"
-  },
-
-  // Phrases
-  {
-    question: "Which of the following is a noun phrase?",
-    options: ["the big brown dog", "runs quickly", "under the table", "have been going"],
-    answer: "the big brown dog"
-  },
-
-  // Clauses
-  {
-    question: "Which is an example of an independent clause?",
-    options: ["Because she was late", "Although it rained", "I went home", "When he arrived"],
-    answer: "I went home"
-  },
-
-  // Synonyms
-  {
-    question: "What is the synonym of 'happy'?",
-    options: ["Sad", "Joyful", "Angry", "Cold"],
-    answer: "Joyful"
-  },
-  {
-    question: "Choose the word closest in meaning to 'swift':",
-    options: ["slow", "fast", "lazy", "quiet"],
-    answer: "fast"
-  },
-
-  // Antonyms
-  {
-    question: "What is the antonym of 'brave'?",
-    options: ["Bold", "Fearless", "Timid", "Strong"],
-    answer: "Timid"
-  },
-
-  // Comprehension
-  {
-    question: "Why was Ama admired by her teachers and classmates?",
-    options: ["She was quiet", "She was always late", "She performed excellently", "She liked to sing"],
-    answer: "She performed excellently"
-  },
-  // Tense & Aspect
-  {
-    question: "Which sentence is in the present perfect tense?",
-    options: ["He eats now.", "He has eaten.", "He is eating.", "He ate."],
-    answer: "He has eaten."
-  },
-  {
-    question: "Identify the past participle form of the verb 'write':",
-    options: ["Wrote", "Written", "Writes", "Writing"],
-    answer: "Written"
-  },
-
-  // Adverbs
-  {
-    question: "What type of adverb is used in 'She arrived early'?",
-    options: ["Adverb of time", "Adverb of manner", "Adverb of place", "Adverb of frequency"],
-    answer: "Adverb of time"
-  },
-  {
-    question: "Choose the adverb of manner:",
-    options: ["Yesterday", "Quickly", "Soon", "Everywhere"],
-    answer: "Quickly"
-  },
-
-  // Prepositions
-  {
-    question: "Which preposition completes the sentence? 'We walked ___ the river.'",
-    options: ["across", "between", "into", "above"],
-    answer: "across"
-  },
-  {
-    question: "Choose the correct preposition: 'He sat ___ the chair.'",
-    options: ["on", "in", "at", "over"],
-    answer: "on"
-  },
-
-  // Conjunctions
-  {
-    question: "Which sentence correctly uses a subordinating conjunction?",
-    options: [
-      "I was tired and went to bed.",
-      "He is tall but slow.",
-      "She came because she was invited.",
-      "Come and sit down."
-    ],
-    answer: "She came because she was invited."
-  },
-
-  // Interjections
-  {
-    question: "Which interjection expresses surprise?",
-    options: ["Ouch!", "Wow!", "Hurray!", "Oops!"],
-    answer: "Wow!"
-  },
-
-  // Phrases
-  {
-    question: "What type of phrase is 'has been sleeping'?",
-    options: ["Noun phrase", "Verb phrase", "Adjective phrase", "Adverb phrase"],
-    answer: "Verb phrase"
-  },
-
-  // Clauses
-  {
-    question: "Identify the dependent clause:",
-    options: ["He runs fast", "When the sun sets", "I like mangoes", "They danced all night"],
-    answer: "When the sun sets"
-  },
-
-  // Synonyms
-  {
-    question: "Select the synonym for 'huge':",
-    options: ["Tiny", "Massive", "Short", "Narrow"],
-    answer: "Massive"
-  },
-  {
-    question: "Which word is closest in meaning to 'intelligent'?",
-    options: ["Foolish", "Smart", "Slow", "Rough"],
-    answer: "Smart"
-  },
-
-  // Antonyms
-  {
-    question: "What is the opposite of 'generous'?",
-    options: ["Kind", "Mean", "Friendly", "Helpful"],
-    answer: "Mean"
-  },
-  {
-    question: "Choose the antonym for 'ascend':",
-    options: ["Climb", "Rise", "Go", "Descend"],
-    answer: "Descend"
-  },
-
-  // Comprehension
-  {
-    question: "Read the passage: 'Kofi always woke up early and watered the plants before school.' What habit does Kofi have?",
-    options: ["Sleeping late", "Skipping school", "Waking early", "Playing games"],
-    answer: "Waking early"
-  },
-  {
-    question: "What can we infer from the statement: 'She cried silently as the rain fell'?",
-    options: ["She was joyful", "She was in pain", "She was quietly sad", "She was laughing"],
-    answer: "She was quietly sad"
-  },
-
-  // Vocabulary: Word Use
-  {
-    question: "Choose the correct word: 'The boy was too weak to ___ the box.'",
-    options: ["lift", "leave", "list", "let"],
-    answer: "lift"
-  },
-  {
-    question: "Pick the correct word: 'He lost his watch while ___ the field.'",
-    options: ["crossing", "cross", "across", "crosses"],
-    answer: "crossing"
-  },
-
-  // Mixed Grammar
-  {
-    question: "Which sentence is correct?",
-    options: [
-      "He go to school everyday.",
-      "He goes to school every day.",
-      "He gone to school daily.",
-      "He going to school each day."
-    ],
-    answer: "He goes to school every day."
-  },
-  {
-    question: "Choose the correct form: 'She ___ her homework when I arrived.'",
-    options: ["has finished", "had finished", "will finish", "finishing"],
-    answer: "had finished"
-  },
-
-  // More Conjunctions
-  {
-    question: "Which is a correlative conjunction?",
-    options: ["Because", "Neither...nor", "Although", "If"],
-    answer: "Neither...nor"
-  },
-  {
-    question: "Identify the sentence with both a coordinating and a subordinating conjunction:",
-    options: [
-      "I stayed home because I was ill and tired.",
-      "I slept early.",
-      "He went and came.",
-      "They left when it rained."
-    ],
-    answer: "I stayed home because I was ill and tired."
-  },
-  // Tense
-  {
-    question: "What tense is used in: 'He had been studying for hours before the test'?",
-    options: ["Past simple", "Past perfect", "Past perfect continuous", "Present perfect"],
-    answer: "Past perfect continuous"
-  },
-  {
-    question: "Which of the following is in the present continuous tense?",
-    options: ["He will go", "He goes", "He is going", "He went"],
-    answer: "He is going"
-  },
-
-  // Future Time
-  {
-    question: "Which sentence shows future continuous tense?",
-    options: ["I eat dinner", "I am eating dinner", "I will be eating dinner", "I have eaten dinner"],
-    answer: "I will be eating dinner"
-  },
-
-  // Adverbs
-  {
-    question: "Choose the adverb of place:",
-    options: ["Here", "Often", "Loudly", "Never"],
-    answer: "Here"
-  },
-  {
-    question: "What kind of adverb is 'rarely'?",
-    options: ["Place", "Manner", "Time", "Frequency"],
-    answer: "Frequency"
-  },
-
-  // Prepositions
-  {
-    question: "Which preposition shows direction?",
-    options: ["On", "To", "At", "With"],
-    answer: "To"
-  },
-  {
-    question: "Identify the prepositional phrase: 'She sat on the mat.'",
-    options: ["She sat", "On the mat", "The mat", "Sat on"],
-    answer: "On the mat"
-  },
-
-  // Conjunctions
-  {
-    question: "Select the subordinating conjunction:",
-    options: ["And", "But", "Because", "Or"],
-    answer: "Because"
-  },
-
-  // Interjections
-  {
-    question: "Choose the interjection used for pain:",
-    options: ["Yay!", "Oops!", "Ouch!", "Hurray!"],
-    answer: "Ouch!"
-  },
-
-  // Phrases
-  {
-    question: "Which of the following is an adverbial phrase?",
-    options: ["a shiny object", "ran very fast", "the red ball", "the old man"],
-    answer: "ran very fast"
-  },
-
-  // Clauses
-  {
-    question: "Which clause is independent?",
-    options: ["Because he cried", "When I arrived", "She sings", "Although it rained"],
-    answer: "She sings"
-  },
-
-  // Synonyms
-  {
-    question: "Choose the synonym for 'bright':",
-    options: ["Dull", "Dim", "Intelligent", "Dark"],
-    answer: "Intelligent"
-  },
-  {
-    question: "Which word is closest in meaning to 'angry'?",
-    options: ["Happy", "Furious", "Calm", "Gentle"],
-    answer: "Furious"
-  },
-
-  // Antonyms
-  {
-    question: "Select the antonym for 'polite':",
-    options: ["Respectful", "Friendly", "Rude", "Kind"],
-    answer: "Rude"
-  },
-  {
-    question: "What is the opposite of 'include'?",
-    options: ["Add", "Cover", "Remove", "Increase"],
-    answer: "Remove"
-  },
-
-  // Comprehension
-  {
-    question: "From the passage: 'Yaw enjoyed playing football every afternoon.' What was Yaw's favourite activity?",
-    options: ["Reading", "Singing", "Football", "Dancing"],
-    answer: "Football"
-  },
-  {
-    question: "Passage: 'Mariam smiled as she received the award.' Why did Mariam smile?",
-    options: ["She was embarrassed", "She was angry", "She was proud and happy", "She was tired"],
-    answer: "She was proud and happy"
-  },
-
-  // Sentence structure
-  {
-    question: "Which is a compound sentence?",
-    options: [
-      "He ran and jumped.",
-      "She came because I called.",
-      "He came, and she left.",
-      "Since he arrived, I have slept."
-    ],
-    answer: "He came, and she left."
-  },
-  {
-    question: "Identify the simple sentence:",
-    options: [
-      "Though it rained, they played.",
-      "He walked to school.",
-      "She likes dancing and singing.",
-      "If she comes, I will leave."
-    ],
-    answer: "He walked to school."
-  },
-
-  // Word Use
-  {
-    question: "Choose the correct verb: 'The boy ___ the ball into the net.'",
-    options: ["kick", "kicking", "kicked", "kicks"],
-    answer: "kicked"
-  },
-  {
-    question: "Fill in the blank: 'She ___ to the market before noon.'",
-    options: ["has gone", "goes", "gone", "going"],
-    answer: "has gone"
-  },
-
-  // Punctuation
-  {
-    question: "Which sentence uses punctuation correctly?",
-    options: [
-      "He said 'I am tired.'",
-      "He said, I am tired.",
-      "He said, 'I am tired.'",
-      "He said 'I am tired'."
-    ],
-    answer: "He said, 'I am tired.'"
-  },
-  {
-    question: "What punctuation mark ends a question?",
-    options: ["Period", "Comma", "Exclamation mark", "Question mark"],
-    answer: "Question mark"
-  },
-
-  // Capitalization
-  {
-    question: "Which word should begin with a capital letter?",
-    options: ["river", "school", "ghana", "city"],
-    answer: "ghana"
-  },
-  {
-    question: "Choose the sentence with correct capitalization:",
-    options: [
-      "we went to Kumasi.",
-      "We went to kumasi.",
-      "we went to kumasi.",
-      "We went to Kumasi."
-    ],
-    answer: "We went to Kumasi."
-  },
-
-  // Vocabulary in Context
-  {
-    question: "What is the meaning of 'generous' in the sentence: 'She is generous to the poor'?",
-    options: ["Selfish", "Kind and giving", "Strict", "Harsh"],
-    answer: "Kind and giving"
-  },
-  {
-    question: "Find the correct word: 'The rain was so ___ that we could not hear him.'",
-    options: ["slight", "light", "heavy", "gentle"],
-    answer: "heavy"
-  },
-
-  // Error Identification
-  {
-    question: "Identify the error: 'She go to the market every day.'",
-    options: ["She", "go", "to", "every"],
-    answer: "go"
-  },
-  {
-    question: "Which part of the sentence is wrong? 'They was playing football in the rain.'",
-    options: ["They", "was", "playing", "in"],
-    answer: "was"
-  },
-  // Tense & Aspect
-  {
-    question: "What tense is used in: 'They had finished the meal before we arrived'?",
-    options: ["Present perfect", "Past perfect", "Past continuous", "Future perfect"],
-    answer: "Past perfect"
-  },
-  {
-    question: "Identify the tense: 'He was walking to school when it started to rain.'",
-    options: ["Past simple", "Past perfect", "Past continuous", "Present continuous"],
-    answer: "Past continuous"
-  },
-  {
-    question: "Which tense is used in: 'She has lived here for ten years'?",
-    options: ["Present perfect", "Past simple", "Past perfect", "Future perfect"],
-    answer: "Present perfect"
-  },
-  {
-    question: "Choose the past perfect continuous form:",
-    options: ["She was working", "She had worked", "She had been working", "She has been working"],
-    answer: "She had been working"
-  },
-
-  // Future Time
-  {
-    question: "Which of the following expresses future time?",
-    options: ["I walk to school", "I have walked", "I will walk to school", "I am walking"],
-    answer: "I will walk to school"
-  },
-  {
-    question: "Which is future perfect tense?",
-    options: ["I will have eaten", "I eat", "I ate", "I will eat"],
-    answer: "I will have eaten"
-  },
-
-  // Adverbs
-  {
-    question: "What kind of adverb is 'loudly'?",
-    options: ["Time", "Manner", "Place", "Frequency"],
-    answer: "Manner"
-  },
-  {
-    question: "Identify the adverb in the sentence: 'He drives carefully.'",
-    options: ["drives", "He", "carefully", "car"],
-    answer: "carefully"
-  },
-
-  // Prepositions
-  {
-    question: "Choose the correct preposition: 'She was born ___ July.'",
-    options: ["on", "at", "in", "to"],
-    answer: "in"
-  },
-  {
-    question: "Fill in the blank: 'He went to the store ___ a loaf of bread.'",
-    options: ["with", "for", "at", "to"],
-    answer: "for"
-  },
-
-  // Conjunctions
-  {
-    question: "Which is a coordinating conjunction?",
-    options: ["Although", "Because", "But", "Since"],
-    answer: "But"
-  },
-  {
-    question: "What is the function of a conjunction?",
-    options: ["To describe", "To join words or clauses", "To compare nouns", "To express feeling"],
-    answer: "To join words or clauses"
-  },
-
-  // Interjections
-  {
-    question: "What does the interjection 'Alas!' express?",
-    options: ["Surprise", "Joy", "Sorrow", "Anger"],
-    answer: "Sorrow"
-  },
-  {
-    question: "Which is an interjection?",
-    options: ["Beautiful", "Because", "Wow", "Quickly"],
-    answer: "Wow"
-  },
-
-  // Phrases
-  {
-    question: "Which is a noun phrase?",
-    options: ["very quickly", "the big house", "has been running", "under the table"],
-    answer: "the big house"
-  },
-  {
-    question: "Identify the verb phrase:",
-    options: ["a new book", "was singing", "very fast", "the small girl"],
-    answer: "was singing"
-  },
-
-  // Clauses
-  {
-    question: "Which of these is an independent clause?",
-    options: ["Before he came", "If I can", "I went home", "Though she cried"],
-    answer: "I went home"
-  },
-  {
-    question: "A clause must contain:",
-    options: ["a noun", "a verb", "a subject and a verb", "a preposition"],
-    answer: "a subject and a verb"
-  },
-
-  // Synonyms
-  {
-    question: "Find the synonym for 'brave':",
-    options: ["Coward", "Strong", "Courageous", "Soft"],
-    answer: "Courageous"
-  },
-  {
-    question: "Choose the word similar in meaning to 'tiny':",
-    options: ["Small", "Big", "Loud", "Tall"],
-    answer: "Small"
-  },
-
-  // Antonyms
-  {
-    question: "Which is the antonym of 'sharp'?",
-    options: ["Pointy", "Blunt", "Narrow", "Quick"],
-    answer: "Blunt"
-  },
-  {
-    question: "What is the opposite of 'increase'?",
-    options: ["Add", "Multiply", "Decrease", "Grow"],
-    answer: "Decrease"
-  },
-
-  // Vocabulary in Context
-  {
-    question: "Choose the best word: 'The ___ dog barked all night.'",
-    options: ["quiet", "loud", "noisy", "silent"],
-    answer: "noisy"
-  },
-  {
-    question: "Select the correct word: 'He spoke in a ___ voice.'",
-    options: ["softly", "soft", "softer", "softest"],
-    answer: "soft"
-  },
-
-  // Comprehension (passage-based)
-  {
-    question: "Passage: 'Ama studied hard and passed the exam.' Why did Ama pass?",
-    options: ["She got help", "She guessed", "She studied hard", "She was lucky"],
-    answer: "She studied hard"
-  },
-  {
-    question: "Passage: 'The boy ran as fast as he could, but the bus had already left.' What can we say about the boy?",
-    options: ["He caught the bus", "He was late", "He was angry", "He was tired"],
-    answer: "He was late"
-  },
-
-  // Sentence Correction
-  {
-    question: "Correct this: 'He do his homework every day.'",
-    options: ["He does his homework every day.", "He did his homework every day.", "He has his homework every day.", "He done his homework every day."],
-    answer: "He does his homework every day."
-  },
-  {
-    question: "Find the error: 'They enjoys playing football.'",
-    options: ["They", "enjoys", "playing", "football"],
-    answer: "enjoys"
-  },
-
-  // Sentence Types
-  {
-    question: "Which of the following is an interrogative sentence?",
-    options: ["He ate mangoes.", "Did you eat?", "Eat your food.", "What a nice meal!"],
-    answer: "Did you eat?"
-  },
-  {
-    question: "Which sentence is exclamatory?",
-    options: ["Go to bed.", "He is here.", "What a beautiful day!", "Are you ready?"],
-    answer: "What a beautiful day!"
-  },
-
-  // Spelling
-  {
-    question: "Which of these is correctly spelled?",
-    options: ["Definately", "Definetely", "Definitely", "Definantly"],
-    answer: "Definitely"
-  },
-  {
-    question: "Choose the correct spelling:",
-    options: ["Recieve", "Receive", "Receeve", "Resieve"],
-    answer: "Receive"
-  },
-
-  // Capitalization
-  {
-    question: "Which word must be capitalized?",
-    options: ["monday", "tree", "school", "book"],
-    answer: "monday"
-  },
-  {
-    question: "Select the sentence with correct capitalization:",
-    options: ["i live in accra.", "I live in Accra.", "I live in accra.", "i live in Accra."],
-    answer: "I live in Accra."
-  },
-
-  // Word Forms
-  {
-    question: "What is the noun form of 'decide'?",
-    options: ["decision", "decider", "deciding", "decide"],
-    answer: "decision"
-  },
-  {
-    question: "Choose the adjective form of 'beauty':",
-    options: ["beautiful", "beautify", "beauty", "beautician"],
-    answer: "beautiful"
-  },
-
-  // Figures of Speech
-  {
-    question: "What figure of speech is 'as brave as a lion'?",
-    options: ["Metaphor", "Simile", "Personification", "Hyperbole"],
-    answer: "Simile"
-  },
-  {
-    question: "Which is a metaphor?",
-    options: ["He ran like the wind", "Her voice is music", "She was as cold as ice", "He danced like a star"],
-    answer: "Her voice is music"
-  },
-
-  // Pronouns
-  {
-    question: "Choose the correct pronoun: '___ is going to the market.'",
-    options: ["Him", "Her", "He", "Them"],
-    answer: "He"
-  },
-  {
-    question: "Which is a possessive pronoun?",
-    options: ["He", "Hers", "Her", "She"],
-    answer: "Hers"
-  },
-
-  // Articles
-  {
-    question: "Which article fits? '___ apple a day keeps the doctor away.'",
-    options: ["An", "A", "The", "No article"],
-    answer: "An"
-  },
-  {
-    question: "Choose the correct sentence:",
-    options: ["He is a honest man.", "He is an honest man.", "He is the honest man.", "He is honest man."],
-    answer: "He is an honest man."
-  },
-  // Tense & Aspect
-  {
-    question: "Which sentence is in the simple past tense?",
-    options: ["He is playing", "He has played", "He played", "He will play"],
-    answer: "He played"
-  },
-  {
-    question: "Identify the present perfect continuous tense:",
-    options: ["I have eaten", "I have been eating", "I eat", "I ate"],
-    answer: "I have been eating"
-  },
-
-  // Future Time
-  {
-    question: "Which sentence is in the future continuous tense?",
-    options: ["She will be cooking dinner", "She cooks dinner", "She has cooked dinner", "She is cooking dinner"],
-    answer: "She will be cooking dinner"
-  },
-  {
-    question: "Select the future form: 'They ___ arrive tomorrow.'",
-    options: ["will", "has", "had", "have"],
-    answer: "will"
-  },
-
-  // Adverbs
-  {
-    question: "Which word is an adverb of frequency?",
-    options: ["Always", "Quickly", "Below", "Every"],
-    answer: "Always"
-  },
-  {
-    question: "Choose the adverb: 'The cat moved silently through the room.'",
-    options: ["cat", "moved", "silently", "room"],
-    answer: "silently"
-  },
-
-  // Prepositions
-  {
-    question: "Fill in the blank: 'The book is ___ the table.'",
-    options: ["under", "reading", "fast", "light"],
-    answer: "under"
-  },
-  {
-    question: "Which is a prepositional phrase?",
-    options: ["ran fast", "jumped high", "on the roof", "very nice"],
-    answer: "on the roof"
-  },
-
-  // Conjunctions
-  {
-    question: "Identify the conjunction in the sentence: 'She sang and danced.'",
-    options: ["sang", "danced", "and", "she"],
-    answer: "and"
-  },
-  {
-    question: "Choose the correct word to join these clauses: 'I was tired ___ I slept.'",
-    options: ["because", "but", "so", "although"],
-    answer: "so"
-  },
-
-  // Interjections
-  {
-    question: "Which interjection shows joy?",
-    options: ["Alas!", "Oops!", "Hurray!", "Ugh!"],
-    answer: "Hurray!"
-  },
-  {
-    question: "Which sentence uses an interjection correctly?",
-    options: ["Wow! That’s amazing.", "He wow went away.", "She wowed him.", "Wow is going."],
-    answer: "Wow! That’s amazing."
-  },
-
-  // Phrases
-  {
-    question: "Which is a verb phrase?",
-    options: ["has been crying", "the tall tree", "on the mat", "quickly and quietly"],
-    answer: "has been crying"
-  },
-  {
-    question: "Choose the noun phrase:",
-    options: ["was singing loudly", "the tall boy", "across the field", "very quickly"],
-    answer: "the tall boy"
-  },
-
-  // Clauses
-  {
-    question: "Which is a dependent clause?",
-    options: ["He ran fast", "Though he was late", "It rained", "She slept early"],
-    answer: "Though he was late"
-  },
-  {
-    question: "A complex sentence must have:",
-    options: ["two independent clauses", "one clause only", "one independent and one dependent clause", "no verbs"],
-    answer: "one independent and one dependent clause"
-  },
-
-  // Synonyms
-  {
-    question: "Choose the synonym for 'happy':",
-    options: ["Sad", "Joyful", "Angry", "Hungry"],
-    answer: "Joyful"
-  },
-  {
-    question: "What is similar in meaning to 'fast'?",
-    options: ["Quick", "Slow", "Late", "Careful"],
-    answer: "Quick"
-  },
-
-  // Antonyms
-  {
-    question: "Select the antonym of 'hot':",
-    options: ["Warm", "Boiling", "Cold", "Burning"],
-    answer: "Cold"
-  },
-  {
-    question: "Choose the opposite of 'start':",
-    options: ["Begin", "End", "Continue", "Stop"],
-    answer: "End"
-  },
-
-  // Vocabulary in Context
-  {
-    question: "What is the meaning of 'generous' in: 'He is generous with his money'?",
-    options: ["Selfish", "Careful", "Giving", "Greedy"],
-    answer: "Giving"
-  },
-  {
-    question: "Select the correct word: 'He is known for his ___ decisions.'",
-    options: ["wise", "wisdom", "wiser", "wisely"],
-    answer: "wise"
-  },
-
-  // Comprehension
-  {
-    question: "Passage: 'Kojo arrived late but still completed the exam.' What can we say about Kojo?",
-    options: ["He failed", "He finished late", "He completed the exam", "He missed the exam"],
-    answer: "He completed the exam"
-  },
-  {
-    question: "Passage: 'Adjoa sang beautifully at the event.' How did Adjoa perform?",
-    options: ["Poorly", "Beautifully", "Loudly", "Quickly"],
-    answer: "Beautifully"
-  },
-
-  // Sentence Correction
-  {
-    question: "Find the correct sentence:",
-    options: ["She go home early.", "She goes home early.", "She gone home early.", "She going home early."],
-    answer: "She goes home early."
-  },
-  {
-    question: "Correct this: 'He don't know the answer.'",
-    options: ["He doesn't know the answer.", "He don't knows the answer.", "He do not know the answer.", "He not know the answer."],
-    answer: "He doesn't know the answer."
-  },
-
-  // Sentence Types
-  {
-    question: "Which is a declarative sentence?",
-    options: ["Are you coming?", "Come here!", "She is here.", "What a day!"],
-    answer: "She is here."
-  },
-  {
-    question: "Choose the imperative sentence:",
-    options: ["You are late.", "Where is your bag?", "Close the door.", "How funny!"],
-    answer: "Close the door."
-  },
-
-  // Spelling
-  {
-    question: "Which of these is correct?",
-    options: ["Acomodation", "Accomodation", "Accommodation", "Acommadation"],
-    answer: "Accommodation"
-  },
-  {
-    question: "Correct spelling of the word is:",
-    options: ["Enviroment", "Environment", "Environement", "Envirnment"],
-    answer: "Environment"
-  },
-
-  // Capitalization
-  {
-    question: "Select the correctly capitalized sentence:",
-    options: ["The sun sets in the west.", "The sun Sets in the west.", "The Sun sets in the West.", "The sun sets in the West."],
-    answer: "The sun sets in the west."
-  },
-  {
-    question: "Which sentence is correct?",
-    options: ["We visited cape coast.", "We visited Cape coast.", "We visited Cape Coast.", "we visited Cape Coast."],
-    answer: "We visited Cape Coast."
-  },
-
-  // Word Forms
-  {
-    question: "Choose the noun form of 'arrive':",
-    options: ["arriving", "arrived", "arrival", "arrives"],
-    answer: "arrival"
-  },
-  {
-    question: "What is the verb form of 'decision'?",
-    options: ["decider", "deciding", "decide", "decided"],
-    answer: "decide"
-  },
-
-  // Figures of Speech
-  {
-    question: "Which is an example of personification?",
-    options: ["The tree danced in the wind.", "He is as brave as a lion.", "He roared like a lion.", "She is an angel."],
-    answer: "The tree danced in the wind."
-  },
-  {
-    question: "Identify the hyperbole:",
-    options: ["I’ve told you a million times!", "She ran fast.", "It’s raining a lot.", "The cake is sweet."],
-    answer: "I’ve told you a million times!"
-  },
-
-  // Pronouns
-  {
-    question: "Which of these is a reflexive pronoun?",
-    options: ["Myself", "Me", "I", "They"],
-    answer: "Myself"
-  },
-  {
-    question: "Choose the relative pronoun:",
-    options: ["That", "He", "Him", "She"],
-    answer: "That"
-  },
-
-  // Articles
-  {
-    question: "Select the correct article: '___ moon is bright tonight.'",
-    options: ["A", "An", "The", "No article"],
-    answer: "The"
-  },
-  {
-    question: "Which is correct?",
-    options: ["He bought a orange.", "He bought an orange.", "He bought orange.", "He bought the orange."],
-    answer: "He bought an orange."
-  },
-  // Tense and Aspect
-  {
-    question: "Which of the following is in the past perfect tense?",
-    options: ["He had eaten before I came", "He eats rice", "He is eating rice", "He was eating rice"],
-    answer: "He had eaten before I came"
-  },
-  {
-    question: "Identify the sentence in past perfect continuous:",
-    options: ["She was dancing", "She had been dancing", "She danced", "She had danced"],
-    answer: "She had been dancing"
-  },
-
-  // Future Time
-  {
-    question: "Which sentence shows future intention?",
-    options: ["He goes to school", "He went to school", "He is going to school tomorrow", "He had gone to school"],
-    answer: "He is going to school tomorrow"
-  },
-  {
-    question: "Select the correct sentence in future perfect:",
-    options: ["I will have finished by 5pm", "I will finishing", "I will finishes", "I will have finish"],
-    answer: "I will have finished by 5pm"
-  },
-
-  // Adverbs
-  {
-    question: "Identify the adverb in the sentence: 'He spoke softly.'",
-    options: ["He", "spoke", "softly", "the"],
-    answer: "softly"
-  },
-  {
-    question: "Choose the sentence that contains an adverb of time:",
-    options: ["She works quickly", "They arrived yesterday", "He drives carefully", "He talks softly"],
-    answer: "They arrived yesterday"
-  },
-
-  // Prepositions
-  {
-    question: "What is the preposition in this sentence: 'The pen is on the table'?",
-    options: ["pen", "on", "is", "table"],
-    answer: "on"
-  },
-  {
-    question: "Complete the sentence: 'He sat ___ the chair.'",
-    options: ["on", "to", "in", "under"],
-    answer: "on"
-  },
-
-  // Conjunctions
-  {
-    question: "Identify the conjunction: 'He is tall and strong.'",
-    options: ["He", "tall", "and", "strong"],
-    answer: "and"
-  },
-  {
-    question: "Which sentence uses 'although' correctly?",
-    options: ["Although he was tired, he kept running.", "Although he tired he run.", "Although he run.", "Although tired he kept."],
-    answer: "Although he was tired, he kept running."
-  },
-
-  // Interjections
-  {
-    question: "Choose the correct interjection for fear:",
-    options: ["Yikes!", "Yay!", "Aha!", "Bravo!"],
-    answer: "Yikes!"
-  },
-  {
-    question: "Which sentence includes an interjection?",
-    options: ["Wow! That’s great.", "He wowed her.", "They walked wow.", "She is wow."],
-    answer: "Wow! That’s great."
-  },
-
-  // Phrases
-  {
-    question: "Which group of words is an adverbial phrase?",
-    options: ["at noon", "the blue car", "was eating", "a loud noise"],
-    answer: "at noon"
-  },
-  {
-    question: "Identify the noun phrase:",
-    options: ["a group of students", "ran fast", "danced quickly", "under the tree"],
-    answer: "a group of students"
-  },
-
-  // Clauses
-  {
-    question: "Which of these is an independent clause?",
-    options: ["Although he was tired", "Because it was late", "He went home", "When she sings"],
-    answer: "He went home"
-  },
-  {
-    question: "Choose the dependent clause:",
-    options: ["She smiled", "I arrived early", "Before he left", "They slept"],
-    answer: "Before he left"
-  },
-
-  // Synonyms
-  {
-    question: "Synonym of 'intelligent' is:",
-    options: ["Dull", "Smart", "Lazy", "Weak"],
-    answer: "Smart"
-  },
-  {
-    question: "Choose the synonym for 'strong':",
-    options: ["Weak", "Sturdy", "Small", "Soft"],
-    answer: "Sturdy"
-  },
-
-  // Antonyms
-  {
-    question: "Opposite of 'early' is:",
-    options: ["Prompt", "Late", "Soon", "Quick"],
-    answer: "Late"
-  },
-  {
-    question: "Antonym of 'hardworking' is:",
-    options: ["Lazy", "Busy", "Smart", "Quick"],
-    answer: "Lazy"
-  },
-
-  // Vocabulary in Context
-  {
-    question: "In context: 'She is very punctual.' Punctual means:",
-    options: ["late", "timely", "absent", "fast"],
-    answer: "timely"
-  },
-  {
-    question: "The word 'demanding' in 'He has a demanding job' means:",
-    options: ["easy", "challenging", "boring", "lazy"],
-    answer: "challenging"
-  },
-
-  // Comprehension
-  {
-    question: "Passage: 'Ama wakes up at 5am and jogs for an hour every day.' What does this tell us about Ama?",
-    options: ["She is lazy", "She is active", "She sleeps all day", "She is careless"],
-    answer: "She is active"
-  },
-  {
-    question: "Passage: 'The crowd cheered as the team scored the goal.' What happened?",
-    options: ["The team lost", "The team left", "The team scored", "The crowd left"],
-    answer: "The team scored"
-  },
-
-  // Sentence Correction
-  {
-    question: "Correct this: 'She don't go to school.'",
-    options: ["She does not go to school.", "She don’t goes to school.", "She not go to school.", "She doesn’t goes school."],
-    answer: "She does not go to school."
-  },
-  {
-    question: "Which sentence is grammatically correct?",
-    options: ["He have gone home.", "He has gone home.", "He has go home.", "He have goes home."],
-    answer: "He has gone home."
-  },
-
-  // Sentence Types
-  {
-    question: "Which sentence is interrogative?",
-    options: ["She runs fast.", "Do you like rice?", "Close the door.", "How sad!"],
-    answer: "Do you like rice?"
-  },
-  {
-    question: "Which is an exclamatory sentence?",
-    options: ["What a beautiful dress!", "She is kind.", "Are you okay?", "Shut the door."],
-    answer: "What a beautiful dress!"
-  },
-
-  // Spelling
-  {
-    question: "Choose the correct spelling:",
-    options: ["Definately", "Definitely", "Defenetely", "Definatelye"],
-    answer: "Definitely"
-  },
-  {
-    question: "Correct spelling of the word is:",
-    options: ["Pronounciation", "Pronunciation", "Prononciation", "Pronounciate"],
-    answer: "Pronunciation"
-  },
-
-  // Capitalization
-  {
-    question: "Which is correctly capitalized?",
-    options: ["My uncle lives in Accra.", "My Uncle lives in accra.", "My uncle Lives in Accra.", "My uncle lives In Accra."],
-    answer: "My uncle lives in Accra."
-  },
-  {
-    question: "Choose the sentence with proper capitalization:",
-    options: ["i am going home.", "I am going home.", "i Am Going Home.", "I am Going Home."],
-    answer: "I am going home."
-  },
-
-  // Word Forms
-  {
-    question: "What is the adjective form of 'beauty'?",
-    options: ["Beautiful", "Beautify", "Beautiness", "Beautee"],
-    answer: "Beautiful"
-  },
-  {
-    question: "Select the noun form of 'decide':",
-    options: ["Deciding", "Decision", "Decider", "Decidee"],
-    answer: "Decision"
-  },
-
-  // Figures of Speech
-  {
-    question: "Which is a metaphor?",
-    options: ["He is a lion on the field.", "He runs like a lion.", "He roared loudly.", "He acted bravely."],
-    answer: "He is a lion on the field."
-  },
-  {
-    question: "Which is a simile?",
-    options: ["She sings like a bird.", "She is a bird.", "The bird sang.", "She sings beautifully."],
-    answer: "She sings like a bird."
-  },
-
-  // Pronouns
-  {
-    question: "Which is a demonstrative pronoun?",
-    options: ["This", "He", "They", "We"],
-    answer: "This"
-  },
-  {
-    question: "Choose the correct pronoun to complete: '___ are playing outside.'",
-    options: ["They", "Them", "Their", "Theirs"],
-    answer: "They"
-  },
-
-  // Articles
-  {
-    question: "Which sentence uses the correct article?",
-    options: ["He saw a elephant.", "He saw an elephant.", "He saw the elephant.", "He saw elephant."],
-    answer: "He saw an elephant."
-  },
-  {
-    question: "Identify the correct sentence:",
-    options: ["I need a advice.", "I need some advice.", "I need an advice.", "I need the advice."],
-    answer: "I need some advice."
-  },
-  // Summary – Understanding Main Idea
-  {
-    question: "What is the main purpose of a summary?",
-    options: [
-      "To write every detail of a passage",
-      "To list all characters in a story",
-      "To state the main idea in few words",
-      "To copy exactly what was written"
-    ],
-    answer: "To state the main idea in few words"
-  },
-  {
-    question: "Which of the following is the best summary of: 'Kofi studied hard, attended extra classes, and passed his exams with distinction'?",
-    options: [
-      "Kofi passed his exams.",
-      "Kofi studied, attended classes, and passed.",
-      "Kofi's hard work led to success.",
-      "Kofi liked school."
-    ],
-    answer: "Kofi's hard work led to success."
-  },
-
-  // Summary – Practice
-  {
-    question: "Choose the best summary: 'The children were playing when the rain began. They ran home to avoid getting wet.'",
-    options: [
-      "The children ran home because of rain.",
-      "The rain fell on the children.",
-      "The children were wet.",
-      "It rained during play."
-    ],
-    answer: "The children ran home because of rain."
-  },
-  {
-    question: "Select the correct summary: 'Although she was tired, Akua helped her brother with homework before sleeping.'",
-    options: [
-      "Akua helped her brother before sleeping.",
-      "Akua was tired and slept.",
-      "Akua refused to help.",
-      "Akua did nothing."
-    ],
-    answer: "Akua helped her brother before sleeping."
-  },
-
-  // Grammar – Verb Tenses
-  {
-    question: "Which tense is used in: 'I had already eaten'?",
-    options: ["Past continuous", "Present perfect", "Past perfect", "Future perfect"],
-    answer: "Past perfect"
-  },
-  {
-    question: "Identify the tense: 'By 2025, they will have completed the project.'",
-    options: ["Future perfect", "Present", "Past", "Past perfect"],
-    answer: "Future perfect"
-  },
-
-  // Comprehension – Inference
-  {
-    question: "Passage: 'John cleaned his shoes and packed his bag at night.' What can you infer?",
-    options: [
-      "John was preparing for school.",
-      "John was sleeping.",
-      "John went out to play.",
-      "John lost his shoes."
-    ],
-    answer: "John was preparing for school."
-  },
-  {
-    question: "Passage: 'After the announcement, the crowd cheered and clapped.' What happened?",
-    options: [
-      "Bad news was given.",
-      "People got angry.",
-      "The news was good.",
-      "They were silent."
-    ],
-    answer: "The news was good."
-  },
-
-  // Vocabulary – Synonyms
-  {
-    question: "Synonym of 'happy' is:",
-    options: ["sad", "joyful", "cry", "mad"],
-    answer: "joyful"
-  },
-  {
-    question: "Select the synonym of 'quick':",
-    options: ["slow", "fast", "small", "tired"],
-    answer: "fast"
-  },
-
-  // Vocabulary – Antonyms
-  {
-    question: "Antonym of 'strong' is:",
-    options: ["weak", "bold", "smart", "solid"],
-    answer: "weak"
-  },
-  {
-    question: "Opposite of 'early' is:",
-    options: ["timely", "soon", "late", "fast"],
-    answer: "late"
-  },
-
-  // Grammar – Prepositions
-  {
-    question: "Choose the correct preposition: 'He sat ___ the desk.'",
-    options: ["at", "in", "on", "into"],
-    answer: "at"
-  },
-  {
-    question: "Which sentence uses a preposition correctly?",
-    options: [
-      "He jumped on the chair.",
-      "He jumped the chair.",
-      "He jumped with the chair.",
-      "He jumped chair."
-    ],
-    answer: "He jumped on the chair."
-  },
-
-  // Grammar – Conjunctions
-  {
-    question: "Identify the correct sentence:",
-    options: [
-      "She is tired but she working.",
-      "She is tired, but she is working.",
-      "She tired, but working.",
-      "She working, and tired."
-    ],
-    answer: "She is tired, but she is working."
-  },
-  {
-    question: "Which conjunction fits: 'I will go out ___ it does not rain.'",
-    options: ["but", "although", "if", "unless"],
-    answer: "if"
-  },
-
-  // Grammar – Interjections
-  {
-    question: "Which is an interjection?",
-    options: ["Alas!", "However", "And", "Therefore"],
-    answer: "Alas!"
-  },
-  {
-    question: "Choose the correct usage of an interjection:",
-    options: [
-      "Hurray! We won the match.",
-      "He said hurray to her.",
-      "They were hurray.",
-      "He hurrayed away."
-    ],
-    answer: "Hurray! We won the match."
-  },
-
-  // Grammar – Phrases
-  {
-    question: "Identify the adverbial phrase:",
-    options: ["with his friends", "at night", "a big house", "a young girl"],
-    answer: "at night"
-  },
-  {
-    question: "Which is a noun phrase?",
-    options: ["The tall boy", "Very quickly", "Before dawn", "Has gone"],
-    answer: "The tall boy"
-  },
-
-  // Grammar – Clauses
-  {
-    question: "Choose the dependent clause:",
-    options: ["Because it rained", "They played football", "I slept well", "He arrived late"],
-    answer: "Because it rained"
-  },
-  {
-    question: "Which is an independent clause?",
-    options: ["She ran away", "Since you left", "Although tired", "Because she cried"],
-    answer: "She ran away"
-  },
-
-  // Grammar – Word Class
-  {
-    question: "Identify the verb in the sentence: 'The baby cried loudly.'",
-    options: ["baby", "cried", "loudly", "the"],
-    answer: "cried"
-  },
-  {
-    question: "Which word is an adjective?",
-    options: ["beautiful", "sing", "carefully", "truth"],
-    answer: "beautiful"
-  },
-
-  // Writing – Sentence Completion
-  {
-    question: "Complete the sentence: 'The boy ran ___ the road.'",
-    options: ["across", "above", "under", "out"],
-    answer: "across"
-  },
-  {
-    question: "Fill in the blank: 'The dog barked ___ the stranger.'",
-    options: ["at", "on", "in", "into"],
-    answer: "at"
-  },
-
-  // Summary – Pick the Best Option
-  {
-    question: "Best summary: 'Kojo wakes up early, sweeps the compound, and helps in the kitchen before school.'",
-    options: [
-      "Kojo is lazy.",
-      "Kojo is helpful and hardworking.",
-      "Kojo sleeps a lot.",
-      "Kojo is a child."
-    ],
-    answer: "Kojo is helpful and hardworking."
-  },
-  {
-    question: "Select the best summary: 'The driver slowed down because of the traffic jam ahead.'",
-    options: [
-      "The driver was tired.",
-      "Traffic caused the driver to slow down.",
-      "There was no traffic.",
-      "The driver stopped."
-    ],
-    answer: "Traffic caused the driver to slow down."
-  },
-
-  // Vocabulary – Confused Words
-  {
-    question: "Which word fits: 'The _____ is shining brightly.'",
-    options: ["sun", "son", "soon", "seen"],
-    answer: "sun"
-  },
-  {
-    question: "Which is correct: 'I want to _____ a new dress.'",
-    options: ["buy", "by", "bye", "buoy"],
-    answer: "buy"
-  },
-  // Summary
-  {
-    question: "Best summary: 'Ama read the book, took notes, and revised daily.'",
-    options: [
-      "Ama liked reading.",
-      "Ama took notes from the book.",
-      "Ama was a good student.",
-      "Ama studied the book carefully."
-    ],
-    answer: "Ama studied the book carefully."
-  },
-  {
-    question: "Choose the best summary: 'Yaw overslept and missed the school bus, so he had to walk.'",
-    options: [
-      "Yaw missed school.",
-      "Yaw walked to school because he missed the bus.",
-      "Yaw hated the bus.",
-      "Yaw was punished."
-    ],
-    answer: "Yaw walked to school because he missed the bus."
-  },
-
-  {
-    question: "Identify the tense: 'They had been working since morning.'",
-    options: ["Past continuous", "Present perfect", "Past perfect continuous", "Future perfect"],
-    answer: "Past perfect continuous"
-  },
-  {
-    question: "What is the tense of this sentence? 'He will be arriving soon.'",
-    options: ["Future perfect", "Future continuous", "Past perfect", "Present perfect"],
-    answer: "Future continuous"
-  },
-
-  {
-    question: "Passage: 'She carried an umbrella although the sky was clear.' What can be inferred?",
-    options: [
-      "She liked umbrellas.",
-      "She feared rain.",
-      "She was protecting herself from the sun.",
-      "She forgot her hat."
-    ],
-    answer: "She feared rain."
-  },
-  {
-    question: "Passage: 'Kweku looked everywhere but couldn’t find his phone.' What can you infer?",
-    options: [
-      "Kweku had lost his phone.",
-      "He was lazy.",
-      "He didn’t like his phone.",
-      "His phone was stolen."
-    ],
-    answer: "Kweku had lost his phone."
-  },
-  {
-    question: "Synonym of 'brave' is:",
-    options: ["coward", "bold", "fear", "weak"],
-    answer: "bold"
-  },
-  {
-    question: "Select the synonym of 'angry':",
-    options: ["furious", "calm", "happy", "kind"],
-    answer: "furious"
-  },
-  {
-    question: "Antonym of 'generous' is:",
-    options: ["kind", "stingy", "friendly", "open"],
-    answer: "stingy"
-  },
-  {
-    question: "Opposite of 'rise' is:",
-    options: ["jump", "climb", "fall", "lift"],
-    answer: "fall"
-  },
-  {
-    question: "Choose the correct preposition: 'She is fond ___ music.'",
-    options: ["with", "at", "of", "on"],
-    answer: "of"
-  },
-  {
-    question: "Identify the correct sentence:",
-    options: [
-      "He is married with her.",
-      "He is married to her.",
-      "He is married by her.",
-      "He is married on her."
-    ],
-    answer: "He is married to her."
-  },
-
-  // Grammar – Conjunctions
-  {
-    question: "Select the correct conjunction: 'He was tired ___ continued working.'",
-    options: ["but", "and", "because", "or"],
-    answer: "but"
-  },
-  {
-    question: "Which sentence uses 'although' correctly?",
-    options: [
-      "Although he was late, he was allowed in.",
-      "He although was late, he entered.",
-      "Although he late was, entered.",
-      "Although he late, allowed in."
-    ],
-    answer: "Although he was late, he was allowed in."
-  },
-
-  // Grammar – Interjections
-  {
-    question: "Which sentence contains an interjection?",
-    options: [
-      "Wow! That was amazing.",
-      "I saw her running.",
-      "He went to market.",
-      "She speaks French."
-    ],
-    answer: "Wow! That was amazing."
-  },
-  {
-    question: "Identify the interjection in the sentence: 'Oops! I broke the plate.'",
-    options: ["Oops!", "I", "broke", "plate"],
-    answer: "Oops!"
-  },
-
-  // Grammar – Phrases
-  {
-    question: "Identify the verb phrase:",
-    options: ["has been working", "under the table", "a tall girl", "in the bag"],
-    answer: "has been working"
-  },
-  {
-    question: "Which is a prepositional phrase?",
-    options: ["in the morning", "have gone", "the lazy cat", "ran fast"],
-    answer: "in the morning"
-  },
-
-  // Grammar – Clauses
-  {
-    question: "Which is a dependent clause?",
-    options: ["If I had time", "She sings well", "They went home", "He walks fast"],
-    answer: "If I had time"
-  },
-  {
-    question: "Identify the independent clause:",
-    options: ["I love chocolate", "Although tired", "Since I came", "Because I slept"],
-    answer: "I love chocolate"
-  },
-
-  // Word Usage – Confused Words
-  {
-    question: "Which is correct: 'He threw the ball ____ the wall.'",
-    options: ["against", "again", "gainst", "a gain"],
-    answer: "against"
-  },
-  {
-    question: "Choose the correct word: 'Their books are on ____ desk.'",
-    options: ["there", "they’re", "their", "theirs"],
-    answer: "their"
-  },
-
-  // Sentence Completion
-  {
-    question: "Complete the sentence: 'She was happy ___ she passed the test.'",
-    options: ["because", "although", "unless", "and"],
-    answer: "because"
-  },
-  {
-    question: "Fill in the blank: 'If I ___ you, I would apologize.'",
-    options: ["was", "were", "am", "be"],
-    answer: "were"
-  },
-
-  // Summary – Reading Strategy
-  {
-    question: "When writing a summary, avoid:",
-    options: [
-      "Retelling the entire passage",
-      "Using your own words",
-      "Focusing on main points",
-      "Being brief"
-    ],
-    answer: "Retelling the entire passage"
-  },
-  {
-    question: "A good summary should:",
-    options: [
-      "Contain exact words from the text",
-      "Be very long",
-      "Include key points only",
-      "Have every example"
-    ],
-    answer: "Include key points only"
-  },
-
-  // Comprehension Practice
-  {
-    question: "Passage: 'The storm destroyed several homes, leaving many without shelter.' What is the main idea?",
-    options: [
-      "The storm was fun.",
-      "People were homeless after the storm.",
-      "Homes are expensive.",
-      "It rained for days."
-    ],
-    answer: "People were homeless after the storm."
-  },
-  {
-    question: "Passage: 'Kwame trained daily and improved his speed.' What is the result of his training?",
-    options: [
-      "He got tired.",
-      "He became slower.",
-      "His speed improved.",
-      "He quit running."
-    ],
-    answer: "His speed improved."
-  },
-
-  // Synonyms and Antonyms – Word Skills
-  {
-    question: "Antonym of 'modern' is:",
-    options: ["ancient", "recent", "bright", "old"],
-    answer: "ancient"
-  },
-  {
-    question: "Synonym of 'assist' is:",
-    options: ["help", "hurt", "delay", "avoid"],
-    answer: "help"
-  },
-
-  // Spelling and Vocabulary
-  {
-    question: "Which of these is correctly spelled?",
-    options: ["enviroment", "environment", "enviorment", "envaironment"],
-    answer: "environment"
-  },
-  {
-    question: "Choose the correct spelling:",
-    options: ["acommodation", "accommodation", "accomadation", "acomodation"],
-    answer: "accommodation"
-  }
 ];
 
 export default englishQuestions;

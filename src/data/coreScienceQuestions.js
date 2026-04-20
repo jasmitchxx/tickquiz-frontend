@@ -1,2481 +1,1629 @@
 const coreScienceQuestions = [
-  {
-    question: "What is the basic unit of life?",
-    options: ["Organ", "Cell", "Tissue", "System"],
-    answer: "Cell"
-  },
-  // More questions...
 
-  {
-    question: "What is the primary focus of Integrated Science?",
-    options: ["Pure Chemistry", "Application of scientific knowledge", "Only Physics", "Memorization of facts"],
-    answer: "Application of scientific knowledge"
-  },
-  {
-    question: "Which instrument is commonly used for measuring length?",
-    options: ["Thermometer", "Ruler", "Voltmeter", "Barometer"],
-    answer: "Ruler"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: ["Tissue", "Organ", "Cell", "System"],
-    answer: "Cell"
-  },
-  {
-    question: "Which of these is NOT a state of matter?",
-    options: ["Solid", "Liquid", "Gas", "Energy"],
-    answer: "Energy"
-  },
-  {
-    question: "What type of rock is formed from molten magma?",
-    options: ["Igneous", "Sedimentary", "Metamorphic", "Fossil"],
-    answer: "Igneous"
-  },
-  {
-    question: "What process allows water vapor to rise into the atmosphere?",
-    options: ["Condensation", "Evaporation", "Freezing", "Sublimation"],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which gas is most abundant in air?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "Which part of the cell contains genetic material?",
-    options: ["Cytoplasm", "Cell membrane", "Nucleus", "Mitochondria"],
-    answer: "Nucleus"
-  },
-  {
-    question: "Which system supports the body and protects internal organs?",
-    options: ["Digestive system", "Respiratory system", "Skeletal system", "Circulatory system"],
-    answer: "Skeletal system"
-  },
-  {
-    question: "Which process describes the growth of a plant from a seed?",
-    options: ["Photosynthesis", "Germination", "Pollination", "Transpiration"],
-    answer: "Germination"
-  },
-  {
-    question: "Which organ is responsible for breathing in humans?",
-    options: ["Heart", "Liver", "Lung", "Stomach"],
-    answer: "Lung"
-  },
-  {
-    question: "Which food group builds and repairs body tissues?",
-    options: ["Carbohydrates", "Fats", "Proteins", "Vitamins"],
-    answer: "Proteins"
-  },
-  {
-    question: "Which part of the mammal's digestive system absorbs nutrients?",
-    options: ["Stomach", "Mouth", "Small intestine", "Large intestine"],
-    answer: "Small intestine"
-  },
-  {
-    question: "Which process involves the movement of molecules from high to low concentration?",
-    options: ["Osmosis", "Diffusion", "Photosynthesis", "Absorption"],
-    answer: "Diffusion"
-  },
-  {
-    question: "Which of the following is a form of kinetic energy?",
-    options: ["Heat", "Chemical", "Gravitational", "Nuclear"],
-    answer: "Heat"
-  },
-  {
-    question: "Which energy source comes from the sun?",
-    options: ["Thermal energy", "Solar energy", "Chemical energy", "Nuclear energy"],
-    answer: "Solar energy"
-  },
-  {
-    question: "What is the main product of photosynthesis?",
-    options: ["Carbon dioxide", "Oxygen", "Glucose", "Nitrogen"],
-    answer: "Glucose"
-  },
-  {
-    question: "What is an LED used in?",
-    options: ["Pipes", "Books", "Electronics", "Shoes"],
-    answer: "Electronics"
-  },
-  {
-    question: "Which of the following is a biotic component of the ecosystem?",
-    options: ["Water", "Sunlight", "Plant", "Soil"],
-    answer: "Plant"
-  },
-  {
-    question: "What causes the greenhouse effect?",
-    options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which disease is caused by a virus?",
-    options: ["Malaria", "Tuberculosis", "HIV/AIDS", "Cholera"],
-    answer: "HIV/AIDS"
-  },
-  {
-    question: "Which substance has a pH less than 7?",
-    options: ["Water", "Soap", "Acid", "Salt"],
-    answer: "Acid"
-  },
-  {
-    question: "What is one way to conserve soil?",
-    options: ["Overgrazing", "Deforestation", "Crop rotation", "Burning fields"],
-    answer: "Crop rotation"
-  },
-  {
-    question: "Which of the following is essential for life and covers 70% of Earth?",
-    options: ["Air", "Water", "Soil", "Plants"],
-    answer: "Water"
-  },
-  {
-    question: "What stage of the hydrological cycle involves clouds forming?",
-    options: ["Precipitation", "Evaporation", "Condensation", "Runoff"],
-    answer: "Condensation"
-  },
-  {
-    question: "Which animal is reared mainly for milk?",
-    options: ["Goat", "Chicken", "Sheep", "Rabbit"],
-    answer: "Goat"
-  },
-  {
-    question: "What organ removes urea from the blood?",
-    options: ["Liver", "Lung", "Kidney", "Heart"],
-    answer: "Kidney"
-  },
-  {
-    question: "What is fertilization in mammals?",
-    options: ["Meeting of sperm and egg", "Birth of baby", "Growth of fetus", "Cell division"],
-    answer: "Meeting of sperm and egg"
-  },
-  {
-    question: "Which blood vessel carries blood away from the heart?",
-    options: ["Vein", "Capillary", "Artery", "Bronchiole"],
-    answer: "Artery"
-  },
-  {
-    question: "Which device converts chemical energy to electrical energy?",
-    options: ["Resistor", "Battery", "Switch", "Transformer"],
-    answer: "Battery"
-  },
-  {
-    question: "What type of energy allows us to hear?",
-    options: ["Light energy", "Sound energy", "Heat energy", "Chemical energy"],
-    answer: "Sound energy"
-  },
-  {
-    question: "Which energy is released during nuclear reactions?",
-    options: ["Thermal", "Electrical", "Chemical", "Nuclear"],
-    answer: "Nuclear"
-  },
-  {
-    question: "What is the area of science that studies magnets called?",
-    options: ["Magnetism", "Electricity", "Mechanics", "Chemistry"],
-    answer: "Magnetism"
-  },
-  {
-    question: "What force causes objects to fall to the ground?",
-    options: ["Magnetism", "Electricity", "Gravity", "Friction"],
-    answer: "Gravity"
-  },
-  {
-    question: "What is the first rule in safety?",
-    options: ["Panic", "Run", "Stay calm", "Shout"],
-    answer: "Stay calm"
-  },
-  {
-    question: "Technology developed from within a community is called:",
-    options: ["Biotechnology", "Endogenous technology", "Exogenous technology", "Modern technology"],
-    answer: "Endogenous technology"
-  },
-  {
-    question: "Which field involves modifying organisms for human benefit?",
-    options: ["Geology", "Physics", "Biotechnology", "Astronomy"],
-    answer: "Biotechnology"
-  },
-  {
-    question: "What type of simple machine is a lever?",
-    options: ["Inclined plane", "Pulley", "Wedge", "Lever"],
-    answer: "Lever"
-  },
-  {
-    question: "Which of these is a metal?",
-    options: ["Sulfur", "Copper", "Carbon", "Silicon"],
-    answer: "Copper"
-  },
-  {
-    question: "What is the process of obtaining minerals from the earth?",
-    options: ["Mining", "Fishing", "Farming", "Planting"],
-    answer: "Mining"
-  },
-  {
-    question: "What causes rusting?",
-    options: ["Air and water", "Oil", "Heat", "Sunlight"],
-    answer: "Air and water"
-  },
-  {
-    question: "Which is an organic compound?",
-    options: ["Water", "Salt", "Glucose", "Chalk"],
-    answer: "Glucose"
-  },
-  {
-    question: "Which pest undergoes complete metamorphosis?",
-    options: ["Housefly", "Grasshopper", "Louse", "Bedbug"],
-    answer: "Housefly"
-  },
-  {
-    question: "What is the process of planting and harvesting crops?",
-    options: ["Mining", "Grazing", "Crop production", "Fishing"],
-    answer: "Crop production"
-  },
-  {
-    question: "Which organ is part of the nervous system?",
-    options: ["Liver", "Heart", "Brain", "Lungs"],
-    answer: "Brain"
-  },
-  {
-    question: "What is the natural source of light energy?",
-    options: ["Bulb", "Fire", "Sun", "Candle"],
-    answer: "Sun"
-  },
-  {
-    question: "Which device measures temperature?",
-    options: ["Barometer", "Thermometer", "Hygrometer", "Voltmeter"],
-    answer: "Thermometer"
-  },
-  {
-    question: "What is the main carrier of genetic information?",
-    options: ["Protein", "DNA", "Vitamin", "Water"],
-    answer: "DNA"
-  },
-  {
-    question: "Which part of the body regulates body temperature?",
-    options: ["Lungs", "Skin", "Heart", "Stomach"],
-    answer: "Skin"
-  },
-  {
-    question: "What is the main function of red blood cells?",
-    options: ["Fight diseases", "Clot blood", "Carry oxygen", "Produce hormones"],
-    answer: "Carry oxygen"
-  },
-  {
-    question: "What is the male reproductive organ in flowering plants?",
-    options: ["Ovary", "Petal", "Stamen", "Pistil"],
-    answer: "Stamen"
-  },
-  {
-    question: "What part of the plant carries water and nutrients from the roots?",
-    options: ["Leaves", "Flowers", "Stem", "Fruit"],
-    answer: "Stem"
-  },
-  {
-    question: "What process do plants use to make their food?",
-    options: ["Respiration", "Photosynthesis", "Fermentation", "Digestion"],
-    answer: "Photosynthesis"
-  },
-  {
-    question: "Which organ system is responsible for removing waste from the body?",
-    options: ["Nervous system", "Excretory system", "Respiratory system", "Digestive system"],
-    answer: "Excretory system"
-  },
-  {
-    question: "Which of the following is NOT a source of protein?",
-    options: ["Fish", "Meat", "Rice", "Beans"],
-    answer: "Rice"
-  },
-  {
-    question: "The process by which plants lose water through their leaves is called:",
-    options: ["Photosynthesis", "Transpiration", "Evaporation", "Condensation"],
-    answer: "Transpiration"
-  },
-  {
-    question: "Which element is essential for making chlorophyll?",
-    options: ["Iron", "Calcium", "Magnesium", "Potassium"],
-    answer: "Magnesium"
-  },
-  {
-    question: "Which system is responsible for coordination and response?",
-    options: ["Circulatory", "Respiratory", "Nervous", "Digestive"],
-    answer: "Nervous"
-  },
-  {
-    question: "How many chambers are there in a human heart?",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Which gas is given off during photosynthesis?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Oxygen"
-  },
-  {
-    question: "The sun is a source of what type of energy?",
-    options: ["Chemical", "Solar", "Nuclear", "Sound"],
-    answer: "Solar"
-  },
-  {
-    question: "Which part of the digestive system stores undigested food before removal?",
-    options: ["Small intestine", "Stomach", "Rectum", "Esophagus"],
-    answer: "Rectum"
-  },
-  {
-    question: "The process of splitting cells to form new ones is called:",
-    options: ["Digestion", "Fertilization", "Cell division", "Respiration"],
-    answer: "Cell division"
-  },
-  {
-    question: "Which is a renewable source of energy?",
-    options: ["Coal", "Petroleum", "Wind", "Natural gas"],
-    answer: "Wind"
-  },
-  {
-    question: "Which gas is essential for respiration?",
-    options: ["Hydrogen", "Oxygen", "Nitrogen", "Carbon dioxide"],
-    answer: "Oxygen"
-  },
-  {
-    question: "Which of these is NOT a sense organ?",
-    options: ["Eye", "Skin", "Tongue", "Liver"],
-    answer: "Liver"
-  },
-  {
-    question: "A mixture can be separated by:",
-    options: ["Boiling", "Melting", "Distillation", "Burning"],
-    answer: "Distillation"
-  },
-  {
-    question: "The periodic rise and fall of sea level is called:",
-    options: ["Erosion", "Current", "Tide", "Wave"],
-    answer: "Tide"
-  },
-  {
-    question: "What form of energy is used to cook food using firewood?",
-    options: ["Nuclear", "Chemical", "Solar", "Electrical"],
-    answer: "Chemical"
-  },
-  {
-    question: "What is responsible for the weather changes on Earth?",
-    options: ["Sun", "Moon", "Mars", "Comets"],
-    answer: "Sun"
-  },
-  {
-    question: "Which of these causes air pollution?",
-    options: ["Tree planting", "Rainfall", "Vehicle fumes", "Clean water"],
-    answer: "Vehicle fumes"
-  },
-  {
-    question: "Which type of nutrient helps in energy production?",
-    options: ["Protein", "Vitamins", "Carbohydrates", "Water"],
-    answer: "Carbohydrates"
-  },
-  {
-    question: "Which part of the ear helps in balance?",
-    options: ["Outer ear", "Middle ear", "Inner ear", "Eardrum"],
-    answer: "Inner ear"
-  },
-  {
-    question: "Which of these is an acid?",
-    options: ["Soap", "Lime juice", "Salt", "Baking soda"],
-    answer: "Lime juice"
-  },
-  {
-    question: "The process of water seeping into the ground is called:",
-    options: ["Infiltration", "Evaporation", "Condensation", "Runoff"],
-    answer: "Infiltration"
-  },
-  {
-    question: "The electrical circuit that allows current to flow is:",
-    options: ["Open circuit", "Closed circuit", "Broken circuit", "Short circuit"],
-    answer: "Closed circuit"
-  },
-  {
-    question: "The main energy source for plants is:",
-    options: ["Water", "Air", "Sunlight", "Soil"],
-    answer: "Sunlight"
-  },
-  {
-    question: "What helps blood to clot?",
-    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
-    answer: "Platelets"
-  },
-  {
-    question: "The pressure exerted by air is called:",
-    options: ["Air force", "Wind pressure", "Atmospheric pressure", "Water pressure"],
-    answer: "Atmospheric pressure"
-  },
-  {
-    question: "How many senses do humans have?",
-    options: ["3", "4", "5", "6"],
-    answer: "5"
-  },
-  {
-    question: "Which of these animals undergoes metamorphosis?",
-    options: ["Goat", "Butterfly", "Dog", "Cat"],
-    answer: "Butterfly"
-  },
-  {
-    question: "The boiling point of water is:",
-    options: ["0°C", "50°C", "100°C", "200°C"],
-    answer: "100°C"
-  },
-  {
-    question: "Which of the following is an insulator?",
-    options: ["Copper", "Iron", "Wood", "Aluminum"],
-    answer: "Wood"
-  },
-  {
-    question: "Which gas turns limewater milky?",
-    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "What do you call animals that feed only on plants?",
-    options: ["Carnivores", "Omnivores", "Herbivores", "Scavengers"],
-    answer: "Herbivores"
-  },
-  {
-    question: "Which type of teeth is used for grinding food?",
-    options: ["Canines", "Molars", "Incisors", "Premolars"],
-    answer: "Molars"
-  },
-  {
-    question: "What do we call the young of a butterfly?",
-    options: ["Larva", "Pupa", "Egg", "Nymph"],
-    answer: "Larva"
-  },
-  {
-    question: "Which of the following is a pollutant?",
-    options: ["Oxygen", "Carbon monoxide", "Nitrogen", "Hydrogen"],
-    answer: "Carbon monoxide"
-  },
-  {
-    question: "What part of the flower becomes the fruit?",
-    options: ["Stamen", "Petal", "Ovary", "Anther"],
-    answer: "Ovary"
-  },
-  {
-    question: "What type of joint is found in the shoulder?",
-    options: ["Hinge", "Ball and socket", "Fixed", "Sliding"],
-    answer: "Ball and socket"
-  },
-  {
-    question: "Which organ produces bile?",
-    options: ["Stomach", "Pancreas", "Liver", "Gall bladder"],
-    answer: "Liver"
-  },
-  {
-    question: "The outer layer of the skin is called the:",
-    options: ["Dermis", "Epidermis", "Pore", "Nerve"],
-    answer: "Epidermis"
-  },
-  {
-    question: "Which material is magnetic?",
-    options: ["Plastic", "Iron", "Wood", "Rubber"],
-    answer: "Iron"
-  },
-  {
-    question: "Where does fertilization occur in humans?",
-    options: ["Ovary", "Uterus", "Fallopian tube", "Vagina"],
-    answer: "Fallopian tube"
-  },
-  {
-    question: "The resistance of an object to change in motion is called:",
-    options: ["Friction", "Inertia", "Mass", "Weight"],
-    answer: "Inertia"
-  },
-  {
-    question: "Which of these helps plants to absorb sunlight?",
-    options: ["Chlorophyll", "Carbon dioxide", "Water", "Oxygen"],
-    answer: "Chlorophyll"
-  },
-  {
-    question: "Which cell in the blood fights infection?",
-    options: ["Red cell", "Platelet", "Plasma", "White cell"],
-    answer: "White cell"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: ["Atom", "Molecule", "Organ", "Cell"],
-    answer: "Cell"
-  },
-  {
-    question: "Which process involves water changing to vapor?",
-    options: ["Condensation", "Evaporation", "Melting", "Freezing"],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which blood vessels carry blood away from the heart?",
-    options: ["Veins", "Capillaries", "Arteries", "Valves"],
-    answer: "Arteries"
-  },
-  {
-    question: "Which type of energy is stored in food?",
-    options: ["Kinetic", "Solar", "Chemical", "Electrical"],
-    answer: "Chemical"
-  },
-  {
-    question: "What is a change in position of an object called?",
-    options: ["Force", "Speed", "Motion", "Mass"],
-    answer: "Motion"
-  },
-  {
-    question: "Which part of the microscope controls the amount of light?",
-    options: ["Lens", "Mirror", "Diaphragm", "Stage"],
-    answer: "Diaphragm"
-  },
-  {
-    question: "Which vitamin is essential for blood clotting?",
-    options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
-    answer: "Vitamin K"
-  },
-  {
-    question: "Which of the following is not part of the respiratory system?",
-    options: ["Trachea", "Lungs", "Bronchi", "Stomach"],
-    answer: "Stomach"
-  },
-  {
-    question: "What do you call the study of weather?",
-    options: ["Biology", "Meteorology", "Ecology", "Geology"],
-    answer: "Meteorology"
-  },
-  {
-    question: "Which form of energy does a vibrating object produce?",
-    options: ["Light", "Heat", "Electrical", "Sound"],
-    answer: "Sound"
-  },
-  {
-    question: "Which mineral is needed to make strong bones and teeth?",
-    options: ["Iron", "Sodium", "Calcium", "Iodine"],
-    answer: "Calcium"
-  },
-  {
-    question: "Which component of blood helps in fighting diseases?",
-    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
-    answer: "White blood cells"
-  },
-  {
-    question: "Which of these is a method of conserving soil?",
-    options: ["Bush burning", "Overgrazing", "Mulching", "Deforestation"],
-    answer: "Mulching"
-  },
-  {
-    question: "Which force opposes motion between two surfaces?",
-    options: ["Magnetism", "Gravity", "Friction", "Inertia"],
-    answer: "Friction"
-  },
-  {
-    question: "Which of these gases is a greenhouse gas?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Argon"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "What is the product of photosynthesis?",
-    options: ["Water", "Oxygen", "Carbon dioxide", "Glucose"],
-    answer: "Glucose"
-  },
-  {
-    question: "Which of the following can generate electricity from sunlight?",
-    options: ["Transformer", "Battery", "Solar panel", "Windmill"],
-    answer: "Solar panel"
-  },
-  {
-    question: "What type of machine is a wheelbarrow?",
-    options: ["First class lever", "Second class lever", "Third class lever", "Pulley"],
-    answer: "Second class lever"
-  },
-  {
-    question: "Which part of the ear collects sound waves?",
-    options: ["Ear canal", "Ear drum", "Pinna", "Cochlea"],
-    answer: "Pinna"
-  },
-  {
-    question: "What is responsible for carrying genetic information?",
-    options: ["Nucleus", "Ribosome", "Mitochondrion", "Cytoplasm"],
-    answer: "Nucleus"
-  },
-  {
-    question: "Which natural resource is used to make glass?",
-    options: ["Clay", "Sand", "Coal", "Salt"],
-    answer: "Sand"
-  },
-  {
-    question: "What is the main component of air?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Argon"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "Which part of the body helps in detecting taste?",
-    options: ["Skin", "Nose", "Tongue", "Teeth"],
-    answer: "Tongue"
-  },
-  {
-    question: "The movement of water through the soil is called:",
-    options: ["Percolation", "Condensation", "Evaporation", "Erosion"],
-    answer: "Percolation"
-  },
-  {
-    question: "What is the main source of nitrogen in the nitrogen cycle?",
-    options: ["Sunlight", "Decomposers", "Rainfall", "Volcanoes"],
-    answer: "Decomposers"
-  },
-  {
-    question: "Which energy form is used in a radio?",
-    options: ["Nuclear", "Light", "Electrical", "Kinetic"],
-    answer: "Electrical"
-  },
-  {
-    question: "Which part of the flower contains ovules?",
-    options: ["Stigma", "Style", "Ovary", "Petal"],
-    answer: "Ovary"
-  },
-  {
-    question: "Which substance is used to test for proteins?",
-    options: ["Iodine", "Benedict's solution", "Biuret reagent", "Limewater"],
-    answer: "Biuret reagent"
-  },
-  {
-    question: "What type of heat transfer happens through a solid?",
-    options: ["Radiation", "Convection", "Conduction", "Evaporation"],
-    answer: "Conduction"
-  },
-  {
-    question: "The device used to measure electric current is:",
-    options: ["Voltmeter", "Ammeter", "Thermometer", "Barometer"],
-    answer: "Ammeter"
-  },
-  {
-    question: "Which nutrient helps build body tissues?",
-    options: ["Carbohydrates", "Fats", "Proteins", "Vitamins"],
-    answer: "Proteins"
-  },
-  {
-    question: "The layer of gases surrounding the Earth is the:",
-    options: ["Lithosphere", "Biosphere", "Atmosphere", "Hydrosphere"],
-    answer: "Atmosphere"
-  },
-  {
-    question: "What instrument is used to measure temperature?",
-    options: ["Thermometer", "Barometer", "Hygrometer", "Anemometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "Which of these can be attracted by a magnet?",
-    options: ["Copper", "Wood", "Iron", "Plastic"],
-    answer: "Iron"
-  },
-  {
-    question: "The human body gets vitamin D from:",
-    options: ["Fruits", "Sunlight", "Milk", "Meat"],
-    answer: "Sunlight"
-  },
-  {
-    question: "The total amount of water on Earth is called the:",
-    options: ["Hydrosphere", "Lithosphere", "Biosphere", "Stratosphere"],
-    answer: "Hydrosphere"
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["Earth", "Jupiter", "Mars", "Venus"],
-    answer: "Mars"
-  },
-  {
-    question: "A force that pulls objects toward the Earth is called:",
-    options: ["Friction", "Magnetism", "Gravity", "Push"],
-    answer: "Gravity"
-  },
-  {
-    question: "Which organ helps in filtering blood in the human body?",
-    options: ["Heart", "Liver", "Kidney", "Lung"],
-    answer: "Kidney"
-  },
-  {
-    question: "A vertebrate is an animal with a:",
-    options: ["Tail", "Backbone", "Shell", "Beak"],
-    answer: "Backbone"
-  },
-  {
-    question: "Which of the following is an example of an omnivore?",
-    options: ["Lion", "Goat", "Human", "Cow"],
-    answer: "Human"
-  },
-  {
-    question: "The simple machine that consists of a wheel and a rope is:",
-    options: ["Lever", "Pulley", "Screw", "Inclined plane"],
-    answer: "Pulley"
-  },
-  {
-    question: "Which type of rock is formed from cooled lava?",
-    options: ["Sedimentary", "Igneous", "Metamorphic", "Fossil"],
-    answer: "Igneous"
-  },
-  {
-    question: "The transfer of pollen from anther to stigma is called:",
-    options: ["Germination", "Pollination", "Fertilization", "Growth"],
-    answer: "Pollination"
-  },
-  {
-    question: "What tool is used to split wood?",
-    options: ["Hammer", "Axe", "Saw", "Drill"],
-    answer: "Axe"
-  },
-  {
-    question: "Which part of the nervous system is responsible for thinking?",
-    options: ["Spinal cord", "Brain", "Nerves", "Skull"],
-    answer: "Brain"
-  },
-  {
-    question: "What is the hard part of the tooth used for chewing?",
-    options: ["Dentine", "Enamel", "Pulp", "Gum"],
-    answer: "Enamel"
-  },
-  {
-    question: "Which of these is not a farm tool?",
-    options: ["Hoe", "Rake", "Cutlass", "Oven"],
-    answer: "Oven"
-  },
-  {
-    question: "Which blood type is known as the universal donor?",
-    options: ["A", "B", "AB", "O"],
-    answer: "O"
-  },
-  {
-    question: "What is the function of the ribcage?",
-    options: ["Digestion", "Breathing", "Protection", "Movement"],
-    answer: "Protection"
-  },
-  {
-    question: "Which gas is necessary for burning?",
-    options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Hydrogen"],
-    answer: "Oxygen"
-  },
-  {
-    question: "What is the unit of measuring electric current?",
-    options: ["Volt", "Ohm", "Ampere", "Watt"],
-    answer: "Ampere"
-  },
-  {
-    question: "Which organ removes waste from the blood?",
-    options: ["Lung", "Heart", "Kidney", "Liver"],
-    answer: "Kidney"
-  },
-  {
-    question: "Which device converts chemical energy to electrical energy?",
-    options: ["Bulb", "Battery", "Motor", "Generator"],
-    answer: "Battery"
-  },
-  {
-    question: "Which organ in plants carries water from roots to leaves?",
-    options: ["Phloem", "Xylem", "Stomata", "Chloroplast"],
-    answer: "Xylem"
-  },
-  {
-    question: "The process of removing waste products from the body is:",
-    options: ["Respiration", "Digestion", "Excretion", "Osmosis"],
-    answer: "Excretion"
-  },
-  {
-    question: "Which part of the digestive system absorbs nutrients?",
-    options: ["Stomach", "Mouth", "Small intestine", "Large intestine"],
-    answer: "Small intestine"
-  },
-  {
-    question: "Which of these is a renewable source of energy?",
-    options: ["Coal", "Petroleum", "Natural gas", "Sunlight"],
-    answer: "Sunlight"
-  },
-  {
-    question: "What is the male reproductive cell in animals called?",
-    options: ["Ovum", "Zygote", "Sperm", "Egg"],
-    answer: "Sperm"
-  },
-  {
-    question: "Which organ helps in breathing and gas exchange?",
-    options: ["Liver", "Heart", "Lungs", "Kidney"],
-    answer: "Lungs"
-  },
-  {
-    question: "A group of similar cells performing the same function is called:",
-    options: ["Organ", "System", "Tissue", "Organism"],
-    answer: "Tissue"
-  },
-  {
-    question: "Which of these is not a characteristic of living things?",
-    options: ["Respiration", "Growth", "Reproduction", "Rusting"],
-    answer: "Rusting"
-  },
-  {
-    question: "Which mineral helps in the formation of red blood cells?",
-    options: ["Calcium", "Iron", "Zinc", "Iodine"],
-    answer: "Iron"
-  },
-  {
-    question: "The process of breaking down food in the body is called:",
-    options: ["Respiration", "Digestion", "Excretion", "Assimilation"],
-    answer: "Digestion"
-  },
-  {
-    question: "Which of these is a method of controlling erosion?",
-    options: ["Bush burning", "Overgrazing", "Terracing", "Deforestation"],
-    answer: "Terracing"
-  },
-  {
-    question: "What type of energy is produced by a battery?",
-    options: ["Heat energy", "Light energy", "Chemical energy", "Electrical energy"],
-    answer: "Electrical energy"
-  },
-  {
-    question: "Which body system controls actions and reactions?",
-    options: ["Circulatory system", "Digestive system", "Nervous system", "Respiratory system"],
-    answer: "Nervous system"
-  },
-  {
-    question: "Which type of rock is formed by layers of sediment?",
-    options: ["Igneous", "Metamorphic", "Sedimentary", "Molten"],
-    answer: "Sedimentary"
-  },
-  {
-    question: "The part of the flower that contains the pollen is the:",
-    options: ["Ovary", "Stigma", "Anther", "Petal"],
-    answer: "Anther"
-  },
-  {
-    question: "Which nutrient provides the most energy?",
-    options: ["Protein", "Vitamin", "Fat", "Minerals"],
-    answer: "Fat"
-  },
-  {
-    question: "What type of reproduction involves one parent?",
-    options: ["Sexual", "Binary fission", "Asexual", "Internal"],
-    answer: "Asexual"
-  },
-  {
-    question: "The heart is made up of what kind of muscle?",
-    options: ["Smooth", "Skeletal", "Cardiac", "Striated"],
-    answer: "Cardiac"
-  },
-  {
-    question: "Which machine uses a screw to operate?",
-    options: ["Knife", "Bottle opener", "Jack", "Wheelbarrow"],
-    answer: "Jack"
-  },
-  {
-    question: "Which part of the digestive system stores bile?",
-    options: ["Liver", "Pancreas", "Gall bladder", "Stomach"],
-    answer: "Gall bladder"
-  },
-  {
-    question: "Which method is used to separate sand from water?",
-    options: ["Filtration", "Evaporation", "Decantation", "Distillation"],
-    answer: "Filtration"
-  },
-  {
-    question: "What is the main cause of acid rain?",
-    options: ["Oxygen", "Carbon monoxide", "Sulfur dioxide", "Nitrogen"],
-    answer: "Sulfur dioxide"
-  },
-  {
-    question: "The organ that pumps blood in the body is the:",
-    options: ["Lungs", "Kidney", "Brain", "Heart"],
-    answer: "Heart"
-  },
-  {
-    question: "The sound made by a vibrating object is carried through:",
-    options: ["Vacuum", "Glass", "Air", "Water"],
-    answer: "Air"
-  },
-  {
-    question: "Which gas is used during photosynthesis?",
-    options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which device measures atmospheric pressure?",
-    options: ["Thermometer", "Barometer", "Anemometer", "Hygrometer"],
-    answer: "Barometer"
-  },
-  {
-    question: "The total weight of a person is a measure of:",
-    options: ["Mass", "Force", "Density", "Inertia"],
-    answer: "Force"
-  },
-  {
-    question: "Which of the following is not an excretory organ?",
-    options: ["Kidney", "Lung", "Skin", "Heart"],
-    answer: "Heart"
-  },
-  {
-    question: "Which tool is used to cut crops during harvest?",
-    options: ["Hoe", "Sickle", "Spade", "Mattock"],
-    answer: "Sickle"
-  },
-  {
-    question: "The human skeleton is mainly for:",
-    options: ["Breathing", "Support", "Circulation", "Digestion"],
-    answer: "Support"
-  },
-  {
-    question: "An organism that feeds on dead organisms is called:",
-    options: ["Producer", "Parasite", "Decomposer", "Consumer"],
-    answer: "Decomposer"
-  },
-  {
-    question: "Which part of the body is responsible for producing urine?",
-    options: ["Liver", "Bladder", "Kidneys", "Stomach"],
-    answer: "Kidneys"
-  },
-  {
-    question: "The boiling point of water in Celsius is:",
-    options: ["50°C", "100°C", "120°C", "80°C"],
-    answer: "100°C"
-  },
-  {
-    question: "Which gas makes up the largest portion of air?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "Which of these is used to convert sound energy into electrical energy?",
-    options: ["Speaker", "Battery", "Microphone", "Light bulb"],
-    answer: "Microphone"
-  },
-  {
-    question: "The function of the large intestine is to:",
-    options: ["Absorb nutrients", "Store waste", "Produce bile", "Digest food"],
-    answer: "Store waste"
-  },
-  {
-    question: "Which of these helps maintain body temperature?",
-    options: ["Blood", "Sweat", "Urine", "Tears"],
-    answer: "Sweat"
-  },
-  {
-    question: "Which of these is used to increase farm yield?",
-    options: ["Herbicides", "Fertilizers", "Pesticides", "Manure"],
-    answer: "Fertilizers"
-  },
-  {
-    question: "Which type of energy is associated with moving water?",
-    options: ["Solar energy", "Hydroelectric energy", "Nuclear energy", "Chemical energy"],
-    answer: "Hydroelectric energy"
-  },
-  {
-    question: "Which part of a cell controls its activities?",
-    options: ["Cell wall", "Nucleus", "Cytoplasm", "Membrane"],
-    answer: "Nucleus"
-  },
-  {
-    question: "The main function of red blood cells is to:",
-    options: ["Fight disease", "Clot blood", "Carry oxygen", "Produce enzymes"],
-    answer: "Carry oxygen"
-  },
-  {
-    question: "What is the green pigment in leaves called?",
-    options: ["Chlorophyll", "Xylem", "Starch", "Phloem"],
-    answer: "Chlorophyll"
-  },
-  {
-    question: "Which of these is a pollutant from burning fuel?",
-    options: ["Oxygen", "Nitrogen", "Carbon monoxide", "Hydrogen"],
-    answer: "Carbon monoxide"
-  },
-  {
-    question: "What happens when light hits a mirror?",
-    options: ["It refracts", "It bends", "It reflects", "It absorbs"],
-    answer: "It reflects"
-  },
-  {
-    question: "The life cycle of a mosquito includes:",
-    options: ["Egg, larva, pupa, adult", "Egg, adult, pupa, larva", "Larva, egg, pupa, adult", "Adult, egg, larva, pupa"],
-    answer: "Egg, larva, pupa, adult"
-  },
-  {
-    question: "Which form of heat transfer occurs in liquids?",
-    options: ["Conduction", "Radiation", "Convection", "Insulation"],
-    answer: "Convection"
-  },
-  {
-    question: "Which of these diseases is caused by a virus?",
-    options: ["Malaria", "Tuberculosis", "Measles", "Typhoid"],
-    answer: "Measles"
-  },
-  {
-    question: "The nitrogen cycle involves the conversion of nitrogen into:",
-    options: ["Carbon", "Water", "Usable compounds", "Oxygen"],
-    answer: "Usable compounds"
-  },
-  {
-    question: "The main function of chloroplasts in plant cells is to:",
-    options: ["Transport water", "Store nutrients", "Carry out photosynthesis", "Provide structure"],
-    answer: "Carry out photosynthesis"
-  },
-  {
-    question: "What is the main function of white blood cells?",
-    options: ["Carry oxygen", "Produce energy", "Fight diseases", "Control body temperature"],
-    answer: "Fight diseases"
-  },
-  {
-    question: "Which instrument is used to measure temperature?",
-    options: ["Barometer", "Thermometer", "Hygrometer", "Voltmeter"],
-    answer: "Thermometer"
-  },
-  {
-    question: "What happens to a plant in the absence of light?",
-    options: ["It grows faster", "It produces more oxygen", "It cannot photosynthesize", "It produces more food"],
-    answer: "It cannot photosynthesize"
-  },
-  {
-    question: "Which type of energy is stored in food?",
-    options: ["Kinetic energy", "Chemical energy", "Sound energy", "Light energy"],
-    answer: "Chemical energy"
-  },
-  {
-    question: "What is the function of the stomata in leaves?",
-    options: ["Absorb nutrients", "Exchange gases", "Transport water", "Store food"],
-    answer: "Exchange gases"
-  },
-  {
-    question: "The force that opposes motion between two surfaces is called:",
-    options: ["Magnetism", "Friction", "Gravity", "Tension"],
-    answer: "Friction"
-  },
-  {
-    question: "The water cycle includes evaporation, condensation, and:",
-    options: ["Combustion", "Photosynthesis", "Precipitation", "Filtration"],
-    answer: "Precipitation"
-  },
-  {
-    question: "Which component of blood is responsible for clotting?",
-    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
-    answer: "Platelets"
-  },
-  {
-    question: "Which of the following is a good conductor of electricity?",
-    options: ["Rubber", "Glass", "Wood", "Copper"],
-    answer: "Copper"
-  },
-  {
-    question: "Which of these is a source of protein?",
-    options: ["Rice", "Beans", "Oil", "Sugar"],
-    answer: "Beans"
-  },
-  {
-    question: "What is formed when acids react with bases?",
-    options: ["Salt and water", "Gas and water", "Acid and salt", "Base and gas"],
-    answer: "Salt and water"
-  },
-  {
-    question: "The movement of water molecules through a semi-permeable membrane is called:",
-    options: ["Diffusion", "Osmosis", "Filtration", "Evaporation"],
-    answer: "Osmosis"
-  },
-  {
-    question: "Which organ is responsible for pumping blood?",
-    options: ["Liver", "Heart", "Kidney", "Brain"],
-    answer: "Heart"
-  },
-  {
-    question: "Which body system includes the brain and spinal cord?",
-    options: ["Respiratory system", "Circulatory system", "Nervous system", "Digestive system"],
-    answer: "Nervous system"
-  },
-  {
-    question: "Which of the following is a form of energy?",
-    options: ["Friction", "Gravity", "Sound", "Mass"],
-    answer: "Sound"
-  },
-  {
-    question: "The change of liquid to gas is called:",
-    options: ["Condensation", "Evaporation", "Melting", "Freezing"],
-    answer: "Evaporation"
-  },
-  {
-    question: "What is the main component of air by volume?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "The pulling force that acts between two objects is called:",
-    options: ["Magnetism", "Friction", "Tension", "Gravity"],
-    answer: "Gravity"
-  },
-  {
-    question: "Which of these is used to detect sound?",
-    options: ["Nose", "Tongue", "Eyes", "Ears"],
-    answer: "Ears"
-  },
-  {
-    question: "Which type of energy does a moving object have?",
-    options: ["Kinetic energy", "Potential energy", "Heat energy", "Sound energy"],
-    answer: "Kinetic energy"
-  },
-  {
-    question: "What is the product of photosynthesis?",
-    options: ["Carbon dioxide", "Water", "Oxygen and glucose", "Chlorophyll"],
-    answer: "Oxygen and glucose"
-  },
-  {
-    question: "The primary source of energy for Earth is the:",
-    options: ["Wind", "Sun", "Water", "Moon"],
-    answer: "Sun"
-  },
-  {
-    question: "Which of the following diseases is transmitted by mosquitoes?",
-    options: ["Typhoid", "Malaria", "Measles", "Tuberculosis"],
-    answer: "Malaria"
-  },
-  {
-    question: "The measure of how hot or cold an object is refers to:",
-    options: ["Mass", "Temperature", "Pressure", "Volume"],
-    answer: "Temperature"
-  },
-  {
-    question: "Which system is responsible for transporting materials in the body?",
-    options: ["Digestive system", "Respiratory system", "Circulatory system", "Nervous system"],
-    answer: "Circulatory system"
-  },
-  {
-    question: "Which device is used to generate electricity?",
-    options: ["Battery", "Bulb", "Generator", "Switch"],
-    answer: "Generator"
-  },
-  {
-    question: "The transformation of energy from one form to another is called:",
-    options: ["Energy rotation", "Energy conservation", "Energy transformation", "Energy creation"],
-    answer: "Energy transformation"
-  },
-  {
-    question: "Which part of the cell is responsible for controlling activities?",
-    options: ["Cytoplasm", "Cell wall", "Nucleus", "Mitochondria"],
-    answer: "Nucleus"
-  },
-  {
-    question: "How many bones are in the adult human skeleton?",
-    options: ["200", "206", "210", "215"],
-    answer: "206"
-  },
-  {
-    question: "Which of the following is not a property of metals?",
-    options: ["Good conductor", "Ductile", "Brittle", "Shiny"],
-    answer: "Brittle"
-  },
-  {
-    question: "Which of these can be found in an atom?",
-    options: ["Neurons", "Electrons", "Nucleons", "Isotopes"],
-    answer: "Electrons"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: ["Tissue", "Organ", "Cell", "Nucleus"],
-    answer: "Cell"
-  },
-  {
-    question: "Rust is formed when iron reacts with:",
-    options: ["Oxygen and water", "Hydrogen", "Salt", "Nitrogen"],
-    answer: "Oxygen and water"
-  },
-  {
-    question: "The process of breaking food into smaller pieces is:",
-    options: ["Digestion", "Excretion", "Respiration", "Absorption"],
-    answer: "Digestion"
-  },
-  {
-    question: "Which gas is released during respiration?",
-    options: ["Carbon dioxide", "Oxygen", "Hydrogen", "Nitrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which body system eliminates waste?",
-    options: ["Digestive system", "Circulatory system", "Excretory system", "Respiratory system"],
-    answer: "Excretory system"
-  },
-  {
-    question: "Which part of the plant conducts photosynthesis?",
-    options: ["Root", "Stem", "Leaf", "Flower"],
-    answer: "Leaf"
-  },
-  {
-    question: "The brain is protected by the:",
-    options: ["Backbone", "Skull", "Spine", "Pelvis"],
-    answer: "Skull"
-  },
-  {
-    question: "Which material is magnetic?",
-    options: ["Copper", "Aluminium", "Iron", "Plastic"],
-    answer: "Iron"
-  },
-  {
-    question: "What is the function of bile?",
-    options: ["Digest proteins", "Absorb food", "Emulsify fats", "Store glucose"],
-    answer: "Emulsify fats"
-  },
-  {
-    question: "The circulatory system includes the heart and:",
-    options: ["Brain", "Veins", "Lungs", "Bones"],
-    answer: "Veins"
-  },
-  {
-    question: "Which of the following is not a renewable resource?",
-    options: ["Wind", "Solar", "Coal", "Hydropower"],
-    answer: "Coal"
-  },
-  {
-    question: "What is the process of water changing to vapor?",
-    options: ["Condensation", "Freezing", "Evaporation", "Melting"],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which part of the ear helps in balance?",
-    options: ["Cochlea", "Eardrum", "Semicircular canals", "Auditory canal"],
-    answer: "Semicircular canals"
-  },
-  {
-    question: "Which instrument is used to separate mixtures by spinning?",
-    options: ["Barometer", "Centrifuge", "Thermometer", "Incubator"],
-    answer: "Centrifuge"
-  },
-  {
-    question: "Which part of the body helps to detoxify chemicals?",
-    options: ["Kidney", "Heart", "Liver", "Lung"],
-    answer: "Liver"
-  },
-  {
-    question: "What do we call substances made of two or more elements?",
-    options: ["Mixtures", "Compounds", "Solutions", "Atoms"],
-    answer: "Compounds"
-  },
-  {
-    question: "What type of energy is stored in stretched springs?",
-    options: ["Chemical energy", "Kinetic energy", "Elastic potential energy", "Nuclear energy"],
-    answer: "Elastic potential energy"
-  },
-  {
-    question: "Which of the following is an example of a chemical change?",
-    options: ["Melting ice", "Boiling water", "Burning wood", "Breaking glass"],
-    answer: "Burning wood"
-  },
-  {
-    question: "Which type of teeth is used for cutting food?",
-    options: ["Molars", "Premolars", "Canines", "Incisors"],
-    answer: "Incisors"
-  },
-  {
-    question: "What is the basic unit of heredity?",
-    options: ["Chromosome", "Gene", "Cell", "Nucleus"],
-    answer: "Gene"
-  },
-  {
-    question: "Which organ excretes urea from the body?",
-    options: ["Liver", "Lungs", "Skin", "Kidneys"],
-    answer: "Kidneys"
-  },
-  {
-    question: "What is the function of the retina in the eye?",
-    options: ["To control light entry", "To detect light and send signals to the brain", "To focus light", "To clean the eye"],
-    answer: "To detect light and send signals to the brain"
-  },
-  {
-    question: "Which form of heat transfer occurs through direct contact?",
-    options: ["Radiation", "Convection", "Conduction", "Evaporation"],
-    answer: "Conduction"
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["Earth", "Venus", "Mars", "Jupiter"],
-    answer: "Mars"
-  },
-  {
-    question: "In which part of the digestive system does most nutrient absorption take place?",
-    options: ["Stomach", "Small intestine", "Large intestine", "Mouth"],
-    answer: "Small intestine"
-  },
-  {
-    question: "Which of the following is a non-renewable resource?",
-    options: ["Solar energy", "Wind energy", "Natural gas", "Hydropower"],
-    answer: "Natural gas"
-  },
-  {
-    question: "Which nutrient is the main source of energy in food?",
-    options: ["Proteins", "Vitamins", "Carbohydrates", "Minerals"],
-    answer: "Carbohydrates"
-  },
-  {
-    question: "How many chambers does the human heart have?",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "The part of the brain that controls voluntary actions is the:",
-    options: ["Cerebellum", "Medulla", "Cerebrum", "Spinal cord"],
-    answer: "Cerebrum"
-  },
-  {
-    question: "Which of the following is not a sense organ?",
-    options: ["Eye", "Nose", "Brain", "Skin"],
-    answer: "Brain"
-  },
-  {
-    question: "What is the process of shedding old skin called?",
-    options: ["Molting", "Respiration", "Germination", "Photosynthesis"],
-    answer: "Molting"
-  },
-  {
-    question: "Which body system is responsible for removing waste products?",
-    options: ["Respiratory system", "Circulatory system", "Excretory system", "Nervous system"],
-    answer: "Excretory system"
-  },
-  {
-    question: "Which is the main organ of the respiratory system?",
-    options: ["Heart", "Liver", "Lung", "Kidney"],
-    answer: "Lung"
-  },
-  {
-    question: "Which organ absorbs most of the water in the digestive system?",
-    options: ["Stomach", "Small intestine", "Large intestine", "Liver"],
-    answer: "Large intestine"
-  },
-  {
-    question: "Which vitamin is produced in the skin with sunlight?",
-    options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
-    answer: "Vitamin D"
-  },
-  {
-    question: "The energy possessed by a body due to its position is called:",
-    options: ["Kinetic energy", "Chemical energy", "Potential energy", "Thermal energy"],
-    answer: "Potential energy"
-  },
-  {
-    question: "Which of these is not a state of matter?",
-    options: ["Solid", "Liquid", "Gas", "Radiation"],
-    answer: "Radiation"
-  },
-  {
-    question: "What is the term for animals that eat both plants and animals?",
-    options: ["Herbivores", "Carnivores", "Omnivores", "Insectivores"],
-    answer: "Omnivores"
-  },
-  {
-    question: "The movement of particles from high to low concentration is called:",
-    options: ["Osmosis", "Condensation", "Diffusion", "Evaporation"],
-    answer: "Diffusion"
-  },
-  {
-    question: "Which of these is a parasite?",
-    options: ["Dog", "Frog", "Tapeworm", "Snake"],
-    answer: "Tapeworm"
-  },
-  {
-    question: "What is formed when two or more atoms combine?",
-    options: ["Mixture", "Element", "Molecule", "Ion"],
-    answer: "Molecule"
-  },
-  {
-    question: "Which of the following controls the activities of a cell?",
-    options: ["Cytoplasm", "Nucleus", "Cell wall", "Mitochondria"],
-    answer: "Nucleus"
-  },
-  {
-    question: "What is the liquid part of blood called?",
-    options: ["Plasma", "Red cells", "White cells", "Platelets"],
-    answer: "Plasma"
-  },
-  {
-    question: "Which of these devices converts solar energy into electrical energy?",
-    options: ["Solar heater", "Solar lamp", "Solar cell", "Solar panel"],
-    answer: "Solar panel"
-  },
-  {
-    question: "Which of these is a renewable energy resource?",
-    options: ["Petroleum", "Natural gas", "Wind", "Coal"],
-    answer: "Wind"
-  },
-  {
-    question: "Which material allows electric current to pass through easily?",
-    options: ["Plastic", "Wood", "Rubber", "Copper"],
-    answer: "Copper"
-  },
-  {
-    question: "What do you call organisms that make their own food?",
-    options: ["Heterotrophs", "Decomposers", "Consumers", "Autotrophs"],
-    answer: "Autotrophs"
-  },
-  {
-    question: "What is a chemical symbol for water?",
-    options: ["O2", "H2O", "CO2", "NaCl"],
-    answer: "H2O"
-  },
-  {
-    question: "Which part of the plant anchors it to the soil?",
-    options: ["Leaf", "Stem", "Root", "Flower"],
-    answer: "Root"
-  },
-  {
-    question: "Which system carries oxygen to all parts of the body?",
-    options: ["Digestive", "Circulatory", "Nervous", "Skeletal"],
-    answer: "Circulatory"
-  },
-  {
-    question: "The removal of undigested food from the body is called:",
-    options: ["Excretion", "Digestion", "Absorption", "Egestion"],
-    answer: "Egestion"
-  },
-  {
-    question: "Which of the following animals undergo metamorphosis?",
-    options: ["Dog", "Frog", "Goat", "Cow"],
-    answer: "Frog"
-  },
-  {
-    question: "Which of the following is not a component of the ecosystem?",
-    options: ["Air", "Water", "Car", "Plants"],
-    answer: "Car"
-  },
-  {
-    question: "What form of energy is stored in food?",
-    options: ["Light energy", "Chemical energy", "Kinetic energy", "Thermal energy"],
-    answer: "Chemical energy"
-  },
-  {
-    question: "How many pairs of ribs are found in the human body?",
-    options: ["10", "12", "14", "16"],
-    answer: "12"
-  },
-  {
-    question: "The breakdown of food in the presence of oxygen is called:",
-    options: ["Anaerobic respiration", "Aerobic respiration", "Combustion", "Evaporation"],
-    answer: "Aerobic respiration"
-  },
-  {
-    question: "What is the energy that drives the water cycle?",
-    options: ["Wind", "Sun", "Electricity", "Gravity"],
-    answer: "Sun"
-  },
-  {
-    question: "The main function of red blood cells is to:",
-    options: ["Fight infection", "Carry oxygen", "Produce hormones", "Digest fats"],
-    answer: "Carry oxygen"
-  },
-  {
-    question: "Which part of the plant conducts water?",
-    options: ["Phloem", "Xylem", "Cambium", "Stomata"],
-    answer: "Xylem"
-  },
-  {
-    question: "Which part of the human eye controls the amount of light entering?",
-    options: ["Retina", "Iris", "Lens", "Cornea"],
-    answer: "Iris"
-  },
-  {
-    question: "What process forms clouds in the water cycle?",
-    options: ["Precipitation", "Evaporation", "Condensation", "Infiltration"],
-    answer: "Condensation"
-  },
-  {
-    question: "Which of these is not a greenhouse gas?",
-    options: ["Carbon dioxide", "Methane", "Nitrogen", "Water vapor"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "What do we call the path of an object in motion?",
-    options: ["Displacement", "Velocity", "Distance", "Trajectory"],
-    answer: "Trajectory"
-  },
-  {
-    question: "Which of these systems is responsible for coordination and control?",
-    options: ["Nervous system", "Circulatory system", "Respiratory system", "Digestive system"],
-    answer: "Nervous system"
-  },
-  {
-    question: "Which property allows metals to be drawn into wires?",
-    options: ["Brittleness", "Ductility", "Malleability", "Hardness"],
-    answer: "Ductility"
-  },
-  {
-    question: "Which system is responsible for transporting nutrients and oxygen in the body?",
-    options: ["Respiratory system", "Circulatory system", "Digestive system", "Excretory system"],
-    answer: "Circulatory system"
-  },
-  {
-    question: "Which gas is essential for respiration in animals?",
-    options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-    answer: "Oxygen"
-  },
-  {
-    question: "The male reproductive cell is called:",
-    options: ["Ovum", "Zygote", "Sperm", "Egg"],
-    answer: "Sperm"
-  },
-  {
-    question: "Which element is needed for the formation of hemoglobin in the blood?",
-    options: ["Calcium", "Iron", "Potassium", "Zinc"],
-    answer: "Iron"
-  },
-  {
-    question: "Which device is used to measure temperature?",
-    options: ["Barometer", "Thermometer", "Hygrometer", "Anemometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "Which of the following is an effect of soil erosion?",
-    options: ["Increased fertility", "Improved yield", "Loss of topsoil", "Improved drainage"],
-    answer: "Loss of topsoil"
-  },
-  {
-    question: "What is the function of the large intestine?",
-    options: ["Absorption of nutrients", "Digestion of proteins", "Absorption of water", "Production of bile"],
-    answer: "Absorption of water"
-  },
-  {
-    question: "What does DNA stand for?",
-    options: ["Dynamic Nuclear Acid", "Deoxyribonucleic Acid", "Direct Nutrient Agent", "Double Nucleus Acid"],
-    answer: "Deoxyribonucleic Acid"
-  },
-  {
-    question: "Which part of the plant is responsible for photosynthesis?",
-    options: ["Root", "Stem", "Leaf", "Flower"],
-    answer: "Leaf"
-  },
-  {
-    question: "What is the process by which plants lose water through their leaves?",
-    options: ["Respiration", "Photosynthesis", "Transpiration", "Diffusion"],
-    answer: "Transpiration"
-  },
-  {
-    question: "The transfer of pollen from anther to stigma is called:",
-    options: ["Pollination", "Fertilization", "Germination", "Propagation"],
-    answer: "Pollination"
-  },
-  {
-    question: "Which gas do plants take in during photosynthesis?",
-    options: ["Oxygen", "Carbon monoxide", "Carbon dioxide", "Nitrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "What are vertebrates?",
-    options: ["Animals without a backbone", "Plants with stems", "Animals with a backbone", "Single-celled organisms"],
-    answer: "Animals with a backbone"
-  },
-  {
-    question: "What form of energy is used in radios?",
-    options: ["Sound energy", "Kinetic energy", "Electrical energy", "Thermal energy"],
-    answer: "Electrical energy"
-  },
-  {
-    question: "Which part of the brain controls breathing and heartbeat?",
-    options: ["Cerebrum", "Medulla", "Cerebellum", "Frontal lobe"],
-    answer: "Medulla"
-  },
-  {
-    question: "The wearing away of rocks by water and wind is called:",
-    options: ["Condensation", "Erosion", "Deposition", "Evaporation"],
-    answer: "Erosion"
-  },
-  {
-    question: "What type of joint is found in the shoulder?",
-    options: ["Hinge joint", "Fixed joint", "Ball and socket joint", "Pivot joint"],
-    answer: "Ball and socket joint"
-  },
-  {
-    question: "The part of the ear that receives sound vibrations is the:",
-    options: ["Pinna", "Cochlea", "Eardrum", "Auditory canal"],
-    answer: "Eardrum"
-  },
-  {
-    question: "Which part of the microscope is used for focusing?",
-    options: ["Objective lens", "Eyepiece", "Stage", "Coarse adjustment knob"],
-    answer: "Coarse adjustment knob"
-  },
-  {
-    question: "The sun is a source of which type of energy?",
-    options: ["Chemical energy", "Solar energy", "Kinetic energy", "Mechanical energy"],
-    answer: "Solar energy"
-  },
-  {
-    question: "Which of the following is a sexually transmitted infection (STI)?",
-    options: ["Malaria", "Tuberculosis", "HIV/AIDS", "Influenza"],
-    answer: "HIV/AIDS"
-  },
-  {
-    question: "The process of blood clotting is helped by:",
-    options: ["Plasma", "Red blood cells", "White blood cells", "Platelets"],
-    answer: "Platelets"
-  },
-  {
-    question: "Which vitamin helps in blood clotting?",
-    options: ["Vitamin A", "Vitamin B", "Vitamin K", "Vitamin D"],
-    answer: "Vitamin K"
-  },
-  {
-    question: "What is the chemical symbol for iron?",
-    options: ["Fe", "Ir", "I", "In"],
-    answer: "Fe"
-  },
-  {
-    question: "Which farming method helps in soil conservation?",
-    options: ["Bush burning", "Overgrazing", "Contour ploughing", "Mono-cropping"],
-    answer: "Contour ploughing"
-  },
-  {
-    question: "The removal of waste products from the body is called:",
-    options: ["Excretion", "Secretion", "Circulation", "Reproduction"],
-    answer: "Excretion"
-  },
-  {
-    question: "What is the powerhouse of the cell?",
-    options: ["Nucleus", "Mitochondria", "Ribosome", "Cytoplasm"],
-    answer: "Mitochondria"
-  },
-  {
-    question: "Which form of energy can travel through a vacuum?",
-    options: ["Sound energy", "Heat energy", "Solar energy", "Light energy"],
-    answer: "Light energy"
-  },
-  {
-    question: "What organ helps fish to breathe in water?",
-    options: ["Lungs", "Gills", "Skin", "Fins"],
-    answer: "Gills"
-  },
-  {
-    question: "Which instrument is used to measure pressure?",
-    options: ["Thermometer", "Barometer", "Voltmeter", "Speedometer"],
-    answer: "Barometer"
-  },
-  {
-    question: "Which of the following diseases is caused by a virus?",
-    options: ["Tuberculosis", "Measles", "Cholera", "Malaria"],
-    answer: "Measles"
-  },
-  {
-    question: "What type of soil is best for planting crops?",
-    options: ["Clay soil", "Sandy soil", "Loamy soil", "Gravel"],
-    answer: "Loamy soil"
-  },
-  {
-    question: "The process of turning liquid into gas is called:",
-    options: ["Condensation", "Melting", "Evaporation", "Freezing"],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which part of the flower contains ovules?",
-    options: ["Anther", "Petal", "Ovary", "Stigma"],
-    answer: "Ovary"
-  },
-  {
-    question: "What is the function of white blood cells?",
-    options: ["Transport oxygen", "Fight infection", "Clot blood", "Carry nutrients"],
-    answer: "Fight infection"
-  },
-  {
-    question: "What is the boiling point of pure water?",
-    options: ["90°C", "100°C", "120°C", "80°C"],
-    answer: "100°C"
-  },
-  {
-    question: "The part of a plant that contains seeds is the:",
-    options: ["Root", "Leaf", "Flower", "Fruit"],
-    answer: "Fruit"
-  },
-  {
-    question: "How many planets are there in the solar system?",
-    options: ["7", "8", "9", "10"],
-    answer: "8"
-  },
-  {
-    question: "Which of the following is an example of a conductor?",
-    options: ["Plastic", "Wood", "Copper", "Rubber"],
-    answer: "Copper"
-  },
-  {
-    question: "Which layer of the Earth is liquid?",
-    options: ["Crust", "Mantle", "Outer core", "Inner core"],
-    answer: "Outer core"
-  },
-  {
-    question: "Which disease is caused by lack of iodine?",
-    options: ["Scurvy", "Goitre", "Rickets", "Kwashiorkor"],
-    answer: "Goitre"
-  },
-  {
-    question: "What organ stores bile?",
-    options: ["Liver", "Pancreas", "Stomach", "Gallbladder"],
-    answer: "Gallbladder"
-  },
-  {
-    question: "Which gas do we exhale during respiration?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which part of the plant grows underground?",
-    options: ["Stem", "Leaf", "Root", "Flower"],
-    answer: "Root"
-  },
-  {
-    question: "Which of these is a property of metals?",
-    options: ["Poor conductors", "Brittle", "Shiny surface", "Non-reactive"],
-    answer: "Shiny surface"
-  },
-  {
-    question: "What is the main cause of tides in the ocean?",
-    options: ["Sun", "Moon", "Waves", "Wind"],
-    answer: "Moon"
-  },
-  {
-    question: "Which of these is a renewable resource?",
-    options: ["Coal", "Oil", "Sunlight", "Natural gas"],
-    answer: "Sunlight"
-  },
-  {
-    question: "The growth of a seed into a new plant is called:",
-    options: ["Pollination", "Fertilization", "Germination", "Photosynthesis"],
-    answer: "Germination"
-  },
-  {
-    question: "Which of the following best describes osmosis?",
-    options: [
-      "Movement of solutes from low to high concentration",
-      "Movement of water across a semi-permeable membrane",
-      "Movement of gases in open air",
-      "Movement of particles from high to low pressure"
-    ],
-    answer: "Movement of water across a semi-permeable membrane"
-  },
-  {
-    question: "What is the main source of energy for all life on Earth?",
-    options: ["Electricity", "Sun", "Wind", "Water"],
-    answer: "Sun"
-  },
-  {
-    question: "Which of the following is an insect pest of crops?",
-    options: ["Termite", "Frog", "Snake", "Rat"],
-    answer: "Termite"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: ["Atom", "Molecule", "Tissue", "Cell"],
-    answer: "Cell"
-  },
-  {
-    question: "Which method is used to separate a mixture of sand and salt?",
-    options: ["Evaporation", "Sieving", "Filtration", "Decantation"],
-    answer: "Filtration"
-  },
-  {
-    question: "The outermost layer of the Earth is the:",
-    options: ["Mantle", "Crust", "Core", "Outer core"],
-    answer: "Crust"
-  },
-  {
-    question: "Which of the following is a non-renewable energy source?",
-    options: ["Solar", "Wind", "Coal", "Hydro"],
-    answer: "Coal"
-  },
-  {
-    question: "Which part of the eye controls the amount of light that enters?",
-    options: ["Lens", "Cornea", "Iris", "Retina"],
-    answer: "Iris"
-  },
-  {
-    question: "How many chambers are in the human heart?",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Which component of blood helps fight infection?",
-    options: ["Plasma", "Platelets", "Red blood cells", "White blood cells"],
-    answer: "White blood cells"
-  },
-  {
-    question: "What is the function of chlorophyll in plants?",
-    options: [
-      "Helps absorb water",
-      "Gives the plant structure",
-      "Helps in photosynthesis",
-      "Stores energy"
-    ],
-    answer: "Helps in photosynthesis"
-  },
-  {
-    question: "Which of these is a sexually transmitted disease?",
-    options: ["Malaria", "HIV/AIDS", "Tuberculosis", "Typhoid"],
-    answer: "HIV/AIDS"
-  },
-  {
-    question: "What causes day and night on Earth?",
-    options: [
-      "Revolution of Earth",
-      "Rotation of Earth",
-      "Moon's shadow",
-      "Movement of clouds"
-    ],
-    answer: "Rotation of Earth"
-  },
-  {
-    question: "Which gas is used by plants to make their food?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which process turns liquid into solid?",
-    options: ["Melting", "Condensation", "Freezing", "Evaporation"],
-    answer: "Freezing"
-  },
-  {
-    question: "The part of a circuit that opens or closes the flow of electricity is the:",
-    options: ["Battery", "Wire", "Switch", "Bulb"],
-    answer: "Switch"
-  },
-  {
-    question: "Which nutrient builds and repairs body tissues?",
-    options: ["Carbohydrates", "Vitamins", "Fats", "Proteins"],
-    answer: "Proteins"
-  },
-  {
-    question: "Which disease is caused by lack of Vitamin D?",
-    options: ["Scurvy", "Rickets", "Kwashiorkor", "Beriberi"],
-    answer: "Rickets"
-  },
-  {
-    question: "What is the most abundant gas in the atmosphere?",
-    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
-    answer: "Nitrogen"
-  },
-  {
-    question: "Which of these is an effect of global warming?",
-    options: ["Increased rainfall", "Ozone formation", "Melting of ice caps", "Growth of forests"],
-    answer: "Melting of ice caps"
-  },
-  {
-    question: "The female reproductive organ in plants is called:",
-    options: ["Anther", "Filament", "Pistil", "Petal"],
-    answer: "Pistil"
-  },
-  {
-    question: "Which of these helps in balancing the ecosystem?",
-    options: ["Pesticides", "Herbivores", "Carnivores", "Decomposers"],
-    answer: "Decomposers"
-  },
-  {
-    question: "The continuous movement of water through evaporation and condensation is called:",
-    options: ["Water circle", "Water transfer", "Hydrological cycle", "Condensation cycle"],
-    answer: "Hydrological cycle"
-  },
-  {
-    question: "Which human sense is used to detect sound?",
-    options: ["Sight", "Taste", "Hearing", "Touch"],
-    answer: "Hearing"
-  },
-  {
-    question: "A change that can be reversed is a:",
-    options: ["Physical change", "Chemical change", "Reaction", "Mixture"],
-    answer: "Physical change"
-  },
-  {
-    question: "A vertebrate with moist skin and lays eggs in water is a(n):",
-    options: ["Fish", "Reptile", "Mammal", "Amphibian"],
-    answer: "Amphibian"
-  },
-  {
-    question: "The hardness of a mineral is measured using:",
-    options: ["Mohs scale", "Barometer", "Richter scale", "Beaufort scale"],
-    answer: "Mohs scale"
-  },
-  {
-    question: "The movement of heat through solids is called:",
-    options: ["Conduction", "Convection", "Radiation", "Fusion"],
-    answer: "Conduction"
-  },
-  {
-    question: "Which of these organs removes urea from the blood?",
-    options: ["Liver", "Heart", "Kidney", "Lungs"],
-    answer: "Kidney"
-  },
-  {
-    question: "Fertilization in animals occurs when:",
-    options: [
-      "Sperm meets egg",
-      "Egg is laid",
-      "Baby is born",
-      "Egg is released from ovary"
-    ],
-    answer: "Sperm meets egg"
-  },
-  {
-    question: "A solution that turns blue litmus paper red is:",
-    options: ["Neutral", "Acidic", "Basic", "Salty"],
-    answer: "Acidic"
-  },
-  {
-    question: "Which of the following is a characteristic of living things?",
-    options: ["Rusting", "Photosynthesis", "Reproduction", "Boiling"],
-    answer: "Reproduction"
-  },
-  {
-    question: "Which of the following materials is a good insulator?",
-    options: ["Iron", "Copper", "Aluminium", "Rubber"],
-    answer: "Rubber"
-  },
-  {
-    question: "Which of these helps prevent soil erosion?",
-    options: ["Burning", "Deforestation", "Afforestation", "Overgrazing"],
-    answer: "Afforestation"
-  },
-  {
-    question: "The part of the brain responsible for thinking is the:",
-    options: ["Cerebellum", "Medulla", "Cerebrum", "Spinal cord"],
-    answer: "Cerebrum"
-  },
-  {
-    question: "A substance that speeds up a chemical reaction is called:",
-    options: ["Catalyst", "Reactant", "Product", "Mixture"],
-    answer: "Catalyst"
-  },
-  {
-    question: "What is the function of the stomata in plants?",
-    options: [
-      "Absorb nutrients",
-      "Store food",
-      "Exchange gases",
-      "Support leaves"
-    ],
-    answer: "Exchange gases"
-  },
-  {
-    question: "Which of the following is a habitat for aquatic organisms?",
-    options: ["Desert", "Ocean", "Forest", "Savannah"],
-    answer: "Ocean"
-  },
-  {
-    question: "An object that does not allow light to pass through is:",
-    options: ["Transparent", "Translucent", "Opaque", "Reflective"],
-    answer: "Opaque"
-  },
-  {
-    question: "Which of the following is a greenhouse gas?",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "What is the main function of the pancreas?",
-    options: [
-      "Produce insulin",
-      "Store bile",
-      "Absorb nutrients",
-      "Digest proteins"
-    ],
-    answer: "Produce insulin"
-  },
-  {
-    question: "Which device converts solar energy into electricity?",
-    options: ["Windmill", "Battery", "Solar panel", "Generator"],
-    answer: "Solar panel"
-  },
-  {
-    question: "What are organisms that feed on dead matter called?",
-    options: ["Carnivores", "Decomposers", "Producers", "Herbivores"],
-    answer: "Decomposers"
-  },
-  {
-    question: "The energy stored in food is called:",
-    options: ["Thermal energy", "Mechanical energy", "Chemical energy", "Kinetic energy"],
-    answer: "Chemical energy"
-  },
-  {
-    question: "What color is iodine solution when it tests positive for starch?",
-    options: ["Red", "Blue-black", "Green", "Colorless"],
-    answer: "Blue-black"
-  },
-  {
-    question: "Which of the following is an example of a lever?",
-    options: ["Screw", "Hammer", "Wedge", "Pulley"],
-    answer: "Hammer"
-  },
-  {
-    question: "The study of the weather is called:",
-    options: ["Geography", "Meteorology", "Ecology", "Geology"],
-    answer: "Meteorology"
-  },
-  {
-    question: "Which form of energy is associated with moving objects?",
-    options: ["Thermal", "Chemical", "Kinetic", "Potential"],
-    answer: "Kinetic"
-  },
-  {
-    question: "The part of a plant that absorbs water and minerals is the:",
-    options: ["Leaf", "Stem", "Root", "Flower"],
-    answer: "Root"
-  },
-  {
-    question: "The atomic number of an element is equal to the number of:",
-    options: ["Neutrons", "Protons", "Electrons", "Ions"],
-    answer: "Protons"
-  },
-  {
-    question: "Which blood vessels carry blood away from the heart?",
-    options: ["Veins", "Capillaries", "Arteries", "Villi"],
-    answer: "Arteries"
-  },
-  {
-    question: "The chemical symbol for water is:",
-    options: ["O2", "H2", "CO2", "H2O"],
-    answer: "H2O"
-  },
-  {
-    question: "Rusting of iron occurs due to the presence of:",
-    options: ["Sunlight", "Nitrogen and water", "Oxygen and water", "Carbon dioxide"],
-    answer: "Oxygen and water"
-  },
-  {
-    question: "The skeleton is responsible for:",
-    options: ["Respiration", "Movement and support", "Digestion", "Circulation"],
-    answer: "Movement and support"
-  },
-  {
-    question: "Which of these is an example of chemical change?",
-    options: ["Melting ice", "Boiling water", "Rusting iron", "Breaking glass"],
-    answer: "Rusting iron"
-  },
-  {
-    question: "Which of these is a vector of malaria?",
-    options: ["Housefly", "Tsetse fly", "Mosquito", "Cockroach"],
-    answer: "Mosquito"
-  },
-  {
-    question: "Which of the following is an example of a mixture?",
-    options: ["Salt", "Water", "Air", "Sugar"],
-    answer: "Air"
-  },
-  {
-    question: "How many planets are in the solar system?",
-    options: ["7", "8", "9", "10"],
-    answer: "8"
-  },
-  {
-    question: "The human skin helps in:",
-    options: ["Hearing", "Breathing", "Excretion", "Digestion"],
-    answer: "Excretion"
-  },
-  {
-    question: "Which machine helps make work easier?",
-    options: ["Generator", "Radio", "Lever", "Battery"],
-    answer: "Lever"
-  },
-  {
-    question: "Which body part is responsible for pumping blood?",
-    options: ["Liver", "Lungs", "Heart", "Kidney"],
-    answer: "Heart"
-  },
-  {
-    question: "The movement of water through plant tissues is called:",
-    options: ["Diffusion", "Transpiration", "Evaporation", "Osmosis"],
-    answer: "Transpiration"
-  },
-  {
-    question: "A push or pull on an object is known as:",
-    options: ["Energy", "Friction", "Force", "Motion"],
-    answer: "Force"
-  },
-  {
-    question: "Which of the following is NOT part of the circulatory system?",
-    options: ["Heart", "Veins", "Lungs", "Arteries"],
-    answer: "Lungs"
-  },
-  {
-    question: "Which part of the flower becomes the fruit?",
-    options: ["Petal", "Ovary", "Anther", "Style"],
-    answer: "Ovary"
-  },
-  {
-    question: "The loudness of sound is measured in:",
-    options: ["Hertz", "Watts", "Volts", "Decibels"],
-    answer: "Decibels"
-  },
-  {
-    question: "The sun is a source of:",
-    options: ["Mechanical energy", "Chemical energy", "Solar energy", "Nuclear energy"],
-    answer: "Solar energy"
-  },
-  {
-    question: "A material that allows electricity to pass through it is called a:",
-    options: ["Conductor", "Insulator", "Magnet", "Resistor"],
-    answer: "Conductor"
-  },
-  {
-    question: "Which planet is known as the red planet?",
-    options: ["Venus", "Jupiter", "Mars", "Mercury"],
-    answer: "Mars"
-  },
-  {
-    question: "Which organ is responsible for filtering blood in the human body?",
-    options: ["Liver", "Heart", "Kidneys", "Lungs"],
-    answer: "Kidneys"
-  },
-  {
-    question: "Which form of energy is stored in food?",
-    options: ["Heat", "Sound", "Chemical", "Mechanical"],
-    answer: "Chemical"
-  },
-  {
-    question: "Which of the following is a gaseous pollutant?",
-    options: ["Water", "Oxygen", "Carbon monoxide", "Salt"],
-    answer: "Carbon monoxide"
-  },
-  {
-    question: "The exchange of gases in the lungs takes place in the:",
-    options: ["Bronchi", "Alveoli", "Trachea", "Diaphragm"],
-    answer: "Alveoli"
-  },
-  {
-    question: "When light bounces off a surface, it is called:",
-    options: ["Absorption", "Reflection", "Refraction", "Diffusion"],
-    answer: "Reflection"
-  },
-  {
-    question: "Which of the following is NOT a characteristic of living things?",
-    options: ["Movement", "Growth", "Breathing", "Rusting"],
-    answer: "Rusting"
-  },
-  {
-    question: "The reproductive cell in males is the:",
-    options: ["Ovum", "Sperm", "Zygote", "Embryo"],
-    answer: "Sperm"
-  },
-  {
-    question: "Which nutrient gives the most energy?",
-    options: ["Fats", "Proteins", "Carbohydrates", "Vitamins"],
-    answer: "Fats"
-  },
-  {
-    question: "What is the function of bile in digestion?",
-    options: ["Breaks down starch", "Emulsifies fats", "Absorbs water", "Digests proteins"],
-    answer: "Emulsifies fats"
-  },
-  {
-    question: "Which energy form is used in radios and televisions?",
-    options: ["Sound", "Light", "Electrical", "Thermal"],
-    answer: "Electrical"
-  },
-  {
-    question: "What is a neutralization reaction?",
-    options: ["Acid + salt", "Base + metal", "Acid + base", "Salt + water"],
-    answer: "Acid + base"
-  },
-  {
-    question: "Which of these is not an organ of excretion?",
-    options: ["Skin", "Lungs", "Kidneys", "Stomach"],
-    answer: "Stomach"
-  },
-  {
-    question: "The part of the plant that is responsible for photosynthesis is the:",
-    options: ["Stem", "Leaf", "Root", "Flower"],
-    answer: "Leaf"
-  },
-  {
-    question: "Which of the following best describes refraction?",
-    options: [
-      "Bending of light",
-      "Spreading of sound",
-      "Vibration of particles",
-      "Fading of color"
-    ],
-    answer: "Bending of light"
-  },
-  {
-    question: "What type of motion is displayed by a pendulum?",
-    options: ["Linear", "Circular", "Oscillatory", "Rotational"],
-    answer: "Oscillatory"
-  },
-  {
-    question: "Which part of the human body produces insulin?",
-    options: ["Liver", "Pancreas", "Kidney", "Heart"],
-    answer: "Pancreas"
-  },
-  {
-    question: "Which process involves release of energy from food in cells?",
-    options: ["Photosynthesis", "Respiration", "Digestion", "Excretion"],
-    answer: "Respiration"
-  },
-  {
-    question: "Which of the following is a transparent material?",
-    options: ["Wood", "Paper", "Glass", "Metal"],
-    answer: "Glass"
-  },
-  {
-    question: "What is the unit of electrical current?",
-    options: ["Volt", "Watt", "Ampere", "Ohm"],
-    answer: "Ampere"
-  },
-  {
-    question: "What causes tides in the sea?",
-    options: ["Winds", "Sun", "Moon", "Rainfall"],
-    answer: "Moon"
-  },
-  {
-    question: "Which part of the flower produces pollen grains?",
-    options: ["Anther", "Ovary", "Style", "Sepal"],
-    answer: "Anther"
-  },
-  {
-    question: "Which vitamin is essential for blood clotting?",
-    options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
-    answer: "Vitamin K"
-  },
-  {
-    question: "The process of changing water vapor to liquid is called:",
-    options: ["Evaporation", "Condensation", "Boiling", "Sublimation"],
-    answer: "Condensation"
-  },
-  {
-    question: "Which part of the nervous system controls reflex actions?",
-    options: ["Brain", "Spinal cord", "Nerves", "Cerebrum"],
-    answer: "Spinal cord"
-  },
-  {
-    question: "Which of the following organisms is an amphibian?",
-    options: ["Toad", "Lizard", "Crocodile", "Catfish"],
-    answer: "Toad"
-  },
-  {
-    question: "The transfer of pollen from anther to stigma is called:",
-    options: ["Pollination", "Germination", "Fertilization", "Dispersion"],
-    answer: "Pollination"
-  },
-  {
-    question: "Which part of the ear helps in maintaining balance?",
-    options: ["Ear canal", "Cochlea", "Eardrum", "Semi-circular canals"],
-    answer: "Semi-circular canals"
-  },
-  {
-    question: "What is the primary gas responsible for global warming?",
-    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which organ produces bile in the human body?",
-    options: ["Stomach", "Pancreas", "Liver", "Gall bladder"],
-    answer: "Liver"
-  },
-  {
-    question: "The largest bone in the human body is the:",
-    options: ["Femur", "Humerus", "Skull", "Tibia"],
-    answer: "Femur"
-  },
-  {
-    question: "Which process produces glucose in plants?",
-    options: ["Photosynthesis", "Respiration", "Fermentation", "Transpiration"],
-    answer: "Photosynthesis"
-  },
-  {
-    question: "What type of energy transformation occurs in a battery-powered torch?",
-    options: ["Chemical to light", "Light to chemical", "Electrical to chemical", "Sound to light"],
-    answer: "Chemical to light"
-  },
-  {
-    question: "Which of the following is an example of a conductor?",
-    options: ["Plastic", "Rubber", "Copper", "Wood"],
-    answer: "Copper"
-  },
-  {
-    question: "What type of reproduction involves one parent only?",
-    options: ["Sexual", "Asexual", "Fertilization", "Pollination"],
-    answer: "Asexual"
-  },
-  {
-    question: "Which device is used to measure electric current?",
-    options: ["Voltmeter", "Ammeter", "Ohmmeter", "Thermometer"],
-    answer: "Ammeter"
-  },
-  {
-    question: "Which part of the plant transports water from roots to leaves?",
-    options: ["Phloem", "Xylem", "Cambium", "Stomata"],
-    answer: "Xylem"
-  },
-  {
-    question: "The force that opposes motion between two surfaces in contact is called:",
-    options: ["Gravity", "Friction", "Magnetism", "Pressure"],
-    answer: "Friction"
-  },
-  {
-    question: "Which of these is NOT a renewable source of energy?",
-    options: ["Solar energy", "Wind energy", "Coal", "Hydropower"],
-    answer: "Coal"
-  },
-  {
-    question: "What is the chemical formula of table salt?",
-    options: ["NaCl", "H2O", "CO2", "CaCO3"],
-    answer: "NaCl"
-  },
-  {
-    question: "Which hormone controls blood sugar levels in the body?",
-    options: ["Insulin", "Adrenaline", "Thyroxine", "Estrogen"],
-    answer: "Insulin"
-  },
-  {
-    question: "What is the function of red blood cells?",
-    options: ["Fight infection", "Clot blood", "Transport oxygen", "Produce hormones"],
-    answer: "Transport oxygen"
-  },
-  {
-    question: "The property of a material to return to its original shape after deformation is called:",
-    options: ["Plasticity", "Elasticity", "Ductility", "Malleability"],
-    answer: "Elasticity"
-  },
-  {
-    question: "Which gas do animals exhale during respiration?",
-    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "The main function of roots in plants is to:",
-    options: ["Produce flowers", "Absorb water and minerals", "Perform photosynthesis", "Store food"],
-    answer: "Absorb water and minerals"
-  },
-  {
-    question: "The process by which plants lose water vapor is called:",
-    options: ["Transpiration", "Respiration", "Photosynthesis", "Evaporation"],
-    answer: "Transpiration"
-  },
-  {
-    question: "Which particle in an atom has a negative charge?",
-    options: ["Proton", "Neutron", "Electron", "Nucleus"],
-    answer: "Electron"
-  },
-  {
-    question: "The device that converts electrical energy into mechanical energy is:",
-    options: ["Generator", "Motor", "Battery", "Transformer"],
-    answer: "Motor"
-  },
-  {
-    question: "Which of the following is NOT a function of the skeletal system?",
-    options: ["Protection", "Support", "Movement", "Digestion"],
-    answer: "Digestion"
-  },
-  {
-    question: "Which substance speeds up chemical reactions in living organisms?",
-    options: ["Hormones", "Enzymes", "Vitamins", "Minerals"],
-    answer: "Enzymes"
-  },
-  {
-    question: "The main source of energy for the Earth's ecosystem is:",
-    options: ["The Moon", "The Sun", "The Earth’s core", "The stars"],
-    answer: "The Sun"
-  },
-  {
-    question: "What is the unit of frequency of sound waves?",
-    options: ["Hertz", "Decibel", "Volt", "Watt"],
-    answer: "Hertz"
-  },
-  {
-    question: "The process of cell division that results in two identical daughter cells is called:",
-    options: ["Meiosis", "Mitosis", "Fertilization", "Pollination"],
-    answer: "Mitosis"
-  },
-  {
-    question: "What causes the seasons on Earth?",
-    options: ["Earth's rotation", "Moon's gravity", "Earth's revolution and tilt", "Solar flares"],
-    answer: "Earth's revolution and tilt"
-  },
-  {
-    question: "Which of these diseases is caused by a virus?",
-    options: ["Tuberculosis", "Malaria", "HIV/AIDS", "Ringworm"],
-    answer: "HIV/AIDS"
-  },
-  {
-    question: "The measure of the amount of matter in an object is its:",
-    options: ["Weight", "Volume", "Density", "Mass"],
-    answer: "Mass"
-  },
-  {
-    question: "The type of muscle found in the heart is:",
-    options: ["Skeletal", "Smooth", "Cardiac", "Voluntary"],
-    answer: "Cardiac"
-  },
-  {
-    question: "Which gas is essential for photosynthesis?",
-    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "In which organ does digestion of proteins primarily occur?",
-    options: ["Stomach", "Liver", "Small intestine", "Large intestine"],
-    answer: "Stomach"
-  },
-  {
-    question: "Which mineral is important for strong bones and teeth?",
-    options: ["Iron", "Calcium", "Sodium", "Potassium"],
-    answer: "Calcium"
-  },
-  {
-    question: "The process of breaking down large food molecules into smaller ones is called:",
-    options: ["Digestion", "Absorption", "Circulation", "Respiration"],
-    answer: "Digestion"
-  },
-  {
-    question: "Which type of electromagnetic waves have the longest wavelength?",
-    options: ["X-rays", "Ultraviolet", "Radio waves", "Gamma rays"],
-    answer: "Radio waves"
-  },
-  {
-    question: "What is the main function of the large intestine?",
-    options: ["Absorption of nutrients", "Water absorption and formation of feces", "Digestion of fats", "Production of enzymes"],
-    answer: "Water absorption and formation of feces"
-  },
-  {
-    question: "Which device is used to increase or decrease voltage in an electric circuit?",
-    options: ["Motor", "Transformer", "Generator", "Battery"],
-    answer: "Transformer"
-  },
-  {
-    question: "Which of the following is NOT a greenhouse gas?",
-    options: ["Methane", "Carbon dioxide", "Oxygen", "Nitrous oxide"],
-    answer: "Oxygen"
-  },
-  {
-    question: "What part of the plant cell contains chlorophyll?",
-    options: ["Nucleus", "Chloroplast", "Mitochondrion", "Ribosome"],
-    answer: "Chloroplast"
-  },
-  {
-    question: "Which organ in humans produces digestive enzymes and insulin?",
-    options: ["Liver", "Pancreas", "Stomach", "Small intestine"],
-    answer: "Pancreas"
-  },
-  {
-    question: "What is the SI unit of force?",
-    options: ["Newton", "Joule", "Watt", "Pascal"],
-    answer: "Newton"
-  },
-  {
-    question: "Which property describes the resistance of a material to breaking when stretched?",
-    options: ["Malleability", "Ductility", "Tensile strength", "Elasticity"],
-    answer: "Tensile strength"
-  },
-  {
-    question: "Which organ system controls body activities through hormones?",
-    options: ["Nervous system", "Endocrine system", "Digestive system", "Circulatory system"],
-    answer: "Endocrine system"
-  },
-  {
-    question: "Which energy source is harnessed from the splitting of atomic nuclei?",
-    options: ["Solar energy", "Nuclear energy", "Wind energy", "Geothermal energy"],
-    answer: "Nuclear energy"
-  },
-  {
-    question: "What is the pH of pure water?",
-    options: ["7", "0", "14", "1"],
-    answer: "7"
-  },
-  {
-    question: "The biological process that produces offspring is called:",
-    options: ["Growth", "Reproduction", "Metabolism", "Excretion"],
-    answer: "Reproduction"
-  },
-  {
-    question: "Which part of the brain controls voluntary movements?",
-    options: ["Cerebrum", "Cerebellum", "Medulla", "Spinal cord"],
-    answer: "Cerebrum"
-  }
-  // Add more questions here
+{
+  question: "Which step in the scientific method involves interpreting collected data to arrive at a decision?",
+  options: ["Observation", "Analysis", "Hypothesis formulation", "Experimentation"],
+  answer: "Analysis"
+},
+{
+  question: "A scientist predicts that a plant will grow faster in sunlight than in shade. This statement is best described as:",
+  options: ["Theory", "Conclusion", "Hypothesis", "Observation"],
+  answer: "Hypothesis"
+},
+{
+  question: "Which of the following is NOT a derived physical quantity?",
+  options: ["Velocity", "Density", "Temperature", "Force"],
+  answer: "Temperature"
+},
+{
+  question: "The SI unit of electric current is:",
+  options: ["Ampere", "Volt", "Ohm", "Coulomb"],
+  answer: "Ampere"
+},
+{
+  question: "Which instrument is most suitable for measuring the internal diameter of a test tube accurately?",
+  options: ["Micrometer screw gauge", "Vernier calipers", "Meter rule", "Measuring cylinder"],
+  answer: "Vernier calipers"
+},
+{
+  question: "An error that occurs due to faulty calibration of an instrument is called:",
+  options: ["Random error", "Systematic error", "Human error", "Parallax error"],
+  answer: "Systematic error"
+},
+{
+  question: "Which of the following best explains why repeated measurements are taken in experiments?",
+  options: ["To eliminate all errors", "To increase precision and reliability", "To reduce cost", "To simplify calculations"],
+  answer: "To increase precision and reliability"
+},
+{
+  question: "A substance has a mass of 54 g and occupies a volume of 18 cm³. Its density is:",
+  options: ["3.0 g/cm³", "2.5 g/cm³", "3.5 g/cm³", "2.0 g/cm³"],
+  answer: "3.0 g/cm³"
+},
+{
+  question: "Which of the following processes is NOT a characteristic of living organisms?",
+  options: ["Respiration", "Crystallization", "Excretion", "Growth"],
+  answer: "Crystallization"
+},
+{
+  question: "Which level of classification comes immediately after class?",
+  options: ["Order", "Family", "Genus", "Phylum"],
+  answer: "Order"
+},
+{
+  question: "Which scientist is credited with the binomial system of naming organisms?",
+  options: ["Linnaeus", "Darwin", "Aristotle", "Mendel"],
+  answer: "Linnaeus"
+},
+{
+  question: "Which of the following best distinguishes living from non-living things?",
+  options: ["Ability to move", "Ability to grow and reproduce", "Presence of mass", "Ability to occupy space"],
+  answer: "Ability to grow and reproduce"
+},
+{
+  question: "An atom is best described as:",
+  options: ["The smallest unit of a compound", "A neutral particle made of protons, neutrons and electrons", "A charged particle in solution", "A combination of different elements"],
+  answer: "A neutral particle made of protons, neutrons and electrons"
+},
+{
+  question: "Which of the following represents a compound?",
+  options: ["Air", "Sodium chloride", "Iron filings", "Sulphur"],
+  answer: "Sodium chloride"
+},
+{
+  question: "Which type of bonding involves transfer of electrons from one atom to another?",
+  options: ["Covalent bonding", "Ionic bonding", "Metallic bonding", "Hydrogen bonding"],
+  answer: "Ionic bonding"
+},
+{
+  question: "The atomic number of an element represents the:",
+  options: ["Number of neutrons", "Number of protons", "Sum of protons and neutrons", "Number of electrons and neutrons"],
+  answer: "Number of protons"
+},
+{
+  question: "Isotopes of an element differ in their:",
+  options: ["Atomic number", "Chemical properties", "Number of neutrons", "Number of protons"],
+  answer: "Number of neutrons"
+},
+{
+  question: "The relative atomic mass of an element is defined based on:",
+  options: ["Hydrogen-1", "Oxygen-16", "Carbon-12", "Nitrogen-14"],
+  answer: "Carbon-12"
+},
+{
+  question: "One mole of a substance contains:",
+  options: ["6.02 × 10²³ particles", "6.02 × 10²² particles", "3.01 × 10²³ particles", "1.00 × 10²³ particles"],
+  answer: "6.02 × 10²³ particles"
+},
+{
+  question: "Which of the following best explains why ionic compounds conduct electricity in molten state?",
+  options: ["Presence of free electrons", "Movement of ions", "High temperature", "Strong bonds"],
+  answer: "Movement of ions"
+},
+
+{
+  question: "Which cell organelle is directly responsible for protein synthesis?",
+  options: ["Ribosome", "Mitochondrion", "Golgi apparatus", "Nucleus"],
+  answer: "Ribosome"
+},
+{
+  question: "Which structure controls the movement of substances into and out of the cell?",
+  options: ["Cell membrane", "Cytoplasm", "Nucleus", "Cell wall"],
+  answer: "Cell membrane"
+},
+{
+  question: "Which of the following is present in plant cells but absent in animal cells?",
+  options: ["Chloroplast", "Mitochondrion", "Ribosome", "Nucleus"],
+  answer: "Chloroplast"
+},
+{
+  question: "Osmosis is best defined as the movement of water molecules:",
+  options: ["From higher to lower concentration through a semi-permeable membrane", "From lower to higher concentration without a membrane", "Across any membrane from low to high pressure", "From concentrated to dilute solution through diffusion"],
+  answer: "From higher to lower concentration through a semi-permeable membrane"
+},
+{
+  question: "Which process requires energy for the movement of substances across membranes?",
+  options: ["Active transport", "Diffusion", "Osmosis", "Filtration"],
+  answer: "Active transport"
+},
+{
+  question: "A red blood cell placed in a hypertonic solution will:",
+  options: ["Shrink", "Burst", "Remain unchanged", "Increase in size"],
+  answer: "Shrink"
+},
+{
+  question: "Which of the following best describes diffusion?",
+  options: ["Movement of particles from high to low concentration", "Movement of water through a membrane", "Movement of particles against concentration gradient", "Movement due to pressure difference only"],
+  answer: "Movement of particles from high to low concentration"
+},
+{
+  question: "Which type of rock is formed from cooling of molten magma?",
+  options: ["Igneous rock", "Sedimentary rock", "Metamorphic rock", "Organic rock"],
+  answer: "Igneous rock"
+},
+{
+  question: "Which process leads to the breakdown of rocks into smaller particles?",
+  options: ["Weathering", "Erosion", "Deposition", "Sedimentation"],
+  answer: "Weathering"
+},
+{
+  question: "Metamorphic rocks are formed as a result of:",
+  options: ["Heat and pressure", "Cooling of lava", "Deposition of sediments", "Biological activity"],
+  answer: "Heat and pressure"
+},
+{
+  question: "Which separation technique is most suitable for separating a mixture of sand and salt?",
+  options: ["Dissolution, filtration and evaporation", "Filtration only", "Distillation", "Chromatography"],
+  answer: "Dissolution, filtration and evaporation"
+},
+{
+  question: "Which method is used to separate immiscible liquids?",
+  options: ["Separating funnel", "Filtration", "Evaporation", "Chromatography"],
+  answer: "Separating funnel"
+},
+{
+  question: "Chromatography is mainly used to separate:",
+  options: ["Components of a mixture based on solubility", "Liquids from solids", "Heavy metals", "Magnetic substances"],
+  answer: "Components of a mixture based on solubility"
+},
+{
+  question: "Which process is used to obtain pure water from seawater?",
+  options: ["Distillation", "Filtration", "Sedimentation", "Decantation"],
+  answer: "Distillation"
+},
+{
+  question: "Which of the following is a physical change?",
+  options: ["Melting of ice", "Burning of wood", "Rusting of iron", "Cooking of food"],
+  answer: "Melting of ice"
+},
+{
+  question: "Which state of matter has definite volume but no definite shape?",
+  options: ["Liquid", "Solid", "Gas", "Plasma"],
+  answer: "Liquid"
+},
+{
+  question: "Which state of matter is highly compressible?",
+  options: ["Gas", "Liquid", "Solid", "Crystal"],
+  answer: "Gas"
+},
+{
+  question: "The change from gas to liquid is called:",
+  options: ["Condensation", "Evaporation", "Sublimation", "Melting"],
+  answer: "Condensation"
+},
+{
+  question: "Which of the following processes involves heat absorption?",
+  options: ["Evaporation", "Condensation", "Freezing", "Solidification"],
+  answer: "Evaporation"
+},
+{
+  question: "Which factor does NOT affect the rate of evaporation?",
+  options: ["Color of container", "Temperature", "Surface area", "Air movement"],
+  answer: "Color of container"
+},
+
+{
+  question: "Which enzyme is responsible for the breakdown of proteins into peptides in the stomach?",
+  options: ["Pepsin", "Amylase", "Lipase", "Trypsin"],
+  answer: "Pepsin"
+},
+{
+  question: "Bile aids digestion primarily by:",
+  options: ["Emulsifying fats to increase surface area", "Breaking down proteins into amino acids", "Neutralizing enzymes in the stomach", "Converting starch into glucose"],
+  answer: "Emulsifying fats to increase surface area"
+},
+{
+  question: "Which part of the alimentary canal is mainly responsible for absorption of digested food?",
+  options: ["Ileum", "Stomach", "Duodenum", "Colon"],
+  answer: "Ileum"
+},
+{
+  question: "Which substance is absorbed into the lymphatic system instead of blood capillaries?",
+  options: ["Fatty acids and glycerol", "Glucose", "Amino acids", "Mineral salts"],
+  answer: "Fatty acids and glycerol"
+},
+{
+  question: "Which process moves food along the alimentary canal?",
+  options: ["Peristalsis", "Diffusion", "Osmosis", "Filtration"],
+  answer: "Peristalsis"
+},
+{
+  question: "Which gas is exchanged from blood to alveoli during respiration?",
+  options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+  answer: "Carbon dioxide"
+},
+{
+  question: "The main function of haemoglobin is to:",
+  options: ["Transport oxygen", "Fight infection", "Clot blood", "Regulate temperature"],
+  answer: "Transport oxygen"
+},
+{
+  question: "Which structure increases the surface area of the lungs for gas exchange?",
+  options: ["Alveoli", "Bronchi", "Trachea", "Diaphragm"],
+  answer: "Alveoli"
+},
+{
+  question: "During inhalation, the diaphragm:",
+  options: ["Contracts and flattens", "Relaxes and domes", "Moves upward", "Remains stationary"],
+  answer: "Contracts and flattens"
+},
+{
+  question: "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+  options: ["Pulmonary vein", "Pulmonary artery", "Aorta", "Vena cava"],
+  answer: "Pulmonary vein"
+},
+{
+  question: "Which chamber of the heart pumps blood to the lungs?",
+  options: ["Right ventricle", "Left ventricle", "Right atrium", "Left atrium"],
+  answer: "Right ventricle"
+},
+{
+  question: "Which component of blood is mainly responsible for immunity?",
+  options: ["White blood cells", "Red blood cells", "Platelets", "Plasma"],
+  answer: "White blood cells"
+},
+{
+  question: "Which blood vessels have the thickest muscular walls?",
+  options: ["Arteries", "Veins", "Capillaries", "Venules"],
+  answer: "Arteries"
+},
+{
+  question: "Which organ is primarily responsible for removal of urea from the blood?",
+  options: ["Kidney", "Liver", "Lung", "Skin"],
+  answer: "Kidney"
+},
+{
+  question: "Ultrafiltration in the kidney occurs in the:",
+  options: ["Glomerulus", "Loop of Henle", "Ureter", "Bladder"],
+  answer: "Glomerulus"
+},
+{
+  question: "Which part of the nephron is mainly involved in selective reabsorption?",
+  options: ["Proximal convoluted tubule", "Glomerulus", "Bowman's capsule", "Ureter"],
+  answer: "Proximal convoluted tubule"
+},
+{
+  question: "Which waste product is removed through the lungs?",
+  options: ["Carbon dioxide", "Urea", "Sweat", "Salt"],
+  answer: "Carbon dioxide"
+},
+{
+  question: "Homeostasis refers to the:",
+  options: ["Maintenance of stable internal environment", "Breakdown of food substances", "Movement of blood in vessels", "Production of energy"],
+  answer: "Maintenance of stable internal environment"
+},
+{
+  question: "Which organ regulates blood glucose levels?",
+  options: ["Pancreas", "Liver", "Kidney", "Heart"],
+  answer: "Pancreas"
+},
+{
+  question: "Which hormone lowers blood glucose level?",
+  options: ["Insulin", "Adrenaline", "Thyroxine", "Glucagon"],
+  answer: "Insulin"
+},
+
+{
+  question: "Which pigment is primarily responsible for trapping light energy during photosynthesis?",
+  options: ["Chlorophyll a", "Chlorophyll b", "Carotene", "Xanthophyll"],
+  answer: "Chlorophyll a"
+},
+{
+  question: "Which factor directly affects the rate of photosynthesis by influencing enzyme activity?",
+  options: ["Temperature", "Light intensity", "Carbon dioxide concentration", "Water availability"],
+  answer: "Temperature"
+},
+{
+  question: "The main product of photosynthesis that is transported in plants is:",
+  options: ["Sucrose", "Glucose", "Starch", "Fructose"],
+  answer: "Sucrose"
+},
+{
+  question: "Which tissue is responsible for transporting water in plants?",
+  options: ["Xylem", "Phloem", "Cambium", "Cortex"],
+  answer: "Xylem"
+},
+{
+  question: "Which tissue transports manufactured food in plants?",
+  options: ["Phloem", "Xylem", "Epidermis", "Pith"],
+  answer: "Phloem"
+},
+{
+  question: "Transpiration mainly occurs through:",
+  options: ["Stomata", "Lenticels", "Cuticle", "Root hairs"],
+  answer: "Stomata"
+},
+{
+  question: "Which factor increases the rate of transpiration?",
+  options: ["High temperature", "High humidity", "Low wind speed", "Low light intensity"],
+  answer: "High temperature"
+},
+{
+  question: "Which process provides the driving force for water movement in plants?",
+  options: ["Transpiration pull", "Root pressure", "Diffusion", "Osmosis"],
+  answer: "Transpiration pull"
+},
+{
+  question: "Which part of the plant is mainly responsible for absorption of water?",
+  options: ["Root hairs", "Stem", "Leaves", "Flowers"],
+  answer: "Root hairs"
+},
+{
+  question: "Which mineral is essential for chlorophyll formation?",
+  options: ["Magnesium", "Nitrogen", "Potassium", "Calcium"],
+  answer: "Magnesium"
+},
+{
+  question: "Which process converts glucose into starch in plants?",
+  options: ["Polymerization", "Respiration", "Fermentation", "Oxidation"],
+  answer: "Polymerization"
+},
+{
+  question: "Which type of reproduction produces genetically identical offspring?",
+  options: ["Asexual reproduction", "Sexual reproduction", "Pollination", "Fertilization"],
+  answer: "Asexual reproduction"
+},
+{
+  question: "Which structure in a flower produces pollen grains?",
+  options: ["Anther", "Stigma", "Ovary", "Style"],
+  answer: "Anther"
+},
+{
+  question: "Which part of the flower receives pollen during pollination?",
+  options: ["Stigma", "Ovary", "Anther", "Petal"],
+  answer: "Stigma"
+},
+{
+  question: "Which process involves the fusion of male and female gametes?",
+  options: ["Fertilization", "Pollination", "Germination", "Reproduction"],
+  answer: "Fertilization"
+},
+{
+  question: "Which condition is necessary for seed germination?",
+  options: ["Water, oxygen and suitable temperature", "Light, soil and air", "Carbon dioxide and sunlight", "Minerals and water only"],
+  answer: "Water, oxygen and suitable temperature"
+},
+{
+  question: "Phototropism is the response of plants to:",
+  options: ["Light", "Gravity", "Water", "Touch"],
+  answer: "Light"
+},
+{
+  question: "Geotropism refers to the response of plants to:",
+  options: ["Gravity", "Light", "Water", "Chemicals"],
+  answer: "Gravity"
+},
+{
+  question: "Which plant hormone promotes cell elongation in shoots?",
+  options: ["Auxin", "Gibberellin", "Cytokinin", "Ethylene"],
+  answer: "Auxin"
+},
+{
+  question: "Which structure protects the developing seed in flowering plants?",
+  options: ["Ovary", "Stigma", "Anther", "Sepal"],
+  answer: "Ovary"
+},
+
+{
+  question: "Work is said to be done when a force:",
+  options: ["causes displacement in the direction of the force", "is applied irrespective of motion", "acts perpendicular to displacement", "is balanced by another force"],
+  answer: "causes displacement in the direction of the force"
+},
+{
+  question: "The SI unit of work is:",
+  options: ["Joule", "Watt", "Newton", "Pascal"],
+  answer: "Joule"
+},
+{
+  question: "Which expression correctly represents work done?",
+  options: ["Force × distance", "Mass × acceleration", "Force ÷ distance", "Distance ÷ force"],
+  answer: "Force × distance"
+},
+{
+  question: "Power is defined as the rate of:",
+  options: ["doing work", "changing velocity", "energy storage", "force application"],
+  answer: "doing work"
+},
+{
+  question: "The SI unit of power is:",
+  options: ["Watt", "Joule", "Newton", "Volt"],
+  answer: "Watt"
+},
+{
+  question: "Which of the following has the greatest kinetic energy?",
+  options: ["Object with highest mass and velocity", "Object with lowest mass", "Object at rest", "Object with constant speed only"],
+  answer: "Object with highest mass and velocity"
+},
+{
+  question: "Potential energy depends mainly on:",
+  options: ["Height and mass", "Speed only", "Temperature", "Volume"],
+  answer: "Height and mass"
+},
+{
+  question: "Which form of energy is stored in a stretched rubber band?",
+  options: ["Elastic potential energy", "Kinetic energy", "Thermal energy", "Chemical energy"],
+  answer: "Elastic potential energy"
+},
+{
+  question: "Which energy transformation occurs in a hydroelectric power station?",
+  options: ["Potential to electrical energy", "Chemical to thermal energy", "Electrical to mechanical energy", "Thermal to chemical energy"],
+  answer: "Potential to electrical energy"
+},
+{
+  question: "Efficiency of a machine is defined as:",
+  options: ["Useful output ÷ total input", "Input ÷ output", "Output × input", "Input − output"],
+  answer: "Useful output ÷ total input"
+},
+{
+  question: "Which simple machine has a mechanical advantage equal to its velocity ratio?",
+  options: ["Ideal machine", "Pulley system", "Lever", "Wheel and axle"],
+  answer: "Ideal machine"
+},
+{
+  question: "In a first-class lever, the fulcrum is located:",
+  options: ["Between load and effort", "At one end", "Near the load", "Near the effort"],
+  answer: "Between load and effort"
+},
+{
+  question: "Heat transfer by direct contact of particles is called:",
+  options: ["Conduction", "Convection", "Radiation", "Evaporation"],
+  answer: "Conduction"
+},
+{
+  question: "Which method of heat transfer occurs in liquids and gases?",
+  options: ["Convection", "Conduction", "Radiation", "Reflection"],
+  answer: "Convection"
+},
+{
+  question: "Heat transfer through electromagnetic waves is called:",
+  options: ["Radiation", "Conduction", "Convection", "Diffusion"],
+  answer: "Radiation"
+},
+{
+  question: "Which material is the best conductor of heat?",
+  options: ["Copper", "Wood", "Plastic", "Rubber"],
+  answer: "Copper"
+},
+{
+  question: "Which factor does NOT affect heat transfer by conduction?",
+  options: ["Color of material", "Temperature difference", "Thickness", "Nature of material"],
+  answer: "Color of material"
+},
+{
+  question: "Which surface is the best emitter of radiant heat?",
+  options: ["Black dull surface", "Shiny polished surface", "White surface", "Smooth metallic surface"],
+  answer: "Black dull surface"
+},
+{
+  question: "Evaporation causes cooling because:",
+  options: ["High energy particles escape", "Temperature increases", "Particles slow down", "Heat is added"],
+  answer: "High energy particles escape"
+},
+{
+  question: "Which factor increases the rate of evaporation?",
+  options: ["Increased surface area", "High humidity", "Low temperature", "Still air"],
+  answer: "Increased surface area"
+},
+
+{
+  question: "Electric current is defined as the rate of flow of:",
+  options: ["Electric charge", "Energy", "Potential difference", "Resistance"],
+  answer: "Electric charge"
+},
+{
+  question: "The SI unit of electric current is:",
+  options: ["Ampere", "Volt", "Ohm", "Watt"],
+  answer: "Ampere"
+},
+{
+  question: "Potential difference is measured using a:",
+  options: ["Voltmeter", "Ammeter", "Ohmmeter", "Galvanometer"],
+  answer: "Voltmeter"
+},
+{
+  question: "Which instrument is connected in series to measure current?",
+  options: ["Ammeter", "Voltmeter", "Thermometer", "Barometer"],
+  answer: "Ammeter"
+},
+{
+  question: "Ohm’s law states that:",
+  options: ["Current is directly proportional to voltage at constant temperature", "Voltage is inversely proportional to current", "Resistance varies with current", "Power is independent of voltage"],
+  answer: "Current is directly proportional to voltage at constant temperature"
+},
+{
+  question: "The unit of resistance is:",
+  options: ["Ohm", "Volt", "Ampere", "Joule"],
+  answer: "Ohm"
+},
+{
+  question: "Which combination gives the correct relationship?",
+  options: ["V = IR", "I = VR", "R = VI", "V = I/R"],
+  answer: "V = IR"
+},
+{
+  question: "In a series circuit, the current is:",
+  options: ["The same at all points", "Different at each point", "Zero at some points", "Maximum at the source only"],
+  answer: "The same at all points"
+},
+{
+  question: "In a parallel circuit, the voltage across each branch is:",
+  options: ["The same", "Different", "Zero", "Dependent on resistance only"],
+  answer: "The same"
+},
+{
+  question: "Which material is commonly used as a conductor?",
+  options: ["Copper", "Rubber", "Plastic", "Glass"],
+  answer: "Copper"
+},
+{
+  question: "Which material is a good insulator?",
+  options: ["Rubber", "Aluminium", "Copper", "Iron"],
+  answer: "Rubber"
+},
+{
+  question: "Electrical power is calculated using:",
+  options: ["P = VI", "P = IR", "P = V/R", "P = I/V"],
+  answer: "P = VI"
+},
+{
+  question: "The unit of electrical energy is:",
+  options: ["Joule", "Watt", "Volt", "Ohm"],
+  answer: "Joule"
+},
+{
+  question: "Which device converts electrical energy into heat energy?",
+  options: ["Electric heater", "Generator", "Transformer", "Battery"],
+  answer: "Electric heater"
+},
+{
+  question: "A fuse is used in electrical circuits to:",
+  options: ["Protect against excessive current", "Increase voltage", "Store energy", "Reduce resistance"],
+  answer: "Protect against excessive current"
+},
+{
+  question: "A magnet has two poles known as:",
+  options: ["North and South poles", "Positive and negative poles", "East and West poles", "Upper and lower poles"],
+  answer: "North and South poles"
+},
+{
+  question: "Like poles of magnets:",
+  options: ["Repel each other", "Attract each other", "Neutralize each other", "Produce current"],
+  answer: "Repel each other"
+},
+{
+  question: "Unlike poles of magnets:",
+  options: ["Attract each other", "Repel each other", "Cancel each other", "Produce heat"],
+  answer: "Attract each other"
+},
+{
+  question: "The region around a magnet where magnetic force is felt is called:",
+  options: ["Magnetic field", "Electric field", "Force field", "Current field"],
+  answer: "Magnetic field"
+},
+{
+  question: "An electromagnet is produced when current flows through a:",
+  options: ["Coil of wire", "Metal rod", "Plastic tube", "Glass plate"],
+  answer: "Coil of wire"
+},
+
+{
+  question: "An ecosystem is best defined as:",
+  options: ["A community of organisms interacting with their physical environment", "A group of similar organisms", "All plants in a given area", "A collection of animals only"],
+  answer: "A community of organisms interacting with their physical environment"
+},
+{
+  question: "Which of the following represents a biotic component of an ecosystem?",
+  options: ["Bacteria", "Soil", "Water", "Temperature"],
+  answer: "Bacteria"
+},
+{
+  question: "Which of the following is an abiotic factor?",
+  options: ["Light intensity", "Plants", "Animals", "Fungi"],
+  answer: "Light intensity"
+},
+{
+  question: "Producers in an ecosystem are organisms that:",
+  options: ["Manufacture their own food", "Feed on other organisms", "Break down organic matter", "Store energy only"],
+  answer: "Manufacture their own food"
+},
+{
+  question: "Which group of organisms feeds directly on producers?",
+  options: ["Primary consumers", "Secondary consumers", "Tertiary consumers", "Decomposers"],
+  answer: "Primary consumers"
+},
+{
+  question: "A food chain shows:",
+  options: ["Flow of energy from one organism to another", "Relationship between species only", "Movement of water in soil", "Reproduction patterns"],
+  answer: "Flow of energy from one organism to another"
+},
+{
+  question: "Which of the following best describes a food web?",
+  options: ["Interconnected food chains", "Single feeding relationship", "Energy loss only", "Plant-only interactions"],
+  answer: "Interconnected food chains"
+},
+{
+  question: "Energy transfer between trophic levels is inefficient mainly because:",
+  options: ["Energy is lost as heat", "Organisms store all energy", "Energy increases at each level", "Energy is destroyed"],
+  answer: "Energy is lost as heat"
+},
+{
+  question: "Decomposers play a vital role by:",
+  options: ["Recycling nutrients into the ecosystem", "Producing oxygen", "Consuming producers only", "Fixing nitrogen directly"],
+  answer: "Recycling nutrients into the ecosystem"
+},
+{
+  question: "Which of the following is a major greenhouse gas?",
+  options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+  answer: "Carbon dioxide"
+},
+{
+  question: "Global warming is mainly caused by:",
+  options: ["Increase in greenhouse gases", "Decrease in oxygen", "Increase in rainfall", "Decrease in sunlight"],
+  answer: "Increase in greenhouse gases"
+},
+{
+  question: "Which human activity contributes most to deforestation?",
+  options: ["Logging", "Irrigation", "Fishing", "Mining"],
+  answer: "Logging"
+},
+{
+  question: "Eutrophication in water bodies is mainly caused by:",
+  options: ["Excess nutrients", "Oil spills", "Plastic waste", "Thermal pollution"],
+  answer: "Excess nutrients"
+},
+{
+  question: "Which type of pollution affects the hearing ability of organisms?",
+  options: ["Noise pollution", "Air pollution", "Water pollution", "Soil pollution"],
+  answer: "Noise pollution"
+},
+{
+  question: "Acid rain is formed mainly due to the presence of:",
+  options: ["Sulphur dioxide and nitrogen oxides", "Carbon dioxide only", "Methane", "Oxygen"],
+  answer: "Sulphur dioxide and nitrogen oxides"
+},
+{
+  question: "Which conservation method involves protecting organisms in their natural habitat?",
+  options: ["In-situ conservation", "Ex-situ conservation", "Artificial selection", "Domestication"],
+  answer: "In-situ conservation"
+},
+{
+  question: "National parks are examples of:",
+  options: ["In-situ conservation", "Ex-situ conservation", "Artificial habitats", "Urban ecosystems"],
+  answer: "In-situ conservation"
+},
+{
+  question: "Which of the following is an example of ex-situ conservation?",
+  options: ["Zoo", "Forest reserve", "National park", "Wildlife sanctuary"],
+  answer: "Zoo"
+},
+{
+  question: "Which practice helps to conserve soil fertility?",
+  options: ["Crop rotation", "Deforestation", "Overgrazing", "Bush burning"],
+  answer: "Crop rotation"
+},
+{
+  question: "Which of the following best reduces environmental pollution?",
+  options: ["Recycling waste materials", "Burning waste openly", "Dumping waste in rivers", "Using more fossil fuels"],
+  answer: "Recycling waste materials"
+},
+
+{
+  question: "The hydrological cycle involves the continuous movement of water between:",
+  options: ["Atmosphere, land and water bodies", "Plants and animals only", "Soil and rocks only", "Air and sunlight only"],
+  answer: "Atmosphere, land and water bodies"
+},
+{
+  question: "Which process converts water vapour into liquid water in the atmosphere?",
+  options: ["Condensation", "Evaporation", "Transpiration", "Sublimation"],
+  answer: "Condensation"
+},
+{
+  question: "Which process is responsible for the formation of clouds?",
+  options: ["Condensation of water vapour", "Evaporation of water", "Freezing of water", "Melting of ice"],
+  answer: "Condensation of water vapour"
+},
+{
+  question: "Surface runoff occurs when:",
+  options: ["Water flows over land into rivers", "Water evaporates into air", "Water freezes underground", "Water is absorbed by roots"],
+  answer: "Water flows over land into rivers"
+},
+{
+  question: "Which factor increases the rate of evaporation in the water cycle?",
+  options: ["High temperature and wind speed", "High humidity and low temperature", "Low sunlight", "High pressure"],
+  answer: "High temperature and wind speed"
+},
+{
+  question: "Nitrogen fixation is the process of converting:",
+  options: ["Atmospheric nitrogen into usable compounds", "Nitrates into nitrogen gas", "Ammonia into nitrates", "Proteins into amino acids"],
+  answer: "Atmospheric nitrogen into usable compounds"
+},
+{
+  question: "Which organisms are mainly responsible for nitrogen fixation?",
+  options: ["Bacteria in root nodules", "Fungi in soil", "Animals", "Algae in water"],
+  answer: "Bacteria in root nodules"
+},
+{
+  question: "Which process converts ammonia into nitrates?",
+  options: ["Nitrification", "Denitrification", "Ammonification", "Fixation"],
+  answer: "Nitrification"
+},
+{
+  question: "Denitrification results in the conversion of nitrates into:",
+  options: ["Nitrogen gas", "Ammonia", "Proteins", "Oxygen"],
+  answer: "Nitrogen gas"
+},
+{
+  question: "Which process releases nitrogen back into the atmosphere?",
+  options: ["Denitrification", "Nitrification", "Fixation", "Assimilation"],
+  answer: "Denitrification"
+},
+{
+  question: "Wind is caused mainly by:",
+  options: ["Differences in air pressure", "Earth’s gravity", "Ocean currents", "Magnetic forces"],
+  answer: "Differences in air pressure"
+},
+{
+  question: "Air moves from regions of:",
+  options: ["High pressure to low pressure", "Low pressure to high pressure", "Equal pressure", "Cold to hot regions only"],
+  answer: "High pressure to low pressure"
+},
+{
+  question: "Which instrument is used to measure atmospheric pressure?",
+  options: ["Barometer", "Thermometer", "Hygrometer", "Anemometer"],
+  answer: "Barometer"
+},
+{
+  question: "Which instrument measures wind speed?",
+  options: ["Anemometer", "Barometer", "Rain gauge", "Thermometer"],
+  answer: "Anemometer"
+},
+{
+  question: "Which instrument measures humidity?",
+  options: ["Hygrometer", "Barometer", "Thermometer", "Anemometer"],
+  answer: "Hygrometer"
+},
+{
+  question: "Humidity refers to the amount of:",
+  options: ["Water vapour in the air", "Oxygen in the air", "Carbon dioxide in the air", "Dust particles in the air"],
+  answer: "Water vapour in the air"
+},
+{
+  question: "Which factor most directly influences climate in coastal areas?",
+  options: ["Large water bodies", "Soil type", "Vegetation only", "Altitude only"],
+  answer: "Large water bodies"
+},
+{
+  question: "Which of the following best explains land and sea breeze?",
+  options: ["Differential heating of land and water", "Rotation of the earth", "Magnetic forces", "Ocean currents only"],
+  answer: "Differential heating of land and water"
+},
+{
+  question: "Which type of rainfall is caused by rising warm air?",
+  options: ["Convectional rainfall", "Relief rainfall", "Cyclonic rainfall", "Frontal rainfall"],
+  answer: "Convectional rainfall"
+},
+{
+  question: "Relief rainfall occurs when air is forced to rise over:",
+  options: ["Mountains", "Water bodies", "Deserts", "Forests"],
+  answer: "Mountains"
+},
+
+{
+  question: "A chemical reaction is best identified by the formation of:",
+  options: ["New substances with different properties", "Mixtures of existing substances", "Physical changes only", "Temporary color changes only"],
+  answer: "New substances with different properties"
+},
+{
+  question: "Which type of reaction involves combination of two substances to form one product?",
+  options: ["Synthesis reaction", "Decomposition reaction", "Displacement reaction", "Neutralization reaction"],
+  answer: "Synthesis reaction"
+},
+{
+  question: "Which reaction involves the breakdown of a compound into simpler substances?",
+  options: ["Decomposition", "Synthesis", "Combustion", "Neutralization"],
+  answer: "Decomposition"
+},
+{
+  question: "Which type of reaction occurs when a more reactive metal displaces a less reactive one?",
+  options: ["Displacement reaction", "Combination reaction", "Neutralization", "Decomposition"],
+  answer: "Displacement reaction"
+},
+{
+  question: "Which of the following is a characteristic of exothermic reactions?",
+  options: ["Release of heat energy", "Absorption of heat", "Decrease in temperature", "No energy change"],
+  answer: "Release of heat energy"
+},
+{
+  question: "Which of the following is an endothermic process?",
+  options: ["Photosynthesis", "Combustion", "Neutralization", "Respiration"],
+  answer: "Photosynthesis"
+},
+{
+  question: "An acid is defined as a substance that produces ______ in aqueous solution.",
+  options: ["Hydrogen ions", "Hydroxide ions", "Electrons", "Neutrons"],
+  answer: "Hydrogen ions"
+},
+{
+  question: "A base is defined as a substance that produces ______ in aqueous solution.",
+  options: ["Hydroxide ions", "Hydrogen ions", "Protons", "Electrons"],
+  answer: "Hydroxide ions"
+},
+{
+  question: "Which of the following is a strong acid?",
+  options: ["Hydrochloric acid", "Ethanoic acid", "Carbonic acid", "Citric acid"],
+  answer: "Hydrochloric acid"
+},
+{
+  question: "Which of the following is a weak acid?",
+  options: ["Ethanoic acid", "Sulphuric acid", "Nitric acid", "Hydrochloric acid"],
+  answer: "Ethanoic acid"
+},
+{
+  question: "Neutralization is the reaction between:",
+  options: ["Acid and base to form salt and water", "Two acids", "Two bases", "Metal and oxygen"],
+  answer: "Acid and base to form salt and water"
+},
+{
+  question: "Which indicator turns blue in alkaline solution?",
+  options: ["Litmus", "Methyl orange", "Phenolphthalein", "Universal indicator"],
+  answer: "Litmus"
+},
+{
+  question: "Which indicator is colorless in acidic solution and pink in alkaline solution?",
+  options: ["Phenolphthalein", "Litmus", "Methyl orange", "Universal indicator"],
+  answer: "Phenolphthalein"
+},
+{
+  question: "The pH of a neutral solution is:",
+  options: ["7", "0", "14", "1"],
+  answer: "7"
+},
+{
+  question: "Which of the following has a pH less than 7?",
+  options: ["Acidic solution", "Alkaline solution", "Neutral solution", "Salt solution"],
+  answer: "Acidic solution"
+},
+{
+  question: "Salts are formed from the reaction between:",
+  options: ["Acid and base", "Metal and oxygen", "Gas and liquid", "Two bases"],
+  answer: "Acid and base"
+},
+{
+  question: "Which salt is formed from hydrochloric acid?",
+  options: ["Chloride", "Sulphate", "Nitrate", "Carbonate"],
+  answer: "Chloride"
+},
+{
+  question: "Which gas is produced when an acid reacts with a carbonate?",
+  options: ["Carbon dioxide", "Oxygen", "Hydrogen", "Nitrogen"],
+  answer: "Carbon dioxide"
+},
+{
+  question: "Which gas is produced when an acid reacts with a metal?",
+  options: ["Hydrogen", "Carbon dioxide", "Oxygen", "Nitrogen"],
+  answer: "Hydrogen"
+},
+{
+  question: "Which of the following best explains why acids conduct electricity in solution?",
+  options: ["Presence of mobile ions", "Presence of molecules", "High temperature", "Strong bonds"],
+  answer: "Presence of mobile ions"
+},
+
+{
+  question: "A pathogen is best defined as:",
+  options: ["A disease-causing organism", "A beneficial microorganism", "A chemical substance", "A body cell"],
+  answer: "A disease-causing organism"
+},
+{
+  question: "Which of the following is NOT a type of pathogen?",
+  options: ["White blood cell", "Bacterium", "Virus", "Fungus"],
+  answer: "White blood cell"
+},
+{
+  question: "Which disease is caused by a virus?",
+  options: ["Measles", "Tuberculosis", "Cholera", "Typhoid"],
+  answer: "Measles"
+},
+{
+  question: "Which disease is caused by bacteria?",
+  options: ["Tuberculosis", "Malaria", "HIV/AIDS", "Influenza"],
+  answer: "Tuberculosis"
+},
+{
+  question: "Malaria is transmitted by:",
+  options: ["Female Anopheles mosquito", "Housefly", "Tsetse fly", "Male mosquito"],
+  answer: "Female Anopheles mosquito"
+},
+{
+  question: "Which organism causes malaria?",
+  options: ["Plasmodium", "Bacterium", "Virus", "Fungus"],
+  answer: "Plasmodium"
+},
+{
+  question: "Which disease affects the immune system directly?",
+  options: ["HIV/AIDS", "Malaria", "Cholera", "Tuberculosis"],
+  answer: "HIV/AIDS"
+},
+{
+  question: "Which mode of transmission involves direct body contact?",
+  options: ["Contact transmission", "Airborne transmission", "Vector transmission", "Waterborne transmission"],
+  answer: "Contact transmission"
+},
+{
+  question: "Which disease is spread through contaminated water?",
+  options: ["Cholera", "Malaria", "Influenza", "Measles"],
+  answer: "Cholera"
+},
+{
+  question: "Which of the following is a vector?",
+  options: ["Mosquito", "Water", "Air", "Soil"],
+  answer: "Mosquito"
+},
+{
+  question: "Immunity is defined as the ability of the body to:",
+  options: ["Resist infection", "Digest food", "Produce energy", "Circulate blood"],
+  answer: "Resist infection"
+},
+{
+  question: "Which cells are mainly responsible for defense against pathogens?",
+  options: ["White blood cells", "Red blood cells", "Platelets", "Plasma cells"],
+  answer: "White blood cells"
+},
+{
+  question: "Vaccination provides:",
+  options: ["Artificial active immunity", "Natural immunity", "Passive immunity", "Temporary resistance"],
+  answer: "Artificial active immunity"
+},
+{
+  question: "Antibodies are produced by:",
+  options: ["White blood cells", "Red blood cells", "Platelets", "Neurons"],
+  answer: "White blood cells"
+},
+{
+  question: "Which of the following helps to prevent disease transmission?",
+  options: ["Proper sanitation", "Poor hygiene", "Overcrowding", "Contaminated food"],
+  answer: "Proper sanitation"
+},
+{
+  question: "Which of the following is a symptom of malaria?",
+  options: ["Fever and chills", "Skin rash only", "Blindness", "Hair loss"],
+  answer: "Fever and chills"
+},
+{
+  question: "Which disease is associated with severe diarrhea and dehydration?",
+  options: ["Cholera", "Malaria", "Measles", "Tuberculosis"],
+  answer: "Cholera"
+},
+{
+  question: "Which of the following is a method of controlling mosquito population?",
+  options: ["Draining stagnant water", "Increasing waste", "Overcrowding areas", "Reducing sunlight"],
+  answer: "Draining stagnant water"
+},
+{
+  question: "Which type of immunity is obtained from mother to child?",
+  options: ["Natural passive immunity", "Artificial active immunity", "Artificial passive immunity", "Acquired immunity"],
+  answer: "Natural passive immunity"
+},
+{
+  question: "Which of the following best explains the role of antibiotics?",
+  options: ["They kill or inhibit bacteria", "They destroy viruses", "They boost immunity directly", "They prevent dehydration"],
+  answer: "They kill or inhibit bacteria"
+},
+
+{
+  question: "Which principle explains why ships made of steel float on water?",
+  options: ["Average density is less than that of water", "Steel is lighter than water", "Water has no density", "Air inside ships has no mass"],
+  answer: "Average density is less than that of water"
+},
+{
+  question: "Which device converts mechanical energy into electrical energy?",
+  options: ["Generator", "Motor", "Transformer", "Battery"],
+  answer: "Generator"
+},
+{
+  question: "Which device converts electrical energy into mechanical energy?",
+  options: ["Electric motor", "Generator", "Solar panel", "Transformer"],
+  answer: "Electric motor"
+},
+{
+  question: "A transformer is used to:",
+  options: ["Change voltage levels", "Store energy", "Produce current", "Measure resistance"],
+  answer: "Change voltage levels"
+},
+{
+  question: "Which energy source is renewable?",
+  options: ["Solar energy", "Coal", "Petroleum", "Natural gas"],
+  answer: "Solar energy"
+},
+{
+  question: "Which energy source contributes most to environmental pollution?",
+  options: ["Fossil fuels", "Wind energy", "Hydropower", "Solar energy"],
+  answer: "Fossil fuels"
+},
+{
+  question: "Which technology is used in long-distance communication?",
+  options: ["Satellite", "Thermometer", "Barometer", "Hydrometer"],
+  answer: "Satellite"
+},
+{
+  question: "Which principle is used in the working of a refrigerator?",
+  options: ["Evaporation absorbs heat", "Condensation absorbs heat", "Freezing releases heat", "Radiation cools objects"],
+  answer: "Evaporation absorbs heat"
+},
+{
+  question: "Which device is used to measure electrical resistance?",
+  options: ["Ohmmeter", "Ammeter", "Voltmeter", "Thermometer"],
+  answer: "Ohmmeter"
+},
+{
+  question: "Which material is most suitable for making cooking pots?",
+  options: ["Aluminium", "Plastic", "Wood", "Rubber"],
+  answer: "Aluminium"
+},
+{
+  question: "Which process is involved in water purification at treatment plants?",
+  options: ["Filtration and chlorination", "Evaporation only", "Condensation only", "Magnetization"],
+  answer: "Filtration and chlorination"
+},
+{
+  question: "Which technology is used in medical imaging of bones?",
+  options: ["X-ray", "Ultrasound", "Radio waves", "Infrared radiation"],
+  answer: "X-ray"
+},
+{
+  question: "Which wave type is used in microwave ovens?",
+  options: ["Microwaves", "Radio waves", "X-rays", "Gamma rays"],
+  answer: "Microwaves"
+},
+{
+  question: "Which of the following is an application of electromagnets?",
+  options: ["Electric bell", "Thermometer", "Barometer", "Hydrometer"],
+  answer: "Electric bell"
+},
+{
+  question: "Which device converts light energy directly into electrical energy?",
+  options: ["Solar cell", "Generator", "Battery", "Transformer"],
+  answer: "Solar cell"
+},
+{
+  question: "Which factor determines the efficiency of a machine?",
+  options: ["Energy losses", "Weight of machine", "Color of machine", "Temperature only"],
+  answer: "Energy losses"
+},
+{
+  question: "Which of the following reduces friction in machines?",
+  options: ["Lubrication", "Heating", "Cooling", "Painting"],
+  answer: "Lubrication"
+},
+{
+  question: "Which of the following best explains the use of gears?",
+  options: ["To change speed and direction of motion", "To store energy", "To reduce temperature", "To increase weight"],
+  answer: "To change speed and direction of motion"
+},
+{
+  question: "Which type of energy is stored in fuels?",
+  options: ["Chemical energy", "Kinetic energy", "Thermal energy", "Electrical energy"],
+  answer: "Chemical energy"
+},
+{
+  question: "Which of the following best explains why metals are used in electrical wiring?",
+  options: ["They have free electrons for conduction", "They are heavy", "They are hard", "They are shiny"],
+  answer: "They have free electrons for conduction"
+},
+
+{
+  question: "A student increases light intensity during an experiment on photosynthesis. Which factor must be controlled to ensure valid results?",
+  options: ["Carbon dioxide concentration", "Leaf color", "Plant species", "Soil type"],
+  answer: "Carbon dioxide concentration"
+},
+{
+  question: "Which process explains the movement of mineral salts from soil into root hairs against concentration gradient?",
+  options: ["Active transport", "Diffusion", "Osmosis", "Transpiration"],
+  answer: "Active transport"
+},
+{
+  question: "A decrease in atmospheric pressure will most likely result in:",
+  options: ["Expansion of gases", "Compression of gases", "No change in volume", "Condensation of gases"],
+  answer: "Expansion of gases"
+},
+{
+  question: "Which factor most directly affects the rate of a chemical reaction?",
+  options: ["Surface area of reactants", "Color of reactants", "Mass of container", "Shape of container"],
+  answer: "Surface area of reactants"
+},
+{
+  question: "Which condition will increase the resistance of a conductor?",
+  options: ["Increase in temperature", "Decrease in length", "Increase in thickness", "Decrease in temperature"],
+  answer: "Increase in temperature"
+},
+{
+  question: "Which of the following explains why diffusion is faster in gases than in liquids?",
+  options: ["Particles have higher kinetic energy", "Particles are larger", "Particles are stationary", "Particles have stronger bonds"],
+  answer: "Particles have higher kinetic energy"
+},
+{
+  question: "Which of the following processes removes carbon dioxide from the atmosphere?",
+  options: ["Photosynthesis", "Respiration", "Combustion", "Decomposition"],
+  answer: "Photosynthesis"
+},
+{
+  question: "Which organ in humans is responsible for both excretion and osmoregulation?",
+  options: ["Kidney", "Liver", "Lung", "Skin"],
+  answer: "Kidney"
+},
+{
+  question: "Which factor affects the rate of transpiration indirectly by influencing stomatal opening?",
+  options: ["Light intensity", "Soil type", "Mineral content", "Plant age"],
+  answer: "Light intensity"
+},
+{
+  question: "Which process is responsible for the release of energy stored in food?",
+  options: ["Respiration", "Photosynthesis", "Digestion", "Excretion"],
+  answer: "Respiration"
+},
+{
+  question: "Which of the following is a non-renewable source of energy?",
+  options: ["Coal", "Wind", "Solar", "Hydropower"],
+  answer: "Coal"
+},
+{
+  question: "Which type of circuit will continue to function even if one component fails?",
+  options: ["Parallel circuit", "Series circuit", "Closed circuit", "Open circuit"],
+  answer: "Parallel circuit"
+},
+{
+  question: "Which of the following explains why metals expand when heated?",
+  options: ["Increase in kinetic energy of particles", "Decrease in particle size", "Loss of electrons", "Formation of new bonds"],
+  answer: "Increase in kinetic energy of particles"
+},
+{
+  question: "Which factor determines the strength of an electromagnet?",
+  options: ["Number of coil turns", "Color of wire", "Length of wire only", "Temperature of wire"],
+  answer: "Number of coil turns"
+},
+{
+  question: "Which process converts nitrates into proteins in plants?",
+  options: ["Assimilation", "Fixation", "Denitrification", "Nitrification"],
+  answer: "Assimilation"
+},
+{
+  question: "Which of the following explains why oil floats on water?",
+  options: ["Lower density than water", "Higher viscosity", "Higher temperature", "Chemical reaction"],
+  answer: "Lower density than water"
+},
+{
+  question: "Which of the following best explains the greenhouse effect?",
+  options: ["Trapping of heat by gases in the atmosphere", "Reflection of sunlight by clouds", "Absorption of oxygen by plants", "Cooling of the earth’s surface"],
+  answer: "Trapping of heat by gases in the atmosphere"
+},
+{
+  question: "Which process is involved when a solid changes directly into gas?",
+  options: ["Sublimation", "Condensation", "Melting", "Evaporation"],
+  answer: "Sublimation"
+},
+{
+  question: "Which factor determines the pressure exerted by a liquid?",
+  options: ["Depth and density", "Color and temperature", "Volume only", "Shape of container"],
+  answer: "Depth and density"
+},
+{
+  question: "Which of the following best explains why vaccines are effective?",
+  options: ["They stimulate antibody production", "They kill all pathogens instantly", "They increase body temperature", "They prevent exposure to pathogens"],
+  answer: "They stimulate antibody production"
+},
+
+{
+  question: "A plant is placed in the dark for 48 hours and then exposed to light. Why is this step important before testing for starch?",
+  options: ["To remove previously stored starch", "To increase chlorophyll content", "To stop respiration completely", "To increase water uptake"],
+  answer: "To remove previously stored starch"
+},
+{
+  question: "Which condition would most likely reduce the rate of enzyme activity in digestion?",
+  options: ["Extreme pH", "Moderate temperature", "Adequate substrate", "Presence of cofactors"],
+  answer: "Extreme pH"
+},
+{
+  question: "Which factor determines whether a reaction is exothermic or endothermic?",
+  options: ["Energy change during reaction", "Mass of reactants", "Volume of products", "Color of substances"],
+  answer: "Energy change during reaction"
+},
+{
+  question: "Which of the following explains why increasing pressure increases the rate of reaction between gases?",
+  options: ["Particles collide more frequently", "Particles lose energy", "Particles become larger", "Particles slow down"],
+  answer: "Particles collide more frequently"
+},
+{
+  question: "Which factor affects both resistance in a wire and heat produced in it?",
+  options: ["Length of wire", "Color of wire", "Shape of battery", "Position of switch"],
+  answer: "Length of wire"
+},
+{
+  question: "Which biological process depends directly on diffusion?",
+  options: ["Gas exchange in alveoli", "Blood circulation", "Digestion in stomach", "Urine formation"],
+  answer: "Gas exchange in alveoli"
+},
+{
+  question: "Which of the following best explains why capillaries have thin walls?",
+  options: ["To allow rapid exchange of substances", "To increase blood pressure", "To reduce blood flow", "To prevent diffusion"],
+  answer: "To allow rapid exchange of substances"
+},
+{
+  question: "Which factor limits population growth in an ecosystem?",
+  options: ["Availability of resources", "Color of organisms", "Size of habitat only", "Presence of sunlight only"],
+  answer: "Availability of resources"
+},
+{
+  question: "Which of the following best explains bioaccumulation?",
+  options: ["Increase of toxins along food chains", "Reduction of energy in ecosystems", "Movement of nutrients in soil", "Growth of organisms"],
+  answer: "Increase of toxins along food chains"
+},
+{
+  question: "Which process converts kinetic energy into electrical energy in power generation?",
+  options: ["Electromagnetic induction", "Conduction", "Radiation", "Convection"],
+  answer: "Electromagnetic induction"
+},
+{
+  question: "Which of the following explains why metals are good thermal conductors?",
+  options: ["Free movement of electrons", "Strong bonds only", "Large particle size", "High density"],
+  answer: "Free movement of electrons"
+},
+{
+  question: "Which factor determines the boiling point of a liquid?",
+  options: ["Intermolecular forces", "Color of liquid", "Shape of container", "Volume only"],
+  answer: "Intermolecular forces"
+},
+{
+  question: "Which of the following best explains the function of valves in veins?",
+  options: ["Prevent backflow of blood", "Increase blood pressure", "Filter blood", "Pump blood"],
+  answer: "Prevent backflow of blood"
+},
+{
+  question: "Which factor affects the rate of transpiration by changing the diffusion gradient?",
+  options: ["Humidity", "Soil type", "Root length", "Leaf color"],
+  answer: "Humidity"
+},
+{
+  question: "Which of the following best explains why nitrogen is essential for plant growth?",
+  options: ["It is used to synthesize proteins", "It increases water absorption", "It improves soil structure", "It provides energy"],
+  answer: "It is used to synthesize proteins"
+},
+{
+  question: "Which of the following processes increases atmospheric carbon dioxide?",
+  options: ["Combustion", "Photosynthesis", "Condensation", "Nitrification"],
+  answer: "Combustion"
+},
+{
+  question: "Which factor determines the intensity of sound?",
+  options: ["Amplitude of vibration", "Frequency of vibration", "Speed of wave", "Wavelength only"],
+  answer: "Amplitude of vibration"
+},
+{
+  question: "Which of the following explains why pressure increases with depth in a liquid?",
+  options: ["Weight of liquid above increases", "Temperature increases", "Volume decreases", "Density decreases"],
+  answer: "Weight of liquid above increases"
+},
+{
+  question: "Which of the following best explains how antibodies function?",
+  options: ["Bind to specific antigens", "Destroy all cells", "Increase body temperature", "Produce oxygen"],
+  answer: "Bind to specific antigens"
+},
+{
+  question: "Which of the following explains why renewable energy sources are preferred?",
+  options: ["They are sustainable and less polluting", "They produce more heat", "They are always cheaper", "They require no technology"],
+  answer: "They are sustainable and less polluting"
+},
+
+{
+  question: "A plant exposed to high light intensity but low carbon dioxide will show reduced photosynthesis because:",
+  options: ["Carbon dioxide becomes the limiting factor", "Light intensity stops enzyme activity", "Oxygen concentration increases", "Temperature becomes irrelevant"],
+  answer: "Carbon dioxide becomes the limiting factor"
+},
+{
+  question: "Which condition will most likely denature an enzyme permanently?",
+  options: ["Very high temperature", "Low substrate concentration", "Moderate pH", "Presence of oxygen"],
+  answer: "Very high temperature"
+},
+{
+  question: "Which of the following explains why increasing concentration increases reaction rate?",
+  options: ["More frequent collisions between particles", "Decrease in particle energy", "Increase in activation energy", "Reduction in surface area"],
+  answer: "More frequent collisions between particles"
+},
+{
+  question: "Which factor affects both electrical resistance and heat generation in a conductor?",
+  options: ["Temperature", "Color", "Volume", "Position"],
+  answer: "Temperature"
+},
+{
+  question: "Which process explains the movement of water from soil into plant roots?",
+  options: ["Osmosis", "Diffusion", "Active transport", "Transpiration"],
+  answer: "Osmosis"
+},
+{
+  question: "Which of the following explains why veins have wider lumen than arteries?",
+  options: ["Lower pressure of blood flow", "Higher oxygen content", "Thicker walls", "Faster blood flow"],
+  answer: "Lower pressure of blood flow"
+},
+{
+  question: "Which factor most directly affects biodiversity in an ecosystem?",
+  options: ["Habitat stability", "Color of organisms", "Temperature only", "Size of animals"],
+  answer: "Habitat stability"
+},
+{
+  question: "Which of the following best explains energy loss in food chains?",
+  options: ["Energy lost as heat during metabolism", "Energy is destroyed", "Energy increases upward", "Energy is stored completely"],
+  answer: "Energy lost as heat during metabolism"
+},
+{
+  question: "Which process converts electrical energy into heat in appliances?",
+  options: ["Resistance heating", "Induction", "Radiation", "Convection"],
+  answer: "Resistance heating"
+},
+{
+  question: "Which of the following explains why pressure in gases increases with temperature?",
+  options: ["Particles move faster and collide more frequently", "Particles become heavier", "Particles lose energy", "Particles shrink"],
+  answer: "Particles move faster and collide more frequently"
+},
+{
+  question: "Which of the following best explains why acids react with metals?",
+  options: ["Presence of hydrogen ions", "Presence of oxygen", "High temperature", "Low density"],
+  answer: "Presence of hydrogen ions"
+},
+{
+  question: "Which factor determines the rate of diffusion in liquids?",
+  options: ["Temperature and concentration gradient", "Color and shape", "Volume only", "Mass only"],
+  answer: "Temperature and concentration gradient"
+},
+{
+  question: "Which of the following explains the function of stomata in plants?",
+  options: ["Regulate gas exchange and water loss", "Absorb nutrients", "Produce food directly", "Store water"],
+  answer: "Regulate gas exchange and water loss"
+},
+{
+  question: "Which of the following best explains the role of chlorophyll?",
+  options: ["Absorbs light energy for photosynthesis", "Produces carbon dioxide", "Stores oxygen", "Breaks down glucose"],
+  answer: "Absorbs light energy for photosynthesis"
+},
+{
+  question: "Which factor determines the strength of a magnetic field in an electromagnet?",
+  options: ["Current and number of turns", "Color of core", "Length of wire only", "Temperature only"],
+  answer: "Current and number of turns"
+},
+{
+  question: "Which of the following explains why metals are malleable?",
+  options: ["Layers of atoms can slide over each other", "Strong covalent bonds", "Rigid structure", "Fixed positions"],
+  answer: "Layers of atoms can slide over each other"
+},
+{
+  question: "Which of the following processes removes nitrogen from the soil?",
+  options: ["Denitrification", "Nitrification", "Fixation", "Assimilation"],
+  answer: "Denitrification"
+},
+{
+  question: "Which factor determines the boiling point of a substance?",
+  options: ["Strength of intermolecular forces", "Color of substance", "Shape of container", "Volume of liquid"],
+  answer: "Strength of intermolecular forces"
+},
+{
+  question: "Which of the following best explains how vaccines provide immunity?",
+  options: ["Stimulate production of memory cells", "Destroy all pathogens instantly", "Increase body temperature", "Prevent infection completely"],
+  answer: "Stimulate production of memory cells"
+},
+{
+  question: "Which of the following explains why renewable energy is sustainable?",
+  options: ["It can be replenished naturally", "It produces more energy", "It is always cheap", "It requires no maintenance"],
+  answer: "It can be replenished naturally"
+},
+
+{
+  question: "The diagram shows a plant cell. Which part is responsible for photosynthesis?",
+  image: "/images/coresci1.png",
+  options: ["Chloroplast", "Nucleus", "Cell wall", "Vacuole"],
+  answer: "Chloroplast"
+},
+
+{
+  question: "The diagram shows an animal cell. Which structure controls all activities of the cell?",
+  image: "/images/coresci2.png",
+  options: ["Nucleus", "Mitochondrion", "Cytoplasm", "Membrane"],
+  answer: "Nucleus"
+},
+
+{
+  question: "The diagram shows a microscope. Which part is used to focus the image?",
+  image: "/images/coresci3.png",
+  options: ["Adjustment knob", "Stage", "Lens", "Mirror"],
+  answer: "Adjustment knob"
+},
+
+{
+  question: "The diagram shows a measuring cylinder. What is the correct reading?",
+  image: "/images/coresci4.png",
+  options: ["Meniscus reading", "Top reading", "Bottom reading", "Side reading"],
+  answer: "Meniscus reading"
+},
+
+{
+  question: "The diagram shows particles in a solid, liquid and gas. Which state has the most spacing?",
+  image: "/images/coresci5.png",
+  options: ["Gas", "Liquid", "Solid", "All equal"],
+  answer: "Gas"
+},
+
+{
+  question: "The diagram shows an atom. Which part carries a positive charge?",
+  image: "/images/coresci6.png",
+  options: ["Proton", "Electron", "Neutron", "Shell"],
+  answer: "Proton"
+},
+
+{
+  question: "The diagram shows ionic bonding. What happens during this process?",
+  image: "/images/coresci7.png",
+  options: ["Transfer of electrons", "Sharing of electrons", "Loss of atoms", "Gain of neutrons"],
+  answer: "Transfer of electrons"
+},
+
+{
+  question: "The diagram shows covalent bonding. What occurs?",
+  image: "/images/coresci8.png",
+  options: ["Sharing of electrons", "Transfer of electrons", "Loss of protons", "Gain of neutrons"],
+  answer: "Sharing of electrons"
+},
+
+{
+  question: "The diagram shows types of rocks. Which rock is formed by cooling magma?",
+  image: "/images/coresci9.png",
+  options: ["Igneous", "Sedimentary", "Metamorphic", "Organic"],
+  answer: "Igneous"
+},
+
+{
+  question: "The diagram shows weathering of rocks. What type is caused by chemical reactions?",
+  image: "/images/coresci10.png",
+  options: ["Chemical weathering", "Physical weathering", "Biological weathering", "Mechanical weathering"],
+  answer: "Chemical weathering"
+},
+
+{
+  question: "The diagram shows the human skeleton. Which part protects the brain?",
+  image: "/images/coresci11.png",
+  options: ["Skull", "Rib cage", "Spine", "Pelvis"],
+  answer: "Skull"
+},
+
+{
+  question: "The diagram shows the skeleton. Which part supports body weight?",
+  image: "/images/coresci12.png",
+  options: ["Vertebral column", "Skull", "Ribs", "Arms"],
+  answer: "Vertebral column"
+},
+
+{
+  question: "The diagram shows types of joints. Which joint allows movement in all directions?",
+  image: "/images/coresci13.png",
+  options: ["Ball and socket", "Hinge", "Pivot", "Fixed"],
+  answer: "Ball and socket"
+},
+
+{
+  question: "The diagram shows a tooth. Which part contains nerves and blood vessels?",
+  image: "/images/coresci14.png",
+  options: ["Pulp cavity", "Enamel", "Dentine", "Crown"],
+  answer: "Pulp cavity"
+},
+
+{
+  question: "The diagram shows types of teeth. Which is used for tearing food?",
+  image: "/images/coresci15.png",
+  options: ["Canine", "Incisor", "Molar", "Premolar"],
+  answer: "Canine"
+},
+
+{
+  question: "The diagram shows the digestive system. Where does digestion begin?",
+  image: "/images/coresci16.png",
+  options: ["Mouth", "Stomach", "Intestine", "Liver"],
+  answer: "Mouth"
+},
+
+{
+  question: "The diagram shows digestive organs. Which organ produces bile?",
+  image: "/images/coresci17.png",
+  options: ["Liver", "Pancreas", "Stomach", "Kidney"],
+  answer: "Liver"
+},
+
+{
+  question: "The diagram shows the respiratory system. Which organ is responsible for gas exchange?",
+  image: "/images/coresci18.png",
+  options: ["Lungs", "Trachea", "Ribs", "Nose"],
+  answer: "Lungs"
+},
+
+{
+  question: "The diagram shows breathing mechanism. What happens during inhalation?",
+  image: "/images/coresci19.png",
+  options: ["Diaphragm contracts", "Diaphragm relaxes", "Ribs move inward", "Air moves out"],
+  answer: "Diaphragm contracts"
+},
+
+{
+  question: "The diagram shows alveoli. What is their function?",
+  image: "/images/coresci20.png",
+  options: ["Gas exchange", "Digestion", "Circulation", "Excretion"],
+  answer: "Gas exchange"
+},
+
+{
+  question: "The diagram shows a simple electric circuit. What happens when the switch is closed?",
+  image: "/images/coresci21.png",
+  options: ["Current flows", "Circuit breaks", "Bulb goes off", "No change"],
+  answer: "Current flows"
+},
+
+{
+  question: "The diagram shows a circuit with a bulb. What energy change occurs?",
+  image: "/images/coresci22.png",
+  options: ["Electrical to light", "Chemical to heat", "Light to sound", "Heat to electrical"],
+  answer: "Electrical to light"
+},
+
+{
+  question: "The diagram shows circuit symbols. Which symbol represents a resistor?",
+  image: "/images/coresci23.png",
+  options: ["Zigzag line", "Circle", "Straight line", "Triangle"],
+  answer: "Zigzag line"
+},
+
+{
+  question: "The diagram shows series circuit. What happens if one bulb is removed?",
+  image: "/images/coresci24.png",
+  options: ["All go off", "Others stay on", "Brightness increases", "Nothing happens"],
+  answer: "All go off"
+},
+
+{
+  question: "The diagram shows parallel circuit. What happens if one bulb is removed?",
+  image: "/images/coresci25.png",
+  options: ["Others stay on", "All go off", "Circuit breaks", "Voltage drops to zero"],
+  answer: "Others stay on"
+},
+
+{
+  question: "The diagram shows a battery. What does it supply?",
+  image: "/images/coresci26.png",
+  options: ["Energy", "Light", "Heat", "Sound"],
+  answer: "Energy"
+},
+
+{
+  question: "The diagram shows an ammeter connected in a circuit. How is it connected?",
+  image: "/images/coresci27.png",
+  options: ["In series", "In parallel", "Across component", "Separately"],
+  answer: "In series"
+},
+
+{
+  question: "The diagram shows a voltmeter. How is it connected?",
+  image: "/images/coresci28.png",
+  options: ["In parallel", "In series", "Outside circuit", "Across battery only"],
+  answer: "In parallel"
+},
+
+{
+  question: "The diagram shows household wiring. What is the function of a fuse?",
+  image: "/images/coresci29.png",
+  options: ["Protect circuit", "Increase voltage", "Store energy", "Generate current"],
+  answer: "Protect circuit"
+},
+
+{
+  question: "The diagram shows solar panel. What type of energy is converted?",
+  image: "/images/coresci30.png",
+  options: ["Solar to electrical", "Electrical to heat", "Heat to light", "Chemical to electrical"],
+  answer: "Solar to electrical"
+}
+
 ];
 
 export default coreScienceQuestions;
-
-
-
-

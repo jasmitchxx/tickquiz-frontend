@@ -1,2428 +1,2175 @@
 const physicsQuestions = [
-  {
-    question: "Which of the following is not a fundamental physical quantity?",
-    options: ["Length", "Mass", "Time", "Speed"],
-    answer: "Speed"
-  },
-  {
-    question: "The SI unit of length is?",
-    options: ["Meter", "Kilometer", "Inch", "Mile"],
-    answer: "Meter"
-  },
-  {
-    question: "Physical quantities are classified into?",
-    options: ["Basic and derived", "Mass and weight", "Length and time", "Large and small"],
-    answer: "Basic and derived"
-  },
-  {
-    question: "Which instrument is used to measure small diameters?",
-    options: ["Micrometer screw gauge", "Ruler", "Stopwatch", "Thermometer"],
-    answer: "Micrometer screw gauge"
-  },
-  {
-    question: "The SI unit of time is?",
-    options: ["Second", "Minute", "Hour", "Day"],
-    answer: "Second"
-  },
-  {
-    question: "Which quantity is derived from length and time?",
-    options: ["Speed", "Mass", "Force", "Temperature"],
-    answer: "Speed"
-  },
-  {
-    question: "What instrument is used to measure time accurately in the laboratory?",
-    options: ["Stopwatch", "Micrometer", "Thermometer", "Barometer"],
-    answer: "Stopwatch"
-  },
-  {
-    question: "Mass is the measure of?",
-    options: ["Quantity of matter", "Weight", "Density", "Volume"],
-    answer: "Quantity of matter"
-  },
-  {
-    question: "Which of the following is not a vector quantity?",
-    options: ["Velocity", "Acceleration", "Speed", "Force"],
-    answer: "Speed"
-  },
-  {
-    question: "Which of the following pairs are both scalar quantities?",
-    options: ["Speed and distance", "Displacement and force", "Velocity and acceleration", "Force and momentum"],
-    answer: "Speed and distance"
-  },
-  {
-    question: "What is the correct SI unit of mass?",
-    options: ["Kilogram", "Gram", "Tonne", "Pound"],
-    answer: "Kilogram"
-  },
-  {
-    question: "Which quantity has both magnitude and direction?",
-    options: ["Vector", "Scalar", "Constant", "Derived"],
-    answer: "Vector"
-  },
-  {
-    question: "The instrument used to measure temperature is?",
-    options: ["Thermometer", "Hygrometer", "Barometer", "Manometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "Which of these instruments is best for measuring the diameter of a thin wire?",
-    options: ["Vernier calipers", "Micrometer screw gauge", "Meter rule", "Tape measure"],
-    answer: "Micrometer screw gauge"
-  },
-  {
-    question: "1 Newton is the force that gives a mass of 1 kg an acceleration of?",
-    options: ["1 m/s�", "10 m/s�", "9.8 m/s�", "5 m/s�"],
-    answer: "1 m/s�"
-  },
-  {
-    question: "Which of the following is used to measure the volume of irregular solids?",
-    options: ["Eureka can", "Measuring tape", "Vernier caliper", "Thermometer"],
-    answer: "Eureka can"
-  },
-  {
-    question: "The density of a substance is defined as its mass per unit?",
-    options: ["Volume", "Area", "Length", "Time"],
-    answer: "Volume"
-  },
-  {
-    question: "A physical quantity that can be described by magnitude only is called?",
-    options: ["Scalar", "Vector", "Force", "Displacement"],
-    answer: "Scalar"
-  },
-  {
-    question: "Which one of these is not a derived quantity?",
-    options: ["Speed", "Acceleration", "Volume", "Mass"],
-    answer: "Mass"
-  },
-  {
-    question: "Which of the following is used to measure force?",
-    options: ["Spring balance", "Stopwatch", "Thermometer", "Voltmeter"],
-    answer: "Spring balance"
-  },
-  {
-    question: "Which property of matter makes it occupy space?",
-    options: ["Volume", "Weight", "Mass", "Density"],
-    answer: "Volume"
-  },
-  {
-    question: "Which of these is not a characteristic of matter?",
-    options: ["It has no weight", "It occupies space", "It has mass", "It can exist in states"],
-    answer: "It has no weight"
-  },
-  {
-    question: "Matter exists in how many states?",
-    options: ["Three", "Four", "Two", "Five"],
-    answer: "Three"
-  },
-  {
-    question: "Which state of matter has no definite shape but definite volume?",
-    options: ["Liquid", "Gas", "Solid", "Plasma"],
-    answer: "Liquid"
-  },
-  {
-    question: "Which state of matter can be compressed easily?",
-    options: ["Gas", "Solid", "Liquid", "Plasma"],
-    answer: "Gas"
-  },
-  {
-    question: "What is the SI unit of density?",
-    options: ["kg/m�", "g/cm�", "kg/cm�", "g/m�"],
-    answer: "kg/m�"
-  },
-  {
-    question: "Which one of the following is an extensive property?",
-    options: ["Mass", "Density", "Temperature", "Pressure"],
-    answer: "Mass"
-  },
-  {
-    question: "Which of these is an intensive property of matter?",
-    options: ["Density", "Volume", "Mass", "Weight"],
-    answer: "Density"
-  },
-  {
-    question: "A material that can be hammered into shape is said to be?",
-    options: ["Malleable", "Ductile", "Elastic", "Brittle"],
-    answer: "Malleable"
-  },
-  {
-    question: "Which of the following describes ductility?",
-    options: ["Can be drawn into wire", "Can be stretched", "Can be compressed", "Can resist bending"],
-    answer: "Can be drawn into wire"
-  },
-  {
-    question: "The force of attraction between molecules of different substances is?",
-    options: ["Adhesion", "Cohesion", "Compression", "Tension"],
-    answer: "Adhesion"
-  },
-  {
-    question: "Which of the following is a property of solids?",
-    options: ["Fixed volume and shape", "No fixed shape", "No fixed volume", "Compressibility"],
-    answer: "Fixed volume and shape"
-  },
-  {
-    question: "The upward force exerted by a fluid on an object placed in it is called?",
-    options: ["Upthrust", "Gravity", "Centripetal", "Friction"],
-    answer: "Upthrust"
-  },
-  {
-    question: "Which physical quantity is measured using a balance?",
-    options: ["Mass", "Volume", "Length", "Force"],
-    answer: "Mass"
-  },
-  {
-    question: "Pressure in solids is defined as force per unit?",
-    options: ["Area", "Mass", "Length", "Volume"],
-    answer: "Area"
-  },
-  {
-    question: "Which of these materials has the highest density?",
-    options: ["Lead", "Iron", "Wood", "Aluminium"],
-    answer: "Lead"
-  },
-  {
-    question: "A liquid with higher density will exert?",
-    options: ["More pressure", "Less pressure", "Equal pressure", "No pressure"],
-    answer: "More pressure"
-  },
-  {
-    question: "Which unit is used for measuring pressure?",
-    options: ["Pascal", "Joule", "Watt", "Newton"],
-    answer: "Pascal"
-  },
-  {
-    question: "What is the term for the resistance of a fluid to flow?",
-    options: ["Viscosity", "Turbulence", "Elasticity", "Buoyancy"],
-    answer: "Viscosity"
-  },
-  {
-    question: "Which of these physical quantities is measured using a barometer?",
-    options: ["Atmospheric pressure", "Humidity", "Temperature", "Density"],
-    answer: "Atmospheric pressure"
-  },
-  {
-    question: "Which state of matter expands to fill any container?",
-    options: ["Gas", "Liquid", "Solid", "Plasma"],
-    answer: "Gas"
-  },
-  {
-    question: "What property of matter describes its resistance to change in motion?",
-    options: ["Inertia", "Mass", "Weight", "Density"],
-    answer: "Inertia"
-  },
-  {
-    question: "The ability of a substance to return to its original shape is called?",
-    options: ["Elasticity", "Plasticity", "Malleability", "Tensile strength"],
-    answer: "Elasticity"
-  },
-  {
-    question: "Which property determines whether an object sinks or floats?",
-    options: ["Density", "Mass", "Weight", "Pressure"],
-    answer: "Density"
-  },
-  {
-    question: "Which physical property of liquids explains capillary action?",
-    options: ["Adhesion", "Viscosity", "Cohesion", "Elasticity"],
-    answer: "Adhesion"
-  },
-  {
-    question: "Which one of these is NOT a standard measuring instrument?",
-    options: ["Screw gauge", "Odometer", "Thermometer", "Vernier caliper"],
-    answer: "Odometer"
-  },
-  {
-    question: "What is the instrument used to measure atmospheric pressure?",
-    options: ["Barometer", "Thermometer", "Anemometer", "Manometer"],
-    answer: "Barometer"
-  },
-  {
-    question: "The instrument used for measuring humidity is?",
-    options: ["Hygrometer", "Barometer", "Thermometer", "Voltmeter"],
-    answer: "Hygrometer"
-  },
-  {
-    question: "Which of the following is used to measure the force of gravity?",
-    options: ["Spring balance", "Thermometer", "Barometer", "Stopwatch"],
-    answer: "Spring balance"
-  },
-  {
-    question: "Which of the following is a scalar quantity?",
-    options: ["Speed", "Velocity", "Displacement", "Force"],
-    answer: "Speed"
-  },
-  {
-    question: "Acceleration is defined as the rate of change of?",
-    options: ["Velocity", "Speed", "Displacement", "Distance"],
-    answer: "Velocity"
-  },
-  {
-    question: "Which of the following represents uniform motion?",
-    options: ["Constant velocity", "Constant acceleration", "Increasing speed", "Decreasing speed"],
-    answer: "Constant velocity"
-  },
-  {
-    question: "A body is said to be in motion when it changes its?",
-    options: ["Position", "Shape", "Mass", "Volume"],
-    answer: "Position"
-  },
-  {
-    question: "What is the SI unit of acceleration?",
-    options: ["m/s�", "m/s", "m�/s", "s/m�"],
-    answer: "m/s�"
-  },
-  {
-    question: "The area under a velocity-time graph gives?",
-    options: ["Displacement", "Acceleration", "Speed", "Force"],
-    answer: "Displacement"
-  },
-  {
-    question: "Which of the following quantities is a vector?",
-    options: ["Displacement", "Distance", "Speed", "Work"],
-    answer: "Displacement"
-  },
-  {
-    question: "The slope of a distance-time graph gives?",
-    options: ["Speed", "Acceleration", "Force", "Displacement"],
-    answer: "Speed"
-  },
-  {
-    question: "What is the acceleration due to gravity on earth?",
-    options: ["9.8 m/s�", "10 m/s", "9.8 m/s", "10 m/s�"],
-    answer: "9.8 m/s�"
-  },
-  {
-    question: "Which of the following equations represents Newton�'s Second Law?",
-    options: ["F = ma", "F = mv", "F = mg", "F = m/a"],
-    answer: "F = ma"
-  },
-  {
-    question: "A resultant force causes a body to?",
-    options: ["Accelerate", "Stay at rest", "Decrease in mass", "Change color"],
-    answer: "Accelerate"
-  },
-  {
-    question: "The inertia of a body is determined by its?",
-    options: ["Mass", "Velocity", "Volume", "Shape"],
-    answer: "Mass"
-  },
-  {
-    question: "Which law states that every action has an equal and opposite reaction?",
-    options: ["Newton�'s third law", "Newton�'s first law", "Newton�'s second law", "Hooke�'s law"],
-    answer: "Newton�'s third law"
-  },
-  {
-    question: "Friction is a force that?",
-    options: ["Opposes motion", "Promotes motion", "Increases speed", "Reduces weight"],
-    answer: "Opposes motion"
-  },
-  {
-    question: "What is the unit of force?",
-    options: ["Newton", "Watt", "Joule", "Pascal"],
-    answer: "Newton"
-  },
-  {
-    question: "Gravitational force is an example of a?",
-    options: ["Field force", "Contact force", "Frictional force", "Electromagnetic force"],
-    answer: "Field force"
-  },
-  {
-    question: "Work is said to be done when?",
-    options: ["A force moves an object", "An object is at rest", "No motion occurs", "Friction opposes force"],
-    answer: "A force moves an object"
-  },
-  {
-    question: "What is the unit of work?",
-    options: ["Joule", "Watt", "Newton", "Meter"],
-    answer: "Joule"
-  },
-  {
-    question: "Power is defined as?",
-    options: ["Work done per time", "Force per area", "Energy per force", "Displacement per time"],
-    answer: "Work done per time"
-  },
-  {
-    question: "The unit of power is?",
-    options: ["Watt", "Joule", "Newton", "Pascal"],
-    answer: "Watt"
-  },
-  {
-    question: "What type of energy does a moving object possess?",
-    options: ["Kinetic energy", "Potential energy", "Heat energy", "Chemical energy"],
-    answer: "Kinetic energy"
-  },
-  {
-    question: "Which energy is stored in a stretched spring?",
-    options: ["Potential energy", "Kinetic energy", "Chemical energy", "Solar energy"],
-    answer: "Potential energy"
-  },
-  {
-    question: "Mechanical energy is the sum of?",
-    options: ["Kinetic and potential energy", "Heat and sound energy", "Light and chemical energy", "Solar and nuclear energy"],
-    answer: "Kinetic and potential energy"
-  },
-  {
-    question: "Which machine consists of a wheel and a rope?",
-    options: ["Pulley", "Lever", "Inclined plane", "Wedge"],
-    answer: "Pulley"
-  },
-  {
-    question: "The efficiency of a machine is always less than 100% due to?",
-    options: ["Friction", "Weight", "Velocity", "Distance"],
-    answer: "Friction"
-  },
-  {
-    question: "The pivot point of a lever is called the?",
-    options: ["Fulcrum", "Load", "Effort", "Center"],
-    answer: "Fulcrum"
-  },
-  {
-    question: "Which of the following is a second class lever?",
-    options: ["Wheelbarrow", "Scissors", "Hammer", "Tongs"],
-    answer: "Wheelbarrow"
-  },
-  {
-    question: "What is the mechanical advantage of a machine?",
-    options: ["Load/Effort", "Effort/Load", "Velocity x Time", "Force x Distance"],
-    answer: "Load/Effort"
-  },
-  {
-    question: "Frictional force always acts?",
-    options: ["Opposite to motion", "In direction of motion", "Upwards", "Downwards"],
-    answer: "Opposite to motion"
-  },
-  {
-    question: "A machine with high efficiency has?",
-    options: ["Low energy loss", "More size", "More speed", "Less mass"],
-    answer: "Low energy loss"
-  },
-  {
-    question: "Which type of friction occurs when two surfaces slide over each other?",
-    options: ["Sliding friction", "Static friction", "Rolling friction", "Viscous friction"],
-    answer: "Sliding friction"
-  },
-  {
-    question: "Which simple machine is used in an axe?",
-    options: ["Wedge", "Lever", "Pulley", "Screw"],
-    answer: "Wedge"
-  },
-  {
-    question: "One horsepower is equivalent to?",
-    options: ["746 watts", "1000 watts", "500 watts", "250 watts"],
-    answer: "746 watts"
-  },
-  {
-    question: "When no net force acts on a body, it remains?",
-    options: ["At rest or in uniform motion", "Accelerated", "Vibrating", "Changing shape"],
-    answer: "At rest or in uniform motion"
-  },
-  {
-    question: "The force of gravity acting on an object is its?",
-    options: ["Weight", "Mass", "Inertia", "Friction"],
-    answer: "Weight"
-  },
-  {
-    question: "If a car moves at constant speed, what is its acceleration?",
-    options: ["Zero", "Increasing", "Negative", "Constant"],
-    answer: "Zero"
-  },
-  {
-    question: "Which machine uses two inclined planes joined together?",
-    options: ["Wedge", "Pulley", "Lever", "Screw"],
-    answer: "Wedge"
-  },
-  {
-    question: "The slope of a velocity-time graph represents?",
-    options: ["Acceleration", "Speed", "Displacement", "Work"],
-    answer: "Acceleration"
-  },
-  {
-    question: "Which of the following affects friction between surfaces?",
-    options: ["Roughness", "Temperature", "Color", "Shape"],
-    answer: "Roughness"
-  },
-  {
-    question: "Energy can neither be created nor destroyed. This is the law of?",
-    options: ["Conservation of energy", "Motion", "Friction", "Gravity"],
-    answer: "Conservation of energy"
-  },
-  {
-    question: "Which type of motion does a ceiling fan perform?",
-    options: ["Rotational", "Linear", "Vibrational", "Oscillatory"],
-    answer: "Rotational"
-  },
-  {
-    question: "In a first-class lever, the fulcrum is located?",
-    options: ["Between effort and load", "At one end", "Below the load", "On the effort side"],
-    answer: "Between effort and load"
-  },
-  {
-    question: "Which machine is used to raise a flag?",
-    options: ["Pulley", "Lever", "Wedge", "Screw"],
-    answer: "Pulley"
-  },
-  {
-    question: "When an object falls freely, its acceleration is due to?",
-    options: ["Gravity", "Friction", "Velocity", "Inertia"],
-    answer: "Gravity"
-  },
-  {
-    question: "A ball thrown vertically upwards will have zero velocity at?",
-    options: ["Maximum height", "Start point", "Ground level", "Halfway point"],
-    answer: "Maximum height"
-  },
-  {
-    question: "The energy possessed by a body due to its position is?",
-    options: ["Potential energy", "Kinetic energy", "Solar energy", "Chemical energy"],
-    answer: "Potential energy"
-  },
-  {
-    question: "What type of motion does a pendulum exhibit?",
-    options: ["Oscillatory motion", "Linear motion", "Rotational motion", "Vibratory motion"],
-    answer: "Oscillatory motion"
-  },
-  {
-    question: "Which instrument is used to measure temperature?",
-    options: ["Thermometer", "Barometer", "Hygrometer", "Manometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "The SI unit of temperature is?",
-    options: ["Kelvin", "Celsius", "Fahrenheit", "Degree"],
-    answer: "Kelvin"
-  },
-  {
-    question: "Which of the following is not a method of heat transfer?",
-    options: ["Reflection", "Conduction", "Convection", "Radiation"],
-    answer: "Reflection"
-  },
-  {
-    question: "Heat travels through solids mainly by?",
-    options: ["Conduction", "Convection", "Radiation", "Evaporation"],
-    answer: "Conduction"
-  },
-  {
-    question: "Liquids mainly transfer heat by?",
-    options: ["Convection", "Conduction", "Radiation", "Absorption"],
-    answer: "Convection"
-  },
-  {
-    question: "Radiation can take place in?",
-    options: ["Vacuum", "Solids", "Liquids", "Gases"],
-    answer: "Vacuum"
-  },
-  {
-    question: "Which of the following surfaces is the best emitter of radiation?",
-    options: ["Black and rough", "White and smooth", "Silver and shiny", "Transparent"],
-    answer: "Black and rough"
-  },
-  {
-    question: "What is the boiling point of water in Celsius?",
-    options: ["100�C", "0�C", "212�C", "273�C"],
-    answer: "100�C"
-  },
-  {
-    question: "The melting point of ice in Kelvin is?",
-    options: ["273 K", "0 K", "100 K", "373 K"],
-    answer: "273 K"
-  },
-  {
-    question: "Which thermometer is used in laboratories?",
-    options: ["Mercury-in-glass", "Alcohol", "Maximum-minimum", "Infrared"],
-    answer: "Mercury-in-glass"
-  },
-  {
-    question: "Which of the following expands least on heating?",
-    options: ["Solids", "Liquids", "Gases", "All expand equally"],
-    answer: "Solids"
-  },
-  {
-    question: "The increase in size of a substance due to heat is called?",
-    options: ["Expansion", "Compression", "Evaporation", "Fusion"],
-    answer: "Expansion"
-  },
-  {
-    question: "Which of the following does not require a medium for heat transfer?",
-    options: ["Radiation", "Conduction", "Convection", "Evaporation"],
-    answer: "Radiation"
-  },
-  {
-    question: "When a solid is heated, it first?",
-    options: ["Expands", "Contracts", "Boils", "Condenses"],
-    answer: "Expands"
-  },
-  {
-    question: "The process of a liquid changing into a gas is called?",
-    options: ["Evaporation", "Condensation", "Sublimation", "Melting"],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which state of matter has the highest energy?",
-    options: ["Gas", "Liquid", "Solid", "Plasma"],
-    answer: "Gas"
-  },
-  {
-    question: "Which of these best describes conduction?",
-    options: ["Transfer of heat through solids", "Transfer of heat by movement of fluid", "Transfer through radiation", "Loss of heat by evaporation"],
-    answer: "Transfer of heat through solids"
-  },
-  {
-    question: "A black surface is a good absorber of?",
-    options: ["Heat", "Light", "Cold", "Air"],
-    answer: "Heat"
-  },
-  {
-    question: "What happens to the density of air when heated?",
-    options: ["Decreases", "Increases", "Remains constant", "Becomes zero"],
-    answer: "Decreases"
-  },
-  {
-    question: "Thermal equilibrium occurs when two objects?",
-    options: ["Are at same temperature", "Are touching", "Are radiating", "Have same mass"],
-    answer: "Are at same temperature"
-  },
-  {
-    question: "What is the freezing point of water in Fahrenheit?",
-    options: ["32�F", "0�F", "100�F", "212�F"],
-    answer: "32�F"
-  },
-  {
-    question: "The amount of heat required to raise the temperature of 1 kg of a substance by 1�C is called?",
-    options: ["Specific heat capacity", "Latent heat", "Heat energy", "Thermal capacity"],
-    answer: "Specific heat capacity"
-  },
-  {
-    question: "What is the unit of specific heat capacity?",
-    options: ["J/kg�C", "J/kg", "W/kg", "C/kg"],
-    answer: "J/kg�C"
-  },
-  {
-    question: "During boiling, the temperature of a substance?",
-    options: ["Remains constant", "Increases", "Decreases", "Fluctuates"],
-    answer: "Remains constant"
-  },
-  {
-    question: "When a substance changes from gas to liquid, it is called?",
-    options: ["Condensation", "Evaporation", "Melting", "Sublimation"],
-    answer: "Condensation"
-  },
-  {
-    question: "The latent heat of fusion is the heat required to?",
-    options: ["Change solid to liquid", "Change liquid to gas", "Change gas to solid", "Heat without changing state"],
-    answer: "Change solid to liquid"
-  },
-  {
-    question: "Which of the following is not affected by heat?",
-    options: ["Mass", "Volume", "Temperature", "Density"],
-    answer: "Mass"
-  },
-  {
-    question: "Which thermometer contains mercury?",
-    options: ["Clinical thermometer", "Digital thermometer", "Alcohol thermometer", "Infrared thermometer"],
-    answer: "Clinical thermometer"
-  },
-  {
-    question: "Why is mercury used in thermometers?",
-    options: ["It expands uniformly", "It sticks to glass", "It evaporates easily", "It is colored"],
-    answer: "It expands uniformly"
-  },
-  {
-    question: "Why is alcohol used in cold regions?",
-    options: ["It has low freezing point", "It has color", "It is cheap", "It is poisonous"],
-    answer: "It has low freezing point"
-  },
-  {
-    question: "Which part of a thermometer prevents mercury from flowing back?",
-    options: ["Constriction", "Capillary tube", "Bulb", "Stem"],
-    answer: "Constriction"
-  },
-  {
-    question: "Which of the following expands most on heating?",
-    options: ["Gases", "Liquids", "Solids", "Metals"],
-    answer: "Gases"
-  },
-  {
-    question: "A bimetallic strip is used in?",
-    options: ["Thermostats", "Thermometers", "Engines", "Geysers"],
-    answer: "Thermostats"
-  },
-  {
-    question: "The thermometer used in weather stations is?",
-    options: ["Maximum-minimum thermometer", "Mercury thermometer", "Clinical thermometer", "Alcohol thermometer"],
-    answer: "Maximum-minimum thermometer"
-  },
-  {
-    question: "When temperature increases, the density of most substances?",
-    options: ["Decreases", "Increases", "Remains same", "Becomes zero"],
-    answer: "Decreases"
-  },
-  {
-    question: "Which method of heat transfer is responsible for the heating of the sun?",
-    options: ["Radiation", "Conduction", "Convection", "Absorption"],
-    answer: "Radiation"
-  },
-  {
-    question: "What happens to particles when heat is applied?",
-    options: ["They move faster", "They stop moving", "They shrink", "They disappear"],
-    answer: "They move faster"
-  },
-  {
-    question: "Which type of heat transfer does not need particles?",
-    options: ["Radiation", "Conduction", "Convection", "Insulation"],
-    answer: "Radiation"
-  },
-  {
-    question: "Which one is used to measure high temperature in furnaces?",
-    options: ["Thermocouple", "Clinical thermometer", "Alcohol thermometer", "Digital thermometer"],
-    answer: "Thermocouple"
-  },
-  {
-    question: "When solids are heated, particles vibrate more. This causes?",
-    options: ["Expansion", "Conduction", "Radiation", "Convection"],
-    answer: "Expansion"
-  },
-  {
-    question: "Which part of a thermometer contains mercury or alcohol?",
-    options: ["Bulb", "Stem", "Scale", "Glass tube"],
-    answer: "Bulb"
-  },
-  {
-    question: "Which of the following materials is a poor conductor of heat?",
-    options: ["Wood", "Copper", "Aluminium", "Iron"],
-    answer: "Wood"
-  },
-  {
-    question: "What happens to the molecules of a gas when cooled?",
-    options: ["Move slower", "Move faster", "Expand", "Vibrate"],
-    answer: "Move slower"
-  },
-  {
-    question: "What is the boiling point of water in Kelvin?",
-    options: ["373 K", "273 K", "100 K", "273�C"],
-    answer: "373 K"
-  },
-  {
-    question: "Which thermometer measures the temperature of the human body?",
-    options: ["Clinical thermometer", "Laboratory thermometer", "Maximum-minimum", "Digital thermometer"],
-    answer: "Clinical thermometer"
-  },
-  {
-    question: "When a gas is compressed, its temperature?",
-    options: ["Increases", "Decreases", "Remains the same", "Becomes zero"],
-    answer: "Increases"
-  },
-  {
-    question: "What is the freezing point of water in Celsius?",
-    options: ["0�C", "32�C", "100�C", "273�C"],
-    answer: "0�C"
-  },
-  {
-    question: "The change of state from solid to gas without becoming liquid is called?",
-    options: ["Sublimation", "Condensation", "Melting", "Boiling"],
-    answer: "Sublimation"
-  },
-  {
-    question: "During evaporation, the most energetic molecules?",
-    options: ["Escape first", "Stay behind", "Vibrate", "Freeze"],
-    answer: "Escape first"
-  },
-  {
-    question: "A wave is a disturbance that transfers?",
-    options: ["Energy", "Matter", "Particles", "Mass"],
-    answer: "Energy"
-  },
-  {
-    question: "Which of the following is a mechanical wave?",
-    options: ["Sound", "Light", "Radio wave", "X-ray"],
-    answer: "Sound"
-  },
-  {
-    question: "Which wave does not require a medium to travel?",
-    options: ["Light", "Sound", "Water wave", "Seismic wave"],
-    answer: "Light"
-  },
-  {
-    question: "The number of waves passing a point per second is called?",
-    options: ["Frequency", "Amplitude", "Wavelength", "Period"],
-    answer: "Frequency"
-  },
-  {
-    question: "The unit of frequency is?",
-    options: ["Hertz", "Meter", "Second", "Newton"],
-    answer: "Hertz"
-  },
-  {
-    question: "The maximum displacement from the rest position is the?",
-    options: ["Amplitude", "Frequency", "Wavelength", "Speed"],
-    answer: "Amplitude"
-  },
-  {
-    question: "The time for one complete wave is called?",
-    options: ["Period", "Frequency", "Cycle", "Amplitude"],
-    answer: "Period"
-  },
-  {
-    question: "What type of wave is sound?",
-    options: ["Longitudinal", "Transverse", "Electromagnetic", "Polarized"],
-    answer: "Longitudinal"
-  },
-  {
-    question: "In a transverse wave, particles vibrate?",
-    options: ["Perpendicular to wave direction", "Parallel to wave direction", "In circles", "At random"],
-    answer: "Perpendicular to wave direction"
-  },
-  {
-    question: "The distance between two crests is the?",
-    options: ["Wavelength", "Amplitude", "Frequency", "Speed"],
-    answer: "Wavelength"
-  },
-  {
-    question: "What is the speed of light in air?",
-    options: ["3.0 x 10^8 m/s", "340 m/s", "1500 m/s", "1.0 x 10^6 m/s"],
-    answer: "3.0 x 10^8 m/s"
-  },
-  {
-    question: "Which wave travels fastest in solids?",
-    options: ["Sound", "Light", "Radio", "Microwave"],
-    answer: "Sound"
-  },
-  {
-    question: "Which of these travels in vacuum?",
-    options: ["Light", "Sound", "Seismic", "Water"],
-    answer: "Light"
-  },
-  {
-    question: "The bending of light when it passes from one medium to another is?",
-    options: ["Refraction", "Reflection", "Diffraction", "Interference"],
-    answer: "Refraction"
-  },
-  {
-    question: "The bouncing back of light from a surface is called?",
-    options: ["Reflection", "Refraction", "Dispersion", "Diffraction"],
-    answer: "Reflection"
-  },
-  {
-    question: "A plane mirror forms an image that is?",
-    options: ["Virtual and upright", "Real and inverted", "Diminished", "Enlarged"],
-    answer: "Virtual and upright"
-  },
-  {
-    question: "The angle of incidence equals?",
-    options: ["Angle of reflection", "Angle of refraction", "Critical angle", "Zero"],
-    answer: "Angle of reflection"
-  },
-  {
-    question: "Which lens converges light rays?",
-    options: ["Convex", "Concave", "Plane", "Cylindrical"],
-    answer: "Convex"
-  },
-  {
-    question: "Which lens diverges light rays?",
-    options: ["Concave", "Convex", "Cylindrical", "Plano"],
-    answer: "Concave"
-  },
-  {
-    question: "Sound is produced by?",
-    options: ["Vibrations", "Radiation", "Refraction", "Reflection"],
-    answer: "Vibrations"
-  },
-  {
-    question: "The pitch of a sound depends on?",
-    options: ["Frequency", "Amplitude", "Wavelength", "Speed"],
-    answer: "Frequency"
-  },
-  {
-    question: "The loudness of sound depends on?",
-    options: ["Amplitude", "Frequency", "Speed", "Pitch"],
-    answer: "Amplitude"
-  },
-  {
-    question: "Echo is produced due to?",
-    options: ["Reflection of sound", "Refraction", "Diffraction", "Resonance"],
-    answer: "Reflection of sound"
-  },
-  {
-    question: "Which device converts sound to electrical signals?",
-    options: ["Microphone", "Speaker", "Amplifier", "Transistor"],
-    answer: "Microphone"
-  },
-  {
-    question: "Which device converts electrical signals to sound?",
-    options: ["Speaker", "Microphone", "Oscillator", "Tuner"],
-    answer: "Speaker"
-  },
-  {
-    question: "In which medium does sound travel fastest?",
-    options: ["Solids", "Liquids", "Gases", "Vacuum"],
-    answer: "Solids"
-  },
-  {
-    question: "What is the unit of wavelength?",
-    options: ["Metre", "Hertz", "Second", "Pascal"],
-    answer: "Metre"
-  },
-  {
-    question: "White light is made up of?",
-    options: ["7 colours", "3 colours", "2 colours", "5 colours"],
-    answer: "7 colours"
-  },
-  {
-    question: "The splitting of white light into its components is?",
-    options: ["Dispersion", "Diffraction", "Reflection", "Refraction"],
-    answer: "Dispersion"
-  },
-  {
-    question: "Which colour of light is refracted the most?",
-    options: ["Violet", "Red", "Green", "Blue"],
-    answer: "Violet"
-  },
-  {
-    question: "Which electromagnetic wave has the longest wavelength?",
-    options: ["Radio waves", "Gamma rays", "X-rays", "UV rays"],
-    answer: "Radio waves"
-  },
-  {
-    question: "Which electromagnetic wave has the highest frequency?",
-    options: ["Gamma rays", "Microwaves", "Infrared", "Radio"],
-    answer: "Gamma rays"
-  },
-  {
-    question: "Which device is used to see distant objects?",
-    options: ["Telescope", "Microscope", "Periscope", "Spectrometer"],
-    answer: "Telescope"
-  },
-  {
-    question: "The image formed by a convex lens is real and inverted when the object is?",
-    options: ["Beyond the principal focus", "At the focus", "Between lens and focus", "At optical center"],
-    answer: "Beyond the principal focus"
-  },
-  {
-    question: "Which mirror is used in car rear-view mirrors?",
-    options: ["Convex mirror", "Concave mirror", "Plane mirror", "None"],
-    answer: "Convex mirror"
-  },
-  {
-    question: "A concave mirror can form a real image only when object is?",
-    options: ["Beyond the focus", "At focus", "Inside focus", "At pole"],
-    answer: "Beyond the focus"
-  },
-  {
-    question: "Refraction occurs because light?",
-    options: ["Changes speed", "Changes direction", "Is absorbed", "Bounces back"],
-    answer: "Changes speed"
-  },
-  {
-    question: "The part of the eye that focuses light is the?",
-    options: ["Lens", "Cornea", "Retina", "Iris"],
-    answer: "Lens"
-  },
-  {
-    question: "Which lens corrects long-sightedness?",
-    options: ["Convex lens", "Concave lens", "Plane lens", "Cylindrical lens"],
-    answer: "Convex lens"
-  },
-  {
-    question: "Which lens corrects short-sightedness?",
-    options: ["Concave lens", "Convex lens", "Spherical lens", "Plane lens"],
-    answer: "Concave lens"
-  },
-  {
-    question: "Sound cannot travel through?",
-    options: ["Vacuum", "Water", "Metal", "Air"],
-    answer: "Vacuum"
-  },
-  {
-    question: "Which wave property causes echoes?",
-    options: ["Reflection", "Refraction", "Interference", "Polarisation"],
-    answer: "Reflection"
-  },
-  {
-    question: "An image formed by a pinhole camera is?",
-    options: ["Real and inverted", "Virtual and upright", "Diminished and upright", "Magnified and upright"],
-    answer: "Real and inverted"
-  },
-  {
-    question: "What type of wave is light?",
-    options: ["Transverse", "Longitudinal", "Mechanical", "Compression"],
-    answer: "Transverse"
-  },
-  {
-    question: "The electromagnetic waves with the shortest wavelength are?",
-    options: ["Gamma rays", "Radio waves", "X-rays", "Microwaves"],
-    answer: "Gamma rays"
-  },
-  {
-    question: "Which colour of light has the shortest wavelength?",
-    options: ["Violet", "Red", "Green", "Yellow"],
-    answer: "Violet"
-  },
-  {
-    question: "Which part of the electromagnetic spectrum is used in TV remote controls?",
-    options: ["Infrared", "X-rays", "Microwaves", "Gamma rays"],
-    answer: "Infrared"
-  },
-  {
-    question: "Which wave is used in mobile phones?",
-    options: ["Microwaves", "X-rays", "Gamma rays", "Ultrasound"],
-    answer: "Microwaves"
-  },
-  {
-    question: "The number of complete waves per second is?",
-    options: ["Frequency", "Period", "Speed", "Wavelength"],
-    answer: "Frequency"
-  },
-  {
-    question: "Electric current is the flow of?",
-    options: ["Electrons", "Protons", "Neutrons", "Atoms"],
-    answer: "Electrons"
-  },
-  {
-    question: "The unit of electric current is?",
-    options: ["Ampere", "Volt", "Ohm", "Coulomb"],
-    answer: "Ampere"
-  },
-  {
-    question: "The unit of resistance is?",
-    options: ["Ohm", "Volt", "Ampere", "Watt"],
-    answer: "Ohm"
-  },
-  {
-    question: "The instrument used to measure current is?",
-    options: ["Ammeter", "Voltmeter", "Ohmmeter", "Galvanometer"],
-    answer: "Ammeter"
-  },
-  {
-    question: "The instrument used to measure potential difference is?",
-    options: ["Voltmeter", "Ammeter", "Galvanometer", "Meter rule"],
-    answer: "Voltmeter"
-  },
-  {
-    question: "The device that stores electric charge is?",
-    options: ["Capacitor", "Battery", "Resistor", "Switch"],
-    answer: "Capacitor"
-  },
-  {
-    question: "Ohm's Law relates current, voltage, and?",
-    options: ["Resistance", "Power", "Capacitance", "Charge"],
-    answer: "Resistance"
-  },
-  {
-    question: "Which of the following is a good conductor of electricity?",
-    options: ["Copper", "Plastic", "Glass", "Wood"],
-    answer: "Copper"
-  },
-  {
-    question: "Which of the following is an insulator?",
-    options: ["Rubber", "Silver", "Aluminium", "Iron"],
-    answer: "Rubber"
-  },
-  {
-    question: "A material that allows some current to pass through is called?",
-    options: ["Semiconductor", "Conductor", "Insulator", "Resistor"],
-    answer: "Semiconductor"
-  },
-  {
-    question: "The rate of doing electrical work is?",
-    options: ["Power", "Energy", "Current", "Resistance"],
-    answer: "Power"
-  },
-  {
-    question: "The unit of electrical energy is?",
-    options: ["Joule", "Ampere", "Volt", "Ohm"],
-    answer: "Joule"
-  },
-  {
-    question: "The commercial unit of energy is?",
-    options: ["Kilowatt-hour", "Joule", "Coulomb", "Watt"],
-    answer: "Kilowatt-hour"
-  },
-  {
-    question: "The unit of power is?",
-    options: ["Watt", "Joule", "Ampere", "Volt"],
-    answer: "Watt"
-  },
-  {
-    question: "What is the function of a fuse in a circuit?",
-    options: ["To protect appliances", "To increase voltage", "To convert energy", "To generate current"],
-    answer: "To protect appliances"
-  },
-  {
-    question: "Which of the following is a source of direct current?",
-    options: ["Battery", "Transformer", "Generator", "Inductor"],
-    answer: "Battery"
-  },
-  {
-    question: "Which of the following is a source of alternating current?",
-    options: ["Generator", "Battery", "Cell", "Solar panel"],
-    answer: "Generator"
-  },
-  {
-    question: "What is the function of a resistor?",
-    options: ["To reduce current", "To store energy", "To convert voltage", "To amplify signals"],
-    answer: "To reduce current"
-  },
-  {
-    question: "The flow of electric charges is known as?",
-    options: ["Current", "Voltage", "Resistance", "Power"],
-    answer: "Current"
-  },
-  {
-    question: "Two like charges will?",
-    options: ["Repel each other", "Attract each other", "Neutralize", "Merge"],
-    answer: "Repel each other"
-  },
-  {
-    question: "Two unlike charges will?",
-    options: ["Attract each other", "Repel each other", "Merge", "Vibrate"],
-    answer: "Attract each other"
-  },
-  {
-    question: "The region around a magnet where magnetic force acts is the?",
-    options: ["Magnetic field", "Electric field", "Neutral zone", "Conduction path"],
-    answer: "Magnetic field"
-  },
-  {
-    question: "The poles of a magnet are located at?",
-    options: ["The ends", "The center", "One side", "All over"],
-    answer: "The ends"
-  },
-  {
-    question: "Like magnetic poles?",
-    options: ["Repel each other", "Attract each other", "Cancel out", "Do not interact"],
-    answer: "Repel each other"
-  },
-  {
-    question: "Unlike magnetic poles?",
-    options: ["Attract each other", "Repel each other", "Merge", "Vibrate"],
-    answer: "Attract each other"
-  },
-  {
-    question: "What is used to detect the presence of a magnetic field?",
-    options: ["Compass", "Ammeter", "Voltmeter", "Galvanometer"],
-    answer: "Compass"
-  },
-  {
-    question: "Magnetic materials include?",
-    options: ["Iron", "Wood", "Plastic", "Rubber"],
-    answer: "Iron"
-  },
-  {
-    question: "Which of the following is not a magnetic material?",
-    options: ["Copper", "Iron", "Nickel", "Cobalt"],
-    answer: "Copper"
-  },
-  {
-    question: "Electromagnetism is the relationship between?",
-    options: ["Electricity and magnetism", "Heat and light", "Sound and waves", "Atoms and molecules"],
-    answer: "Electricity and magnetism"
-  },
-  {
-    question: "A magnetic field can be produced by?",
-    options: ["Electric current", "Light", "Sound", "Pressure"],
-    answer: "Electric current"
-  },
-  {
-    question: "A device that uses electromagnetism is?",
-    options: ["Electric bell", "Mirror", "Thermometer", "Bulb"],
-    answer: "Electric bell"
-  },
-  {
-    question: "An electric motor converts?",
-    options: ["Electrical energy to mechanical", "Mechanical to electrical", "Heat to light", "Sound to electricity"],
-    answer: "Electrical energy to mechanical"
-  },
-  {
-    question: "A generator converts?",
-    options: ["Mechanical energy to electrical", "Electrical to mechanical", "Light to heat", "Sound to electricity"],
-    answer: "Mechanical energy to electrical"
-  },
-  {
-    question: "Electromagnetic induction is the production of current by?",
-    options: ["Moving a magnet in a coil", "Heating a wire", "Lighting a bulb", "Rotating a fan"],
-    answer: "Moving a magnet in a coil"
-  },
-  {
-    question: "The unit of electric charge is?",
-    options: ["Coulomb", "Ohm", "Joule", "Watt"],
-    answer: "Coulomb"
-  },
-  {
-    question: "A circuit that allows current to flow is?",
-    options: ["Closed", "Open", "Broken", "Short"],
-    answer: "Closed"
-  },
-  {
-    question: "A switch is used to?",
-    options: ["Open and close a circuit", "Store energy", "Measure voltage", "Reduce resistance"],
-    answer: "Open and close a circuit"
-  },
-  {
-    question: "A device that increases or decreases voltage is a?",
-    options: ["Transformer", "Capacitor", "Resistor", "Battery"],
-    answer: "Transformer"
-  },
-  {
-    question: "The national grid is used for?",
-    options: ["Electricity distribution", "Water supply", "Internet connection", "Heat regulation"],
-    answer: "Electricity distribution"
-  },
-  {
-    question: "A circuit with only one path for current is?",
-    options: ["Series circuit", "Parallel circuit", "Short circuit", "Open circuit"],
-    answer: "Series circuit"
-  },
-  {
-    question: "A circuit with multiple paths for current is?",
-    options: ["Parallel circuit", "Series circuit", "Closed circuit", "Electric field"],
-    answer: "Parallel circuit"
-  },
-  {
-    question: "Which quantity is measured in volts?",
-    options: ["Potential difference", "Current", "Resistance", "Power"],
-    answer: "Potential difference"
-  },
-  {
-    question: "Electricity from the mains is?",
-    options: ["Alternating current", "Direct current", "Pulsed current", "Static electricity"],
-    answer: "Alternating current"
-  },
-  {
-    question: "When current flows through a wire, a ______ is produced.",
-    options: ["Magnetic field", "Light", "Sound", "Heat only"],
-    answer: "Magnetic field"
-  },
-  {
-    question: "The Earth wire in a 3-pin plug is for?",
-    options: ["Safety", "Heating", "Carrying current", "Connecting load"],
-    answer: "Safety"
-  },
-  {
-    question: "Which wire is brown in a 3-pin plug?",
-    options: ["Live wire", "Neutral wire", "Earth wire", "None"],
-    answer: "Live wire"
-  },
-  {
-    question: "Which wire is blue in a 3-pin plug?",
-    options: ["Neutral wire", "Live wire", "Earth wire", "Hot wire"],
-    answer: "Neutral wire"
-  },
-  {
-    question: "Which wire is green and yellow in a 3-pin plug?",
-    options: ["Earth wire", "Live wire", "Neutral wire", "Positive wire"],
-    answer: "Earth wire"
-  },
-  {
-    question: "The electricity supply voltage in Ghana is?",
-    options: ["230V", "110V", "12V", "400V"],
-    answer: "230V"
-  },
-  {
-    question: "Heat energy is transferred from one body to another due to a difference in?",
-    options: ["Temperature", "Pressure", "Mass", "Volume"],
-    answer: "Temperature"
-  },
-  {
-    question: "The SI unit of heat is?",
-    options: ["Joule", "Calorie", "Kelvin", "Watt"],
-    answer: "Joule"
-  },
-  {
-    question: "The SI unit of temperature is?",
-    options: ["Kelvin", "Celsius", "Fahrenheit", "Degree"],
-    answer: "Kelvin"
-  },
-  {
-    question: "Heat transfer through solids is called?",
-    options: ["Conduction", "Convection", "Radiation", "Fusion"],
-    answer: "Conduction"
-  },
-  {
-    question: "Heat transfer through fluids is called?",
-    options: ["Convection", "Conduction", "Radiation", "Evaporation"],
-    answer: "Convection"
-  },
-  {
-    question: "Heat transfer without a medium is called?",
-    options: ["Radiation", "Conduction", "Convection", "Evaporation"],
-    answer: "Radiation"
-  },
-  {
-    question: "The instrument used to measure temperature is?",
-    options: ["Thermometer", "Barometer", "Hygrometer", "Manometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "Which thermometer is used in laboratories?",
-    options: ["Mercury thermometer", "Clinical thermometer", "Alcohol thermometer", "Digital thermometer"],
-    answer: "Mercury thermometer"
-  },
-  {
-    question: "Which thermometer is used to measure body temperature?",
-    options: ["Clinical thermometer", "Laboratory thermometer", "Alcohol thermometer", "Thermocouple"],
-    answer: "Clinical thermometer"
-  },
-  {
-    question: "The normal body temperature in Celsius is?",
-    options: ["37�C", "100�C", "0�C", "25�C"],
-    answer: "37�C"
-  },
-  {
-    question: "The boiling point of water in Celsius is?",
-    options: ["100�C", "0�C", "50�C", "25�C"],
-    answer: "100�C"
-  },
-  {
-    question: "The freezing point of water in Celsius is?",
-    options: ["0�C", "100�C", "25�C", "50�C"],
-    answer: "0�C"
-  },
-  {
-    question: "The boiling point of water in Kelvin is?",
-    options: ["373 K", "273 K", "300 K", "273.15 K"],
-    answer: "373 K"
-  },
-  {
-    question: "Expansion occurs when a substance is?",
-    options: ["Heated", "Cooled", "Broken", "Frozen"],
-    answer: "Heated"
-  },
-  {
-    question: "Which state of matter expands the most?",
-    options: ["Gas", "Liquid", "Solid", "Plasma"],
-    answer: "Gas"
-  },
-  {
-    question: "Which state of matter expands the least?",
-    options: ["Solid", "Gas", "Liquid", "Plasma"],
-    answer: "Solid"
-  },
-  {
-    question: "What happens to most materials when cooled?",
-    options: ["They contract", "They expand", "They evaporate", "They condense"],
-    answer: "They contract"
-  },
-  {
-    question: "The change from solid to liquid is called?",
-    options: ["Melting", "Condensation", "Evaporation", "Freezing"],
-    answer: "Melting"
-  },
-  {
-    question: "The change from liquid to gas is called?",
-    options: ["Evaporation", "Freezing", "Melting", "Condensation"],
-    answer: "Evaporation"
-  },
-  {
-    question: "The change from gas to liquid is called?",
-    options: ["Condensation", "Sublimation", "Evaporation", "Melting"],
-    answer: "Condensation"
-  },
-  {
-    question: "The change from liquid to solid is called?",
-    options: ["Freezing", "Melting", "Boiling", "Condensation"],
-    answer: "Freezing"
-  },
-  {
-    question: "The change from solid directly to gas is?",
-    options: ["Sublimation", "Melting", "Condensation", "Boiling"],
-    answer: "Sublimation"
-  },
-  {
-    question: "The heat required to change the state of a substance without temperature change is?",
-    options: ["Latent heat", "Sensible heat", "Specific heat", "Thermal heat"],
-    answer: "Latent heat"
-  },
-  {
-    question: "The heat required to raise the temperature of a unit mass by 1�C is?",
-    options: ["Specific heat capacity", "Latent heat", "Thermal energy", "Heat flux"],
-    answer: "Specific heat capacity"
-  },
-  {
-    question: "Metals are good conductors of heat because they contain?",
-    options: ["Free electrons", "Tightly bound electrons", "Atoms", "Ions"],
-    answer: "Free electrons"
-  },
-  {
-    question: "The sun's heat reaches Earth by?",
-    options: ["Radiation", "Conduction", "Convection", "Fusion"],
-    answer: "Radiation"
-  },
-  {
-    question: "A black surface is a good?",
-    options: ["Absorber and emitter of heat", "Reflector of heat", "Insulator", "Conductor"],
-    answer: "Absorber and emitter of heat"
-  },
-  {
-    question: "A shiny white surface is a good?",
-    options: ["Reflector of heat", "Emitter of heat", "Absorber of heat", "Insulator"],
-    answer: "Reflector of heat"
-  },
-  {
-    question: "In a liquid thermometer, what expands with heat?",
-    options: ["Liquid column", "Glass tube", "Mercury vapor", "Metal spring"],
-    answer: "Liquid column"
-  },
-  {
-    question: "Which of the following expands uniformly?",
-    options: ["Mercury", "Air", "Water", "Glass"],
-    answer: "Mercury"
-  },
-  {
-    question: "In a bimetallic strip, the two metals expand at?",
-    options: ["Different rates", "Same rate", "Random rates", "No rate"],
-    answer: "Different rates"
-  },
-  {
-    question: "The bimetallic strip bends when heated because?",
-    options: ["Different expansion of metals", "One melts", "They repel", "They fuse"],
-    answer: "Different expansion of metals"
-  },
-  {
-    question: "Which of the following liquids is used in very cold thermometers?",
-    options: ["Alcohol", "Mercury", "Water", "Oil"],
-    answer: "Alcohol"
-  },
-  {
-    question: "Alcohol is used in thermometers because it?",
-    options: ["Expands more than mercury", "Is denser", "Freezes easily", "Is a conductor"],
-    answer: "Expands more than mercury"
-  },
-  {
-    question: "The most accurate thermometer is the?",
-    options: ["Thermocouple", "Clinical", "Mercury", "Alcohol"],
-    answer: "Thermocouple"
-  },
-  {
-    question: "Which thermometer responds quickly to temperature changes?",
-    options: ["Alcohol thermometer", "Mercury thermometer", "Thermocouple", "Gas thermometer"],
-    answer: "Alcohol thermometer"
-  },
-  {
-    question: "Which part of a thermometer prevents mercury from going back after use?",
-    options: ["Constriction", "Bulb", "Scale", "Tube"],
-    answer: "Constriction"
-  },
-  {
-    question: "Which part of a liquid-in-glass thermometer holds the liquid?",
-    options: ["Bulb", "Tube", "Scale", "Stem"],
-    answer: "Bulb"
-  },
-  {
-    question: "What is the freezing point of mercury?",
-    options: ["-39�C", "0�C", "-273�C", "-10�C"],
-    answer: "-39�C"
-  },
-  {
-    question: "What is the boiling point of mercury?",
-    options: ["357�C", "100�C", "212�C", "500�C"],
-    answer: "357�C"
-  },
-  {
-    question: "Which of the following materials is best for cooking pots?",
-    options: ["Aluminium", "Plastic", "Glass", "Wood"],
-    answer: "Aluminium"
-  },
-  {
-    question: "Good conductors of heat are used in?",
-    options: ["Cooking utensils", "Blankets", "Curtains", "Hats"],
-    answer: "Cooking utensils"
-  },
-  {
-    question: "Poor conductors of heat are used in?",
-    options: ["Handles of cooking utensils", "Electric wires", "Kettles", "Radiators"],
-    answer: "Handles of cooking utensils"
-  },
-  {
-    question: "Convection occurs due to?",
-    options: ["Density differences", "Weight", "Shape", "Friction"],
-    answer: "Density differences"
-  },
-  {
-    question: "Which method of heat transfer is responsible for sea breeze?",
-    options: ["Convection", "Conduction", "Radiation", "Reflection"],
-    answer: "Convection"
-  },
-  {
-    question: "Which part of the flame is the hottest?",
-    options: ["Blue zone", "Yellow zone", "Dark zone", "Luminous zone"],
-    answer: "Blue zone"
-  },
-  {
-    question: "What type of heat transfer takes place in a vacuum flask?",
-    options: ["Conduction, convection, radiation prevented", "Radiation only", "Conduction only", "Convection only"],
-    answer: "Conduction, convection, radiation prevented"
-  },
-  {
-    question: "What is the purpose of the vacuum in a vacuum flask?",
-    options: ["To prevent heat loss", "To store air", "To make it light", "To increase pressure"],
-    answer: "To prevent heat loss"
-  },
-  {
-    question: "Waves transfer?",
-    options: ["Energy", "Mass", "Particles", "Weight"],
-    answer: "Energy"
-  },
-  {
-    question: "A wave in which particles vibrate perpendicular to direction of propagation is?",
-    options: ["Transverse wave", "Longitudinal wave", "Sound wave", "Radio wave"],
-    answer: "Transverse wave"
-  },
-  {
-    question: "A wave in which particles vibrate parallel to direction of propagation is?",
-    options: ["Longitudinal wave", "Transverse wave", "Light wave", "Electromagnetic wave"],
-    answer: "Longitudinal wave"
-  },
-  {
-    question: "Which of the following is a transverse wave?",
-    options: ["Light", "Sound", "Ultrasound", "Seismic P-wave"],
-    answer: "Light"
-  },
-  {
-    question: "Which of the following is a longitudinal wave?",
-    options: ["Sound", "Light", "Water wave", "Radio wave"],
-    answer: "Sound"
-  },
-  {
-    question: "The highest point of a transverse wave is called?",
-    options: ["Crest", "Trough", "Amplitude", "Wavelength"],
-    answer: "Crest"
-  },
-  {
-    question: "The lowest point of a transverse wave is called?",
-    options: ["Trough", "Crest", "Node", "Peak"],
-    answer: "Trough"
-  },
-  {
-    question: "The distance between two crests is called?",
-    options: ["Wavelength", "Amplitude", "Frequency", "Wave speed"],
-    answer: "Wavelength"
-  },
-  {
-    question: "The number of waves produced per second is called?",
-    options: ["Frequency", "Wavelength", "Period", "Amplitude"],
-    answer: "Frequency"
-  },
-  {
-    question: "The unit of frequency is?",
-    options: ["Hertz", "Second", "Watt", "Newton"],
-    answer: "Hertz"
-  },
-  {
-    question: "The time taken to complete one wave is called?",
-    options: ["Period", "Frequency", "Amplitude", "Cycle"],
-    answer: "Period"
-  },
-  {
-    question: "The unit of period is?",
-    options: ["Second", "Hertz", "Meter", "Watt"],
-    answer: "Second"
-  },
-  {
-    question: "The maximum displacement of particles in a wave is?",
-    options: ["Amplitude", "Wavelength", "Frequency", "Phase"],
-    answer: "Amplitude"
-  },
-  {
-    question: "The speed of a wave is the product of?",
-    options: ["Frequency and wavelength", "Amplitude and period", "Wavelength and period", "Frequency and amplitude"],
-    answer: "Frequency and wavelength"
-  },
-  {
-    question: "Which of these waves can travel through a vacuum?",
-    options: ["Light", "Sound", "Water waves", "Mechanical waves"],
-    answer: "Light"
-  },
-  {
-    question: "Sound cannot travel through?",
-    options: ["Vacuum", "Air", "Water", "Steel"],
-    answer: "Vacuum"
-  },
-  {
-    question: "Which of the following is not a property of sound?",
-    options: ["Transparency", "Pitch", "Loudness", "Quality"],
-    answer: "Transparency"
-  },
-  {
-    question: "The pitch of a sound depends on its?",
-    options: ["Frequency", "Amplitude", "Wavelength", "Velocity"],
-    answer: "Frequency"
-  },
-  {
-    question: "The loudness of a sound depends on its?",
-    options: ["Amplitude", "Frequency", "Pitch", "Wavelength"],
-    answer: "Amplitude"
-  },
-  {
-    question: "The persistence of sound after the source has stopped is called?",
-    options: ["Echo", "Noise", "Vibration", "Frequency"],
-    answer: "Echo"
-  },
-  {
-    question: "An echo is best heard when the reflecting surface is at least?",
-    options: ["17 meters", "10 meters", "5 meters", "50 meters"],
-    answer: "17 meters"
-  },
-  {
-    question: "The reflection of sound is called?",
-    options: ["Echo", "Rebound", "Bounce", "Deflection"],
-    answer: "Echo"
-  },
-  {
-    question: "The bouncing back of a wave at a boundary is called?",
-    options: ["Reflection", "Refraction", "Diffraction", "Absorption"],
-    answer: "Reflection"
-  },
-  {
-    question: "The bending of a wave as it passes from one medium to another is?",
-    options: ["Refraction", "Reflection", "Diffraction", "Interference"],
-    answer: "Refraction"
-  },
-  {
-    question: "Which of the following is used to measure the speed of sound?",
-    options: ["Echo method", "Thermometer", "Barometer", "Hydrometer"],
-    answer: "Echo method"
-  },
-  {
-    question: "A mirror that curves inward is called?",
-    options: ["Concave mirror", "Convex mirror", "Plane mirror", "Spherical mirror"],
-    answer: "Concave mirror"
-  },
-  {
-    question: "A mirror that curves outward is called?",
-    options: ["Convex mirror", "Concave mirror", "Plane mirror", "Spherical mirror"],
-    answer: "Convex mirror"
-  },
-  {
-    question: "The image formed by a plane mirror is?",
-    options: ["Virtual and upright", "Real and inverted", "Magnified", "Diminished"],
-    answer: "Virtual and upright"
-  },
-  {
-    question: "The line perpendicular to a mirror surface is called?",
-    options: ["Normal", "Tangent", "Radius", "Focus"],
-    answer: "Normal"
-  },
-  {
-    question: "The angle between the incident ray and the mirror is called?",
-    options: ["Angle of incidence", "Angle of reflection", "Refraction angle", "Critical angle"],
-    answer: "Angle of incidence"
-  },
-  {
-    question: "The angle of incidence is equal to?",
-    options: ["Angle of reflection", "Refractive index", "Critical angle", "Deviation"],
-    answer: "Angle of reflection"
-  },
-  {
-    question: "The mirror used by dentists is a?",
-    options: ["Concave mirror", "Plane mirror", "Convex mirror", "Flat mirror"],
-    answer: "Concave mirror"
-  },
-  {
-    question: "A magnifying glass uses which lens?",
-    options: ["Convex lens", "Concave lens", "Flat lens", "Cylindrical lens"],
-    answer: "Convex lens"
-  },
-  {
-    question: "Which lens is used to correct short sight?",
-    options: ["Concave lens", "Convex lens", "Biconvex lens", "Plano-concave lens"],
-    answer: "Concave lens"
-  },
-  {
-    question: "Which lens is used to correct long sight?",
-    options: ["Convex lens", "Concave lens", "Cylindrical lens", "Plano-concave lens"],
-    answer: "Convex lens"
-  },
-  {
-    question: "The splitting of white light into colors is called?",
-    options: ["Dispersion", "Diffraction", "Reflection", "Refraction"],
-    answer: "Dispersion"
-  },
-  {
-    question: "Which color is refracted the most in dispersion?",
-    options: ["Violet", "Red", "Green", "Blue"],
-    answer: "Violet"
-  },
-  {
-    question: "Which color is refracted the least in dispersion?",
-    options: ["Red", "Violet", "Blue", "Indigo"],
-    answer: "Red"
-  },
-  {
-    question: "The speed of light in vacuum is?",
-    options: ["3 x 10? m/s", "3 x 10? m/s", "3 x 10? m/s", "3 x 10? m/s"],
-    answer: "3 x 10? m/s"
-  },
-  {
-    question: "The type of lens that converges light rays is?",
-    options: ["Convex lens", "Concave lens", "Cylindrical lens", "Flat lens"],
-    answer: "Convex lens"
-  },
-  {
-    question: "The type of lens that diverges light rays is?",
-    options: ["Concave lens", "Convex lens", "Biconvex lens", "Cylindrical lens"],
-    answer: "Concave lens"
-  },
-  {
-    question: "Which of these materials disperses light?",
-    options: ["Prism", "Mirror", "Glass slab", "Lens"],
-    answer: "Prism"
-  },
-  {
-    question: "The center of a lens is called the?",
-    options: ["Optical center", "Focal point", "Principal axis", "Vertex"],
-    answer: "Optical center"
-  },
-  {
-    question: "The principal focus of a convex lens is the point where?",
-    options: ["Rays converge", "Rays diverge", "Rays reflect", "Rays split"],
-    answer: "Rays converge"
-  },
-  {
-    question: "The unit of focal length is?",
-    options: ["Meter", "Diopter", "Hertz", "Candela"],
-    answer: "Meter"
-  },
-  {
-    question: "Which lens is thinner at the center than at the edges?",
-    options: ["Concave lens", "Convex lens", "Prism", "Cylindrical lens"],
-    answer: "Concave lens"
-  },
-  {
-    question: "Which lens is thicker at the center than at the edges?",
-    options: ["Convex lens", "Concave lens", "Prism", "Cylindrical lens"],
-    answer: "Convex lens"
-  },
-  {
-    question: "Electric current is the flow of?",
-    options: ["Electrons", "Protons", "Neutrons", "Atoms"],
-    answer: "Electrons"
-  },
-  {
-    question: "The unit of electric current is?",
-    options: ["Ampere", "Volt", "Ohm", "Coulomb"],
-    answer: "Ampere"
-  },
-  {
-    question: "The device used to measure current is?",
-    options: ["Ammeter", "Voltmeter", "Galvanometer", "Ohmmeter"],
-    answer: "Ammeter"
-  },
-  {
-    question: "The unit of voltage is?",
-    options: ["Volt", "Ampere", "Ohm", "Watt"],
-    answer: "Volt"
-  },
-  {
-    question: "The device used to measure voltage is?",
-    options: ["Voltmeter", "Ammeter", "Thermometer", "Galvanometer"],
-    answer: "Voltmeter"
-  },
-  {
-    question: "The unit of resistance is?",
-    options: ["Ohm", "Volt", "Ampere", "Watt"],
-    answer: "Ohm"
-  },
-  {
-    question: "The device used to measure resistance is?",
-    options: ["Ohmmeter", "Voltmeter", "Ammeter", "Thermometer"],
-    answer: "Ohmmeter"
-  },
-  {
-    question: "Ohm�'s law states that voltage is directly proportional to?",
-    options: ["Current", "Resistance", "Power", "Charge"],
-    answer: "Current"
-  },
-  {
-    question: "The formula for Ohm�'s law is?",
-    options: ["V = IR", "V = I/R", "V = R/I", "V = IR�"],
-    answer: "V = IR"
-  },
-  {
-    question: "In a series circuit, the current is?",
-    options: ["Same throughout", "Different at each point", "Zero", "Maximum at the start"],
-    answer: "Same throughout"
-  },
-  {
-    question: "In a parallel circuit, the voltage across each branch is?",
-    options: ["Same", "Different", "Half", "Zero"],
-    answer: "Same"
-  },
-  {
-    question: "In a series circuit, total resistance is?",
-    options: ["Sum of all resistors", "Product of resistors", "Lowest resistor", "Highest resistor"],
-    answer: "Sum of all resistors"
-  },
-  {
-    question: "In a parallel circuit, total resistance is?",
-    options: ["Less than the least resistor", "Sum of all resistors", "Product of resistors", "Greater than largest resistor"],
-    answer: "Less than the least resistor"
-  },
-  {
-    question: "Electrical power is calculated as?",
-    options: ["P = IV", "P = I/V", "P = V/R", "P = I�R"],
-    answer: "P = IV"
-  },
-  {
-    question: "The unit of power is?",
-    options: ["Watt", "Joule", "Volt", "Ohm"],
-    answer: "Watt"
-  },
-  {
-    question: "The energy consumed in 1 hour by a 1000W appliance is?",
-    options: ["1 kWh", "1000 J", "100 J", "10 kWh"],
-    answer: "1 kWh"
-  },
-  {
-    question: "The main source of electricity in homes is?",
-    options: ["Alternating current", "Direct current", "Solar cell", "Battery"],
-    answer: "Alternating current"
-  },
-  {
-    question: "A fuse is used to?",
-    options: ["Protect appliances from excess current", "Supply electricity", "Store charge", "Generate power"],
-    answer: "Protect appliances from excess current"
-  },
-  {
-    question: "A short circuit occurs when?",
-    options: ["Current flows through a low resistance path", "There is no power", "The fuse is broken", "Battery is dead"],
-    answer: "Current flows through a low resistance path"
-  },
-  {
-    question: "The earth wire is used to?",
-    options: ["Prevent electric shocks", "Generate power", "Increase current", "Measure voltage"],
-    answer: "Prevent electric shocks"
-  },
-  {
-    question: "The live wire in a three-pin plug is usually colored?",
-    options: ["Brown", "Blue", "Green", "Yellow"],
-    answer: "Brown"
-  },
-  {
-    question: "The neutral wire in a three-pin plug is usually colored?",
-    options: ["Blue", "Brown", "Green", "Red"],
-    answer: "Blue"
-  },
-  {
-    question: "The earth wire in a three-pin plug is usually colored?",
-    options: ["Green/yellow", "Red", "Blue", "Black"],
-    answer: "Green/yellow"
-  },
-  {
-    question: "A device that converts chemical energy to electrical energy is a?",
-    options: ["Battery", "Resistor", "Capacitor", "Transformer"],
-    answer: "Battery"
-  },
-  {
-    question: "Which of these stores electric charge?",
-    options: ["Capacitor", "Resistor", "Battery", "Conductor"],
-    answer: "Capacitor"
-  },
-  {
-    question: "Which material is a good conductor of electricity?",
-    options: ["Copper", "Wood", "Plastic", "Rubber"],
-    answer: "Copper"
-  },
-  {
-    question: "Which material is an insulator?",
-    options: ["Rubber", "Aluminum", "Silver", "Iron"],
-    answer: "Rubber"
-  },
-  {
-    question: "A magnet has two poles:?",
-    options: ["North and South", "East and West", "Positive and Negative", "Up and Down"],
-    answer: "North and South"
-  },
-  {
-    question: "Like poles of a magnet?",
-    options: ["Repel", "Attract", "Stick together", "Become neutral"],
-    answer: "Repel"
-  },
-  {
-    question: "Unlike poles of a magnet?",
-    options: ["Attract", "Repel", "Have no effect", "Bounce"],
-    answer: "Attract"
-  },
-  {
-    question: "Magnetic field lines move from?",
-    options: ["North to South", "South to North", "East to West", "Negative to Positive"],
-    answer: "North to South"
-  },
-  {
-    question: "Magnetic materials include?",
-    options: ["Iron", "Plastic", "Wood", "Rubber"],
-    answer: "Iron"
-  },
-  {
-    question: "The region around a magnet where force is felt is the?",
-    options: ["Magnetic field", "Electric field", "Force field", "Current area"],
-    answer: "Magnetic field"
-  },
-  {
-    question: "Electromagnetism is the interaction between?",
-    options: ["Electricity and magnetism", "Heat and magnetism", "Light and sound", "Gravity and electricity"],
-    answer: "Electricity and magnetism"
-  },
-  {
-    question: "An electromagnet can be made using?",
-    options: ["Coil of wire and iron core", "Battery and bulb", "Magnet and compass", "Plastic and rubber"],
-    answer: "Coil of wire and iron core"
-  },
-  {
-    question: "Increasing current in a coil increases?",
-    options: ["Magnetic strength", "Voltage", "Resistance", "Temperature"],
-    answer: "Magnetic strength"
-  },
-  {
-    question: "A device that converts electrical energy to mechanical energy is?",
-    options: ["Electric motor", "Generator", "Transformer", "Battery"],
-    answer: "Electric motor"
-  },
-  {
-    question: "A device that converts mechanical energy to electrical energy is?",
-    options: ["Generator", "Motor", "Transformer", "Capacitor"],
-    answer: "Generator"
-  },
-  {
-    question: "Electric motors work on the principle of?",
-    options: ["Electromagnetism", "Thermodynamics", "Optics", "Nuclear fusion"],
-    answer: "Electromagnetism"
-  },
-  {
-    question: "Generators work on the principle of?",
-    options: ["Electromagnetic induction", "Reflection", "Heat conduction", "Refraction"],
-    answer: "Electromagnetic induction"
-  },
-  {
-    question: "Transformer is used to?",
-    options: ["Change voltage", "Change current to AC", "Measure current", "Store electricity"],
-    answer: "Change voltage"
-  },
-  {
-    question: "A step-up transformer increases?",
-    options: ["Voltage", "Current", "Resistance", "Power loss"],
-    answer: "Voltage"
-  },
-  {
-    question: "A step-down transformer decreases?",
-    options: ["Voltage", "Current", "Resistance", "Power"],
-    answer: "Voltage"
-  },
-  {
-    question: "The transformer works only with?",
-    options: ["Alternating current", "Direct current", "Solar energy", "Magnetic field"],
-    answer: "Alternating current"
-  },
-  {
-    question: "Which of these is not a component of a simple electric circuit?",
-    options: ["Motor", "Bulb", "Battery", "Magnet"],
-    answer: "Magnet"
-  },
-  {
-    question: "A galvanometer is used to?",
-    options: ["Detect small currents", "Measure voltage", "Store charge", "Resist flow"],
-    answer: "Detect small currents"
-  },
-  {
-    question: "A device that opens a circuit automatically when current is too high is a?",
-    options: ["Circuit breaker", "Transformer", "Battery", "Capacitor"],
-    answer: "Circuit breaker"
-  },
-  {
-    question: "Which particle has a negative charge?",
-    options: ["Electron", "Proton", "Neutron", "Nucleus"],
-    answer: "Electron"
-  },
-  {
-    question: "The central part of an atom is the?",
-    options: ["Nucleus", "Electron", "Shell", "Proton"],
-    answer: "Nucleus"
-  },
-  {
-    question: "Which particle is found in the nucleus of an atom?",
-    options: ["Proton", "Electron", "Photon", "Quark"],
-    answer: "Proton"
-  },
-  {
-    question: "Neutrons are particles with?",
-    options: ["No charge", "Positive charge", "Negative charge", "Double charge"],
-    answer: "No charge"
-  },
-  {
-    question: "Isotopes are atoms with the same atomic number but different?",
-    options: ["Mass number", "Charge", "Shells", "Size"],
-    answer: "Mass number"
-  },
-  {
-    question: "Radioactivity is the spontaneous emission of?",
-    options: ["Radiation from unstable nuclei", "Light from sun", "Heat from reaction", "Sound from atom"],
-    answer: "Radiation from unstable nuclei"
-  },
-  {
-    question: "Alpha particles have a charge of?",
-    options: ["+2", "+1", "-1", "0"],
-    answer: "+2"
-  },
-  {
-    question: "Beta particles are similar to?",
-    options: ["Electrons", "Protons", "Neutrons", "Photons"],
-    answer: "Electrons"
-  },
-  {
-    question: "Gamma rays are?",
-    options: ["Electromagnetic waves", "Charged particles", "Light particles", "Atoms"],
-    answer: "Electromagnetic waves"
-  },
-  {
-    question: "Which radiation has the highest penetrating power?",
-    options: ["Gamma", "Alpha", "Beta", "Infrared"],
-    answer: "Gamma"
-  },
-  {
-    question: "Which radiation is stopped by paper?",
-    options: ["Alpha", "Beta", "Gamma", "X-ray"],
-    answer: "Alpha"
-  },
-  {
-    question: "Which radiation is stopped by aluminum?",
-    options: ["Beta", "Alpha", "Gamma", "Neutron"],
-    answer: "Beta"
-  },
-  {
-    question: "Which radiation is only reduced by thick lead?",
-    options: ["Gamma", "Alpha", "Beta", "Ultraviolet"],
-    answer: "Gamma"
-  },
-  {
-    question: "Nuclear fission is the?",
-    options: ["Splitting of nucleus", "Joining of atoms", "Decay of atoms", "Production of light"],
-    answer: "Splitting of nucleus"
-  },
-  {
-    question: "Nuclear fusion occurs when?",
-    options: ["Nuclei join", "Electrons jump", "Atoms decay", "Protons split"],
-    answer: "Nuclei join"
-  },
-  {
-    question: "Semiconductors include?",
-    options: ["Silicon", "Iron", "Copper", "Plastic"],
-    answer: "Silicon"
-  },
-  {
-    question: "A diode allows current to flow in?",
-    options: ["One direction", "Both directions", "No direction", "All directions"],
-    answer: "One direction"
-  },
-  {
-    question: "An LED is a diode that emits?",
-    options: ["Light", "Sound", "Heat", "Electricity"],
-    answer: "Light"
-  },
-  {
-    question: "The device that stores electric charge temporarily is?",
-    options: ["Capacitor", "Battery", "Diode", "Resistor"],
-    answer: "Capacitor"
-  },
-  {
-    question: "A transistor is used to?",
-    options: ["Amplify signals", "Store data", "Convert energy", "Generate heat"],
-    answer: "Amplify signals"
-  },
-  {
-    question: "Logic gates are used in?",
-    options: ["Computers", "Fans", "Motors", "Generators"],
-    answer: "Computers"
-  },
-  {
-    question: "The basic logic gates are?",
-    options: ["AND, OR, NOT", "Add, Subtract, Multiply", "High, Low, Medium", "XOR, NAND, NOR"],
-    answer: "AND, OR, NOT"
-  },
-  {
-    question: "Which gate gives output only if both inputs are 1?",
-    options: ["AND", "OR", "NOT", "XOR"],
-    answer: "AND"
-  },
-  {
-    question: "Which gate gives output if at least one input is 1?",
-    options: ["OR", "AND", "NOT", "NAND"],
-    answer: "OR"
-  },
-  {
-    question: "Which gate inverts the input?",
-    options: ["NOT", "AND", "OR", "XOR"],
-    answer: "NOT"
-  },
-  {
-    question: "Which energy source is renewable?",
-    options: ["Solar", "Coal", "Petrol", "Diesel"],
-    answer: "Solar"
-  },
-  {
-    question: "Which energy source is non-renewable?",
-    options: ["Petroleum", "Wind", "Hydro", "Solar"],
-    answer: "Petroleum"
-  },
-  {
-    question: "A Geiger-Müller tube is used to?",
-    options: ["Detect radiation", "Produce energy", "Store charge", "Measure voltage"],
-    answer: "Detect radiation"
-  },
-  {
-    question: "Which of the following is a hazard of radiation?",
-    options: ["Cancer", "Fever", "Cold", "Fatigue"],
-    answer: "Cancer"
-  },
-  {
-    question: "X-rays are used in?",
-    options: ["Medical diagnosis", "Cooking", "Farming", "Banking"],
-    answer: "Medical diagnosis"
-  },
-  {
-    question: "Radioactive tracers are used in?",
-    options: ["Medicine", "Banking", "Farming", "Construction"],
-    answer: "Medicine"
-  },
-  {
-    question: "The speed of light in vacuum is?",
-    options: ["3 x 10^8 m/s", "3 x 10^6 m/s", "3 x 10^4 m/s", "3 x 10^2 m/s"],
-    answer: "3 x 10^8 m/s"
-  },
-  {
-    question: "Electrons revolve around the nucleus in?",
-    options: ["Shells", "Nucleus", "Protons", "Neutrons"],
-    answer: "Shells"
-  },
-  {
-    question: "The nucleus contains?",
-    options: ["Protons and neutrons", "Electrons only", "Neutrons only", "Shells only"],
-    answer: "Protons and neutrons"
-  },
-  {
-    question: "Atomic number is the number of?",
-    options: ["Protons", "Neutrons", "Electrons", "Nuclei"],
-    answer: "Protons"
-  },
-  {
-    question: "Mass number is the sum of?",
-    options: ["Protons and neutrons", "Electrons and protons", "Neutrons and electrons", "Atoms and ions"],
-    answer: "Protons and neutrons"
-  },
-  {
-    question: "Which of these is a nuclear reaction?",
-    options: ["Fission", "Combustion", "Melting", "Boiling"],
-    answer: "Fission"
-  },
-  {
-    question: "A device that produces electricity from sunlight is a?",
-    options: ["Solar cell", "Battery", "Capacitor", "Dynamo"],
-    answer: "Solar cell"
-  },
-  {
-    question: "The charge on a proton is?",
-    options: ["+1", "-1", "0", "+2"],
-    answer: "+1"
-  },
-  {
-    question: "The charge on an electron is?",
-    options: ["-1", "+1", "0", "-2"],
-    answer: "-1"
-  },
-  {
-    question: "The charge on a neutron is?",
-    options: ["0", "+1", "-1", "-2"],
-    answer: "0"
-  },
-  {
-    question: "Which subatomic particle is responsible for chemical bonding?",
-    options: ["Electron", "Proton", "Neutron", "Nucleus"],
-    answer: "Electron"
-  },
-  {
-    question: "Which type of radiation causes the most ionization?",
-    options: ["Alpha", "Beta", "Gamma", "X-ray"],
-    answer: "Alpha"
-  },
-  {
-    question: "Which logic gate is the opposite of AND?",
-    options: ["NAND", "OR", "NOT", "XOR"],
-    answer: "NAND"
-  },
-  {
-    question: "Which logic gate is the opposite of OR?",
-    options: ["NOR", "AND", "NOT", "XOR"],
-    answer: "NOR"
-  },
-  {
-    question: "Which logic gate gives output when inputs are different?",
-    options: ["XOR", "AND", "OR", "NOT"],
-    answer: "XOR"
-  },
-  {
-    question: "Radioactivity was discovered by?",
-    options: ["Henri Becquerel", "Newton", "Einstein", "Rutherford"],
-    answer: "Henri Becquerel"
-  },
-  {
-    question: "The half-life of a radioactive substance is the time for?",
-    options: ["Half atoms to decay", "All atoms to decay", "Atoms to stop moving", "Radiation to stop"],
-    answer: "Half atoms to decay"
-  },
-  {
-    question: "Which of the following is a vector quantity?",
-    options: ["Velocity", "Speed", "Distance", "Mass"],
-    answer: "Velocity"
-  },
-  {
-    question: "Which physical quantity is measured in joules?",
-    options: ["Work", "Force", "Power", "Mass"],
-    answer: "Work"
-  },
-  {
-    question: "A machine that makes work easier is called a?",
-    options: ["Simple machine", "Motor", "Engine", "Pulley"],
-    answer: "Simple machine"
-  },
-  {
-    question: "Work done is zero when?",
-    options: ["Displacement is zero", "Force is large", "Object moves", "Force is applied"],
-    answer: "Displacement is zero"
-  },
-  {
-    question: "The slope of a velocity-time graph gives?",
-    options: ["Acceleration", "Distance", "Speed", "Work"],
-    answer: "Acceleration"
-  },
-  {
-    question: "The area under a velocity-time graph represents?",
-    options: ["Displacement", "Acceleration", "Speed", "Work"],
-    answer: "Displacement"
-  },
-  {
-    question: "Which of the following is NOT a renewable energy source?",
-    options: ["Natural gas", "Solar", "Wind", "Hydro"],
-    answer: "Natural gas"
-  },
-  {
-    question: "Which device converts electrical energy to mechanical energy?",
-    options: ["Motor", "Generator", "Battery", "Switch"],
-    answer: "Motor"
-  },
-  {
-    question: "Which device converts mechanical energy to electrical energy?",
-    options: ["Generator", "Motor", "Battery", "Resistor"],
-    answer: "Generator"
-  },
-  {
-    question: "The center of gravity of a regular object lies at its?",
-    options: ["Geometric center", "Base", "Top", "Corner"],
-    answer: "Geometric center"
-  },
-  {
-    question: "The most stable shape is?",
-    options: ["Wide base and low center of gravity", "Narrow base and high center of gravity", "Tall and narrow", "Round and small"],
-    answer: "Wide base and low center of gravity"
-  },
-  {
-    question: "What instrument is used to measure pressure?",
-    options: ["Manometer", "Thermometer", "Voltmeter", "Ammeter"],
-    answer: "Manometer"
-  },
-  {
-    question: "The SI unit of pressure is?",
-    options: ["Pascal", "Newton", "Joule", "Watt"],
-    answer: "Pascal"
-  },
-  {
-    question: "In which medium does sound travel fastest?",
-    options: ["Solid", "Liquid", "Gas", "Vacuum"],
-    answer: "Solid"
-  },
-  {
-    question: "Sound cannot travel through?",
-    options: ["Vacuum", "Air", "Water", "Iron"],
-    answer: "Vacuum"
-  },
-  {
-    question: "The persistence of sound after the source stops is called?",
-    options: ["Echo", "Resonance", "Refraction", "Diffraction"],
-    answer: "Echo"
-  },
-  {
-    question: "Which electromagnetic wave has the shortest wavelength?",
-    options: ["Gamma rays", "Radio waves", "Microwaves", "Infrared"],
-    answer: "Gamma rays"
-  },
-  {
-    question: "Which of these is NOT an electromagnetic wave?",
-    options: ["Sound wave", "X-ray", "Infrared", "Microwave"],
-    answer: "Sound wave"
-  },
-  {
-    question: "Which type of mirror is used in car side mirrors?",
-    options: ["Convex", "Concave", "Plane", "Parabolic"],
-    answer: "Convex"
-  },
-  {
-    question: "What is used to store electric charge?",
-    options: ["Capacitor", "Resistor", "Transistor", "Conductor"],
-    answer: "Capacitor"
-  },
-  {
-    question: "Which device reduces voltage in a circuit?",
-    options: ["Resistor", "Transformer", "Diode", "Inductor"],
-    answer: "Transformer"
-  },
-  {
-    question: "Which law explains the floating of ships?",
-    options: ["Archimedes�' Principle", "Hooke�'s Law", "Newton�'s 3rd Law", "Ohm�'s Law"],
-    answer: "Archimedes�' Principle"
-  },
-  {
-    question: "What determines the pitch of a sound?",
-    options: ["Frequency", "Amplitude", "Wavelength", "Speed"],
-    answer: "Frequency"
-  },
-  {
-    question: "Which color of light is bent the most in a prism?",
-    options: ["Violet", "Red", "Green", "Yellow"],
-    answer: "Violet"
-  },
-  {
-    question: "Why does a coin in water appear closer?",
-    options: ["Refraction", "Reflection", "Diffraction", "Absorption"],
-    answer: "Refraction"
-  },
-  {
-    question: "Which gas is most used in electric bulbs?",
-    options: ["Argon", "Oxygen", "Nitrogen", "Hydrogen"],
-    answer: "Argon"
-  },
-  {
-    question: "Which particle is responsible for current in metals?",
-    options: ["Electrons", "Protons", "Neutrons", "Photons"],
-    answer: "Electrons"
-  },
-  {
-    question: "Which planet has the strongest gravity?",
-    options: ["Jupiter", "Earth", "Mars", "Venus"],
-    answer: "Jupiter"
-  },
-  {
-    question: "What causes tides on Earth?",
-    options: ["Moon�'s gravity", "Sunlight", "Wind", "Clouds"],
-    answer: "Moon�'s gravity"
-  },
-  {
-    question: "The unit of electric current is?",
-    options: ["Ampere", "Volt", "Ohm", "Watt"],
-    answer: "Ampere"
-  },
-  {
-    question: "The unit of resistance is?",
-    options: ["Ohm", "Ampere", "Volt", "Watt"],
-    answer: "Ohm"
-  },
-  {
-    question: "The unit of power is?",
-    options: ["Watt", "Volt", "Ampere", "Ohm"],
-    answer: "Watt"
-  },
-  {
-    question: "What is the function of a fuse?",
-    options: ["Protects circuit from excess current", "Stores energy", "Amplifies current", "Lowers voltage"],
-    answer: "Protects circuit from excess current"
-  },
-  {
-    question: "What type of motion does a pendulum perform?",
-    options: ["Oscillatory", "Rotational", "Linear", "Curvilinear"],
-    answer: "Oscillatory"
-  },
-  {
-    question: "Heat transfer through a fluid is called?",
-    options: ["Convection", "Conduction", "Radiation", "Diffusion"],
-    answer: "Convection"
-  },
-  {
-    question: "Heat transfer through solids is called?",
-    options: ["Conduction", "Convection", "Radiation", "Evaporation"],
-    answer: "Conduction"
-  },
-  {
-    question: "Which wave requires a medium?",
-    options: ["Sound wave", "Light wave", "Radio wave", "Gamma ray"],
-    answer: "Sound wave"
-  },
-  {
-    question: "Which wave doesn�'t need a medium?",
-    options: ["Light", "Sound", "Water", "Seismic"],
-    answer: "Light"
-  },
-  {
-    question: "Which law explains how rockets move?",
-    options: ["Newton�'s 3rd Law", "Newton�'s 1st Law", "Hooke�'s Law", "Ohm�'s Law"],
-    answer: "Newton�'s 3rd Law"
-  },
-  {
-    question: "Who developed the theory of relativity?",
-    options: ["Albert Einstein", "Isaac Newton", "Galileo", "Faraday"],
-    answer: "Albert Einstein"
-  },
-  {
-    question: "The formula E = mc� relates energy and?",
-    options: ["Mass", "Velocity", "Distance", "Time"],
-    answer: "Mass"
-  },
-  {
-    question: "Which scientist discovered radioactivity?",
-    options: ["Henri Becquerel", "Einstein", "Newton", "Galileo"],
-    answer: "Henri Becquerel"
-  },
-  {
-    question: "Which instrument measures electric current?",
-    options: ["Ammeter", "Voltmeter", "Ohmmeter", "Barometer"],
-    answer: "Ammeter"
-  },
-  {
-    question: "An object will float in a fluid if its density is?",
-    options: ["Less than the fluid", "Greater than the fluid", "Equal to the fluid", "Zero"],
-    answer: "Less than the fluid"
-  },
-  {
-    question: "A 100 W bulb uses how much energy in 1 hour?",
-    options: ["100 Wh", "1 kWh", "10 Wh", "0.1 Wh"],
-    answer: "100 Wh"
-  },
-  {
-    question: "An object moving at constant velocity has?",
-    options: ["Zero acceleration", "Increasing speed", "Negative acceleration", "Constant force"],
-    answer: "Zero acceleration"
-  },
-  {
-    question: "What type of lens is used to correct short-sightedness?",
-    options: ["Concave", "Convex", "Plano", "Cylindrical"],
-    answer: "Concave"
-  },
-  {
-    question: "Which mirror converges light rays?",
-    options: ["Concave", "Convex", "Plane", "Parabolic"],
-    answer: "Concave"
-  },
-  {
-    question: "Which mirror diverges light rays?",
-    options: ["Convex", "Concave", "Plane", "Cylindrical"],
-    answer: "Convex"
-  },
-  {
-    question: "What is the source of the sun's energy?",
-    options: ["Nuclear fusion", "Combustion", "Radiation", "Gravity"],
-    answer: "Nuclear fusion"
-  }
+
+{
+  question: "Which of the following expressions is dimensionally correct for velocity?",
+  options: ["LT⁻¹", "L²T⁻²", "LT", "L⁻¹T"],
+  answer: "LT⁻¹"
+},
+{
+  question: "Which quantity has the same dimensions as work?",
+  options: ["Energy", "Force", "Pressure", "Momentum"],
+  answer: "Energy"
+},
+{
+  question: "The dimensions of pressure are:",
+  options: ["ML⁻¹T⁻²", "MLT⁻²", "M⁻¹LT⁻²", "ML²T⁻¹"],
+  answer: "ML⁻¹T⁻²"
+},
+{
+  question: "Which of the following is a derived quantity?",
+  options: ["Force", "Mass", "Time", "Length"],
+  answer: "Force"
+},
+{
+  question: "Which instrument is most suitable for measuring the diameter of a thin wire with high precision?",
+  options: ["Micrometer screw gauge", "Metre rule", "Vernier calipers", "Measuring tape"],
+  answer: "Micrometer screw gauge"
+},
+{
+  question: "Which of the following quantities is a vector?",
+  options: ["Acceleration", "Speed", "Temperature", "Energy"],
+  answer: "Acceleration"
+},
+{
+  question: "Which of the following is NOT a scalar quantity?",
+  options: ["Force", "Mass", "Time", "Distance"],
+  answer: "Force"
+},
+{
+  question: "The resultant of two perpendicular vectors of magnitudes 6N and 8N is:",
+  options: ["10N", "14N", "2N", "48N"],
+  answer: "10N"
+},
+{
+  question: "Which of the following has dimension ML²T⁻²?",
+  options: ["Energy", "Force", "Power", "Pressure"],
+  answer: "Energy"
+},
+{
+  question: "Which quantity is measured in kg m⁻³?",
+  options: ["Density", "Pressure", "Force", "Energy"],
+  answer: "Density"
+},
+{
+  question: "A physical quantity that has magnitude but no direction is called:",
+  options: ["Scalar", "Vector", "Tensor", "Unit"],
+  answer: "Scalar"
+},
+{
+  question: "Which of the following is the SI unit of electric current?",
+  options: ["Ampere", "Volt", "Ohm", "Coulomb"],
+  answer: "Ampere"
+},
+{
+  question: "Which of the following expressions represents force in terms of base units?",
+  options: ["kg m s⁻²", "kg m² s⁻¹", "kg⁻¹ m s²", "kg m s"],
+  answer: "kg m s⁻²"
+},
+{
+  question: "Which of the following quantities has the dimension of momentum?",
+  options: ["MLT⁻¹", "ML²T⁻²", "ML⁻¹T⁻²", "M⁻¹LT"],
+  answer: "MLT⁻¹"
+},
+{
+  question: "Which of the following is a correct example of vector addition?",
+  options: ["Displacement + displacement", "Speed + time", "Mass + force", "Energy + power"],
+  answer: "Displacement + displacement"
+},
+{
+  question: "The SI unit of power is:",
+  options: ["Watt", "Joule", "Newton", "Pascal"],
+  answer: "Watt"
+},
+{
+  question: "Which of the following best describes a fundamental quantity?",
+  options: ["Independent physical quantity", "Derived from other quantities", "Combination of units", "Dimensionless value"],
+  answer: "Independent physical quantity"
+},
+{
+  question: "The error in a measurement using a metre rule is approximately:",
+  options: ["±0.1 cm", "±1 cm", "±0.01 cm", "±0.5 cm"],
+  answer: "±0.1 cm"
+},
+{
+  question: "Which of the following is NOT a base SI unit?",
+  options: ["Newton", "Metre", "Kilogram", "Second"],
+  answer: "Newton"
+},
+{
+  question: "If a quantity has dimensions M⁰L⁰T⁰, it is:",
+  options: ["Dimensionless", "Scalar", "Vector", "Derived"],
+  answer: "Dimensionless"
+},
+
+{
+  question: "A force of 20 N acts at 30° to the horizontal. Its horizontal component is:",
+  options: ["17.3 N", "10 N", "15 N", "20 N"],
+  answer: "17.3 N"
+},
+{
+  question: "A body moves with constant velocity. Which statement is correct?",
+  options: ["Acceleration is zero", "Force is increasing", "Speed is changing", "Direction is changing"],
+  answer: "Acceleration is zero"
+},
+{
+  question: "The area under a velocity-time graph represents:",
+  options: ["Displacement", "Acceleration", "Speed", "Force"],
+  answer: "Displacement"
+},
+{
+  question: "The gradient of a displacement-time graph gives:",
+  options: ["Velocity", "Acceleration", "Distance", "Speed"],
+  answer: "Velocity"
+},
+{
+  question: "A car accelerates uniformly from rest to 20 m/s in 5 s. Its acceleration is:",
+  options: ["4 m/s²", "5 m/s²", "2 m/s²", "10 m/s²"],
+  answer: "4 m/s²"
+},
+{
+  question: "Two vectors of equal magnitude act in opposite directions. Their resultant is:",
+  options: ["Zero", "Twice the magnitude", "Half the magnitude", "Same magnitude"],
+  answer: "Zero"
+},
+{
+  question: "A body moving in a circle at constant speed has:",
+  options: ["Changing velocity", "Zero acceleration", "Constant displacement", "No force acting"],
+  answer: "Changing velocity"
+},
+{
+  question: "The centripetal force acts:",
+  options: ["Towards the centre", "Away from the centre", "Tangentially", "Vertically upward"],
+  answer: "Towards the centre"
+},
+{
+  question: "If velocity doubles, kinetic energy becomes:",
+  options: ["Four times", "Twice", "Half", "Unchanged"],
+  answer: "Four times"
+},
+{
+  question: "A displacement-time graph is a straight line. This indicates:",
+  options: ["Constant velocity", "Increasing acceleration", "Decreasing speed", "Zero velocity"],
+  answer: "Constant velocity"
+},
+{
+  question: "A car travels 100 m in 10 s, then 200 m in 20 s. Its average speed is:",
+  options: ["10 m/s", "15 m/s", "20 m/s", "5 m/s"],
+  answer: "10 m/s"
+},
+{
+  question: "A projectile reaches maximum height when:",
+  options: ["Vertical velocity is zero", "Horizontal velocity is zero", "Acceleration is zero", "Speed is maximum"],
+  answer: "Vertical velocity is zero"
+},
+{
+  question: "The time taken for a freely falling object depends on:",
+  options: ["Height only", "Mass only", "Velocity only", "Air resistance only"],
+  answer: "Height only"
+},
+{
+  question: "Which of the following quantities is always constant in uniform circular motion?",
+  options: ["Speed", "Velocity", "Acceleration", "Displacement"],
+  answer: "Speed"
+},
+{
+  question: "A stone is thrown vertically upward. At the highest point, its:",
+  options: ["Velocity is zero but acceleration is not zero", "Velocity and acceleration are zero", "Acceleration is zero", "Velocity is maximum"],
+  answer: "Velocity is zero but acceleration is not zero"
+},
+{
+  question: "Relative velocity is the velocity of one object:",
+  options: ["With respect to another", "With respect to ground only", "In circular motion", "Due to gravity only"],
+  answer: "With respect to another"
+},
+{
+  question: "If two cars move in opposite directions, their relative speed is:",
+  options: ["Sum of their speeds", "Difference of speeds", "Zero", "Average speed"],
+  answer: "Sum of their speeds"
+},
+{
+  question: "A body moving with uniform acceleration has:",
+  options: ["Constant rate of change of velocity", "Constant velocity", "Zero acceleration", "Variable force only"],
+  answer: "Constant rate of change of velocity"
+},
+{
+  question: "The SI unit of acceleration is:",
+  options: ["m/s²", "m/s", "m²/s", "s/m"],
+  answer: "m/s²"
+},
+{
+  question: "Which graph represents uniform acceleration?",
+  options: ["Straight line velocity-time graph", "Horizontal displacement-time graph", "Curved velocity-time graph", "Vertical displacement-time graph"],
+  answer: "Straight line velocity-time graph"
+},
+
+{
+  question: "A body of mass 5 kg experiences a force of 20 N. Its acceleration is:",
+  options: ["4 m/s²", "5 m/s²", "2 m/s²", "10 m/s²"],
+  answer: "4 m/s²"
+},
+{
+  question: "Newton’s first law is also known as the law of:",
+  options: ["Inertia", "Acceleration", "Momentum", "Energy"],
+  answer: "Inertia"
+},
+{
+  question: "The inertia of a body depends on its:",
+  options: ["Mass", "Velocity", "Volume", "Shape"],
+  answer: "Mass"
+},
+{
+  question: "A force that always opposes motion is:",
+  options: ["Friction", "Tension", "Weight", "Normal reaction"],
+  answer: "Friction"
+},
+{
+  question: "Which type of friction acts on a body moving through air?",
+  options: ["Air resistance", "Static friction", "Sliding friction", "Limiting friction"],
+  answer: "Air resistance"
+},
+{
+  question: "The unit of force is:",
+  options: ["Newton", "Joule", "Watt", "Pascal"],
+  answer: "Newton"
+},
+{
+  question: "Which of the following is an example of Newton’s third law?",
+  options: ["Action and reaction are equal and opposite", "Force equals mass times acceleration", "Objects remain at rest", "Energy is conserved"],
+  answer: "Action and reaction are equal and opposite"
+},
+{
+  question: "The momentum of a body is given by:",
+  options: ["Mass × velocity", "Force × time", "Mass × acceleration", "Velocity ÷ mass"],
+  answer: "Mass × velocity"
+},
+{
+  question: "The SI unit of momentum is:",
+  options: ["kg m/s", "kg m/s²", "N m", "J s"],
+  answer: "kg m/s"
+},
+{
+  question: "A body of mass 2 kg moves with velocity 5 m/s. Its momentum is:",
+  options: ["10 kg m/s", "7 kg m/s", "5 kg m/s", "2.5 kg m/s"],
+  answer: "10 kg m/s"
+},
+{
+  question: "Impulse is equal to:",
+  options: ["Change in momentum", "Force × distance", "Mass × acceleration", "Velocity × time"],
+  answer: "Change in momentum"
+},
+{
+  question: "Which of the following conserves momentum?",
+  options: ["Isolated system", "Open system", "Frictional system", "Thermal system"],
+  answer: "Isolated system"
+},
+{
+  question: "The weight of a body is given by:",
+  options: ["mg", "mv", "ma", "m/g"],
+  answer: "mg"
+},
+{
+  question: "Which force acts perpendicular to a surface?",
+  options: ["Normal reaction", "Friction", "Tension", "Weight"],
+  answer: "Normal reaction"
+},
+{
+  question: "The coefficient of friction is defined as:",
+  options: ["Frictional force ÷ normal reaction", "Normal reaction ÷ friction", "Force × distance", "Mass ÷ force"],
+  answer: "Frictional force ÷ normal reaction"
+},
+{
+  question: "A car of mass 1000 kg accelerates at 2 m/s². The force acting on it is:",
+  options: ["2000 N", "500 N", "1000 N", "4000 N"],
+  answer: "2000 N"
+},
+{
+  question: "Centripetal force required for circular motion depends on:",
+  options: ["Mass, velocity and radius", "Mass only", "Velocity only", "Radius only"],
+  answer: "Mass, velocity and radius"
+},
+{
+  question: "If the speed of a body in circular motion doubles, centripetal force becomes:",
+  options: ["Four times", "Twice", "Half", "Unchanged"],
+  answer: "Four times"
+},
+{
+  question: "Which of the following best explains why passengers lean outward in a turning car?",
+  options: ["Inertia of motion", "Friction", "Gravity", "Normal force"],
+  answer: "Inertia of motion"
+},
+{
+  question: "The tension in a string is a force that acts:",
+  options: ["Along the string", "Perpendicular to the string", "Opposite to motion", "Vertically upward only"],
+  answer: "Along the string"
+},
+
+{
+  question: "Work is done when a force:",
+  options: ["causes displacement in its direction", "acts without movement", "is balanced", "is perpendicular to displacement"],
+  answer: "causes displacement in its direction"
+},
+{
+  question: "The SI unit of work is:",
+  options: ["Joule", "Watt", "Newton", "Pascal"],
+  answer: "Joule"
+},
+{
+  question: "Which of the following represents kinetic energy?",
+  options: ["½mv²", "mv", "mgh", "Fv"],
+  answer: "½mv²"
+},
+{
+  question: "Potential energy depends on:",
+  options: ["Height and mass", "Velocity and mass", "Time and force", "Distance only"],
+  answer: "Height and mass"
+},
+{
+  question: "The SI unit of power is:",
+  options: ["Watt", "Joule", "Newton", "Volt"],
+  answer: "Watt"
+},
+{
+  question: "Power is defined as:",
+  options: ["Rate of doing work", "Work done per unit distance", "Force × velocity", "Energy × time"],
+  answer: "Rate of doing work"
+},
+{
+  question: "A machine is said to be efficient when:",
+  options: ["Useful output is close to input", "Input is zero", "Output is greater than input", "Energy is destroyed"],
+  answer: "Useful output is close to input"
+},
+{
+  question: "Efficiency is given by:",
+  options: ["Useful output ÷ input × 100%", "Input ÷ output × 100%", "Output − input", "Input × output"],
+  answer: "Useful output ÷ input × 100%"
+},
+{
+  question: "Which of the following is an example of mechanical energy?",
+  options: ["Kinetic energy", "Chemical energy", "Electrical energy", "Thermal energy"],
+  answer: "Kinetic energy"
+},
+{
+  question: "A body of mass 2 kg moves at 3 m/s. Its kinetic energy is:",
+  options: ["9 J", "6 J", "12 J", "18 J"],
+  answer: "9 J"
+},
+{
+  question: "Which of the following forms of energy is stored in fuels?",
+  options: ["Chemical energy", "Kinetic energy", "Thermal energy", "Light energy"],
+  answer: "Chemical energy"
+},
+{
+  question: "The principle of conservation of energy states that energy:",
+  options: ["cannot be created or destroyed", "can be destroyed", "is always increasing", "is always decreasing"],
+  answer: "cannot be created or destroyed"
+},
+{
+  question: "Work done against gravity is stored as:",
+  options: ["Potential energy", "Kinetic energy", "Thermal energy", "Electrical energy"],
+  answer: "Potential energy"
+},
+{
+  question: "Which of the following reduces efficiency of a machine?",
+  options: ["Friction", "Lubrication", "Smooth surfaces", "Reduced load"],
+  answer: "Friction"
+},
+{
+  question: "A force of 10 N moves an object through 5 m. Work done is:",
+  options: ["50 J", "2 J", "15 J", "10 J"],
+  answer: "50 J"
+},
+{
+  question: "Which of the following is a simple machine?",
+  options: ["Lever", "Engine", "Generator", "Transformer"],
+  answer: "Lever"
+},
+{
+  question: "In a first-class lever, the fulcrum is:",
+  options: ["Between effort and load", "At the end", "Near the load", "Near the effort"],
+  answer: "Between effort and load"
+},
+{
+  question: "Mechanical advantage is defined as:",
+  options: ["Load ÷ effort", "Effort ÷ load", "Load × effort", "Effort − load"],
+  answer: "Load ÷ effort"
+},
+{
+  question: "Velocity ratio is defined as:",
+  options: ["Distance moved by effort ÷ distance moved by load", "Load ÷ effort", "Effort × distance", "Load × distance"],
+  answer: "Distance moved by effort ÷ distance moved by load"
+},
+{
+  question: "A machine has efficiency 80%. This means:",
+  options: ["80% of input energy is useful output", "Energy is lost completely", "Output is greater than input", "Input is zero"],
+  answer: "80% of input energy is useful output"
+},
+
+{
+  question: "Temperature is a measure of the:",
+  options: ["average kinetic energy of particles", "total heat content", "mass of particles", "density of substance"],
+  answer: "average kinetic energy of particles"
+},
+{
+  question: "Heat is best defined as:",
+  options: ["energy transferred due to temperature difference", "internal energy of a body", "temperature of a substance", "energy stored in bonds"],
+  answer: "energy transferred due to temperature difference"
+},
+{
+  question: "Which scale has absolute zero at 0 K?",
+  options: ["Kelvin scale", "Celsius scale", "Fahrenheit scale", "Thermodynamic scale"],
+  answer: "Kelvin scale"
+},
+{
+  question: "0°C is equivalent to:",
+  options: ["273 K", "273°C", "0 K", "100 K"],
+  answer: "273 K"
+},
+{
+  question: "Which property of a substance is used in liquid-in-glass thermometers?",
+  options: ["Thermal expansion", "Density", "Pressure", "Volume only"],
+  answer: "Thermal expansion"
+},
+{
+  question: "Which of the following expands most on heating?",
+  options: ["Gases", "Liquids", "Solids", "Metals"],
+  answer: "Gases"
+},
+{
+  question: "The SI unit of heat energy is:",
+  options: ["Joule", "Watt", "Calorie", "Kelvin"],
+  answer: "Joule"
+},
+{
+  question: "Specific heat capacity is the amount of heat required to:",
+  options: ["raise temperature of 1 kg by 1 K", "raise temperature of any mass by 1°C", "change state of substance", "increase pressure"],
+  answer: "raise temperature of 1 kg by 1 K"
+},
+{
+  question: "Which material has the highest specific heat capacity?",
+  options: ["Water", "Iron", "Copper", "Aluminium"],
+  answer: "Water"
+},
+{
+  question: "Which process occurs at constant temperature?",
+  options: ["Change of state", "Heating of gas", "Expansion of metal", "Compression of air"],
+  answer: "Change of state"
+},
+{
+  question: "Latent heat is the heat required to:",
+  options: ["change state without temperature change", "increase temperature", "reduce temperature", "increase pressure"],
+  answer: "change state without temperature change"
+},
+{
+  question: "Which of the following involves latent heat?",
+  options: ["Melting of ice", "Heating water", "Cooling air", "Expansion of gas"],
+  answer: "Melting of ice"
+},
+{
+  question: "Boyle’s law states that for a fixed mass of gas at constant temperature:",
+  options: ["Pressure is inversely proportional to volume", "Pressure is directly proportional to volume", "Temperature is constant", "Volume is constant"],
+  answer: "Pressure is inversely proportional to volume"
+},
+{
+  question: "Charles’ law states that:",
+  options: ["Volume is directly proportional to temperature", "Pressure is constant", "Volume is constant", "Temperature is inversely proportional to pressure"],
+  answer: "Volume is directly proportional to temperature"
+},
+{
+  question: "Which of the following increases pressure of a gas?",
+  options: ["Decrease in volume", "Decrease in temperature", "Decrease in mass", "Increase in volume"],
+  answer: "Decrease in volume"
+},
+{
+  question: "Which process involves transfer of heat by direct contact?",
+  options: ["Conduction", "Convection", "Radiation", "Evaporation"],
+  answer: "Conduction"
+},
+{
+  question: "Heat transfer in fluids occurs mainly by:",
+  options: ["Convection", "Conduction", "Radiation", "Reflection"],
+  answer: "Convection"
+},
+{
+  question: "Radiation is heat transfer through:",
+  options: ["Electromagnetic waves", "Particles", "Conduction only", "Convection only"],
+  answer: "Electromagnetic waves"
+},
+{
+  question: "Which surface is the best absorber of heat?",
+  options: ["Black dull surface", "Shiny surface", "White surface", "Smooth metal"],
+  answer: "Black dull surface"
+},
+{
+  question: "Evaporation causes cooling because:",
+  options: ["high energy particles escape", "temperature increases", "particles slow down", "pressure increases"],
+  answer: "high energy particles escape"
+},
+
+{
+  question: "A wave is defined as:",
+  options: ["transfer of energy without transfer of matter", "movement of particles from one place to another", "flow of energy and matter together", "oscillation of particles only"],
+  answer: "transfer of energy without transfer of matter"
+},
+{
+  question: "Which of the following is a transverse wave?",
+  options: ["Light wave", "Sound wave", "Water flow", "Air current"],
+  answer: "Light wave"
+},
+{
+  question: "Which of the following is a longitudinal wave?",
+  options: ["Sound wave", "Light wave", "Water surface wave", "Electromagnetic wave"],
+  answer: "Sound wave"
+},
+{
+  question: "The speed of a wave is given by:",
+  options: ["frequency × wavelength", "wavelength ÷ frequency", "frequency ÷ wavelength", "wavelength × time"],
+  answer: "frequency × wavelength"
+},
+{
+  question: "The unit of frequency is:",
+  options: ["Hertz", "Metre", "Second", "Joule"],
+  answer: "Hertz"
+},
+{
+  question: "The time taken for one complete wave cycle is called:",
+  options: ["Period", "Frequency", "Amplitude", "Wavelength"],
+  answer: "Period"
+},
+{
+  question: "Which of the following determines the pitch of a sound?",
+  options: ["Frequency", "Amplitude", "Speed", "Wavelength"],
+  answer: "Frequency"
+},
+{
+  question: "Which of the following determines the loudness of a sound?",
+  options: ["Amplitude", "Frequency", "Speed", "Wavelength"],
+  answer: "Amplitude"
+},
+{
+  question: "The speed of sound is greatest in:",
+  options: ["Solids", "Liquids", "Gases", "Vacuum"],
+  answer: "Solids"
+},
+{
+  question: "Echo is produced due to:",
+  options: ["Reflection of sound waves", "Refraction of sound waves", "Diffraction of sound waves", "Absorption of sound"],
+  answer: "Reflection of sound waves"
+},
+{
+  question: "The angle of incidence is equal to the angle of reflection when measured from the:",
+  options: ["Normal", "Surface", "Mirror edge", "Light source"],
+  answer: "Normal"
+},
+{
+  question: "Which of the following is a characteristic of plane mirrors?",
+  options: ["Image is virtual and upright", "Image is real and inverted", "Image is magnified", "Image is distorted"],
+  answer: "Image is virtual and upright"
+},
+{
+  question: "Refraction occurs due to change in:",
+  options: ["Speed of light in different media", "Frequency of light", "Amplitude of light", "Direction of source"],
+  answer: "Speed of light in different media"
+},
+{
+  question: "Which of the following remains constant when light refracts?",
+  options: ["Frequency", "Speed", "Wavelength", "Direction"],
+  answer: "Frequency"
+},
+{
+  question: "The refractive index is defined as:",
+  options: ["Speed of light in vacuum ÷ speed in medium", "Speed in medium ÷ speed in vacuum", "Wavelength ÷ frequency", "Frequency ÷ wavelength"],
+  answer: "Speed of light in vacuum ÷ speed in medium"
+},
+{
+  question: "When light enters a denser medium, it:",
+  options: ["slows down and bends towards the normal", "speeds up and bends away from normal", "does not change speed", "reflects completely"],
+  answer: "slows down and bends towards the normal"
+},
+{
+  question: "Total internal reflection occurs when:",
+  options: ["angle of incidence exceeds critical angle", "angle is zero", "light enters less dense medium", "light speed increases"],
+  answer: "angle of incidence exceeds critical angle"
+},
+{
+  question: "Which device uses total internal reflection?",
+  options: ["Optical fibre", "Plane mirror", "Convex lens", "Prism only"],
+  answer: "Optical fibre"
+},
+{
+  question: "A convex lens is used to:",
+  options: ["converge light rays", "diverge light rays", "reflect light", "absorb light"],
+  answer: "converge light rays"
+},
+{
+  question: "Which of the following best explains why sound cannot travel in vacuum?",
+  options: ["It requires a material medium", "It has no energy", "It travels too fast", "It reflects only"],
+  answer: "It requires a material medium"
+},
+
+{
+  question: "Electric current is defined as the rate of flow of:",
+  options: ["electric charge", "energy", "potential difference", "resistance"],
+  answer: "electric charge"
+},
+{
+  question: "The SI unit of electric charge is:",
+  options: ["Coulomb", "Ampere", "Volt", "Ohm"],
+  answer: "Coulomb"
+},
+{
+  question: "One coulomb is equal to:",
+  options: ["1 ampere × 1 second", "1 volt × 1 second", "1 ohm × 1 second", "1 watt × 1 second"],
+  answer: "1 ampere × 1 second"
+},
+{
+  question: "Ohm’s law is valid only when:",
+  options: ["temperature is constant", "current is zero", "voltage is zero", "resistance is zero"],
+  answer: "temperature is constant"
+},
+{
+  question: "The unit of resistance is:",
+  options: ["Ohm", "Volt", "Ampere", "Watt"],
+  answer: "Ohm"
+},
+{
+  question: "Which expression correctly represents electrical power?",
+  options: ["P = VI", "P = IR", "P = V/R", "P = I/V"],
+  answer: "P = VI"
+},
+{
+  question: "Which of the following represents electrical energy?",
+  options: ["E = VIt", "E = IR", "E = V/R", "E = I/V"],
+  answer: "E = VIt"
+},
+{
+  question: "In a series circuit, the total resistance is:",
+  options: ["sum of individual resistances", "product of resistances", "same as one resistor", "less than each resistor"],
+  answer: "sum of individual resistances"
+},
+{
+  question: "In a parallel circuit, the effective resistance is:",
+  options: ["less than the smallest resistor", "greater than all resistors", "equal to sum", "equal to largest resistor"],
+  answer: "less than the smallest resistor"
+},
+{
+  question: "Which instrument is used to measure current?",
+  options: ["Ammeter", "Voltmeter", "Ohmmeter", "Galvanometer"],
+  answer: "Ammeter"
+},
+{
+  question: "Which instrument is connected in parallel in a circuit?",
+  options: ["Voltmeter", "Ammeter", "Resistor", "Battery"],
+  answer: "Voltmeter"
+},
+{
+  question: "Which factor affects resistance of a conductor?",
+  options: ["Length of conductor", "Color of conductor", "Shape of battery", "Position in circuit"],
+  answer: "Length of conductor"
+},
+{
+  question: "If the length of a wire is doubled, its resistance:",
+  options: ["doubles", "halves", "remains constant", "quadruples"],
+  answer: "doubles"
+},
+{
+  question: "Which material has the lowest resistance?",
+  options: ["Copper", "Rubber", "Glass", "Plastic"],
+  answer: "Copper"
+},
+{
+  question: "A fuse is used to:",
+  options: ["protect circuit from excessive current", "increase voltage", "store energy", "reduce resistance"],
+  answer: "protect circuit from excessive current"
+},
+{
+  question: "Electrical energy is measured in:",
+  options: ["Joule", "Watt", "Volt", "Ohm"],
+  answer: "Joule"
+},
+{
+  question: "Which of the following is a good insulator?",
+  options: ["Plastic", "Copper", "Aluminium", "Iron"],
+  answer: "Plastic"
+},
+{
+  question: "If voltage increases while resistance remains constant, current:",
+  options: ["increases", "decreases", "remains constant", "becomes zero"],
+  answer: "increases"
+},
+{
+  question: "Which of the following best explains heating in a resistor?",
+  options: ["conversion of electrical energy to heat", "loss of electrons", "increase in resistance only", "decrease in voltage"],
+  answer: "conversion of electrical energy to heat"
+},
+{
+  question: "Which device converts electrical energy into mechanical energy?",
+  options: ["Electric motor", "Generator", "Transformer", "Battery"],
+  answer: "Electric motor"
+},
+
+{
+  question: "A magnetic field is best described as a region where:",
+  options: ["a magnetic force can be detected", "electric current flows", "heat is produced", "light travels"],
+  answer: "a magnetic force can be detected"
+},
+{
+  question: "Magnetic field lines around a bar magnet run from:",
+  options: ["North pole to South pole", "South pole to North pole", "Centre outward", "Random directions"],
+  answer: "North pole to South pole"
+},
+{
+  question: "Which material is strongly attracted to a magnet?",
+  options: ["Iron", "Aluminium", "Copper", "Plastic"],
+  answer: "Iron"
+},
+{
+  question: "Like poles of magnets:",
+  options: ["repel each other", "attract each other", "cancel each other", "have no effect"],
+  answer: "repel each other"
+},
+{
+  question: "Unlike poles of magnets:",
+  options: ["attract each other", "repel each other", "neutralize", "do nothing"],
+  answer: "attract each other"
+},
+{
+  question: "Which device is used to detect the presence of a magnetic field?",
+  options: ["Compass", "Voltmeter", "Ammeter", "Thermometer"],
+  answer: "Compass"
+},
+{
+  question: "An electromagnet is formed when current flows through a:",
+  options: ["coil of wire", "metal plate", "plastic rod", "glass tube"],
+  answer: "coil of wire"
+},
+{
+  question: "The strength of an electromagnet can be increased by:",
+  options: ["increasing current", "reducing turns", "using plastic core", "reducing voltage"],
+  answer: "increasing current"
+},
+{
+  question: "Which core material increases the strength of an electromagnet?",
+  options: ["Soft iron", "Copper", "Aluminium", "Plastic"],
+  answer: "Soft iron"
+},
+{
+  question: "The direction of magnetic field around a current-carrying conductor is given by:",
+  options: ["Right-hand grip rule", "Newton’s law", "Ohm’s law", "Archimedes principle"],
+  answer: "Right-hand grip rule"
+},
+{
+  question: "When a current-carrying conductor is placed in a magnetic field, it experiences:",
+  options: ["a force", "heat only", "no effect", "pressure"],
+  answer: "a force"
+},
+{
+  question: "The direction of force on a current-carrying conductor is given by:",
+  options: ["Fleming’s left-hand rule", "Right-hand rule", "Ohm’s law", "Lenz’s law"],
+  answer: "Fleming’s left-hand rule"
+},
+{
+  question: "Electromagnetic induction occurs when:",
+  options: ["a conductor cuts magnetic field lines", "current is constant", "voltage is zero", "resistance is high"],
+  answer: "a conductor cuts magnetic field lines"
+},
+{
+  question: "The direction of induced current is given by:",
+  options: ["Fleming’s right-hand rule", "Left-hand rule", "Ohm’s law", "Newton’s law"],
+  answer: "Fleming’s right-hand rule"
+},
+{
+  question: "Which device works on the principle of electromagnetic induction?",
+  options: ["Generator", "Motor", "Battery", "Resistor"],
+  answer: "Generator"
+},
+{
+  question: "A transformer works on the principle of:",
+  options: ["electromagnetic induction", "conduction", "radiation", "electrostatics"],
+  answer: "electromagnetic induction"
+},
+{
+  question: "A step-up transformer:",
+  options: ["increases voltage", "decreases voltage", "reduces current only", "increases resistance"],
+  answer: "increases voltage"
+},
+{
+  question: "Which of the following remains constant in an ideal transformer?",
+  options: ["Power", "Voltage", "Current", "Resistance"],
+  answer: "Power"
+},
+{
+  question: "Induced current is maximum when:",
+  options: ["rate of change of magnetic field is high", "field is constant", "conductor is stationary", "temperature is low"],
+  answer: "rate of change of magnetic field is high"
+},
+{
+  question: "Which of the following is an application of electromagnets?",
+  options: ["Electric bell", "Thermometer", "Barometer", "Hydrometer"],
+  answer: "Electric bell"
+},
+
+{
+  question: "An atom consists of:",
+  options: ["protons, neutrons and electrons", "only protons and electrons", "only neutrons", "only electrons"],
+  answer: "protons, neutrons and electrons"
+},
+{
+  question: "The atomic number of an element represents the number of:",
+  options: ["protons", "neutrons", "electrons only", "nucleons"],
+  answer: "protons"
+},
+{
+  question: "Isotopes of an element have the same:",
+  options: ["atomic number but different mass numbers", "mass number only", "number of neutrons", "number of nucleons"],
+  answer: "atomic number but different mass numbers"
+},
+{
+  question: "Which radiation has the greatest penetrating power?",
+  options: ["Gamma rays", "Beta particles", "Alpha particles", "X-rays"],
+  answer: "Gamma rays"
+},
+{
+  question: "Which radiation is deflected most in an electric field?",
+  options: ["Beta particles", "Alpha particles", "Gamma rays", "Neutrons"],
+  answer: "Beta particles"
+},
+{
+  question: "Alpha particles consist of:",
+  options: ["2 protons and 2 neutrons", "electrons only", "photons", "protons only"],
+  answer: "2 protons and 2 neutrons"
+},
+{
+  question: "Beta particles are:",
+  options: ["high-speed electrons", "helium nuclei", "protons", "neutrons"],
+  answer: "high-speed electrons"
+},
+{
+  question: "Gamma radiation is:",
+  options: ["electromagnetic waves", "particles with mass", "protons", "electrons"],
+  answer: "electromagnetic waves"
+},
+{
+  question: "Half-life is defined as the time taken for:",
+  options: ["half the nuclei to decay", "all nuclei to decay", "temperature to halve", "mass to double"],
+  answer: "half the nuclei to decay"
+},
+{
+  question: "Radioactive decay is a:",
+  options: ["random process", "predictable process", "controlled reaction", "reversible reaction"],
+  answer: "random process"
+},
+{
+  question: "Which of the following changes during radioactive decay?",
+  options: ["Nucleus", "Electron shell only", "Temperature", "Volume"],
+  answer: "Nucleus"
+},
+{
+  question: "Which radiation is stopped by paper?",
+  options: ["Alpha", "Beta", "Gamma", "X-rays"],
+  answer: "Alpha"
+},
+{
+  question: "Which radiation requires thick lead shielding?",
+  options: ["Gamma", "Alpha", "Beta", "Neutron"],
+  answer: "Gamma"
+},
+{
+  question: "The unit of radioactivity is:",
+  options: ["Becquerel", "Joule", "Watt", "Newton"],
+  answer: "Becquerel"
+},
+{
+  question: "Nuclear fission involves:",
+  options: ["splitting of a heavy nucleus", "combination of nuclei", "electron movement", "energy absorption only"],
+  answer: "splitting of a heavy nucleus"
+},
+{
+  question: "Nuclear fusion involves:",
+  options: ["combining light nuclei", "splitting heavy nuclei", "electron transfer", "decay process"],
+  answer: "combining light nuclei"
+},
+{
+  question: "Which of the following occurs in the sun?",
+  options: ["Nuclear fusion", "Nuclear fission", "Radioactive decay", "Chemical reaction"],
+  answer: "Nuclear fusion"
+},
+{
+  question: "Which of the following is a use of radioisotopes?",
+  options: ["Medical diagnosis", "Mechanical work", "Heat conduction", "Electric current"],
+  answer: "Medical diagnosis"
+},
+{
+  question: "Which of the following is a hazard of radiation?",
+  options: ["Damage to living cells", "Increase in temperature", "Improved conductivity", "Reduced pressure"],
+  answer: "Damage to living cells"
+},
+{
+  question: "Which of the following best explains nuclear stability?",
+  options: ["Balance between nuclear forces", "Temperature of nucleus", "Color of atom", "Mass of electrons"],
+  answer: "Balance between nuclear forces"
+},
+
+{
+  question: "A semiconductor is a material whose conductivity is:",
+  options: ["between that of a conductor and an insulator", "equal to a conductor", "equal to an insulator", "zero"],
+  answer: "between that of a conductor and an insulator"
+},
+{
+  question: "Which of the following is a semiconductor material?",
+  options: ["Silicon", "Copper", "Rubber", "Glass"],
+  answer: "Silicon"
+},
+{
+  question: "Doping in semiconductors is the process of:",
+  options: ["adding impurities to modify conductivity", "removing electrons", "heating material", "cooling material"],
+  answer: "adding impurities to modify conductivity"
+},
+{
+  question: "An N-type semiconductor has excess:",
+  options: ["electrons", "holes", "protons", "neutrons"],
+  answer: "electrons"
+},
+{
+  question: "A P-type semiconductor has excess:",
+  options: ["holes", "electrons", "protons", "neutrons"],
+  answer: "holes"
+},
+{
+  question: "A p-n junction forms the basis of a:",
+  options: ["diode", "resistor", "capacitor", "inductor"],
+  answer: "diode"
+},
+{
+  question: "A diode allows current to flow in:",
+  options: ["one direction only", "both directions equally", "no direction", "reverse direction only"],
+  answer: "one direction only"
+},
+{
+  question: "Forward biasing of a diode means:",
+  options: ["reducing the barrier to allow current flow", "increasing resistance", "blocking current", "reducing voltage"],
+  answer: "reducing the barrier to allow current flow"
+},
+{
+  question: "Reverse biasing of a diode results in:",
+  options: ["very small current flow", "large current flow", "zero resistance", "increased conduction"],
+  answer: "very small current flow"
+},
+{
+  question: "A diode is used in rectification to convert:",
+  options: ["AC to DC", "DC to AC", "heat to electricity", "light to heat"],
+  answer: "AC to DC"
+},
+{
+  question: "Which device is used to amplify signals?",
+  options: ["Transistor", "Diode", "Resistor", "Capacitor"],
+  answer: "Transistor"
+},
+{
+  question: "A transistor has three terminals called:",
+  options: ["emitter, base, collector", "anode, cathode, grid", "input, output, ground", "source, drain, gate"],
+  answer: "emitter, base, collector"
+},
+{
+  question: "In a transistor, the base controls:",
+  options: ["current flow between emitter and collector", "voltage only", "resistance only", "temperature"],
+  answer: "current flow between emitter and collector"
+},
+{
+  question: "Which of the following best explains amplification?",
+  options: ["increase in signal strength", "decrease in voltage", "reduction in current", "loss of energy"],
+  answer: "increase in signal strength"
+},
+{
+  question: "Which component stores electrical charge?",
+  options: ["Capacitor", "Resistor", "Inductor", "Diode"],
+  answer: "Capacitor"
+},
+{
+  question: "Which component opposes change in current?",
+  options: ["Inductor", "Capacitor", "Resistor", "Diode"],
+  answer: "Inductor"
+},
+{
+  question: "A resistor is used to:",
+  options: ["limit current", "store charge", "increase voltage", "generate power"],
+  answer: "limit current"
+},
+{
+  question: "Which device converts AC to DC in power supply circuits?",
+  options: ["Rectifier", "Transformer", "Capacitor", "Inductor"],
+  answer: "Rectifier"
+},
+{
+  question: "Which of the following best explains the function of a capacitor in circuits?",
+  options: ["smoothens output voltage", "increases resistance", "generates current", "reduces power"],
+  answer: "smoothens output voltage"
+},
+{
+  question: "Which of the following is a practical application of transistors?",
+  options: ["Amplifiers in radios", "Thermometers", "Barometers", "Hydrometers"],
+  answer: "Amplifiers in radios"
+},
+
+{
+  question: "A body moving with constant speed in a circular path has acceleration because:",
+  options: ["its direction of motion changes continuously", "its speed is increasing", "no force acts on it", "its velocity is constant"],
+  answer: "its direction of motion changes continuously"
+},
+{
+  question: "Which factor determines the magnitude of centripetal force?",
+  options: ["mass, velocity and radius", "mass only", "radius only", "velocity only"],
+  answer: "mass, velocity and radius"
+},
+{
+  question: "A gas is compressed at constant temperature. Which quantity increases?",
+  options: ["Pressure", "Volume", "Temperature", "Mass"],
+  answer: "Pressure"
+},
+{
+  question: "Which of the following explains why solids conduct heat better than gases?",
+  options: ["Particles are closely packed", "Particles move faster", "Particles are larger", "Particles are lighter"],
+  answer: "Particles are closely packed"
+},
+{
+  question: "Which of the following best explains diffraction?",
+  options: ["Spreading of waves when passing through a narrow gap", "Reflection of waves", "Refraction of waves", "Absorption of waves"],
+  answer: "Spreading of waves when passing through a narrow gap"
+},
+{
+  question: "Which property of waves determines their energy?",
+  options: ["Amplitude", "Frequency", "Wavelength", "Speed"],
+  answer: "Amplitude"
+},
+{
+  question: "Which of the following explains why light refracts when entering another medium?",
+  options: ["Change in speed", "Change in frequency", "Change in amplitude", "Change in source"],
+  answer: "Change in speed"
+},
+{
+  question: "A conductor has high resistance when:",
+  options: ["its length is increased", "its thickness is increased", "temperature is decreased", "material is copper"],
+  answer: "its length is increased"
+},
+{
+  question: "Which of the following determines the current in a circuit?",
+  options: ["Potential difference and resistance", "Voltage only", "Resistance only", "Power only"],
+  answer: "Potential difference and resistance"
+},
+{
+  question: "Which of the following explains why parallel circuits are used in homes?",
+  options: ["devices operate independently", "current is zero", "voltage is reduced", "resistance is maximum"],
+  answer: "devices operate independently"
+},
+{
+  question: "Which of the following explains energy loss in machines?",
+  options: ["Friction converts energy to heat", "Energy is destroyed", "Mass decreases", "Force disappears"],
+  answer: "Friction converts energy to heat"
+},
+{
+  question: "A body falls freely under gravity. Its acceleration is:",
+  options: ["constant", "increasing", "decreasing", "zero"],
+  answer: "constant"
+},
+{
+  question: "Which of the following explains why pressure increases with depth in liquids?",
+  options: ["weight of liquid above increases", "temperature increases", "volume increases", "density decreases"],
+  answer: "weight of liquid above increases"
+},
+{
+  question: "Which of the following best explains resonance?",
+  options: ["system vibrates with maximum amplitude at natural frequency", "waves cancel each other", "energy is lost", "frequency decreases"],
+  answer: "system vibrates with maximum amplitude at natural frequency"
+},
+{
+  question: "Which of the following best explains how transformers reduce energy loss?",
+  options: ["high voltage reduces current", "low voltage increases current", "resistance is zero", "power is reduced"],
+  answer: "high voltage reduces current"
+},
+{
+  question: "Which of the following explains why metals expand when heated?",
+  options: ["increase in kinetic energy of particles", "decrease in particle size", "loss of electrons", "formation of bonds"],
+  answer: "increase in kinetic energy of particles"
+},
+{
+  question: "Which of the following determines the loudness of sound?",
+  options: ["Amplitude", "Frequency", "Speed", "Wavelength"],
+  answer: "Amplitude"
+},
+{
+  question: "Which of the following explains the motion of projectiles?",
+  options: ["combination of horizontal and vertical motion", "circular motion only", "linear motion only", "random motion"],
+  answer: "combination of horizontal and vertical motion"
+},
+{
+  question: "Which of the following best explains induced current?",
+  options: ["change in magnetic flux", "constant magnetic field", "increase in resistance", "increase in voltage only"],
+  answer: "change in magnetic flux"
+},
+{
+  question: "Which of the following explains why insulators do not conduct electricity?",
+  options: ["lack of free electrons", "high density", "high temperature", "large size"],
+  answer: "lack of free electrons"
+},
+
+{
+  question: "A projectile is launched at an angle θ. At the highest point, its horizontal velocity is:",
+  options: ["constant", "zero", "maximum", "increasing"],
+  answer: "constant"
+},
+{
+  question: "The time of flight of a projectile depends on:",
+  options: ["vertical component of velocity", "horizontal velocity", "mass", "range only"],
+  answer: "vertical component of velocity"
+},
+{
+  question: "The range of a projectile is maximum when the angle of projection is:",
+  options: ["45°", "30°", "60°", "90°"],
+  answer: "45°"
+},
+{
+  question: "Two projectiles are fired at complementary angles. Their ranges are:",
+  options: ["equal", "different", "zero", "independent"],
+  answer: "equal"
+},
+{
+  question: "Moment of a force is defined as:",
+  options: ["force × perpendicular distance", "force × velocity", "mass × acceleration", "force ÷ distance"],
+  answer: "force × perpendicular distance"
+},
+{
+  question: "The SI unit of moment is:",
+  options: ["N m", "N", "J", "W"],
+  answer: "N m"
+},
+{
+  question: "For a body in equilibrium, the sum of moments about a point is:",
+  options: ["zero", "maximum", "minimum", "constant"],
+  answer: "zero"
+},
+{
+  question: "Which condition is required for equilibrium?",
+  options: ["net force and net moment are zero", "force only is zero", "moment only is zero", "velocity is zero"],
+  answer: "net force and net moment are zero"
+},
+{
+  question: "Pressure is defined as:",
+  options: ["force per unit area", "force × area", "mass per unit volume", "force × distance"],
+  answer: "force per unit area"
+},
+{
+  question: "The SI unit of pressure is:",
+  options: ["Pascal", "Newton", "Joule", "Watt"],
+  answer: "Pascal"
+},
+{
+  question: "Pressure in a liquid increases with:",
+  options: ["depth", "surface area", "temperature", "volume"],
+  answer: "depth"
+},
+{
+  question: "Upthrust on a body in fluid is equal to:",
+  options: ["weight of fluid displaced", "mass of fluid", "volume of fluid", "density only"],
+  answer: "weight of fluid displaced"
+},
+{
+  question: "A body floats when:",
+  options: ["upthrust equals weight", "weight is greater", "density is zero", "volume is constant"],
+  answer: "upthrust equals weight"
+},
+{
+  question: "The refractive index of a medium is:",
+  options: ["speed in vacuum ÷ speed in medium", "speed in medium ÷ speed in vacuum", "wavelength ÷ frequency", "frequency × wavelength"],
+  answer: "speed in vacuum ÷ speed in medium"
+},
+{
+  question: "When light passes from air into glass, it:",
+  options: ["slows down and bends towards normal", "speeds up and bends away", "does not change", "reflects completely"],
+  answer: "slows down and bends towards normal"
+},
+{
+  question: "The critical angle is defined as the angle of incidence when:",
+  options: ["angle of refraction is 90°", "reflection occurs", "angle is zero", "refraction is maximum"],
+  answer: "angle of refraction is 90°"
+},
+{
+  question: "A convex lens produces a real image when the object is:",
+  options: ["beyond focal length", "at focal point", "within focal length", "at infinity only"],
+  answer: "beyond focal length"
+},
+{
+  question: "The power of a lens is measured in:",
+  options: ["dioptre", "metre", "watt", "joule"],
+  answer: "dioptre"
+},
+{
+  question: "Power of a lens is given by:",
+  options: ["1/f", "f", "f²", "1/f²"],
+  answer: "1/f"
+},
+{
+  question: "Which of the following best explains floating?",
+  options: ["density of object is less than fluid", "mass is zero", "pressure is constant", "volume is zero"],
+  answer: "density of object is less than fluid"
+},
+
+{
+  question: "The slope of a velocity-time graph represents:",
+  options: ["acceleration", "displacement", "speed", "distance"],
+  answer: "acceleration"
+},
+{
+  question: "The area under a force-time graph represents:",
+  options: ["impulse", "work", "power", "energy"],
+  answer: "impulse"
+},
+{
+  question: "A car moves with increasing velocity at a decreasing rate. The acceleration is:",
+  options: ["positive but decreasing", "negative", "constant", "zero"],
+  answer: "positive but decreasing"
+},
+{
+  question: "Which graph represents uniform motion?",
+  options: ["straight line displacement-time graph", "curved velocity-time graph", "horizontal velocity-time graph at zero", "vertical displacement-time graph"],
+  answer: "straight line displacement-time graph"
+},
+{
+  question: "A body of mass 4 kg moving at 5 m/s is brought to rest in 2 s. The force applied is:",
+  options: ["-10 N", "-20 N", "-5 N", "-40 N"],
+  answer: "-10 N"
+},
+{
+  question: "Which of the following best explains terminal velocity?",
+  options: ["drag force equals weight", "acceleration is maximum", "velocity is zero", "force is zero"],
+  answer: "drag force equals weight"
+},
+{
+  question: "Which factor affects heat transfer by radiation?",
+  options: ["surface nature", "mass of object", "volume only", "density only"],
+  answer: "surface nature"
+},
+{
+  question: "Which gas law involves constant pressure?",
+  options: ["Charles’ law", "Boyle’s law", "Pressure law", "Combined gas law"],
+  answer: "Charles’ law"
+},
+{
+  question: "A conductor has resistance 4Ω. If current is 2 A, voltage is:",
+  options: ["8 V", "2 V", "6 V", "4 V"],
+  answer: "8 V"
+},
+{
+  question: "Which of the following increases current in a circuit?",
+  options: ["decreasing resistance", "increasing resistance", "reducing voltage", "opening circuit"],
+  answer: "decreasing resistance"
+},
+{
+  question: "The energy stored in a stretched spring depends on:",
+  options: ["extension", "mass only", "temperature", "density"],
+  answer: "extension"
+},
+{
+  question: "Which of the following best explains why pressure decreases with height?",
+  options: ["less air above", "higher temperature", "more density", "stronger gravity"],
+  answer: "less air above"
+},
+{
+  question: "A ray of light passes from glass to air. It bends:",
+  options: ["away from the normal", "towards the normal", "does not bend", "reflects fully"],
+  answer: "away from the normal"
+},
+{
+  question: "Which of the following determines the focal length of a lens?",
+  options: ["curvature and material", "color", "size", "temperature"],
+  answer: "curvature and material"
+},
+{
+  question: "Which of the following explains induced emf?",
+  options: ["change in magnetic flux", "constant current", "increase in resistance", "steady field"],
+  answer: "change in magnetic flux"
+},
+{
+  question: "A transformer reduces voltage from 240 V to 120 V. It is a:",
+  options: ["step-down transformer", "step-up transformer", "rectifier", "generator"],
+  answer: "step-down transformer"
+},
+{
+  question: "Which of the following determines wave speed?",
+  options: ["medium properties", "frequency only", "amplitude", "time"],
+  answer: "medium properties"
+},
+{
+  question: "Which of the following best explains energy conservation in oscillations?",
+  options: ["conversion between kinetic and potential energy", "energy is lost completely", "mass changes", "velocity is constant"],
+  answer: "conversion between kinetic and potential energy"
+},
+{
+  question: "A body immersed in fluid experiences upthrust because:",
+  options: ["pressure difference", "temperature difference", "density decrease", "mass increase"],
+  answer: "pressure difference"
+},
+{
+  question: "Which of the following best explains why metals conduct electricity?",
+  options: ["presence of free electrons", "high density", "strong bonds", "large atoms"],
+  answer: "presence of free electrons"
+},
+
+{
+  question: "A projectile is fired horizontally. Its vertical motion is:",
+  options: ["uniformly accelerated", "uniform velocity", "zero motion", "decreasing acceleration"],
+  answer: "uniformly accelerated"
+},
+{
+  question: "Which condition ensures rotational equilibrium?",
+  options: ["sum of clockwise moments equals anticlockwise moments", "force is maximum", "velocity is constant", "mass is zero"],
+  answer: "sum of clockwise moments equals anticlockwise moments"
+},
+{
+  question: "A gas expands at constant temperature. The internal energy:",
+  options: ["remains constant", "increases", "decreases", "becomes zero"],
+  answer: "remains constant"
+},
+{
+  question: "Which factor most affects the rate of heat conduction?",
+  options: ["thermal conductivity of material", "color of object", "mass only", "volume only"],
+  answer: "thermal conductivity of material"
+},
+{
+  question: "Which of the following explains total internal reflection?",
+  options: ["light moves from denser to less dense medium beyond critical angle", "light reflects always", "light speeds up", "light stops"],
+  answer: "light moves from denser to less dense medium beyond critical angle"
+},
+{
+  question: "A convex lens forms a virtual image when the object is:",
+  options: ["within focal length", "beyond focal length", "at focal point", "at infinity"],
+  answer: "within focal length"
+},
+{
+  question: "Which of the following best explains why parallel circuits are preferred in homes?",
+  options: ["constant voltage across devices", "constant current only", "zero resistance", "no power loss"],
+  answer: "constant voltage across devices"
+},
+{
+  question: "A current-carrying conductor in a magnetic field experiences force due to:",
+  options: ["interaction between magnetic fields", "temperature increase", "resistance only", "voltage change"],
+  answer: "interaction between magnetic fields"
+},
+{
+  question: "Which of the following determines the induced emf in a coil?",
+  options: ["rate of change of magnetic flux", "resistance of coil", "temperature", "mass of coil"],
+  answer: "rate of change of magnetic flux"
+},
+{
+  question: "Which of the following explains why alpha particles are least penetrating?",
+  options: ["large mass and charge", "no charge", "small size", "high speed"],
+  answer: "large mass and charge"
+},
+{
+  question: "A body moving with constant velocity has:",
+  options: ["zero resultant force", "increasing force", "maximum acceleration", "decreasing mass"],
+  answer: "zero resultant force"
+},
+{
+  question: "Which of the following explains why friction is sometimes useful?",
+  options: ["provides grip", "reduces motion always", "destroys energy", "increases mass"],
+  answer: "provides grip"
+},
+{
+  question: "A transformer increases voltage but power remains constant. Current will:",
+  options: ["decrease", "increase", "remain same", "be zero"],
+  answer: "decrease"
+},
+{
+  question: "Which of the following best explains resonance in a system?",
+  options: ["maximum energy transfer at natural frequency", "minimum vibration", "no energy transfer", "constant amplitude"],
+  answer: "maximum energy transfer at natural frequency"
+},
+{
+  question: "Which factor affects pressure in gases directly?",
+  options: ["collision rate of particles", "color of gas", "shape of container", "volume only"],
+  answer: "collision rate of particles"
+},
+{
+  question: "Which of the following best explains diffraction of light?",
+  options: ["bending of waves around obstacles", "reflection of waves", "absorption of waves", "straight-line motion"],
+  answer: "bending of waves around obstacles"
+},
+{
+  question: "A floating body displaces liquid equal to its:",
+  options: ["weight", "volume", "density", "mass"],
+  answer: "weight"
+},
+{
+  question: "Which of the following determines electrical resistance?",
+  options: ["material and dimensions", "color only", "temperature only", "mass only"],
+  answer: "material and dimensions"
+},
+{
+  question: "Which of the following explains why sound waves cannot travel in vacuum?",
+  options: ["no medium for vibration", "no energy", "high speed", "low frequency"],
+  answer: "no medium for vibration"
+},
+{
+  question: "Which of the following best explains energy transformation in a generator?",
+  options: ["mechanical to electrical energy", "electrical to mechanical", "chemical to thermal", "thermal to electrical"],
+  answer: "mechanical to electrical energy"
+},
+
+{
+  question: "A projectile is fired with velocity u at angle θ. Its maximum height depends on:",
+  options: ["vertical component of velocity", "horizontal component", "mass only", "time only"],
+  answer: "vertical component of velocity"
+},
+{
+  question: "A body of mass 3 kg moving at 6 m/s collides and stops in 0.5 s. The average force is:",
+  options: ["-36 N", "-18 N", "-12 N", "-9 N"],
+  answer: "-36 N"
+},
+{
+  question: "A body is in equilibrium under three forces. These forces must be:",
+  options: ["coplanar and concurrent", "parallel", "equal only", "perpendicular"],
+  answer: "coplanar and concurrent"
+},
+{
+  question: "Which factor affects the efficiency of a machine most?",
+  options: ["energy losses due to friction", "color", "size only", "mass only"],
+  answer: "energy losses due to friction"
+},
+{
+  question: "A gas occupies 2 m³ at pressure 100 kPa. If compressed to 1 m³, new pressure is:",
+  options: ["200 kPa", "100 kPa", "50 kPa", "300 kPa"],
+  answer: "200 kPa"
+},
+{
+  question: "Which process transfers heat without a medium?",
+  options: ["Radiation", "Conduction", "Convection", "Evaporation"],
+  answer: "Radiation"
+},
+{
+  question: "A ray of light enters glass at 30°. If refractive index is 1.5, the angle of refraction is closest to:",
+  options: ["19°", "25°", "30°", "15°"],
+  answer: "19°"
+},
+{
+  question: "The focal length of a lens is 0.5 m. Its power is:",
+  options: ["2 D", "-2 D", "0.5 D", "1 D"],
+  answer: "2 D"
+},
+{
+  question: "Which factor determines wave frequency?",
+  options: ["source of vibration", "medium", "amplitude", "speed"],
+  answer: "source of vibration"
+},
+{
+  question: "A resistor of 10Ω carries 2 A current. Power dissipated is:",
+  options: ["40 W", "20 W", "10 W", "80 W"],
+  answer: "40 W"
+},
+{
+  question: "Which of the following reduces power loss in transmission lines?",
+  options: ["high voltage transmission", "low voltage", "high resistance", "low current only"],
+  answer: "high voltage transmission"
+},
+{
+  question: "A conductor moves perpendicular to magnetic field. Induced emf is maximum when:",
+  options: ["velocity is maximum", "velocity is zero", "field is constant", "resistance is high"],
+  answer: "velocity is maximum"
+},
+{
+  question: "Half-life of a substance is 10 years. Fraction remaining after 20 years is:",
+  options: ["1/4", "1/2", "1/8", "3/4"],
+  answer: "1/4"
+},
+{
+  question: "Which radiation has no charge?",
+  options: ["Gamma", "Alpha", "Beta", "Proton"],
+  answer: "Gamma"
+},
+{
+  question: "Which component allows current flow in one direction?",
+  options: ["Diode", "Resistor", "Capacitor", "Inductor"],
+  answer: "Diode"
+},
+{
+  question: "A transistor amplifies signals by:",
+  options: ["increasing current or voltage", "reducing resistance", "storing charge", "blocking current"],
+  answer: "increasing current or voltage"
+},
+{
+  question: "Which factor affects terminal velocity?",
+  options: ["air resistance and weight", "color", "temperature only", "volume only"],
+  answer: "air resistance and weight"
+},
+{
+  question: "A body immersed fully in fluid experiences upthrust equal to:",
+  options: ["weight of displaced fluid", "mass of fluid", "volume only", "density only"],
+  answer: "weight of displaced fluid"
+},
+{
+  question: "Which law explains conservation of momentum?",
+  options: ["Newton’s third law", "First law", "Second law", "Ohm’s law"],
+  answer: "Newton’s third law"
+},
+{
+  question: "Which of the following best explains energy transformation in solar cells?",
+  options: ["light to electrical energy", "heat to mechanical", "chemical to thermal", "electrical to light"],
+  answer: "light to electrical energy"
+},
+
+{
+  question: "A car accelerates uniformly from 10 m/s to 30 m/s in 5 s. Distance covered is:",
+  options: ["100 m", "80 m", "120 m", "150 m"],
+  answer: "100 m"
+},
+{
+  question: "A force of 15 N acts at 60° to the horizontal. The horizontal component is closest to:",
+  options: ["7.5 N", "13 N", "15 N", "10 N"],
+  answer: "7.5 N"
+},
+{
+  question: "A body of mass 2 kg is lifted to height 10 m. Gain in potential energy is (g = 10 m/s²):",
+  options: ["200 J", "100 J", "50 J", "20 J"],
+  answer: "200 J"
+},
+{
+  question: "A machine has MA = 4 and VR = 5. Efficiency is:",
+  options: ["80%", "20%", "125%", "50%"],
+  answer: "80%"
+},
+{
+  question: "A gas expands from 1 m³ to 3 m³ at constant pressure. Work done is proportional to:",
+  options: ["change in volume", "pressure only", "temperature", "mass"],
+  answer: "change in volume"
+},
+{
+  question: "Which factor increases rate of heat loss from a body?",
+  options: ["increase in surface area", "decrease in temperature difference", "smooth shiny surface", "vacuum"],
+  answer: "increase in surface area"
+},
+{
+  question: "A wave has frequency 500 Hz and wavelength 0.6 m. Its speed is:",
+  options: ["300 m/s", "200 m/s", "600 m/s", "100 m/s"],
+  answer: "300 m/s"
+},
+{
+  question: "A ray enters glass with angle 45°. If n = 1.5, refracted angle is closest to:",
+  options: ["28°", "30°", "45°", "20°"],
+  answer: "28°"
+},
+{
+  question: "Two resistors 6Ω and 3Ω are in parallel. Equivalent resistance is:",
+  options: ["2Ω", "9Ω", "3Ω", "1Ω"],
+  answer: "2Ω"
+},
+{
+  question: "A device uses 240 V and 2 A. Power consumed is:",
+  options: ["480 W", "120 W", "240 W", "60 W"],
+  answer: "480 W"
+},
+{
+  question: "Which condition increases induced emf?",
+  options: ["faster change in magnetic field", "constant field", "low current", "high resistance"],
+  answer: "faster change in magnetic field"
+},
+{
+  question: "Half-life is 5 years. Fraction remaining after 15 years:",
+  options: ["1/8", "1/4", "1/2", "3/4"],
+  answer: "1/8"
+},
+{
+  question: "Which radiation is most ionizing?",
+  options: ["Alpha", "Beta", "Gamma", "X-ray"],
+  answer: "Alpha"
+},
+{
+  question: "Which component smooths pulsating DC output?",
+  options: ["Capacitor", "Resistor", "Inductor", "Diode"],
+  answer: "Capacitor"
+},
+{
+  question: "Which factor affects terminal velocity most?",
+  options: ["cross-sectional area", "color", "mass only", "temperature"],
+  answer: "cross-sectional area"
+},
+{
+  question: "A floating object has density compared to fluid:",
+  options: ["less than fluid", "equal always", "greater always", "zero"],
+  answer: "less than fluid"
+},
+{
+  question: "Which law relates pressure and volume inversely?",
+  options: ["Boyle’s law", "Charles’ law", "Ohm’s law", "Newton’s law"],
+  answer: "Boyle’s law"
+},
+{
+  question: "Which of the following explains why lenses focus light?",
+  options: ["refraction at curved surfaces", "reflection only", "absorption", "diffraction only"],
+  answer: "refraction at curved surfaces"
+},
+{
+  question: "A current of 3 A flows for 5 s. Charge transferred is:",
+  options: ["15 C", "8 C", "3 C", "5 C"],
+  answer: "15 C"
+},
+{
+  question: "Which energy conversion occurs in a generator?",
+  options: ["mechanical to electrical", "electrical to mechanical", "chemical to electrical", "thermal to electrical"],
+  answer: "mechanical to electrical"
+},
+
+{
+  question: "A car travels with initial velocity 5 m/s and accelerates at 2 m/s² for 10 s. Final velocity is:",
+  options: ["25 m/s", "20 m/s", "15 m/s", "30 m/s"],
+  answer: "25 m/s"
+},
+{
+  question: "Resultant of two perpendicular forces 9 N and 12 N is:",
+  options: ["15 N", "21 N", "3 N", "108 N"],
+  answer: "15 N"
+},
+{
+  question: "Work done lifting 50 N load through 2 m is:",
+  options: ["100 J", "25 J", "50 J", "200 J"],
+  answer: "100 J"
+},
+{
+  question: "Efficiency = 60%, input = 500 J. Useful output:",
+  options: ["300 J", "200 J", "400 J", "100 J"],
+  answer: "300 J"
+},
+{
+  question: "Which increases pressure in gas?",
+  options: ["increase temperature", "increase volume", "decrease mass", "decrease density"],
+  answer: "increase temperature"
+},
+{
+  question: "A body cools faster when:",
+  options: ["temperature difference is large", "surface is shiny", "area is small", "vacuum"],
+  answer: "temperature difference is large"
+},
+{
+  question: "Wave with frequency 1000 Hz and speed 340 m/s has wavelength:",
+  options: ["0.34 m", "3.4 m", "34 m", "0.034 m"],
+  answer: "0.34 m"
+},
+{
+  question: "Critical angle depends on:",
+  options: ["refractive index", "frequency", "wavelength", "speed only"],
+  answer: "refractive index"
+},
+{
+  question: "Three resistors in series 2Ω, 3Ω, 5Ω. Total resistance:",
+  options: ["10Ω", "30Ω", "5Ω", "2Ω"],
+  answer: "10Ω"
+},
+{
+  question: "Current 4 A flows in 10Ω resistor. Voltage:",
+  options: ["40 V", "10 V", "4 V", "20 V"],
+  answer: "40 V"
+},
+{
+  question: "Magnetic field strength increases with:",
+  options: ["current", "length", "resistance", "temperature"],
+  answer: "current"
+},
+{
+  question: "Transformer reduces voltage → current:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "Half-life 2 years. After 6 years remains:",
+  options: ["1/8", "1/2", "1/4", "3/4"],
+  answer: "1/8"
+},
+{
+  question: "Beta particles are:",
+  options: ["electrons", "protons", "neutrons", "photons"],
+  answer: "electrons"
+},
+{
+  question: "Diode in reverse bias:",
+  options: ["blocks current", "allows full current", "increases voltage", "stores charge"],
+  answer: "blocks current"
+},
+{
+  question: "Transistor used as:",
+  options: ["amplifier", "heater", "insulator", "generator"],
+  answer: "amplifier"
+},
+{
+  question: "Terminal velocity occurs when:",
+  options: ["net force zero", "acceleration max", "speed zero", "weight zero"],
+  answer: "net force zero"
+},
+{
+  question: "Upthrust depends on:",
+  options: ["density of fluid", "mass only", "volume only", "temperature"],
+  answer: "density of fluid"
+},
+{
+  question: "Momentum conserved when:",
+  options: ["no external force", "force exists", "energy increases", "mass changes"],
+  answer: "no external force"
+},
+{
+  question: "Solar cell converts:",
+  options: ["light to electricity", "heat to light", "mechanical to electrical", "chemical to heat"],
+  answer: "light to electricity"
+},
+
+{
+  question: "Acceleration is rate of change of:",
+  options: ["velocity", "distance", "force", "energy"],
+  answer: "velocity"
+},
+{
+  question: "A body in motion remains so unless acted upon by:",
+  options: ["external force", "mass", "energy", "velocity"],
+  answer: "external force"
+},
+{
+  question: "Energy stored in raised object is:",
+  options: ["potential energy", "kinetic energy", "heat energy", "electrical energy"],
+  answer: "potential energy"
+},
+{
+  question: "Heat transfer in solids mainly by:",
+  options: ["conduction", "convection", "radiation", "evaporation"],
+  answer: "conduction"
+},
+{
+  question: "Sound requires:",
+  options: ["medium", "vacuum", "light", "heat"],
+  answer: "medium"
+},
+{
+  question: "Mirror forms image by:",
+  options: ["reflection", "refraction", "diffraction", "absorption"],
+  answer: "reflection"
+},
+{
+  question: "Parallel circuits share:",
+  options: ["same voltage", "same current", "same resistance", "same power"],
+  answer: "same voltage"
+},
+{
+  question: "Magnetism arises from:",
+  options: ["moving charges", "heat", "pressure", "mass"],
+  answer: "moving charges"
+},
+{
+  question: "Induced current needs:",
+  options: ["changing magnetic field", "constant field", "no field", "high resistance"],
+  answer: "changing magnetic field"
+},
+{
+  question: "Gamma rays are:",
+  options: ["electromagnetic", "particles", "protons", "neutrons"],
+  answer: "electromagnetic"
+},
+{
+  question: "Capacitor stores:",
+  options: ["charge", "current", "voltage", "power"],
+  answer: "charge"
+},
+{
+  question: "Resistor limits:",
+  options: ["current", "voltage", "power", "charge"],
+  answer: "current"
+},
+{
+  question: "Inductor opposes change in:",
+  options: ["current", "voltage", "charge", "energy"],
+  answer: "current"
+},
+{
+  question: "Density =:",
+  options: ["mass/volume", "volume/mass", "force/area", "mass×volume"],
+  answer: "mass/volume"
+},
+{
+  question: "Pressure =:",
+  options: ["force/area", "mass/volume", "force×distance", "energy/time"],
+  answer: "force/area"
+},
+{
+  question: "Power =:",
+  options: ["work/time", "force×distance", "mass×velocity", "energy×time"],
+  answer: "work/time"
+},
+{
+  question: "Frequency unit:",
+  options: ["Hz", "m", "s", "J"],
+  answer: "Hz"
+},
+{
+  question: "Wave speed =:",
+  options: ["fλ", "λ/f", "f/λ", "λ×t"],
+  answer: "fλ"
+},
+{
+  question: "Charge =:",
+  options: ["It", "V/R", "IR", "P/t"],
+  answer: "It"
+},
+{
+  question: "Ohm’s law:",
+  options: ["V = IR", "P = IV", "E = mc²", "F = ma"],
+  answer: "V = IR"
+},
+
+{
+  question: "The diagram shows a velocity-time graph of a particle. Calculate the total distance travelled.",
+  image: "/images/physics1.png",
+  options: ["20 m", "40 m", "60 m", "80 m"],
+  answer: "60 m"
+},
+
+{
+  question: "The diagram shows a displacement-time graph. What does the slope at a point represent?",
+  image: "/images/physics2.png",
+  options: ["Acceleration", "Velocity", "Force", "Energy"],
+  answer: "Velocity"
+},
+
+{
+  question: "A body starts from rest and accelerates uniformly at 3 m/sÂ² for 4 s. Using the diagram, find the velocity.",
+  image: "/images/physics3.png",
+  options: ["12 m/s", "6 m/s", "8 m/s", "10 m/s"],
+  answer: "12 m/s"
+},
+
+{
+  question: "The diagram shows a velocity-time graph with a triangular shape. Find the acceleration.",
+  image: "/images/physics4.png",
+  options: ["2 m/sÂ²", "4 m/sÂ²", "6 m/sÂ²", "8 m/sÂ²"],
+  answer: "2 m/sÂ²"
+},
+
+{
+  question: "A car moves with constant acceleration. From the diagram, determine the area under the graph.",
+  image: "/images/physics5.png",
+  options: ["Distance", "Velocity", "Acceleration", "Force"],
+  answer: "Distance"
+},
+
+{
+  question: "The diagram shows two forces acting at right angles. Find the resultant force.",
+  image: "/images/physics6.png",
+  options: ["5 N", "7 N", "6 N", "4 N"],
+  answer: "5 N"
+},
+
+{
+  question: "A body of mass 2 kg is acted upon by a force as shown in the diagram. Find the acceleration.",
+  image: "/images/physics7.png",
+  options: ["2 m/sÂ²", "3 m/sÂ²", "4 m/sÂ²", "5 m/sÂ²"],
+  answer: "3 m/sÂ²"
+},
+
+{
+  question: "The diagram shows a free fall motion. What is the acceleration due to gravity?",
+  image: "/images/physics8.png",
+  options: ["9.8 m/sÂ²", "10 m/sÂ²", "8 m/sÂ²", "12 m/sÂ²"],
+  answer: "9.8 m/sÂ²"
+},
+
+{
+  question: "The diagram shows a velocity-time graph with constant velocity. What is the acceleration?",
+  image: "/images/physics9.png",
+  options: ["0", "1 m/sÂ²", "2 m/sÂ²", "3 m/sÂ²"],
+  answer: "0"
+},
+
+{
+  question: "A force acts on a body for a short time as shown in the diagram. What quantity is represented by the area?",
+  image: "/images/physics10.png",
+  options: ["Momentum", "Impulse", "Force", "Energy"],
+  answer: "Impulse"
+},
+
+{
+  question: "The diagram shows a beam balanced on a pivot. If a force of 10 N acts at 2 m on one side, what force is needed at 1 m on the other side for equilibrium?",
+  image: "/images/physics11.png",
+  options: ["5 N", "10 N", "20 N", "40 N"],
+  answer: "20 N"
+},
+
+{
+  question: "The diagram shows a uniform rod in equilibrium. The sum of clockwise moments is equal to:",
+  image: "/images/physics12.png",
+  options: ["Anticlockwise moments", "Weight", "Force", "Mass"],
+  answer: "Anticlockwise moments"
+},
+
+{
+  question: "A force acts on a body causing acceleration. If mass is doubled, what happens to acceleration (same force)?",
+  image: "/images/physics13.png",
+  options: ["Doubles", "Halves", "Remains same", "Becomes zero"],
+  answer: "Halves"
+},
+
+{
+  question: "The diagram shows a block on a rough surface. The force opposing motion is:",
+  image: "/images/physics14.png",
+  options: ["Friction", "Gravity", "Upthrust", "Magnetic force"],
+  answer: "Friction"
+},
+
+{
+  question: "The diagram shows pressure acting on a surface. If area increases, pressure will:",
+  image: "/images/physics15.png",
+  options: ["Increase", "Decrease", "Remain constant", "Become zero"],
+  answer: "Decrease"
+},
+
+{
+  question: "A force of 50 N acts on an area of 10 mÂ². Find the pressure.",
+  image: "/images/physics16.png",
+  options: ["5 Pa", "50 Pa", "500 Pa", "0.2 Pa"],
+  answer: "5 Pa"
+},
+
+{
+  question: "The diagram shows an object immersed in liquid. The upward force acting on it is called:",
+  image: "/images/physics17.png",
+  options: ["Upthrust", "Friction", "Weight", "Pressure"],
+  answer: "Upthrust"
+},
+
+{
+  question: "An object floats in water. What is true about upthrust and weight?",
+  image: "/images/physics18.png",
+  options: ["Upthrust > Weight", "Upthrust = Weight", "Upthrust < Weight", "No upthrust"],
+  answer: "Upthrust = Weight"
+},
+
+{
+  question: "The diagram shows a hydraulic press. Pressure applied is transmitted equally due to:",
+  image: "/images/physics19.png",
+  options: ["Pascalâ€™s principle", "Newtonâ€™s law", "Ohmâ€™s law", "Hookeâ€™s law"],
+  answer: "Pascalâ€™s principle"
+},
+
+{
+  question: "A force of 100 N is applied to a small piston of area 2 mÂ². Find pressure transmitted.",
+  image: "/images/physics20.png",
+  options: ["50 Pa", "200 Pa", "100 Pa", "20 Pa"],
+  answer: "50 Pa"
+},
+
+{
+  question: "The diagram shows a wave. What is the distance between two successive crests called?",
+  image: "/images/physics21.png",
+  options: ["Amplitude", "Wavelength", "Frequency", "Period"],
+  answer: "Wavelength"
+},
+
+{
+  question: "The diagram shows a transverse wave. The maximum displacement from equilibrium is:",
+  image: "/images/physics22.png",
+  options: ["Amplitude", "Wavelength", "Speed", "Frequency"],
+  answer: "Amplitude"
+},
+
+{
+  question: "The diagram shows a light ray incident on a plane mirror. The angle of incidence is 30Â°. Find the angle of reflection.",
+  image: "/images/physics23.png",
+  options: ["30Â°", "60Â°", "90Â°", "45Â°"],
+  answer: "30Â°"
+},
+
+{
+  question: "The diagram shows reflection of light. The incident ray, reflected ray and normal all lie in:",
+  image: "/images/physics24.png",
+  options: ["Same plane", "Different planes", "Circle", "Line"],
+  answer: "Same plane"
+},
+
+{
+  question: "The diagram shows refraction from air into water. What happens to the speed of light?",
+  image: "/images/physics25.png",
+  options: ["Increases", "Decreases", "Remains same", "Becomes zero"],
+  answer: "Decreases"
+},
+
+{
+  question: "The diagram shows a ray entering a glass block. It bends towards the normal. What does this indicate?",
+  image: "/images/physics26.png",
+  options: ["Denser medium", "Less dense medium", "No change", "Reflection"],
+  answer: "Denser medium"
+},
+
+{
+  question: "The diagram shows a convex lens forming an image. If object is beyond 2F, the image formed is:",
+  image: "/images/physics27.png",
+  options: ["Real and inverted", "Virtual and upright", "Same size", "No image"],
+  answer: "Real and inverted"
+},
+
+{
+  question: "The diagram shows a concave mirror. Parallel rays converge at a point called:",
+  image: "/images/physics28.png",
+  options: ["Focus", "Center", "Pole", "Vertex"],
+  answer: "Focus"
+},
+
+{
+  question: "The diagram shows wave motion. If frequency increases, wavelength will:",
+  image: "/images/physics29.png",
+  options: ["Decrease", "Increase", "Remain same", "Double"],
+  answer: "Decrease"
+},
+
+{
+  question: "The diagram shows a ripple tank. Wavefronts are represented by:",
+  image: "/images/physics30.png",
+  options: ["Lines", "Points", "Circles", "Dots"],
+  answer: "Lines"
+},
+
+{
+  question: "The diagram shows a simple circuit with a resistor and battery. If current is 2 A and resistance is 5 Î©, find the voltage.",
+  image: "/images/physics31.png",
+  options: ["10 V", "2.5 V", "5 V", "7 V"],
+  answer: "10 V"
+},
+
+{
+  question: "The diagram shows resistors in series. If Râ‚ = 2 Î© and Râ‚‚ = 3 Î©, find total resistance.",
+  image: "/images/physics32.png",
+  options: ["5 Î©", "6 Î©", "1 Î©", "2 Î©"],
+  answer: "5 Î©"
+},
+
+{
+  question: "The diagram shows resistors in parallel. If Râ‚ = 6 Î© and Râ‚‚ = 3 Î©, find equivalent resistance.",
+  image: "/images/physics33.png",
+  options: ["2 Î©", "9 Î©", "3 Î©", "1 Î©"],
+  answer: "2 Î©"
+},
+
+{
+  question: "The diagram shows a circuit with current flowing. What is the unit of current?",
+  image: "/images/physics34.png",
+  options: ["Ampere", "Volt", "Ohm", "Watt"],
+  answer: "Ampere"
+},
+
+{
+  question: "The diagram shows a bulb connected to a battery. If power is 60 W and voltage is 12 V, find current.",
+  image: "/images/physics35.png",
+  options: ["5 A", "2 A", "10 A", "12 A"],
+  answer: "5 A"
+},
+
+{
+  question: "The diagram shows a circuit. If voltage is constant, increasing resistance will:",
+  image: "/images/physics36.png",
+  options: ["Decrease current", "Increase current", "No effect", "Stop current"],
+  answer: "Decrease current"
+},
+
+{
+  question: "The diagram shows electrical energy usage. If power is 100 W used for 2 hours, find energy in joules.",
+  image: "/images/physics37.png",
+  options: ["720000 J", "200 J", "1000 J", "360000 J"],
+  answer: "720000 J"
+},
+
+{
+  question: "The diagram shows two bulbs in series. If one bulb fails, what happens to the other?",
+  image: "/images/physics38.png",
+  options: ["Goes off", "Remains on", "Brighter", "Dimmer"],
+  answer: "Goes off"
+},
+
+{
+  question: "The diagram shows two bulbs in parallel. If one bulb fails, what happens to the other?",
+  image: "/images/physics39.png",
+  options: ["Remains on", "Goes off", "Dimmer", "Brighter"],
+  answer: "Remains on"
+},
+
+{
+  question: "The diagram shows a circuit with a switch. When the switch is open, current is:",
+  image: "/images/physics40.png",
+  options: ["Zero", "Maximum", "Constant", "Variable"],
+  answer: "Zero"
+},
+
+{
+  question: "The diagram shows a current-carrying conductor in a magnetic field. The force on the conductor is determined using:",
+  image: "/images/physics41.png",
+  options: ["Flemingâ€™s left-hand rule", "Flemingâ€™s right-hand rule", "Ohmâ€™s law", "Lenzâ€™s law"],
+  answer: "Flemingâ€™s left-hand rule"
+},
+
+{
+  question: "The diagram shows magnetic field lines around a straight conductor. What is the shape of the field?",
+  image: "/images/physics42.png",
+  options: ["Circular", "Straight", "Radial", "Parallel"],
+  answer: "Circular"
+},
+
+{
+  question: "The diagram shows a solenoid. What is produced when current flows through it?",
+  image: "/images/physics43.png",
+  options: ["Magnetic field", "Electric field", "Heat", "Light"],
+  answer: "Magnetic field"
+},
+
+{
+  question: "The diagram shows a transformer. If primary voltage is 200 V and secondary is 100 V, what type of transformer is this?",
+  image: "/images/physics44.png",
+  options: ["Step-down", "Step-up", "Isolation", "Power"],
+  answer: "Step-down"
+},
+
+{
+  question: "The diagram shows electromagnetic induction. When a magnet is moved into a coil, what is induced?",
+  image: "/images/physics45.png",
+  options: ["Current", "Voltage only", "Heat", "Light"],
+  answer: "Current"
+},
+
+{
+  question: "The diagram shows a conductor moving in a magnetic field. What determines the direction of induced current?",
+  image: "/images/physics46.png",
+  options: ["Flemingâ€™s right-hand rule", "Left-hand rule", "Newtonâ€™s law", "Ohmâ€™s law"],
+  answer: "Flemingâ€™s right-hand rule"
+},
+
+{
+  question: "The diagram shows field lines between two poles. Where is the field strongest?",
+  image: "/images/physics47.png",
+  options: ["Where lines are closest", "Where lines are far apart", "At edges", "Nowhere"],
+  answer: "Where lines are closest"
+},
+
+{
+  question: "The diagram shows a wire carrying current placed between magnet poles. What happens to the wire?",
+  image: "/images/physics48.png",
+  options: ["It experiences a force", "It melts", "It stops current", "Nothing happens"],
+  answer: "It experiences a force"
+},
+
+{
+  question: "The diagram shows an AC generator. What type of current is produced?",
+  image: "/images/physics49.png",
+  options: ["Alternating current", "Direct current", "No current", "Static current"],
+  answer: "Alternating current"
+},
+
+{
+  question: "The diagram shows energy transformation in a generator. What is the energy conversion?",
+  image: "/images/physics50.png",
+  options: ["Mechanical to electrical", "Electrical to mechanical", "Heat to light", "Chemical to electrical"],
+  answer: "Mechanical to electrical"
+}
+
+
 ];
 
 export default physicsQuestions;
-
-
-
-
-
-
-
-
 

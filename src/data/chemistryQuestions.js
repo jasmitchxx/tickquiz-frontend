@@ -1,2063 +1,2851 @@
 const chemistryQuestions = [
-{    question: "Which of the following best defines chemistry",
-    options: [
-      "The study of plants and animals",
-      "The study of matter and the changes it undergoes",
-      "The study of celestial bodies",
-      "The study of human behavior"
-    ],
-    answer: "The study of matter and the changes it undergoes"
-  },
+
 {
-    question: "Which branch of chemistry deals with carbon compounds",
-    options: ["Inorganic Chemistry", "Physical Chemistry", "Organic Chemistry", "Analytical Chemistry"],
-    answer: "Organic Chemistry"
-  },
+  question: "Chemistry is the study of:",
+  options: ["matter and its changes", "living organisms", "motion", "energy only"],
+  answer: "matter and its changes"
+},
 {
-    question: "Which of these is NOT a use of chemistry",
-    options: ["Producing drugs", "Predicting weather", "Making fertilizers", "Manufacturing plastics"],
-    answer: "Predicting weather"
-  },
+  question: "Which is NOT a branch of pure chemistry?",
+  options: ["Organic", "Physical", "Biochemistry", "Inorganic"],
+  answer: "Biochemistry"
+},
 {
-    question: "The SI unit of mass is:",
-    options: ["Gram", "Pound", "Kilogram", "Ton"],
-    answer: "Kilogram"
-  },
+  question: "Which is an applied chemistry field?",
+  options: ["Petrochemistry", "Physical chemistry", "Inorganic", "Organic"],
+  answer: "Petrochemistry"
+},
 {
-    question: "Which instrument is used to measure temperature",
-    options: ["Barometer", "Hygrometer", "Thermometer", "Manometer"],
-    answer: "Thermometer"
-  },
+  question: "SI unit of mass is:",
+  options: ["kg", "g", "mg", "tonne"],
+  answer: "kg"
+},
 {
-    question: "The volume of irregular solids can be measured using:",
-    options: ["Ruler", "Measuring cylinder", "Pipette", "Burette"],
-    answer: "Measuring cylinder"
-  },
+  question: "SI unit of volume is:",
+  options: ["m³", "cm³", "L", "dm³"],
+  answer: "m³"
+},
 {
-    question: "Which of the following is a derived quantity",
-    options: ["Length", "Time", "Area", "Mass"],
-    answer: "Area"
-  },
+  question: "Instrument used to measure mass:",
+  options: ["balance", "thermometer", "burette", "pipette"],
+  answer: "balance"
+},
 {
-    question: "Which of the following is the most appropriate unit for measuring the diameter of a wire",
-    options: ["Meter", "Centimeter", "Millimeter", "Micrometer"],
-    answer: "Micrometer"
-  },
+  question: "Instrument used to measure temperature:",
+  options: ["thermometer", "balance", "stopwatch", "meter rule"],
+  answer: "thermometer"
+},
 {
-    question: "What should you do if acid spills on your skin",
-    options: [
-      "Wipe it off with a cloth",
-      "Rinse with water immediately",
-      "Cover with a bandage",
-      "Ignore it"
-    ],
-    answer: "Rinse with water immediately"
-  },
+  question: "Precision refers to:",
+  options: ["repeatability", "correctness", "accuracy", "error"],
+  answer: "repeatability"
+},
 {
-    question: "Which of these items is essential for eye protection in a lab",
-    options: ["Face mask", "Helmet", "Lab coat", "Safety goggles"],
-    answer: "Safety goggles"
-  },
+  question: "Accuracy refers to:",
+  options: ["closeness to true value", "repeatability", "random error", "none"],
+  answer: "closeness to true value"
+},
 {
-    question: "A Bunsen burner should be lit using:",
-    options: ["Matchstick near the top", "Lighter from the side", "Safety lighter at the base", "Any method"],
-    answer: "Safety lighter at the base"
-  },
+  question: "Which is a derived unit?",
+  options: ["m/s", "kg", "m", "s"],
+  answer: "m/s"
+},
 {
-    question: "Which of the following is NOT a good laboratory practice",
-    options: [
-      "Labeling all chemicals",
-      "Eating and drinking in the lab",
-      "Wearing protective clothing",
-      "Reporting spills immediately"
-    ],
-    answer: "Eating and drinking in the lab"
-  },
+  question: "Scientific method begins with:",
+  options: ["problem identification", "experiment", "conclusion", "law"],
+  answer: "problem identification"
+},
 {
-    question: "When heating a test tube, the open end should point:",
-    options: ["At yourself", "At your friend", "Upwards", "Away from all people"],
-    answer: "Away from all people"
-  },
+  question: "Hypothesis is:",
+  options: ["testable prediction", "law", "theory", "fact"],
+  answer: "testable prediction"
+},
 {
-    question: "Analytical Chemistry is mainly concerned with:",
-    options: ["Chemical reactions", "Measuring amounts of substances", "Carbon compounds", "Periodic elements"],
-    answer: "Measuring amounts of substances"
-  },
-{    question: "Which of these is a fundamental quantity",
-    options: ["Density", "Mass", "Force", "Volume"],
-    answer: "Mass"
-  },
-{    question: "Which instrument is used for measuring time in a chemistry lab",
-    options: ["Stopwatch", "Thermometer", "Voltmeter", "Barometer"],
-    answer: "Stopwatch"
-  },
-{    question: "What color is the hottest part of a Bunsen burner flame",
-    options: ["Yellow", "Red", "Blue", "Orange"],
-    answer: "Blue"
-  },
-{    question: "Which of these careers is directly related to chemistry",
-    options: ["Geologist", "Pharmacist", "Librarian", "Historian"],
-    answer: "Pharmacist"
-  },
-{    question: "Which of these units measures pressure",
-    options: ["Newton", "Pascal", "Joule", "Kelvin"],
-    answer: "Pascal"
-  },
-{    question: "The first thing to do in case of a fire in the lab is to:",
-    options: [
-      "Run outside",
-      "Turn off gas supply",
-      "Pour water everywhere",
-      "Call your friends"
-    ],
-    answer: "Turn off gas supply"
-  },
-{    question: "Which of the following best describes matter",
-    options: ["Anything that moves", "Anything with mass and occupies space", "Anything visible", "Anything that reacts with oxygen"],
-    answer: "Anything with mass and occupies space"
-  },
-{    question: "The kinetic theory of matter states that:",
-    options: [
-      "All matter is made up of heavy particles",
-      "Particles of matter are in constant motion",
-      "All solids are liquids in disguise",
-      "Gases cannot be compressed"
-    ],
-    answer: "Particles of matter are in constant motion"
-  },
-{    question: "Which of the following substances does NOT exist as a molecule",
-    options: ["Oxygen", "Nitrogen", "Neon", "Water"],
-    answer: "Neon"
-  },
-{    question: "The nucleus of an atom contains:",
-    options: ["Electrons and neutrons", "Protons and electrons", "Protons and neutrons", "Electrons only"],
-    answer: "Protons and neutrons"
-  },
-{    question: "Which subatomic particle has a negative charge",
-    options: ["Proton", "Neutron", "Electron", "Nucleon"],
-    answer: "Electron"
-  },
-{    question: "Isotopes are atoms of the same element with:",
-    options: [
-      "Same number of neutrons, different protons",
-      "Same number of protons, different neutrons",
-      "Different atomic numbers",
-      "Same mass numbers"
-    ],
-    answer: "Same number of protons, different neutrons"
-  },
-{    question: "What is the mass number of an atom with 11 protons and 12 neutrons",
-    options: ["11", "12", "22", "23"],
-    answer: "23"
-  },
-{    question: "The atomic number of an element is the number of:",
-    options: ["Neutrons", "Electrons", "Protons", "Nucleons"],
-    answer: "Protons"
-  },
-{    question: "Which of the following scientists proposed the planetary model of the atom",
-    options: ["Thomson", "Rutherford", "Bohr", "Dalton"],
-    answer: "Bohr"
-  },
-{    question: "The electron configuration of sodium (Na) is:",
-    options: ["2, 8, 1", "2, 8, 8", "2, 1, 8", "1, 8, 2"],
-    answer: "2, 8, 1"
-  },
-{    question: "Which group of the periodic table contains noble gases",
-    options: ["Group I", "Group VII", "Group 0", "Group II"],
-    answer: "Group 0"
-  },
-{    question: "Across a period, atomic size:",
-    options: ["Increases", "Decreases", "Remains constant", "Fluctuates"],
-    answer: "Decreases"
-  },
-{    question: "Down a group in the periodic table, the reactivity of alkali metals:",
-    options: ["Decreases", "Increases", "Remains the same", "First decreases then increases"],
-    answer: "Increases"
-  },
-{    question: "Elements in the same group of the periodic table have:",
-    options: [
-      "Same atomic number",
-      "Same number of neutrons",
-      "Same number of valence electrons",
-      "Same mass number"
-    ],
-    answer: "Same number of valence electrons"
-  },
-{    question: "Which of the following elements is a halogen",
-    options: ["Oxygen", "Chlorine", "Nitrogen", "Sodium"],
-    answer: "Chlorine"
-  },
-{    question: "Which element has the smallest atomic radius",
-    options: ["Sodium", "Chlorine", "Potassium", "Calcium"],
-    answer: "Chlorine"
-  },
-{    question: "During diffusion, particles move from:",
-    options: ["Low to high concentration", "Solid to liquid", "High to low concentration", "One element to another"],
-    answer: "High to low concentration"
-  },
-{    question: "What is the number of neutrons in Carbon-14",
-    options: ["6", "8", "14", "12"],
-    answer: "8"
-  },
-{    question: "Which of these statements about electrons is correct",
-    options: ["They are located in the nucleus", "They are positively charged", "They are heavier than protons", "They occupy energy levels around the nucleus"],
-    answer: "They occupy energy levels around the nucleus"
-  },
-{    question: "The periodic table is arranged in order of:",
-    options: ["Atomic mass", "Mass number", "Atomic number", "Electron number"],
-    answer: "Atomic number"
-  },
-{    question: "Which of the following is not a subatomic particle",
-    options: ["Proton", "Electron", "Neutron", "Molecule"],
-    answer: "Molecule"
-  },
-{    question: "The discovery of the electron was made by:",
-    options: ["Bohr", "Rutherford", "Thomson", "Dalton"],
-    answer: "Thomson"
-  },
-{    question: "The charge of a neutron is:",
-    options: ["+1", "-1", "0", "+2"],
-    answer: "0"
-  },
-{    question: "Which of the following has the same number of protons but different mass numbers",
-    options: ["Isomers", "Isobars", "Isotopes", "Ions"],
-    answer: "Isotopes"
-  },
-{    question: "Which scientist proposed that atoms are indivisible particles",
-    options: ["Rutherford", "Bohr", "Dalton", "Thomson"],
-    answer: "Dalton"
-  },
-{    question: "Which of these properties generally increases across a period",
-    options: ["Atomic size", "Metallic character", "Ionization energy", "Reactivity of metals"],
-    answer: "Ionization energy"
-  },
-{    question: "Metalloids have properties of:",
-    options: ["Only metals", "Only non-metals", "Both metals and non-metals", "Noble gases"],
-    answer: "Both metals and non-metals"
-  },
-{    question: "Which of these is a characteristic of alkali metals",
-    options: ["High density", "High melting point", "Good conductivity", "Unreactive"],
-    answer: "Good conductivity"
-  },
-{    question: "The process by which particles move from a region of higher concentration to a lower concentration is:",
-    options: ["Evaporation", "Diffusion", "Condensation", "Boiling"],
-    answer: "Diffusion"
-  },
-{    question: "Which of these supports the idea of particles in constant motion",
-    options: ["Burning", "Melting", "Diffusion", "Freezing"],
-    answer: "Diffusion"
-  },
-{    question: "The number of protons in an atom is also known as its:",
-    options: ["Mass number", "Atomic weight", "Atomic number", "Valency"],
-    answer: "Atomic number"
-  },
-{    question: "The mass number of an atom is the total number of:",
-    options: ["Protons only", "Neutrons only", "Protons and neutrons", "Electrons and neutrons"],
-    answer: "Protons and neutrons"
-  },
-{    question: "How many electrons are in a neutral atom of magnesium",
-    options: ["10", "11", "12", "14"],
-    answer: "12"
-  },
-{    question: "Which particle is removed from an atom to form a positive ion",
-    options: ["Neutron", "Proton", "Electron", "All of the above"],
-    answer: "Electron"
-  },
-{    question: "Which of these subatomic particles determines the chemical behavior of an atom",
-    options: ["Neutron", "Proton", "Electron", "Nucleus"],
-    answer: "Electron"
-  },
-{    question: "Which group of elements in the periodic table is most reactive",
-    options: ["Group 0", "Group I", "Group IV", "Group VII"],
-    answer: "Group I"
-  },
-{    question: "Which element is placed in period 2, group VII",
-    options: ["Chlorine", "Fluorine", "Bromine", "Iodine"],
-    answer: "Fluorine"
-  },
-{    question: "The vertical columns in the periodic table are called:",
-    options: ["Periods", "Groups", "Rows", "Blocks"],
-    answer: "Groups"
-  },
-{    question: "Which of the following increases down a group",
-    options: ["Electronegativity", "Ionization energy", "Atomic radius", "Non-metallic character"],
-    answer: "Atomic radius"
-  },
-{    question: "The horizontal rows in the periodic table are called:",
-    options: ["Groups", "Blocks", "Periods", "Shells"],
-    answer: "Periods"
-  },
-{    question: "Which of the following is formed when atoms share electrons",
-    options: ["Ionic bond", "Hydrogen bond", "Covalent bond", "Metallic bond"],
-    answer: "Covalent bond"
-  },
-{    question: "An ionic bond is formed between:",
-    options: ["Two metals", "Two non-metals", "A metal and a non-metal", "Two noble gases"],
-    answer: "A metal and a non-metal"
-  },
-{    question: "The force of attraction between oppositely charged ions is called:",
-    options: ["Covalent bond", "Van der Waals force", "Ionic bond", "Hydrogen bond"],
-    answer: "Ionic bond"
-  },
-{    question: "Which compound contains a covalent bond",
-    options: ["NaCl", "CO₂", "H₂O", "MgO"],
-    answer: "H₂O"
-  },
-{    question: "What is the total number of covalent bonds in a methane molecule",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-{    question: "Which element can form four covalent bonds",
-    options: ["Hydrogen", "Carbon", "Nitrogen", "Oxygen"],
-    answer: "Carbon"
-  },
-{    question: "Which of these is not an interatomic bond",
-    options: ["Ionic bond", "Covalent bond", "Hydrogen bond", "Metallic bond"],
-    answer: "Hydrogen bond"
-  },
-{    question: "Which of the following is a property of ionic compounds",
-    options: ["Low melting points", "Conduct electricity in solid state", "Soluble in water", "Form molecules"],
-    answer: "Soluble in water"
-  },
-{    question: "The weakest type of intermolecular force is:",
-    options: ["Hydrogen bond", "Ionic bond", "Van der Waals force", "Covalent bond"],
-    answer: "Van der Waals force"
-  },
-{    question: "Hydrogen bonding occurs in:",
-    options: ["NaCl", "H₂O", "CO₂", "CH"],
-    answer: "H₂O"
-  },
-{    question: "Which force is responsible for the high boiling point of water",
-    options: ["Ionic bond", "Hydrogen bond", "Van der Waals force", "Metallic bond"],
-    answer: "Hydrogen bond"
-  },
-{    question: "Which of these is a dipole-dipole interaction",
-    options: ["Hydrogen bond", "Covalent bond", "Metallic bond", "Ionic bond"],
-    answer: "Hydrogen bond"
-  },
-  {
-    question: "Intermolecular forces are responsible for:",
-    options: [
-      "Formation of atoms",
-      "Chemical reactions",
-      "Physical properties like boiling point",
-      "Nuclear fission"
-    ],
-    answer: "Physical properties like boiling point"
-  },
-  {
-    question: "The shape of a methane (CH) molecule is:",
-    options: [
-      "Linear",
-      "Trigonal planar",
-      "Tetrahedral",
-      "Bent"
-    ],
-    answer: "Tetrahedral"
-  },
-  {
-    question: "The bond angle in a water molecule is approximately:",
-    options: [
-      "109.5�",
-      "120�",
-      "104.5�",
-      "180�"
-    ],
-    answer: "104.5�"
-  },
-  {
-    question: "Which type of hybridization leads to a linear shape",
-    options: [
-      "sp�",
-      "sp�",
-      "sp",
-      "dsp�"
-    ],
-    answer: "sp"
-  },
-  {
-    question: "What is the molecular shape of carbon dioxide (CO₂)",
-    options: [
-      "Bent",
-      "Linear",
-      "Trigonal planar",
-      "Tetrahedral"
-    ],
-    answer: "Linear"
-  },
-  {
-    question: "Which of the following has a trigonal planar shape",
-    options: [
-      "BF",
-      "CH",
-      "H₂O",
-      "NH"
-    ],
-    answer: "BF"
-  },
-  {
-    question: "In ammonia (NH), the shape of the molecule is:",
-    options: [
-      "Linear",
-      "Bent",
-      "Trigonal planar",
-      "Trigonal pyramidal"
-    ],
-    answer: "Trigonal pyramidal"
-  },
-{    question: "Which of the following is most likely to form a metallic bond",
-    options: ["Oxygen", "Sodium", "Chlorine", "Sulfur"],
-    answer: "Sodium"
-  },
-{    question: "Which of the following is a characteristic of covalent compounds",
-    options: ["Conduct electricity in solution", "High melting point", "Form molecules", "Form lattice structures"],
-    answer: "Form molecules"
-  },
-{    question: "What type of bond is found in sodium chloride",
-    options: ["Covalent bond", "Ionic bond", "Metallic bond", "Hydrogen bond"],
-    answer: "Ionic bond"
-  },
-{    question: "Which of these particles is involved in chemical bonding",
-    options: ["Protons", "Neutrons", "Electrons", "Nucleons"],
-    answer: "Electrons"
-  },
-{    question: "The electrostatic force in ionic bonds occurs between:",
-    options: ["Like charges", "Neutral atoms", "Opposite charges", "Atoms sharing electrons"],
-    answer: "Opposite charges"
-  },
-{    question: "Which type of force exists between nonpolar molecules",
-    options: ["Hydrogen bond", "Dipole-dipole force", "Van der Waals force", "Ionic bond"],
-    answer: "Van der Waals force"
-  },
-{    question: "Which of the following substances exhibits hydrogen bonding",
-    options: ["CH", "NH�", "CO₂", "NaCl"],
-    answer: "NH�"
-  },
-{    question: "Which of these is NOT an intermolecular force",
-    options: ["Van der Waals force", "Dipole-dipole force", "Hydrogen bond", "Covalent bond"],
-    answer: "Covalent bond"
-  },
-{    question: "Hybridization involves:",
-    options: ["Splitting atoms", "Combining of atomic orbitals", "Losing electrons", "Fusing nuclei"],
-    answer: "Combining of atomic orbitals"
-  },
-{    question: "What is the hybridization of carbon in methane (CH)",
-    options: ["sp", "sp�", "sp�", "dsp�"],
-    answer: "sp�"
-  },
-{    question: "Which of the following has a bent molecular shape",
-    options: ["CO₂", "BF�", "NH�", "H₂O"],
-    answer: "H₂O"
-  },
-{    question: "Which of these molecular geometries has a bond angle close to 109.5�",
-    options: ["Linear", "Tetrahedral", "Trigonal planar", "Trigonal bipyramidal"],
-    answer: "Tetrahedral"
-  },
-{    question: "A metal atom typically loses electrons to form:",
-    options: ["Anions", "Cations", "Ions", "Neutrons"],
-    answer: "Cations"
-  },
-{    question: "Which of these best describes metallic bonding",
-    options: ["Delocalized electrons around a lattice of metal ions", "Electron sharing", "Ion exchange", "Proton movement"],
-    answer: "Delocalized electrons around a lattice of metal ions"
-  },
-{    question: "Which of these does not conduct electricity in solid state but does when molten",
-    options: ["Sugar", "NaCl", "Diamond", "Graphite"],
-    answer: "NaCl"
-  },
-{    question: "Which compound is most likely to have a giant covalent structure",
-    options: ["NaCl", "CH", "H₂O", "Diamond"],
-    answer: "Diamond"
-  },
-{    question: "Which is strongest among the intermolecular forces",
-    options: ["Hydrogen bond", "Van der Waals", "Dipole-dipole", "London dispersion forces"],
-    answer: "Hydrogen bond"
-  },
-{    question: "The bond angle in a tetrahedral molecule is:",
-    options: ["90�", "104.5�", "120�", "109.5�"],
-    answer: "109.5�"
-  },
-{    question: "Which of the following has sp� hybridization",
-    options: ["CH", "CO₂", "BF�", "NH�"],
-    answer: "BF�"
-  },
-{    question: "The shape of a molecule with two bonding pairs and two lone pairs is:",
-    options: ["Linear", "Bent", "Trigonal planar", "Tetrahedral"],
-    answer: "Bent"
-  },
-{    question: "Which of these pairs will most likely form an ionic compound",
-    options: ["H and Cl", "Na and Cl", "C and H", "O and O"],
-    answer: "Na and Cl"
-  },
-{    question: "The standard for measuring atomic masses is based on:",
-    options: ["Hydrogen-1", "Carbon-14", "Carbon-12", "Oxygen-16"],
-    answer: "Carbon-12"
-  },
-{    question: "The relative atomic mass of an element is defined as:",
-    options: [
-      "The number of protons in an atom",
-      "The number of neutrons in an atom",
-      "The average mass of atoms compared to carbon-12",
-      "The total number of electrons in an atom"
-    ],
-    answer: "The average mass of atoms compared to carbon-12"
-  },
-{    question: "What is the atomic mass unit (amu) defined as",
-    options: ["1/6 of O-16", "1/10 of C-14", "1/12 of C-12", "1/8 of H-2"],
-    answer: "1/12 of C-12"
-  },
-{    question: "A solution is a:",
-    options: ["Mixture of solids", "Uniform mixture of solute and solvent", "Chemical compound", "Gas in air"],
-    answer: "Uniform mixture of solute and solvent"
-  },
-{    question: "The solute is:",
-    options: ["The substance that dissolves the solvent", "Always water", "The substance that is dissolved", "A gas only"],
-    answer: "The substance that is dissolved"
-  },
-{    question: "A saturated solution contains:",
-    options: [
-      "No solute",
-      "Less solute than it can hold",
-      "More solute than it can hold",
-      "The maximum amount of solute at a given temperature"
-    ],
-    answer: "The maximum amount of solute at a given temperature"
-  },
-{    question: "Which of the following will increase the solubility of a solid in a liquid",
-    options: ["Cooling", "Stirring", "Using a larger container", "Adding salt"],
-    answer: "Stirring"
-  },
-{    question: "Which of the following is a balanced chemical equation",
-    options: [
-      "H + O  H₂O",
-      "2H + O  2H₂O",
-      "H + 2O  H₂O",
-      "H + O  H₂O"
-    ],
-    answer: "2H + O  2H₂O"
-  },
-{    question: "What does a chemical equation show",
-    options: ["The atoms in a nucleus", "The speed of reaction", "The elements present", "The reactants and products of a reaction"],
-    answer: "The reactants and products of a reaction"
-  },
-{    question: "The law of conservation of mass states that:",
-    options: ["Energy can neither be created nor destroyed", "Mass is lost during chemical change", "Mass is conserved during reactions", "Mass increases with temperature"],
-    answer: "Mass is conserved during reactions"
-  },
-{    question: "In a chemical reaction, the total number of atoms on each side of the equation must:",
-    options: ["Double", "Decrease", "Be equal", "Increase"],
-    answer: "Be equal"
-  },
-{    question: "Which unit is commonly used for molar mass",
-    options: ["g/mol", "kg", "cm�", "mol/L"],
-    answer: "g/mol"
-  },
-{    question: "1 mole of any substance contains:",
-    options: ["6.02 x 10�� atoms", "1.00 grams", "6.02 x 10�� particles", "1000 atoms"],
-    answer: "6.02 x 10�� particles"
-  },
-{    question: "The molar mass of water (H₂O) is approximately:",
-    options: ["10 g/mol", "16 g/mol", "18 g/mol", "20 g/mol"],
-    answer: "18 g/mol"
-  },
-{    question: "Which of the following represents a mole ratio",
-    options: ["2:1:2 in 2H + O  2H₂O", "6:12:6", "1 mol = 24 dm�", "g/mol"],
-    answer: "2:1:2 in 2H + O  2H₂O"
-  },
-{    question: "Which particle is emitted during alpha decay",
-    options: ["Electron", "Neutron", "Helium nucleus", "Positron"],
-    answer: "Helium nucleus"
-  },
-{    question: "Radioactivity was first discovered by:",
-    options: ["Bohr", "Dalton", "Rutherford", "Henri Becquerel"],
-    answer: "Henri Becquerel"
-  },
-{    question: "Which of these is NOT a type of radioactive decay",
-    options: ["Alpha decay", "Beta decay", "Gamma decay", "Delta decay"],
-    answer: "Delta decay"
-  },
-{    question: "A common use of radioactive isotopes is:",
-    options: ["Making plastics", "Carbon dating", "Food coloring", "Purifying water"],
-    answer: "Carbon dating"
-  },
-{    question: "Which of the following has the highest penetrating power",
-    options: ["Alpha particles", "Beta particles", "Gamma rays", "Neutrons"],
-    answer: "Gamma rays"
-  },
-{    question: "Relative molecular mass is calculated based on:",
-    options: ["Atomic number", "Molarity", "Carbon-12 standard", "Electron configuration"],
-    answer: "Carbon-12 standard"
-  },
-{    question: "Which of these best describes 1 mole of a substance",
-    options: ["12 g of carbon", "6.02 x 10�� particles", "1 cm� of gas", "1 L of water"],
-    answer: "6.02 x 10�� particles"
-  },
-{    question: "Which of these can increase the rate of dissolving a solute",
-    options: ["Decreasing temperature", "Using large crystals", "Stirring", "Adding a solute"],
-    answer: "Stirring"
-  },
-{    question: "A solute that dissolves easily in a solvent is said to be:",
-    options: ["Insoluble", "Suspended", "Miscible", "Soluble"],
-    answer: "Soluble"
-  },
-{    question: "A solution that contains more solute than it can theoretically hold at a given temperature is:",
-    options: ["Dilute", "Concentrated", "Supersaturated", "Saturated"],
-    answer: "Supersaturated"
-  },
-{    question: "The unit for concentration in molarity is:",
-    options: ["mol", "mol/dm�", "g/mol", "mol/cm�"],
-    answer: "mol/dm�"
-  },
-{    question: "What is the molarity of a solution containing 1 mole of NaCl in 1 dm� of solution",
-    options: ["0.5 mol/dm�", "2 mol/dm�", "1 mol/dm�", "1 g/dm�"],
-    answer: "1 mol/dm�"
-  },
-{    question: "What volume does 1 mole of any gas occupy at STP",
-    options: ["22.4 dm�", "24.0 dm�", "18.0 dm�", "1.0 dm�"],
-    answer: "22.4 dm�"
-  },
-{    question: "Which of the following shows correct stoichiometric ratio for 2H + O  2H₂O",
-    options: ["2:2:1", "1:2:2", "2:1:2", "1:1:2"],
-    answer: "2:1:2"
-  },
-{    question: "Limiting reagent is the substance that:",
-    options: ["Speeds up a reaction", "Is in excess", "Controls the amount of product formed", "Has the smallest atom"],
-    answer: "Controls the amount of product formed"
-  },
-{    question: "The number of moles of 36 g of water (H₂O) is:",
-    options: ["1", "2", "3", "4"],
-    answer: "2"
-  },
-{    question: "Which of these represents Avogadro' law",
-    options: [
-      "V  T at constant pressure",
-      "V  1/P at constant T",
-      "Equal volumes of gases contain equal number of molecules",
-      "PV = nRT"
-    ],
-    answer: "Equal volumes of gases contain equal number of molecules"
-  },
-{    question: "What mass of NaCl is in 0.5 moles (Na = 23, Cl = 35.5)",
-    options: ["29.25 g", "58.5 g", "117 g", "23 g"],
-    answer: "29.25 g"
-  },
-{    question: "How many moles are in 44 g of CO₂ (C = 12, O = 16)",
-    options: ["1", "2", "3", "4"],
-    answer: "1"
-  },
-{    question: "Which of these statements is true about chemical equations",
-    options: ["They must show color changes", "They must balance mass and atoms", "They show energy lost", "They predict weather"],
-    answer: "They must balance mass and atoms"
-  },
-{    question: "Which of the following is NOT an application of nuclear chemistry",
-    options: ["X-rays", "Cancer treatment", "Carbon dating", "Fertilizer production"],
-    answer: "Fertilizer production"
-  },
-{    question: "The time taken for half of a radioactive sample to decay is called:",
-    options: ["Decay rate", "Half-life", "Ionization time", "Radioactive phase"],
-    answer: "Half-life"
-  },
-{    question: "What is the major hazard of nuclear waste",
-    options: ["It smells", "It is non-reactive", "It is highly radioactive and long-lasting", "It is biodegradable"],
-    answer: "It is highly radioactive and long-lasting"
-  },
-{    question: "Beta particles are made up of:",
-    options: ["Helium nuclei", "Electrons", "Protons", "Neutrons"],
-    answer: "Electrons"
-  },
-{    question: "Nuclear fission involves:",
-    options: ["Splitting of nuclei", "Combining of atoms", "Decay of hydrogen", "Rearrangement of electrons"],
-    answer: "Splitting of nuclei"
-  },
-{    question: "Which of the following can be stopped by a sheet of paper",
-    options: ["Alpha particles", "Beta particles", "Gamma rays", "Neutrons"],
-    answer: "Alpha particles"
-  },
-{    question: "Which particle has the least mass",
-    options: ["Proton", "Neutron", "Electron", "Alpha particle"],
-    answer: "Electron"
-  },
-{    question: "Nuclear reactions differ from chemical reactions because they involve changes in the:",
-    options: ["Electron shells", "Nucleus", "Mass number only", "Volume of atoms"],
-    answer: "Nucleus"
-  },
-{    question: "Which radioactive isotope is used in radiotherapy for cancer treatment",
-    options: ["Carbon-14", "Cobalt-60", "Uranium-238", "Iodine-131"],
-    answer: "Cobalt-60"
-  },
-{    question: "A gamma ray is a form of:",
-    options: ["Charged particle", "Visible light", "Electromagnetic radiation", "Sound wave"],
-    answer: "Electromagnetic radiation"
-  },
-{    question: "Which of these decays does not change the mass number of the atom",
-    options: ["Alpha", "Beta", "Gamma", "All of them"],
-    answer: "Gamma"
-  },
-{    question: "Which nuclear process powers the sun",
-    options: ["Fission", "Combustion", "Fusion", "Decay"],
-    answer: "Fusion"
-  },
-{    question: "Iodine-131 is commonly used for monitoring the:",
-    options: ["Brain", "Thyroid gland", "Liver", "Heart"],
-    answer: "Thyroid gland"
-  },
-{    question: "Nuclear fusion involves:",
-    options: ["Splitting nuclei", "Combining light nuclei", "Ionizing atoms", "Releasing electrons"],
-    answer: "Combining light nuclei"
-  },
-{    question: "The most stable nuclei have:",
-    options: ["More neutrons than protons", "More protons than neutrons", "Equal number of protons and neutrons", "No neutrons"],
-    answer: "Equal number of protons and neutrons"
-  },
-{    question: "Which type of energy change occurs when ice melts to water",
-    options: ["Exothermic", "Endothermic", "Neutral", "None"],
-    answer: "Endothermic"
-  },
-{    question: "An exothermic reaction is one that:",
-    options: [
-      "Absorbs heat",
-      "Releases heat",
-      "Does not involve energy",
-      "Occurs only in plants"
-    ],
-    answer: "Releases heat"
-  },
-{    question: "Which of the following is an example of an endothermic process",
-    options: [
-      "Combustion of petrol",
-      "Condensation of steam",
-      "Photosynthesis",
-      "Freezing of water"
-    ],
-    answer: "Photosynthesis"
-  },
-{    question: "Energy required to break bonds in a molecule is called:",
-    options: ["Bond enthalpy", "Activation energy", "Heat of combustion", "Heat of formation"],
-    answer: "Bond enthalpy"
-  },
-{    question: "Which of the following has the highest bond enthalpy",
-    options: ["O-H bond", "C-H bond", "N?N bond", "H-H bond"],
-    answer: "N?N bond"
-  },
-{    question: "Activation energy is the:",
-    options: [
-      "Energy released during reaction",
-      "Energy needed to start a reaction",
-      "Energy lost as heat",
-      "Energy required to form products"
-    ],
-    answer: "Energy needed to start a reaction"
-  },
-{    question: "In an exothermic reaction, the products have:",
-    options: ["More energy than reactants", "Less energy than reactants", "Same energy as reactants", "No energy"],
-    answer: "Less energy than reactants"
-  },
-{    question: "Which of the following is NOT a source of activation energy",
-    options: ["Heat", "Light", "Electricity", "Water"],
-    answer: "Water"
-  },
-{    question: "The overall enthalpy change of a reaction is the difference between:",
-    options: ["Bond energies of products and reactants", "Mass of products and reactants", "Number of atoms", "Volume of gases"],
-    answer: "Bond energies of products and reactants"
-  },
-{    question: "Which of the following diagrams shows the activation energy of a reaction",
-    options: ["Energy profile diagram", "Bohr model", "Periodic table", "Titration curve"],
-    answer: "Energy profile diagram"
-  },
-{    question: "Which of the following reactions is exothermic",
-    options: ["Photosynthesis", "Respiration", "Melting ice", "Boiling water"],
-    answer: "Respiration"
-  },
-{    question: "During an exothermic reaction, energy is:",
-    options: ["Absorbed", "Released", "Conserved", "Stored"],
-    answer: "Released"
-  },
-{    question: "In an endothermic reaction, energy is:",
-    options: ["Released", "Absorbed", "Lost", "Created"],
-    answer: "Absorbed"
-  },
-{    question: "Which of the following represents bond breaking",
-    options: ["Exothermic", "Endothermic", "Neutral", "None"],
-    answer: "Endothermic"
-  },
-{    question: "Which energy change occurs when bonds are formed",
-    options: ["Endothermic", "Exothermic", "Neutral", "Activation"],
-    answer: "Exothermic"
-  },
-{    question: "In a combustion reaction, the energy change is:",
-    options: ["Endothermic", "Exothermic", "Neutral", "None"],
-    answer: "Exothermic"
-  },
-{    question: "Which of these best describes a catalyst",
-    options: [
-      "Substance that slows a reaction",
-      "Substance that increases activation energy",
-      "Substance that lowers activation energy",
-      "Substance that is consumed in a reaction"
-    ],
-    answer: "Substance that lowers activation energy"
-  },
-{    question: "Which of these is NOT true about catalysts",
-    options: [
-      "They increase reaction rate",
-      "They are not consumed in the reaction",
-      "They change the equilibrium position",
-      "They lower activation energy"
-    ],
-    answer: "They change the equilibrium position"
-  },
-{    question: "The term 'enthalpy change' refers to:",
-    options: [
-      "Energy absorbed or released during a chemical reaction",
-      "Energy stored in bonds",
-      "Energy used for activation",
-      "Energy lost as heat"
-    ],
-    answer: "Energy absorbed or released during a chemical reaction"
-  },
-{    question: "Which energy change occurs during condensation of steam",
-    options: ["Endothermic", "Exothermic", "Neutral", "None"],
-    answer: "Exothermic"
-  },
-{    question: "The heat energy required to raise the temperature of 1 g of a substance by 1�C is called:",
-    options: ["Specific heat capacity", "Latent heat", "Enthalpy", "Activation energy"],
-    answer: "Specific heat capacity"
-  },
-{    question: "The amount of energy released when one mole of a compound burns completely is called:",
-    options: ["Bond enthalpy", "Heat of combustion", "Activation energy", "Enthalpy change"],
-    answer: "Heat of combustion"
-  },
-{    question: "The bond enthalpy of a single covalent bond is generally:",
-    options: ["Positive", "Negative", "Zero", "Variable"],
-    answer: "Positive"
-  },
-{    question: "Which of the following best explains why ionic compounds have high melting points",
-    options: [
-      "Weak intermolecular forces",
-      "Strong ionic bonds",
-      "Weak ionic bonds",
-      "Covalent bonding"
-    ],
-    answer: "Strong ionic bonds"
-  },
-{    question: "In an energy profile diagram, the difference between the reactants and products is called:",
-    options: ["Activation energy", "Enthalpy change", "Energy barrier", "Transition state"],
-    answer: "Enthalpy change"
-  },
-{    question: "When a reaction absorbs heat, the reaction is said to be:",
-    options: ["Exothermic", "Endothermic", "Catalyzed", "Spontaneous"],
-    answer: "Endothermic"
-  },
-{    question: "Which of the following reactions releases energy",
-    options: ["Photosynthesis", "Melting ice", "Respiration", "Evaporation"],
-    answer: "Respiration"
-  },
-{    question: "Which factor affects the amount of energy absorbed or released during bond breaking/forming",
-    options: ["Bond length", "Bond strength", "Atomic number", "Molarity"],
-    answer: "Bond strength"
-  },
-{    question: "Heat of fusion refers to the energy required to:",
-    options: ["Convert solid to liquid", "Convert liquid to gas", "Break bonds", "Form bonds"],
-    answer: "Convert solid to liquid"
-  },
-{    question: "In an exothermic reaction, the surroundings:",
-    options: ["Gain energy", "Lose energy", "Are unaffected", "Change phase"],
-    answer: "Gain energy"
-  },
-{    question: "Which of these processes releases the most energy per mole",
-    options: ["Combustion of gasoline", "Melting of ice", "Evaporation of water", "Photosynthesis"],
-    answer: "Combustion of gasoline"
-  },
-{    question: "Which of the following is NOT a characteristic of an energy profile diagram",
-    options: ["Shows activation energy", "Shows enthalpy change", "Shows catalyst effect", "Shows reaction mechanism"],
-    answer: "Shows reaction mechanism"
-  },
-{    question: "What happens to energy during freezing",
-    options: ["Absorbed", "Released", "Converted to mass", "Destroyed"],
-    answer: "Released"
-  },
-{    question: "Catalysts work by:",
-    options: ["Increasing activation energy", "Decreasing activation energy", "Changing enthalpy", "Being consumed"],
-    answer: "Decreasing activation energy"
-  },
-{    question: "Which element is in Group 1 of the periodic table",
-    options: ["Calcium", "Sodium", "Chlorine", "Oxygen"],
-    answer: "Sodium"
-  },
-{    question: "Elements in the same group have:",
-    options: [
-      "Same number of protons",
-      "Same number of electrons",
-      "Same number of valence electrons",
-      "Same atomic mass"
-    ],
-    answer: "Same number of valence electrons"
-  },
-{    question: "Which element is a halogen",
-    options: ["Helium", "Chlorine", "Sodium", "Calcium"],
-    answer: "Chlorine"
-  },
-{    question: "The atomic number of oxygen is:",
-    options: ["6", "7", "8", "9"],
-    answer: "8"
-  },
-{    question: "Which property increases down a group",
-    options: ["Electronegativity", "Atomic radius", "Ionization energy", "Non-metallic character"],
-    answer: "Atomic radius"
-  },
-{    question: "Which element has the smallest atomic radius in period 3",
-    options: ["Sodium", "Magnesium", "Chlorine", "Aluminium"],
-    answer: "Chlorine"
-  },
-{    question: "What is the valency of magnesium",
-    options: ["1", "2", "3", "4"],
-    answer: "2"
-  },
-{    question: "Which group contains the noble gases",
-    options: ["Group 1", "Group 7", "Group 8", "Group 0"],
-    answer: "Group 0"
-  },
-{    question: "Transition elements are found in which block of the periodic table",
-    options: ["s-block", "p-block", "d-block", "f-block"],
-    answer: "d-block"
-  },
-{    question: "Which of these elements is a transition metal",
-    options: ["Calcium", "Iron", "Sodium", "Potassium"],
-    answer: "Iron"
-  },
-{    question: "Transition metals often form colored compounds because of:",
-    options: ["Variable oxidation states", "Metallic bonding", "Full outer shells", "Large atomic radius"],
-    answer: "Variable oxidation states"
-  },
-{    question: "Which of the following is a characteristic of transition metals",
-    options: ["Low melting points", "Non-conductive", "Good conductors of electricity", "Do not form alloys"],
-    answer: "Good conductors of electricity"
-  },
-{    question: "Which transition metal is commonly used in catalytic converters",
-    options: ["Copper", "Platinum", "Zinc", "Gold"],
-    answer: "Platinum"
-  },
-{    question: "Which property is typical of transition metals",
-    options: ["Form ions with a single charge", "Form colored ions", "Are gases at room temperature", "Have low densities"],
-    answer: "Form colored ions"
-  },
-{    question: "Transition metals can exhibit multiple oxidation states because:",
-    options: [
-      "They have unfilled d-orbitals",
-      "They have full s-orbitals",
-      "They have no electrons in outer shells",
-      "They do not form ions"
-    ],
-    answer: "They have unfilled d-orbitals"
-  },
-{    question: "Which element has an electron configuration ending in 3p5",
-    options: ["Chlorine", "Sulfur", "Phosphorus", "Argon"],
-    answer: "Chlorine"
-  },
-{    question: "The element with the highest first ionization energy is:",
-    options: ["Fluorine", "Neon", "Lithium", "Oxygen"],
-    answer: "Neon"
-  },
-{    question: "Which of these elements is a metalloid",
-    options: ["Silicon", "Sodium", "Sulfur", "Calcium"],
-    answer: "Silicon"
-  },
-{    question: "Which ion is typically formed by transition metals",
-    options: ["Anion", "Cation", "Radical", "None"],
-    answer: "Cation"
-  },
-{    question: "Which of the following is a use of transition metals",
-    options: ["Jewelry making", "Fuel", "Food additive", "Plastic production"],
-    answer: "Jewelry making"
-  },
-{    question: "The most reactive group in the periodic table is:",
-    options: ["Noble gases", "Alkali metals", "Halogens", "Alkaline earth metals"],
-    answer: "Alkali metals"
-  },
-{    question: "Which group is known as the alkaline earth metals",
-    options: ["Group 1", "Group 2", "Group 17", "Group 18"],
-    answer: "Group 2"
-  },
-{    question: "Which of these elements has the lowest electronegativity",
-    options: ["Fluorine", "Sodium", "Oxygen", "Nitrogen"],
-    answer: "Sodium"
-  },
-{    question: "The element with atomic number 12 is:",
-    options: ["Magnesium", "Aluminium", "Sodium", "Calcium"],
-    answer: "Magnesium"
-  },
-{    question: "Which of these elements is NOT a transition metal",
-    options: ["Zinc", "Scandium", "Aluminium", "Copper"],
-    answer: "Aluminium"
-  },
-{    question: "Which transition metal forms a +2 oxidation state commonly",
-    options: ["Iron", "Copper", "Zinc", "Gold"],
-    answer: "Zinc"
-  },
-{    question: "The property of transition metals to form complex ions is due to:",
-    options: ["Empty s orbitals", "Unfilled d orbitals", "High electronegativity", "Large atomic size"],
-    answer: "Unfilled d orbitals"
-  },
-{    question: "Which of the following transition metals is magnetic",
-    options: ["Copper", "Nickel", "Silver", "Gold"],
-    answer: "Nickel"
-  },
-{    question: "Which of these is NOT a typical property of transition metals",
-    options: ["High melting point", "Good electrical conductivity", "Low density", "Form colored compounds"],
-    answer: "Low density"
-  },
-{    question: "Which of these elements is a gas at room temperature",
-    options: ["Chlorine", "Sodium", "Calcium", "Silicon"],
-    answer: "Chlorine"
-  },
-{    question: "Which of the following increases the rate of a chemical reaction",
-    options: ["Decreasing temperature", "Increasing concentration", "Decreasing surface area", "Adding an inhibitor"],
-    answer: "Increasing concentration"
-  },
-{    question: "Catalysts work by:",
-    options: ["Increasing activation energy", "Lowering activation energy", "Increasing temperature", "Decreasing concentration"],
-    answer: "Lowering activation energy"
-  },
-{    question: "The unit for reaction rate is:",
-    options: ["mol/s", "s", "mol", "s�"],
-    answer: "mol/s"
-  },
-{    question: "Which factor does NOT affect the rate of reaction",
-    options: ["Concentration", "Temperature", "Pressure", "Color of reactants"],
-    answer: "Color of reactants"
-  },
-{    question: "Increasing the surface area of a solid reactant will:",
-    options: ["Decrease the reaction rate", "Increase the reaction rate", "Have no effect", "Stop the reaction"],
-    answer: "Increase the reaction rate"
-  },
-{    question: "Which of these is an example of a catalyst",
-    options: ["Enzymes", "Water", "Salt", "Oxygen"],
-    answer: "Enzymes"
-  },
-{    question: "A reaction is fastest when:",
-    options: ["Reactant particles collide with enough energy", "Reactants are in different phases", "Reactants are solids", "Reactants are cooled"],
-    answer: "Reactant particles collide with enough energy"
-  },
-{    question: "Chemical equilibrium is reached when:",
-    options: [
-      "Products are completely formed",
-      "Reactants are used up",
-      "The forward and reverse reaction rates are equal",
-      "The reaction stops"
-    ],
-    answer: "The forward and reverse reaction rates are equal"
-  },
-{    question: "Le Chatelier's principle states that:",
-    options: [
-      "A system at equilibrium will shift to counteract changes",
-      "Equilibrium reactions never change",
-      "Equilibrium can only be reached at low temperatures",
-      "Concentration has no effect on equilibrium"
-    ],
-    answer: "A system at equilibrium will shift to counteract changes"
-  },
-{    question: "Increasing pressure in a reaction involving gases shifts equilibrium:",
-    options: ["Towards side with more gas molecules", "Towards side with fewer gas molecules", "No effect", "Stops reaction"],
-    answer: "Towards side with fewer gas molecules"
-  },
-{    question: "Which of the following is NOT a characteristic of equilibrium",
-    options: ["Dynamic process", "Forward and reverse rates equal", "Concentrations remain constant", "Reaction stops"],
-    answer: "Reaction stops"
-  },
-{    question: "The equilibrium constant expression (Kc) is:",
-    options: [
-      "Ratio of product concentrations to reactant concentrations",
-      "Sum of product concentrations",
-      "Difference between reactants and products",
-      "Ratio of reactant concentrations"
-    ],
-    answer: "Ratio of product concentrations to reactant concentrations"
-  },
-{    question: "A catalyst affects the equilibrium by:",
-    options: [
-      "Increasing the rate of the forward reaction only",
-      "Increasing the rate of the reverse reaction only",
-      "Increasing the rate of both forward and reverse reactions equally",
-      "Changing the position of equilibrium"
-    ],
-    answer: "Increasing the rate of both forward and reverse reactions equally"
-  },
-{    question: "Which factor will shift equilibrium to the right",
-    options: ["Increasing concentration of reactants", "Decreasing temperature for an exothermic reaction", "Increasing pressure if fewer moles on product side", "All of the above"],
-    answer: "All of the above"
-  },
-{    question: "Which of the following statements about dynamic equilibrium is true",
-    options: [
-      "No reactions occur at equilibrium",
-      "Forward and backward reactions occur at equal rates",
-      "Concentrations of reactants and products become zero",
-      "Energy is always absorbed"
-    ],
-    answer: "Forward and backward reactions occur at equal rates"
-  },
-{    question: "Which of these does NOT increase the rate of reaction",
-    options: ["Increasing temperature", "Increasing concentration", "Using a catalyst", "Decreasing pressure"],
-    answer: "Decreasing pressure"
-  },
-{    question: "The rate of reaction can be measured by:",
-    options: ["Change in concentration per unit time", "Mass of reactants", "Volume of container", "Temperature change"],
-    answer: "Change in concentration per unit time"
-  },
-{    question: "Which state of matter generally reacts fastest",
-    options: ["Solid", "Liquid", "Gas", "Plasma"],
-    answer: "Gas"
-  },
-{    question: "The effect of temperature on reaction rate is explained by:",
-    options: ["Le Chatelier�s principle", "Collision theory", "Newton�s laws", "Avogadro�s law"],
-    answer: "Collision theory"
-  },
-{    question: "Which of the following is a homogeneous catalyst",
-    options: ["Platinum in catalytic converters", "Enzymes in digestion", "Acid in esterification", "Iron in Haber process"],
-    answer: "Acid in esterification"
-  },
-{    question: "Which is true of catalysts",
-    options: [
-      "Consumed in the reaction",
-      "Increase activation energy",
-      "Are regenerated at the end",
-      "Slow down reactions"
-    ],
-    answer: "Are regenerated at the end"
-  },
-{    question: "In which reaction does the rate not change with time",
-    options: ["Order zero", "First order", "Second order", "Third order"],
-    answer: "Order zero"
-  },
-{    question: "If the concentration of products is increased, the reaction will:",
-    options: ["Shift to produce more products", "Shift to produce more reactants", "Stop", "Speed up without shifting"],
-    answer: "Shift to produce more reactants"
-  },
-{    question: "What is the effect of adding a catalyst on equilibrium position",
-    options: ["Shifts right", "Shifts left", "No shift", "Stops reaction"],
-    answer: "No shift"
-  },
-{    question: "In an exothermic reaction, increasing temperature shifts equilibrium:",
-    options: ["Right", "Left", "No change", "Depends on pressure"],
-    answer: "Left"
-  },
-{    question: "The Haber process produces ammonia by combining nitrogen and hydrogen. What happens to equilibrium if pressure is increased",
-    options: ["Shifts to ammonia", "Shifts to nitrogen and hydrogen", "No effect", "Reaction stops"],
-    answer: "Shifts to ammonia"
-  },
-{    question: "Equilibrium constant (Kc) is large when:",
-    options: ["Products are favored", "Reactants are favored", "No reaction occurs", "Temperature is zero"],
-    answer: "Products are favored"
-  },
-{    question: "Which condition favors formation of products in an endothermic reaction",
-    options: ["Increasing temperature", "Decreasing temperature", "Increasing pressure", "Decreasing pressure"],
-    answer: "Increasing temperature"
-  },
-{    question: "A system at equilibrium experiences a change in pressure. What principle explains how the system responds",
-    options: ["Le Chatelier�s principle", "Boyle�s law", "Charles�s law", "Dalton�s law"],
-    answer: "Le Chatelier�s principle"
-  },
-{    question: "Which of these is true about a reversible reaction",
-    options: ["Only forward reaction occurs", "Only backward reaction occurs", "Both forward and backward occur", "Reaction stops halfway"],
-    answer: "Both forward and backward occur"
-  },
-{    question: "At equilibrium, the rate of the forward reaction is:",
-    options: ["Zero", "Equal to the rate of the reverse reaction", "Double the rate of reverse", "Half the rate of reverse"],
-    answer: "Equal to the rate of the reverse reaction"
-  },
-{    question: "Which of these factors affects only reactions involving gases",
-    options: ["Concentration", "Surface area", "Pressure", "Catalyst presence"],
-    answer: "Pressure"
-  },
-{    question: "Which of the following is true about the collision theory",
-    options: ["Particles react when they collide with enough energy and proper orientation", "Particles react when heated only", "All collisions result in reactions", "Particles do not need to collide to react"],
-    answer: "Particles react when they collide with enough energy and proper orientation"
-  },
-{    question: "How does increasing temperature affect the kinetic energy of particles",
-    options: ["Decreases it", "Increases it", "No effect", "Changes mass"],
-    answer: "Increases it"
-  },
-{    question: "Which factor does NOT affect the position of equilibrium",
-    options: ["Concentration", "Temperature", "Pressure", "Catalyst"],
-    answer: "Catalyst"
-  },
-{    question: "What does the equilibrium constant (Kc) indicate",
-    options: ["Speed of reaction", "Extent of reaction", "Energy change", "Pressure of gases"],
-    answer: "Extent of reaction"
-  },
-{    question: "If Kc is much greater than 1, the reaction favors:",
-    options: ["Products", "Reactants", "No reaction", "Both equally"],
-    answer: "Products"
-  },
-{    question: "In a reversible reaction, when equilibrium is disturbed, the system will:",
-    options: ["Shift to re-establish equilibrium", "Stop reacting", "Explode", "Double the rate of reaction"],
-    answer: "Shift to re-establish equilibrium"
-  },
-{    question: "Which term describes the minimum energy particles must have to react",
-    options: ["Activation energy", "Bond enthalpy", "Ionization energy", "Heat of reaction"],
-    answer: "Activation energy"
-  },
-{    question: "The presence of a catalyst in a reaction:",
-    options: ["Changes the equilibrium constant", "Increases the reaction rate", "Increases activation energy", "Is consumed"],
-    answer: "Increases the reaction rate"
-  },
-{    question: "According to the Arrhenius theory, an acid produces:",
-    options: ["OH ions in solution", "H ions in solution", "Na? ions", "Cl? ions"],
-    answer: "H ions in solution"
-  },
-{    question: "A base is a substance that:",
-    options: [
-      "Donates protons",
-      "Accepts protons",
-      "Neutralizes bases",
-      "Produces H ions"
-    ],
-    answer: "Accepts protons"
-  },
-{    question: "Which of these is an acid-base indicator",
-    options: ["Phenolphthalein", "Sodium chloride", "Benzene", "Sodium hydroxide"],
-    answer: "Phenolphthalein"
-  },
-{    question: "What color does litmus turn in an acidic solution",
-    options: ["Red", "Blue", "Green", "Yellow"],
-    answer: "Red"
-  },
-{    question: "Which of these is a strong acid",
-    options: ["Hydrochloric acid", "Acetic acid", "Carbonic acid", "Citric acid"],
-    answer: "Hydrochloric acid"
-  },
-{    question: "Which acid is classified as a mineral acid",
-    options: ["Citric acid", "Sulfuric acid", "Lactic acid", "Acetic acid"],
-    answer: "Sulfuric acid"
-  },
-{    question: "Which base is a common alkali",
-    options: ["Sodium hydroxide", "Ammonia", "Calcium carbonate", "Magnesium oxide"],
-    answer: "Sodium hydroxide"
-  },
-{    question: "A solution with pH 7 is:",
-    options: ["Acidic", "Neutral", "Basic", "Alkaline"],
-    answer: "Neutral"
-  },
-{    question: "What is the pH of a strong acid solution",
-    options: ["Greater than 7", "Exactly 7", "Less than 7", "Cannot be determined"],
-    answer: "Less than 7"
-  },
-{    question: "Buffer solutions:",
-    options: [
-      "Resist changes in pH",
-      "Are always acidic",
-      "Are always basic",
-      "Neutralize bases only"
-    ],
-    answer: "Resist changes in pH"
-  },
-{    question: "Which of these can act as a buffer solution",
-    options: ["Mixture of weak acid and its salt", "Pure water", "Strong acid", "Strong base"],
-    answer: "Mixture of weak acid and its salt"
-  },
-{    question: "Solubility is defined as:",
-    options: [
-      "Maximum amount of solute that can dissolve in a solvent at a given temperature",
-      "Minimum amount of solute in a solvent",
-      "Volume of solute",
-      "Weight of solvent"
-    ],
-    answer: "Maximum amount of solute that can dissolve in a solvent at a given temperature"
-  },
-{    question: "Which factor affects solubility of solids in liquids",
-    options: ["Temperature", "Pressure", "Volume", "Color"],
-    answer: "Temperature"
-  },
-{    question: "Salt is formed by the reaction of an acid and a:",
-    options: ["Base", "Metal", "Non-metal", "Gas"],
-    answer: "Base"
-  },
-{    question: "Common salt is chemically known as:",
-    options: ["Sodium chloride", "Potassium nitrate", "Calcium carbonate", "Magnesium sulfate"],
-    answer: "Sodium chloride"
-  },
-{    question: "Which of the following is a use of calcium carbonate",
-    options: [
-      "Neutralizing acidic soils",
-      "Making soap",
-      "Food preservative",
-      "Fuel"
-    ],
-    answer: "Neutralizing acidic soils"
-  },
-{    question: "According to the Bronsted-Lowry theory, an acid is a:",
-    options: ["Proton donor", "Proton acceptor", "Electron donor", "Electron acceptor"],
-    answer: "Proton donor"
-  },
-{    question: "According to the Bronsted-Lowry theory, a base is a:",
-    options: ["Proton donor", "Proton acceptor", "Electron donor", "Electron acceptor"],
-    answer: "Proton acceptor"
-  },
-{    question: "Which indicator turns pink in a basic solution",
-    options: ["Phenolphthalein", "Methyl orange", "Litmus", "Bromothymol blue"],
-    answer: "Phenolphthalein"
-  },
-{    question: "The pH scale ranges from:",
-    options: ["0 to 14", "1 to 10", "0 to 7", "7 to 14"],
-    answer: "0 to 14"
-  },
-{    question: "The pH of pure water at 25�C is:",
-    options: ["0", "7", "14", "10"],
-    answer: "7"
-  },
-{    question: "If [H] = 1 � 10 mol/dm�, the pH is:",
-    options: ["2", "4", "6", "8"],
-    answer: "4"
-  },
-{    question: "If the pH of a solution is 3, the solution is:",
-    options: ["Strongly basic", "Neutral", "Strongly acidic", "Weakly basic"],
-    answer: "Strongly acidic"
-  },
-{    question: "Which of these pH values indicates a weak base",
-    options: ["3", "5", "9", "13"],
-    answer: "9"
-  },
-{    question: "Which component of a buffer system neutralizes added acid",
-    options: ["Weak acid", "Strong base", "Salt of weak acid", "Water"],
-    answer: "Salt of weak acid"
-  },
-{    question: "Which of the following is NOT a characteristic of a buffer",
-    options: ["Maintains pH", "Contains strong acid", "Contains weak acid/base", "Resists pH change"],
-    answer: "Contains strong acid"
-  },
-{    question: "Which color does methyl orange show in acid",
-    options: ["Red", "Yellow", "Pink", "Blue"],
-    answer: "Red"
-  },
-{    question: "Which of these will neutralize hydrochloric acid",
-    options: ["Water", "Sodium hydroxide", "Ethanol", "Carbon dioxide"],
-    answer: "Sodium hydroxide"
-  },
-{    question: "A monoprotic acid is one that:",
-    options: ["Donates 1 proton", "Donates 2 protons", "Is weak", "Is organic"],
-    answer: "Donates 1 proton"
-  },
-{    question: "Which of these acids is triprotic",
-    options: ["HCl", "HNO", "HSO", "HPO"],
-    answer: "HPO"
-  },
-{    question: "When an acid reacts with a metal carbonate, the products are:",
-    options: ["Salt and water", "Salt, water and carbon dioxide", "Gas and acid", "Only salt"],
-    answer: "Salt, water and carbon dioxide"
-  },
-{    question: "A reaction between an acid and a base is called:",
-    options: ["Oxidation", "Reduction", "Neutralization", "Hydrolysis"],
-    answer: "Neutralization"
-  },
-{    question: "Epsom salt is chemically known as:",
-    options: ["Sodium chloride", "Magnesium sulfate", "Potassium nitrate", "Calcium carbonate"],
-    answer: "Magnesium sulfate"
-  },
-{    question: "Which salt is insoluble in water",
-    options: ["NaCl", "KNO", "BaSO", "CuSO"],
-    answer: "BaSO"
-  },
-{    question: "Which of the following salts is prepared by precipitation",
-    options: ["NaCl", "PbSO", "KNO", "MgCl?"],
-    answer: "PbSO"
-  },
-{    question: "Which of these is NOT a property of acids",
-    options: ["Sour taste", "Corrosive", "Turn red litmus blue", "React with metals"],
-    answer: "Turn red litmus blue"
-  },
-{    question: "Which of the following is an organic acid",
-    options: ["Hydrochloric acid", "Sulfuric acid", "Acetic acid", "Nitric acid"],
-    answer: "Acetic acid"
-  },
-{    question: "Which ion is responsible for alkalinity",
-    options: ["Hions in solution", "OHions in solution�", "Na?ions", "Cl?ions�"],
-    answer: "OHions in solution�"
-  },
-{    question: "Solubility curves show the relationship between solubility and:",
-    options: ["Mass", "Volume", "Temperature", "Time"],
-    answer: "Temperature"
-  },
-{    question: "Which method is suitable for preparing soluble salts from acids and metals",
-    options: ["Filtration", "Crystallization", "Precipitation", "Neutralization"],
-    answer: "Neutralization"
-  },
-{    question: "A strong base completely:",
-    options: ["Dissolves in water", "Ionizes in solution", "Turns blue litmus red", "Forms acids"],
-    answer: "Ionizes in solution"
-  },
-{    question: "What is the pOH of a solution with pH 3",
-    options: ["3", "7", "11", "14"],
-    answer: "11"
-  },
-{    question: "Which natural indicator is extracted from red cabbage",
-    options: ["Phenolphthalein", "Litmus", "Turmeric", "Anthocyanin"],
-    answer: "Anthocyanin"
-  },
-{    question: "Buffers are important in:",
-    options: ["Maintaining pH of blood", "Fuel combustion", "Photosynthesis", "Rust prevention"],
-    answer: "Maintaining pH of blood"
-  },
-{    question: "An example of a double salt is:",
-    options: ["NaCl", "KNO�", "FeSO�(NH)SO�6H₂O", "CaCO₂�"],
-    answer: "FeSO�(NH)SO�6H₂O"
-  },
-{    question: "Which of these is a deliquescent salt",
-    options: ["NaCl", "CuSO", "CO₂", "KNO�"],
-    answer: "KNO"
-  },
-{    question: "Gas solubility in water increases with:",
-    options: ["Increasing temperature", "Increasing pressure", "Increasing volume", "Adding salt"],
-    answer: "Increasing pressure"
-  },
-{    question: "The unit of solubility is usually:",
-    options: ["mol/dm�", "g/100g solvent", "mol/kg", "ppm"],
-    answer: "g/100g solvent"
-  },
-{    question: "Which of these salts is used in fertilizers",
-    options: ["NaCl", "KNO", "CuSO", "ZnCl?"],
-    answer: "KNO�"
-  },
-{    question: "Which acid is found in citrus fruits",
-    options: ["Lactic acid", "Citric acid", "Acetic acid", "Oxalic acid"],
-    answer: "Citric acid"
-  },
-{    question: "Which of the following bases is soluble in water",
-    options: ["Calcium hydroxide", "Aluminium hydroxide", "Copper(II) hydroxide", "Iron(III) hydroxide"],
-    answer: "Calcium hydroxide"
-  },
-{    question: "Litmus is extracted from:",
-    options: ["Red cabbage", "Lichens", "Beetroot", "Onion skin"],
-    answer: "Lichens"
-  },
-{    question: "Which of the following is a weak base",
-    options: ["Sodium hydroxide", "Potassium hydroxide", "Ammonia", "Calcium hydroxide"],
-    answer: "Ammonia"
-  },
-{    question: "Which of the following will not form a buffer solution",
-  options: [
-    "CHCOOH and CHCOONa",
-    "NH and NHCl",
-    "HCl and NaCl",
-    "HCO₂ and NaHCO₂"
-  ],
-  answer: "HCl and NaCl"
-  },
-{    question: "The acid used in car batteries is:",
-    options: ["Hydrochloric acid", "Sulfuric acid", "Nitric acid", "Acetic acid"],
-    answer: "Sulfuric acid"
-  },
-{    question: "Which condition reduces the solubility of gases in water",
-    options: ["Increasing pressure", "Decreasing temperature", "Increasing temperature", "Using more solvent"],
-    answer: "Increasing temperature"
-  },
-{    question: "Which of the following has a bitter taste and slippery feel",
-    options: ["Acid", "Base", "Salt", "Water"],
-    answer: "Base"
-  },
-{    question: "Which of these salts is used in photography",
-    options: ["Sodium chloride", "Silver nitrate", "Potassium nitrate", "Ammonium chloride"],
-    answer: "Silver nitrate"
-  },
-{    question: "Solubility of most solid solutes increases with:",
-    options: ["Decreasing temperature", "Stirring", "Cooling", "Addition of gas"],
-    answer: "Stirring"
-  },
-{    question: "Which method is used to prepare insoluble salts",
-    options: ["Neutralization", "Titration", "Precipitation", "Distillation"],
-    answer: "Precipitation"
-  },
-{    question: "What is the sum of pH and pOH at 25�C",
-    options: ["7", "10", "12", "14"],
-    answer: "14"
-  },
-{    question: "Which acid is commonly found in soft drinks",
-    options: ["Sulfuric acid", "Nitric acid", "Phosphoric acid", "Hydrochloric acid"],
-    answer: "Phosphoric acid"
-  },
-{    question: "A buffer solution is used in which of these applications",
-    options: ["Cooking", "Blood pH regulation", "Baking", "Rust removal"],
-    answer: "Blood pH regulation"
-  },
-{    question: "Which of these is a dibasic acid",
-    options: ["HCl", "HNO", "HSO", "HPO"],
-    answer: "HSO"
-  },
-{    question: "Which of these affects the rate of dissolving",
-    options: ["Size of solute", "Container shape", "Humidity", "Color of solute"],
-    answer: "Size of solute"
-  },
-{    question: "Which of the following salts is used in treating iron-deficiency",
-    options: ["FeSO", "MgSO", "CO₂", "ZnCl?"],
-    answer: "FeSO"
-  },
-{    question: "The conjugate base of HSO is:",
-    options: ["HSO", "SO�", "CO₂", "ZnCl?"],
-    answer: "HSO"
-  },
-{    question: "A basic solution has a pH value that is:",
-    options: ["Less than 7", "Equal to 7", "More than 7", "Zero"],
-    answer: "More than 7"
-  },
-{    question: "Which compound is least soluble in water",
-    options: ["NaCl", "KNO�", "PbCl?", "NHCl"],
-    answer: "PbCl?"
-  },
-{    question: "Which salt is formed when nitric acid reacts with potassium hydroxide",
-    options: ["KNO", "NaNO", "KSO", "KCl"],
-    answer: "KNO�"
-  },
-{    question: "Which of the following is a raw material in the chemical industry",
-    options: ["Plastic", "Petroleum", "Glass", "Paint"],
-    answer: "Petroleum"
-  },
-{    question: "The main purpose of the chemical industry is to:",
-    options: ["Pollute the environment", "Produce chemicals for use", "Destroy minerals", "Manufacture metals only"],
-    answer: "Produce chemicals for use"
-  },
-{    question: "Which industry produces ammonia on a large scale",
-    options: ["Textile industry", "Soap industry", "Haber process plant", "Oil refinery"],
-    answer: "Haber process plant"
-  },
-{    question: "Which of the following metals is extracted by electrolysis",
-    options: ["Iron", "Aluminium", "Zinc", "Lead"],
-    answer: "Aluminium"
-  },
-{    question: "The main ore of iron is:",
-    options: ["Bauxite", "Hematite", "Cryolite", "Dolomite"],
-    answer: "Hematite"
-  },
-{    question: "Which of these is a method of metal extraction",
-    options: ["Boiling", "Crystallization", "Electrolysis", "Filtration"],
-    answer: "Electrolysis"
-  },
-{    question: "Crude oil is separated into fractions by:",
-    options: ["Filtration", "Decanting", "Fractional distillation", "Crystallization"],
-    answer: "Fractional distillation"
-  },
-{    question: "Which of these is the lightest fraction of petroleum",
-    options: ["Diesel", "Lubricating oil", "Petrol", "Bitumen"],
-    answer: "Petrol"
-  },
-{    question: "Which of these is used as a raw material for making plastics",
-    options: ["Kerosene", "Bitumen", "Petrol", "Naphtha"],
-    answer: "Naphtha"
-  },
-{    question: "Which gas is primarily responsible for acid rain",
-    options: ["Carbon dioxide", "Nitrogen", "Sulfur dioxide", "Methane"],
-    answer: "Sulfur dioxide"
-  },
-{    question: "Which of the following contributes to global warming",
-    options: ["Oxygen", "Carbon dioxide", "Sulfur", "Helium"],
-    answer: "Carbon dioxide"
-  },
-{    question: "The major pollutant in automobile exhaust is:",
-    options: ["Oxygen", "Carbon monoxide", "Water vapor", "Nitrogen gas"],
-    answer: "Carbon monoxide"
-  },
-{    question: "Which of the following is an application of biotechnology",
-    options: ["Plastic recycling", "Drug production", "Cooking", "Welding"],
-    answer: "Drug production"
-  },
-{    question: "The microorganisms used in biotechnology are mostly:",
-    options: ["Bacteria and fungi", "Viruses and amoeba", "Algae and mosses", "Worms and insects"],
-    answer: "Bacteria and fungi"
-  },
-{    question: "Which of these is produced through fermentation",
-    options: ["Petrol", "Ethanol", "Diesel", "Methane"],
-    answer: "Ethanol"
-  },
-{    question: "The main raw materials used in the production of cement are:",
-    options: ["Limestone and clay", "Sand and water", "Gypsum and gravel", "Iron and coal"],
-    answer: "Limestone and clay"
-  },
-{    question: "The main chemical compound in cement is:",
-    options: ["Calcium oxide", "Silicon dioxide", "Aluminium oxide", "Iron oxide"],
-    answer: "Calcium oxide"
-  },
-{    question: "Which of the following is a major use of cement",
-    options: ["Fertilizer production", "Water purification", "Construction", "Food preservation"],
-    answer: "Construction"
-  },
-{    question: "Deforestation contributes to pollution by increasing:",
-    options: ["Rainfall", "Oxygen production", "Carbon dioxide levels", "Soil nutrients"],
-    answer: "Carbon dioxide levels"
-  },
-{    question: "Which of these is a method of reducing air pollution",
-    options: ["Open burning", "Planting trees", "Deforestation", "Car idling"],
-    answer: "Planting trees"
-  },
-{    question: "Which of the following processes is commonly used to produce soap",
-    options: ["Hydrolysis", "Fermentation", "Saponification", "Distillation"],
-    answer: "Saponification"
-  },
-{    question: "Which of the following chemicals is used in making fertilizers",
-    options: ["NaCl", "HNO", "NH", "CH"],
-    answer: "NH�"
-  },
-{    question: "The chemical industry provides raw materials for all the following EXCEPT:",
-    options: ["Pharmaceuticals", "Agriculture", "Construction", "Telecommunication signals"],
-    answer: "Telecommunication signals"
-  },
-{    question: "Which of the following metals is extracted from bauxite",
-    options: ["Copper", "Iron", "Aluminium", "Zinc"],
-    answer: "Aluminium"
-  },
-{    question: "In the blast furnace, iron is reduced from its ore by:",
-    options: ["Carbon", "Water", "Air", "Sand"],
-    answer: "Carbon"
-  },
-{    question: "Which of the following is a reducing agent in metal extraction",
-    options: ["CO₂", "SO", "CO", "HCl"],
-    answer: "CO"
-  },
-{    question: "Which fraction is used as fuel for jet engines",
-    options: ["Petrol", "Diesel", "Kerosene", "Bitumen"],
-    answer: "Kerosene"
-  },
-{    question: "Which of the following is the heaviest fraction from crude oil",
-    options: ["Kerosene", "Diesel", "Bitumen", "Petrol"],
-    answer: "Bitumen"
-  },
-{    question: "Which of these is used in road surfacing",
-    options: ["Naphtha", "Petrol", "Bitumen", "Gas oil"],
-    answer: "Bitumen"
-  },
-{    question: "Chlorofluorocarbons (CFCs) cause depletion of the:",
-    options: ["Carbon cycle", "Ozone layer", "Greenhouse gases", "Nitrogen cycle"],
-    answer: "Ozone layer"
-  },
-{    question: "Which of the following is a biodegradable pollutant",
-    options: ["Plastic", "Glass", "Paper", "Polythene"],
-    answer: "Paper"
-  },
-{    question: "A major cause of water pollution is:",
-    options: ["Boiling water", "Using soap", "Industrial waste discharge", "Solar energy"],
-    answer: "Industrial waste discharge"
-  },
-{    question: "Genetic engineering is a part of:",
-    options: ["Organic chemistry", "Biotechnology", "Nuclear chemistry", "Electrochemistry"],
-    answer: "Biotechnology"
-  },
-{    question: "Which of the following is produced by fermentation using yeast",
-    options: ["Ethene", "Alcohol", "Salt", "Ammonia"],
-    answer: "Alcohol"
-  },
-{    question: "Which product is commonly produced with the help of biotechnology",
-    options: ["Fertilizers", "Vitamins", "Plastics", "Batteries"],
-    answer: "Vitamins"
-  },
-{    question: "During cement production, raw materials are heated in a:",
-    options: ["Boiler", "Kiln", "Furnace", "Drum"],
-    answer: "Kiln"
-  },
-{    question: "Cement sets and hardens due to a process called:",
-    options: ["Boiling", "Crystallization", "Hydration", "Fermentation"],
-    answer: "Hydration"
-  },
-{    question: "Which of these is NOT a component of cement",
-    options: ["Calcium carbonate", "Silicon dioxide", "Sodium chloride", "Aluminium oxide"],
-    answer: "Sodium chloride"
-  },
-{    question: "Smog is mainly formed from the reaction of sunlight with:",
-    options: ["CO₂ and water vapor", "Sulfur dioxide", "Ozone and hydrocarbons", "NOx and hydrocarbons"],
-    answer: "NOx and hydrocarbons"
-  },
-{    question: "Pollutants that cause cancer are called:",
-    options: ["Mutagens", "Teratogens", "Carcinogens", "Irritants"],
-    answer: "Carcinogens"
-  },
-{    question: "Which waste management method converts waste into usable products",
-    options: ["Burning", "Landfilling", "Composting", "Dumping"],
-    answer: "Composting"
-  },
-{    question: "Which of the following gases contributes to both acid rain and respiratory problems",
-    options: ["CO", "SO", "O", "H"],
-    answer: "SO"
-  },
-{    question: "Noise pollution can lead to:",
-    options: ["Water shortage", "Hearing problems", "Climate change", "Soil erosion"],
-    answer: "Hearing problems"
-  },
-{    question: "Which of the following is used to reduce sulfur emissions in factories",
-    options: ["Electrolysis", "Flue-gas desulfurization", "Filtration", "Decanting"],
-    answer: "Flue-gas desulfurization"
-  },
-{    question: "Which of these is a basic raw material in fertilizer production",
-    options: ["Urea", "Ethanol", "Acetic acid", "Limestone"],
-    answer: "Urea"
-  },
-{    question: "The process of heating an ore in the absence of air is called:",
-    options: ["Calcination", "Roasting", "Smelting", "Electrolysis"],
-    answer: "Calcination"
-  },
-{    question: "Which of these metals is least reactive and found in free state",
-    options: ["Zinc", "Iron", "Copper", "Gold"],
-    answer: "Gold"
-  },
-{    question: "Which of these is used as a lubricating oil",
-    options: ["Naphtha", "Diesel", "Residue", "Mid-range fraction"],
-    answer: "Residue"
-  },
-{    question: "Petroleum is also known as:",
-    options: ["Crude rubber", "Black gold", "Natural wax", "Natural alkane"],
-    answer: "Black gold"
-  },
-{    question: "Which of these is a benefit of biotechnology in agriculture",
-    options: ["Shorter days", "Genetically modified crops", "Less sunlight", "Increased soil erosion"],
-    answer: "Genetically modified crops"
-  },
-{    question: "Which of the following is used in making detergents",
-    options: ["Sulfuric acid", "Sodium hydroxide", "Ammonia", "Acetic acid"],
-    answer: "Sulfuric acid"
-  },
-{    question: "Which of the following is NOT a product of the chemical industry",
-    options: ["Paint", "Paper", "Fertilizer", "Plastics"],
-    answer: "Paper"
-  },
-{    question: "Which gas is used in the manufacture of nitric acid",
-    options: ["Hydrogen", "Ammonia", "Oxygen", "Nitrogen dioxide"],
-    answer: "Ammonia"
-  },
-{    question: "Aluminium is extracted from bauxite by:",
-    options: ["Smelting", "Roasting", "Electrolysis", "Crushing"],
-    answer: "Electrolysis"
-  },
-{    question: "Cryolite is used in the extraction of aluminium to:",
-    options: ["Increase temperature", "Reduce melting point", "Add weight", "Act as oxidizing agent"],
-    answer: "Reduce melting point"
-  },
-{    question: "Which of the following metals is commonly extracted using a blast furnace",
-    options: ["Copper", "Iron", "Zinc", "Lead"],
-    answer: "Iron"
-  },
-{    question: "Which fraction of crude oil is used as domestic fuel",
-    options: ["Kerosene", "Bitumen", "Diesel", "Naphtha"],
-    answer: "Kerosene"
-  },
-{    question: "Which method is used to separate components of crude oil",
-    options: ["Filtration", "Fractional distillation", "Evaporation", "Sublimation"],
-    answer: "Fractional distillation"
-  },
-{    question: "The refinery gas obtained from petroleum is mainly:",
-    options: ["Methane and ethane", "Butane and propane", "Octane and nonane", "Hexane and heptane"],
-    answer: "Butane and propane"
-  },
-{    question: "The effect of greenhouse gases is to:",
-    options: ["Cool the Earth", "Cause acid rain", "Cause global warming", "Cause ozone formation"],
-    answer: "Cause global warming"
-  },
-{    question: "Which pollutant is most responsible for ozone layer depletion",
-    options: ["CO₂", "CFCs", "NOx", "H₂O vapor"],
-    answer: "CFCs"
-  },
-{    question: "Which of the following is a heavy metal pollutant",
-    options: ["Iron", "Zinc", "Lead", "Calcium"],
-    answer: "Lead"
-  },
-{    question: "The term 'eutrophication' is associated with:",
-    options: ["Soil pollution", "Air pollution", "Water pollution", "Noise pollution"],
-    answer: "Water pollution"
-  },
-{    question: "Which of these is a non-biodegradable waste",
-    options: ["Paper", "Food waste", "Glass", "Leaves"],
-    answer: "Glass"
-  },
-{    question: "Which gas is the main contributor to acid rain",
-    options: ["Methane", "Carbon monoxide", "Nitrogen dioxide", "Helium"],
-    answer: "Nitrogen dioxide"
-  },
-{    question: "Which of the following uses enzymes to break down organic waste",
-    options: ["Burning", "Composting", "Electrolysis", "Recycling"],
-    answer: "Composting"
-  },
-{    question: "Which microorganism is commonly used to produce yoghurt",
-    options: ["E. coli", "Yeast", "Lactobacillus", "Amoeba"],
-    answer: "Lactobacillus"
-  },
-{    question: "Which product is made using genetically modified bacteria",
-    options: ["Glucose", "Penicillin", "Insulin", "Starch"],
-    answer: "Insulin"
-  },
-{    question: "Which of the following is a benefit of fermentation",
-    options: ["Air pollution", "Fuel consumption", "Food preservation", "Radioactive waste"],
-    answer: "Food preservation"
-  },
-{    question: "Cement mixed with sand and water is called:",
-    options: ["Clay", "Plaster", "Concrete", "Mortar"],
-    answer: "Mortar"
-  },
-{    question: "Cement mixed with gravel and water forms:",
-    options: ["Plaster", "Mortar", "Concrete", "Brick"],
-    answer: "Concrete"
-  },
-{    question: "Which of the following helps cement to set quickly",
-    options: ["Calcium chloride", "Water", "Sand", "Lime"],
-    answer: "Calcium chloride"
-  },
-{    question: "Acid rain can damage all the following EXCEPT:",
-    options: ["Marble buildings", "Water bodies", "Plants", "Plastic packaging"],
-    answer: "Plastic packaging"
-  },
-{    question: "Which of these is a natural cause of air pollution",
-    options: ["Factory smoke", "Vehicle exhaust", "Volcanic eruption", "Burning plastics"],
-    answer: "Volcanic eruption"
-  },
-{    question: "Which gas is produced during anaerobic fermentation",
-    options: ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
-    answer: "Carbon dioxide"
-  },
-{    question: "Which process involves using microbes to clean up oil spills",
-    options: ["Recycling", "Fermentation", "Bioremediation", "Neutralization"],
-    answer: "Bioremediation"
-  },
-{    question: "Which of these metals can be obtained by heating its ore with carbon",
-    options: ["Potassium", "Aluminium", "Iron", "Sodium"],
-    answer: "Iron"
-  },
-{    question: "In electrolysis, the metal is always deposited at the:",
-    options: ["Anode", "Cathode", "Middle", "Electrolyte"],
-    answer: "Cathode"
-  },
-{    question: "Which of the following fuels produces the least air pollution",
-    options: ["Diesel", "Petrol", "Natural gas", "Coal"],
-    answer: "Natural gas"
-  },
-{    question: "Petroleum is mainly composed of:",
-    options: ["Alcohols", "Carbohydrates", "Hydrocarbons", "Amines"],
-    answer: "Hydrocarbons"
-  },
-{    question: "Organic chemistry is the study of compounds containing primarily:",
-    options: ["Oxygen", "Carbon", "Nitrogen", "Sulfur"],
-    answer: "Carbon"
-  },
-{    question: "Which of the following is NOT an organic compound",
-    options: ["Methane", "Glucose", "Calcium carbonate", "Ethanol"],
-    answer: "Calcium carbonate"
-  },
-{    question: "The general formula for alkanes is:",
-    options: ["CH", "CH", "CH", "CH"],
-    answer: "CH"
-  },
-{    question: "Which of the following is an alkene",
-    options: ["Methane", "Ethene", "Ethane", "Propyne"],
-    answer: "Ethene"
-  },
-{    question: "The functional group of alkenes is:",
-    options: ["Triple bond", "Carboxyl", "Double bond", "Hydroxyl"],
-    answer: "Double bond"
-  },
-{    question: "Which hydrocarbon is unsaturated",
-    options: ["Butane", "Ethene", "Propane", "Methane"],
-    answer: "Ethene"
-  },
-{    question: "Which of these is the molecular formula of propane",
-    options: ["CH", "CH", "CH", "CH"],
-    answer: "CH"
-  },
-{    question: "The functional group of alcohols is:",
-    options: ["-COOH", "-OH", "-NH₂", "-CHO"],
-    answer: "-OH"
-  },
-{    question: "Carboxylic acids contain which functional group",
-    options: ["-OH", "-COOH", "-CHO", "�CC�"],
-    answer: "-COOH"
-  },
-{    question: "Which of the following is an alcohol",
-    options: ["Methanoic acid", "Ethanol", "Butene", "Ethyne"],
-    answer: "Ethanol"
-  },
-{    question: "Alkenes undergo addition reactions because they:",
-    options: ["Have single bonds", "Are saturated", "Contain a double bond", "Are alcohols"],
-    answer: "Contain a double bond"
-  },
-{    question: "Which of these reactions is used to test for alkenes",
-    options: ["Fehling's test", "Tollen's test", "Bromine water test", "Litmus test"],
-    answer: "Bromine water test"
-  },
-{    question: "Which of the following undergoes substitution reactions",
-    options: ["Alkenes", "Alkanes", "Alcohols", "Carboxylic acids"],
-    answer: "Alkanes"
-  },
-{    question: "Compounds with the same molecular formula but different structures are called:",
-    options: ["Isomers", "Polymers", "Radicals", "Hydrocarbons"],
-    answer: "Isomers"
-  },
-{    question: "Which of the following pairs are structural isomers",
-    options: ["Methane and ethane", "Butane and isobutane", "Ethene and ethyne", "Propane and propane"],
-    answer: "Butane and isobutane"
-  },
-{    question: "Which of these is a natural polymer",
-    options: ["Polyethene", "Nylon", "Protein", "Teflon"],
-    answer: "Protein"
-  },
-{    question: "The process of joining monomers to form a polymer is called:",
-    options: ["Hydrolysis", "Polymerization", "Combustion", "Neutralization"],
-    answer: "Polymerization"
-  },
-{    question: "Which monomer is used to make polyethene",
-    options: ["Ethyne", "Ethene", "Methanol", "Glucose"],
-    answer: "Ethene"
-  },
-{    question: "Starch is a polymer of:",
-    options: ["Cellulose", "Protein", "Glucose", "Amino acids"],
-    answer: "Glucose"
-  },
-{    question: "Which of the following is an aldehyde",
-    options: ["Methanol", "Methanoic acid", "Methanal", "Methene"],
-    answer: "Methanal"
-  },
-{    question: "Which of the following is the first member of the alkyne series",
-    options: ["Ethene", "Ethane", "Ethyne", "Propene"],
-    answer: "Ethyne"
-  },
-{    question: "The IUPAC name for CHâ‚ƒCH=CH is:",
-    options: ["Propene", "Propane", "Butene", "Ethene"],
-    answer: "Propene"
-  },
-{    question: "Alkanes are also known as:",
-    options: ["Unsaturated hydrocarbons", "Paraffins", "Olefins", "Alkyl halides"],
-    answer: "Paraffins"
-  },
-{    question: "Which of the following is saturated",
-    options: ["Alkene", "Alkyne", "Alkane", "Aromatic hydrocarbon"],
-    answer: "Alkane"
-  },
-{    question: "Which group characterizes aldehydes",
-    options: ["COOH", "OH", "CHO", "NH�"],
-    answer: "-CHO"
-  },
-{    question: "The compound CH?COOH is called:",
-    options: ["Methanoic acid", "Ethanoic acid", "Ethanol", "Methanol"],
-    answer: "Ethanoic acid"
-  },
-{    question: "A ketone contains which functional group",
-    options: ["COOH", "CHO", "C=O (carbonyl group in the middle of the chain)", "OH"],
-    answer: "C=O (carbonyl group in the middle of the chain)"
-  },
-{    question: "Which class of compounds contains both â€“COOH and â€“OH",
-    options: ["Alcohols", "Carboxylic acids", "Amino acids", "Ketones"],
-    answer: "Amino acids"
-  },
-{    question: "What is the product when ethene reacts with bromine",
-    options: ["Ethene dibromide", "Ethanol", "Methane", "Bromoethane"],
-    answer: "Ethene dibromide"
-  },
-{    question: "Which reaction converts alcohol to alkene",
-    options: ["Oxidation", "Hydration", "Dehydration", "Addition"],
-    answer: "Dehydration"
-  },
-{    question: "Ethanol can be oxidized to form:",
-    options: ["Methane", "Ethene", "Ethanoic acid", "Acetylene"],
-    answer: "Ethanoic acid"
-  },
-{    question: "Esterification is a reaction between:",
-    options: ["Alcohol and acid", "Alkene and water", "Ketone and amine", "Base and alcohol"],
-    answer: "Alcohol and acid"
-  },
-{    question: "Which of the following is used to test for alcohols",
-    options: ["Fehling's solution", "Bromine water", "Lucas reagent", "Sodium carbonate"],
-    answer: "Lucas reagent"
-  },
-{    question: "Isomers differ in:",
-    options: ["Molecular formula", "Physical state", "Structural arrangement", "Mass number"],
-    answer: "Structural arrangement"
-  },
-{    question: "Which of these is a type of isomerism",
-    options: ["Structural", "Visual", "Acidic", "Dynamic"],
-    answer: "Structural"
-  },
-{    question: "Which pair represents chain isomers",
-    options: ["Butane and 2-methylpropane", "Methane and ethane", "Ethene and ethyne", "Ethanol and ethanoic acid"],
-    answer: "Butane and 2-methylpropane"
-  },
-{    question: "Which of the following is a synthetic polymer",
-    options: ["Cellulose", "DNA", "Polyethene", "Protein"],
-    answer: "Polyethene"
-  },
-{    question: "Nylon is a type of:",
-    options: ["Natural fiber", "Synthetic fiber", "Polysaccharide", "Protein"],
-    answer: "Synthetic fiber"
-  },
-{    question: "Proteins are polymers of:",
-    options: ["Glucose", "Nucleotides", "Amino acids", "Fatty acids"],
-    answer: "Amino acids"
-  },
-{    question: "Which of these polymers is biodegradable",
-    options: ["Polyvinyl chloride", "Starch", "Teflon", "Polystyrene"],
-    answer: "Starch"
-  },
-{    question: "Which of these hydrocarbons is aromatic",
-    options: ["Ethane", "Propene", "Benzene", "Butane"],
-    answer: "Benzene"
-  },
-{    question: "Which reaction turns ethene into ethanol",
-    options: ["Hydrogenation", "Polymerization", "Hydration", "Dehydration"],
-    answer: "Hydration"
-  },
-{    question: "Which of the following statements about carbon is FALSE",
-    options: ["Forms four covalent bonds", "Can catenate", "Is a metal", "Can form long chains"],
-    answer: "Is a metal"
-  },
-{    question: "The simplest carboxylic acid is:",
-    options: ["Acetic acid", "Methanoic acid", "Ethanol", "Propanoic acid"],
-    answer: "Methanoic acid"
-  },
-{    question: "Which of the following is a condensation polymer",
-    options: ["Polyethene", "Polystyrene", "Nylon", "PVC"],
-    answer: "Nylon"
-  },
-{    question: "Combustion of hydrocarbons produces:",
-    options: ["CO₂ and H₂O", "CO and H", "O and C", "H and CO₂"],
-    answer: "CO₂ and H₂O"
-  },
-{    question: "Which organic compound group is responsible for pleasant smells and is used in perfumes",
-    options: ["Alcohols", "Esters", "Aldehydes", "Alkanes"],
-    answer: "Esters"
-  },
-{    question: "Which of the following is a ketone",
-    options: ["Propanone", "Propanal", "Propene", "Propanoic acid"],
-    answer: "Propanone"
-  },
-{    question: "Which type of isomerism occurs in alkenes due to restricted rotation",
-    options: ["Chain", "Position", "Geometrical", "Functional"],
-    answer: "Geometrical"
-  },
-{    question: "Which of the following is NOT a property of plastics",
-    options: ["Lightweight", "Corrosion-resistant", "Biodegradable", "Easily moldable"],
-    answer: "Biodegradable"
-  },
-{    question: "Which group is found in both amino acids and proteins",
-    options: ["-COOH", "-OH", "-CHO", "-NH?"],
-    answer: "-COOH"
-  },
-{    question: "Which compound is formed when ethyne is hydrogenated",
-    options: ["Ethane", "Ethene", "Ethanol", "Acetone"],
-    answer: "Ethene"
-  },
-{    question: "Which element is essential in all organic compounds",
-    options: ["Nitrogen", "Carbon", "Oxygen", "Hydrogen"],
-    answer: "Carbon"
-  },
-{    question: "What type of reaction is the conversion of alcohol to carboxylic acid",
-    options: ["Substitution", "Reduction", "Addition", "Oxidation"],
-    answer: "Oxidation"
-  },
-{    question: "Cellulose is a polymer of:",
-    options: ["Glucose", "Glycine", "Amino acids", "Fructose"],
-    answer: "Glucose"
-  },
-{    question: "What type of isomerism exists between ethanol and dimethyl ether",
-    options: ["Chain", "Functional", "Position", "Geometric"],
-    answer: "Functional"
-  },
-{    question: "Which of these is a saturated aliphatic hydrocarbon",
-    options: ["Butane", "Butene", "Butyne", "Benzene"],
-    answer: "Butane"
-  },
+  question: "Which is NOT lab equipment?",
+  options: ["burette", "pipette", "thermometer", "radio"],
+  answer: "radio"
+},
 {
-    question: "Which of the following is a test for unsaturation",
-    options: ["Blue litmus paper", "Br in CCl?", "NaOH", "Red litmus paper"],
-    answer: "Br in CCl?"
-  }
+  question: "Hazard symbol shows:",
+  options: ["danger", "formula", "mass", "reaction"],
+  answer: "danger"
+},
+{
+  question: "Corrosive substances:",
+  options: ["burn skin", "freeze", "explode", "evaporate"],
+  answer: "burn skin"
+},
+{
+  question: "PPE stands for:",
+  options: ["Personal Protective Equipment", "Public Equipment", "Private Protection", "None"],
+  answer: "Personal Protective Equipment"
+},
+{
+  question: "Example of PPE:",
+  options: ["gloves", "paper", "book", "pen"],
+  answer: "gloves"
+},
+{
+  question: "Fire extinguisher is used to:",
+  options: ["put out fire", "measure", "heat", "cool"],
+  answer: "put out fire"
+},
+{
+  question: "Chemicals should not be stored alphabetically because:",
+  options: ["dangerous reactions", "cost", "color", "size"],
+  answer: "dangerous reactions"
+},
+{
+  question: "Unit of time:",
+  options: ["second", "minute", "hour", "day"],
+  answer: "second"
+},
+{
+  question: "Volume is measured using:",
+  options: ["burette", "balance", "thermometer", "ruler"],
+  answer: "burette"
+},
+{
+  question: "Measurement error is:",
+  options: ["difference from true value", "value", "unit", "instrument"],
+  answer: "difference from true value"
+},
+{
+  question: "Significant figures show:",
+  options: ["precision", "units", "error", "value"],
+  answer: "precision"
+},
+{
+  question: "Which is basic unit?",
+  options: ["meter", "m/s", "N", "Pa"],
+  answer: "meter"
+},
+{
+  question: "Which is derived unit?",
+  options: ["Newton", "meter", "kg", "second"],
+  answer: "Newton"
+},
+{
+  question: "Scientific measurement is important because:",
+  options: ["accuracy in results", "beauty", "size", "color"],
+  answer: "accuracy in results"
+},
+{
+  question: "Laboratory coat protects:",
+  options: ["body", "equipment", "chemicals", "air"],
+  answer: "body"
+},
+{
+  question: "First aid is:",
+  options: ["immediate treatment", "final treatment", "experiment", "test"],
+  answer: "immediate treatment"
+},
+{
+  question: "Fire blanket is used to:",
+  options: ["cover fire", "measure", "heat", "cool"],
+  answer: "cover fire"
+},
+{
+  question: "Science depends heavily on:",
+  options: ["measurement", "guess", "color", "size"],
+  answer: "measurement"
+},
+
+{
+  question: "Matter is made up of:",
+  options: ["atoms", "cells", "energy", "light"],
+  answer: "atoms"
+},
+{
+  question: "Smallest particle of an element:",
+  options: ["atom", "molecule", "ion", "compound"],
+  answer: "atom"
+},
+{
+  question: "Dalton proposed that atoms are:",
+  options: ["indivisible", "divisible", "charged", "unstable"],
+  answer: "indivisible"
+},
+{
+  question: "Electron was discovered by:",
+  options: ["J.J. Thomson", "Rutherford", "Bohr", "Dalton"],
+  answer: "J.J. Thomson"
+},
+{
+  question: "Nucleus was discovered by:",
+  options: ["Rutherford", "Thomson", "Bohr", "Dalton"],
+  answer: "Rutherford"
+},
+{
+  question: "Bohr model explains:",
+  options: ["energy levels", "nucleus", "electron", "mass"],
+  answer: "energy levels"
+},
+{
+  question: "Charge of electron:",
+  options: ["−1", "+1", "0", "+2"],
+  answer: "−1"
+},
+{
+  question: "Charge of proton:",
+  options: ["+1", "−1", "0", "+2"],
+  answer: "+1"
+},
+{
+  question: "Neutron charge:",
+  options: ["0", "+1", "−1", "+2"],
+  answer: "0"
+},
+{
+  question: "Atomic number equals:",
+  options: ["protons", "neutrons", "mass", "electrons only"],
+  answer: "protons"
+},
+{
+  question: "Mass number equals:",
+  options: ["protons + neutrons", "protons", "electrons", "neutrons"],
+  answer: "protons + neutrons"
+},
+{
+  question: "Isotopes have same:",
+  options: ["protons", "neutrons", "mass", "charge"],
+  answer: "protons"
+},
+{
+  question: "Isotopes differ in:",
+  options: ["neutrons", "protons", "electrons", "charge"],
+  answer: "neutrons"
+},
+{
+  question: "Example of isotope:",
+  options: ["C-12 and C-14", "Na and Cl", "H2O", "CO2"],
+  answer: "C-12 and C-14"
+},
+{
+  question: "Relative atomic mass of Cl (35, 37 equally):",
+  options: ["36", "35", "37", "34"],
+  answer: "36"
+},
+{
+  question: "If 75% isotope = 10, 25% = 11, Ar:",
+  options: ["10.25", "10.5", "11", "10"],
+  answer: "10.25"
+},
+{
+  question: "Electron configuration of Na (11):",
+  options: ["2,8,1", "2,8,2", "2,7,2", "2,8"],
+  answer: "2,8,1"
+},
+{
+  question: "Electron configuration of Mg (12):",
+  options: ["2,8,2", "2,8,1", "2,7,3", "2,6,4"],
+  answer: "2,8,2"
+},
+{
+  question: "Valence electrons of Na:",
+  options: ["1", "2", "8", "11"],
+  answer: "1"
+},
+{
+  question: "Element with 2,8,8 is:",
+  options: ["noble gas", "metal", "non-metal", "halogen"],
+  answer: "noble gas"
+},
+{
+  question: "Group number equals:",
+  options: ["valence electrons", "protons", "neutrons", "mass"],
+  answer: "valence electrons"
+},
+{
+  question: "Period number equals:",
+  options: ["shells", "protons", "neutrons", "valence"],
+  answer: "shells"
+},
+{
+  question: "Atomic radius increases:",
+  options: ["down group", "across period", "constant", "random"],
+  answer: "down group"
+},
+{
+  question: "Atomic radius decreases:",
+  options: ["across period", "down group", "constant", "random"],
+  answer: "across period"
+},
+{
+  question: "Ionization energy increases:",
+  options: ["across period", "down group", "constant", "random"],
+  answer: "across period"
+},
+{
+  question: "Ionization energy decreases:",
+  options: ["down group", "across period", "constant", "random"],
+  answer: "down group"
+},
+{
+  question: "Electronegativity increases:",
+  options: ["across period", "down group", "constant", "random"],
+  answer: "across period"
+},
+{
+  question: "Metals are found:",
+  options: ["left", "right", "middle only", "top"],
+  answer: "left"
+},
+{
+  question: "Non-metals are found:",
+  options: ["right", "left", "middle", "bottom"],
+  answer: "right"
+},
+{
+  question: "Halogens are:",
+  options: ["Group 7", "Group 1", "Group 2", "Group 8"],
+  answer: "Group 7"
+},
+{
+  question: "Noble gases are:",
+  options: ["Group 8", "Group 1", "Group 2", "Group 7"],
+  answer: "Group 8"
+},
+{
+  question: "Transition metals are:",
+  options: ["middle", "left", "right", "top"],
+  answer: "middle"
+},
+{
+  question: "Na reacts with water to form:",
+  options: ["NaOH", "NaCl", "Na2O", "Na2CO3"],
+  answer: "NaOH"
+},
+{
+  question: "Mg is:",
+  options: ["metal", "non-metal", "gas", "liquid"],
+  answer: "metal"
+},
+{
+  question: "Cl is:",
+  options: ["non-metal", "metal", "gas only", "liquid"],
+  answer: "non-metal"
+},
+{
+  question: "Mass spectrometer measures:",
+  options: ["mass", "volume", "temperature", "time"],
+  answer: "mass"
+},
+{
+  question: "Electron enters orbital following:",
+  options: ["Aufbau principle", "Pauli only", "Hund only", "random"],
+  answer: "Aufbau principle"
+},
+{
+  question: "No two electrons have same quantum numbers:",
+  options: ["Pauli exclusion", "Hund rule", "Bohr rule", "Dalton"],
+  answer: "Pauli exclusion"
+},
+{
+  question: "Electrons occupy orbitals singly first:",
+  options: ["Hund rule", "Pauli", "Aufbau", "Bohr"],
+  answer: "Hund rule"
+},
+{
+  question: "Shape of s orbital:",
+  options: ["spherical", "linear", "planar", "triangular"],
+  answer: "spherical"
+},
+{
+  question: "Shape of p orbital:",
+  options: ["dumbbell", "sphere", "cube", "triangle"],
+  answer: "dumbbell"
+},
+
+{
+  question: "Chemical bond is:",
+  options: ["force holding atoms", "reaction", "energy", "mass"],
+  answer: "force holding atoms"
+},
+{
+  question: "Ionic bond involves:",
+  options: ["electron transfer", "sharing", "no electrons", "protons"],
+  answer: "electron transfer"
+},
+{
+  question: "Covalent bond involves:",
+  options: ["electron sharing", "transfer", "protons", "neutrons"],
+  answer: "electron sharing"
+},
+{
+  question: "Ionic bond occurs between:",
+  options: ["metal + non-metal", "metal + metal", "non-metal + non-metal", "gas + gas"],
+  answer: "metal + non-metal"
+},
+{
+  question: "Covalent bond occurs between:",
+  options: ["non-metal + non-metal", "metal + metal", "metal + non-metal", "ion + ion"],
+  answer: "non-metal + non-metal"
+},
+{
+  question: "Example of ionic compound:",
+  options: ["NaCl", "H2O", "CO2", "CH4"],
+  answer: "NaCl"
+},
+{
+  question: "Example of covalent compound:",
+  options: ["H2O", "NaCl", "KBr", "MgO"],
+  answer: "H2O"
+},
+{
+  question: "Na loses electron to become:",
+  options: ["Na+", "Na−", "Na2+", "Na2−"],
+  answer: "Na+"
+},
+{
+  question: "Cl gains electron to become:",
+  options: ["Cl−", "Cl+", "Cl2+", "Cl2−"],
+  answer: "Cl−"
+},
+{
+  question: "Electrovalency refers to:",
+  options: ["electron transfer", "sharing", "protons", "mass"],
+  answer: "electron transfer"
+},
+{
+  question: "Covalency refers to:",
+  options: ["sharing electrons", "transfer", "mass", "charge"],
+  answer: "sharing electrons"
+},
+{
+  question: "Octet rule means:",
+  options: ["8 electrons in outer shell", "2 electrons", "10 electrons", "6 electrons"],
+  answer: "8 electrons in outer shell"
+},
+{
+  question: "Which obeys octet rule?",
+  options: ["Ne", "H", "He", "Li"],
+  answer: "Ne"
+},
+{
+  question: "Hydrogen needs:",
+  options: ["2 electrons", "8 electrons", "4 electrons", "6 electrons"],
+  answer: "2 electrons"
+},
+{
+  question: "Lewis structure shows:",
+  options: ["valence electrons", "mass", "protons", "neutrons"],
+  answer: "valence electrons"
+},
+{
+  question: "Number of bonds in O2:",
+  options: ["2", "1", "3", "4"],
+  answer: "2"
+},
+{
+  question: "Number of bonds in N2:",
+  options: ["3", "2", "1", "4"],
+  answer: "3"
+},
+{
+  question: "Single bond means:",
+  options: ["1 pair electrons", "2 pairs", "3 pairs", "4 pairs"],
+  answer: "1 pair electrons"
+},
+{
+  question: "Double bond means:",
+  options: ["2 pairs electrons", "1 pair", "3 pairs", "4 pairs"],
+  answer: "2 pairs electrons"
+},
+{
+  question: "Triple bond means:",
+  options: ["3 pairs electrons", "1 pair", "2 pairs", "4 pairs"],
+  answer: "3 pairs electrons"
+},
+{
+  question: "Bond energy increases with:",
+  options: ["bond strength", "length", "mass", "size"],
+  answer: "bond strength"
+},
+{
+  question: "Ionic compounds have:",
+  options: ["high melting point", "low melting", "no melting", "gas"],
+  answer: "high melting point"
+},
+{
+  question: "Covalent compounds have:",
+  options: ["low melting point", "high melting", "metallic", "strong ionic"],
+  answer: "low melting point"
+},
+{
+  question: "Ionic compounds conduct electricity when:",
+  options: ["molten or dissolved", "solid", "gas", "dry"],
+  answer: "molten or dissolved"
+},
+{
+  question: "Covalent compounds generally:",
+  options: ["do not conduct", "conduct well", "are metals", "are ionic"],
+  answer: "do not conduct"
+},
+{
+  question: "Metallic bonding involves:",
+  options: ["sea of electrons", "transfer", "sharing", "ions only"],
+  answer: "sea of electrons"
+},
+{
+  question: "Metallic bond explains:",
+  options: ["conductivity", "color", "mass", "gas"],
+  answer: "conductivity"
+},
+{
+  question: "Allotropy means:",
+  options: ["different forms same element", "compounds", "mixtures", "solutions"],
+  answer: "different forms same element"
+},
+{
+  question: "Example of allotropy:",
+  options: ["diamond & graphite", "NaCl", "H2O", "CO2"],
+  answer: "diamond & graphite"
+},
+{
+  question: "Graphite conducts because:",
+  options: ["free electrons", "ions", "heat", "mass"],
+  answer: "free electrons"
+},
+{
+  question: "Diamond is hard because:",
+  options: ["strong covalent network", "ionic bond", "weak bonds", "gas"],
+  answer: "strong covalent network"
+},
+{
+  question: "Polar bond occurs when:",
+  options: ["unequal sharing", "equal sharing", "transfer", "no sharing"],
+  answer: "unequal sharing"
+},
+{
+  question: "Non-polar bond occurs when:",
+  options: ["equal sharing", "unequal sharing", "transfer", "none"],
+  answer: "equal sharing"
+},
+{
+  question: "Water is:",
+  options: ["polar", "non-polar", "ionic", "metallic"],
+  answer: "polar"
+},
+{
+  question: "CO2 is:",
+  options: ["non-polar", "polar", "ionic", "metal"],
+  answer: "non-polar"
+},
+{
+  question: "Intermolecular forces include:",
+  options: ["van der Waals", "ionic", "covalent", "metallic"],
+  answer: "van der Waals"
+},
+{
+  question: "Hydrogen bonding occurs in:",
+  options: ["H2O", "NaCl", "CO2", "CH4"],
+  answer: "H2O"
+},
+{
+  question: "Stronger intermolecular forces give:",
+  options: ["higher boiling point", "lower boiling", "gas", "weak"],
+  answer: "higher boiling point"
+},
+{
+  question: "Weak forces lead to:",
+  options: ["low boiling point", "high boiling", "strong bonds", "solid"],
+  answer: "low boiling point"
+},
+
+{
+  question: "How many moles are in 22g of CO2? (C=12,O=16)",
+  options: ["0.5", "1", "2", "0.25"],
+  answer: "0.5"
+},
+{
+  question: "Mass of 0.25 moles of NaCl (Na=23,Cl=35.5)",
+  options: ["14.625g", "29.25g", "58.5g", "7.3g"],
+  answer: "14.625g"
+},
+{
+  question: "Number of moles in 44.8dm³ of gas at STP",
+  options: ["2", "1", "0.5", "4"],
+  answer: "2"
+},
+{
+  question: "Volume of 1 mole of gas at STP",
+  options: ["22.4dm³", "24dm³", "11.2dm³", "44.8dm³"],
+  answer: "22.4dm³"
+},
+{
+  question: "How many molecules in 1 mole?",
+  options: ["6.02×10²³", "6.02×10²²", "1×10²³", "6×10²⁴"],
+  answer: "6.02×10²³"
+},
+{
+  question: "Mass of 2 moles of H2O (H=1,O=16)",
+  options: ["36g", "18g", "20g", "32g"],
+  answer: "36g"
+},
+{
+  question: "Empirical formula of C2H6",
+  options: ["CH3", "C2H6", "CH2", "C3H6"],
+  answer: "CH3"
+},
+{
+  question: "Molecular formula if empirical = CH2, molar mass = 28",
+  options: ["C2H4", "CH2", "C3H6", "C4H8"],
+  answer: "C2H4"
+},
+{
+  question: "Find % of oxygen in H2O",
+  options: ["88.9%", "50%", "11.1%", "66.7%"],
+  answer: "88.9%"
+},
+{
+  question: "Find % of carbon in CO2",
+  options: ["27.3%", "50%", "33.3%", "66.7%"],
+  answer: "27.3%"
+},
+{
+  question: "Calculate molarity: 1 mole in 2dm³",
+  options: ["0.5M", "2M", "1M", "0.25M"],
+  answer: "0.5M"
+},
+{
+  question: "Mass of solute in 0.5M, 1dm³ NaOH (Na=23,O=16,H=1)",
+  options: ["20g", "40g", "10g", "5g"],
+  answer: "20g"
+},
+{
+  question: "Find molarity: 10g NaCl in 1dm³ (58.5)",
+  options: ["0.17M", "1M", "0.5M", "2M"],
+  answer: "0.17M"
+},
+{
+  question: "Number of moles in 5g of H2 (H=1)",
+  options: ["2.5", "5", "1", "10"],
+  answer: "2.5"
+},
+{
+  question: "Gas law: double temperature, volume becomes?",
+  options: ["double", "half", "same", "zero"],
+  answer: "double"
+},
+{
+  question: "Boyle’s law: pressure inversely to:",
+  options: ["volume", "temperature", "mass", "moles"],
+  answer: "volume"
+},
+{
+  question: "Find volume if P doubles (Boyle)",
+  options: ["half", "double", "same", "zero"],
+  answer: "half"
+},
+{
+  question: "Equation: 2H2 + O2 → 2H2O, moles ratio H2:O2",
+  options: ["2:1", "1:2", "1:1", "2:2"],
+  answer: "2:1"
+},
+{
+  question: "If 4 moles H2 reacts, O2 needed?",
+  options: ["2 moles", "4 moles", "1 mole", "8 moles"],
+  answer: "2 moles"
+},
+{
+  question: "Limiting reagent is:",
+  options: ["reactant used up first", "largest", "smallest", "product"],
+  answer: "reactant used up first"
+},
+{
+  question: "Excess reagent is:",
+  options: ["leftover", "used first", "none", "product"],
+  answer: "leftover"
+},
+{
+  question: "Find molar mass of CaCO3 (Ca=40,C=12,O=16)",
+  options: ["100", "56", "44", "84"],
+  answer: "100"
+},
+{
+  question: "Find moles in 50g CaCO3",
+  options: ["0.5", "1", "2", "0.25"],
+  answer: "0.5"
+},
+{
+  question: "Find volume of 0.5 mol gas at STP",
+  options: ["11.2dm³", "22.4dm³", "5.6dm³", "44.8dm³"],
+  answer: "11.2dm³"
+},
+{
+  question: "Calculate % yield: actual 8g, theoretical 10g",
+  options: ["80%", "125%", "20%", "50%"],
+  answer: "80%"
+},
+{
+  question: "Molar gas constant R is:",
+  options: ["8.314", "22.4", "6.02", "1"],
+  answer: "8.314"
+},
+{
+  question: "If n doubles, volume:",
+  options: ["double", "half", "same", "zero"],
+  answer: "double"
+},
+{
+  question: "Find density: mass 44g, volume 22.4dm³",
+  options: ["1.96 g/dm³", "2 g/dm³", "0.5", "4"],
+  answer: "1.96 g/dm³"
+},
+{
+  question: "1 mole of any gas at STP contains:",
+  options: ["same molecules", "different", "less", "more"],
+  answer: "same molecules"
+},
+{
+  question: "Avogadro law relates volume to:",
+  options: ["moles", "mass", "pressure", "temperature"],
+  answer: "moles"
+},
+
+{
+  question: "Which state has definite volume but no definite shape?",
+  options: ["liquid", "solid", "gas", "plasma"],
+  answer: "liquid"
+},
+{
+  question: "Which state is highly compressible?",
+  options: ["gas", "liquid", "solid", "plasma"],
+  answer: "gas"
+},
+{
+  question: "Particles in gas are:",
+  options: ["far apart", "close", "fixed", "rigid"],
+  answer: "far apart"
+},
+{
+  question: "Diffusion is fastest in:",
+  options: ["gas", "liquid", "solid", "all same"],
+  answer: "gas"
+},
+{
+  question: "Kinetic theory assumes particles are:",
+  options: ["in constant motion", "static", "heavy", "charged"],
+  answer: "in constant motion"
+},
+{
+  question: "Increase in temperature increases:",
+  options: ["kinetic energy", "mass", "volume only", "pressure only"],
+  answer: "kinetic energy"
+},
+{
+  question: "Boyle’s law is constant:",
+  options: ["temperature", "pressure", "volume", "mass"],
+  answer: "temperature"
+},
+{
+  question: "Charles’ law is constant:",
+  options: ["pressure", "temperature", "volume", "mass"],
+  answer: "pressure"
+},
+{
+  question: "Convert 27°C to Kelvin",
+  options: ["300K", "273K", "27K", "250K"],
+  answer: "300K"
+},
+{
+  question: "Convert 0°C to Kelvin",
+  options: ["273K", "0K", "100K", "200K"],
+  answer: "273K"
+},
+{
+  question: "If V doubles at constant T, pressure:",
+  options: ["halves", "doubles", "same", "zero"],
+  answer: "halves"
+},
+{
+  question: "If temperature doubles (Kelvin), volume:",
+  options: ["doubles", "halves", "same", "zero"],
+  answer: "doubles"
+},
+{
+  question: "P1=2atm, V1=4L, V2=2L, find P2",
+  options: ["4atm", "2atm", "1atm", "8atm"],
+  answer: "4atm"
+},
+{
+  question: "V1=3L, T1=300K, T2=600K, find V2",
+  options: ["6L", "3L", "2L", "1L"],
+  answer: "6L"
+},
+{
+  question: "Ideal gas assumes:",
+  options: ["no forces", "strong forces", "heavy particles", "static"],
+  answer: "no forces"
+},
+{
+  question: "Real gases deviate due to:",
+  options: ["forces", "mass", "volume only", "temperature only"],
+  answer: "forces"
+},
+{
+  question: "STP conditions:",
+  options: ["0°C,1atm", "25°C,1atm", "0°C,2atm", "100°C"],
+  answer: "0°C,1atm"
+},
+{
+  question: "Density of gas increases with:",
+  options: ["pressure", "volume", "temperature", "motion"],
+  answer: "pressure"
+},
+{
+  question: "Which gas diffuses fastest?",
+  options: ["H2", "O2", "CO2", "N2"],
+  answer: "H2"
+},
+{
+  question: "Graham’s law depends on:",
+  options: ["molar mass", "volume", "pressure", "temperature"],
+  answer: "molar mass"
+},
+{
+  question: "Lower molar mass → diffusion:",
+  options: ["faster", "slower", "same", "none"],
+  answer: "faster"
+},
+{
+  question: "Pressure is due to:",
+  options: ["collisions", "mass", "gravity", "charge"],
+  answer: "collisions"
+},
+{
+  question: "Increase pressure → particles:",
+  options: ["closer", "farther", "same", "none"],
+  answer: "closer"
+},
+{
+  question: "Phase change solid→liquid:",
+  options: ["melting", "freezing", "boiling", "condensing"],
+  answer: "melting"
+},
+{
+  question: "Liquid→gas:",
+  options: ["boiling", "freezing", "melting", "condensing"],
+  answer: "boiling"
+},
+{
+  question: "Gas→liquid:",
+  options: ["condensation", "melting", "freezing", "sublimation"],
+  answer: "condensation"
+},
+{
+  question: "Solid→gas:",
+  options: ["sublimation", "melting", "freezing", "boiling"],
+  answer: "sublimation"
+},
+{
+  question: "Latent heat is:",
+  options: ["heat without temp change", "heat with change", "energy lost", "energy gained"],
+  answer: "heat without temp change"
+},
+{
+  question: "Boiling occurs when:",
+  options: ["vapour pressure = external pressure", "temp high", "mass low", "none"],
+  answer: "vapour pressure = external pressure"
+},
+{
+  question: "If pressure increases, boiling point:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "If pressure decreases, boiling point:",
+  options: ["decreases", "increases", "same", "zero"],
+  answer: "decreases"
+},
+{
+  question: "Combined gas law is:",
+  options: ["PV/T constant", "PV constant", "V/T constant", "P/T constant"],
+  answer: "PV/T constant"
+},
+{
+  question: "If P doubles, T constant, V:",
+  options: ["halves", "doubles", "same", "zero"],
+  answer: "halves"
+},
+{
+  question: "Ideal gas obeys laws at:",
+  options: ["low pressure", "high pressure", "low temp", "liquid state"],
+  answer: "low pressure"
+},
+{
+  question: "Real gas becomes ideal at:",
+  options: ["high temp", "low temp", "high pressure", "liquid"],
+  answer: "high temp"
+},
+{
+  question: "Diffusion depends on:",
+  options: ["mass", "volume", "color", "shape"],
+  answer: "mass"
+},
+{
+  question: "Rate of diffusion ∝",
+  options: ["1/√mass", "mass", "volume", "pressure"],
+  answer: "1/√mass"
+},
+{
+  question: "Which has strongest forces?",
+  options: ["solid", "liquid", "gas", "plasma"],
+  answer: "solid"
+},
+{
+  question: "Which has weakest forces?",
+  options: ["gas", "liquid", "solid", "plasma"],
+  answer: "gas"
+},
+
+{
+  question: "Energy change in a reaction is called:",
+  options: ["enthalpy change", "mass change", "volume change", "pressure"],
+  answer: "enthalpy change"
+},
+{
+  question: "Exothermic reaction releases:",
+  options: ["heat", "mass", "volume", "gas"],
+  answer: "heat"
+},
+{
+  question: "Endothermic reaction absorbs:",
+  options: ["heat", "mass", "volume", "gas"],
+  answer: "heat"
+},
+{
+  question: "Sign of ΔH for exothermic:",
+  options: ["negative", "positive", "zero", "undefined"],
+  answer: "negative"
+},
+{
+  question: "Sign of ΔH for endothermic:",
+  options: ["positive", "negative", "zero", "undefined"],
+  answer: "positive"
+},
+{
+  question: "q = mcΔT, c is:",
+  options: ["specific heat capacity", "mass", "temperature", "volume"],
+  answer: "specific heat capacity"
+},
+{
+  question: "If m=2g, c=4.2, ΔT=5°C, q=",
+  options: ["42J", "21J", "10J", "84J"],
+  answer: "42J"
+},
+{
+  question: "If q=84J, m=2g, c=4.2, ΔT=",
+  options: ["10°C", "5°C", "2°C", "20°C"],
+  answer: "10°C"
+},
+{
+  question: "Unit of enthalpy:",
+  options: ["kJ/mol", "g/mol", "mol", "Pa"],
+  answer: "kJ/mol"
+},
+{
+  question: "Bond breaking is:",
+  options: ["endothermic", "exothermic", "neutral", "zero"],
+  answer: "endothermic"
+},
+{
+  question: "Bond formation is:",
+  options: ["exothermic", "endothermic", "neutral", "zero"],
+  answer: "exothermic"
+},
+{
+  question: "Standard conditions:",
+  options: ["25°C, 1atm", "0°C, 1atm", "100°C", "1K"],
+  answer: "25°C, 1atm"
+},
+{
+  question: "ΔH negative means:",
+  options: ["heat released", "heat absorbed", "no change", "zero"],
+  answer: "heat released"
+},
+{
+  question: "ΔH positive means:",
+  options: ["heat absorbed", "heat released", "zero", "none"],
+  answer: "heat absorbed"
+},
+{
+  question: "Hess’s law states:",
+  options: ["total ΔH independent of path", "depends on path", "random", "none"],
+  answer: "total ΔH independent of path"
+},
+{
+  question: "If ΔH1 = −100, ΔH2 = −50, total:",
+  options: ["−150", "150", "−50", "50"],
+  answer: "−150"
+},
+{
+  question: "If ΔH1 = −200, ΔH2 = +50, total:",
+  options: ["−150", "150", "−250", "250"],
+  answer: "−150"
+},
+{
+  question: "Enthalpy of combustion is:",
+  options: ["burning reaction heat", "cooling", "freezing", "melting"],
+  answer: "burning reaction heat"
+},
+{
+  question: "Enthalpy of formation is:",
+  options: ["formation from elements", "burning", "cooling", "none"],
+  answer: "formation from elements"
+},
+{
+  question: "Calorimeter measures:",
+  options: ["heat change", "mass", "volume", "pressure"],
+  answer: "heat change"
+},
+{
+  question: "If temperature increases, reaction is:",
+  options: ["exothermic", "endothermic", "neutral", "none"],
+  answer: "exothermic"
+},
+{
+  question: "If temperature decreases:",
+  options: ["endothermic", "exothermic", "neutral", "none"],
+  answer: "endothermic"
+},
+{
+  question: "Energy profile shows:",
+  options: ["energy change", "mass", "volume", "pressure"],
+  answer: "energy change"
+},
+{
+  question: "Activation energy is:",
+  options: ["minimum energy needed", "maximum energy", "heat lost", "mass"],
+  answer: "minimum energy needed"
+},
+{
+  question: "Catalyst reduces:",
+  options: ["activation energy", "mass", "volume", "heat"],
+  answer: "activation energy"
+},
+{
+  question: "If Ea decreases, reaction:",
+  options: ["faster", "slower", "same", "zero"],
+  answer: "faster"
+},
+{
+  question: "Combustion is always:",
+  options: ["exothermic", "endothermic", "neutral", "none"],
+  answer: "exothermic"
+},
+{
+  question: "Endothermic graph shows products:",
+  options: ["higher energy", "lower energy", "same", "zero"],
+  answer: "higher energy"
+},
+{
+  question: "Exothermic graph shows products:",
+  options: ["lower energy", "higher energy", "same", "zero"],
+  answer: "lower energy"
+},
+{
+  question: "Energy change depends on:",
+  options: ["bonds broken & formed", "mass", "volume", "pressure"],
+  answer: "bonds broken & formed"
+},
+{
+  question: "Heat capacity depends on:",
+  options: ["substance", "color", "shape", "size"],
+  answer: "substance"
+},
+{
+  question: "If ΔT = 0, q =",
+  options: ["0", "1", "2", "10"],
+  answer: "0"
+},
+{
+  question: "More mass → heat absorbed:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "Higher ΔT → q:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "Heat energy unit:",
+  options: ["Joule", "Newton", "Pascal", "mole"],
+  answer: "Joule"
+},
+{
+  question: "1 kJ =",
+  options: ["1000 J", "100 J", "10 J", "1 J"],
+  answer: "1000 J"
+},
+{
+  question: "Fuel value depends on:",
+  options: ["energy released", "mass", "color", "shape"],
+  answer: "energy released"
+},
+{
+  question: "Endothermic requires:",
+  options: ["energy input", "energy output", "none", "zero"],
+  answer: "energy input"
+},
+{
+  question: "Exothermic gives:",
+  options: ["energy output", "input", "none", "zero"],
+  answer: "energy output"
+},
+
+{
+  question: "Rate of reaction is:",
+  options: ["change per time", "mass change", "volume only", "temperature"],
+  answer: "change per time"
+},
+{
+  question: "Unit of rate:",
+  options: ["mol/s", "g", "Pa", "J"],
+  answer: "mol/s"
+},
+{
+  question: "Collision theory states reactions occur when:",
+  options: ["particles collide", "heat added", "pressure added", "volume changes"],
+  answer: "particles collide"
+},
+{
+  question: "Effective collision requires:",
+  options: ["correct energy & orientation", "mass only", "temperature only", "volume"],
+  answer: "correct energy & orientation"
+},
+{
+  question: "Activation energy is:",
+  options: ["minimum energy needed", "maximum energy", "mass", "volume"],
+  answer: "minimum energy needed"
+},
+{
+  question: "Increase temperature causes rate to:",
+  options: ["increase", "decrease", "same", "zero"],
+  answer: "increase"
+},
+{
+  question: "Higher temperature means:",
+  options: ["more collisions", "less collisions", "no collisions", "constant"],
+  answer: "more collisions"
+},
+{
+  question: "Increase concentration causes:",
+  options: ["faster rate", "slower", "same", "zero"],
+  answer: "faster rate"
+},
+{
+  question: "Increase pressure affects:",
+  options: ["gases", "solids", "liquids", "all"],
+  answer: "gases"
+},
+{
+  question: "Catalyst effect:",
+  options: ["lowers Ea", "raises Ea", "no effect", "changes products"],
+  answer: "lowers Ea"
+},
+{
+  question: "Catalyst increases rate by:",
+  options: ["lowering Ea", "raising temp", "increasing mass", "volume"],
+  answer: "lowering Ea"
+},
+{
+  question: "Surface area increase:",
+  options: ["faster reaction", "slower", "same", "zero"],
+  answer: "faster reaction"
+},
+{
+  question: "Powder reacts faster because:",
+  options: ["larger surface area", "smaller mass", "color", "shape"],
+  answer: "larger surface area"
+},
+{
+  question: "Graph of rate vs time shows:",
+  options: ["decrease over time", "increase always", "constant", "random"],
+  answer: "decrease over time"
+},
+{
+  question: "Initial rate is:",
+  options: ["rate at start", "rate at end", "average rate", "zero"],
+  answer: "rate at start"
+},
+{
+  question: "Rate is highest at:",
+  options: ["beginning", "end", "middle", "constant"],
+  answer: "beginning"
+},
+{
+  question: "Rate slows because:",
+  options: ["reactants decrease", "temperature drops", "pressure drops", "volume"],
+  answer: "reactants decrease"
+},
+{
+  question: "Half-life is:",
+  options: ["time for half reactant used", "full reaction time", "double time", "zero"],
+  answer: "time for half reactant used"
+},
+{
+  question: "Short half-life means:",
+  options: ["fast reaction", "slow reaction", "constant", "none"],
+  answer: "fast reaction"
+},
+{
+  question: "Long half-life means:",
+  options: ["slow reaction", "fast reaction", "constant", "none"],
+  answer: "slow reaction"
+},
+{
+  question: "Rate ∝ concentration means:",
+  options: ["direct relationship", "inverse", "none", "zero"],
+  answer: "direct relationship"
+},
+{
+  question: "Doubling concentration makes rate:",
+  options: ["increase", "decrease", "same", "zero"],
+  answer: "increase"
+},
+{
+  question: "Activation energy diagram shows:",
+  options: ["energy barrier", "mass", "volume", "pressure"],
+  answer: "energy barrier"
+},
+{
+  question: "Catalyst changes:",
+  options: ["pathway", "products", "reactants", "energy output"],
+  answer: "pathway"
+},
+{
+  question: "Endothermic Ea is:",
+  options: ["higher", "lower", "same", "zero"],
+  answer: "higher"
+},
+{
+  question: "Exothermic Ea is:",
+  options: ["lower", "higher", "same", "zero"],
+  answer: "lower"
+},
+{
+  question: "Reaction rate measured by:",
+  options: ["gas volume", "mass loss", "color change", "all"],
+  answer: "all"
+},
+{
+  question: "Steeper graph means:",
+  options: ["faster rate", "slower", "same", "zero"],
+  answer: "faster rate"
+},
+{
+  question: "Flat graph means:",
+  options: ["reaction complete", "fast", "start", "increase"],
+  answer: "reaction complete"
+},
+{
+  question: "Temperature affects rate because:",
+  options: ["kinetic energy changes", "mass changes", "volume changes", "none"],
+  answer: "kinetic energy changes"
+},
+{
+  question: "Higher energy → collisions:",
+  options: ["more effective", "less effective", "same", "none"],
+  answer: "more effective"
+},
+{
+  question: "Low temperature causes:",
+  options: ["slow reaction", "fast reaction", "same", "none"],
+  answer: "slow reaction"
+},
+{
+  question: "Rate law relates:",
+  options: ["rate & concentration", "mass & volume", "energy & pressure", "none"],
+  answer: "rate & concentration"
+},
+{
+  question: "Order of reaction shows:",
+  options: ["dependence on concentration", "mass", "volume", "temperature"],
+  answer: "dependence on concentration"
+},
+{
+  question: "Zero order rate is:",
+  options: ["constant", "variable", "zero", "random"],
+  answer: "constant"
+},
+{
+  question: "First order depends on:",
+  options: ["one reactant", "two reactants", "none", "all"],
+  answer: "one reactant"
+},
+{
+  question: "Second order depends on:",
+  options: ["two factors", "one", "none", "zero"],
+  answer: "two factors"
+},
+{
+  question: "Fast reactions have:",
+  options: ["low Ea", "high Ea", "no Ea", "none"],
+  answer: "low Ea"
+},
+{
+  question: "Slow reactions have:",
+  options: ["high Ea", "low Ea", "none", "zero"],
+  answer: "high Ea"
+},
+{
+  question: "Catalyst does NOT change:",
+  options: ["products", "rate", "Ea", "pathway"],
+  answer: "products"
+},
+
+{
+  question: "Equilibrium occurs when:",
+  options: ["forward rate = backward rate", "reaction stops", "products only", "reactants only"],
+  answer: "forward rate = backward rate"
+},
+{
+  question: "Dynamic equilibrium means:",
+  options: ["reactions continue", "reaction stops", "no change", "solid forms"],
+  answer: "reactions continue"
+},
+{
+  question: "At equilibrium concentrations are:",
+  options: ["constant", "equal", "zero", "changing"],
+  answer: "constant"
+},
+{
+  question: "Le Chatelier principle predicts:",
+  options: ["effect of change", "mass", "volume", "color"],
+  answer: "effect of change"
+},
+{
+  question: "Increase concentration of reactant shifts:",
+  options: ["right", "left", "no change", "random"],
+  answer: "right"
+},
+{
+  question: "Decrease reactant shifts:",
+  options: ["left", "right", "none", "random"],
+  answer: "left"
+},
+{
+  question: "Increase pressure favors:",
+  options: ["fewer moles gas", "more moles", "none", "liquid"],
+  answer: "fewer moles gas"
+},
+{
+  question: "Decrease pressure favors:",
+  options: ["more moles gas", "fewer", "none", "solid"],
+  answer: "more moles gas"
+},
+{
+  question: "Temperature increase in exothermic shifts:",
+  options: ["left", "right", "none", "random"],
+  answer: "left"
+},
+{
+  question: "Temperature increase in endothermic shifts:",
+  options: ["right", "left", "none", "random"],
+  answer: "right"
+},
+{
+  question: "Catalyst effect on equilibrium:",
+  options: ["no shift", "shifts right", "shifts left", "stops reaction"],
+  answer: "no shift"
+},
+{
+  question: "Catalyst affects:",
+  options: ["rate only", "position", "products", "reactants"],
+  answer: "rate only"
+},
+{
+  question: "Kc > 1 means:",
+  options: ["products favored", "reactants favored", "equal", "zero"],
+  answer: "products favored"
+},
+{
+  question: "Kc < 1 means:",
+  options: ["reactants favored", "products", "equal", "zero"],
+  answer: "reactants favored"
+},
+{
+  question: "Kc = 1 means:",
+  options: ["balanced", "products only", "reactants only", "none"],
+  answer: "balanced"
+},
+{
+  question: "Write Kc for A + B ⇌ C:",
+  options: ["[C]/[A][B]", "[A][B]/[C]", "[C][A]/[B]", "[A]/[B]"],
+  answer: "[C]/[A][B]"
+},
+{
+  question: "Write Kc for 2A ⇌ B:",
+  options: ["[B]/[A]²", "[A]²/[B]", "[B]/[A]", "[A]/[B]"],
+  answer: "[B]/[A]²"
+},
+{
+  question: "If [A]=2, [B]=3, [C]=6, Kc for A+B⇌C",
+  options: ["1", "2", "3", "6"],
+  answer: "1"
+},
+{
+  question: "If products increase, equilibrium:",
+  options: ["shifts left", "right", "none", "random"],
+  answer: "shifts left"
+},
+{
+  question: "Closed system is required for:",
+  options: ["equilibrium", "reaction", "heat", "mass"],
+  answer: "equilibrium"
+},
+{
+  question: "Equilibrium constant depends on:",
+  options: ["temperature", "pressure", "volume", "concentration"],
+  answer: "temperature"
+},
+{
+  question: "Changing pressure affects:",
+  options: ["gases only", "solids", "liquids", "all"],
+  answer: "gases only"
+},
+{
+  question: "Adding inert gas affects:",
+  options: ["no change", "shift right", "shift left", "stop"],
+  answer: "no change"
+},
+{
+  question: "Exothermic forward has:",
+  options: ["negative ΔH", "positive ΔH", "zero", "none"],
+  answer: "negative ΔH"
+},
+{
+  question: "Endothermic forward has:",
+  options: ["positive ΔH", "negative ΔH", "zero", "none"],
+  answer: "positive ΔH"
+},
+{
+  question: "Equilibrium is reached faster with:",
+  options: ["catalyst", "heat", "pressure", "volume"],
+  answer: "catalyst"
+},
+{
+  question: "Equilibrium is disturbed by:",
+  options: ["change in conditions", "constant temp", "constant pressure", "none"],
+  answer: "change in conditions"
+},
+{
+  question: "If system shifts right, products:",
+  options: ["increase", "decrease", "same", "zero"],
+  answer: "increase"
+},
+{
+  question: "If system shifts left, reactants:",
+  options: ["increase", "decrease", "same", "zero"],
+  answer: "increase"
+},
+{
+  question: "Equilibrium in Haber process:",
+  options: ["N2+3H2⇌2NH3", "H2+O2", "CO2 formation", "none"],
+  answer: "N2+3H2⇌2NH3"
+},
+{
+  question: "High pressure in Haber favors:",
+  options: ["NH3", "N2", "H2", "none"],
+  answer: "NH3"
+},
+{
+  question: "High temperature in Haber:",
+  options: ["reduces yield", "increases yield", "no change", "none"],
+  answer: "reduces yield"
+},
+{
+  question: "Equilibrium yield depends on:",
+  options: ["conditions", "mass", "color", "shape"],
+  answer: "conditions"
+},
+{
+  question: "Position of equilibrium is:",
+  options: ["ratio of products/reactants", "mass", "volume", "color"],
+  answer: "ratio of products/reactants"
+},
+{
+  question: "Equilibrium constant remains:",
+  options: ["constant at temp", "variable", "zero", "none"],
+  answer: "constant at temp"
+},
+{
+  question: "Kc uses:",
+  options: ["concentration", "mass", "volume", "pressure"],
+  answer: "concentration"
+},
+{
+  question: "Equilibrium is dynamic because:",
+  options: ["both reactions continue", "stops", "no change", "solid forms"],
+  answer: "both reactions continue"
+},
+{
+  question: "System resists change:",
+  options: ["Le Chatelier", "Boyle", "Charles", "Avogadro"],
+  answer: "Le Chatelier"
+},
+
+{
+  question: "Acid is substance that:",
+  options: ["donates H+", "accepts H+", "donates OH−", "accepts electrons"],
+  answer: "donates H+"
+},
+{
+  question: "Base is substance that:",
+  options: ["accepts H+", "donates H+", "donates electrons", "none"],
+  answer: "accepts H+"
+},
+{
+  question: "Alkali is:",
+  options: ["soluble base", "acid", "salt", "gas"],
+  answer: "soluble base"
+},
+{
+  question: "pH scale range:",
+  options: ["0–14", "1–10", "0–10", "1–14"],
+  answer: "0–14"
+},
+{
+  question: "pH of neutral solution:",
+  options: ["7", "0", "14", "1"],
+  answer: "7"
+},
+{
+  question: "pH less than 7:",
+  options: ["acidic", "basic", "neutral", "alkaline"],
+  answer: "acidic"
+},
+{
+  question: "pH greater than 7:",
+  options: ["alkaline", "acidic", "neutral", "none"],
+  answer: "alkaline"
+},
+{
+  question: "Strong acid example:",
+  options: ["HCl", "CH3COOH", "NH3", "NaOH"],
+  answer: "HCl"
+},
+{
+  question: "Weak acid example:",
+  options: ["CH3COOH", "HCl", "H2SO4", "HNO3"],
+  answer: "CH3COOH"
+},
+{
+  question: "Strong base example:",
+  options: ["NaOH", "NH3", "HCl", "CO2"],
+  answer: "NaOH"
+},
+{
+  question: "Weak base example:",
+  options: ["NH3", "NaOH", "KOH", "CaO"],
+  answer: "NH3"
+},
+{
+  question: "Indicator changes color:",
+  options: ["with pH", "mass", "volume", "pressure"],
+  answer: "with pH"
+},
+{
+  question: "Litmus in acid:",
+  options: ["red", "blue", "green", "yellow"],
+  answer: "red"
+},
+{
+  question: "Litmus in base:",
+  options: ["blue", "red", "green", "yellow"],
+  answer: "blue"
+},
+{
+  question: "Phenolphthalein in acid:",
+  options: ["colorless", "pink", "blue", "green"],
+  answer: "colorless"
+},
+{
+  question: "Phenolphthalein in base:",
+  options: ["pink", "colorless", "blue", "green"],
+  answer: "pink"
+},
+{
+  question: "Neutralization produces:",
+  options: ["salt + water", "acid + base", "gas", "heat only"],
+  answer: "salt + water"
+},
+{
+  question: "HCl + NaOH →",
+  options: ["NaCl + H2O", "H2O only", "NaOH", "HCl"],
+  answer: "NaCl + H2O"
+},
+{
+  question: "Salt from strong acid + strong base:",
+  options: ["neutral", "acidic", "basic", "none"],
+  answer: "neutral"
+},
+{
+  question: "Salt from strong acid + weak base:",
+  options: ["acidic", "basic", "neutral", "none"],
+  answer: "acidic"
+},
+{
+  question: "Salt from weak acid + strong base:",
+  options: ["basic", "acidic", "neutral", "none"],
+  answer: "basic"
+},
+{
+  question: "pH of strong acid:",
+  options: ["low", "high", "7", "neutral"],
+  answer: "low"
+},
+{
+  question: "pH of strong base:",
+  options: ["high", "low", "7", "neutral"],
+  answer: "high"
+},
+{
+  question: "pH = 2 is:",
+  options: ["strong acid", "weak acid", "neutral", "base"],
+  answer: "strong acid"
+},
+{
+  question: "pH = 12 is:",
+  options: ["strong base", "acid", "neutral", "weak acid"],
+  answer: "strong base"
+},
+{
+  question: "If [H+] = 1×10⁻³, pH =",
+  options: ["3", "1", "10", "7"],
+  answer: "3"
+},
+{
+  question: "If pH = 4, [H+] =",
+  options: ["1×10⁻⁴", "1×10⁻³", "1×10⁻²", "1×10⁻¹"],
+  answer: "1×10⁻⁴"
+},
+{
+  question: "Titration measures:",
+  options: ["concentration", "mass", "volume", "pressure"],
+  answer: "concentration"
+},
+{
+  question: "End point is:",
+  options: ["color change", "start", "finish", "none"],
+  answer: "color change"
+},
+{
+  question: "Equivalence point is:",
+  options: ["exact neutralization", "color change", "start", "none"],
+  answer: "exact neutralization"
+},
+{
+  question: "If 0.1M acid reacts with 0.1M base:",
+  options: ["equal volumes", "unequal", "none", "random"],
+  answer: "equal volumes"
+},
+{
+  question: "If C1V1=C2V2, find V2 if equal C:",
+  options: ["V1", "2V1", "V1/2", "none"],
+  answer: "V1"
+},
+{
+  question: "Dilution reduces:",
+  options: ["concentration", "mass", "volume", "pressure"],
+  answer: "concentration"
+},
+{
+  question: "Adding water to acid:",
+  options: ["dilutes", "concentrates", "neutralizes", "none"],
+  answer: "dilutes"
+},
+{
+  question: "Strong acids fully:",
+  options: ["ionize", "partially ionize", "do not ionize", "none"],
+  answer: "ionize"
+},
+{
+  question: "Weak acids:",
+  options: ["partially ionize", "fully ionize", "none", "zero"],
+  answer: "partially ionize"
+},
+{
+  question: "Buffer solution resists:",
+  options: ["pH change", "mass", "volume", "pressure"],
+  answer: "pH change"
+},
+{
+  question: "Acid-base reaction is:",
+  options: ["neutralization", "oxidation", "reduction", "none"],
+  answer: "neutralization"
+},
+{
+  question: "Salt hydrolysis affects:",
+  options: ["pH", "mass", "volume", "pressure"],
+  answer: "pH"
+},
+{
+  question: "Universal indicator shows:",
+  options: ["pH scale", "mass", "volume", "pressure"],
+  answer: "pH scale"
+},
+
+{
+  question: "Oxidation is:",
+  options: ["loss of electrons", "gain of electrons", "gain of oxygen", "loss of hydrogen"],
+  answer: "loss of electrons"
+},
+{
+  question: "Reduction is:",
+  options: ["gain of electrons", "loss of electrons", "gain of oxygen", "loss of hydrogen"],
+  answer: "gain of electrons"
+},
+{
+  question: "Oxidizing agent:",
+  options: ["accepts electrons", "donates electrons", "loses electrons", "none"],
+  answer: "accepts electrons"
+},
+{
+  question: "Reducing agent:",
+  options: ["donates electrons", "accepts electrons", "gains electrons", "none"],
+  answer: "donates electrons"
+},
+{
+  question: "Oxidation number of O in compounds:",
+  options: ["−2", "−1", "0", "+2"],
+  answer: "−2"
+},
+{
+  question: "Oxidation number of H:",
+  options: ["+1", "−1", "0", "+2"],
+  answer: "+1"
+},
+{
+  question: "Oxidation number of Na:",
+  options: ["+1", "−1", "0", "+2"],
+  answer: "+1"
+},
+{
+  question: "Oxidation number of Cl in NaCl:",
+  options: ["−1", "+1", "0", "+2"],
+  answer: "−1"
+},
+{
+  question: "Element in free state has oxidation number:",
+  options: ["0", "+1", "−1", "+2"],
+  answer: "0"
+},
+{
+  question: "Increase in oxidation number means:",
+  options: ["oxidation", "reduction", "neutral", "none"],
+  answer: "oxidation"
+},
+{
+  question: "Decrease in oxidation number means:",
+  options: ["reduction", "oxidation", "neutral", "none"],
+  answer: "reduction"
+},
+{
+  question: "Electrolysis is:",
+  options: ["chemical decomposition by electricity", "heating", "cooling", "reaction"],
+  answer: "chemical decomposition by electricity"
+},
+{
+  question: "Anode is:",
+  options: ["positive electrode", "negative", "neutral", "none"],
+  answer: "positive electrode"
+},
+{
+  question: "Cathode is:",
+  options: ["negative electrode", "positive", "neutral", "none"],
+  answer: "negative electrode"
+},
+{
+  question: "Oxidation occurs at:",
+  options: ["anode", "cathode", "electrolyte", "none"],
+  answer: "anode"
+},
+{
+  question: "Reduction occurs at:",
+  options: ["cathode", "anode", "electrolyte", "none"],
+  answer: "cathode"
+},
+{
+  question: "Electrolyte conducts via:",
+  options: ["ions", "electrons", "atoms", "protons"],
+  answer: "ions"
+},
+{
+  question: "Molten NaCl gives Na at:",
+  options: ["cathode", "anode", "solution", "none"],
+  answer: "cathode"
+},
+{
+  question: "Molten NaCl gives Cl2 at:",
+  options: ["anode", "cathode", "solution", "none"],
+  answer: "anode"
+},
+{
+  question: "Faraday constant is:",
+  options: ["96500 C/mol", "1000", "6.02×10²³", "22.4"],
+  answer: "96500 C/mol"
+},
+{
+  question: "Charge =",
+  options: ["current × time", "mass/time", "energy/time", "none"],
+  answer: "current × time"
+},
+{
+  question: "Unit of charge:",
+  options: ["coulomb", "joule", "watt", "volt"],
+  answer: "coulomb"
+},
+{
+  question: "Unit of current:",
+  options: ["ampere", "volt", "ohm", "coulomb"],
+  answer: "ampere"
+},
+{
+  question: "If current = 2A, time = 5s, charge =",
+  options: ["10C", "5C", "2C", "7C"],
+  answer: "10C"
+},
+{
+  question: "Faraday law relates mass to:",
+  options: ["charge", "time", "volume", "pressure"],
+  answer: "charge"
+},
+{
+  question: "Mass deposited ∝",
+  options: ["charge", "volume", "mass", "pressure"],
+  answer: "charge"
+},
+{
+  question: "Electroplating is:",
+  options: ["coating metal", "heating", "cooling", "reaction"],
+  answer: "coating metal"
+},
+{
+  question: "In electroplating, object is:",
+  options: ["cathode", "anode", "electrolyte", "none"],
+  answer: "cathode"
+},
+{
+  question: "Electrochemical cell produces:",
+  options: ["electricity", "heat", "light", "mass"],
+  answer: "electricity"
+},
+{
+  question: "Voltaic cell is:",
+  options: ["spontaneous reaction", "non-spontaneous", "neutral", "none"],
+  answer: "spontaneous reaction"
+},
+{
+  question: "Ecell positive means:",
+  options: ["spontaneous", "non-spontaneous", "neutral", "none"],
+  answer: "spontaneous"
+},
+{
+  question: "Ecell negative means:",
+  options: ["non-spontaneous", "spontaneous", "neutral", "none"],
+  answer: "non-spontaneous"
+},
+{
+  question: "Anode in voltaic cell is:",
+  options: ["negative", "positive", "neutral", "none"],
+  answer: "negative"
+},
+{
+  question: "Cathode in voltaic cell is:",
+  options: ["positive", "negative", "neutral", "none"],
+  answer: "positive"
+},
+{
+  question: "Salt bridge allows:",
+  options: ["ion flow", "electron flow", "mass flow", "none"],
+  answer: "ion flow"
+},
+{
+  question: "Electrons flow from:",
+  options: ["anode to cathode", "cathode to anode", "none", "random"],
+  answer: "anode to cathode"
+},
+{
+  question: "Redox reaction involves:",
+  options: ["electron transfer", "mass", "volume", "pressure"],
+  answer: "electron transfer"
+},
+{
+  question: "Oxidation number of Fe in Fe2O3:",
+  options: ["+3", "+2", "−3", "0"],
+  answer: "+3"
+},
+{
+  question: "Reduction involves:",
+  options: ["gain of electrons", "loss", "mass", "volume"],
+  answer: "gain of electrons"
+},
+{
+  question: "Oxidation involves:",
+  options: ["loss of electrons", "gain", "mass", "volume"],
+  answer: "loss of electrons"
+},
+
+{
+  question: "Organic chemistry studies:",
+  options: ["carbon compounds", "metals", "salts", "gases"],
+  answer: "carbon compounds"
+},
+{
+  question: "Hydrocarbons contain:",
+  options: ["C and H", "C only", "H only", "C and O"],
+  answer: "C and H"
+},
+{
+  question: "Alkanes are:",
+  options: ["saturated", "unsaturated", "aromatic", "ionic"],
+  answer: "saturated"
+},
+{
+  question: "Alkenes are:",
+  options: ["unsaturated", "saturated", "ionic", "metallic"],
+  answer: "unsaturated"
+},
+{
+  question: "Alkynes have:",
+  options: ["triple bond", "double bond", "single bond", "ionic"],
+  answer: "triple bond"
+},
+{
+  question: "General formula of alkenes:",
+  options: ["CnH2n", "CnH2n+2", "CnH2n−2", "CnHn"],
+  answer: "CnH2n"
+},
+{
+  question: "General formula of alkynes:",
+  options: ["CnH2n−2", "CnH2n", "CnH2n+2", "CnHn"],
+  answer: "CnH2n−2"
+},
+{
+  question: "First alkane is:",
+  options: ["methane", "ethane", "propane", "butane"],
+  answer: "methane"
+},
+{
+  question: "CH4 is:",
+  options: ["methane", "ethane", "propane", "butane"],
+  answer: "methane"
+},
+{
+  question: "C2H6 is:",
+  options: ["ethane", "methane", "propane", "butene"],
+  answer: "ethane"
+},
+{
+  question: "C2H4 is:",
+  options: ["ethene", "ethane", "ethyne", "methane"],
+  answer: "ethene"
+},
+{
+  question: "C2H2 is:",
+  options: ["ethyne", "ethene", "ethane", "methane"],
+  answer: "ethyne"
+},
+{
+  question: "Homologous series have:",
+  options: ["same functional group", "same mass", "same formula", "same color"],
+  answer: "same functional group"
+},
+{
+  question: "Difference between members:",
+  options: ["CH2", "H2", "C2H4", "O2"],
+  answer: "CH2"
+},
+{
+  question: "Functional group determines:",
+  options: ["properties", "mass", "volume", "color"],
+  answer: "properties"
+},
+{
+  question: "Alcohol group:",
+  options: ["–OH", "–COOH", "–NH2", "–CHO"],
+  answer: "–OH"
+},
+{
+  question: "Carboxylic acid group:",
+  options: ["–COOH", "–OH", "–NH2", "–CHO"],
+  answer: "–COOH"
+},
+{
+  question: "Alkene functional group:",
+  options: ["C=C", "C–C", "C≡C", "C=O"],
+  answer: "C=C"
+},
+{
+  question: "Alkyne functional group:",
+  options: ["C≡C", "C=C", "C–C", "C=O"],
+  answer: "C≡C"
+},
+{
+  question: "Isomerism is:",
+  options: ["same formula different structure", "same structure", "same mass", "none"],
+  answer: "same formula different structure"
+},
+{
+  question: "Example of isomers:",
+  options: ["butane & methylpropane", "CH4 & C2H6", "CO2 & H2O", "NaCl"],
+  answer: "butane & methylpropane"
+},
+{
+  question: "Cracking produces:",
+  options: ["smaller molecules", "bigger", "same", "none"],
+  answer: "smaller molecules"
+},
+{
+  question: "Combustion produces:",
+  options: ["CO2 + H2O", "CO only", "H2O only", "C only"],
+  answer: "CO2 + H2O"
+},
+{
+  question: "Incomplete combustion produces:",
+  options: ["CO", "CO2", "H2O", "O2"],
+  answer: "CO"
+},
+{
+  question: "Alkenes react with:",
+  options: ["bromine", "oxygen", "water", "salt"],
+  answer: "bromine"
+},
+{
+  question: "Bromine water test:",
+  options: ["decolorized", "blue", "green", "no change"],
+  answer: "decolorized"
+},
+{
+  question: "Addition reaction occurs in:",
+  options: ["alkenes", "alkanes", "acids", "bases"],
+  answer: "alkenes"
+},
+{
+  question: "Substitution occurs in:",
+  options: ["alkanes", "alkenes", "alkynes", "alcohols"],
+  answer: "alkanes"
+},
+{
+  question: "Polymerization forms:",
+  options: ["large molecules", "small molecules", "ions", "none"],
+  answer: "large molecules"
+},
+{
+  question: "Ethene forms polymer:",
+  options: ["polyethene", "polypropene", "PVC", "nylon"],
+  answer: "polyethene"
+},
+{
+  question: "Alcohol oxidation produces:",
+  options: ["acid", "alkane", "alkene", "gas"],
+  answer: "acid"
+},
+{
+  question: "Ethanol formula:",
+  options: ["C2H5OH", "CH3OH", "C2H6", "C2H4"],
+  answer: "C2H5OH"
+},
+{
+  question: "Carboxylic acids are:",
+  options: ["weak acids", "strong acids", "bases", "neutral"],
+  answer: "weak acids"
+},
+{
+  question: "Esters smell:",
+  options: ["fruity", "rotten", "neutral", "acidic"],
+  answer: "fruity"
+},
+{
+  question: "Ester formed from:",
+  options: ["acid + alcohol", "acid + base", "base + salt", "none"],
+  answer: "acid + alcohol"
+},
+{
+  question: "Soap is made by:",
+  options: ["saponification", "cracking", "combustion", "none"],
+  answer: "saponification"
+},
+{
+  question: "Hydrocarbon burning releases:",
+  options: ["energy", "mass", "volume", "pressure"],
+  answer: "energy"
+},
+{
+  question: "Organic compounds mostly:",
+  options: ["covalent", "ionic", "metallic", "none"],
+  answer: "covalent"
+},
+{
+  question: "Organic compounds generally have:",
+  options: ["low melting point", "high melting", "metallic", "ionic"],
+  answer: "low melting point"
+},
+{
+  question: "Organic compounds conduct:",
+  options: ["poorly", "well", "very well", "none"],
+  answer: "poorly"
+},
+
+{
+  question: "A gas occupies 11.2dm³ at STP. Number of moles is:",
+  options: ["0.5", "1", "2", "4"],
+  answer: "0.5"
+},
+{
+  question: "0.5 mol of CO2 has mass:",
+  options: ["22g", "44g", "11g", "88g"],
+  answer: "22g"
+},
+{
+  question: "Which has highest boiling point?",
+  options: ["H2O", "CO2", "CH4", "O2"],
+  answer: "H2O"
+},
+{
+  question: "Which compound conducts electricity in solution?",
+  options: ["NaCl", "CH4", "C2H6", "CO2"],
+  answer: "NaCl"
+},
+{
+  question: "Which process is endothermic?",
+  options: ["photosynthesis", "combustion", "neutralization", "respiration"],
+  answer: "photosynthesis"
+},
+{
+  question: "Which reaction rate is fastest?",
+  options: ["powder + acid", "lump + acid", "cold reaction", "low pressure"],
+  answer: "powder + acid"
+},
+{
+  question: "Which gas diffuses fastest?",
+  options: ["H2", "CO2", "O2", "N2"],
+  answer: "H2"
+},
+{
+  question: "Which shifts equilibrium right?",
+  options: ["increase reactant", "remove product", "both", "none"],
+  answer: "both"
+},
+{
+  question: "Which is strongest acid?",
+  options: ["HCl", "CH3COOH", "NH3", "H2O"],
+  answer: "HCl"
+},
+{
+  question: "pH of strong base is:",
+  options: [">7", "<7", "7", "0"],
+  answer: ">7"
+},
+{
+  question: "Oxidation involves:",
+  options: ["loss of electrons", "gain", "mass", "volume"],
+  answer: "loss of electrons"
+},
+{
+  question: "In electrolysis, cathode is:",
+  options: ["negative", "positive", "neutral", "none"],
+  answer: "negative"
+},
+{
+  question: "Organic compound with –OH is:",
+  options: ["alcohol", "acid", "alkane", "alkene"],
+  answer: "alcohol"
+},
+{
+  question: "Polymer is:",
+  options: ["large molecule", "small molecule", "ion", "gas"],
+  answer: "large molecule"
+},
+{
+  question: "Isomerism means:",
+  options: ["same formula diff structure", "same structure", "same mass", "none"],
+  answer: "same formula diff structure"
+},
+{
+  question: "Atomic number equals:",
+  options: ["protons", "neutrons", "mass", "electrons only"],
+  answer: "protons"
+},
+{
+  question: "Ionic bond involves:",
+  options: ["electron transfer", "sharing", "none", "protons"],
+  answer: "electron transfer"
+},
+{
+  question: "Covalent bond involves:",
+  options: ["sharing electrons", "transfer", "none", "mass"],
+  answer: "sharing electrons"
+},
+{
+  question: "Which has strongest intermolecular force?",
+  options: ["H2O", "CO2", "CH4", "O2"],
+  answer: "H2O"
+},
+{
+  question: "Which gas law relates P and V?",
+  options: ["Boyle", "Charles", "Avogadro", "Graham"],
+  answer: "Boyle"
+},
+{
+  question: "If temperature increases, kinetic energy:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "Catalyst increases rate by:",
+  options: ["lowering Ea", "raising Ea", "none", "changing products"],
+  answer: "lowering Ea"
+},
+{
+  question: "Equilibrium constant depends on:",
+  options: ["temperature", "pressure", "volume", "concentration"],
+  answer: "temperature"
+},
+{
+  question: "Neutralization produces:",
+  options: ["salt + water", "gas", "acid", "base"],
+  answer: "salt + water"
+},
+{
+  question: "Which is reducing agent?",
+  options: ["electron donor", "acceptor", "none", "gas"],
+  answer: "electron donor"
+},
+{
+  question: "Which is oxidizing agent?",
+  options: ["electron acceptor", "donor", "none", "gas"],
+  answer: "electron acceptor"
+},
+{
+  question: "Electrochemical cell produces:",
+  options: ["electricity", "heat", "gas", "mass"],
+  answer: "electricity"
+},
+{
+  question: "Ecell positive means:",
+  options: ["spontaneous", "non", "neutral", "none"],
+  answer: "spontaneous"
+},
+{
+  question: "Cracking produces:",
+  options: ["smaller molecules", "larger", "same", "none"],
+  answer: "smaller molecules"
+},
+{
+  question: "Addition occurs in:",
+  options: ["alkenes", "alkanes", "none", "acids"],
+  answer: "alkenes"
+},
+
+
+{
+  question: "A student reacts 2g of Mg with excess HCl. Which gas is produced?",
+  options: ["H2", "O2", "CO2", "Cl2"],
+  answer: "H2"
+},
+{
+  question: "If gas volume doubles at constant temp, pressure:",
+  options: ["halves", "doubles", "same", "zero"],
+  answer: "halves"
+},
+{
+  question: "A reaction gives ΔH = −50kJ. This means:",
+  options: ["exothermic", "endothermic", "neutral", "none"],
+  answer: "exothermic"
+},
+{
+  question: "Which condition increases ammonia yield in Haber?",
+  options: ["high pressure", "low pressure", "low temp only", "none"],
+  answer: "high pressure"
+},
+{
+  question: "A solution with pH 3 is:",
+  options: ["acidic", "basic", "neutral", "alkaline"],
+  answer: "acidic"
+},
+{
+  question: "Electrolysis of CuSO4 produces Cu at:",
+  options: ["cathode", "anode", "solution", "none"],
+  answer: "cathode"
+},
+{
+  question: "If activation energy is high, reaction is:",
+  options: ["slow", "fast", "instant", "none"],
+  answer: "slow"
+},
+{
+  question: "A hydrocarbon burns completely to give:",
+  options: ["CO2 and H2O", "CO only", "C only", "H2 only"],
+  answer: "CO2 and H2O"
+},
+{
+  question: "Which compound shows hydrogen bonding?",
+  options: ["H2O", "CH4", "CO2", "O2"],
+  answer: "H2O"
+},
+{
+  question: "If reactant concentration decreases, rate:",
+  options: ["decreases", "increases", "same", "zero"],
+  answer: "decreases"
+},
+
+{
+  question: "Group 1 elements are:",
+  options: ["alkali metals", "halogens", "noble gases", "transition"],
+  answer: "alkali metals"
+},
+{
+  question: "Group 7 elements are:",
+  options: ["halogens", "alkali", "noble", "transition"],
+  answer: "halogens"
+},
+{
+  question: "Reactivity of Group 1:",
+  options: ["increases down", "decreases", "constant", "none"],
+  answer: "increases down"
+},
+{
+  question: "Reactivity of halogens:",
+  options: ["decreases down", "increases", "constant", "none"],
+  answer: "decreases down"
+},
+{
+  question: "Atomic radius trend:",
+  options: ["increases down", "decreases down", "constant", "random"],
+  answer: "increases down"
+},
+{
+  question: "Ionization energy trend:",
+  options: ["decreases down", "increases down", "constant", "none"],
+  answer: "decreases down"
+},
+{
+  question: "Transition metals show:",
+  options: ["variable oxidation states", "fixed", "none", "zero"],
+  answer: "variable oxidation states"
+},
+{
+  question: "Transition metals are good:",
+  options: ["catalysts", "acids", "bases", "gases"],
+  answer: "catalysts"
+},
+{
+  question: "Flame test for Na:",
+  options: ["yellow", "blue", "green", "red"],
+  answer: "yellow"
+},
+{
+  question: "Flame test for K:",
+  options: ["lilac", "yellow", "green", "red"],
+  answer: "lilac"
+},
+{
+  question: "CO2 test:",
+  options: ["limewater milky", "blue", "green", "none"],
+  answer: "limewater milky"
+},
+{
+  question: "NH3 test:",
+  options: ["turns red litmus blue", "blue to red", "none", "colorless"],
+  answer: "turns red litmus blue"
+},
+{
+  question: "Cl2 test:",
+  options: ["bleaches litmus", "turns red", "green", "none"],
+  answer: "bleaches litmus"
+},
+{
+  question: "SO2 test:",
+  options: ["decolorizes KMnO4", "blue", "green", "none"],
+  answer: "decolorizes KMnO4"
+},
+{
+  question: "Gas that pops with flame:",
+  options: ["H2", "O2", "CO2", "N2"],
+  answer: "H2"
+},
+{
+  question: "Gas relights glowing splint:",
+  options: ["O2", "CO2", "H2", "N2"],
+  answer: "O2"
+},
+{
+  question: "CO2 extinguishes flame because:",
+  options: ["no oxygen", "heavy", "cold", "none"],
+  answer: "no oxygen"
+},
+{
+  question: "Contact process produces:",
+  options: ["H2SO4", "NH3", "CO2", "HCl"],
+  answer: "H2SO4"
+},
+{
+  question: "Haber process produces:",
+  options: ["NH3", "H2SO4", "CO2", "HCl"],
+  answer: "NH3"
+},
+{
+  question: "Conditions for Haber:",
+  options: ["high pressure", "low pressure", "room temp", "none"],
+  answer: "high pressure"
+},
+{
+  question: "Catalyst in Haber:",
+  options: ["iron", "copper", "nickel", "zinc"],
+  answer: "iron"
+},
+{
+  question: "Contact process catalyst:",
+  options: ["V2O5", "Fe", "Cu", "Zn"],
+  answer: "V2O5"
+},
+{
+  question: "Petroleum is:",
+  options: ["mixture of hydrocarbons", "compound", "element", "none"],
+  answer: "mixture of hydrocarbons"
+},
+{
+  question: "Fractional distillation separates by:",
+  options: ["boiling point", "mass", "volume", "color"],
+  answer: "boiling point"
+},
+{
+  question: "Gas fraction used for:",
+  options: ["fuel", "plastic", "medicine", "none"],
+  answer: "fuel"
+},
+{
+  question: "Crude oil refining produces:",
+  options: ["fractions", "elements", "salts", "none"],
+  answer: "fractions"
+},
+{
+  question: "Air pollution causes:",
+  options: ["acid rain", "growth", "energy", "none"],
+  answer: "acid rain"
+},
+{
+  question: "SO2 causes:",
+  options: ["acid rain", "warming", "cooling", "none"],
+  answer: "acid rain"
+},
+{
+  question: "CO is dangerous because:",
+  options: ["binds haemoglobin", "burns", "reacts", "none"],
+  answer: "binds haemoglobin"
+},
+{
+  question: "Water treatment includes:",
+  options: ["filtration", "reaction", "burning", "none"],
+  answer: "filtration"
+},
+{
+  question: "Hard water contains:",
+  options: ["Ca2+, Mg2+", "Na+", "K+", "H+"],
+  answer: "Ca2+, Mg2+"
+},
+{
+  question: "Temporary hardness removed by:",
+  options: ["boiling", "filtering", "cooling", "none"],
+  answer: "boiling"
+},
+{
+  question: "Permanent hardness removed by:",
+  options: ["ion exchange", "boiling", "none", "cooling"],
+  answer: "ion exchange"
+},
+{
+  question: "Biodegradable substances:",
+  options: ["break down", "do not", "react", "none"],
+  answer: "break down"
+},
+{
+  question: "Greenhouse gas:",
+  options: ["CO2", "O2", "N2", "H2"],
+  answer: "CO2"
+},
+{
+  question: "Ozone protects from:",
+  options: ["UV rays", "heat", "rain", "wind"],
+  answer: "UV rays"
+},
+{
+  question: "Electrolysis mass depends on:",
+  options: ["charge", "volume", "mass", "pressure"],
+  answer: "charge"
+},
+{
+  question: "If current doubles, mass deposited:",
+  options: ["doubles", "halves", "same", "zero"],
+  answer: "doubles"
+},
+{
+  question: "Time increase → mass:",
+  options: ["increases", "decreases", "same", "zero"],
+  answer: "increases"
+},
+{
+  question: "Electrolysis of CuSO4 uses electrode:",
+  options: ["copper", "iron", "zinc", "none"],
+  answer: "copper"
+},
+
+{
+  question: "The diagram shows a filtration setup. What is the residue?",
+  image: "/images/chem1.png",
+  options: ["Liquid that passes through", "Solid left on filter paper", "Gas produced", "Evaporated substance"],
+  answer: "Solid left on filter paper"
+},
+
+{
+  question: "The diagram shows a distillation setup. What is the function of the condenser?",
+  image: "/images/chem2.png",
+  options: ["To heat liquid", "To cool vapor", "To measure volume", "To filter solid"],
+  answer: "To cool vapor"
+},
+
+{
+  question: "The diagram shows a burette and pipette setup. What is this used for?",
+  image: "/images/chem3.png",
+  options: ["Filtration", "Titration", "Distillation", "Evaporation"],
+  answer: "Titration"
+},
+
+{
+  question: "The diagram shows a Bunsen burner flame. Which part is the hottest?",
+  image: "/images/chem4.png",
+  options: ["Outer blue flame", "Inner yellow flame", "Base", "Top"],
+  answer: "Outer blue flame"
+},
+
+{
+  question: "The diagram shows measuring cylinder readings. What is the correct reading method?",
+  image: "/images/chem5.png",
+  options: ["Top of liquid", "Bottom of meniscus", "Side view", "Any point"],
+  answer: "Bottom of meniscus"
+},
+
+{
+  question: "The diagram shows hazard symbols. What does the symbol indicate?",
+  image: "/images/chem6.png",
+  options: ["Flammable", "Corrosive", "Toxic", "Explosive"],
+  answer: "Corrosive"
+},
+
+{
+  question: "The diagram shows separation of immiscible liquids. What apparatus is used?",
+  image: "/images/chem7.png",
+  options: ["Separating funnel", "Burette", "Beaker", "Test tube"],
+  answer: "Separating funnel"
+},
+
+{
+  question: "The diagram shows evaporation process. What remains after evaporation?",
+  image: "/images/chem8.png",
+  options: ["Solvent", "Solute", "Gas", "Nothing"],
+  answer: "Solute"
+},
+
+{
+  question: "The diagram shows heating of a substance in a test tube. Why is the tube held at an angle?",
+  image: "/images/chem9.png",
+  options: ["To prevent spillage", "To allow gas escape safely", "To cool faster", "To increase heat"],
+  answer: "To allow gas escape safely"
+},
+
+{
+  question: "The diagram shows a thermometer in liquid. What is being measured?",
+  image: "/images/chem10.png",
+  options: ["Mass", "Temperature", "Volume", "Pressure"],
+  answer: "Temperature"
+},
+
+{
+  question: "The diagram shows Rutherfordâ€™s alpha scattering experiment. What was the major conclusion?",
+  image: "/images/chem11.png",
+  options: ["Atom is solid", "Atom has a dense nucleus", "Electrons are positive", "Atom is empty"],
+  answer: "Atom has a dense nucleus"
+},
+
+{
+  question: "The diagram shows energy levels of an atom. What do the levels represent?",
+  image: "/images/chem12.png",
+  options: ["Protons", "Electrons", "Neutrons", "Nucleus"],
+  answer: "Electrons"
+},
+
+{
+  question: "The diagram shows electron arrangement of an element. How many valence electrons are present?",
+  image: "/images/chem13.png",
+  options: ["2", "6", "8", "4"],
+  answer: "6"
+},
+
+{
+  question: "The diagram shows isotopes of an element. What is common between them?",
+  image: "/images/chem14.png",
+  options: ["Mass number", "Proton number", "Neutron number", "Atomic mass"],
+  answer: "Proton number"
+},
+
+{
+  question: "The diagram shows a mass spectrum. The peaks represent:",
+  image: "/images/chem15.png",
+  options: ["Isotopes", "Electrons", "Protons", "Compounds"],
+  answer: "Isotopes"
+},
+
+{
+  question: "The diagram shows periodic table trend across a period. What happens to atomic size?",
+  image: "/images/chem16.png",
+  options: ["Increases", "Decreases", "Remains constant", "Varies randomly"],
+  answer: "Decreases"
+},
+
+{
+  question: "The diagram shows successive ionization energies. A sharp increase indicates:",
+  image: "/images/chem17.png",
+  options: ["Outer shell electrons removed", "Inner shell reached", "No electrons left", "Protons removed"],
+  answer: "Inner shell reached"
+},
+
+{
+  question: "The diagram shows orbital shapes. Which orbital is spherical?",
+  image: "/images/chem18.png",
+  options: ["s-orbital", "p-orbital", "d-orbital", "f-orbital"],
+  answer: "s-orbital"
+},
+
+{
+  question: "The diagram shows electron configuration of an element. Which rule is followed when filling orbitals?",
+  image: "/images/chem19.png",
+  options: ["Aufbau principle", "Ohmâ€™s law", "Le Chatelierâ€™s principle", "Newtonâ€™s law"],
+  answer: "Aufbau principle"
+},
+
+{
+  question: "The diagram shows elements in the same group. Why do they have similar properties?",
+  image: "/images/chem20.png",
+  options: ["Same number of shells", "Same valence electrons", "Same mass", "Same neutrons"],
+  answer: "Same valence electrons"
+},
+
+{
+  question: "The diagram shows electron transfer between two atoms. What type of bonding is formed?",
+  image: "/images/chem21.png",
+  options: ["Ionic bonding", "Covalent bonding", "Metallic bonding", "Hydrogen bonding"],
+  answer: "Ionic bonding"
+},
+
+{
+  question: "The diagram shows shared electrons between atoms. What type of bonding is this?",
+  image: "/images/chem22.png",
+  options: ["Covalent bonding", "Ionic bonding", "Metallic bonding", "Electrostatic bonding"],
+  answer: "Covalent bonding"
+},
+
+{
+  question: "The diagram shows a dot-and-cross diagram of NaCl. What happens to sodium?",
+  image: "/images/chem23.png",
+  options: ["Loses one electron", "Gains one electron", "Shares electrons", "Remains unchanged"],
+  answer: "Loses one electron"
+},
+
+{
+  question: "The diagram shows a molecule of oxygen (Oâ‚‚). How many bonds are present?",
+  image: "/images/chem24.png",
+  options: ["2", "1", "3", "4"],
+  answer: "2"
+},
+
+{
+  question: "The diagram shows a methane molecule (CHâ‚„). What is its shape?",
+  image: "/images/chem25.png",
+  options: ["Tetrahedral", "Linear", "Trigonal planar", "Bent"],
+  answer: "Tetrahedral"
+},
+
+{
+  question: "The diagram shows ammonia (NHâ‚ƒ). What is its shape?",
+  image: "/images/chem26.png",
+  options: ["Trigonal pyramidal", "Linear", "Tetrahedral", "Bent"],
+  answer: "Trigonal pyramidal"
+},
+
+{
+  question: "The diagram shows water molecule (Hâ‚‚O). Why is it bent?",
+  image: "/images/chem27.png",
+  options: ["Lone pairs repel", "Equal bonding", "No electrons", "Strong bonds"],
+  answer: "Lone pairs repel"
+},
+
+{
+  question: "The diagram shows metallic bonding. What holds the atoms together?",
+  image: "/images/chem28.png",
+  options: ["Delocalized electrons", "Protons", "Neutrons", "Covalent bonds"],
+  answer: "Delocalized electrons"
+},
+
+{
+  question: "The diagram shows a giant ionic lattice. What is a key property?",
+  image: "/images/chem29.png",
+  options: ["High melting point", "Low melting point", "Soft", "Non-conductive"],
+  answer: "High melting point"
+},
+
+{
+  question: "The diagram shows a simple molecular structure. What is a typical property?",
+  image: "/images/chem30.png",
+  options: ["Low boiling point", "High melting point", "Hard", "Conductive"],
+  answer: "Low boiling point"
+},
+
+{
+  question: "The diagram shows a graph of pressure against volume for a gas. What law does it represent?",
+  image: "/images/chem31.png",
+  options: ["Boyleâ€™s law", "Charlesâ€™ law", "Avogadroâ€™s law", "Daltonâ€™s law"],
+  answer: "Boyleâ€™s law"
+},
+
+{
+  question: "The diagram shows volume against temperature. What happens to volume as temperature increases?",
+  image: "/images/chem32.png",
+  options: ["Increases", "Decreases", "Remains constant", "Becomes zero"],
+  answer: "Increases"
+},
+
+{
+  question: "A gas occupies 2 mÂ³ at a certain pressure. If pressure is doubled (constant temperature), find new volume.",
+  image: "/images/chem33.png",
+  options: ["1 mÂ³", "2 mÂ³", "4 mÂ³", "0.5 mÂ³"],
+  answer: "1 mÂ³"
+},
+
+{
+  question: "The diagram shows particles in a gas. What is the nature of their motion?",
+  image: "/images/chem34.png",
+  options: ["Random", "Fixed", "Slow", "Circular"],
+  answer: "Random"
+},
+
+{
+  question: "The diagram shows diffusion of a gas. What causes diffusion?",
+  image: "/images/chem35.png",
+  options: ["Random motion of particles", "Gravity", "Pressure", "Temperature only"],
+  answer: "Random motion of particles"
+},
+
+{
+  question: "The diagram shows solid, liquid and gas states. Which has the highest kinetic energy?",
+  image: "/images/chem36.png",
+  options: ["Gas", "Liquid", "Solid", "All equal"],
+  answer: "Gas"
+},
+
+{
+  question: "The diagram shows heating curve of a substance. What happens at the flat region?",
+  image: "/images/chem37.png",
+  options: ["Change of state", "Temperature increase", "Cooling", "Reaction"],
+  answer: "Change of state"
+},
+
+{
+  question: "The diagram shows evaporation process. What factor increases rate of evaporation?",
+  image: "/images/chem38.png",
+  options: ["Increase in temperature", "Decrease in temperature", "Increase in pressure", "Cooling"],
+  answer: "Increase in temperature"
+},
+
+{
+  question: "The diagram shows gas particles in a container. If temperature increases, what happens to pressure?",
+  image: "/images/chem39.png",
+  options: ["Increases", "Decreases", "Remains constant", "Becomes zero"],
+  answer: "Increases"
+},
+
+{
+  question: "The diagram shows two gases diffusing. Which gas diffuses faster?",
+  image: "/images/chem40.png",
+  options: ["Lighter gas", "Heavier gas", "Equal", "Depends on volume"],
+  answer: "Lighter gas"
+},
+
+{
+  question: "The diagram shows the structure of methane. What type of bonding is present?",
+  image: "/images/chem41.png",
+  options: ["Covalent bonding", "Ionic bonding", "Metallic bonding", "Hydrogen bonding"],
+  answer: "Covalent bonding"
+},
+
+{
+  question: "The diagram shows an alkene structure. What is the functional group present?",
+  image: "/images/chem42.png",
+  options: ["C=C", "Câ€“C", "OH", "COOH"],
+  answer: "C=C"
+},
+
+{
+  question: "The diagram shows ethanol molecule. Which functional group is present?",
+  image: "/images/chem43.png",
+  options: ["OH", "COOH", "NHâ‚‚", "C=C"],
+  answer: "OH"
+},
+
+{
+  question: "The diagram shows ethanoic acid. What is the functional group?",
+  image: "/images/chem44.png",
+  options: ["COOH", "OH", "NHâ‚‚", "C=C"],
+  answer: "COOH"
+},
+
+{
+  question: "The diagram shows a hydrocarbon undergoing combustion. What are the products?",
+  image: "/images/chem45.png",
+  options: ["COâ‚‚ and Hâ‚‚O", "CO and Hâ‚‚", "C and Oâ‚‚", "Hâ‚‚ and Oâ‚‚"],
+  answer: "COâ‚‚ and Hâ‚‚O"
+},
+
+{
+  question: "The diagram shows titration setup. What is the end point indicated by?",
+  image: "/images/chem46.png",
+  options: ["Colour change", "Temperature change", "Gas formation", "Pressure change"],
+  answer: "Colour change"
+},
+
+{
+  question: "The diagram shows pH scale. Which value is strongly acidic?",
+  image: "/images/chem47.png",
+  options: ["1", "7", "10", "14"],
+  answer: "1"
+},
+
+{
+  question: "The diagram shows neutralization reaction. What is formed?",
+  image: "/images/chem48.png",
+  options: ["Salt and water", "Acid only", "Base only", "Gas only"],
+  answer: "Salt and water"
+},
+
+{
+  question: "The diagram shows a salt solution being tested. Which indicator is used?",
+  image: "/images/chem49.png",
+  options: ["Litmus", "Thermometer", "Voltmeter", "Balance"],
+  answer: "Litmus"
+},
+
+{
+  question: "The diagram shows organic molecules with same molecular formula but different structures. What are they called?",
+  image: "/images/chem50.png",
+  options: ["Isomers", "Elements", "Compounds", "Mixtures"],
+  answer: "Isomers"
+}
+
+
 ];
 
 export default chemistryQuestions;

@@ -1,1644 +1,1867 @@
-const chemistryQuestions = [
-  {
-    question: "Which of the following represents the union of sets A = {1, 2, 3} and B = {3, 4, 5}?",
-    options: ["{1", "2", "3", "4", "5}", "{3}", "{1", "2", "3}", "{4", "5}"],
-    answer: "{1, 2, 3, 4, 5}"
-  },
-  {
-    question: "Simplify: ?50 + ?18",
-    options: ["?68", "8?2", "?25 + ?9", "5?5 + 3?2"],
-    answer: "8?2"
-  },
-  {
-    question: "Solve for x: 2^x = 32",
-    options: ["4", "5", "6", "2"],
-    answer: "5"
-  },
-  {
-    question: "Which of the following is the correct factorization of x� - 5x + 6?",
-    options: ["(x + 2)(x + 3)", "(x - 2)(x - 3)", "(x + 1)(x - 6)", "(x - 1)(x - 6)"],
-    answer: "(x - 2)(x - 3)"
-  },
-  {
-    question: "If vector a = 2i + 3j and vector b = -i + 4j, find a + b.",
-    options: ["i + 7j", "i + j", "3i + 7j", "i - j"],
-    answer: "i + 7j"
-  },
-  {
-    question: "Convert the binary number 1011? to base 10.",
-    options: ["13", "11", "9", "7"],
-    answer: "11"
-  },
-  {
-    question: "Solve the inequality: 2x - 5 > 3.",
-    options: ["x > 4", "x < 4", "x > -1", "x < -1"],
-    answer: "x > 4"
-  },
-  {
-    question: "If a vector \u03B1 = 3i + 2j and \u03B2 = -i + 4j, find \u03B1 + \u03B2.",
-    options: ["2i + 6j", "4i + 6j", "2i + 2j", "3i + 2j"],
-    answer: "2i + 6j"
-  },
-  {
-    question: "Find the mean of the numbers: 5, 10, 15, 20.",
-    options: ["10", "12.5", "15", "20"],
-    answer: "12.5"
-  },
-  {
-    question: "Solve for x: 3^x = 81.",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Factorize the quadratic expression: x� - 7x + 10.",
-    options: ["(x - 5)(x - 2)", "(x + 5)(x + 2)", "(x - 10)(x + 1)", "(x + 10)(x - 1)"],
-    answer: "(x - 5)(x - 2)"
-  },
-  {
-    question: "Find the volume of a cylinder with radius 4 cm and height 10 cm (Use \u03C0 = 3.14).",
-    options: ["502.4 cm³", "125.6 cm³", "251.2 cm³", "400 cm³"],
-    answer: "502.4 cm³"
-  },
-  {
-    question: "If sin \u03B8 = 0.6, what is \u03B8 (in degrees)?",
-    options: ["30�", "36.9�", "45�", "53.1�"],
-    answer: "36.9�"
-  },
-  {
-    question: "What is the next term in the arithmetic sequence: 3, 7, 11, 15, ...?",
-    options: ["18", "19", "20", "21"],
-    answer: "19"
-  },
-  {
-    question: "What is the contrapositive of the statement: 'If it rains, then the ground is wet'?",
-    options: ["If the ground is not wet", "then it did not rain", "If it does not rain", "the ground is not wet", "If the ground is wet", "then it rains", "If it rains", "then the ground is not wet"],
-    answer: "If the ground is not wet, then it did not rain"
-  },
-  {
-    question: "Which instrument is primarily used for geometric constructions?",
-    options: ["Protractor", "Ruler", "Compass", "Set square"],
-    answer: "Compass"
-  },
-  {
-    question: "Find tan 45�.",
-    options: ["0", "1", "\u221E (infinity)", "\u221A3/3"],
-    answer: "1"
-  },
-  {
-    question: "What is the union of sets A = {2, 4, 6} and B = {4, 5, 6}?",
-    options: ["{2", "4", "5", "6}", "{4", "6}", "{2", "4", "6}", "{5}"],
-    answer: "{2, 4, 5, 6}"
-  },
-  {
-    question: "Which number is irrational?",
-  options: ["3/4", "?2", "5", "0.5"],
-  answer: "?2"
-  },
-  {
-    question: "Simplify: (3x�)(2x�)",
-  options: ["6x?", "5x?", "6x?", "5x?"],
-  answer: "6x?"
-  },
-  {
-    question: "Simplify ?72",
-    options: ["6?2", "8?3", "9?2", "4?3"],
-    answer: "6?2"
-  },
-  {
-    question: "Convert 1101? to decimal (base 10).",
-    options: ["11", "13", "14", "15"],
-    answer: "13"
-  },
-  {
-    question: "If f(x) = 2x + 3, what is f(4)?",
-    options: ["7", "8", "11", "10"],
-    answer: "11"
-  },
-  {
-    question: "What is the sum of interior angles of a triangle?",
-    options: ["180�", "360�", "90�", "270�"],
-    answer: "180�"
-  },
-  {
-    question: "Solve for x: 3x + 5 = 20",
-    options: ["5", "6", "15", "25"],
-    answer: "5"
-  },
-  {
-    question: "A ship sails 45� NE from a point. What is the bearing?",
-    options: ["045�", "135�", "225�", "315�"],
-    answer: "045�"
-  },
-  {
-    question: "Vector A = 4i + 3j. What is the magnitude of A?",
-    options: ["5", "7", "1", "12"],
-    answer: "5"
-  },
-  {
-    question: "Find the median of the data set: 2, 7, 9, 12, 14.",
-    options: ["7", "9", "10", "12"],
-    answer: "9"
-  },
-  {
-    question: "Which transformation is a rigid motion?",
-    options: ["Dilation", "Rotation", "Enlargement", "Stretch"],
-    answer: "Rotation"
-  },
-  {
-    question: "If 3 kg of apples cost $12, what is the unit price per kg?",
-    options: ["$3", "$4", "$6", "$9"],
-    answer: "$4"
-  },
-  {
-    question: "Calculate 15% of 200.",
-    options: ["20", "25", "30", "35"],
-    answer: "30"
-  },
-  {
-    question: "Find 7 mod 3.",
-    options: ["1", "2", "0", "3"],
-    answer: "1"
-  },
-  {
-    question: "Solve for x: 5^x = 125.",
-    options: ["2", "3", "4", "5"],
-    answer: "3"
-  },
-  {
-    question: "Solve the simultaneous equations: 2x + y = 8 and x - y = 1.",
-    options: ["x=3", "y=2", "x=2", "y=4", "x=4", "y=0", "x=1", "y=6"],
-    answer: "x=3, y=2"
-  },
-  {
-    question: "If y varies directly as x and y=10 when x=2, find y when x=5.",
-    options: ["25", "20", "30", "15"],
-    answer: "25"
-  },
-  {
-    question: "Find the mean of the data: 4, 8, 12, 16.",
-    options: ["8", "10", "12", "14"],
-    answer: "10"
-  },
-  {
-    question: "Factorize x� - 9x + 18.",
-    options: ["(x - 6)(x - 3)", "(x + 6)(x + 3)", "(x - 9)(x + 2)", "(x + 9)(x - 2)"],
-    answer: "(x - 6)(x - 3)"
-  },
-  {
-    question: "Find the area of a circle with radius 7 cm (\u03C0 = 3.14).",
-    options: ["153.86 cm�", "49 cm�", "43.96 cm�", "100 cm�"],
-    answer: "153.86 cm�"
-  },
-  {
-    question: "Calculate cos 60�.",
-    options: ["1", "0", "0.5", "0.866"],
-    answer: "0.5"
-  },
-  {
-    question: "Find the 6th term of the sequence: 2, 5, 8, 11, ...",
-    options: ["15", "16", "17", "18"],
-    answer: "17"
-  },
-  {
-    question: "What is the scale factor of an enlargement that maps a shape of length 4 cm to 10 cm?",
-    options: ["2.5", "6", "4", "10"],
-    answer: "2.5"
-  },
-  {
-    question: "Which tool is used for accurate geometric constructions?",
-    options: ["Compass", "Protractor", "Ruler", "Set square"],
-    answer: "Compass"
-  },
-  {
-    question: "What is the contrapositive of: 'If it rains, the ground is wet'?",
-    options: ["If the ground is not wet", "then it did not rain", "If it does not rain", "the ground is not wet", "If the ground is wet", "then it rains", "If it rains", "then the ground is not wet"],
-    answer: "If the ground is not wet, then it did not rain"
-  },
-  {
-    question: "Calculate tan 45�.",
-    options: ["0", "1", "\u221E (infinity)", "\u221A3/3"],
-    answer: "1"
-  },
-  {
-    question: "What is the sum of the interior angles of a pentagon?",
-    options: ["540�", "360�", "720�", "180�"],
-    answer: "540�"
-  },
-  {
-    question: "Solve for x: 2x + 3 = 11",
-    options: ["4", "5", "6", "7"],
-    answer: "4"
-  },
-  {
-    question: "If A = {1, 3, 5} and B = {2, 3, 4}, what is A ? B?",
-    options: ["{3}", "{1", "2", "3", "4", "5}", "{}", "{2", "4}"],
-    answer: "{3}"
-  },
-  {
-    question: "Is the number 0.333... rational or irrational?",
-    options: ["Rational", "Irrational"],
-    answer: "Rational"
-  },
-  {
-    question: "Simplify: (x^3)(x^4).",
-    options: ["x^7", "x^12", "x^1", "x^0"],
-    answer: "x^7"
-  },
-  {
-    question: "Simplify ?98",
-    options: ["7?2", "14?7", "49?2", "7?7"],
-    answer: "7?2"
-  },
-  {
-    question: "Convert 1001? to decimal.",
-    options: ["9", "11", "7", "13"],
-    answer: "9"
-  },
-  {
-    question: "If f(x) = x� - 2, find f(3).",
-    options: ["7", "9", "5", "3"],
-    answer: "7"
-  },
-  {
-    question: "What is the measure of each angle in an equilateral triangle?",
-    options: ["60�", "90�", "45�", "30�"],
-    answer: "60�"
-  },
-  {
-    question: "Solve for x: 5x - 10 = 0",
-    options: ["2", "0", "10", "-2"],
-    answer: "2"
-  },
-  {
-    question: "A plane flies 120� from north. What is the bearing?",
-    options: ["120�", "240�", "60�", "300�"],
-    answer: "120�"
-  },
-  {
-    question: "Vector A = 5i - 2j. Find the magnitude of A.",
-    options: ["?29", "7", "3", "6"],
-    answer: "?29"
-  },
-  {
-    question: "Find the mode of the data set: 3, 7, 7, 8, 9.",
-    options: ["7", "8", "3", "9"],
-    answer: "7"
-  },
-  {
-    question: "Which is NOT a rigid motion?",
-    options: ["Reflection", "Translation", "Enlargement", "Rotation"],
-    answer: "Enlargement"
-  },
-  {
-    question: "If 5 kg costs $30, what is the cost per kg?",
-    options: ["$5", "$6", "$4", "$3"],
-    answer: "$6"
-  },
-  {
-    question: "Calculate 25% of 160.",
-    options: ["40", "35", "50", "45"],
-    answer: "40"
-  },
-  {
-    question: "Find 10 mod 4.",
-    options: ["2", "3", "4", "1"],
-    answer: "2"
-  },
-  {
-    question: "Solve for x: 4^x = 64.",
-    options: ["3", "4", "5", "6"],
-    answer: "3"
-  },
-  {
-    question: "Solve simultaneous equations: x + y = 5 and x - y = 1.",
-    options: ["x=3", "y=2", "x=2", "y=3", "x=1", "y=4", "x=4", "y=1"],
-    answer: "x=3, y=2"
-  },
-  {
-    question: "If y varies inversely as x and y=6 when x=2, find y when x=3.",
-    options: ["4", "3", "2", "1"],
-    answer: "4"
-  },
-  {
-    question: "Calculate the median of: 12, 15, 14, 16, 20.",
-    options: ["15", "14", "16", "20"],
-    answer: "15"
-  },
-  {
-    question: "Factorize: x^2 + 7x + 12.",
-    options: ["(x + 3)(x + 4)", "(x - 3)(x - 4)", "(x + 4)(x - 3)", "(x + 6)(x + 2)"],
-    answer: "(x + 3)(x + 4)"
-  },
-  {
-    question: "Find the surface area of a sphere with radius 3 cm (\u03C0 = 3.14).",
-    options: ["113.04 cm�", "28.26 cm�", "56.52 cm�", "36 cm�"],
-    answer: "113.04 cm�"
-  },
-  {
-    question: "Calculate sin 45�.",
-    options: ["0.707", "0.5", "1", "0"],
-    answer: "0.707"
-  },
-  {
-    question: "Find the 5th term of the sequence 4, 8, 12, 16,...",
-    options: ["20", "24", "16", "18"],
-    answer: "20"
-  },
-  {
-    question: "What is the scale factor of enlargement if a length changes from 6 cm to 18 cm?",
-    options: ["2", "3", "6", "12"],
-    answer: "3"
-  },
-  {
-    question: "Which instrument is used to measure angles accurately?",
-    options: ["Ruler", "Set square", "Compass", "Protractor"],
-    answer: "Protractor"
-  },
-  {
-    question: "What is the negation of 'If it rains, then the ground is wet'?",
-    options: ["It rains and the ground is not wet", "If it does not rain", "then the ground is wet", "If the ground is wet", "then it rains", "It does not rain or the ground is wet"],
-    answer: "It rains and the ground is not wet"
-  },
-  {
-    question: "Calculate cos 90�.",
-    options: ["0", "1", "-1", "0.5"],
-    answer: "0"
-  },
-  {
-    question: "Sum of interior angles of a hexagon?",
-    options: ["720�", "540�", "600�", "360�"],
-    answer: "720�"
-  },
-  {
-    question: "Solve for x: 3x - 7 = 11.",
-    options: ["6", "4", "5", "3"],
-    answer: "6"
-  },
-  {
-    question: "Calculate tan 30�.",
-    options: ["0.577", "1", "0", "?3"],
-    answer: "0.577"
-  },
-  {
-    question: "Which construction tool is used to draw perpendicular bisectors?",
-    options: ["Ruler", "Compass", "Protractor", "Set square"],
-    answer: "Compass"
-  },
-  {
-    question: "Find the 7th term of the arithmetic sequence 3, 6, 9, 12,...",
-    options: ["21", "18", "20", "23"],
-    answer: "21"
-  },
-  {
-    question: "What is the complement of angle 40�?",
-    options: ["50�", "130�", "140�", "90�"],
-    answer: "50�"
-  },
-  {
-    question: "Which logical statement is equivalent to 'If p then q'?",
-    options: ["If not q then not p", "If p then not q", "If q then p", "If not p then not q"],
-    answer: "If not q then not p"
-  },
-  {
-    question: "If A = {x | x is an even number less than 10}, what is A?",
-    options: ["{2", "4", "6", "8}", "{1", "3", "5", "7", "9}", "{2", "3", "4", "5}", "{}"],
-    answer: "{2, 4, 6, 8}"
-  },
-  {
-    question: "Is the number -7 a real number?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "Expand: (x + 3)(x - 2).",
-    options: ["x� + x - 6", "x� - 5", "x� + 5x - 6", "x� - x + 6"],
-    answer: "x� + x - 6"
-  },
-  {
-    question: "Simplify: ?50",
-    options: ["5?2", "7?2", "10?5", "25?2"],
-    answer: "5?2"
-  },
-  {
-    question: "Convert 255 in decimal to binary.",
-    options: ["11111111", "10101010", "11110000", "10000000"],
-    answer: "11111111"
-  },
-  {
-    question: "If f(x) = 3x - 1, find f(2).",
-    options: ["5", "6", "4", "7"],
-    answer: "5"
-  },
-  {
-    question: "How many sides does a regular hexagon have?",
-    options: ["6", "5", "8", "4"],
-    answer: "6"
-  },
-  {
-    question: "Solve for x: 7x + 2 = 23",
-    options: ["3", "5", "4", "2"],
-    answer: "3"
-  },
-  {
-    question: "Find the bearing of a plane flying directly south.",
-    options: ["180�", "0�", "90�", "270�"],
-    answer: "180�"
-  },
-  {
-    question: "Vector B = -3i + 4j. Find the magnitude of B.",
-    options: ["5", "7", "1", "3"],
-    answer: "5"
-  },
-  {
-    question: "Calculate the mean of: 10, 15, 20, 25.",
-    options: ["17.5", "20", "15", "25"],
-    answer: "17.5"
-  },
-  {
-    question: "Which is a rotation of 90� a rigid motion?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "If 8 liters cost $24, what is the cost per liter?",
-    options: ["$3", "$4", "$2", "$6"],
-    answer: "$3"
-  },
-  {
-    question: "Calculate 5% of 300.",
-    options: ["15", "10", "20", "25"],
-    answer: "15"
-  },
-  {
-    question: "Calculate 15 mod 6.",
-    options: ["3", "4", "5", "6"],
-    answer: "3"
-  },
-  {
-    question: "Solve simultaneous: 3x + 2y = 12, x - y = 1.",
-    options: ["x=2", "y=3", "x=3", "y=2", "x=1", "y=4", "x=4", "y=1"],
-    answer: "x=2, y=3"
-  },
-  {
-    question: "If y varies directly as x^2 and y=18 when x=3, find y when x=4.",
-    options: ["32", "48", "24", "36"],
-    answer: "32"
-  },
-  {
-    question: "Find the mode of the set: 2, 4, 4, 6, 8.",
-    options: ["4", "2", "6", "8"],
-    answer: "4"
-  },
-  {
-    question: "Factorize: x^2 - 16.",
-    options: ["(x - 4)(x + 4)", "(x - 8)(x + 2)", "(x + 4)(x + 4)", "(x - 2)(x - 8)"],
-    answer: "(x - 4)(x + 4)"
-  },
-  {
-    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (?=3.14).",
-    options: ["197.82 cm³", "65.94 cm³", "131.88 cm³", "99 cm³"],
-    answer: "197.82 cm³"
-  },
-  {
-    question: "Calculate sin 30�.",
-    options: ["0.5", "0.707", "1", "0"],
-    answer: "0.5"
-  },
-  {
-    question: "Find the 10th term of the arithmetic sequence 1, 4, 7, 10,...",
-    options: ["28", "31", "30", "34"],
-    answer: "28"
-  },
-  {
-    question: "What is the scale factor if a length grows from 5 cm to 20 cm?",
-    options: ["4", "5", "3", "2"],
-    answer: "4"
-  },
-  {
-    question: "What instrument is used to construct an angle bisector?",
-    options: ["Compass", "Protractor", "Ruler", "Set square"],
-    answer: "Compass"
-  },
-  {
-    question: "What is the converse of 'If it rains, then the grass is wet'?",
-    options: ["If the grass is wet", "then it rains", "If it does not rain", "the grass is not wet", "If the grass is not wet", "then it does not rain", "If it rains", "then the grass is not wet"],
-    answer: "If the grass is wet, then it rains"
-  },
-  {
-    question: "Calculate tan 60�.",
-    options: ["?3", "1", "0", "0.5"],
-    answer: "?3"
-  },
-  {
-    question: "Sum of interior angles of an octagon?",
-    options: ["1080�", "900�", "720�", "1260�"],
-    answer: "1080�"
-  },
-  {
-    question: "Solve for x: 4x + 5 = 21.",
-    options: ["4", "5", "6", "3"],
-    answer: "4"
-  },
-  {
-    question: "Which tool helps construct parallel lines?",
-    options: ["Ruler", "Set square", "Protractor", "Compass"],
-    answer: "Set square"
-  },
-  {
-    question: "Find the 8th term of the sequence: 5, 10, 15, 20,...",
-    options: ["40", "35", "45", "50"],
-    answer: "40"
-  },
-  {
-    question: "What is the supplement of 110�?",
-    options: ["70�", "60�", "80�", "100�"],
-    answer: "70�"
-  },
-  {
-    question: "Which is the contrapositive of 'If p then q'?",
-    options: ["If not q then not p", "If not p then not q", "If q then p", "If p then not q"],
-    answer: "If not q then not p"
-  },
-  {
-    question: "If a triangle has sides 3 cm, 4 cm, and 5 cm, what type of triangle is it?",
-    options: ["Right-angled", "Equilateral", "Isosceles", "Scalene"],
-    answer: "Right-angled"
-  },
-  {
-    question: "If U = {1, 2, 3, 4, 5} and A = {2, 4}, what is A'",
-    options: ["{1", "3", "5}", "{2", "4}", "{1", "2", "3", "4", "5}", "{}"],
-    answer: "{1, 3, 5}"
-  },
-  {
-    question: "Is ?2 rational or irrational?",
-    options: ["Rational", "Irrational"],
-    answer: "Irrational"
-  },
-  {
-    question: "Simplify: (2x^3)(3x^2).",
-    options: ["6x^5", "5x^6", "6x^1", "5x^5"],
-    answer: "6x^5"
-  },
-  {
-    question: "Simplify ?72.",
-    options: ["6?2", "8?3", "9?2", "12?3"],
-    answer: "6?2"
-  },
-  {
-    question: "Convert decimal 45 to binary.",
-    options: ["101101", "111001", "110111", "101011"],
-    answer: "101101"
-  },
-  {
-    question: "If f(x) = 2x + 5, find f(4).",
-    options: ["13", "9", "8", "11"],
-    answer: "13"
-  },
-  {
-    question: "How many lines of symmetry does a square have?",
-    options: ["4", "2", "1", "3"],
-    answer: "4"
-  },
-  {
-    question: "Solve for x: 2x - 7 = 1",
-    options: ["4", "2", "3", "5"],
-    answer: "4"
-  },
-  {
-    question: "What is the bearing of a plane flying due east?",
-    options: ["90�", "0�", "180�", "270�"],
-    answer: "90�"
-  },
-  {
-    question: "Vector C = 6i + 8j. Find magnitude of C.",
-    options: ["10", "14", "8", "6"],
-    answer: "10"
-  },
-  {
-    question: "Find the median of: 5, 10, 15, 20, 25.",
-    options: ["15", "20", "10", "25"],
-    answer: "15"
-  },
-  {
-    question: "Which of these is a translation?",
-    options: ["Sliding a shape", "Rotating a shape", "Flipping a shape", "Scaling a shape"],
-    answer: "Sliding a shape"
-  },
-  {
-    question: "If 9 kg costs $45, what is the cost per kg?",
-    options: ["$5", "$6", "$4", "$3"],
-    answer: "$5"
-  },
-  {
-    question: "Find 23 mod 7.",
-    options: ["2", "3", "1", "0"],
-    answer: "2"
-  },
-  {
-    question: "Solve simultaneous: 2x + 3y = 7, x - y = 1.",
-    options: ["x=2", "y=1", "x=1", "y=2", "x=3", "y=1", "x=0", "y=1"],
-    answer: "x=2, y=1"
-  },
-  {
-    question: "If y varies directly as x and y=10 when x=5, find y when x=8.",
-    options: ["16", "12", "10", "8"],
-    answer: "16"
-  },
-  {
-    question: "Calculate the mean of: 2, 6, 8, 10, 14.",
-    options: ["8", "7", "9", "10"],
-    answer: "8"
-  },
-  {
-    question: "Factorize: x^2 + 5x + 6.",
-    options: ["(x + 3)(x + 2)", "(x + 6)(x + 1)", "(x + 2)(x + 4)", "(x + 5)(x + 6)"],
-    answer: "(x + 3)(x + 2)"
-  },
-  {
-    question: "Calculate the volume of a cone with radius 3 cm and height 9 cm (?=3.14).",
-    options: ["84.78 cm³", "56.52 cm³", "28.26 cm³", "113.04 cm³"],
-    answer: "84.78 cm³"
-  },
-  {
-    question: "Find the 6th term of the geometric sequence 2, 4, 8, 16,...",
-    options: ["32", "64", "128", "16"],
-    answer: "64"
-  },
-  {
-    question: "What is the scale factor if a length decreases from 15 cm to 5 cm?",
-    options: ["1/3", "3", "1/2", "2"],
-    answer: "1/3"
-  },
-  {
-    question: "Which instrument is used to draw arcs in constructions?",
-    options: ["Compass", "Ruler", "Protractor", "Set square"],
-    answer: "Compass"
-  },
-  {
-    question: "What is the inverse of 'If p then q'?",
-    options: ["If not p then not q", "If q then p", "If not q then not p", "If p then not q"],
-    answer: "If not p then not q"
-  },
-  {
-    question: "Calculate sin 60�.",
-    options: ["0.866", "0.5", "1", "0"],
-    answer: "0.866"
-  },
-  {
-    question: "Sum of interior angles of a pentagon?",
-    options: ["540�", "360�", "720�", "900�"],
-    answer: "540�"
-  },
-  {
-    question: "Solve for x: 6x - 9 = 15.",
-    options: ["4", "3", "5", "6"],
-    answer: "4"
-  },
-  {
-    question: "Which tool is best for drawing perpendicular lines?",
-    options: ["Set square", "Protractor", "Compass", "Ruler"],
-    answer: "Set square"
-  },
-  {
-    question: "Find the 9th term of the arithmetic sequence 7, 14, 21, 28,...",
-    options: ["63", "70", "56", "49"],
-    answer: "63"
-  },
-  {
-    question: "What is the complement of 35�?",
-    options: ["55�", "45�", "65�", "75�"],
-    answer: "55�"
-  },
-  {
-    question: "Which is the inverse of 'If p then q'?",
-    options: ["If not p then not q", "If not q then not p", "If q then p", "If p then not q"],
-    answer: "If not p then not q"
-  },
-  {
-    question: "A triangle has sides 5 cm, 5 cm, and 8 cm. What type is it?",
-    options: ["Isosceles", "Equilateral", "Scalene", "Right-angled"],
-    answer: "Isosceles"
-  },
-  {
-    question: "What is the union of sets A = {1, 2, 3} and B = {3, 4, 5}?",
-    options: ["{1", "2", "3", "4", "5}", "{3}", "{1", "2", "4", "5}", "{}"],
-    answer: "{1, 2, 3, 4, 5}"
-  },
-  {
-    question: "Is 0 a rational number?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "Simplify: (3x - 2) + (2x + 5).",
-    options: ["5x + 3", "6x + 3", "x + 3", "5x - 7"],
-    answer: "5x + 3"
-  },
-  {
-    question: "Simplify ?18.",
-    options: ["3?2", "9?2", "6?3", "2?9"],
-    answer: "3?2"
-  },
-  {
-    question: "Convert binary 1101 to decimal.",
-    options: ["13", "11", "14", "15"],
-    answer: "13"
-  },
-  {
-    question: "If f(x) = x^2 - 1, find f(3).",
-    options: ["8", "9", "10", "7"],
-    answer: "8"
-  },
-  {
-    question: "How many diagonals does a hexagon have?",
-    options: ["9", "6", "12", "8"],
-    answer: "9"
-  },
-  {
-    question: "Solve for x: 5x + 3 = 18.",
-    options: ["3", "4", "5", "6"],
-    answer: "3"
-  },
-  {
-    question: "What is the bearing for northeast?",
-    options: ["45�", "90�", "135�", "60�"],
-    answer: "45�"
-  },
-  {
-    question: "Vector D = 2i - 5j. Find magnitude of D.",
-    options: ["?29", "7", "3", "?27"],
-    answer: "?29"
-  },
-  {
-    question: "Find the range of the data: 3, 7, 7, 9, 15.",
-    options: ["12", "9", "15", "7"],
-    answer: "12"
-  },
-  {
-    question: "Is reflection a rigid motion?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "If 15 liters cost $60, what is the cost per liter?",
-    options: ["$4", "$5", "$3", "$6"],
-    answer: "$4"
-  },
-  {
-    question: "Calculate 12% of 250.",
-    options: ["30", "20", "25", "28"],
-    answer: "30"
-  },
-  {
-    question: "Calculate 19 mod 5.",
-    options: ["4", "3", "2", "1"],
-    answer: "4"
-  },
-  {
-    question: "Solve for x: 2^x = 32.",
-    options: ["5", "4", "6", "3"],
-    answer: "5"
-  },
-  {
-    question: "Solve simultaneous: x + y = 6, 2x - y = 3.",
-    options: ["x=3", "y=3", "x=2", "y=4", "x=1", "y=5", "x=4", "y=2"],
-    answer: "x=3, y=3"
-  },
-  {
-    question: "If y varies inversely as x and y=6 when x=4, find y when x=3.",
-    options: ["8", "9", "7", "6"],
-    answer: "8"
-  },
-  {
-    question: "Find the median of: 1, 4, 7, 10, 13.",
-    options: ["7", "8", "10", "4"],
-    answer: "7"
-  },
-  {
-    question: "Factorize: x^2 - 9x + 20.",
-    options: ["(x - 5)(x - 4)", "(x - 10)(x + 2)", "(x - 1)(x - 20)", "(x - 8)(x - 3)"],
-    answer: "(x - 5)(x - 4)"
-  },
-  {
-    question: "Calculate the surface area of a sphere with radius 3 cm (?=3.14).",
-    options: ["113.04 cm�", "56.52 cm�", "75.36 cm�", "28.26 cm�"],
-    answer: "113.04 cm�"
-  },
-  {
-    question: "Find the sum of the first 5 terms of the arithmetic sequence 2, 5, 8, 11,...",
-    options: ["40", "35", "30", "25"],
-    answer: "40"
-  },
-  {
-    question: "If the side of a square is multiplied by 3, what is the scale factor of the area?",
-    options: ["9", "3", "6", "12"],
-    answer: "9"
-  },
-  {
-    question: "What is the purpose of a protractor in constructions?",
-    options: ["Measure angles", "Draw arcs", "Draw lines", "Measure lengths"],
-    answer: "Measure angles"
-  },
-  {
-    question: "What is the contrapositive of 'If it rains, then the ground is wet'?",
-    options: ["If the ground is not wet", "then it does not rain", "If it does not rain", "then the ground is not wet", "If the ground is wet", "then it rains", "If it rains", "then the ground is not wet"],
-    answer: "If the ground is not wet, then it does not rain"
-  },
-  {
-    question: "Calculate cos 45�.",
-    options: ["0.707", "0.5", "1", "0"],
-    answer: "0.707"
-  },
-  {
-    question: "Sum of interior angles of a triangle?",
-    options: ["180�", "360�", "90�", "270�"],
-    answer: "180�"
-  },
-  {
-    question: "Solve for x: 5x + 7 = 27.",
-    options: ["4", "5", "3", "6"],
-    answer: "4"
-  },
-  {
-    question: "Which tool is used to measure an angle accurately?",
-    options: ["Protractor", "Set square", "Ruler", "Compass"],
-    answer: "Protractor"
-  },
-  {
-    question: "Find the 7th term of the arithmetic sequence 3, 7, 11, 15,...",
-    options: ["27", "31", "35", "23"],
-    answer: "31"
-  },
-  {
-    question: "What is the supplement of 65�?",
-    options: ["115�", "125�", "95�", "105�"],
-    answer: "115�"
-  },
-  {
-    question: "Which is the converse of 'If p then q'?",
-    options: ["If q then p", "If not p then not q", "If not q then not p", "If p then not q"],
-    answer: "If q then p"
-  },
-  {
-    question: "A triangle with sides 6 cm, 6 cm, and 6 cm is:",
-    options: ["Equilateral", "Isosceles", "Scalene", "Right-angled"],
-    answer: "Equilateral"
-  },
-  {
-    question: "What is the intersection of sets A = {1, 2, 3} and B = {3, 4, 5}?",
-    options: ["{3}", "{1", "2", "4", "5}", "{1", "2", "3", "4", "5}", "{}"],
-    answer: "{3}"
-  },
-  {
-    question: "Is -7 a real number?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "Simplify: 4a + 3a - 2a.",
-    options: ["5a", "7a", "2a", "a"],
-    answer: "5a"
-  },
-  {
-    question: "Simplify ?50.",
-    options: ["5?2", "10?5", "7?2", "25?2"],
-    answer: "5?2"
-  },
-  {
-    question: "Convert decimal 19 to binary.",
-    options: ["10011", "10101", "11001", "10010"],
-    answer: "10011"
-  },
-  {
-    question: "If f(x) = 3x - 2, find f(5).",
-    options: ["13", "15", "10", "17"],
-    answer: "13"
-  },
-  {
-    question: "How many sides does a pentagon have?",
-    options: ["5", "6", "4", "8"],
-    answer: "5"
-  },
-  {
-    question: "Solve for x: 3x + 4 = 19.",
-    options: ["5", "6", "7", "4"],
-    answer: "5"
-  },
-  {
-    question: "What is the bearing of a plane flying due south?",
-    options: ["180�", "90�", "270�", "0�"],
-    answer: "180�"
-  },
-  {
-    question: "Vector E = -3i + 4j. Find magnitude of E.",
-    options: ["5", "7", "1", "6"],
-    answer: "5"
-  },
-  {
-    question: "Find the mode of the data: 2, 3, 3, 5, 7.",
-    options: ["3", "2", "5", "7"],
-    answer: "3"
-  },
-  {
-    question: "Is rotation a rigid motion?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "If 8 kg of sugar costs $24, find cost per kg.",
-    options: ["$3", "$4", "$5", "$6"],
-    answer: "$3"
-  },
-  {
-    question: "Calculate 25% of 120.",
-    options: ["30", "40", "25", "35"],
-    answer: "30"
-  },
-  {
-    question: "Find 15 mod 4.",
-    options: ["3", "4", "2", "1"],
-    answer: "3"
-  },
-  {
-    question: "Solve for x: 10^x = 1000.",
-    options: ["3", "2", "4", "1"],
-    answer: "3"
-  },
-  {
-    question: "Solve simultaneous: 3x - y = 5, x + y = 7.",
-    options: ["x=3", "y=4", "x=4", "y=3", "x=5", "y=2", "x=2", "y=5"],
-    answer: "x=3, y=4"
-  },
-  {
-    question: "If y varies directly as x and y=15 when x=3, find y when x=6.",
-    options: ["30", "20", "25", "18"],
-    answer: "30"
-  },
-  {
-    question: "Calculate the mode of: 4, 7, 7, 9, 10.",
-    options: ["7", "9", "10", "4"],
-    answer: "7"
-  },
-  {
-    question: "Factorize: x^2 - 4x - 12.",
-    options: ["(x - 6)(x + 2)", "(x + 6)(x - 2)", "(x - 4)(x + 3)", "(x - 3)(x + 4)"],
-    answer: "(x - 6)(x + 2)"
-  },
-  {
-    question: "Calculate the volume of a cylinder with radius 4 cm and height 7 cm (?=3.14).",
-    options: ["351.68 cm³", "175.84 cm³", "87.96 cm³", "439.82 cm³"],
-    answer: "351.68 cm³"
-  },
-  {
-    question: "Find the sum of the first 6 terms of arithmetic sequence 3, 6, 9, 12,...",
-    options: ["63", "54", "45", "36"],
-    answer: "63"
-  },
-  {
-    question: "If the length of a rectangle is doubled, what happens to the area?",
-    options: ["It doubles", "It quadruples", "It stays the same", "It triples"],
-    answer: "It doubles"
-  },
-  {
-    question: "Which tool is used to draw parallel lines?",
-    options: ["Set square", "Compass", "Protractor", "Ruler"],
-    answer: "Set square"
-  },
-  {
-    question: "What is the converse of 'If it rains, then the ground is wet'?",
-    options: ["If the ground is wet", "then it rains", "If it does not rain", "then the ground is not wet", "If the ground is not wet", "then it does not rain", "If it rains", "then the ground is not wet"],
-    answer: "If the ground is wet, then it rains"
-  },
-  {
-    question: "Sum of exterior angles of any polygon?",
-    options: ["360�", "180�", "90�", "540�"],
-    answer: "360�"
-  },
-  {
-    question: "Solve for x: 7x - 8 = 20.",
-    options: ["4", "3", "5", "6"],
-    answer: "4"
-  },
-  {
-    question: "Which tool is used to draw perpendicular bisectors?",
-    options: ["Compass", "Set square", "Protractor", "Ruler"],
-    answer: "Compass"
-  },
-  {
-    question: "Find the 10th term of arithmetic sequence 5, 9, 13, 17,...",
-    options: ["41", "45", "49", "37"],
-    answer: "41"
-  },
-  {
-    question: "What is the complement of 50�?",
-    options: ["40�", "30�", "60�", "50�"],
-    answer: "40�"
-  },
-  {
-    question: "Which is the negation of 'If p then q'?",
-    options: ["p and not q", "If not p then not q", "If q then p", "If not q then not p"],
-    answer: "p and not q"
-  },
-  {
-    question: "A triangle with sides 7 cm, 9 cm, and 12 cm is:",
-    options: ["Scalene", "Isosceles", "Equilateral", "Right-angled"],
-    answer: "Scalene"
-  },
-  {
-    question: "If A = {2, 4, 6} and B = {4, 6, 8}, what is A \\ B (A minus B)?",
-    options: ["{2}", "{4", "6}", "{8}", "{}"],
-    answer: "{2}"
-  },
-  {
-    question: "Is ?16 a rational number?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "Simplify: 7x - 3x + 2x.",
-    options: ["6x", "8x", "4x", "5x"],
-    answer: "6x"
-  },
-  {
-    question: "Convert decimal 25 to binary.",
-    options: ["11001", "11011", "10101", "11101"],
-    answer: "11001"
-  },
-  {
-    question: "If f(x) = 2x + 1, find f(4).",
-    options: ["9", "8", "7", "6"],
-    answer: "9"
-  },
-  {
-    question: "How many sides does an octagon have?",
-    options: ["8", "6", "5", "10"],
-    answer: "8"
-  },
-  {
-    question: "Solve for x: 4x - 5 = 11.",
-    options: ["4", "3", "5", "6"],
-    answer: "4"
-  },
-  {
-    question: "What is the bearing of east?",
-    options: ["90�", "0�", "180�", "270�"],
-    answer: "90�"
-  },
-  {
-    question: "Vector F = 6i + 8j. Find magnitude of F.",
-    options: ["10", "12", "8", "14"],
-    answer: "10"
-  },
-  {
-    question: "Find the median of: 5, 8, 12, 15, 18.",
-    options: ["12", "13", "15", "8"],
-    answer: "12"
-  },
-  {
-    question: "Is translation a rigid motion?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "If 5 liters of paint cover 30 m�, how many liters are needed for 90 m�?",
-    options: ["15", "20", "10", "12"],
-    answer: "15"
-  },
-  {
-    question: "Calculate 18% of 200.",
-    options: ["36", "32", "40", "30"],
-    answer: "36"
-  },
-  {
-    question: "Calculate 23 mod 6.",
-    options: ["5", "3", "4", "2"],
-    answer: "5"
-  },
-  {
-    question: "Solve simultaneous: 4x + y = 9, x - y = 1.",
-    options: ["x=2", "y=1", "x=1", "y=3", "x=3", "y=2", "x=0", "y=4"],
-    answer: "x=2, y=1"
-  },
-  {
-    question: "If y varies inversely as x and y=10 when x=2, find y when x=5.",
-    options: ["4", "5", "6", "8"],
-    answer: "4"
-  },
-  {
-    question: "Find the mean of: 3, 6, 9, 12, 15.",
-    options: ["9", "10", "12", "8"],
-    answer: "9"
-  },
-  {
-    question: "Calculate the volume of a cube with side 5 cm.",
-    options: ["125 cm³", "100 cm³", "150 cm³", "115 cm³"],
-    answer: "125 cm³"
-  },
-  {
-    question: "Find the sum of first 4 terms of geometric series 2, 6, 18, 54,...",
-    options: ["80", "70", "90", "100"],
-    answer: "80"
-  },
-  {
-    question: "If the scale factor of enlargement is 4, what happens to the area?",
-    options: ["Area multiplies by 16", "Area doubles", "Area quadruples", "Area halves"],
-    answer: "Area multiplies by 16"
-  },
-  {
-    question: "Which tool is used to draw arcs?",
-    options: ["Compass", "Ruler", "Set square", "Protractor"],
-    answer: "Compass"
-  },
-  {
-    question: "Solve for x: 6x + 4 = 22.",
-    options: ["3", "2", "4", "5"],
-    answer: "3"
-  },
-  {
-    question: "Which tool is used to measure length?",
-    options: ["Ruler", "Compass", "Protractor", "Set square"],
-    answer: "Ruler"
-  },
-  {
-    question: "Find the 5th term of arithmetic sequence 7, 11, 15, 19,...",
-    options: ["23", "27", "31", "35"],
-    answer: "27"
-  },
-  {
-    question: "What is the complement of 70�?",
-    options: ["20�", "30�", "40�", "50�"],
-    answer: "20�"
-  },
-  {
-    question: "A triangle with sides 5 cm, 5 cm, and 8 cm is:",
-    options: ["Isosceles", "Equilateral", "Scalene", "Right-angled"],
-    answer: "Isosceles"
-  },
-  {
-    question: "Find the union of sets A = {1, 3, 5} and B = {2, 3, 4}.",
-    options: ["{1", "2", "3", "4", "5}", "{3}", "{1", "5}", "{2", "4}"],
-    answer: "{1, 2, 3, 4, 5}"
-  },
-  {
-    question: "Is 0 a real number?",
-    options: ["Yes", "No"],
-    answer: "Yes"
-  },
-  {
-    question: "Simplify: 5x - 2x + 7x.",
-    options: ["10x", "12x", "8x", "9x"],
-    answer: "10x"
-  },
-  {
-    question: "Simplify ?32.",
-    options: ["4?2", "5?2", "6?2", "3?2"],
-    answer: "4?2"
-  },
-  {
-    question: "Convert decimal 13 to binary.",
-    options: ["1101", "1011", "1110", "1001"],
-    answer: "1101"
-  },
-  {
-    question: "How many sides does a hexagon have?",
-    options: ["6", "7", "5", "8"],
-    answer: "6"
-  },
-  {
-    question: "What is the bearing of north-west?",
-    options: ["315�", "45�", "135�", "225�"],
-    answer: "315�"
-  },
-  {
-    question: "Vector G = 9i + 12j. Find magnitude of G.",
-    options: ["15", "21", "13", "18"],
-    answer: "15"
-  },
-  {
-    question: "Find the range of the data: 3, 7, 7, 8, 10.",
-    options: ["7", "8", "10", "3"],
-    answer: "7"
-  },
-  {
-    question: "If 3 kg of apples cost $9, find cost per kg.",
-    options: ["$3", "$4", "$2", "$5"],
-    answer: "$3"
-  },
-  {
-    question: "Calculate 40% of 150.",
-    options: ["60", "50", "55", "65"],
-    answer: "60"
-  },
-  {
-    question: "Find 18 mod 5.",
-    options: ["3", "4", "2", "1"],
-    answer: "3"
-  },
-  {
-    question: "Solve for x: log??(x) = 2.",
-    options: ["100", "10", "1000", "1"],
-    answer: "100"
-  },
-  {
-    question: "Solve simultaneous: 2x + 3y = 12, x - y = 3.",
-    options: ["x=3", "y=2", "x=2", "y=3", "x=4", "y=1", "x=1", "y=4"],
-    answer: "x=3, y=2"
-  },
-  {
-    question: "If y varies directly as x^2 and y=18 when x=3, find y when x=5.",
-    options: ["50", "75", "30", "25"],
-    answer: "50"
-  },
-  {
-    question: "Find the median of: 1, 4, 7, 9, 11.",
-    options: ["7", "6", "8", "9"],
-    answer: "7"
-  },
-  {
-    question: "Factorize: x^2 - 5x + 6.",
-    options: ["(x - 2)(x - 3)", "(x + 2)(x + 3)", "(x - 1)(x - 6)", "(x + 1)(x - 6)"],
-    answer: "(x - 2)(x - 3)"
-  },
-  {
-    question: "Calculate the surface area of a cube with side 3 cm.",
-    options: ["54 cm�", "27 cm�", "36 cm�", "18 cm�"],
-    answer: "54 cm�"
-  },
-  {
-    question: "Find the 6th term of the arithmetic sequence 4, 9, 14, 19,...",
-    options: ["29", "34", "39", "24"],
-    answer: "29"
-  },
-  {
-    question: "If a triangle is enlarged by scale factor 3, what is the ratio of areas?",
-    options: ["9:1", "3:1", "6:1", "27:1"],
-    answer: "9:1"
-  },
-  {
-    question: "Which tool is used to measure angles?",
-    options: ["Protractor", "Ruler", "Compass", "Set square"],
-    answer: "Protractor"
-  },
-  {
-    question: "What is the contrapositive of 'If p then q'?",
-    options: ["If not q then not p", "If q then p", "If not p then not q", "If p then not q"],
-    answer: "If not q then not p"
-  },
-  {
-    question: "Calculate cos 0�.",
-    options: ["1", "0", "0.5", "-1"],
-    answer: "1"
-  },
-  {
-    question: "Solve for x: 8x - 12 = 28.",
-    options: ["5", "4", "6", "3"],
-    answer: "5"
-  },
-  {
-    question: "Which tool is used to draw a straight line?",
-    options: ["Ruler", "Compass", "Protractor", "Set square"],
-    answer: "Ruler"
-  },
-  {
-    question: "Find the 8th term of arithmetic sequence 3, 7, 11, 15,...",
-    options: ["31", "35", "27", "39"],
-    answer: "31"
-  },
-  {
-    question: "What is the supplement of 120�?",
-    options: ["60�", "70�", "50�", "45�"],
-    answer: "60�"
-  },
-  {
-    question: "Find the intersection of sets A = {1, 2, 3} and B = {2, 3, 4}.",
-    options: ["{2", "3}", "{1}", "{4}", "{}"],
-    answer: "{2, 3}"
-  },
-  {
-    question: "Simplify: 9a - 4a + 2a.",
-    options: ["7a", "5a", "6a", "3a"],
-    answer: "7a"
-  },
-  {
-    question: "Convert binary 1010 to decimal.",
-    options: ["10", "11", "9", "8"],
-    answer: "10"
-  },
-  {
-    question: "If f(x) = 3x - 4, find f(5).",
-    options: ["11", "15", "10", "9"],
-    answer: "11"
-  },
-  {
-    question: "How many sides does a decagon have?",
-    options: ["10", "8", "12", "9"],
-    answer: "10"
-  },
-  {
-    question: "Solve for x: 7x + 2 = 16.",
-    options: ["2", "3", "4", "5"],
-    answer: "2"
-  },
-  {
-    question: "What is the bearing of south-east?",
-    options: ["135�", "45�", "225�", "315�"],
-    answer: "135�"
-  },
-  {
-    question: "Vector H = 8i - 6j. Find magnitude of H.",
-    options: ["10", "12", "14", "9"],
-    answer: "10"
-  },
-  {
-    question: "Find the mode of: 2, 5, 7, 5, 8.",
-    options: ["5", "7", "8", "2"],
-    answer: "5"
-  },
-  {
-    question: "If 7 liters of juice cost $21, what is the cost per liter?",
-    options: ["$3", "$4", "$2", "$5"],
-    answer: "$3"
-  },
-  {
-    question: "Calculate 25% of 360.",
-    options: ["90", "80", "85", "75"],
-    answer: "90"
-  },
-  {
-    question: "Calculate 27 mod 8.",
-    options: ["3", "4", "2", "1"],
-    answer: "3"
-  },
-  {
-    question: "Solve for x: 2^x = 16.",
-    options: ["4", "3", "5", "6"],
-    answer: "4"
-  },
-  {
-    question: "Solve simultaneous: x + y = 10, x - y = 4.",
-    options: ["x=7", "y=3", "x=6", "y=4", "x=8", "y=2", "x=5", "y=5"],
-    answer: "x=7, y=3"
-  },
-  {
-    question: "If y varies inversely as x and y=12 when x=4, find y when x=6.",
-    options: ["8", "10", "7", "6"],
-    answer: "8"
-  },
-  {
-    question: "Find the range of: 10, 15, 20, 25, 30.",
-    options: ["20", "15", "25", "30"],
-    answer: "20"
-  },
-  {
-    question: "Factorize: x^2 + 9x + 20.",
-    options: ["(x + 4)(x + 5)", "(x + 2)(x + 10)", "(x + 1)(x + 20)", "(x + 3)(x + 7)"],
-    answer: "(x + 4)(x + 5)"
-  },
-  {
-    question: "Calculate the volume of a cylinder with radius 3 cm and height 7 cm (use ?=3.14).",
-    options: ["197.82 cm³", "200 cm³", "180 cm³", "210 cm³"],
-    answer: "197.82 cm³"
-  },
-  {
-    question: "Find the sum of the first 5 terms of arithmetic series 3, 7, 11, 15,...",
-    options: ["65", "60", "70", "55"],
-    answer: "65"
-  },
-  {
-    question: "If a figure is enlarged by scale factor 2, what happens to its area?",
-    options: ["Area is multiplied by 4", "Area doubles", "Area triples", "Area halves"],
-    answer: "Area is multiplied by 4"
-  },
-  {
-    question: "Which tool is used to draw perpendicular lines?",
-    options: ["Set square", "Compass", "Ruler", "Protractor"],
-    answer: "Set square"
-  },
-  {
-    question: "What is the converse of 'If p then q'?",
-    options: ["If q then p", "If not p then not q", "If not q then not p", "If p then not q"],
-    answer: "If q then p"
-  },
-  {
-    question: "Solve for x: 5x - 3 = 17.",
-    options: ["4", "5", "6", "3"],
-    answer: "4"
-  },
-  {
-    question: "Which tool is used to measure the length of a line segment?",
-    options: ["Ruler", "Compass", "Protractor", "Set square"],
-    answer: "Ruler"
-  },
-  {
-    question: "Find the 10th term of the sequence: 2, 5, 8, 11,...",
-    options: ["29", "30", "32", "31"],
-    answer: "29"
-  },
-  {
-    question: "What is the supplement of 150�?",
-    options: ["30�", "40�", "20�", "45�"],
-    answer: "30�"
-  },
-  {
-    question: "A triangle with sides 7 cm, 7 cm, and 10 cm is:",
-    options: ["Isosceles", "Equilateral", "Scalene", "Right-angled"],
-    answer: "Isosceles"
-  },
-  {
-    question: "Find the complement of set A = {1, 2, 3} in universal set U = {1, 2, 3, 4, 5}.",
-    options: ["{4", "5}", "{1", "2}", "{3", "4}", "{5}"],
-    answer: "{4, 5}"
-  },
-  {
-    question: "Simplify: 7y - 3y + 6y.",
-    options: ["10y", "12y", "9y", "8y"],
-    answer: "10y"
-  },
-  {
-    question: "Solve for x: 3x + 5 = 20.",
-    options: ["5", "4", "6", "7"],
-    answer: "5"
-  },
-  {
-    question: "Vector J = -7i + 24j. Find magnitude of J.",
-    options: ["25", "26", "24", "23"],
-    answer: "25"
-  },
-  {
-    question: "Find the mean of: 4, 6, 8, 10, 12.",
-    options: ["8", "9", "7", "6"],
-    answer: "8"
-  },
-  {
-    question: "If 5 liters of paint cost $45, what is cost per liter?",
-    options: ["$9", "$8", "$7", "$6"],
-    answer: "$9"
-  },
-  {
-    question: "Calculate 34 mod 6.",
-    options: ["4", "5", "3", "2"],
-    answer: "4"
-  },
-  {
-    question: "Solve for x: log?(x) = 3.",
-    options: ["8", "6", "9", "7"],
-    answer: "8"
-  },
-  {
-    question: "Solve simultaneous: 3x + 2y = 16, x - y = 1.",
-    options: ["x=3", "y=2", "x=4", "y=3", "x=2", "y=3", "x=5", "y=1"],
-    answer: "x=3, y=2"
-  },
-  {
-    question: "Find the median of: 3, 7, 9, 12, 15.",
-    options: ["9", "10", "7", "12"],
-    answer: "9"
-  },
-  {
-    question: "Factorize: x^2 - 4x - 5.",
-    options: ["(x - 5)(x + 1)", "(x + 5)(x - 1)", "(x - 4)(x - 5)", "(x + 4)(x + 5)"],
-    answer: "(x - 5)(x + 1)"
-  },
-  {
-    question: "Find the sum of the first 6 terms of the sequence 2, 5, 8, 11,...",
-    options: ["51", "54", "48", "45"],
-    answer: "51"
-  },
-  {
-    question: "If a figure is enlarged by scale factor 4, what happens to its area?",
-    options: ["Area is multiplied by 16", "Area quadruples", "Area doubles", "Area halves"],
-    answer: "Area is multiplied by 16"
-  },
-  {
-    question: "What is the negation of 'If p then q'?",
-    options: ["p and not q", "If q then p", "If not q then not p", "If p then not q"],
-    answer: "p and not q"
-  },
-  {
-    question: "Calculate sin 90�.",
-    options: ["1", "0", "0.5", "-1"],
-    answer: "1"
-  },
-  {
-    question: "Solve for x: 4x + 7 = 23.",
-    options: ["4", "5", "6", "3"],
-    answer: "4"
-  },
-  {
-    question: "Find the 5th term of the arithmetic sequence: 7, 11, 15, 19,...",
-    options: ["23", "25", "27", "29"],
-    answer: "23"
-  },
-  {
-    question: "A triangle with sides 5 cm, 5 cm, and 5 cm is:",
-    options: ["Equilateral", "Isosceles", "Scalene", "Right-angled"],
-    answer: "Equilateral"
-  },
-  {
-    question: "What is the union of sets A = {2, 4, 6} and B = {1, 4, 5}?",
-    options: ["{1", "2", "4", "5", "6}", "{2", "4}", "{1", "5}", "{4}"],
-    answer: "{1, 2, 4, 5, 6}"
-  },
-  {
-    question: "Simplify: 5m + 3m - 2m.",
-    options: ["6m", "4m", "5m", "3m"],
-    answer: "6m"
-  },
-  {
-    question: "Convert binary 1111 to decimal.",
-    options: ["15", "14", "16", "13"],
-    answer: "15"
-  },
-  {
-    question: "If f(x) = x� - 2x + 1, find f(3).",
-    options: ["4", "2", "6", "8"],
-    answer: "4"
-  },
-  {
-    question: "Solve for x: 4x - 3 = 13.",
-    options: ["4", "5", "6", "3"],
-    answer: "4"
-  },
-  {
-    question: "Vector K = 3i + 4j. Find magnitude of K.",
-    options: ["5", "6", "7", "8"],
-    answer: "5"
-  },
-  {
-    question: "Find the median of: 1, 3, 3, 6, 7, 8, 9.",
-    options: ["6", "5", "7", "3"],
-    answer: "6"
-  },
-  {
-    question: "If 12 liters of juice cost $36, what is the cost per liter?",
-    options: ["$3", "$2", "$4", "$5"],
-    answer: "$3"
-  },
-  {
-    question: "Calculate 55 mod 7.",
-    options: ["6", "5", "4", "3"],
-    answer: "6"
-  },
-  {
-    question: "Solve for x: log?(x) = 4.",
-    options: ["81", "64", "27", "16"],
-    answer: "81"
-  },
-  {
-    question: "Solve simultaneous: 2x + 3y = 13, x - y = 1.",
-    options: ["x=4", "y=3", "x=3", "y=2", "x=5", "y=4", "x=2", "y=1"],
-    answer: "x=4, y=3"
-  },
-  {
-    question: "If y varies directly as x� and y=18 when x=3, find y when x=6.",
-    options: ["72", "54", "36", "108"],
-    answer: "72"
-  },
-  {
-    question: "Find the mode of: 2, 3, 5, 3, 7, 3, 4.",
-    options: ["3", "2", "5", "7"],
-    answer: "3"
-  },
-  {
-    question: "Factorize: x� + 5x + 6.",
-    options: ["(x + 2)(x + 3)", "(x + 1)(x + 6)", "(x + 3)(x + 5)", "(x + 4)(x + 2)"],
-    answer: "(x + 2)(x + 3)"
-  },
-  {
-    question: "Calculate the surface area of a cube with side 4 cm.",
-    options: ["96 cm�", "64 cm�", "48 cm�", "80 cm�"],
-    answer: "96 cm�"
-  },
-  {
-    question: "Find the 7th term of the arithmetic sequence 5, 8, 11, 14,...",
-    options: ["23", "24", "26", "25"],
-    answer: "23"
-  },
-  {
-    question: "If a figure is reduced by scale factor 1/3, what happens to its area?",
-    options: ["Area is multiplied by 1/9", "Area triples", "Area halves", "Area doubles"],
-    answer: "Area is multiplied by 1/9"
-  },
-  {
-    question: "Which tool is used to draw an angle of 60�?",
-    options: ["Compass", "Protractor", "Ruler", "Set square"],
-    answer: "Protractor"
-  },
-  {
-    question: "Solve for x: 6x + 2 = 20.",
-    options: ["3", "4", "2", "5"],
-    answer: "3"
-  },
-  {
-    question: "Find the 8th term of the sequence 1, 4, 7, 10,...",
-    options: ["22", "24", "23", "25"],
-    answer: "22"
-  },
-  {
-    question: "A triangle with sides 3 cm, 4 cm, and 5 cm is:",
-    options: ["Right-angled", "Equilateral", "Isosceles", "Scalene"],
-    answer: "Right-angled"
-  },
+const coreMathsQuestions = [
+
+
+{
+  question: "Points A(1,2) and B(5,2) are shown on the diagram. Find AB.",
+  image: "/images/coord1.png",
+  options: ["2", "3", "4", "5"],
+  answer: "4"
+},
+
+{
+  question: "Find the midpoint of A(2,4) and B(6,8).",
+  image: "/images/coord2.png",
+  options: ["(4,6)", "(3,5)", "(5,7)", "(2,6)"],
+  answer: "(4,6)"
+},
+
+{
+  question: "Find gradient of line through (1,2) and (3,6).",
+  image: "/images/coord3.png",
+  options: ["1", "2", "3", "4"],
+  answer: "2"
+},
+
+{
+  question: "Find equation of line passing through (0,3) with gradient 2.",
+  image: "/images/coord4.png",
+  options: ["y=2x+3", "y=3x+2", "y=2x-3", "y=x+3"],
+  answer: "y=2x+3"
+},
+
+{
+  question: "Find distance between (2,3) and (6,7).",
+  image: "/images/coord5.png",
+  options: ["4", "5.66", "6", "7"],
+  answer: "5.66"
+},
+
+{
+  question: "Find x-intercept of y = 2x - 4.",
+  image: "/images/coord6.png",
+  options: ["1", "2", "3", "4"],
+  answer: "2"
+},
+
+{
+  question: "Two lines intersect at (3,2). Identify intersection.",
+  image: "/images/coord7.png",
+  options: ["(3,2)", "(2,3)", "(1,1)", "(4,2)"],
+  answer: "(3,2)"
+},
+
+{
+  question: "Find gradient of horizontal line.",
+  image: "/images/coord8.png",
+  options: ["0", "1", "-1", "undefined"],
+  answer: "0"
+},
+
+{
+  question: "Find gradient of vertical line.",
+  image: "/images/coord9.png",
+  options: ["0", "undefined", "1", "-1"],
+  answer: "undefined"
+},
+
+{
+  question: "Find midpoint of (0,0) and (4,4).",
+  image: "/images/coord10.png",
+  options: ["(2,2)", "(3,3)", "(1,1)", "(4,4)"],
+  answer: "(2,2)"
+},
+
+
+{
+  question: "Right triangle has opposite = 3, hypotenuse = 5. Find sin θ.",
+  image: "/images/trig1.png",
+  options: ["0.6", "0.5", "0.4", "0.8"],
+  answer: "0.6"
+},
+
+{
+  question: "Adjacent = 4, hypotenuse = 5. Find cos θ.",
+  image: "/images/trig2.png",
+  options: ["0.8", "0.6", "0.5", "0.4"],
+  answer: "0.8"
+},
+
+{
+  question: "Opp = 3, Adj = 4. Find tan θ.",
+  image: "/images/trig3.png",
+  options: ["3/4", "4/3", "1/2", "2/3"],
+  answer: "3/4"
+},
+
+{
+  question: "Find hypotenuse when sides are 6 and 8.",
+  image: "/images/trig4.png",
+  options: ["10", "12", "14", "16"],
+  answer: "10"
+},
+
+{
+  question: "Angle of elevation = 30°, distance = 10m. Find height.",
+  image: "/images/trig5.png",
+  options: ["5m", "6m", "7m", "8m"],
+  answer: "5m"
+},
+
+{
+  question: "Angle of elevation = 45°, distance = 10m. Find height.",
+  image: "/images/trig6.png",
+  options: ["10m", "15m", "5m", "20m"],
+  answer: "10m"
+},
+
+{
+  question: "Find sin 90°.",
+  image: "/images/trig7.png",
+  options: ["1", "0", "0.5", "2"],
+  answer: "1"
+},
+
+{
+  question: "Find cos 0°.",
+  image: "/images/trig8.png",
+  options: ["1", "0", "0.5", "-1"],
+  answer: "1"
+},
+
+{
+  question: "Find tan 45°.",
+  image: "/images/trig9.png",
+  options: ["1", "0", "2", "0.5"],
+  answer: "1"
+},
+
+{
+  question: "Find sin 30°.",
+  image: "/images/trig10.png",
+  options: ["0.5", "1", "0.25", "0.75"],
+  answer: "0.5"
+},
+
+
+{
+  question: "Angle at center is 60°. Find angle at circumference.",
+  image: "/images/circle1.png",
+  options: ["30°", "60°", "90°", "120°"],
+  answer: "30°"
+},
+
+{
+  question: "Opposite angles in cyclic quadrilateral sum to?",
+  image: "/images/circle2.png",
+  options: ["180°", "90°", "360°", "270°"],
+  answer: "180°"
+},
+
+{
+  question: "Angle between radius and tangent is?",
+  image: "/images/circle3.png",
+  options: ["90°", "60°", "45°", "180°"],
+  answer: "90°"
+},
+
+{
+  question: "Angles in same segment are?",
+  image: "/images/circle4.png",
+  options: ["equal", "opposite", "supplementary", "random"],
+  answer: "equal"
+},
+
+{
+  question: "Angle in semicircle is?",
+  image: "/images/circle5.png",
+  options: ["90°", "60°", "45°", "30°"],
+  answer: "90°"
+},
+
+
+{
+  question: "Volume of cube side 3cm.",
+  image: "/images/volume1.png",
+  options: ["27", "9", "18", "36"],
+  answer: "27"
+},
+
+{
+  question: "Volume of cuboid 2×3×4.",
+  image: "/images/volume2.png",
+  options: ["24", "12", "18", "20"],
+  answer: "24"
+},
+
+{
+  question: "Volume of cylinder r=7, h=10.",
+  image: "/images/volume3.png",
+  options: ["1540", "1400", "1600", "1500"],
+  answer: "1540"
+},
+
+{
+  question: "Volume of sphere r=3.",
+  image: "/images/volume4.png",
+  options: ["113.1", "100", "120", "110"],
+  answer: "113.1"
+},
+
+{
+  question: "Volume of cone r=3, h=4.",
+  image: "/images/volume5.png",
+  options: ["37.7", "40", "35", "30"],
+  answer: "37.7"
+},
+
+
+{
+  question: "Vector AB = (2,3), BC = (1,1). Find AC.",
+  image: "/images/vector1.png",
+  options: ["(3,4)", "(2,4)", "(1,2)", "(4,5)"],
+  answer: "(3,4)"
+},
+
+{
+  question: "Find magnitude of vector (3,4).",
+  image: "/images/vector2.png",
+  options: ["5", "6", "7", "4"],
+  answer: "5"
+},
+
+{
+  question: "Resultant vector is?",
+  image: "/images/vector3.png",
+  options: ["Diagonal", "Side", "Angle", "Midpoint"],
+  answer: "Diagonal"
+},
+
+
+{
+  question: "Translation right 2 units.",
+  image: "/images/trans1.png",
+  options: ["(2,0)", "(0,2)", "(-2,0)", "(0,-2)"],
+  answer: "(2,0)"
+},
+
+{
+  question: "Reflection in x-axis changes?",
+  image: "/images/trans2.png",
+  options: ["y sign", "x sign", "both", "none"],
+  answer: "y sign"
+},
+
+{
+  question: "Rotation 90° clockwise gives?",
+  image: "/images/trans3.png",
+  options: ["(y,-x)", "(-y,x)", "(x,y)", "(-x,-y)"],
+  answer: "(y,-x)"
+},
+
+/* ================= PROBABILITY ================= */
+
+{
+  question: "Probability of head in fair coin.",
+  image: "/images/prob1.png",
+  options: ["1/2", "1", "0", "2"],
+  answer: "1/2"
+},
+
+{
+  question: "Probability of 3 on fair die.",
+  image: "/images/prob2.png",
+  options: ["1/6", "1/3", "1/2", "1"],
+  answer: "1/6"
+},
+
+{
+  question: "Total probability = ?",
+  image: "/images/prob3.png",
+  options: ["1", "0", "2", "0.5"],
+  answer: "1"
+},
+
+{
+  question: "The diagram shows a cumulative frequency curve (ogive). Estimate the median.",
+  image: "/images/math_shs9.png",
+  options: ["40", "50", "60", "70"],
+  answer: "50"
+},
+
+{
+  question: "The diagram shows a box plot. What is the interquartile range (IQR)?",
+  image: "/images/math_shs10.png",
+  options: ["10", "20", "30", "40"],
+  answer: "20"
+},
+
+{
+  question: "The diagram shows a triangle and its image after a transformation on a grid. What type of transformation is shown?",
+  image: "/images/math_shs11.png",
+  options: ["Rotation", "Reflection", "Translation", "Enlargement"],
+  answer: "Translation"
+},
+
+{
+  question: "The diagram shows a cube. How many edges does the cube have?",
+  image: "/images/math_shs12.png",
+  options: ["8", "10", "12", "14"],
+  answer: "12"
+},
+
+{
+  question: "The diagram shows a region of points equidistant from two points A and B. What is the locus?",
+  image: "/images/math_shs13.png",
+  options: ["Circle", "Perpendicular bisector", "Angle bisector", "Straight line"],
+  answer: "Perpendicular bisector"
+},
+
+{
+  question: "The diagram shows a graph of the inequality x + y ≤ 6. Which region is correct?",
+  image: "/images/math_shs14.png",
+  options: ["Region above the line", "Region below the line", "On the line only", "Outside the graph"],
+  answer: "Region below the line"
+},
+
+{
+  question: "The diagram shows a feasible region for a linear programming problem. At which point is the maximum value obtained?",
+  image: "/images/math_shs15.png",
+  options: ["A", "B", "C", "D"],
+  answer: "C"
+},
+
+{
+  question: "The diagram shows the net of a cube. How many faces will the cube have when folded?",
+  image: "/images/math_shs16.png",
+  options: ["4", "5", "6", "8"],
+  answer: "6"
+},
+
+{
+  question: "The diagram shows points plotted for a sequence. What type of sequence is illustrated?",
+  image: "/images/math_shs17.png",
+  options: ["Arithmetic", "Geometric", "Constant", "Quadratic"],
+  answer: "Arithmetic"
+},
+
+{
+  question: "The diagram shows the graph of y = 1/x. What type of graph is this?",
+  image: "/images/math_shs18.png",
+  options: ["Parabola", "Straight line", "Hyperbola", "Circle"],
+  answer: "Hyperbola"
+},
+
+{
+  question: "A set has 4 elements. How many subsets does it have?",
+  options: ["8", "16", "32", "4"],
+  answer: "16"
+},
+{
+  question: "If A = {1,2,3,4} and B = {3,4,5,6}, find A ∩ B.",
+  options: ["{3,4}", "{1,2}", "{5,6}", "{1,6}"],
+  answer: "{3,4}"
+},
+{
+  question: "If A = {1,2,3} and B = {2,3,4}, find A ∪ B.",
+  options: ["{1,2,3,4}", "{2,3}", "{1,4}", "{3,4}"],
+  answer: "{1,2,3,4}"
+},
+{
+  question: "In a class of 50 students, 30 study Maths, 25 study Science, and 10 study both. How many study neither?",
+  options: ["5", "10", "15", "20"],
+  answer: "5"
+},
+{
+  question: "If n(A) = 20, n(B) = 15 and n(A ∩ B) = 5, find n(A ∪ B).",
+  options: ["30", "25", "35", "20"],
+  answer: "30"
+},
+{
+  question: "Which of the following is irrational?",
+  options: ["0.125", "√3", "3/5", "0.75"],
+  answer: "√3"
+},
+{
+  question: "Arrange in ascending order: 0.2, 1/4, 30%.",
+  options: ["0.2, 1/4, 30%", "30%, 0.2, 1/4", "1/4, 0.2, 30%", "0.2, 30%, 1/4"],
+  answer: "0.2, 1/4, 30%"
+},
+{
+  question: "Round 36.478 to 2 decimal places.",
+  options: ["36.47", "36.48", "36.46", "36.49"],
+  answer: "36.48"
+},
+{
+  question: "Express 0.666... as a fraction.",
+  options: ["2/3", "1/3", "3/4", "5/6"],
+  answer: "2/3"
+},
+{
+  question: "Write 0.0045 in standard form.",
+  options: ["4.5 × 10⁻³", "45 × 10⁻⁴", "4.5 × 10⁻⁴", "0.45 × 10⁻²"],
+  answer: "4.5 × 10⁻³"
+},
+{
+  question: "Evaluate: (2 × 10³)(3 × 10²).",
+  options: ["6 × 10⁵", "5 × 10⁵", "6 × 10⁶", "6 × 10⁴"],
+  answer: "6 × 10⁵"
+},
+{
+  question: "Find the value of x if 3x + 7 = 22.",
+  options: ["5", "4", "3", "6"],
+  answer: "5"
+},
+{
+  question: "Simplify: 5x − 2x + 3x.",
+  options: ["6x", "5x", "4x", "3x"],
+  answer: "6x"
+},
+{
+  question: "Express 45% as a decimal.",
+  options: ["0.45", "4.5", "0.045", "45"],
+  answer: "0.45"
+},
+{
+  question: "Find the reciprocal of 5/8.",
+  options: ["8/5", "5/8", "3/8", "8/3"],
+  answer: "8/5"
+},
+{
+  question: "Evaluate: 7² − 3².",
+  options: ["40", "16", "49", "28"],
+  answer: "40"
+},
+{
+  question: "Simplify: (4 × 10⁴) ÷ (2 × 10²).",
+  options: ["2 × 10²", "2 × 10³", "8 × 10²", "2 × 10⁶"],
+  answer: "2 × 10²"
+},
+{
+  question: "Find the value of x if x² = 64.",
+  options: ["±8", "8 only", "-8 only", "16"],
+  answer: "±8"
+},
+{
+  question: "Convert 0.125 to a fraction.",
+  options: ["1/8", "1/4", "3/8", "1/2"],
+  answer: "1/8"
+},
+{
+  question: "Arrange in descending order: 1/2, 0.6, 55%.",
+  options: ["0.6, 55%, 1/2", "1/2, 0.6, 55%", "55%, 0.6, 1/2", "0.6, 1/2, 55%"],
+  answer: "0.6, 55%, 1/2"
+},
+
+{
+  question: "Expand: (x + 3)(x − 5).",
+  options: ["x² − 2x − 15", "x² + 2x − 15", "x² − 15", "x² − 8x + 15"],
+  answer: "x² − 2x − 15"
+},
+{
+  question: "Factorize: x² + 7x + 10.",
+  options: ["(x+5)(x+2)", "(x+10)(x+1)", "(x+7)(x+3)", "(x+2)(x+3)"],
+  answer: "(x+5)(x+2)"
+},
+{
+  question: "Simplify: (3x²)(2x³).",
+  options: ["6x⁵", "5x⁶", "6x⁶", "5x⁵"],
+  answer: "6x⁵"
+},
+{
+  question: "Solve: 2x − 5 = 9.",
+  options: ["7", "6", "5", "4"],
+  answer: "7"
+},
+{
+  question: "Solve: 3x + 4 = 2x + 9.",
+  options: ["5", "4", "3", "6"],
+  answer: "5"
+},
+{
+  question: "Simplify: (x² − 16)/(x − 4).",
+  options: ["x + 4", "x − 4", "x² − 4", "x + 2"],
+  answer: "x + 4"
+},
+{
+  question: "If x + 1/x = 5, find x² + 1/x².",
+  options: ["23", "25", "21", "20"],
+  answer: "23"
+},
+{
+  question: "Factorize completely: 2x² − 8.",
+  options: ["2(x−2)(x+2)", "(2x−4)(x+2)", "2(x−4)(x+1)", "(x−2)(x+4)"],
+  answer: "2(x−2)(x+2)"
+},
+{
+  question: "Simplify: √49.",
+  options: ["7", "14", "21", "6"],
+  answer: "7"
+},
+{
+  question: "Simplify: √75.",
+  options: ["5√3", "3√5", "15√5", "25√3"],
+  answer: "5√3"
+},
+{
+  question: "Simplify: √18 + √8.",
+  options: ["5√2", "4√2", "6√2", "3√2"],
+  answer: "5√2"
+},
+{
+  question: "Evaluate: (√5)(√20).",
+  options: ["10", "25", "5", "20"],
+  answer: "10"
+},
+{
+  question: "Rationalize: 1/√2.",
+  options: ["√2/2", "2√2", "1/2√2", "√2"],
+  answer: "√2/2"
+},
+{
+  question: "Simplify: (√7)².",
+  options: ["7", "14", "49", "√7"],
+  answer: "7"
+},
+{
+  question: "Convert 13 (base 10) to base 2.",
+  options: ["1101", "1011", "1110", "1001"],
+  answer: "1101"
+},
+{
+  question: "Convert 1101₂ to base 10.",
+  options: ["13", "11", "12", "14"],
+  answer: "13"
+},
+{
+  question: "Evaluate: 21₃ + 12₃.",
+  options: ["110₃", "100₃", "102₃", "111₃"],
+  answer: "110₃"
+},
+{
+  question: "Convert 32₄ to base 10.",
+  options: ["14", "12", "10", "16"],
+  answer: "14"
+},
+{
+  question: "Find x if 21ₓ = 7₁₀.",
+  options: ["5", "6", "4", "3"],
+  answer: "5"
+},
+{
+  question: "Evaluate: 101₂ × 10₂.",
+  options: ["1010₂", "1001₂", "1110₂", "1100₂"],
+  answer: "1010₂"
+},
+
+{
+  question: "Which of the following relations is a function?",
+  options: ["One-to-many", "Many-to-many", "Many-to-one", "None"],
+  answer: "Many-to-one"
+},
+{
+  question: "Find f(3) if f(x) = 2x + 5.",
+  options: ["11", "10", "9", "8"],
+  answer: "11"
+},
+{
+  question: "If f(x) = x² − 1, find f(−2).",
+  options: ["3", "-3", "5", "-5"],
+  answer: "3"
+},
+{
+  question: "Find the range of {(1,2), (2,3), (3,4)}.",
+  options: ["{1,2,3}", "{2,3,4}", "{1,4}", "{3,4}"],
+  answer: "{2,3,4}"
+},
+{
+  question: "Find the gradient of a line passing through (2,3) and (6,11).",
+  options: ["2", "3", "4", "1"],
+  answer: "2"
+},
+{
+  question: "Find the gradient of y = 4x − 7.",
+  options: ["4", "-7", "7", "3"],
+  answer: "4"
+},
+{
+  question: "Find the equation of a line with gradient 3 and y-intercept 2.",
+  options: ["y = 3x + 2", "y = 2x + 3", "y = 3x − 2", "y = x + 2"],
+  answer: "y = 3x + 2"
+},
+{
+  question: "Find the distance between (1,2) and (4,6).",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "Find the midpoint of (2,6) and (8,10).",
+  options: ["(5,8)", "(4,7)", "(6,9)", "(5,7)"],
+  answer: "(5,8)"
+},
+{
+  question: "Find the value of y if y = 2x − 3 and x = 4.",
+  options: ["5", "6", "4", "3"],
+  answer: "5"
+},
+{
+  question: "If f(x) = 3x − 2, find x when f(x) = 10.",
+  options: ["4", "3", "2", "5"],
+  answer: "4"
+},
+{
+  question: "Find the gradient between (−1,2) and (3,10).",
+  options: ["2", "3", "4", "1"],
+  answer: "2"
+},
+{
+  question: "Which of the following is NOT a function?",
+  options: ["y = x²", "y = 2x + 3", "x² + y² = 4", "y = 5x"],
+  answer: "x² + y² = 4"
+},
+{
+  question: "Find the equation of a line passing through (0,5) with gradient 2.",
+  options: ["y = 2x + 5", "y = 5x + 2", "y = 2x − 5", "y = x + 5"],
+  answer: "y = 2x + 5"
+},
+{
+  question: "Find the distance between (−2,−3) and (1,1).",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "Find the midpoint of (−2,4) and (6,2).",
+  options: ["(2,3)", "(4,3)", "(2,2)", "(3,2)"],
+  answer: "(2,3)"
+},
+{
+  question: "If f(x) = x² + 2x, find f(1).",
+  options: ["3", "2", "1", "4"],
+  answer: "3"
+},
+{
+  question: "Find the gradient of a horizontal line.",
+  options: ["0", "1", "Undefined", "-1"],
+  answer: "0"
+},
+{
+  question: "Find the gradient of a vertical line.",
+  options: ["Undefined", "0", "1", "-1"],
+  answer: "Undefined"
+},
+{
+  question: "Find the equation of a line with gradient −2 and y-intercept 1.",
+  options: ["y = -2x + 1", "y = 2x + 1", "y = -2x - 1", "y = x - 2"],
+  answer: "y = -2x + 1"
+},
+
+{
+  question: "Solve: 5x − 3 = 2x + 12.",
+  options: ["5", "4", "3", "6"],
+  answer: "5"
+},
+{
+  question: "Solve: 4(x − 2) = 3x + 5.",
+  options: ["13", "12", "11", "10"],
+  answer: "13"
+},
+{
+  question: "Solve: (2x + 3)/5 = 7.",
+  options: ["16", "17", "18", "19"],
+  answer: "16"
+},
+{
+  question: "Solve: 3x − 2 ≤ 10.",
+  options: ["x ≤ 4", "x ≥ 4", "x ≤ 3", "x ≥ 3"],
+  answer: "x ≤ 4"
+},
+{
+  question: "Solve: 2x + 1 > 7.",
+  options: ["x > 3", "x < 3", "x ≥ 3", "x ≤ 3"],
+  answer: "x > 3"
+},
+{
+  question: "Solve: −2x < 6.",
+  options: ["x > -3", "x < -3", "x ≥ -3", "x ≤ -3"],
+  answer: "x > -3"
+},
+{
+  question: "Solve: 1 ≤ 3x − 2 ≤ 7.",
+  options: ["1 ≤ x ≤ 3", "x ≤ 3", "x ≥ 1", "0 ≤ x ≤ 3"],
+  answer: "1 ≤ x ≤ 3"
+},
+{
+  question: "The sum of two consecutive integers is 25. Find them.",
+  options: ["12 and 13", "11 and 14", "10 and 15", "9 and 16"],
+  answer: "12 and 13"
+},
+{
+  question: "A number is increased by 5 to give 17. Find the number.",
+  options: ["12", "13", "11", "10"],
+  answer: "12"
+},
+{
+  question: "Twice a number minus 4 is 10. Find the number.",
+  options: ["7", "6", "8", "9"],
+  answer: "7"
+},
+{
+  question: "The perimeter of a rectangle is 30 cm. If length is 8 cm, find width.",
+  options: ["7 cm", "6 cm", "5 cm", "4 cm"],
+  answer: "7 cm"
+},
+{
+  question: "The sum of three consecutive integers is 36. Find the smallest.",
+  options: ["11", "12", "13", "10"],
+  answer: "11"
+},
+{
+  question: "A father is 4 times as old as his son. Their total age is 50. Find the son's age.",
+  options: ["10", "8", "12", "6"],
+  answer: "10"
+},
+{
+  question: "A number decreased by 3 gives twice the number. Find the number.",
+  options: ["-3", "3", "0", "6"],
+  answer: "-3"
+},
+{
+  question: "Solve: 2(x + 3) − x = 9.",
+  options: ["3", "4", "2", "5"],
+  answer: "3"
+},
+{
+  question: "Solve: (x − 1)/2 + (x + 3)/2 = 10.",
+  options: ["9", "8", "7", "6"],
+  answer: "9"
+},
+{
+  question: "Solve: 3(x − 2) + 4(x + 1) = 5.",
+  options: ["1", "2", "0", "-1"],
+  answer: "1"
+},
+{
+  question: "The difference between two numbers is 6 and their sum is 20. Find the larger number.",
+  options: ["13", "12", "14", "10"],
+  answer: "13"
+},
+{
+  question: "Solve: 5 − 2x ≥ 1.",
+  options: ["x ≤ 2", "x ≥ 2", "x ≤ -2", "x ≥ -2"],
+  answer: "x ≤ 2"
+},
+{
+  question: "A trader buys an item for GH₵50 and sells it for GH₵65. Find the profit.",
+  options: ["GH₵15", "GH₵10", "GH₵20", "GH₵5"],
+  answer: "GH₵15"
+},
+
+{
+  question: "A bearing is measured from the:",
+  options: ["North", "South", "East", "West"],
+  answer: "North"
+},
+{
+  question: "Express the bearing of East in degrees.",
+  options: ["090°", "180°", "270°", "000°"],
+  answer: "090°"
+},
+{
+  question: "Express the bearing of South in degrees.",
+  options: ["180°", "090°", "270°", "360°"],
+  answer: "180°"
+},
+{
+  question: "Find the reverse bearing of 060°.",
+  options: ["240°", "120°", "300°", "180°"],
+  answer: "240°"
+},
+{
+  question: "Find the reverse bearing of 200°.",
+  options: ["020°", "160°", "340°", "180°"],
+  answer: "020°"
+},
+{
+  question: "A point A is due East of B. What is the bearing of A from B?",
+  options: ["090°", "270°", "180°", "000°"],
+  answer: "090°"
+},
+{
+  question: "A point B is due South of A. What is the bearing of B from A?",
+  options: ["180°", "090°", "270°", "360°"],
+  answer: "180°"
+},
+{
+  question: "Which of the following is a vector quantity?",
+  options: ["Speed", "Distance", "Velocity", "Time"],
+  answer: "Velocity"
+},
+{
+  question: "Which of the following is a scalar quantity?",
+  options: ["Force", "Velocity", "Distance", "Acceleration"],
+  answer: "Distance"
+},
+{
+  question: "If vector A = (2,3) and B = (4,1), find A + B.",
+  options: ["(6,4)", "(6,2)", "(2,4)", "(8,3)"],
+  answer: "(6,4)"
+},
+{
+  question: "If vector A = (5,2) and B = (1,3), find A − B.",
+  options: ["(4,-1)", "(6,5)", "(4,1)", "(5,-1)"],
+  answer: "(4,-1)"
+},
+{
+  question: "Multiply vector (3,4) by 2.",
+  options: ["(6,8)", "(5,6)", "(3,8)", "(6,4)"],
+  answer: "(6,8)"
+},
+{
+  question: "Find the magnitude of vector (3,4).",
+  options: ["5", "7", "6", "4"],
+  answer: "5"
+},
+{
+  question: "Find the magnitude of vector (6,8).",
+  options: ["10", "12", "14", "8"],
+  answer: "10"
+},
+{
+  question: "Two vectors are equal if they have the same:",
+  options: ["Magnitude only", "Direction only", "Magnitude and direction", "Position"],
+  answer: "Magnitude and direction"
+},
+{
+  question: "Vectors are parallel if:",
+  options: ["Their components are equal", "One is a scalar multiple of the other", "They are equal", "They are perpendicular"],
+  answer: "One is a scalar multiple of the other"
+},
+{
+  question: "Find vector AB if A(1,2) and B(4,6).",
+  options: ["(3,4)", "(5,8)", "(4,6)", "(2,4)"],
+  answer: "(3,4)"
+},
+{
+  question: "Find the midpoint of vector from A(2,4) to B(6,8).",
+  options: ["(4,6)", "(3,5)", "(5,7)", "(4,5)"],
+  answer: "(4,6)"
+},
+{
+  question: "If vector A = (x, y), what is −A?",
+  options: ["(-x,-y)", "(x,-y)", "(-x,y)", "(y,x)"],
+  answer: "(-x,-y)"
+},
+{
+  question: "If AB + BC = AC, this represents:",
+  options: ["Triangle law", "Parallel law", "Scalar law", "Gradient law"],
+  answer: "Triangle law"
+},
+
+{
+  question: "Which of the following is a measure of central tendency?",
+  options: ["Range", "Mean", "Frequency", "Class"],
+  answer: "Mean"
+},
+{
+  question: "Find the mean of 2, 4, 6, 8.",
+  options: ["5", "6", "4", "8"],
+  answer: "5"
+},
+{
+  question: "Find the mean of 3, 7, 5, 9, 6.",
+  options: ["6", "7", "5", "8"],
+  answer: "6"
+},
+{
+  question: "Find the median of 2, 4, 6, 8, 10.",
+  options: ["6", "5", "4", "8"],
+  answer: "6"
+},
+{
+  question: "Find the median of 3, 5, 7, 9.",
+  options: ["6", "5", "7", "8"],
+  answer: "6"
+},
+{
+  question: "Find the mode of 2, 3, 3, 4, 5.",
+  options: ["3", "2", "4", "5"],
+  answer: "3"
+},
+{
+  question: "Range is defined as:",
+  options: ["Highest − Lowest", "Sum ÷ number", "Middle value", "Most frequent"],
+  answer: "Highest − Lowest"
+},
+{
+  question: "Find the range of 5, 7, 10, 15.",
+  options: ["10", "8", "7", "15"],
+  answer: "10"
+},
+{
+  question: "If Σx = 50 and n = 10, find the mean.",
+  options: ["5", "10", "6", "4"],
+  answer: "5"
+},
+{
+  question: "Which graph is best for grouped data?",
+  options: ["Pie chart", "Histogram", "Bar chart", "Line graph"],
+  answer: "Histogram"
+},
+{
+  question: "Which graph is suitable for ungrouped data?",
+  options: ["Histogram", "Pie chart", "None", "Frequency polygon"],
+  answer: "Pie chart"
+},
+{
+  question: "If the mean of 4 numbers is 10, find their total.",
+  options: ["40", "20", "10", "50"],
+  answer: "40"
+},
+{
+  question: "The total frequency is 20 and Σfx = 200. Find the mean.",
+  options: ["10", "20", "5", "15"],
+  answer: "10"
+},
+{
+  question: "What is the mode?",
+  options: ["Most frequent value", "Middle value", "Average", "Difference"],
+  answer: "Most frequent value"
+},
+{
+  question: "Find the mean of 1, 2, 3, 4, 5, 6.",
+  options: ["3.5", "3", "4", "2.5"],
+  answer: "3.5"
+},
+{
+  question: "If a class interval is 10–20, the width is:",
+  options: ["10", "20", "5", "15"],
+  answer: "10"
+},
+{
+  question: "The midpoint of class 10–20 is:",
+  options: ["15", "10", "20", "12"],
+  answer: "15"
+},
+{
+  question: "Which of the following shows frequency distribution?",
+  options: ["Table", "Equation", "Graph", "Formula"],
+  answer: "Table"
+},
+{
+  question: "Find the mean of values with frequencies: x=2 (f=3), x=4 (f=2).",
+  options: ["2.8", "3", "3.2", "4"],
+  answer: "2.8"
+},
+{
+  question: "If total frequency is 15 and Σfx = 90, find mean.",
+  options: ["6", "5", "7", "4"],
+  answer: "6"
+},
+
+{
+  question: "Express 45 as a percentage of 60.",
+  options: ["75%", "80%", "70%", "65%"],
+  answer: "75%"
+},
+{
+  question: "Increase 200 by 10%.",
+  options: ["220", "210", "230", "240"],
+  answer: "220"
+},
+{
+  question: "Decrease 150 by 20%.",
+  options: ["120", "130", "110", "100"],
+  answer: "120"
+},
+{
+  question: "Find 25% of 240.",
+  options: ["60", "50", "40", "70"],
+  answer: "60"
+},
+{
+  question: "A price increases from GH₵50 to GH₵65. Find the percentage increase.",
+  options: ["30%", "25%", "20%", "35%"],
+  answer: "30%"
+},
+{
+  question: "Express 0.35 as a percentage.",
+  options: ["35%", "3.5%", "0.35%", "350%"],
+  answer: "35%"
+},
+{
+  question: "Divide 60 in the ratio 2:3.",
+  options: ["24 and 36", "20 and 40", "30 and 30", "25 and 35"],
+  answer: "24 and 36"
+},
+{
+  question: "If A:B = 3:5 and A = 15, find B.",
+  options: ["25", "20", "30", "35"],
+  answer: "25"
+},
+{
+  question: "Simplify the ratio 12:18.",
+  options: ["2:3", "3:2", "4:6", "6:9"],
+  answer: "2:3"
+},
+{
+  question: "A map scale is 1:1000. What is 1 cm on the map in reality?",
+  options: ["1000 cm", "100 cm", "10 cm", "10000 cm"],
+  answer: "1000 cm"
+},
+{
+  question: "Convert 72 km/h to m/s.",
+  options: ["20 m/s", "18 m/s", "25 m/s", "15 m/s"],
+  answer: "20 m/s"
+},
+{
+  question: "A man travels 120 km in 2 hours. Find his speed.",
+  options: ["60 km/h", "50 km/h", "40 km/h", "70 km/h"],
+  answer: "60 km/h"
+},
+{
+  question: "Find the simple interest on GH₵1000 at 10% per annum for 2 years.",
+  options: ["GH₵200", "GH₵100", "GH₵300", "GH₵150"],
+  answer: "GH₵200"
+},
+{
+  question: "Find the amount on GH₵500 at 5% simple interest for 2 years.",
+  options: ["GH₵550", "GH₵600", "GH₵525", "GH₵575"],
+  answer: "GH₵550"
+},
+{
+  question: "A trader buys an item for GH₵80 and sells it for GH₵100. Find the profit percentage.",
+  options: ["25%", "20%", "30%", "15%"],
+  answer: "25%"
+},
+{
+  question: "An item is sold at GH₵90 after a 10% discount. Find the original price.",
+  options: ["GH₵100", "GH₵95", "GH₵110", "GH₵105"],
+  answer: "GH₵100"
+},
+{
+  question: "A salesman earns 5% commission on GH₵2000 sales. Find his commission.",
+  options: ["GH₵100", "GH₵200", "GH₵150", "GH₵50"],
+  answer: "GH₵100"
+},
+{
+  question: "Convert $50 to Ghana cedis if $1 = GH₵12.",
+  options: ["GH₵600", "GH₵500", "GH₵650", "GH₵700"],
+  answer: "GH₵600"
+},
+{
+  question: "A population of 2000 people lives in an area of 10 km². Find the population density.",
+  options: ["200 per km²", "100 per km²", "150 per km²", "250 per km²"],
+  answer: "200 per km²"
+},
+{
+  question: "If 5 workers complete a job in 10 days, how many days will 10 workers take?",
+  options: ["5 days", "10 days", "2 days", "8 days"],
+  answer: "5 days"
+},
+
+{
+  question: "In a right-angled triangle, sin θ =:",
+  options: ["Opp/Hyp", "Adj/Hyp", "Opp/Adj", "Hyp/Adj"],
+  answer: "Opp/Hyp"
+},
+{
+  question: "In a right-angled triangle, cos θ =:",
+  options: ["Adj/Hyp", "Opp/Hyp", "Opp/Adj", "Hyp/Opp"],
+  answer: "Adj/Hyp"
+},
+{
+  question: "In a right-angled triangle, tan θ =:",
+  options: ["Opp/Adj", "Adj/Opp", "Opp/Hyp", "Hyp/Adj"],
+  answer: "Opp/Adj"
+},
+{
+  question: "Find sin 30°.",
+  options: ["1/2", "√3/2", "1", "0"],
+  answer: "1/2"
+},
+{
+  question: "Find cos 60°.",
+  options: ["1/2", "√3/2", "1", "0"],
+  answer: "1/2"
+},
+{
+  question: "Find tan 45°.",
+  options: ["1", "0", "√3", "1/2"],
+  answer: "1"
+},
+{
+  question: "Evaluate: sin²30° + cos²30°.",
+  options: ["1", "1/2", "0", "2"],
+  answer: "1"
+},
+{
+  question: "Find sin 45°.",
+  options: ["√2/2", "1/2", "√3/2", "1"],
+  answer: "√2/2"
+},
+{
+  question: "Find cos 45°.",
+  options: ["√2/2", "1/2", "√3/2", "1"],
+  answer: "√2/2"
+},
+{
+  question: "Find tan 30°.",
+  options: ["1/√3", "√3", "1", "1/2"],
+  answer: "1/√3"
+},
+{
+  question: "Find the value of x if sin x = 1.",
+  options: ["90°", "0°", "45°", "60°"],
+  answer: "90°"
+},
+{
+  question: "Find the value of x if cos x = 0.",
+  options: ["90°", "0°", "60°", "45°"],
+  answer: "90°"
+},
+{
+  question: "Find tan 60°.",
+  options: ["√3", "1", "1/√3", "2"],
+  answer: "√3"
+},
+{
+  question: "A ladder leans against a wall making an angle of 30° with the ground. If the ladder is 10 m long, find the height reached.",
+  options: ["5 m", "8.66 m", "10 m", "6 m"],
+  answer: "5 m"
+},
+{
+  question: "A tree subtends an angle of elevation of 45° from a point 10 m away. Find its height.",
+  options: ["10 m", "5 m", "15 m", "20 m"],
+  answer: "10 m"
+},
+{
+  question: "From the top of a building, the angle of depression of a point on the ground is 30°. If the building is 20 m high, find the horizontal distance.",
+  options: ["34.6 m", "20 m", "40 m", "10 m"],
+  answer: "34.6 m"
+},
+{
+  question: "Find the hypotenuse if opposite = 6 cm and θ = 30°.",
+  options: ["12 cm", "10 cm", "8 cm", "6 cm"],
+  answer: "12 cm"
+},
+{
+  question: "If tan θ = 3/4, find sin θ.",
+  options: ["3/5", "4/5", "5/3", "4/3"],
+  answer: "3/5"
+},
+{
+  question: "If sin θ = 5/13, find cos θ.",
+  options: ["12/13", "5/12", "13/12", "12/5"],
+  answer: "12/13"
+},
+{
+  question: "Find θ if tan θ = 1.",
+  options: ["45°", "30°", "60°", "90°"],
+  answer: "45°"
+},
+
+{
+  question: "Find the area of a rectangle with length 8 cm and width 5 cm.",
+  options: ["40 cm²", "26 cm²", "13 cm²", "80 cm²"],
+  answer: "40 cm²"
+},
+{
+  question: "Find the perimeter of a rectangle with length 10 cm and width 4 cm.",
+  options: ["28 cm", "40 cm", "20 cm", "14 cm"],
+  answer: "28 cm"
+},
+{
+  question: "Find the area of a triangle with base 6 cm and height 8 cm.",
+  options: ["24 cm²", "48 cm²", "14 cm²", "30 cm²"],
+  answer: "24 cm²"
+},
+{
+  question: "Find the area of a circle of radius 7 cm (π = 22/7).",
+  options: ["154 cm²", "44 cm²", "77 cm²", "100 cm²"],
+  answer: "154 cm²"
+},
+{
+  question: "Find the circumference of a circle of radius 7 cm (π = 22/7).",
+  options: ["44 cm", "22 cm", "14 cm", "77 cm"],
+  answer: "44 cm"
+},
+{
+  question: "Find the area of a square of side 9 cm.",
+  options: ["81 cm²", "36 cm²", "18 cm²", "72 cm²"],
+  answer: "81 cm²"
+},
+{
+  question: "Find the volume of a cube of side 5 cm.",
+  options: ["125 cm³", "25 cm³", "100 cm³", "150 cm³"],
+  answer: "125 cm³"
+},
+{
+  question: "Find the surface area of a cube of side 4 cm.",
+  options: ["96 cm²", "64 cm²", "48 cm²", "16 cm²"],
+  answer: "96 cm²"
+},
+{
+  question: "Find the volume of a cuboid of dimensions 5 cm, 4 cm, 3 cm.",
+  options: ["60 cm³", "20 cm³", "12 cm³", "100 cm³"],
+  answer: "60 cm³"
+},
+{
+  question: "Find the total surface area of a cuboid of dimensions 2 cm, 3 cm, 4 cm.",
+  options: ["52 cm²", "24 cm²", "48 cm²", "26 cm²"],
+  answer: "52 cm²"
+},
+{
+  question: "Find the volume of a cylinder with radius 7 cm and height 10 cm (π = 22/7).",
+  options: ["1540 cm³", "770 cm³", "490 cm³", "3080 cm³"],
+  answer: "1540 cm³"
+},
+{
+  question: "Find the curved surface area of a cylinder of radius 7 cm and height 5 cm (π = 22/7).",
+  options: ["220 cm²", "154 cm²", "308 cm²", "110 cm²"],
+  answer: "220 cm²"
+},
+{
+  question: "Find the volume of a sphere of radius 3 cm (π = 22/7).",
+  options: ["113.14 cm³", "36 cm³", "144 cm³", "72 cm³"],
+  answer: "113.14 cm³"
+},
+{
+  question: "Find the surface area of a sphere of radius 7 cm (π = 22/7).",
+  options: ["616 cm²", "308 cm²", "154 cm²", "700 cm²"],
+  answer: "616 cm²"
+},
+{
+  question: "Find the volume of a cone with radius 3 cm and height 6 cm (π = 22/7).",
+  options: ["56.57 cm³", "113.14 cm³", "28.3 cm³", "75 cm³"],
+  answer: "56.57 cm³"
+},
+{
+  question: "Find the area of a trapezium with parallel sides 6 cm and 10 cm and height 5 cm.",
+  options: ["40 cm²", "30 cm²", "50 cm²", "60 cm²"],
+  answer: "40 cm²"
+},
+{
+  question: "Find the area of a sector with angle 90° and radius 7 cm (π = 22/7).",
+  options: ["38.5 cm²", "77 cm²", "49 cm²", "154 cm²"],
+  answer: "38.5 cm²"
+},
+{
+  question: "Find the length of an arc of 90° in a circle of radius 7 cm (π = 22/7).",
+  options: ["11 cm", "22 cm", "14 cm", "7 cm"],
+  answer: "11 cm"
+},
+{
+  question: "Find the volume of a prism with base area 10 cm² and height 6 cm.",
+  options: ["60 cm³", "16 cm³", "10 cm³", "50 cm³"],
+  answer: "60 cm³"
+},
+{
+  question: "Find the area of a parallelogram with base 8 cm and height 5 cm.",
+  options: ["40 cm²", "20 cm²", "13 cm²", "80 cm²"],
+  answer: "40 cm²"
+},
+
+{
+  question: "Find the next term: 2, 4, 6, 8, ...",
+  options: ["10", "12", "9", "11"],
+  answer: "10"
+},
+{
+  question: "Find the nth term of the sequence 3, 6, 9, 12, ...",
+  options: ["3n", "n+3", "2n", "n²"],
+  answer: "3n"
+},
+{
+  question: "Find the 10th term of the sequence 2, 5, 8, 11, ...",
+  options: ["29", "30", "32", "28"],
+  answer: "29"
+},
+{
+  question: "Find the sum of the first 5 terms of 2, 4, 6, 8, ...",
+  options: ["30", "20", "25", "40"],
+  answer: "30"
+},
+{
+  question: "Find the sum of the first n terms of an arithmetic sequence with first term a and common difference d.",
+  options: ["n/2(2a + (n−1)d)", "a + nd", "n(a + d)", "2a + nd"],
+  answer: "n/2(2a + (n−1)d)"
+},
+{
+  question: "Simplify: 2³ × 2⁴.",
+  options: ["2⁷", "2¹²", "2¹", "2⁶"],
+  answer: "2⁷"
+},
+{
+  question: "Simplify: 3⁵ ÷ 3².",
+  options: ["3³", "3⁷", "3²", "3⁵"],
+  answer: "3³"
+},
+{
+  question: "Simplify: (2³)².",
+  options: ["2⁶", "2⁵", "2⁹", "2⁴"],
+  answer: "2⁶"
+},
+{
+  question: "Evaluate: 5⁰.",
+  options: ["1", "0", "5", "Undefined"],
+  answer: "1"
+},
+{
+  question: "Simplify: 4⁻¹.",
+  options: ["1/4", "4", "−4", "0"],
+  answer: "1/4"
+},
+{
+  question: "If log₁₀ 100 = x, find x.",
+  options: ["2", "1", "10", "100"],
+  answer: "2"
+},
+{
+  question: "Find log₁₀ 1000.",
+  options: ["3", "2", "1", "10"],
+  answer: "3"
+},
+{
+  question: "Simplify: log₁₀ 10⁴.",
+  options: ["4", "10", "1", "0"],
+  answer: "4"
+},
+{
+  question: "If log₁₀ 2 = 0.3010, find log₁₀ 4.",
+  options: ["0.6020", "0.3010", "0.9030", "0.1204"],
+  answer: "0.6020"
+},
+{
+  question: "If y varies directly as x and y = 10 when x = 2, find y when x = 5.",
+  options: ["25", "20", "15", "30"],
+  answer: "25"
+},
+{
+  question: "If y varies inversely as x and y = 8 when x = 2, find y when x = 4.",
+  options: ["4", "2", "6", "8"],
+  answer: "4"
+},
+{
+  question: "The probability of an event lies between:",
+  options: ["0 and 1", "1 and 10", "−1 and 1", "0 and 10"],
+  answer: "0 and 1"
+},
+{
+  question: "Find the probability of getting a head when a fair coin is tossed.",
+  options: ["1/2", "1", "0", "1/3"],
+  answer: "1/2"
+},
+{
+  question: "Find the probability of getting a 3 when a fair die is thrown.",
+  options: ["1/6", "1/3", "1/2", "1/4"],
+  answer: "1/6"
+},
+{
+  question: "Two coins are tossed. Find the probability of getting two heads.",
+  options: ["1/4", "1/2", "1/3", "1"],
+  answer: "1/4"
+},
+
+{
+  question: "Solve: x² − 5x + 6 = 0.",
+  options: ["x = 2 or 3", "x = -2 or -3", "x = 1 or 6", "x = 0 or 6"],
+  answer: "x = 2 or 3"
+},
+{
+  question: "Solve: 2x² − 7x + 3 = 0.",
+  options: ["x = 3 or 1/2", "x = -3 or -1/2", "x = 1 or 3", "x = 2 or 3"],
+  answer: "x = 3 or 1/2"
+},
+{
+  question: "If x + 1/x = 4, find x² + 1/x².",
+  options: ["14", "16", "12", "10"],
+  answer: "14"
+},
+{
+  question: "Solve: log₁₀ x = 2.",
+  options: ["100", "10", "2", "1000"],
+  answer: "100"
+},
+{
+  question: "Solve: log₁₀ x + log₁₀ 2 = 3.",
+  options: ["500", "200", "100", "50"],
+  answer: "500"
+},
+{
+  question: "If sin θ = 3/5, find cos θ.",
+  options: ["4/5", "5/4", "3/4", "2/5"],
+  answer: "4/5"
+},
+{
+  question: "Find tan θ if sin θ = 5/13.",
+  options: ["5/12", "12/5", "13/5", "5/13"],
+  answer: "5/12"
+},
+{
+  question: "Solve: 2^x = 32.",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "Simplify: (x² − 9)/(x − 3) − (x + 3).",
+  options: ["0", "6", "3", "-3"],
+  answer: "0"
+},
+{
+  question: "Find the gradient of a line perpendicular to y = 2x + 3.",
+  options: ["-1/2", "2", "-2", "1/2"],
+  answer: "-1/2"
+},
+
+{
+  question: "Find the distance between (1,2) and (4,6).",
+  options: ["5", "4", "6", "3"],
+  answer: "5"
+},
+{
+  question: "If A(2,3) and B(6,7), find midpoint.",
+  options: ["(4,5)", "(3,4)", "(5,6)", "(2,4)"],
+  answer: "(4,5)"
+},
+{
+  question: "Find the sum of first 10 terms of 3, 6, 9, ...",
+  options: ["165", "150", "180", "120"],
+  answer: "165"
+},
+{
+  question: "Find the 8th term of sequence 2, 6, 18, ...",
+  options: ["4374", "1296", "2187", "6561"],
+  answer: "4374"
+},
+{
+  question: "Solve: 3x − 2 ≤ 7 and x + 1 ≥ 3.",
+  options: ["2 ≤ x ≤ 3", "x ≥ 2", "x ≤ 3", "x = 2"],
+  answer: "2 ≤ x ≤ 3"
+},
+{
+  question: "Find probability of picking a red ball from 3 red and 2 blue balls.",
+  options: ["3/5", "2/5", "1/5", "4/5"],
+  answer: "3/5"
+},
+{
+  question: "Find the volume of a cylinder with r=3, h=7 (π=22/7).",
+  options: ["198 cm³", "154 cm³", "210 cm³", "176 cm³"],
+  answer: "198 cm³"
+},
+{
+  question: "Find simple interest on GH₵2000 at 5% for 3 years.",
+  options: ["GH₵300", "GH₵200", "GH₵400", "GH₵250"],
+  answer: "GH₵300"
+},
+{
+  question: "If y varies directly as x² and y=18 when x=3, find y when x=5.",
+  options: ["50", "75", "60", "45"],
+  answer: "50"
+},
+
+{
+  question: "Solve: x² − 9x + 20 = 0.",
+  options: ["x = 4 or 5", "x = 2 or 10", "x = 1 or 20", "x = 3 or 6"],
+  answer: "x = 4 or 5"
+},
+{
+  question: "Solve: 3x² − 12x = 0.",
+  options: ["x = 0 or 4", "x = 3 or 4", "x = 1 or 12", "x = 2 or 6"],
+  answer: "x = 0 or 4"
+},
+{
+  question: "If x − 1/x = 3, find x² + 1/x².",
+  options: ["11", "13", "9", "7"],
+  answer: "11"
+},
+{
+  question: "Simplify: log₁₀ 50 − log₁₀ 2.",
+  options: ["log₁₀ 25", "log₁₀ 48", "log₁₀ 52", "log₁₀ 100"],
+  answer: "log₁₀ 25"
+},
+{
+  question: "Solve: log₁₀ (x − 1) = 1.",
+  options: ["11", "10", "9", "12"],
+  answer: "11"
+},
+{
+  question: "If cos θ = 12/13, find sin θ.",
+  options: ["5/13", "13/5", "12/5", "5/12"],
+  answer: "5/13"
+},
+{
+  question: "Find tan θ if cos θ = 5/13.",
+  options: ["12/5", "5/12", "13/5", "5/13"],
+  answer: "12/5"
+},
+{
+  question: "Solve: 5^(x) = 125.",
+  options: ["3", "2", "4", "5"],
+  answer: "3"
+},
+{
+  question: "Simplify: (x² − 4)/(x − 2) + (x + 2).",
+  options: ["2x + 4", "x + 2", "2x", "x²"],
+  answer: "2x + 4"
+},
+{
+  question: "Find the gradient of a line perpendicular to y = −3x + 2.",
+  options: ["1/3", "-1/3", "3", "-3"],
+  answer: "1/3"
+},
+{
+  question: "Find equation of line with gradient −2 passing through (1,3).",
+  options: ["y = -2x + 5", "y = -2x + 1", "y = 2x + 5", "y = -2x - 5"],
+  answer: "y = -2x + 5"
+},
+{
+  question: "Find the 6th term of sequence 4, 7, 10, ...",
+  options: ["19", "22", "25", "20"],
+  answer: "19"
+},
+{
+  question: "Find sum of first 8 terms of 5, 10, 15, ...",
+  options: ["180", "200", "160", "150"],
+  answer: "180"
+},
+{
+  question: "Find the 5th term of geometric sequence 3, 6, 12, ...",
+  options: ["48", "96", "24", "36"],
+  answer: "48"
+},
+{
+  question: "Solve: 2x − 3 < 5 ≤ x + 4.",
+  options: ["4 ≤ x < 4", "x ≥ 4", "x < 4", "x > 4"],
+  answer: "4 ≤ x < 4"
+},
+{
+  question: "A bag contains 4 red, 3 blue, 3 green balls. Find probability of picking green.",
+  options: ["3/10", "4/10", "3/7", "1/3"],
+  answer: "3/10"
+},
+{
+  question: "Find the area of a circle with diameter 14 cm (π=22/7).",
+  options: ["154 cm²", "308 cm²", "44 cm²", "100 cm²"],
+  answer: "154 cm²"
+},
+{
+  question: "Find the volume of a cone with r=7, h=3 (π=22/7).",
+  options: ["154 cm³", "308 cm³", "462 cm³", "98 cm³"],
+  answer: "154 cm³"
+},
+{
+  question: "If 2 men can complete a job in 6 days, how long will 3 men take?",
+  options: ["4 days", "3 days", "6 days", "5 days"],
+  answer: "4 days"
+},
+{
+  question: "If y varies inversely as x² and y=8 when x=2, find y when x=4.",
+  options: ["2", "1", "4", "3"],
+  answer: "2"
+},
+
+{
+  question: "Solve: x² − 7x + 10 = 0.",
+  options: ["x = 5 or 2", "x = 10 or 1", "x = 3 or 4", "x = 6 or 1"],
+  answer: "x = 5 or 2"
+},
+{
+  question: "Solve: 4x² − 25 = 0.",
+  options: ["x = ±5/2", "x = ±5", "x = ±25", "x = ±2/5"],
+  answer: "x = ±5/2"
+},
+{
+  question: "If x + 1/x = 6, find x² + 1/x².",
+  options: ["34", "36", "30", "32"],
+  answer: "34"
+},
+{
+  question: "Simplify: log₁₀ 200 − log₁₀ 2.",
+  options: ["log₁₀ 100", "log₁₀ 198", "log₁₀ 400", "log₁₀ 50"],
+  answer: "log₁₀ 100"
+},
+{
+  question: "Solve: log₁₀ (x + 2) = 2.",
+  options: ["98", "100", "102", "96"],
+  answer: "98"
+},
+{
+  question: "If tan θ = 4/3, find sin θ.",
+  options: ["4/5", "3/5", "5/4", "5/3"],
+  answer: "4/5"
+},
+{
+  question: "Find cos θ if tan θ = 5/12.",
+  options: ["12/13", "5/13", "13/5", "12/5"],
+  answer: "12/13"
+},
+{
+  question: "Solve: 3^(x+1) = 81.",
+  options: ["3", "2", "4", "5"],
+  answer: "3"
+},
+{
+  question: "Simplify: (x² − 1)/(x − 1) − (x + 1).",
+  options: ["0", "2", "x", "-1"],
+  answer: "0"
+},
+{
+  question: "Find the gradient of a line perpendicular to y = 1/2 x + 3.",
+  options: ["-2", "2", "-1/2", "1/2"],
+  answer: "-2"
+},
+{
+  question: "Find equation of line passing through (3,2) with gradient 4.",
+  options: ["y = 4x - 10", "y = 4x + 2", "y = 2x + 4", "y = 4x - 2"],
+  answer: "y = 4x - 10"
+},
+{
+  question: "Find the 7th term of arithmetic sequence 1, 4, 7, ...",
+  options: ["19", "21", "22", "20"],
+  answer: "19"
+},
+{
+  question: "Find the sum of first 12 terms of 2, 5, 8, ...",
+  options: ["234", "240", "228", "250"],
+  answer: "234"
+},
+{
+  question: "Find the 6th term of geometric sequence 2, 4, 8, ...",
+  options: ["64", "128", "32", "256"],
+  answer: "64"
+},
+{
+  question: "Solve: 3x − 4 ≥ 5 and 2x + 1 < 9.",
+  options: ["3 ≤ x < 4", "x ≥ 3", "x < 4", "x > 3"],
+  answer: "3 ≤ x < 4"
+},
+{
+  question: "A bag contains 5 red, 4 blue, 1 green balls. Find probability of not picking blue.",
+  options: ["6/10", "5/10", "4/10", "7/10"],
+  answer: "6/10"
+},
+{
+  question: "Find the area of a sector of 60° in a circle of radius 7 cm (π=22/7).",
+  options: ["25.67 cm²", "49 cm²", "38.5 cm²", "77 cm²"],
+  answer: "25.67 cm²"
+},
+{
+  question: "Find the volume of a sphere of radius 7 cm (π=22/7).",
+  options: ["1437.33 cm³", "1372 cm³", "1500 cm³", "1200 cm³"],
+  answer: "1437.33 cm³"
+},
+{
+  question: "If 4 workers complete a job in 6 days, how many days will 8 workers take?",
+  options: ["3 days", "4 days", "2 days", "6 days"],
+  answer: "3 days"
+},
+{
+  question: "If y varies directly as x³ and y=16 when x=2, find y when x=4.",
+  options: ["128", "64", "256", "96"],
+  answer: "128"
+},
+
+{
+  question: "Solve: x² − 4x − 12 = 0.",
+  options: ["x = 6 or -2", "x = 4 or -3", "x = 3 or -4", "x = 2 or -6"],
+  answer: "x = 6 or -2"
+},
+{
+  question: "Solve: 2x² + 3x − 2 = 0.",
+  options: ["x = 1/2 or -2", "x = 2 or -1/2", "x = 1 or -2", "x = -1 or 2"],
+  answer: "x = 1/2 or -2"
+},
+{
+  question: "If x + 1/x = 7, find x² + 1/x².",
+  options: ["47", "49", "45", "50"],
+  answer: "47"
+},
+{
+  question: "Simplify: log₁₀ 500 − log₁₀ 5.",
+  options: ["log₁₀ 100", "log₁₀ 495", "log₁₀ 250", "log₁₀ 50"],
+  answer: "log₁₀ 100"
+},
+{
+  question: "Solve: log₁₀ (2x) = 3.",
+  options: ["500", "1000", "2000", "250"],
+  answer: "500"
+},
+{
+  question: "If sin θ = 8/17, find cos θ.",
+  options: ["15/17", "8/15", "17/8", "15/8"],
+  answer: "15/17"
+},
+{
+  question: "Find tan θ if sin θ = 12/13.",
+  options: ["12/5", "5/12", "13/12", "12/13"],
+  answer: "12/5"
+},
+{
+  question: "Solve: 4^(x) = 64.",
+  options: ["3", "2", "4", "6"],
+  answer: "3"
+},
+{
+  question: "Simplify: (x² − 16)/(x − 4) − (x + 4).",
+  options: ["0", "4", "8", "-4"],
+  answer: "0"
+},
+{
+  question: "Find the gradient of a line perpendicular to y = −1/3 x + 2.",
+  options: ["3", "-3", "1/3", "-1/3"],
+  answer: "3"
+},
+{
+  question: "Find equation of line passing through (1,4) with gradient −3.",
+  options: ["y = -3x + 7", "y = -3x + 4", "y = 3x + 7", "y = -3x - 7"],
+  answer: "y = -3x + 7"
+},
+{
+  question: "Find the 9th term of arithmetic sequence 2, 5, 8, ...",
+  options: ["26", "29", "30", "28"],
+  answer: "26"
+},
+{
+  question: "Find the sum of first 15 terms of 1, 3, 5, ...",
+  options: ["225", "200", "210", "180"],
+  answer: "225"
+},
+{
+  question: "Find the 7th term of geometric sequence 3, 6, 12, ...",
+  options: ["192", "384", "96", "768"],
+  answer: "192"
+},
+{
+  question: "Solve: 2x − 1 ≥ 3 and 3x + 2 < 14.",
+  options: ["2 ≤ x < 4", "x ≥ 2", "x < 4", "x > 2"],
+  answer: "2 ≤ x < 4"
+},
+{
+  question: "A bag contains 6 red, 2 blue, 2 green balls. Find probability of picking red or green.",
+  options: ["8/10", "6/10", "4/10", "2/10"],
+  answer: "8/10"
+},
+{
+  question: "Find the area of a circle of radius 14 cm (π=22/7).",
+  options: ["616 cm²", "308 cm²", "154 cm²", "700 cm²"],
+  answer: "616 cm²"
+},
+{
+  question: "Find the volume of a cylinder of radius 7 cm and height 14 cm (π=22/7).",
+  options: ["2156 cm³", "1540 cm³", "3080 cm³", "1000 cm³"],
+  answer: "2156 cm³"
+},
+{
+  question: "If 6 men complete a job in 4 days, how many days will 3 men take?",
+  options: ["8 days", "6 days", "4 days", "2 days"],
+  answer: "8 days"
+},
+{
+  question: "If y varies inversely as x and y=12 when x=2, find y when x=6.",
+  options: ["4", "3", "6", "2"],
+  answer: "4"
+},
+
+{
+  question: "The angle at the centre of a circle is ______ the angle at the circumference standing on the same arc.",
+  options: ["twice", "equal to", "half", "three times"],
+  answer: "twice"
+},
+{
+  question: "Angles in the same segment of a circle are:",
+  options: ["equal", "supplementary", "complementary", "different"],
+  answer: "equal"
+},
+{
+  question: "The angle in a semicircle is:",
+  options: ["90°", "180°", "60°", "45°"],
+  answer: "90°"
+},
+{
+  question: "Opposite angles of a cyclic quadrilateral are:",
+  options: ["supplementary", "equal", "complementary", "different"],
+  answer: "supplementary"
+},
+{
+  question: "A point is rotated 90° anticlockwise about the origin. (x, y) becomes:",
+  options: ["(-y, x)", "(y, -x)", "(-x, -y)", "(x, y)"],
+  answer: "(-y, x)"
+},
+{
+  question: "A reflection in the line y = x maps (2,3) to:",
+  options: ["(3,2)", "(-2,-3)", "(2,-3)", "(-3,-2)"],
+  answer: "(3,2)"
+},
+{
+  question: "A translation by vector (3, -2) maps (1,4) to:",
+  options: ["(4,2)", "(2,1)", "(3,2)", "(5,6)"],
+  answer: "(4,2)"
+},
+{
+  question: "An enlargement with scale factor 2 maps (2,3) to:",
+  options: ["(4,6)", "(1.5,1)", "(2,6)", "(6,3)"],
+  answer: "(4,6)"
+},
+{
+  question: "Find 17 mod 5.",
+  options: ["2", "3", "4", "1"],
+  answer: "2"
+},
+{
+  question: "Find 25 mod 6.",
+  options: ["1", "5", "4", "3"],
+  answer: "1"
+},
+{
+  question: "Find (7 + 9) mod 5.",
+  options: ["1", "2", "3", "4"],
+  answer: "1"
+},
+{
+  question: "Find (4 × 3) mod 5.",
+  options: ["2", "3", "1", "4"],
+  answer: "2"
+},
+{
+  question: "Which of the following is a valid logical statement?",
+  options: ["2 + 2 = 4", "x + y", "5x", "3y + 2"],
+  answer: "2 + 2 = 4"
+},
+{
+  question: "The statement 'All even numbers are divisible by 2' is:",
+  options: ["True", "False", "Sometimes true", "Undefined"],
+  answer: "True"
+},
+{
+  question: "If P is true and Q is false, P AND Q is:",
+  options: ["False", "True", "Undefined", "Sometimes true"],
+  answer: "False"
+},
+{
+  question: "If P is true and Q is false, P OR Q is:",
+  options: ["True", "False", "Undefined", "Sometimes"],
+  answer: "True"
+},
+{
+  question: "Which measure of central tendency is most affected by extreme values?",
+  options: ["Mean", "Median", "Mode", "Range"],
+  answer: "Mean"
+},
+{
+  question: "The cumulative frequency is used to draw:",
+  options: ["Ogive", "Histogram", "Bar chart", "Pie chart"],
+  answer: "Ogive"
+},
+{
+  question: "The modal class is the class with:",
+  options: ["Highest frequency", "Lowest frequency", "Middle value", "Zero frequency"],
+  answer: "Highest frequency"
+},
+{
+  question: "The median class is the class containing:",
+  options: ["Middle value", "Highest value", "Lowest value", "Mean value"],
+  answer: "Middle value"
+}
+
 ];
 
-export default chemistryQuestions;
+export default coreMathsQuestions;

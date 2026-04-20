@@ -1,2911 +1,2295 @@
 const jhscoreScienceQuestions = [
   {
     question: "What is the main source of energy for life on Earth?",
-    options: [
-      "Wind",
-      "Sun",
-      "Water",
-      "Electricity"
-    ],
+    options: ["Wind", "Sun", "Water", "Electricity"],
     answer: "Sun"
   },
   {
-    question: "Which of these is a physical change?",
-    options: [
-      "Burning wood",
-      "Rusting iron",
-      "Melting ice",
-      "Cooking rice"
-    ],
-    answer: "Melting ice"
+    question: "A plant is kept in a dark room for several days. What is most likely to happen?",
+    options: ["It will grow faster", "It will stop photosynthesis and weaken", "It will produce more oxygen", "It will store more food"],
+    answer: "It will stop photosynthesis and weaken"
   },
   {
-    question: "What is the function of the roots in a plant?",
-    options: [
-      "To absorb sunlight",
-      "To make seeds",
-      "To absorb water and nutrients",
-      "To help in reproduction"
-    ],
-    answer: "To absorb water and nutrients"
+    question: "Which condition is necessary for rusting of iron to occur?",
+    options: ["Heat only", "Water and oxygen", "Carbon dioxide only", "Sunlight only"],
+    answer: "Water and oxygen"
   },
   {
-    question: "Which part of the human body helps with breathing?",
-    options: [
-      "Heart",
-      "Lungs",
-      "Stomach",
-      "Kidney"
-    ],
-    answer: "Lungs"
+    question: "What will happen if the stomata of a plant are completely closed?",
+    options: ["Photosynthesis increases", "Gas exchange stops", "Water absorption increases", "Root growth stops"],
+    answer: "Gas exchange stops"
   },
   {
-    question: "Which organ pumps blood around the body?",
-    options: [
-      "Brain",
-      "Lungs",
-      "Heart",
-      "Liver"
-    ],
-    answer: "Heart"
+    question: "Why are metals like copper used for electrical wiring?",
+    options: ["They are soft", "They are good conductors", "They are cheap", "They are light"],
+    answer: "They are good conductors"
   },
   {
-    question: "What causes day and night?",
-    options: [
-      "Earth’s revolution",
-      "Sun’s movement",
-      "Moon’s rotation",
-      "Earth’s rotation"
-    ],
-    answer: "Earth’s rotation"
+    question: "What is the effect of a lack of protein in a child's diet?",
+    options: ["Faster growth", "Strong bones", "Poor growth and body repair", "Increased energy"],
+    answer: "Poor growth and body repair"
   },
   {
-    question: "Which of the following is a renewable source of energy?",
-    options: [
-      "Coal",
-      "Petroleum",
-      "Natural gas",
-      "Solar energy"
-    ],
-    answer: "Solar energy"
+    question: "Which of the following best explains why oil floats on water?",
+    options: ["Oil is heavier", "Oil is less dense than water", "Oil is soluble in water", "Oil evaporates quickly"],
+    answer: "Oil is less dense than water"
   },
   {
-    question: "What is the boiling point of water in degrees Celsius?",
-    options: [
-      "100°C",
-      "0°C",
-      "50°C",
-      "25°C"
-    ],
-    answer: "100°C"
+    question: "What happens when a current flows through a conductor?",
+    options: ["It produces heat", "It stops movement", "It destroys the conductor", "It removes energy"],
+    answer: "It produces heat"
   },
   {
-    question: "How many planets are there in the Solar System?",
-    options: [
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
-    answer: "8"
+    question: "Which process removes excess water from plant leaves?",
+    options: ["Photosynthesis", "Respiration", "Transpiration", "Absorption"],
+    answer: "Transpiration"
   },
   {
-    question: "What is the function of white blood cells?",
-    options: [
-      "To carry oxygen",
-      "To transport food",
-      "To fight disease",
-      "To form blood clots"
-    ],
-    answer: "To fight disease"
+    question: "A student mixes sand and salt in water. Which method will separate both substances completely?",
+    options: ["Filtration only", "Evaporation only", "Filtration and evaporation", "Decanting only"],
+    answer: "Filtration and evaporation"
   },
   {
-    question: "Which of the following is a vertebrate?",
-    options: [
-      "Ant",
-      "Lizard",
-      "Earthworm",
-      "Snail"
-    ],
-    answer: "Lizard"
+    question: "What will happen if white blood cells are low in the body?",
+    options: ["More oxygen is carried", "Blood clots faster", "Body becomes weak against infections", "Digestion improves"],
+    answer: "Body becomes weak against infections"
   },
   {
-    question: "What do you call the change from liquid to gas?",
-    options: [
-      "Condensation",
-      "Evaporation",
-      "Freezing",
-      "Melting"
-    ],
-    answer: "Evaporation"
+    question: "Which of the following best describes energy?",
+    options: ["Ability to sleep", "Ability to do work", "Ability to grow", "Ability to move only"],
+    answer: "Ability to do work"
   },
   {
-    question: "Which of the following tools is used to measure temperature?",
-    options: [
-      "Barometer",
-      "Thermometer",
-      "Hydrometer",
-      "Speedometer"
-    ],
-    answer: "Thermometer"
+    question: "Why is the small intestine important in digestion?",
+    options: ["It stores food", "It breaks large food only", "It absorbs digested nutrients", "It removes waste"],
+    answer: "It absorbs digested nutrients"
   },
   {
-    question: "Which nutrient helps in body growth and repair?",
-    options: [
-      "Carbohydrate",
-      "Protein",
-      "Fat",
-      "Vitamin"
-    ],
-    answer: "Protein"
+    question: "Which change is irreversible?",
+    options: ["Melting ice", "Freezing water", "Burning paper", "Boiling water"],
+    answer: "Burning paper"
   },
   {
-    question: "Which of the following is a gaseous pollutant?",
-    options: [
-      "Dust",
-      "Plastic",
-      "Smoke",
-      "Carbon dioxide"
-    ],
-    answer: "Carbon dioxide"
+    question: "What is the role of chlorophyll in plants?",
+    options: ["Absorbs water", "Traps sunlight", "Stores food", "Produces roots"],
+    answer: "Traps sunlight"
   },
   {
-    question: "What is a conductor of electricity?",
-    options: [
-      "Plastic",
-      "Wood",
-      "Glass",
-      "Copper"
-    ],
-    answer: "Copper"
+    question: "Which human activity increases carbon dioxide in the atmosphere?",
+    options: ["Planting trees", "Burning fuels", "Watering crops", "Recycling waste"],
+    answer: "Burning fuels"
   },
   {
-    question: "Which sense organ helps us to see?",
-    options: [
-      "Nose",
-      "Tongue",
-      "Eye",
-      "Skin"
-    ],
-    answer: "Eye"
+    question: "What happens when light enters a different medium like water?",
+    options: ["It disappears", "It bends", "It stops", "It increases speed"],
+    answer: "It bends"
   },
   {
-    question: "Which part of the plant carries out photosynthesis?",
-    options: [
-      "Roots",
-      "Stem",
-      "Leaves",
-      "Flowers"
-    ],
-    answer: "Leaves"
+    question: "Which of the following helps to prevent soil erosion?",
+    options: ["Cutting trees", "Overgrazing", "Planting vegetation", "Burning bush"],
+    answer: "Planting vegetation"
   },
   {
-    question: "What is the function of the skeleton in humans?",
-    options: [
-      "To digest food",
-      "To circulate blood",
-      "To give shape and support",
-      "To help in breathing"
-    ],
-    answer: "To give shape and support"
+    question: "Why is the skeleton important in the human body?",
+    options: ["It produces energy", "It supports and protects organs", "It digests food", "It controls breathing"],
+    answer: "It supports and protects organs"
   },
   {
-    question: "Which gas do plants take in during photosynthesis?",
-    options: [
-      "Oxygen",
-      "Nitrogen",
-      "Carbon dioxide",
-      "Hydrogen"
-    ],
-    answer: "Carbon dioxide"
+    question: "What is likely to happen if there is no gravity on Earth?",
+    options: ["Objects will fall faster", "Objects will float", "Objects will become heavier", "Objects will stop moving"],
+    answer: "Objects will float"
   },
   {
-    question: "How does water change to vapor?",
-    options: [
-      "By freezing",
-      "By evaporation",
-      "By condensation",
-      "By melting"
-    ],
-    answer: "By evaporation"
+    question: "Which of the following best explains a renewable resource?",
+    options: ["It cannot be replaced", "It is used once", "It can be replaced naturally", "It is very expensive"],
+    answer: "It can be replaced naturally"
   },
   {
-    question: "Which of these diseases is caused by mosquitoes?",
-    options: [
-      "Tuberculosis",
-      "Malaria",
-      "Diabetes",
-      "Asthma"
-    ],
-    answer: "Malaria"
+    question: "A plant is watered regularly but kept in darkness. Which factor is missing for food production?",
+    options: ["Water", "Carbon dioxide", "Light", "Oxygen"],
+    answer: "Light"
   },
   {
-    question: "Which celestial body is the center of the Solar System?",
-    options: [
-      "Earth",
-      "Moon",
-      "Sun",
-      "Mars"
-    ],
-    answer: "Sun"
+    question: "During an experiment, a student heats a solid until it melts. What type of change is this?",
+    options: ["Chemical change", "Irreversible change", "Physical change", "Biological change"],
+    answer: "Physical change"
   },
   {
-    question: "What is the main function of the digestive system?",
-    options: [
-      "To pump blood",
-      "To break down food",
-      "To fight diseases",
-      "To help in breathing"
-    ],
-    answer: "To break down food"
+    question: "Why does a person breathe faster after running?",
+    options: ["To cool the body", "To supply more oxygen to cells", "To remove water", "To increase blood pressure"],
+    answer: "To supply more oxygen to cells"
   },
   {
-    question: "What are non-living things in an environment called?",
-    options: [
-      "Organisms",
-      "Biotic factors",
-      "Abiotic factors",
-      "Microorganisms"
-    ],
-    answer: "Abiotic factors"
-  },
-  {
-    question: "Which planet is known as the 'Red Planet'?",
-    options: [
-      "Earth",
-      "Venus",
-      "Mars",
-      "Jupiter"
-    ],
-    answer: "Mars"
-  },
-  {
-    question: "Which of the following materials is magnetic?",
-    options: [
-      "Plastic",
-      "Aluminium",
-      "Iron",
-      "Wood"
-    ],
-    answer: "Iron"
-  },
-  {
-    question: "Which organ controls all body activities?",
-    options: [
-      "Heart",
-      "Brain",
-      "Lungs",
-      "Liver"
-    ],
-    answer: "Brain"
-  },
-  {
-    question: "Which of these can cause water pollution?",
-    options: [
-      "Planting trees",
-      "Throwing rubbish into rivers",
-      "Cleaning the beach",
-      "Washing hands"
-    ],
-    answer: "Throwing rubbish into rivers"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: [
-      "Tissue",
-      "Cell",
-      "Organ",
-      "Organism"
-    ],
-    answer: "Cell"
-  },
-  {
-    question: "Which part of the eye controls the amount of light entering?",
-    options: [
-      "Lens",
-      "Cornea",
-      "Iris",
-      "Retina"
-    ],
-    answer: "Iris"
-  },
-  {
-    question: "Which state of matter has no fixed shape but has fixed volume?",
-    options: [
-      "Solid",
-      "Liquid",
-      "Gas",
-      "Plasma"
-    ],
-    answer: "Liquid"
-  },
-  {
-    question: "Which of these is a source of noise pollution?",
-    options: [
-      "Reading books",
-      "Playing music very loud",
-      "Walking quietly",
-      "Using earplugs"
-    ],
-    answer: "Playing music very loud"
-  },
-  {
-    question: "What is the process of changing food into energy called?",
-    options: [
-      "Digestion",
-      "Respiration",
-      "Photosynthesis",
-      "Excretion"
-    ],
-    answer: "Respiration"
-  },
-  {
-    question: "How do plants mainly reproduce?",
-    options: [
-      "By movement",
-      "By fertilization",
-      "By photosynthesis",
-      "By transpiration"
-    ],
-    answer: "By fertilization"
-  },
-  {
-    question: "What do you call the path of light through materials?",
-    options: [
-      "Reflection",
-      "Refraction",
-      "Dispersion",
-      "Absorption"
-    ],
-    answer: "Refraction"
-  },
-  {
-    question: "Which vitamin helps in the clotting of blood?",
-    options: [
-      "Vitamin A",
-      "Vitamin B",
-      "Vitamin C",
-      "Vitamin K"
-    ],
-    answer: "Vitamin K"
-  },
-  {
-    question: "Which of these is a function of the liver?",
-    options: [
-      "Pumping blood",
-      "Filtering urine",
-      "Storing energy",
-      "Producing bile"
-    ],
-    answer: "Producing bile"
-  },
-  {
-    question: "Which of the following is a sedimentary rock?",
-    options: [
-      "Marble",
-      "Basalt",
-      "Granite",
-      "Limestone"
-    ],
-    answer: "Limestone"
-  },
-  {
-    question: "Which body system includes bones and joints?",
-    options: [
-      "Circulatory system",
-      "Digestive system",
-      "Skeletal system",
-      "Respiratory system"
-    ],
-    answer: "Skeletal system"
-  },
-  {
-    question: "What happens when light hits a mirror?",
-    options: [
-      "It bends",
-      "It is absorbed",
-      "It is refracted",
-      "It is reflected"
-    ],
-    answer: "It is reflected"
-  },
-  {
-    question: "Which sense organ detects taste?",
-    options: [
-      "Ear",
-      "Skin",
-      "Nose",
-      "Tongue"
-    ],
-    answer: "Tongue"
-  },
-  {
-    question: "Which of the following helps reduce friction?",
-    options: [
-      "Adding salt",
-      "Using oil or grease",
-      "Using rough surfaces",
-      "Increasing weight"
-    ],
-    answer: "Using oil or grease"
-  },
-  {
-    question: "What type of energy is stored in food?",
-    options: [
-      "Light energy",
-      "Thermal energy",
-      "Chemical energy",
-      "Electrical energy"
-    ],
-    answer: "Chemical energy"
-  },
-  {
-    question: "Which of these is a sign of a chemical change?",
-    options: [
-      "Change in shape",
-      "Change in size",
-      "Change in color and production of gas",
-      "Change in temperature"
-    ],
-    answer: "Change in color and production of gas"
-  },
-  {
-    question: "How do you call an animal that eats only plants?",
-    options: [
-      "Carnivore",
-      "Herbivore",
-      "Omnivore",
-      "Scavenger"
-    ],
-    answer: "Herbivore"
-  },
-  {
-    question: "Which of the following is a source of renewable energy?",
-    options: [
-      "Coal",
-      "Natural gas",
-      "Wind",
-      "Petrol"
-    ],
-    answer: "Wind"
-  },
-  {
-    question: "What is the function of white blood cells in the human body?",
-    options: [
-      "Carry oxygen",
-      "Digest food",
-      "Fight infections",
-      "Help in breathing"
-    ],
-    answer: "Fight infections"
-  },
-  {
-    question: "Which part of the plant is responsible for photosynthesis?",
-    options: [
-      "Root",
-      "Stem",
-      "Flower",
-      "Leaf"
-    ],
-    answer: "Leaf"
-  },
-  {
-    question: "The process by which water changes into vapor is called:",
-    options: [
-      "Condensation",
-      "Evaporation",
-      "Freezing",
-      "Melting"
-    ],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which organ in the human body pumps blood?",
-    options: [
-      "Lungs",
-      "Liver",
-      "Heart",
-      "Kidney"
-    ],
-    answer: "Heart"
-  },
-  {
-    question: "What is the boiling point of water at sea level?",
-    options: [
-      "0°C",
-      "50°C",
-      "100°C",
-      "120°C"
-    ],
-    answer: "100°C"
-  },
-  {
-    question: "The part of the atom that carries a positive charge is the:",
-    options: [
-      "Electron",
-      "Neutron",
-      "Proton",
-      "Nucleus"
-    ],
-    answer: "Proton"
-  },
-  {
-    question: "An example of a vertebrate is a:",
-    options: [
-      "Snail",
-      "Earthworm",
-      "Lizard",
-      "Termite"
-    ],
-    answer: "Lizard"
-  },
-  {
-    question: "Which simple machine is a see-saw an example of?",
-    options: [
-      "Pulley",
-      "Inclined plane",
-      "Wedge",
-      "Lever"
-    ],
-    answer: "Lever"
-  },
-  {
-    question: "Which gas do plants release during photosynthesis?",
-    options: [
-      "Carbon dioxide",
-      "Oxygen",
-      "Nitrogen",
-      "Hydrogen"
-    ],
-    answer: "Oxygen"
-  },
-  {
-    question: "The main function of the roots of a plant is to:",
-    options: [
-      "Make food",
-      "Absorb water and minerals",
-      "Support flowers",
-      "Trap sunlight"
-    ],
-    answer: "Absorb water and minerals"
-  },
-  {
-    question: "Friction can be reduced by:",
-    options: [
-      "Using rough surfaces",
-      "Increasing mass",
-      "Lubrication",
-      "Adding weight"
-    ],
-    answer: "Lubrication"
-  },
-  {
-    question: "Which nutrient is mainly used by the body for growth and repair?",
-    options: [
-      "Carbohydrates",
-      "Proteins",
-      "Fats",
-      "Vitamins"
-    ],
-    answer: "Proteins"
-  },
-  {
-    question: "The smallest unit of life is the:",
-    options: [
-      "Tissue",
-      "Organ",
-      "Cell",
-      "Organ system"
-    ],
-    answer: "Cell"
-  },
-  {
-    question: "An example of a chemical change is:",
-    options: [
-      "Melting ice",
-      "Boiling water",
-      "Burning wood",
-      "Breaking glass"
-    ],
-    answer: "Burning wood"
-  },
-  {
-    question: "Which part of the digestive system is responsible for most nutrient absorption?",
-    options: [
-      "Stomach",
-      "Large intestine",
-      "Small intestine",
-      "Esophagus"
-    ],
-    answer: "Small intestine"
-  },
-  {
-    question: "The force that pulls objects toward the center of the Earth is called:",
-    options: [
-      "Friction",
-      "Magnetism",
-      "Gravity",
-      "Electricity"
-    ],
-    answer: "Gravity"
-  },
-  {
-    question: "Which of these is an effect of air pollution?",
-    options: [
-      "Improved crop growth",
-      "Ozone layer formation",
-      "Respiratory diseases",
-      "Increased oxygen levels"
-    ],
-    answer: "Respiratory diseases"
-  },
-  {
-    question: "The Earth rotates on its axis once every:",
-    options: [
-      "12 hours",
-      "24 hours",
-      "7 days",
-      "365 days"
-    ],
-    answer: "24 hours"
-  },
-  {
-    question: "What is the basic function of the circulatory system?",
-    options: [
-      "Digest food",
-      "Transport nutrients and oxygen",
-      "Control body movement",
-      "Produce hormones"
-    ],
-    answer: "Transport nutrients and oxygen"
-  },
-  {
-    question: "Rusting of iron is an example of:",
-    options: [
-      "Physical change",
-      "Biological process",
-      "Chemical change",
-      "Freezing"
-    ],
-    answer: "Chemical change"
-  },
-  {
-    question: "The sun is a source of:",
-    options: [
-      "Mechanical energy",
-      "Solar energy",
-      "Electrical energy",
-      "Nuclear energy"
-    ],
-    answer: "Solar energy"
-  },
-  {
-    question: "The moon gets its light from:",
-    options: [
-      "Stars",
-      "Electricity",
-      "The sun",
-      "Its own light"
-    ],
-    answer: "The sun"
-  },
-  {
-    question: "Which sense organ is responsible for detecting sound?",
-    options: [
-      "Eye",
-      "Ear",
-      "Skin",
-      "Tongue"
-    ],
-    answer: "Ear"
-  },
-  {
-    question: "What do we call the study of the weather?",
-    options: [
-      "Astronomy",
-      "Biology",
-      "Meteorology",
-      "Geography"
-    ],
-    answer: "Meteorology"
-  },
-  {
-    question: "Which of the following is a characteristic of living things?",
-    options: [
-      "They rust",
-      "They reproduce",
-      "They melt",
-      "They float"
-    ],
-    answer: "They reproduce"
-  },
-  {
-    question: "What is the main source of energy for the Earth?",
-    options: [
-      "Wind",
-      "Sun",
-      "Coal",
-      "Water"
-    ],
-    answer: "Sun"
-  },
-  {
-    question: "Which body system controls and coordinates body activities?",
-    options: [
-      "Circulatory system",
-      "Nervous system",
-      "Respiratory system",
-      "Digestive system"
-    ],
-    answer: "Nervous system"
-  },
-  {
-    question: "Which part of the human body is responsible for breathing?",
-    options: [
-      "Liver",
-      "Lungs",
-      "Heart",
-      "Kidney"
-    ],
-    answer: "Lungs"
-  },
-  {
-    question: "What do plants use to trap sunlight for photosynthesis?",
-    options: [
-      "Starch",
-      "Water",
-      "Chlorophyll",
-      "Carbon dioxide"
-    ],
-    answer: "Chlorophyll"
-  },
-  {
-    question: "Which of the following materials is a good conductor of electricity?",
-    options: [
-      "Plastic",
-      "Wood",
-      "Rubber",
-      "Copper"
-    ],
-    answer: "Copper"
-  },
-  {
-    question: "The hardness or softness of water is mainly due to:",
-    options: [
-      "Dirt in the water",
-      "Presence of gases",
-      "Mineral salts",
-      "Temperature"
-    ],
-    answer: "Mineral salts"
-  },
-  {
-    question: "Which of these is NOT a component of soil?",
-    options: [
-      "Air",
-      "Water",
-      "Plastic",
-      "Minerals"
-    ],
-    answer: "Plastic"
-  },
-  {
-    question: "A thermometer is used to measure:",
-    options: [
-      "Speed",
-      "Pressure",
-      "Temperature",
-      "Volume"
-    ],
-    answer: "Temperature"
-  },
-  {
-    question: "How many legs does an insect have?",
-    options: [
-      "Four",
-      "Six",
-      "Eight",
-      "Ten"
-    ],
-    answer: "Six"
-  },
-  {
-    question: "What is the function of the kidney in the human body?",
-    options: [
-      "Pump blood",
-      "Control body temperature",
-      "Remove waste from blood",
-      "Digest food"
-    ],
-    answer: "Remove waste from blood"
-  },
-  {
-    question: "Which process is involved in the formation of clouds?",
-    options: [
-      "Condensation",
-      "Evaporation",
-      "Freezing",
-      "Melting"
-    ],
-    answer: "Condensation"
-  },
-  {
-    question: "The force that slows down a moving object on a surface is called:",
-    options: [
-      "Gravity",
-      "Magnetism",
-      "Friction",
-      "Pressure"
-    ],
-    answer: "Friction"
-  },
-  {
-    question: "Which of the following is a vertebrate?",
-    options: [
-      "Spider",
-      "Toad",
-      "Earthworm",
-      "Millipede"
-    ],
-    answer: "Toad"
-  },
-  {
-    question: "Which nutrient is the main source of energy for the body?",
-    options: [
-      "Protein",
-      "Carbohydrate",
-      "Vitamins",
-      "Water"
-    ],
-    answer: "Carbohydrate"
-  },
-  {
-    question: "What is the function of the large intestine in digestion?",
-    options: [
-      "Digest food",
-      "Absorb nutrients",
-      "Absorb water",
-      "Produce enzymes"
-    ],
-    answer: "Absorb water"
-  },
-  {
-    question: "Which of these is a gaseous fuel?",
-    options: [
-      "Charcoal",
-      "Kerosene",
-      "Petrol",
-      "LPG (Liquefied Petroleum Gas)"
-    ],
-    answer: "LPG (Liquefied Petroleum Gas)"
-  },
-  {
-    question: "Which of the following is NOT a renewable source of energy?",
-    options: [
-      "Solar energy",
-      "Wind energy",
-      "Geothermal energy",
-      "Petroleum"
-    ],
-    answer: "Petroleum"
-  },
-  {
-    question: "The change of a solid directly into gas is called:",
-    options: [
-      "Melting",
-      "Condensation",
-      "Sublimation",
-      "Evaporation"
-    ],
-    answer: "Sublimation"
-  },
-  {
-    question: "Which instrument is used to measure rainfall?",
-    options: [
-      "Thermometer",
-      "Barometer",
-      "Rain gauge",
-      "Hygrometer"
-    ],
-    answer: "Rain gauge"
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "Earth",
-      "Venus",
-      "Mars",
-      "Jupiter"
-    ],
-    answer: "Mars"
-  },
-  {
-    question: "What is the boiling point of water at sea level?",
-    options: [
-      "50°C",
-      "100°C",
-      "150°C",
-      "200°C"
-    ],
-    answer: "100°C"
-  },
-  {
-    question: "Which of the following helps in the clotting of blood?",
-    options: [
-      "Red blood cells",
-      "White blood cells",
-      "Platelets",
-      "Plasma"
-    ],
-    answer: "Platelets"
-  },
-  {
-    question: "What is the main function of the root of a plant?",
-    options: [
-      "Produce flowers",
-      "Absorb water and minerals",
-      "Make food",
-      "Support leaves"
-    ],
-    answer: "Absorb water and minerals"
-  },
-  {
-    question: "Which of these diseases is spread through mosquito bites?",
-    options: [
-      "Tuberculosis",
-      "Malaria",
-      "Cholera",
-      "Measles"
-    ],
-    answer: "Malaria"
-  },
-  {
-    question: "Which part of the flower develops into a fruit?",
-    options: [
-      "Petal",
-      "Sepal",
-      "Ovary",
-      "Stamen"
-    ],
-    answer: "Ovary"
-  },
-  {
-    question: "Which process removes carbon dioxide from the atmosphere?",
-    options: [
-      "Respiration",
-      "Photosynthesis",
-      "Burning",
-      "Decomposition"
-    ],
-    answer: "Photosynthesis"
-  },
-  {
-    question: "The process of breaking down food into simpler substances is called:",
-    options: [
-      "Digestion",
-      "Inhalation",
-      "Circulation",
-      "Absorption"
-    ],
-    answer: "Digestion"
-  },
-  {
-    question: "A mixture of sand and iron filings can be separated using:",
-    options: [
-      "Evaporation",
-      "Filtering",
-      "Magnet",
-      "Decanting"
-    ],
-    answer: "Magnet"
-  },
-  {
-    question: "Which organ pumps blood throughout the human body?",
-    options: [
-      "Lungs",
-      "Brain",
-      "Heart",
-      "Liver"
-    ],
-    answer: "Heart"
-  },
-  {
-    question: "The outermost layer of the Earth is called the:",
-    options: [
-      "Core",
-      "Mantle",
-      "Crust",
-      "Atmosphere"
-    ],
-    answer: "Crust"
-  },
-  {
-    question: "Which method is used to purify dirty water at home?",
-    options: [
-      "Dilution",
-      "Sieving",
-      "Boiling",
-      "Drying"
-    ],
-    answer: "Boiling"
-  },
-  {
-    question: "Which body part helps humans detect sound?",
-    options: [
-      "Nose",
-      "Tongue",
-      "Eyes",
-      "Ears"
-    ],
-    answer: "Ears"
-  },
-  {
-    question: "The function of white blood cells is to:",
-    options: [
-      "Transport oxygen",
-      "Help in digestion",
-      "Fight disease",
-      "Clot blood"
-    ],
-    answer: "Fight disease"
-  },
-  {
-    question: "What type of change is involved in rusting of iron?",
-    options: [
-      "Physical change",
-      "Chemical change",
-      "Reversible change",
-      "Temporary change"
-    ],
-    answer: "Chemical change"
-  },
-  {
-    question: "Which of the following tools is used in gardening?",
-    options: [
-      "Microscope",
-      "Rake",
-      "Bunsen burner",
-      "Compass"
-    ],
-    answer: "Rake"
-  },
-  {
-    question: "The moon shines at night because it:",
-    options: [
-      "Has its own light",
-      "Reflects sunlight",
-      "Burns gases",
-      "Rotates quickly"
-    ],
-    answer: "Reflects sunlight"
-  },
-  {
-    question: "Fertilizers are mainly used to:",
-    options: [
-      "Kill insects",
-      "Provide nutrients to plants",
-      "Store crops",
-      "Water the plants"
-    ],
-    answer: "Provide nutrients to plants"
-  },
-  {
-    question: "Which of the following substances is a liquid at room temperature?",
-    options: [
-      "Ice",
-      "Steam",
-      "Mercury",
-      "Salt"
-    ],
-    answer: "Mercury"
-  },
-  {
-    question: "An object floats on water if it is:",
-    options: [
-      "Heavy",
-      "More dense than water",
-      "Less dense than water",
-      "Magnetic"
-    ],
-    answer: "Less dense than water"
-  },
-  {
-    question: "Which of the following is a renewable source of energy?",
-    options: [
-      "Coal",
-      "Petrol",
-      "Solar energy",
-      "Natural gas"
-    ],
-    answer: "Solar energy"
-  },
-  {
-    question: "Which component of air is used by plants for photosynthesis?",
-    options: [
-      "Oxygen",
-      "Nitrogen",
-      "Carbon dioxide",
-      "Hydrogen"
-    ],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "The change from liquid to gas is called:",
-    options: [
-      "Condensation",
-      "Melting",
-      "Evaporation",
-      "Freezing"
-    ],
-    answer: "Evaporation"
-  },
-  {
-    question: "Which part of the human body is responsible for breathing?",
-    options: [
-      "Heart",
-      "Brain",
-      "Lungs",
-      "Liver"
-    ],
-    answer: "Lungs"
-  },
-  {
-    question: "Acids taste:",
-    options: [
-      "Sweet",
-      "Sour",
-      "Bitter",
-      "Salty"
-    ],
-    answer: "Sour"
-  },
-  {
-    question: "The green pigment found in plants is called:",
-    options: [
-      "Chlorophyll",
-      "Hemoglobin",
-      "Melanin",
-      "Keratin"
-    ],
-    answer: "Chlorophyll"
-  },
-  {
-    question: "Which of these materials is a good conductor of electricity?",
-    options: [
-      "Plastic",
-      "Rubber",
-      "Copper",
-      "Wood"
-    ],
-    answer: "Copper"
-  },
-  {
-    question: "What do we call animals that feed only on plants?",
-    options: [
-      "Carnivores",
-      "Herbivores",
-      "Omnivores",
-      "Scavengers"
-    ],
-    answer: "Herbivores"
-  },
-  {
-    question: "Which of the following is a gaseous fuel?",
-    options: [
-      "Charcoal",
-      "Kerosene",
-      "LPG",
-      "Diesel"
-    ],
-    answer: "LPG"
-  },
-  {
-    question: "The part of the eye that controls the amount of light entering is the:",
-    options: [
-      "Lens",
-      "Pupil",
-      "Iris",
-      "Retina"
-    ],
-    answer: "Iris"
-  },
-  {
-    question: "Which organ helps in the excretion of urine?",
-    options: [
-      "Lungs",
-      "Liver",
-      "Kidneys",
-      "Heart"
-    ],
-    answer: "Kidneys"
-  },
-  {
-    question: "Which tool is best for measuring temperature?",
-    options: [
-      "Barometer",
-      "Thermometer",
-      "Hygrometer",
-      "Stopwatch"
-    ],
-    answer: "Thermometer"
-  },
-  {
-    question: "Which one of these is a characteristic of a solid?",
-    options: [
-      "No definite shape",
-      "Takes shape of container",
-      "Definite shape and volume",
-      "Easily compressed"
-    ],
-    answer: "Definite shape and volume"
-  },
-  {
-    question: "Which of the following is an effect of soil erosion?",
-    options: [
-      "Increase in soil fertility",
-      "Destruction of farmlands",
-      "Water purification",
-      "Improved plant growth"
-    ],
-    answer: "Destruction of farmlands"
-  },
-  {
-    question: "Which simple machine consists of a wheel and a rope?",
-    options: [
-      "Lever",
-      "Pulley",
-      "Inclined plane",
-      "Screw"
-    ],
-    answer: "Pulley"
-  },
-  {
-    question: "The main function of the skeletal system is to:",
-    options: [
-      "Pump blood",
-      "Support the body",
-      "Digest food",
-      "Produce heat"
-    ],
-    answer: "Support the body"
-  },
-  {
-    question: "Which of these is not a characteristic of living things?",
-    options: [
-      "Reproduction",
-      "Movement",
-      "Breathing",
-      "Rusting"
-    ],
-    answer: "Rusting"
-  },
-  {
-    question: "Friction is a force that:",
-    options: [
-      "Speeds up motion",
-      "Opposes motion",
-      "Has no effect on motion",
-      "Changes direction of motion"
-    ],
-    answer: "Opposes motion"
-  },
-  {
-    question: "Which group of food provides energy?",
-    options: [
-      "Proteins",
-      "Vitamins",
-      "Carbohydrates",
-      "Minerals"
-    ],
-    answer: "Carbohydrates"
-  },
-  {
-    question: "A change in the environment that causes a response is called:",
-    options: [
-      "A function",
-      "A process",
-      "A stimulus",
-      "A system"
-    ],
-    answer: "A stimulus"
-  },
-  {
-    question: "Which of the following diseases is spread by mosquitoes?",
-    options: [
-      "Typhoid",
-      "Malaria",
-      "HIV/AIDS",
-      "Cholera"
-    ],
-    answer: "Malaria"
-  },
-  {
-    question: "The main function of white blood cells is to:",
-    options: [
-      "Transport oxygen",
-      "Clot blood",
-      "Fight infections",
-      "Carry nutrients"
-    ],
-    answer: "Fight infections"
-  },
-  {
-    question: "A force that pulls objects toward the center of the Earth is called:",
-    options: [
-      "Magnetism",
-      "Friction",
-      "Gravity",
-      "Electricity"
-    ],
-    answer: "Gravity"
-  },
-  {
-    question: "Which of the following is an example of a vertebrate?",
-    options: [
-      "Earthworm",
-      "Grasshopper",
-      "Frog",
-      "Snail"
-    ],
-    answer: "Frog"
-  },
-  {
-    question: "Water changes from gas to liquid through the process of:",
-    options: [
-      "Boiling",
-      "Melting",
-      "Condensation",
-      "Evaporation"
-    ],
-    answer: "Condensation"
-  },
-  {
-    question: "Which part of a plant absorbs water and minerals?",
-    options: [
-      "Leaf",
-      "Stem",
-      "Flower",
-      "Root"
-    ],
-    answer: "Root"
-  },
-  {
-    question: "A good practice for conserving water is:",
-    options: [
-      "Leaving taps running",
-      "Fixing leaking pipes",
-      "Watering lawns at noon",
-      "Washing with excess water"
-    ],
-    answer: "Fixing leaking pipes"
-  },
-  {
-    question: "A solution is a mixture of:",
-    options: [
-      "Two solids",
-      "Solute and solvent",
-      "Two liquids only",
-      "Solids only"
-    ],
-    answer: "Solute and solvent"
-  },
-  {
-    question: "Which sense organ helps us detect sound?",
-    options: [
-      "Eyes",
-      "Ears",
-      "Skin",
-      "Nose"
-    ],
-    answer: "Ears"
-  },
-  {
-    question: "Which type of soil has the best drainage?",
-    options: [
-      "Clay",
-      "Loam",
-      "Sand",
-      "Silt"
-    ],
-    answer: "Sand"
-  },
-  {
-    question: "Which of the following is not a source of light?",
-    options: [
-      "The Sun",
-      "Torchlight",
-      "Mirror",
-      "Candle"
-    ],
-    answer: "Mirror"
-  },
-  {
-    question: "The boiling point of pure water at sea level is:",
-    options: [
-      "100°C",
-      "0°C",
-      "50°C",
-      "37°C"
-    ],
-    answer: "100°C"
-  },
-  {
-    question: "A healthy environment should be:",
-    options: [
-      "Noisy and smoky",
-      "Clean and safe",
-      "Polluted and dirty",
-      "Crowded and dark"
-    ],
-    answer: "Clean and safe"
-  },
-  {
-    question: "Which of these is a method of separating a mixture?",
-    options: [
-      "Melting",
-      "Burning",
-      "Filtration",
-      "Heating"
-    ],
-    answer: "Filtration"
-  },
-  {
-    question: "The largest planet in the solar system is:",
-    options: [
-      "Earth",
-      "Venus",
-      "Mars",
-      "Jupiter"
-    ],
-    answer: "Jupiter"
-  },
-  {
-    question: "The heart is part of which system in the human body?",
-    options: [
-      "Respiratory system",
-      "Nervous system",
-      "Circulatory system",
-      "Digestive system"
-    ],
-    answer: "Circulatory system"
-  },
-  {
-    question: "The first aid for a nosebleed includes:",
-    options: [
-      "Lying flat",
-      "Tilting head forward",
-      "Blowing the nose",
-      "Tilting head backward"
-    ],
-    answer: "Tilting head forward"
-  },
-  {
-    question: "A chemical change results in:",
-    options: [
-      "A change in shape only",
-      "A new substance",
-      "A temporary change",
-      "No change"
-    ],
-    answer: "A new substance"
-  },
-  {
-    question: "One function of the skin is to:",
-    options: [
-      "Store blood",
-      "Control movement",
-      "Protect the body",
-      "Help breathing"
-    ],
-    answer: "Protect the body"
-  },
-  {
-    question: "What do we call animals that produce their own food?",
-    options: [
-      "Carnivores",
-      "Consumers",
-      "Producers",
-      "Decomposers"
-    ],
-    answer: "Producers"
-  },
-  {
-    question: "Which one of the following is a renewable source of energy?",
-    options: [
-      "Coal",
-      "Petroleum",
-      "Natural gas",
-      "Solar energy"
-    ],
-    answer: "Solar energy"
-  },
-  {
-    question: "The movement of the Earth around the Sun causes:",
-    options: [
-      "Day and night",
-      "Seasons",
-      "Tides",
-      "Earthquakes"
-    ],
-    answer: "Seasons"
-  },
-  {
-    question: "Which component of the soil is responsible for holding water?",
-    options: [
-      "Sand",
-      "Clay",
-      "Gravel",
-      "Humus"
-    ],
-    answer: "Clay"
-  },
-  {
-    question: "A balanced diet contains:",
-    options: [
-      "Only carbohydrates",
-      "Only proteins and fats",
-      "All the food nutrients in the right proportions",
-      "Only minerals and vitamins"
-    ],
-    answer: "All the food nutrients in the right proportions"
-  },
-  {
-    question: "Which part of the digestive system is responsible for nutrient absorption?",
-    options: [
-      "Mouth",
-      "Stomach",
-      "Small intestine",
-      "Large intestine"
-    ],
-    answer: "Small intestine"
-  },
-  {
-    question: "The sun is a:",
-    options: [
-      "Planet",
-      "Moon",
-      "Star",
-      "Satellite"
-    ],
-    answer: "Star"
-  },
-  {
-    question: "Which of these substances will dissolve in water?",
-    options: [
-      "Stone",
-      "Sand",
-      "Salt",
-      "Wood"
-    ],
-    answer: "Salt"
-  },
-  {
-    question: "Which organ in the human body controls all activities?",
-    options: [
-      "Heart",
-      "Brain",
-      "Lungs",
-      "Liver"
-    ],
-    answer: "Brain"
-  },
-  {
-    question: "All living things reproduce to:",
-    options: [
-      "Grow taller",
-      "Digest food",
-      "Maintain the species",
-      "Get energy"
-    ],
-    answer: "Maintain the species"
-  },
-  {
-    question: "One way of preventing water-borne diseases is:",
-    options: [
-      "Open defecation",
-      "Using untreated water",
-      "Drinking alcohol",
-      "Boiling drinking water"
-    ],
-    answer: "Boiling drinking water"
-  },
-  {
-    question: "The main component of air is:",
-    options: [
-      "Oxygen",
-      "Carbon dioxide",
-      "Nitrogen",
-      "Hydrogen"
-    ],
-    answer: "Nitrogen"
-  },
-  {
-    question: "A change from liquid to solid is called:",
-    options: [
-      "Melting",
-      "Condensation",
-      "Freezing",
-      "Evaporation"
-    ],
-    answer: "Freezing"
-  },
-  {
-    question: "Which of the following is not a sense organ?",
-    options: [
-      "Nose",
-      "Tongue",
-      "Liver",
-      "Skin"
-    ],
-    answer: "Liver"
-  },
-  {
-    question: "Pollution of water bodies affects mainly:",
-    options: [
-      "Air",
-      "Land animals",
-      "Aquatic life",
-      "Mountains"
-    ],
-    answer: "Aquatic life"
-  },
-  {
-    question: "Which process helps plants to make their food?",
-    options: [
-      "Respiration",
-      "Photosynthesis",
-      "Fermentation",
-      "Decomposition"
-    ],
-    answer: "Photosynthesis"
-  },
-  {
-    question: "Which one of these animals undergoes metamorphosis?",
-    options: [
-      "Dog",
-      "Cat",
-      "Frog",
-      "Sheep"
-    ],
-    answer: "Frog"
-  },
-  {
-    question: "Which disease is prevented by vaccination?",
-    options: [
-      "Malaria",
-      "Tuberculosis",
-      "Diabetes",
-      "Asthma"
-    ],
-    answer: "Tuberculosis"
-  },
-  {
-    question: "The part of the plant that anchors it to the soil is the:",
-    options: [
-      "Stem",
-      "Root",
-      "Leaf",
-      "Flower"
-    ],
-    answer: "Root"
-  },
-  {
-    question: "A lever is a simple machine used to:",
-    options: [
-      "Generate electricity",
-      "Boil water",
-      "Make work easier",
-      "Measure temperature"
-    ],
-    answer: "Make work easier"
-  },
-  {
-    question: "The presence of chlorophyll in a plant is important for:",
-    options: [
-      "Absorbing water",
-      "Reproduction",
-      "Food production",
-      "Transport of nutrients"
-    ],
-    answer: "Food production"
-  },
-  {
-    question: "The reproductive part of a flowering plant is the:",
-    options: [
-      "Stem",
-      "Leaf",
-      "Root",
-      "Flower"
-    ],
-    answer: "Flower"
-  },
-  {
-    question: "Which of the following animals lays eggs?",
-    options: [
-      "Cow",
-      "Goat",
-      "Hen",
-      "Dog"
-    ],
-    answer: "Hen"
-  },
-  {
-    question: "The energy stored in food is called:",
-    options: [
-      "Electrical energy",
-      "Light energy",
-      "Chemical energy",
-      "Nuclear energy"
-    ],
-    answer: "Chemical energy"
-  },
-  {
-    question: "Rusting of iron is a type of:",
-    options: [
-      "Physical change",
-      "Temporary change",
-      "Reversible change",
-      "Chemical change"
-    ],
-    answer: "Chemical change"
-  },
-  {
-    question: "The moon shines because it:",
-    options: [
-      "Produces its own light",
-      "Reflects sunlight",
-      "Burns gases",
-      "Has a core of fire"
-    ],
-    answer: "Reflects sunlight"
-  },
-  {
-    question: "Which of the following is used to measure temperature?",
-    options: [
-      "Thermometer",
-      "Barometer",
-      "Voltmeter",
-      "Ammeter"
-    ],
-    answer: "Thermometer"
-  },
-  {
-    question: "All of the following are sources of noise pollution EXCEPT:",
-    options: [
-      "Generators",
-      "Heavy trucks",
-      "Birdsong",
-      "Loud music"
-    ],
-    answer: "Birdsong"
-  },
-  {
-    question: "A substance that cannot be broken down into simpler substances is called:",
-    options: [
-      "Compound",
-      "Mixture",
-      "Solution",
-      "Element"
-    ],
-    answer: "Element"
-  },
-  {
-    question: "Which part of the human body is responsible for filtering blood?",
-    options: [
-      "Heart",
-      "Liver",
-      "Kidney",
-      "Lungs"
-    ],
+    question: "Which organ is responsible for filtering waste from the blood?",
+    options: ["Heart", "Kidney", "Lungs", "Liver"],
     answer: "Kidney"
   },
   {
-    question: "Which of these is a non-metal?",
-    options: [
-      "Iron",
-      "Copper",
-      "Sulphur",
-      "Zinc"
-    ],
-    answer: "Sulphur"
+    question: "A student connects a circuit but the bulb does not light. What is the most likely reason?",
+    options: ["The wire is too long", "The circuit is incomplete", "The battery is too strong", "The bulb is too big"],
+    answer: "The circuit is incomplete"
   },
   {
-    question: "Friction is useful in:",
-    options: [
-      "Writing with a pen",
-      "Causing wear and tear",
-      "Producing smoke",
-      "Creating rust"
-    ],
-    answer: "Writing with a pen"
+    question: "Why is it important to boil water before drinking in some areas?",
+    options: ["To improve taste", "To kill harmful microorganisms", "To change colour", "To remove oxygen"],
+    answer: "To kill harmful microorganisms"
   },
   {
-    question: "Harmful microorganisms are known as:",
-    options: [
-      "Bacteria",
-      "Germs",
-      "Parasites",
-      "Viruses"
-    ],
-    answer: "Germs"
-  },
-  {
-    question: "The largest organ in the human body is the:",
-    options: [
-      "Brain",
-      "Heart",
-      "Liver",
-      "Skin"
-    ],
-    answer: "Skin"
-  },
-  {
-    question: "Which of the following helps in blood clotting?",
-    options: [
-      "Red blood cells",
-      "White blood cells",
-      "Platelets",
-      "Plasma"
-    ],
-    answer: "Platelets"
-  },
-  {
-    question: "A non-renewable resource is:",
-    options: [
-      "Sunlight",
-      "Wind",
-      "Coal",
-      "Water"
-    ],
-    answer: "Coal"
-  },
-  {
-    question: "Which is the correct order of stages in the human life cycle?",
-    options: [
-      "Adult ? Baby ? Teenager ? Old age",
-      "Baby ? Teenager ? Adult ? Old age",
-      "Teenager ? Baby ? Adult ? Old age",
-      "Baby ? Adult ? Teenager ? Old age"
-    ],
-    answer: "Baby ? Teenager ? Adult ? Old age"
-  },
-  {
-    question: "A shadow is formed when:",
-    options: [
-      "Light passes through an object",
-      "Light is blocked by an object",
-      "Sound hits an object",
-      "Heat touches an object"
-    ],
-    answer: "Light is blocked by an object"
-  },
-  {
-    question: "Which organ helps in breathing?",
-    options: [
-      "Stomach",
-      "Heart",
-      "Lungs",
-      "Kidneys"
-    ],
-    answer: "Lungs"
-  },
-  {
-    question: "The safest way to handle electrical appliances is by:",
-    options: [
-      "Using wet hands",
-      "Wearing gloves",
-      "Using metal tools",
-      "Touching wires directly"
-    ],
-    answer: "Wearing gloves"
-  },
-  {
-    question: "Which gas do plants take in during photosynthesis?",
-    options: [
-      "Oxygen",
-      "Hydrogen",
-      "Carbon dioxide",
-      "Nitrogen"
-    ],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "One way of maintaining personal hygiene is:",
-    options: [
-      "Wearing dirty clothes",
-      "Brushing teeth regularly",
-      "Skipping baths",
-      "Sleeping late"
-    ],
-    answer: "Brushing teeth regularly"
-  },
-  {
-    question: "What is the smallest unit of life?",
-    options: [
-      "Organ",
-      "Tissue",
-      "Cell",
-      "Organ system"
-    ],
-    answer: "Cell"
-  },
-  {
-    question: "The main source of energy for Earth is:",
-    options: [
-      "Moon",
-      "Stars",
-      "Sun",
-      "Lightning"
-    ],
-    answer: "Sun"
-  },
-  {
-    question: "Insects breathe through:",
-    options: [
-      "Skin",
-      "Nostrils",
-      "Spiracles",
-      "Lungs"
-    ],
-    answer: "Spiracles"
-  },
-  {
-    question: "Which of these is a conductor of electricity?",
-    options: [
-      "Plastic",
-      "Rubber",
-      "Wood",
-      "Copper"
-    ],
-    answer: "Copper"
-  },
-  {
-    question: "A material that allows light to pass through completely is:",
-    options: [
-      "Opaque",
-      "Transparent",
-      "Translucent",
-      "Reflective"
-    ],
-    answer: "Transparent"
-  },
-  {
-    question: "Which of these is not part of the respiratory system?",
-    options: [
-      "Nose",
-      "Lungs",
-      "Trachea",
-      "Stomach"
-    ],
-    answer: "Stomach"
-  },
-  {
-    question: "The term ‘habitat’ refers to:",
-    options: [
-      "Food eaten by animals",
-      "Shelter for animals",
-      "A community of plants",
-      "A type of ecosystem"
-    ],
-    answer: "Shelter for animals"
-  },
-  {
-    question: "Which part of the plant conducts water and minerals from roots to leaves?",
-    options: ["Xylem", "Phloem", "Stem", "Root"],
-    answer: "Xylem"
-  },
-  {
-    question: "Which of these is a physical change?",
-    options: ["Burning paper", "Rusting iron", "Melting ice", "Baking bread"],
-    answer: "Melting ice"
-  },
-  {
-    question: "What type of motion does a pendulum exhibit?",
-    options: ["Rotatory", "Random", "Linear", "Oscillatory"],
-    answer: "Oscillatory"
-  },
-  {
-    question: "The water cycle does NOT include which of the following?",
-    options: ["Evaporation", "Condensation", "Respiration", "Precipitation"],
-    answer: "Respiration"
-  },
-  {
-    question: "The main function of the red blood cells is to:",
-    options: ["Fight infection", "Clot blood", "Carry oxygen", "Digest food"],
-    answer: "Carry oxygen"
-  },
-  {
-    question: "Which of the following is a vertebrate?",
-    options: ["Earthworm", "Grasshopper", "Frog", "Snail"],
-    answer: "Frog"
-  },
-  {
-    question: "A substance that does not dissolve in water is:",
-    options: ["Salt", "Chalk", "Sugar", "Alcohol"],
-    answer: "Chalk"
-  },
-  {
-    question: "Which device converts sound to electrical signals?",
-    options: ["Speaker", "Battery", "Microphone", "Radio"],
-    answer: "Microphone"
-  },
-  {
-    question: "Which component of blood fights infections?",
-    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
-    answer: "White blood cells"
-  },
-  {
-    question: "Which layer of the atmosphere contains the ozone layer?",
-    options: ["Troposphere", "Mesosphere", "Stratosphere", "Thermosphere"],
-    answer: "Stratosphere"
-  },
-  {
-    question: "The source of energy for photosynthesis is:",
-    options: ["Water", "Sunlight", "Chlorophyll", "Soil"],
-    answer: "Sunlight"
-  },
-  {
-    question: "What is formed when iron reacts with oxygen and moisture?",
-    options: ["Salt", "Rust", "Ash", "Lime"],
-    answer: "Rust"
-  },
-  {
-    question: "Which of these gases is a greenhouse gas?",
+    question: "Which gas is mainly responsible for global warming?",
     options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
     answer: "Carbon dioxide"
   },
   {
-    question: "The rotation of the Earth causes:",
-    options: ["Seasons", "Tides", "Day and night", "Eclipses"],
-    answer: "Day and night"
+    question: "What happens to particles in a gas when heated?",
+    options: ["They stop moving", "They move faster", "They become smaller", "They disappear"],
+    answer: "They move faster"
   },
   {
-    question: "The Earth revolves around the Sun once every:",
-    options: ["24 hours", "30 days", "365 days", "12 hours"],
-    answer: "365 days"
+    question: "Which part of the eye controls the amount of light entering?",
+    options: ["Lens", "Retina", "Pupil", "Optic nerve"],
+    answer: "Pupil"
   },
   {
-    question: "Which human sense detects sound?",
-    options: ["Nose", "Ear", "Skin", "Eye"],
-    answer: "Ear"
+    question: "Why do objects fall to the ground when dropped?",
+    options: ["Air pressure", "Magnetism", "Gravity", "Friction"],
+    answer: "Gravity"
+  },
+  {
+    question: "Which method is best for separating oil from water?",
+    options: ["Filtration", "Evaporation", "Decanting", "Sieving"],
+    answer: "Decanting"
+  },
+  {
+    question: "What is the main function of red blood cells?",
+    options: ["Fight infection", "Transport oxygen", "Clot blood", "Digest food"],
+    answer: "Transport oxygen"
+  },
+  {
+    question: "Which form of energy is stored in food?",
+    options: ["Light energy", "Chemical energy", "Electrical energy", "Sound energy"],
+    answer: "Chemical energy"
+  },
+  {
+    question: "What is the effect of cutting down too many trees?",
+    options: ["More oxygen", "Increased rainfall", "Soil erosion", "Better air quality"],
+    answer: "Soil erosion"
+  },
+  {
+    question: "Why does salt dissolve faster in warm water than in cold water?",
+    options: ["Particles move slower", "Particles move faster", "Water becomes heavier", "Salt becomes lighter"],
+    answer: "Particles move faster"
   },
   {
     question: "Which of the following is a good conductor of heat?",
-    options: ["Wood", "Plastic", "Glass", "Copper"],
-    answer: "Copper"
+    options: ["Wood", "Plastic", "Metal", "Rubber"],
+    answer: "Metal"
   },
   {
-    question: "A change that cannot be easily reversed is called:",
-    options: ["Physical change", "Chemical change", "Temporary change", "Magnetic change"],
+    question: "What will happen if a plant does not get enough water?",
+    options: ["It will grow faster", "It will wilt", "It will produce more leaves", "It will become stronger"],
+    answer: "It will wilt"
+  },
+  {
+    question: "Which type of energy is produced by vibrating objects?",
+    options: ["Light energy", "Heat energy", "Sound energy", "Chemical energy"],
+    answer: "Sound energy"
+  },
+  {
+    question: "Why is the ozone layer important?",
+    options: ["It produces oxygen", "It absorbs harmful ultraviolet radiation", "It controls rainfall", "It forms clouds"],
+    answer: "It absorbs harmful ultraviolet radiation"
+  },
+  {
+    question: "What happens when a magnet is cut into two pieces?",
+    options: ["Only one remains magnetic", "Both pieces become magnets", "Magnetism disappears", "They repel each other"],
+    answer: "Both pieces become magnets"
+  },
+  {
+    question: "A plant is exposed to sunlight but has no carbon dioxide. What will happen?",
+    options: ["Photosynthesis will continue", "Photosynthesis will stop", "Respiration will stop", "Growth will increase"],
+    answer: "Photosynthesis will stop"
+  },
+  {
+    question: "Why does sweating help to cool the body?",
+    options: ["It increases body temperature", "It removes oxygen", "Evaporation takes away heat", "It adds water to the body"],
+    answer: "Evaporation takes away heat"
+  },
+  {
+    question: "Which condition will increase the rate of dissolving sugar in water?",
+    options: ["Cold water and no stirring", "Warm water and stirring", "Cold water and no movement", "Large sugar pieces only"],
+    answer: "Warm water and stirring"
+  },
+  {
+    question: "What happens to sound as it travels through air?",
+    options: ["It disappears immediately", "It spreads out and becomes weaker", "It becomes stronger always", "It stops suddenly"],
+    answer: "It spreads out and becomes weaker"
+  },
+  {
+    question: "A student breathes out into limewater and it turns milky. What does this show?",
+    options: ["Oxygen is present", "Carbon dioxide is present", "Nitrogen is present", "Hydrogen is present"],
+    answer: "Carbon dioxide is present"
+  },
+  {
+    question: "Why do farmers add fertilizers to soil?",
+    options: ["To increase soil temperature", "To add nutrients for plant growth", "To reduce sunlight", "To remove water"],
+    answer: "To add nutrients for plant growth"
+  },
+  {
+    question: "What happens when electrical appliances are connected in series?",
+    options: ["All work independently", "If one fails", "all stop working", "Voltage increases in each", "Current increases automatically"],
+    answer: "If one fails, all stop working"
+  },
+  {
+    question: "Which of the following best explains friction?",
+    options: ["Force that pushes objects apart", "Force that opposes motion", "Force that creates energy", "Force that attracts objects"],
+    answer: "Force that opposes motion"
+  },
+  {
+    question: "What is the main reason for deforestation?",
+    options: ["Planting trees", "Urbanization and farming", "Reducing pollution", "Protecting wildlife"],
+    answer: "Urbanization and farming"
+  },
+  {
+    question: "Which part of a plant transports water from roots to leaves?",
+    options: ["Phloem", "Xylem", "Stomata", "Chloroplast"],
+    answer: "Xylem"
+  },
+  {
+    question: "Why do solids have fixed shapes?",
+    options: ["Particles move freely", "Particles are closely packed", "Particles are far apart", "Particles disappear"],
+    answer: "Particles are closely packed"
+  },
+  {
+    question: "What happens when light hits a mirror?",
+    options: ["It is absorbed", "It is reflected", "It is destroyed", "It stops moving"],
+    answer: "It is reflected"
+  },
+  {
+    question: "Which system of the body is responsible for movement?",
+    options: ["Digestive system", "Respiratory system", "Muscular system", "Circulatory system"],
+    answer: "Muscular system"
+  },
+  {
+    question: "What will happen if the temperature of a liquid is lowered?",
+    options: ["Particles move faster", "Particles slow down", "Particles disappear", "Particles expand"],
+    answer: "Particles slow down"
+  },
+  {
+    question: "Why is clean air important for humans?",
+    options: ["It increases pollution", "It supports healthy breathing", "It reduces sunlight", "It produces food"],
+    answer: "It supports healthy breathing"
+  },
+  {
+    question: "Which of the following is an example of a chemical change?",
+    options: ["Melting wax", "Cutting paper", "Cooking food", "Freezing water"],
+    answer: "Cooking food"
+  },
+  {
+    question: "What is the main function of the lungs?",
+    options: ["Pump blood", "Exchange gases", "Digest food", "Control movement"],
+    answer: "Exchange gases"
+  },
+  {
+    question: "Why do objects appear bent in water?",
+    options: ["Reflection", "Refraction", "Diffusion", "Gravity"],
+    answer: "Refraction"
+  },
+  {
+    question: "Which type of energy is used in a battery?",
+    options: ["Mechanical energy", "Chemical energy", "Sound energy", "Light energy"],
+    answer: "Chemical energy"
+  },
+  {
+    question: "What happens when waste is not properly managed?",
+    options: ["Environment improves", "Pollution increases", "Air becomes cleaner", "Water becomes pure"],
+    answer: "Pollution increases"
+  },
+  {
+    question: "A student places a green plant in sunlight and covers part of a leaf. After testing with iodine, only uncovered parts turn blue-black. What does this show?",
+    options: ["Water is needed for photosynthesis", "Light is required for photosynthesis", "Oxygen is required", "Chlorophyll is absent"],
+    answer: "Light is required for photosynthesis"
+  },
+  {
+    question: "Why do we see lightning before hearing thunder?",
+    options: ["Light travels faster than sound", "Sound travels faster than light", "Lightning is stronger", "Thunder is weaker"],
+    answer: "Light travels faster than sound"
+  },
+  {
+    question: "Which of the following explains why cutting trees affects rainfall?",
+    options: ["Trees reduce sunlight", "Trees help in water cycle through transpiration", "Trees produce heat", "Trees absorb oxygen"],
+    answer: "Trees help in water cycle through transpiration"
+  },
+  {
+    question: "A bulb glows dimly in a circuit. What could be the reason?",
+    options: ["High voltage", "Weak battery or resistance", "Too much light", "Short circuit"],
+    answer: "Weak battery or resistance"
+  },
+  {
+    question: "Why does food spoil faster in warm conditions?",
+    options: ["Less oxygen", "Microorganisms grow faster", "Food loses water", "Less sunlight"],
+    answer: "Microorganisms grow faster"
+  },
+  {
+    question: "What will happen if there is no chlorophyll in a plant?",
+    options: ["It will photosynthesize normally", "It cannot make food", "It will grow faster", "It will produce more oxygen"],
+    answer: "It cannot make food"
+  },
+  {
+    question: "Why are mirrors used in periscopes?",
+    options: ["To absorb light", "To reflect light", "To bend light", "To block light"],
+    answer: "To reflect light"
+  },
+  {
+    question: "Which of the following explains why metals expand when heated?",
+    options: ["Particles move closer", "Particles gain energy and move apart", "Particles stop moving", "Particles disappear"],
+    answer: "Particles gain energy and move apart"
+  },
+  {
+    question: "A person with damaged alveoli will have difficulty in:",
+    options: ["Digesting food", "Exchanging gases", "Pumping blood", "Producing hormones"],
+    answer: "Exchanging gases"
+  },
+  {
+    question: "Why is it dangerous to overload electrical sockets?",
+    options: ["It reduces current", "It causes overheating and fire", "It increases light", "It improves efficiency"],
+    answer: "It causes overheating and fire"
+  },
+  {
+    question: "Which of the following best explains evaporation?",
+    options: ["Liquid changes to solid", "Liquid changes to gas at the surface", "Gas changes to liquid", "Solid changes to liquid"],
+    answer: "Liquid changes to gas at the surface"
+  },
+  {
+    question: "Why do plants wilt when not watered?",
+    options: ["Loss of chlorophyll", "Loss of turgidity in cells", "Increase in oxygen", "Decrease in sunlight"],
+    answer: "Loss of turgidity in cells"
+  },
+  {
+    question: "Which of the following is an effect of air pollution?",
+    options: ["Improved health", "Acid rain", "Better crops", "Clean air"],
+    answer: "Acid rain"
+  },
+  {
+    question: "Why do objects appear smaller when viewed from far away?",
+    options: ["Light bends", "Less light enters the eye", "Image size on retina reduces", "Objects shrink"],
+    answer: "Image size on retina reduces"
+  },
+  {
+    question: "Which part of the digestive system produces bile?",
+    options: ["Stomach", "Liver", "Pancreas", "Small intestine"],
+    answer: "Liver"
+  },
+  {
+    question: "What happens to current in a parallel circuit?",
+    options: ["It is the same everywhere", "It divides among branches", "It disappears", "It becomes zero"],
+    answer: "It divides among branches"
+  },
+  {
+    question: "Why is water important in the human body?",
+    options: ["Only for drinking", "For transport of substances and temperature control", "To produce bones", "To create oxygen"],
+    answer: "For transport of substances and temperature control"
+  },
+  {
+    question: "Which of the following shows conservation of energy?",
+    options: ["Energy is destroyed", "Energy changes form but is not lost", "Energy disappears", "Energy is reduced completely"],
+    answer: "Energy changes form but is not lost"
+  },
+  {
+    question: "What will happen if soil lacks nutrients?",
+    options: ["Plants grow well", "Plants grow poorly", "Plants grow faster", "Plants produce more seeds"],
+    answer: "Plants grow poorly"
+  },
+  {
+    question: "Why is proper waste disposal important?",
+    options: ["To increase pollution", "To protect environment and health", "To reduce oxygen", "To increase heat"],
+    answer: "To protect environment and health"
+  },
+  {
+    question: "A plant is kept in sunlight but its leaves are covered with grease. What will happen?",
+    options: ["Photosynthesis increases", "Gas exchange is prevented", "Water absorption increases", "Root growth stops"],
+    answer: "Gas exchange is prevented"
+  },
+  {
+    question: "Why does ice float on water?",
+    options: ["Ice is heavier", "Ice is less dense than water", "Ice contains air only", "Ice has no mass"],
+    answer: "Ice is less dense than water"
+  },
+  {
+    question: "Which situation best demonstrates convection?",
+    options: ["Heating a metal rod", "Warm air rising above a fire", "Light reflecting in a mirror", "Sound traveling in air"],
+    answer: "Warm air rising above a fire"
+  },
+  {
+    question: "What will happen if a personÃ¢â‚¬â„¢s pancreas stops producing insulin?",
+    options: ["Digestion stops", "Blood sugar becomes uncontrolled", "Breathing becomes faster", "Blood pressure decreases"],
+    answer: "Blood sugar becomes uncontrolled"
+  },
+  {
+    question: "Why does a closed container of gas increase in pressure when heated?",
+    options: ["Particles slow down", "Particles collide more frequently", "Gas disappears", "Volume increases"],
+    answer: "Particles collide more frequently"
+  },
+  {
+    question: "Which of the following is a non-renewable source of energy?",
+    options: ["Solar energy", "Wind energy", "Coal", "Hydro energy"],
+    answer: "Coal"
+  },
+  {
+    question: "What is the main reason for food preservation?",
+    options: ["To increase taste", "To slow down microbial growth", "To change colour", "To increase water content"],
+    answer: "To slow down microbial growth"
+  },
+  {
+    question: "Why does a shadow change size during the day?",
+    options: ["Light disappears", "Position of the Sun changes", "Objects shrink", "Air pressure changes"],
+    answer: "Position of the Sun changes"
+  },
+  {
+    question: "Which part of the plant carries manufactured food?",
+    options: ["Xylem", "Phloem", "Root hairs", "Stomata"],
+    answer: "Phloem"
+  },
+  {
+    question: "What is the effect of too much fertilizer on crops?",
+    options: ["Improves growth always", "Can damage plants", "Increases water only", "No effect"],
+    answer: "Can damage plants"
+  },
+  {
+    question: "Why does sound not travel in a vacuum?",
+    options: ["No energy is present", "No medium for vibration", "No light is present", "No pressure exists"],
+    answer: "No medium for vibration"
+  },
+  {
+    question: "What happens when two like poles of magnets are brought together?",
+    options: ["They attract", "They repel", "They disappear", "They combine"],
+    answer: "They repel"
+  },
+  {
+    question: "Which process in plants releases oxygen?",
+    options: ["Respiration", "Photosynthesis", "Transpiration", "Absorption"],
+    answer: "Photosynthesis"
+  },
+  {
+    question: "Why is it important to wash hands before eating?",
+    options: ["To remove water", "To kill harmful microorganisms", "To improve digestion", "To increase appetite"],
+    answer: "To kill harmful microorganisms"
+  },
+  {
+    question: "What is the main function of the brain?",
+    options: ["Pumping blood", "Controlling body activities", "Digesting food", "Producing energy"],
+    answer: "Controlling body activities"
+  },
+  {
+    question: "Which of the following best explains condensation?",
+    options: ["Gas to liquid", "Liquid to gas", "Solid to liquid", "Solid to gas"],
+    answer: "Gas to liquid"
+  },
+  {
+    question: "Why do we see different colours in a rainbow?",
+    options: ["Reflection only", "Refraction and dispersion of light", "Absorption of light", "Sound waves"],
+    answer: "Refraction and dispersion of light"
+  },
+  {
+    question: "What will happen if plants are removed from an ecosystem?",
+    options: ["Animals survive easily", "Food chain is disrupted", "Water increases", "Soil becomes richer"],
+    answer: "Food chain is disrupted"
+  },
+  {
+    question: "Which of the following is an example of renewable energy?",
+    options: ["Petrol", "Coal", "Wind", "Diesel"],
+    answer: "Wind"
+  },
+  {
+    question: "Why is iron often coated with paint?",
+    options: ["To make it heavier", "To prevent rusting", "To increase strength", "To reduce weight"],
+    answer: "To prevent rusting"
+  },
+  {
+    question: "A student places a plant in a sealed container with no fresh air. What is most likely to happen after some time?",
+    options: ["Photosynthesis increases", "Plant dies due to lack of carbon dioxide and oxygen balance", "Plant grows faster", "Nothing happens"],
+    answer: "Plant dies due to lack of carbon dioxide and oxygen balance"
+  },
+  {
+    question: "Which of the following explains why metals feel cold when touched?",
+    options: ["They produce cold", "They conduct heat away from the body quickly", "They absorb light", "They have no energy"],
+    answer: "They conduct heat away from the body quickly"
+  },
+  {
+    question: "Why is blood circulation important in the human body?",
+    options: ["It produces food", "It transports oxygen and nutrients", "It controls movement", "It removes bones"],
+    answer: "It transports oxygen and nutrients"
+  },
+  {
+    question: "What will happen if a circuit has very high resistance?",
+    options: ["Current increases", "Current decreases", "Voltage disappears", "Energy increases"],
+    answer: "Current decreases"
+  },
+  {
+    question: "Which of the following is an example of kinetic energy?",
+    options: ["Stored food energy", "Moving car", "Battery energy", "Chemical energy"],
+    answer: "Moving car"
+  },
+  {
+    question: "Why does a balloon expand when heated?",
+    options: ["Air disappears", "Particles move faster and spread out", "Pressure decreases", "Temperature reduces"],
+    answer: "Particles move faster and spread out"
+  },
+  {
+    question: "What is the effect of water pollution on aquatic life?",
+    options: ["Improves survival", "Reduces oxygen availability", "Increases food supply", "Improves growth"],
+    answer: "Reduces oxygen availability"
+  },
+  {
+    question: "Which part of the ear is responsible for detecting sound vibrations?",
+    options: ["Eardrum", "Pupil", "Nose", "Tongue"],
+    answer: "Eardrum"
+  },
+  {
+    question: "Why does sugar dissolve faster when crushed into smaller pieces?",
+    options: ["Less surface area", "Greater surface area", "Less energy", "Less contact with water"],
+    answer: "Greater surface area"
+  },
+  {
+    question: "What happens when light passes through a glass prism?",
+    options: ["It disappears", "It splits into colours", "It stops moving", "It becomes sound"],
+    answer: "It splits into colours"
+  },
+  {
+    question: "Which of the following is an effect of poor sanitation?",
+    options: ["Improved health", "Spread of diseases", "Better environment", "Increased oxygen"],
+    answer: "Spread of diseases"
+  },
+  {
+    question: "Why is the heart described as a double pump?",
+    options: ["It pumps blood once", "It pumps blood to lungs and body separately", "It pumps water", "It produces energy"],
+    answer: "It pumps blood to lungs and body separately"
+  },
+  {
+    question: "What will happen if friction is completely removed?",
+    options: ["Objects stop moving", "Movement becomes uncontrollable", "Energy disappears", "Heat increases"],
+    answer: "Movement becomes uncontrollable"
+  },
+  {
+    question: "Which of the following is a chemical property of a substance?",
+    options: ["Colour", "Density", "Reactivity", "Shape"],
+    answer: "Reactivity"
+  },
+  {
+    question: "Why is sunlight important for the Earth?",
+    options: ["It produces water", "It is a main source of energy", "It reduces oxygen", "It destroys plants"],
+    answer: "It is a main source of energy"
+  },
+  {
+    question: "Which of the following helps in digestion of fats?",
+    options: ["Saliva", "Bile", "Oxygen", "Blood"],
+    answer: "Bile"
+  },
+  {
+    question: "What happens when a liquid cools down?",
+    options: ["Particles move faster", "Particles lose energy and slow down", "Particles disappear", "Particles expand"],
+    answer: "Particles lose energy and slow down"
+  },
+  {
+    question: "Why is recycling important?",
+    options: ["To increase waste", "To reduce environmental pollution", "To reduce oxygen", "To increase heat"],
+    answer: "To reduce environmental pollution"
+  },
+  {
+    question: "Which type of force pulls objects toward the Earth?",
+    options: ["Magnetic force", "Gravitational force", "Frictional force", "Electrical force"],
+    answer: "Gravitational force"
+  },
+  {
+    question: "What will happen if the ozone layer is damaged?",
+    options: ["More harmful radiation reaches Earth", "Less sunlight reaches Earth", "Air becomes cleaner", "Rainfall increases"],
+    answer: "More harmful radiation reaches Earth"
+  },
+  {
+    question: "Which organ pumps blood throughout the human body?",
+    options: ["Lungs", "Heart", "Kidney", "Liver"],
+    answer: "Heart"
+  },
+  {
+    question: "What is the main function of the lungs in the human body?",
+    options: ["Pump blood", "Exchange gases (oxygen and carbon dioxide)", "Digest food", "Store nutrients"],
+    answer: "Exchange gases (oxygen and carbon dioxide)"
+  },
+  {
+    question: "Which part of the plant carries water from the roots to the leaves?",
+    options: ["Phloem", "Xylem", "Stomata", "Chlorophyll"],
+    answer: "Xylem"
+  },
+  {
+    question: "Which gas do plants take in during photosynthesis?",
+    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    answer: "Carbon dioxide"
+  },
+  {
+    question: "Which gas is released during photosynthesis?",
+    options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+    answer: "Oxygen"
+  },
+  {
+    question: "What is the main function of the roots of a plant?",
+    options: ["Make food", "Absorb water and anchor the plant", "Produce flowers", "Release oxygen"],
+    answer: "Absorb water and anchor the plant"
+  },
+  {
+    question: "Which force pulls objects toward the Earth?",
+    options: ["Magnetic force", "Frictional force", "Gravitational force", "Electrical force"],
+    answer: "Gravitational force"
+  },
+  {
+    question: "Which state of matter has a definite shape and volume?",
+    options: ["Solid", "Liquid", "Gas", "Plasma"],
+    answer: "Solid"
+  },
+  {
+    question: "Which state of matter takes the shape of its container but has fixed volume?",
+    options: ["Solid", "Liquid", "Gas", "Plasma"],
+    answer: "Liquid"
+  },
+  {
+    question: "Which method is used to separate an insoluble solid from a liquid?",
+    options: ["Evaporation", "Filtration", "Distillation", "Sieving"],
+    answer: "Filtration"
+  },
+  {
+    question: "What type of change occurs when paper is burned?",
+    options: ["Physical change", "Reversible change", "Chemical change", "Temporary change"],
     answer: "Chemical change"
   },
   {
-    question: "Which of these is not an insect?",
-    options: ["Bee", "Spider", "Butterfly", "Ant"],
-    answer: "Spider"
+    question: "Which organ helps in removing waste from the blood?",
+    options: ["Heart", "Lungs", "Kidney", "Brain"],
+    answer: "Kidney"
   },
   {
-    question: "What is the boiling point of water at sea level?",
-    options: ["50°C", "100°C", "80°C", "212°C"],
-    answer: "100°C"
+    question: "Which part of the human body controls all activities?",
+    options: ["Heart", "Brain", "Liver", "Stomach"],
+    answer: "Brain"
   },
   {
-    question: "The smallest part of an element is the:",
-    options: ["Atom", "Molecule", "Compound", "Mixture"],
-    answer: "Atom"
+    question: "Which type of energy is produced by the Sun?",
+    options: ["Sound energy", "Chemical energy", "Light energy", "Electrical energy"],
+    answer: "Light energy"
   },
   {
-    question: "The part of the plant that makes food is the:",
+    question: "Which material is a good conductor of electricity?",
+    options: ["Plastic", "Rubber", "Copper", "Wood"],
+    answer: "Copper"
+  },
+  {
+    question: "Which gas is mainly responsible for breathing in humans?",
+    options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+    answer: "Oxygen"
+  },
+  {
+    question: "Which part of the digestive system absorbs digested food?",
+    options: ["Stomach", "Large intestine", "Small intestine", "Esophagus"],
+    answer: "Small intestine"
+  },
+  {
+    question: "Which environmental problem is caused by improper waste disposal?",
+    options: ["Clean air", "Pollution", "Better soil", "More oxygen"],
+    answer: "Pollution"
+  },
+  {
+    question: "Which natural resource can be replaced over time?",
+    options: ["Coal", "Petrol", "Wind", "Natural gas"],
+    answer: "Wind"
+  },
+  {
+    question: "What is the function of red blood cells in the body?",
+    options: ["Fight infection", "Transport oxygen", "Clot blood", "Digest food"],
+    answer: "Transport oxygen"
+  },
+  {
+    question: "Which part of the plant is responsible for making food?",
     options: ["Root", "Stem", "Leaf", "Flower"],
     answer: "Leaf"
   },
   {
-    question: "Which of these is an artificial source of light?",
-    options: ["Sun", "Candle", "Firefly", "Star"],
-    answer: "Candle"
+    question: "What is the main function of the skeleton?",
+    options: ["Produce energy", "Support and protect the body", "Digest food", "Pump blood"],
+    answer: "Support and protect the body"
   },
   {
-    question: "Deforestation may result in:",
-    options: ["Flooding", "Rainfall", "Cloud formation", "Snowfall"],
-    answer: "Flooding"
+    question: "What happens to water when it is heated to boiling point?",
+    options: ["It becomes solid", "It becomes gas", "It disappears", "It becomes heavier"],
+    answer: "It becomes gas"
   },
   {
-    question: "One example of a simple machine is a:",
-    options: ["Microwave", "Lever", "Computer", "Washing machine"],
-    answer: "Lever"
+    question: "Which of the following is an example of a physical change?",
+    options: ["Burning wood", "Cooking food", "Melting ice", "Rusting iron"],
+    answer: "Melting ice"
   },
   {
-    question: "The process by which green plants lose water is:",
-    options: ["Respiration", "Condensation", "Transpiration", "Absorption"],
-    answer: "Transpiration"
+    question: "Which part of the eye forms the image of an object?",
+    options: ["Pupil", "Retina", "Lens", "Cornea"],
+    answer: "Retina"
   },
   {
-    question: "Which of these animals is cold-blooded?",
-    options: ["Bird", "Lizard", "Goat", "Dog"],
-    answer: "Lizard"
+    question: "Which organ produces bile in the human body?",
+    options: ["Stomach", "Pancreas", "Liver", "Kidney"],
+    answer: "Liver"
   },
   {
-    question: "Which nutrient helps in growth and repair of tissues?",
-    options: ["Carbohydrates", "Fats", "Proteins", "Vitamins"],
-    answer: "Proteins"
-  },
-  {
-    question: "Which of these is a communicable disease?",
-    options: ["Malaria", "Asthma", "Diabetes", "Hypertension"],
-    answer: "Malaria"
-  },
-  {
-    question: "Objects that allow some light to pass through are:",
-    options: ["Opaque", "Transparent", "Translucent", "Reflective"],
-    answer: "Translucent"
-  },
-  {
-    question: "A circuit in which current flows through a single path is:",
-    options: ["Parallel", "Series", "Closed", "Open"],
-    answer: "Series"
-  },
-  {
-    question: "Which of these is a sedimentary rock?",
-    options: ["Granite", "Basalt", "Limestone", "Marble"],
-    answer: "Limestone"
-  },
-  {
-    question: "The main source of air pollution is:",
-    options: ["Volcanoes", "Factories", "Forests", "Rain"],
-    answer: "Factories"
-  },
-  {
-    question: "The organ that pumps blood in humans is the:",
-    options: ["Brain", "Liver", "Heart", "Lung"],
-    answer: "Heart"
-  },
-  {
-    question: "Which of these is a basic need of plants?",
-    options: ["Fertilizer", "Insects", "Sunlight", "Animals"],
-    answer: "Sunlight"
-  },
-  {
-    question: "The part of a cell that controls its activities is the:",
-    options: ["Cytoplasm", "Chloroplast", "Nucleus", "Cell wall"],
-    answer: "Nucleus"
-  },
-  {
-    question: "The human skeleton provides:",
-    options: ["Digestion", "Protection", "Photosynthesis", "Excretion"],
-    answer: "Protection"
-  },
-  {
-    question: "Which of the following animals is a reptile?",
-    options: ["Toad", "Frog", "Lizard", "Snail"],
-    answer: "Lizard"
-  },
-  {
-    question: "Heat transfer through a solid occurs by:",
-    options: ["Radiation", "Conduction", "Convection", "Reflection"],
-    answer: "Conduction"
-  },
-  {
-    question: "Energy stored in a dry cell is:",
-    options: ["Kinetic energy", "Solar energy", "Chemical energy", "Thermal energy"],
-    answer: "Chemical energy"
-  },
-  {
-    question: "Which human body system is responsible for movement?",
-    options: ["Nervous", "Digestive", "Skeletal and muscular", "Respiratory"],
-    answer: "Skeletal and muscular"
-  },
-  {
-    question: "Polluted water can be purified by:",
-    options: ["Stirring", "Burning", "Boiling", "Shaking"],
-    answer: "Boiling"
-  },
-  {
-    question: "A habitat with little or no rainfall is a:",
-    options: ["Rainforest", "Savanna", "Desert", "Mangrove"],
-    answer: "Desert"
-  },
-  {
-    question: "During digestion, starch is broken down into:",
-    options: ["Proteins", "Fats", "Sugar", "Vitamins"],
-    answer: "Sugar"
-  },
-  {
-    question: "The eye is sensitive to:",
-    options: ["Sound", "Light", "Touch", "Taste"],
-    answer: "Light"
-  },
-  {
-    question: "What causes an object to float in water?",
-    options: ["Weight", "Buoyancy", "Friction", "Gravity"],
-    answer: "Buoyancy"
-  },
-  {
-    question: "Which of the following is not biodegradable?",
-    options: ["Banana peel", "Paper", "Plastic", "Wood"],
-    answer: "Plastic"
-  },
-  {
-    question: "An example of a natural fiber is:",
-    options: ["Nylon", "Rayon", "Cotton", "Polyester"],
-    answer: "Cotton"
-  },
-  {
-    question: "The moon goes around the Earth in about:",
-    options: ["7 days", "15 days", "28 days", "60 days"],
-    answer: "28 days"
-  },
-  {
-    question: "Which of the following processes involves the change from gas to liquid?",
-    options: ["Evaporation", "Condensation", "Sublimation", "Melting"],
-    answer: "Condensation"
-  },
-  {
-    question: "The sense organ responsible for detecting smell is the:",
-    options: ["Eye", "Nose", "Ear", "Skin"],
-    answer: "Nose"
-  },
-  {
-    question: "Which of these is a source of non-renewable energy?",
-    options: ["Sunlight", "Wind", "Coal", "Water"],
-    answer: "Coal"
-  },
-  {
-    question: "The breaking down of food into simpler substances is known as:",
-    options: ["Respiration", "Digestion", "Absorption", "Ingestion"],
-    answer: "Digestion"
-  },
-  {
-    question: "Which of the following materials is magnetic?",
-    options: ["Plastic", "Aluminium", "Wood", "Iron"],
-    answer: "Iron"
-  },
-  {
-    question: "The unit of measurement for force is:",
-    options: ["Meter", "Watt", "Newton", "Volt"],
-    answer: "Newton"
-  },
-  {
-    question: "The mixture of gases that surrounds the Earth is called the:",
-    options: ["Hydrosphere", "Lithosphere", "Atmosphere", "Biosphere"],
-    answer: "Atmosphere"
-  },
-  {
-    question: "What type of circuit allows current to flow through multiple branches?",
-    options: ["Series circuit", "Closed circuit", "Open circuit", "Parallel circuit"],
+    question: "Which type of circuit has more than one path for current?",
+    options: ["Series circuit", "Parallel circuit", "Open circuit", "Closed circuit"],
     answer: "Parallel circuit"
   },
   {
-    question: "The part of a flowering plant where seeds are formed is the:",
-    options: ["Leaf", "Stem", "Root", "Ovary"],
-    answer: "Ovary"
-  },
-  {
-    question: "The moon does not produce its own light. It reflects light from the:",
-    options: ["Earth", "Stars", "Sun", "Venus"],
+    question: "What is the main source of energy for the Earth?",
+    options: ["Moon", "Sun", "Wind", "Water"],
     answer: "Sun"
   },
   {
-    question: "Which one of the following is a conductor of electricity?",
-    options: ["Rubber", "Glass", "Copper", "Plastic"],
-    answer: "Copper"
+    question: "Which of the following is a non-renewable resource?",
+    options: ["Wind", "Solar", "Coal", "Water"],
+    answer: "Coal"
   },
   {
-    question: "Which of these diseases is caused by poor hygiene?",
-    options: ["Cancer", "Malaria", "Typhoid", "Diabetes"],
-    answer: "Typhoid"
+    question: "Which part of the body helps in movement by contracting and relaxing?",
+    options: ["Bones", "Muscles", "Nerves", "Blood"],
+    answer: "Muscles"
   },
   {
-    question: "Which force slows down a moving object?",
-    options: ["Gravity", "Tension", "Magnetism", "Friction"],
-    answer: "Friction"
+    question: "Which gas is used by living organisms for respiration?",
+    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    answer: "Oxygen"
   },
   {
-    question: "An example of a chemical change is:",
-    options: ["Boiling water", "Melting butter", "Burning wood", "Freezing juice"],
-    answer: "Burning wood"
+    question: "What happens when light hits a smooth surface like a mirror?",
+    options: ["It is absorbed", "It is reflected", "It disappears", "It slows down"],
+    answer: "It is reflected"
   },
   {
-    question: "The energy possessed by a moving object is called:",
-    options: ["Potential energy", "Chemical energy", "Kinetic energy", "Sound energy"],
-    answer: "Kinetic energy"
-  },
-  {
-    question: "How many legs does an insect have?",
-    options: ["4", "6", "8", "10"],
-    answer: "6"
-  },
-  {
-    question: "Which of the following is not part of the digestive system?",
-    options: ["Mouth", "Stomach", "Liver", "Lungs"],
-    answer: "Lungs"
-  },
-  {
-    question: "What helps the body fight infections?",
-    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
-    answer: "White blood cells"
-  },
-  {
-    question: "The diagrammatic representation of energy flow in a food chain is called:",
-    options: ["Food web", "Food cycle", "Energy pyramid", "Energy chain"],
-    answer: "Energy pyramid"
-  },
-  {
-    question: "Which organ filters waste from the blood?",
-    options: ["Heart", "Liver", "Lung", "Kidney"],
-    answer: "Kidney"
-  },
-  {
-    question: "What happens when light hits a smooth, shiny surface?",
-    options: ["It absorbs", "It refracts", "It bends", "It reflects"],
-    answer: "It reflects"
-  },
-  {
-    question: "The best method to separate salt from salty water is:",
+    question: "Which method is used to separate dissolved salt from water?",
     options: ["Filtration", "Sieving", "Evaporation", "Decanting"],
     answer: "Evaporation"
   },
   {
-    question: "Which is not a function of the skeleton?",
-    options: ["Support", "Protection", "Movement", "Digestion"],
-    answer: "Digestion"
-  },
-  {
-    question: "The gas used by green plants for photosynthesis is:",
-    options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "Which of these is a sign of puberty in girls?",
-    options: ["Voice deepens", "Growth of facial hair", "Menstruation", "Broad shoulders"],
-    answer: "Menstruation"
-  },
-  {
-    question: "Which of the following is a solid at room temperature?",
-    options: ["Oxygen", "Mercury", "Iron", "Water"],
-    answer: "Iron"
-  },
-  {
-    question: "Which of the following is NOT a property of a solid?",
-    options: ["Definite shape", "Fixed volume", "Flows easily", "Strong bonds"],
-    answer: "Flows easily"
-  },
-  {
-    question: "What kind of energy is stored in food?",
-    options: ["Kinetic", "Chemical", "Heat", "Nuclear"],
-    answer: "Chemical"
-  },
-  {
-    question: "An animal that eats only plants is called a:",
-    options: ["Carnivore", "Herbivore", "Omnivore", "Scavenger"],
-    answer: "Herbivore"
-  },
-  {
-    question: "The Earth is tilted on its axis. This causes:",
-    options: ["Day and night", "Eclipses", "Tides", "Seasons"],
-    answer: "Seasons"
-  },
-  {
-    question: "Which part of a plant cell contains chlorophyll?",
-    options: ["Nucleus", "Cytoplasm", "Cell wall", "Chloroplast"],
-    answer: "Chloroplast"
-  },
-  {
-    question: "Which of these helps prevent soil erosion?",
-    options: ["Burning bush", "Overgrazing", "Afforestation", "Mining"],
-    answer: "Afforestation"
-  },
-  {
-    question: "What type of energy is produced by vibrating objects?",
-    options: ["Light", "Sound", "Thermal", "Chemical"],
-    answer: "Sound"
-  },
-  {
-    question: "A neutralization reaction occurs between:",
-    options: ["Acid and base", "Salt and water", "Metal and water", "Acid and metal"],
-    answer: "Acid and base"
-  },
-  {
-    question: "The primary source of energy on Earth is the:",
-    options: ["Electricity", "Wind", "Sun", "Water"],
-    answer: "Sun"
-  },
-  {
-    question: "What part of the ear helps with balance?",
-    options: ["Eardrum", "Cochlea", "Semicircular canals", "Pinna"],
-    answer: "Semicircular canals"
-  },
-  {
-    question: "The part of the flower that attracts pollinators is the:",
-    options: ["Anther", "Petal", "Style", "Stigma"],
-    answer: "Petal"
-  },
-  {
-    question: "Which instrument is used to measure temperature?",
-    options: ["Barometer", "Thermometer", "Speedometer", "Hygrometer"],
-    answer: "Thermometer"
-  },
-  {
-    question: "What is the basic unit of life?",
-    options: ["Tissue", "Organ", "Organism", "Cell"],
-    answer: "Cell"
-  },
-  {
-    question: "Which gas turns lime water milky?",
-    options: ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
-    answer: "Carbon dioxide"
-  },
-  {
-    question: "A measure of how hot or cold something is called:",
-    options: ["Heat", "Temperature", "Energy", "Pressure"],
-    answer: "Temperature"
-  },
-  {
-    question: "The reproductive part of a plant is the:",
-    options: ["Stem", "Root", "Flower", "Leaf"],
-    answer: "Flower"
-  },
-  {
-    question: "Which of the following is a renewable source of energy?",
-    options: ["Coal", "Petrol", "Solar", "Diesel"],
-    answer: "Solar"
-  },
-  {
-    question: "The direction of a magnetic field is from:",
-    options: ["North to South", "South to North", "East to West", "West to East"],
-    answer: "North to South"
-  },
-  {
-    question: "Excessive use of fertilizers can cause:",
-    options: ["Improved biodiversity", "Water pollution", "Soil hardening", "Deforestation"],
-    answer: "Water pollution"
-  },
-  {
-    question: "When light passes through a prism, it forms a:",
-    options: ["Shadow", "Spectrum", "Mirror", "Laser"],
-    answer: "Spectrum"
-  },
-  {
-    question: "A disease spread by mosquitoes is:",
-    options: ["Cholera", "Tuberculosis", "Malaria", "Typhoid"],
-    answer: "Malaria"
-  },
-  {
-    question: "Which part of the brain controls breathing and heartbeat?",
-    options: ["Cerebrum", "Medulla", "Cerebellum", "Cortex"],
-    answer: "Medulla"
-  },
-  {
-    question: "Which of these human activities can lead to deforestation?",
-    options: ["Afforestation", "Tree planting", "Lumbering", "Crop rotation"],
-    answer: "Lumbering"
-  },
-  {
-    question: "Which of the following is a biodegradable material?",
-    options: ["Plastic bag", "Banana peel", "Glass bottle", "Aluminium foil"],
-    answer: "Banana peel"
-  },
-  {
-    question: "The term 'climate change' refers to:",
-    options: ["Sudden rain", "A change in weather patterns over time", "A cold day", "Seasonal wind"],
-    answer: "A change in weather patterns over time"
-  },
-  {
-    question: "Overuse of agrochemicals on farms can result in:",
-    options: ["Increased soil fertility", "Water pollution", "Better taste of crops", "Stronger stems"],
-    answer: "Water pollution"
-  },
-  {
-    question: "Which of the following diseases is associated with poor waste management?",
-    options: ["Malaria", "Diabetes", "Asthma", "Cancer"],
-    answer: "Malaria"
-  },
-  {
-    question: "Which type of pollution is caused by excessive noise from machines and vehicles?",
-    options: ["Air pollution", "Water pollution", "Sound pollution", "Thermal pollution"],
-    answer: "Sound pollution"
-  },
-  {
-    question: "Which of these is NOT a method of conserving water?",
-    options: ["Fixing leaking taps", "Turning off taps when not in use", "Using open gutters", "Harvesting rainwater"],
-    answer: "Using open gutters"
-  },
-  {
-    question: "What is the main cause of ozone layer depletion?",
-    options: ["Carbon monoxide", "CFCs (Chlorofluorocarbons)", "Nitrogen gas", "Hydrogen"],
-    answer: "CFCs (Chlorofluorocarbons)"
-  },
-  {
-    question: "Burning refuse in open spaces can lead to:",
-    options: ["Clean environment", "Air pollution", "Increased rainfall", "Better sanitation"],
-    answer: "Air pollution"
-  },
-  {
-    question: "What is the role of decomposers in the environment?",
-    options: ["Pollination", "Recycling nutrients", "Producing oxygen", "Causing diseases"],
-    answer: "Recycling nutrients"
-  },
-  {
-    question: "Which method of waste disposal helps enrich the soil?",
-    options: ["Burning", "Composting", "Burying plastics", "Littering"],
-    answer: "Composting"
-  },
-  {
-    question: "A natural resource that can be used repeatedly and does not run out is called:",
-    options: ["Exhaustible", "Man-made", "Renewable", "Solid waste"],
-    answer: "Renewable"
-  },
-  {
-    question: "Which of the following human activities helps conserve natural resources?",
-    options: ["Bush burning", "Hunting endangered animals", "Mining in rivers", "Recycling materials"],
-    answer: "Recycling materials"
-  },
-  {
-    question: "Excessive carbon dioxide in the atmosphere mainly causes:",
-    options: ["Global warming", "Photosynthesis", "Soil erosion", "Rainfall"],
-    answer: "Global warming"
-  },
-  {
-    question: "When oil is spilled into water bodies, it mainly affects:",
-    options: ["Solar energy", "Wind movement", "Aquatic life", "Air composition"],
-    answer: "Aquatic life"
-  },
-  {
-    question: "What term describes the planting of trees to restore a forest?",
-    options: ["Deforestation", "Afforestation", "Lumbering", "Erosion"],
-    answer: "Afforestation"
-  },
-  {
-    question: "The atmosphere is important because it:",
-    options: ["Contains only oxygen", "Contains harmful gases", "Supports life", "Is below sea level"],
-    answer: "Supports life"
-  },
-  {
-    question: "Which of the following is a harmful effect of plastic waste in the environment?",
-    options: ["It decomposes quickly", "It enriches the soil", "It pollutes the soil and water", "It serves as food for animals"],
-    answer: "It pollutes the soil and water"
-  },
-  {
-    question: "The use of solar panels is encouraged because solar energy is:",
-    options: ["Expensive", "Non-renewable", "Polluting", "Clean and renewable"],
-    answer: "Clean and renewable"
-  },
-  {
-    question: "Which of the following practices reduces the spread of communicable diseases?",
-    options: ["Storing food uncovered", "Drinking untreated water", "Washing hands regularly", "Littering the surroundings"],
-    answer: "Washing hands regularly"
-  },
-
-  // Review & general application questions
-  {
-    question: "Which system in the human body transports nutrients and oxygen?",
-    options: ["Respiratory system", "Circulatory system", "Excretory system", "Digestive system"],
-    answer: "Circulatory system"
-  },
-  {
-    question: "Which process allows green plants to make their own food?",
-    options: ["Respiration", "Digestion", "Photosynthesis", "Fermentation"],
-    answer: "Photosynthesis"
-  },
-  {
-    question: "The smallest part of an element that retains its properties is a(n):",
-    options: ["Molecule", "Compound", "Mixture", "Atom"],
-    answer: "Atom"
-  },
-  {
-    question: "What type of energy is stored in a stretched rubber band?",
-    options: ["Kinetic energy", "Chemical energy", "Potential energy", "Sound energy"],
-    answer: "Potential energy"
-  },
-  {
-    question: "The function of the white blood cells is to:",
-    options: ["Transport oxygen", "Digest food", "Fight infection", "Clot the blood"],
-    answer: "Fight infection"
-  },
-  {
-    question: "A device that completes or breaks a circuit is called a:",
-    options: ["Bulb", "Switch", "Resistor", "Battery"],
-    answer: "Switch"
-  },
-  {
-    question: "A good conductor of heat is:",
-    options: ["Wood", "Plastic", "Aluminium", "Rubber"],
-    answer: "Aluminium"
-  },
-  {
-    question: "Which of the following mixtures can be separated by filtration?",
-    options: ["Salt and water", "Oil and water", "Sand and water", "Alcohol and water"],
-    answer: "Sand and water"
-  },
-  {
-    question: "Which part of the plant absorbs water from the soil?",
-    options: ["Stem", "Leaf", "Flower", "Root"],
-    answer: "Root"
-  },
-  {
-    question: "Which organ in the body is responsible for breathing?",
-    options: ["Heart", "Brain", "Lungs", "Liver"],
-    answer: "Lungs"
-  },
-  {
-    question: "One way to prevent soil erosion is:",
-    options: ["Bush burning", "Overgrazing", "Terracing", "Mining"],
-    answer: "Terracing"
-  },
-  {
-    question: "Which organ in humans pumps blood to all parts of the body?",
-    options: ["Brain", "Liver", "Heart", "Lung"],
+    question: "Which organ is responsible for pumping blood to all parts of the body?",
+    options: ["Liver", "Heart", "Kidney", "Brain"],
     answer: "Heart"
   },
   {
-    question: "Sound travels fastest through:",
-    options: ["Air", "Water", "Glass", "Vacuum"],
-    answer: "Glass"
+    question: "What is the main cause of air pollution?",
+    options: ["Planting trees", "Burning fuels", "Watering crops", "Recycling waste"],
+    answer: "Burning fuels"
   },
   {
-    question: "In which part of the digestive system does most digestion occur?",
-    options: ["Mouth", "Stomach", "Small intestine", "Large intestine"],
-    answer: "Small intestine"
+    question: "Which part of the plant allows gases to enter and leave?",
+    options: ["Root hairs", "Stomata", "Xylem", "Phloem"],
+    answer: "Stomata"
   },
   {
-    question: "Which part of the eye controls the amount of light entering?",
-    options: ["Lens", "Iris", "Retina", "Cornea"],
-    answer: "Iris"
+    question: "Which form of energy is used in a battery?",
+    options: ["Mechanical energy", "Chemical energy", "Sound energy", "Light energy"],
+    answer: "Chemical energy"
   },
   {
-    question: "The force that pulls objects toward the center of the Earth is:",
-    options: ["Friction", "Tension", "Gravity", "Magnetism"],
-    answer: "Gravity"
+    question: "Which of the following best describes a mixture?",
+    options: ["A pure substance", "Two or more substances physically combined", "A chemical compound", "A solid only"],
+    answer: "Two or more substances physically combined"
   },
   {
-    question: "Which of the following is NOT a simple machine?",
-    options: ["Inclined plane", "Pulley", "Screwdriver", "Car engine"],
-    answer: "Car engine"
+    question: "Why do plants need sunlight?",
+    options: ["To absorb water", "To make food through photosynthesis", "To grow roots", "To release oxygen only"],
+    answer: "To make food through photosynthesis"
   },
   {
-    question: "Which of the following undergoes incomplete metamorphosis?",
-    options: ["Mosquito", "Grasshopper", "Butterfly", "Moth"],
-    answer: "Grasshopper"
+    question: "What will happen if a person does not get enough oxygen?",
+    options: ["Energy production decreases", "Digestion increases", "Blood becomes thicker", "Body temperature increases"],
+    answer: "Energy production decreases"
   },
   {
-    question: "A neutralization reaction produces:",
-    options: ["Salt and water", "Salt and acid", "Base and acid", "Hydrogen and oxygen"],
-    answer: "Salt and water"
+    question: "Why do metals conduct electricity better than non-metals?",
+    options: ["They are heavier", "They contain free-moving electrons", "They are shiny", "They are harder"],
+    answer: "They contain free-moving electrons"
   },
   {
-    question: "The outermost layer of the Earth is called the:",
-    options: ["Mantle", "Crust", "Core", "Lithosphere"],
-    answer: "Crust"
+    question: "What is the effect of heating a solid?",
+    options: ["Particles stop moving", "Particles gain energy and vibrate faster", "Particles disappear", "Particles shrink"],
+    answer: "Particles gain energy and vibrate faster"
   },
   {
-    question: "The main function of red blood cells is to:",
-    options: ["Fight diseases", "Help clot blood", "Transport oxygen", "Filter waste"],
-    answer: "Transport oxygen"
+    question: "Why is clean water important for human health?",
+    options: ["It increases taste", "It prevents diseases", "It produces oxygen", "It improves soil"],
+    answer: "It prevents diseases"
   },
   {
-    question: "The energy stored in the nucleus of an atom is:",
-    options: ["Chemical energy", "Thermal energy", "Nuclear energy", "Mechanical energy"],
-    answer: "Nuclear energy"
+    question: "Which organ helps in balancing the body?",
+    options: ["Ear", "Eye", "Heart", "Kidney"],
+    answer: "Ear"
   },
   {
-    question: "Which of these is an insulator of electricity?",
-    options: ["Iron", "Copper", "Plastic", "Aluminium"],
-    answer: "Plastic"
+    question: "Why do we need food in the body?",
+    options: ["For colour", "For energy", "growth", "and repair", "For breathing", "For movement only"],
+    answer: "For energy, growth, and repair"
   },
+  {
+    question: "What will happen if plants are deprived of water?",
+    options: ["They grow faster", "They wilt and may die", "They produce more oxygen", "They increase in size"],
+    answer: "They wilt and may die"
+  },
+  {
+    question: "Why is it easier to push an object on a smooth surface?",
+    options: ["More friction", "Less friction", "More weight", "Less energy"],
+    answer: "Less friction"
+  },
+  {
+    question: "What is the main function of the large intestine?",
+    options: ["Digest proteins", "Absorb water from waste", "Produce enzymes", "Break food"],
+    answer: "Absorb water from waste"
+  },
+  {
+    question: "Which part of the plant supports it and transports substances?",
+    options: ["Leaf", "Root", "Stem", "Flower"],
+    answer: "Stem"
+  },
+  {
+    question: "Why do we use insulators in electrical wiring?",
+    options: ["To conduct electricity", "To prevent electric shock", "To increase current", "To produce energy"],
+    answer: "To prevent electric shock"
+  },
+  {
+    question: "What happens when a liquid is cooled?",
+    options: ["Particles move faster", "Particles lose energy", "Particles disappear", "Particles expand"],
+    answer: "Particles lose energy"
+  },
+  {
+    question: "Why are plants important in the ecosystem?",
+    options: ["They produce noise", "They provide oxygen and food", "They reduce soil", "They remove sunlight"],
+    answer: "They provide oxygen and food"
+  },
+  {
+    question: "Which of the following is an example of friction?",
+    options: ["A ball rolling and slowing down", "A stone falling", "Light reflecting", "Water boiling"],
+    answer: "A ball rolling and slowing down"
+  },
+  {
+    question: "Why does oil not mix with water?",
+    options: ["Oil is heavier", "Oil is insoluble in water", "Oil evaporates", "Oil is solid"],
+    answer: "Oil is insoluble in water"
+  },
+  {
+    question: "What happens when food is not properly digested?",
+    options: ["Energy increases", "Nutrients are not absorbed well", "Blood increases", "Breathing improves"],
+    answer: "Nutrients are not absorbed well"
+  },
+  {
+    question: "Why is the sun important for drying clothes?",
+    options: ["It increases water", "It provides heat for evaporation", "It produces air", "It adds weight"],
+    answer: "It provides heat for evaporation"
+  },
+  {
+    question: "Which of the following best explains pollution?",
+    options: ["Clean environment", "Addition of harmful substances to environment", "Increase in oxygen", "Decrease in water"],
+    answer: "Addition of harmful substances to environment"
+  },
+  {
+    question: "Why do we need to conserve natural resources?",
+    options: ["To waste them", "To ensure future availability", "To increase pollution", "To reduce oxygen"],
+    answer: "To ensure future availability"
+  },
+  {
+    question: "What will happen if stomata in plant leaves remain closed for a long time?",
+    options: ["Photosynthesis increases", "Gas exchange is reduced", "Water absorption increases", "Growth becomes faster"],
+    answer: "Gas exchange is reduced"
+  },
+  {
+    question: "Why do we feel cooler when sweat evaporates from the skin?",
+    options: ["It adds heat to the body", "It removes heat from the body", "It increases blood flow", "It reduces oxygen"],
+    answer: "It removes heat from the body"
+  },
+  {
+    question: "What is the likely effect of cutting down trees in large numbers?",
+    options: ["Increase in rainfall", "Decrease in soil erosion", "Environmental imbalance", "Increase in oxygen only"],
+    answer: "Environmental imbalance"
+  },
+  {
+    question: "Why does a bulb not light in an open circuit?",
+    options: ["Too much current", "Incomplete path for current flow", "Battery is strong", "Wire is too short"],
+    answer: "Incomplete path for current flow"
+  },
+  {
+    question: "What will happen if a person lacks iron in the diet?",
+    options: ["Strong muscles", "Improved digestion", "Anaemia (low red blood cells)", "Faster breathing"],
+    answer: "Anaemia (low red blood cells)"
+  },
+  {
+    question: "Why do particles in gases spread out quickly?",
+    options: ["They are tightly packed", "They have high kinetic energy", "They are fixed", "They are large"],
+    answer: "They have high kinetic energy"
+  },
+  {
+    question: "Which of the following best explains why metals expand when heated?",
+    options: ["Particles move closer", "Particles gain energy and move apart", "Particles stop moving", "Particles shrink"],
+    answer: "Particles gain energy and move apart"
+  },
+  {
+    question: "What will happen if the alveoli in the lungs are damaged?",
+    options: ["Digestion improves", "Gas exchange becomes inefficient", "Blood flow stops", "Heart rate decreases"],
+    answer: "Gas exchange becomes inefficient"
+  },
+  {
+    question: "Why is it dangerous to drink untreated water?",
+    options: ["It contains too much oxygen", "It may contain harmful microorganisms", "It has no taste", "It increases temperature"],
+    answer: "It may contain harmful microorganisms"
+  },
+  {
+    question: "What is the effect of friction on moving objects?",
+    options: ["It increases speed always", "It opposes motion", "It creates light", "It removes weight"],
+    answer: "It opposes motion"
+  },
+  {
+    question: "Why do we add manure or fertilizer to soil?",
+    options: ["To reduce sunlight", "To increase soil nutrients", "To decrease water", "To reduce oxygen"],
+    answer: "To increase soil nutrients"
+  },
+  {
+    question: "What happens when a liquid changes into a gas at its surface?",
+    options: ["Condensation", "Evaporation", "Freezing", "Melting"],
+    answer: "Evaporation"
+  },
+  {
+    question: "Which of the following best explains renewable resources?",
+    options: ["Cannot be replaced", "Can be replaced naturally", "Used once only", "Very expensive"],
+    answer: "Can be replaced naturally"
+  },
+  {
+    question: "Why does light bend when it passes from air into water?",
+    options: ["Reflection", "Refraction", "Diffusion", "Friction"],
+    answer: "Refraction"
+  },
+  {
+    question: "What is the likely effect of poor sanitation in a community?",
+    options: ["Better health", "Spread of diseases", "Improved environment", "Increase in oxygen"],
+    answer: "Spread of diseases"
+  },
+  {
+    question: "Why do parallel circuits allow appliances to work independently?",
+    options: ["Single path for current", "Multiple paths for current", "No current flow", "Increased resistance only"],
+    answer: "Multiple paths for current"
+  },
+  {
+    question: "What will happen if there is no gravity on Earth?",
+    options: ["Objects fall faster", "Objects float freely", "Objects become heavier", "Objects stop existing"],
+    answer: "Objects float freely"
+  },
+  {
+    question: "Why is oxygen important in respiration?",
+    options: ["It produces food", "It helps release energy from food", "It stores energy", "It controls movement"],
+    answer: "It helps release energy from food"
+  },
+  {
+    question: "What is the effect of adding too much waste to the environment?",
+    options: ["Cleaner environment", "Reduced pollution", "Environmental pollution increases", "More oxygen is produced"],
+    answer: "Environmental pollution increases"
+  },
+  {
+    question: "Why do magnets lose strength when heated strongly?",
+    options: ["Particles gain energy and disorder increases", "They become heavier", "They produce heat", "They shrink"],
+    answer: "Particles gain energy and disorder increases"
+  },
+  {
+    question: "A plant is exposed to sunlight but its leaves are coated with oil. What is the likely effect?",
+    options: ["Photosynthesis increases", "Gas exchange is blocked", "Water absorption increases", "Growth becomes faster"],
+    answer: "Gas exchange is blocked"
+  },
+  {
+    question: "Why does a metal spoon feel hotter than a wooden spoon in hot water?",
+    options: ["Metal produces heat", "Metal conducts heat faster", "Wood absorbs heat faster", "Wood is heavier"],
+    answer: "Metal conducts heat faster"
+  },
+  {
+    question: "What will happen if insulin is not produced in the body?",
+    options: ["Digestion improves", "Blood sugar becomes uncontrolled", "Breathing slows", "Blood pressure drops"],
+    answer: "Blood sugar becomes uncontrolled"
+  },
+  {
+    question: "Why does increasing temperature increase the rate of dissolving substances?",
+    options: ["Particles move slower", "Particles gain energy and collide more", "Water becomes solid", "Substances disappear"],
+    answer: "Particles gain energy and collide more"
+  },
+  {
+    question: "What is the likely effect of waterlogging in soil on plant roots?",
+    options: ["Improved growth", "Lack of oxygen for roots", "Increased nutrients", "Faster photosynthesis"],
+    answer: "Lack of oxygen for roots"
+  },
+  {
+    question: "Why does sound not travel in space?",
+    options: ["No light is present", "No medium for vibration", "Too much energy", "Too much heat"],
+    answer: "No medium for vibration"
+  },
+  {
+    question: "What happens when a current flows through a high resistance wire?",
+    options: ["Current increases", "Heat is produced", "Voltage disappears", "Energy is lost completely"],
+    answer: "Heat is produced"
+  },
+  {
+    question: "Why do farmers rotate crops?",
+    options: ["To reduce sunlight", "To maintain soil fertility", "To increase water loss", "To reduce oxygen"],
+    answer: "To maintain soil fertility"
+  },
+  {
+    question: "Which of the following explains why objects float?",
+    options: ["They are heavy", "They are less dense than the liquid", "They absorb water", "They have no mass"],
+    answer: "They are less dense than the liquid"
+  },
+  {
+    question: "What will happen if the ozone layer is depleted?",
+    options: ["Less sunlight reaches Earth", "More harmful radiation reaches Earth", "Air becomes cleaner", "Temperature decreases only"],
+    answer: "More harmful radiation reaches Earth"
+  },
+  {
+    question: "Why do particles in solids not move freely?",
+    options: ["They have high energy", "They are tightly packed", "They are far apart", "They disappear"],
+    answer: "They are tightly packed"
+  },
+  {
+    question: "What is the effect of too much carbon dioxide in the atmosphere?",
+    options: ["Cooling of Earth", "Global warming", "Increase in oxygen", "Decrease in sunlight"],
+    answer: "Global warming"
+  },
+  {
+    question: "Why is a fuse important in an electrical circuit?",
+    options: ["To increase current", "To prevent damage from excess current", "To store energy", "To produce light"],
+    answer: "To prevent damage from excess current"
+  },
+  {
+    question: "What will happen if a person breathes in carbon monoxide?",
+    options: ["Improved oxygen supply", "Reduced oxygen transport in blood", "Better breathing", "Increased energy"],
+    answer: "Reduced oxygen transport in blood"
+  },
+  {
+    question: "Why does cutting trees increase soil erosion?",
+    options: ["Roots no longer hold soil", "Soil becomes stronger", "Water disappears", "Air pressure reduces"],
+    answer: "Roots no longer hold soil"
+  },
+  {
+    question: "What is the effect of increasing surface area of a substance in a reaction?",
+    options: ["Reaction slows down", "Reaction rate increases", "No effect", "Reaction stops"],
+    answer: "Reaction rate increases"
+  },
+  {
+    question: "Why is the heart rate higher during exercise?",
+    options: ["To cool the body", "To supply more oxygen to muscles", "To reduce blood flow", "To increase digestion"],
+    answer: "To supply more oxygen to muscles"
+  },
+  {
+    question: "What happens when light passes through a prism?",
+    options: ["It disappears", "It splits into different colours", "It slows down completely", "It becomes sound"],
+    answer: "It splits into different colours"
+  },
+  {
+    question: "Why is proper waste disposal important in cities?",
+    options: ["To increase pollution", "To prevent disease and environmental damage", "To reduce sunlight", "To increase heat"],
+    answer: "To prevent disease and environmental damage"
+  },
+  {
+    question: "A student places a plant in a sealed container exposed to sunlight. Why might the plant eventually die?",
+    options: ["Too much oxygen", "Imbalance of gases over time", "Excess water", "Too much light"],
+    answer: "Imbalance of gases over time"
+  },
+  {
+    question: "Why do metals expand more quickly than most materials when heated?",
+    options: ["They lose particles", "Their particles gain energy rapidly and spread apart", "They become lighter", "They absorb oxygen"],
+    answer: "Their particles gain energy rapidly and spread apart"
+  },
+  {
+    question: "What will happen if the kidneys fail to function properly?",
+    options: ["Digestion improves", "Waste accumulates in the blood", "Oxygen supply increases", "Heart rate decreases"],
+    answer: "Waste accumulates in the blood"
+  },
+  {
+    question: "Why does a decrease in temperature slow down chemical reactions?",
+    options: ["Particles stop moving", "Particles have less energy and collide less", "Substances disappear", "Energy increases"],
+    answer: "Particles have less energy and collide less"
+  },
+  {
+    question: "What is the effect of deforestation on the water cycle?",
+    options: ["Increases rainfall always", "Reduces transpiration and rainfall", "Increases oxygen only", "Improves soil fertility"],
+    answer: "Reduces transpiration and rainfall"
+  },
+  {
+    question: "What will happen if there is too much resistance in a circuit?",
+    options: ["Current increases", "Current decreases", "Voltage disappears", "Energy is created"],
+    answer: "Current decreases"
+  },
+  {
+    question: "Why is chlorophyll essential for plant survival?",
+    options: ["It stores water", "It absorbs sunlight for photosynthesis", "It transports food", "It absorbs minerals"],
+    answer: "It absorbs sunlight for photosynthesis"
+  },
+  {
+    question: "What is the likely effect of overfishing in water bodies?",
+    options: ["Increase in fish population", "Disruption of aquatic ecosystem", "More oxygen in water", "Improved water quality"],
+    answer: "Disruption of aquatic ecosystem"
+  },
+  {
+    question: "Why does increasing pressure on a gas reduce its volume?",
+    options: ["Particles move slower", "Particles are forced closer together", "Gas disappears", "Temperature decreases"],
+    answer: "Particles are forced closer together"
+  },
+  {
+    question: "What happens when energy is transferred from one form to another?",
+    options: ["Energy is destroyed", "Energy changes form but is conserved", "Energy disappears", "Energy reduces completely"],
+    answer: "Energy changes form but is conserved"
+  },
+  {
+    question: "Why does the body need vitamins in small amounts?",
+    options: ["For energy only", "For proper body functioning and protection", "For movement only", "For digestion only"],
+    answer: "For proper body functioning and protection"
+  },
+  {
+    question: "What will happen if soil loses all its nutrients?",
+    options: ["Plants grow faster", "Plants fail to grow properly", "Water increases", "Soil becomes stronger"],
+    answer: "Plants fail to grow properly"
+  },
+  {
+    question: "What is the effect of poor ventilation in a room?",
+    options: ["Improved air quality", "Reduced oxygen and increased carbon dioxide", "Increase in light", "Decrease in temperature"],
+    answer: "Reduced oxygen and increased carbon dioxide"
+  },
+  {
+    question: "Why is it important to conserve water resources?",
+    options: ["To waste water", "To ensure future availability", "To increase pollution", "To reduce sunlight"],
+    answer: "To ensure future availability"
+  },
+  {
+    question: "What will happen if enzymes in the body stop working?",
+    options: ["Digestion slows or stops", "Energy increases", "Blood flow increases", "Breathing improves"],
+    answer: "Digestion slows or stops"
+  },
+  {
+    question: "Why do parallel circuits continue working when one appliance fails?",
+    options: ["Single path exists", "Multiple independent paths exist", "No current flows", "Resistance disappears"],
+    answer: "Multiple independent paths exist"
+  },
+  {
+    question: "What is the effect of increased greenhouse gases in the atmosphere?",
+    options: ["Cooling of Earth", "Global warming", "Decrease in sunlight", "Improved rainfall only"],
+    answer: "Global warming"
+  },
+  {
+    question: "Why is friction useful in daily life?",
+    options: ["It stops all motion", "It helps in movement and prevents slipping", "It removes energy", "It reduces weight"],
+    answer: "It helps in movement and prevents slipping"
+  },
+  {
+    question: "A plant is placed under green light only. What is the likely effect on photosynthesis?",
+    options: ["Photosynthesis increases", "Photosynthesis decreases significantly", "No effect", "Photosynthesis stops completely"],
+    answer: "Photosynthesis decreases significantly"
+  },
+  {
+    question: "Why do athletes breathe more deeply during exercise?",
+    options: ["To remove nitrogen", "To supply more oxygen and remove carbon dioxide", "To reduce blood pressure", "To cool the lungs"],
+    answer: "To supply more oxygen and remove carbon dioxide"
+  },
+  {
+    question: "Which method can be used to separate alcohol from water?",
+    options: ["Filtration", "Distillation", "Sieving", "Decanting"],
+    answer: "Distillation"
+  },
+  {
+    question: "What is the main reason why bridges are built with expansion joints?",
+    options: ["To reduce weight", "To allow expansion due to heat", "To increase strength only", "To reduce cost"],
+    answer: "To allow expansion due to heat"
+  },
+  {
+    question: "Which blood component is responsible for clotting?",
+    options: ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+    answer: "Platelets"
+  },
+  {
+    question: "Why does increasing pressure increase the boiling point of a liquid?",
+    options: ["Particles gain energy faster", "More energy is needed for particles to escape", "Liquid becomes solid", "Particles stop moving"],
+    answer: "More energy is needed for particles to escape"
+  },
+  {
+    question: "What is the function of the medulla in the brain?",
+    options: ["Controls voluntary actions", "Controls involuntary activities like breathing", "Stores memory", "Controls vision"],
+    answer: "Controls involuntary activities like breathing"
+  },
+  {
+    question: "Why are dark-colored clothes hotter in sunlight?",
+    options: ["They reflect more light", "They absorb more heat", "They produce heat", "They reduce sunlight"],
+    answer: "They absorb more heat"
+  },
+  {
+    question: "What happens when a catalyst is added to a chemical reaction?",
+    options: ["Reaction stops", "Reaction slows down", "Reaction speeds up", "Energy is destroyed"],
+    answer: "Reaction speeds up"
+  },
+  {
+    question: "Which organ is responsible for removing carbon dioxide from the body?",
+    options: ["Kidney", "Liver", "Lungs", "Heart"],
+    answer: "Lungs"
+  },
+  {
+    question: "Why does a sharp knife cut better than a blunt one?",
+    options: ["It has more weight", "It exerts greater pressure on a smaller area", "It moves faster", "It has less friction"],
+    answer: "It exerts greater pressure on a smaller area"
+  },
+  {
+    question: "What is the effect of acid rain on buildings?",
+    options: ["Strengthens structures", "Causes corrosion and damage", "Improves appearance", "Reduces temperature"],
+    answer: "Causes corrosion and damage"
+  },
+  {
+    question: "Which process is responsible for the movement of water through a plant?",
+    options: ["Diffusion", "Transpiration pull", "Respiration", "Photosynthesis"],
+    answer: "Transpiration pull"
+  },
+  {
+    question: "Why does a person feel dizzy at high altitudes?",
+    options: ["More oxygen is available", "Less oxygen is available", "Temperature is high", "Air pressure is high"],
+    answer: "Less oxygen is available"
+  },
+  {
+    question: "What type of energy transformation occurs in a solar panel?",
+    options: ["Electrical to chemical", "Light to electrical", "Heat to sound", "Chemical to light"],
+    answer: "Light to electrical"
+  },
+  {
+    question: "Why is it difficult to compress a liquid?",
+    options: ["Particles are far apart", "Particles are closely packed", "Particles have no energy", "Particles are large"],
+    answer: "Particles are closely packed"
+  },
+  {
+    question: "Which of the following is an effect of overpopulation?",
+    options: ["More resources", "Less pollution", "Pressure on natural resources", "Better environment"],
+    answer: "Pressure on natural resources"
+  },
+  {
+    question: "Why does an object sink in water?",
+    options: ["It is less dense than water", "It is more dense than water", "It absorbs water", "It contains air"],
+    answer: "It is more dense than water"
+  },
+  {
+    question: "What happens to enzymes at very high temperatures?",
+    options: ["They work faster", "They are destroyed (denatured)", "They increase in number", "They stop existing"],
+    answer: "They are destroyed (denatured)"
+  },
+  {
+    question: "Why is conservation of forests important?",
+    options: ["To increase pollution", "To maintain ecological balance", "To reduce rainfall", "To remove oxygen"],
+    answer: "To maintain ecological balance"
+  },
+  {
+    question: "Why do plants appear green in colour?",
+    options: ["They absorb green light", "They reflect green light", "They produce green pigment only", "They absorb all colours equally"],
+    answer: "They reflect green light"
+  },
+  {
+    question: "What happens to the volume of a gas when its temperature increases (at constant pressure)?",
+    options: ["Decreases", "Remains constant", "Increases", "Becomes zero"],
+    answer: "Increases"
+  },
+  {
+    question: "Which of the following prevents backflow of blood in the heart?",
+    options: ["Arteries", "Veins", "Valves", "Capillaries"],
+    answer: "Valves"
+  },
+  {
+    question: "Why does salt preserve food?",
+    options: ["It adds nutrients", "It removes water from microorganisms", "It increases temperature", "It adds oxygen"],
+    answer: "It removes water from microorganisms"
+  },
+  {
+    question: "Which form of energy is stored in a stretched rubber band?",
+    options: ["Kinetic energy", "Chemical energy", "Elastic potential energy", "Heat energy"],
+    answer: "Elastic potential energy"
+  },
+  {
+    question: "Why do objects appear larger when viewed through a magnifying glass?",
+    options: ["Reflection of light", "Refraction of light", "Absorption of light", "Diffusion of light"],
+    answer: "Refraction of light"
+  },
+  {
+    question: "What is the function of the large intestine in digestion?",
+    options: ["Digests proteins", "Absorbs water from undigested food", "Produces enzymes", "Stores oxygen"],
+    answer: "Absorbs water from undigested food"
+  },
+  {
+    question: "Which factor increases the rate of evaporation?",
+    options: ["Low temperature", "High humidity", "High temperature", "Low surface area"],
+    answer: "High temperature"
+  },
+  {
+    question: "Why does iron rust faster in salty water?",
+    options: ["Salt reduces oxygen", "Salt acts as a catalyst", "Salt increases conductivity of water", "Salt removes water"],
+    answer: "Salt increases conductivity of water"
+  },
+  {
+    question: "Which of the following is an example of a vector quantity?",
+    options: ["Speed", "Distance", "Velocity", "Time"],
+    answer: "Velocity"
+  },
+  {
+    question: "Why is the skin considered an excretory organ?",
+    options: ["It produces blood", "It removes sweat containing waste", "It stores nutrients", "It controls movement"],
+    answer: "It removes sweat containing waste"
+  },
+  {
+    question: "What is the main purpose of vaccination?",
+    options: ["To cure diseases", "To prevent diseases by building immunity", "To increase appetite", "To reduce temperature"],
+    answer: "To prevent diseases by building immunity"
+  },
+  {
+    question: "Which process converts liquid water into water vapour below boiling point?",
+    options: ["Condensation", "Evaporation", "Freezing", "Melting"],
+    answer: "Evaporation"
+  },
+  {
+    question: "Why does a metal rod feel hot at one end when the other end is heated?",
+    options: ["Convection", "Radiation", "Conduction", "Reflection"],
+    answer: "Conduction"
+  },
+  {
+    question: "What is the function of the pancreas in digestion?",
+    options: ["Produces bile", "Produces digestive enzymes", "Stores food", "Pumps blood"],
+    answer: "Produces digestive enzymes"
+  },
+  {
+    question: "Which of the following is a greenhouse gas?",
+    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    answer: "Carbon dioxide"
+  },
+  {
+    question: "Why does increasing surface area increase the rate of a reaction?",
+    options: ["Less collision", "More particle collisions", "Less energy", "No change"],
+    answer: "More particle collisions"
+  },
+  {
+    question: "What happens when a substance gains electrons?",
+    options: ["It becomes positive", "It becomes negative", "It becomes neutral", "It disappears"],
+    answer: "It becomes negative"
+  },
+  {
+    question: "Why do we wear light-coloured clothes in hot weather?",
+    options: ["They absorb more heat", "They reflect more heat", "They produce cold", "They increase temperature"],
+    answer: "They reflect more heat"
+  },
+  {
+    question: "What is the main effect of deforestation on wildlife?",
+    options: ["Increase in habitat", "Loss of habitat", "Increase in food supply", "Improved environment"],
+    answer: "Loss of habitat"
+  },
+  {
+    question: "Why does a person shiver in cold weather?",
+    options: ["To lose heat", "To generate heat through muscle activity", "To reduce blood flow", "To increase oxygen"],
+    answer: "To generate heat through muscle activity"
+  },
+  {
+    question: "Which of the following best explains diffusion?",
+    options: ["Movement from low to high concentration", "Movement from high to low concentration", "Movement of solids only", "Movement caused by gravity"],
+    answer: "Movement from high to low concentration"
+  },
+  {
+    question: "Why is a vacuum flask able to keep liquids hot for a long time?",
+    options: ["It produces heat", "It reduces heat transfer", "It increases temperature", "It absorbs cold"],
+    answer: "It reduces heat transfer"
+  },
+  {
+    question: "What happens when light passes from water into air?",
+    options: ["It stops", "It bends away from the normal", "It disappears", "It becomes sound"],
+    answer: "It bends away from the normal"
+  },
+  {
+    question: "Which part of the brain controls balance and coordination?",
+    options: ["Cerebrum", "Cerebellum", "Medulla", "Spinal cord"],
+    answer: "Cerebellum"
+  },
+  {
+    question: "Why do farmers irrigate crops?",
+    options: ["To reduce sunlight", "To supply water when rainfall is low", "To increase soil erosion", "To reduce nutrients"],
+    answer: "To supply water when rainfall is low"
+  },
+  {
+    question: "What is the effect of adding more solute to a saturated solution?",
+    options: ["It dissolves completely", "It settles at the bottom", "It disappears", "It turns to gas"],
+    answer: "It settles at the bottom"
+  },
+  {
+    question: "Which of the following best explains inertia?",
+    options: ["Ability to change motion", "Resistance to change in motion", "Force that pulls objects", "Energy of movement"],
+    answer: "Resistance to change in motion"
+  },
+  {
+    question: "Why does breathing rate increase when carbon dioxide levels rise?",
+    options: ["To reduce oxygen", "To remove excess carbon dioxide", "To increase nitrogen", "To reduce heat"],
+    answer: "To remove excess carbon dioxide"
+  },
+  {
+    question: "What type of lens is used to correct short-sightedness?",
+    options: ["Convex lens", "Concave lens", "Plane mirror", "Prism"],
+    answer: "Concave lens"
+  },
+  {
+    question: "Why is fermentation important in food production?",
+    options: ["It increases oxygen", "It helps produce substances like alcohol and bread", "It removes nutrients", "It reduces temperature"],
+    answer: "It helps produce substances like alcohol and bread"
+  },
+  {
+    question: "What happens to pressure when force is applied over a smaller area?",
+    options: ["Pressure decreases", "Pressure increases", "Pressure remains constant", "Pressure disappears"],
+    answer: "Pressure increases"
+  },
+  {
+    question: "Why do we feel less weight in water?",
+    options: ["Water reduces gravity", "Upthrust opposes weight", "Mass decreases", "Density decreases"],
+    answer: "Upthrust opposes weight"
+  },
+  {
+    question: "Which process releases energy in living cells?",
+    options: ["Photosynthesis", "Respiration", "Transpiration", "Diffusion"],
+    answer: "Respiration"
+  },
+  {
+    question: "Why does a candle go off when covered with a jar?",
+    options: ["Too much oxygen", "Oxygen is used up", "Temperature increases", "Wax disappears"],
+    answer: "Oxygen is used up"
+  },
+  {
+    question: "What is the function of the rib cage?",
+    options: ["Produce blood", "Protect vital organs like lungs and heart", "Control movement", "Digest food"],
+    answer: "Protect vital organs like lungs and heart"
+  },
+  {
+    question: "Why is composting beneficial?",
+    options: ["Increases pollution", "Produces organic fertilizer", "Reduces oxygen", "Increases waste"],
+    answer: "Produces organic fertilizer"
+  },
+  {
+    question: "What happens when two different substances react chemically?",
+    options: ["They remain unchanged", "New substances are formed", "They separate", "They disappear"],
+    answer: "New substances are formed"
+  },
+  {
+    question: "Why does increasing temperature increase kinetic energy?",
+    options: ["Particles stop moving", "Particles move faster", "Particles shrink", "Particles disappear"],
+    answer: "Particles move faster"
+  },
+  {
+    question: "Which of the following best explains renewable energy sources?",
+    options: ["They cannot be replaced", "They are exhausted quickly", "They are naturally replenished", "They produce pollution only"],
+    answer: "They are naturally replenished"
+  },
+  {
+    question: "Why does a steel bridge have gaps between sections?",
+    options: ["To reduce weight", "To allow for thermal expansion", "To increase strength", "To reduce cost"],
+    answer: "To allow for thermal expansion"
+  },
+  {
+    question: "What happens to the density of a substance when its volume increases but mass remains constant?",
+    options: ["Density increases", "Density decreases", "Density remains the same", "Density becomes zero"],
+    answer: "Density decreases"
+  },
+  {
+    question: "Which part of the human body produces insulin?",
+    options: ["Liver", "Pancreas", "Kidney", "Stomach"],
+    answer: "Pancreas"
+  },
+  {
+    question: "Why does an object continue moving when no external force acts on it?",
+    options: ["Due to friction", "Due to inertia", "Due to gravity", "Due to pressure"],
+    answer: "Due to inertia"
+  },
+  {
+    question: "What is the function of chloroplast in plant cells?",
+    options: ["Store water", "Carry out photosynthesis", "Transport nutrients", "Produce oxygen only"],
+    answer: "Carry out photosynthesis"
+  },
+  {
+    question: "Why do we experience seasons on Earth?",
+    options: ["Distance from the Sun changes", "Tilt of the Earth's axis", "Sun's temperature changes", "Cloud movement"],
+    answer: "Tilt of the Earth's axis"
+  },
+  {
+    question: "Which process is responsible for cooling when a liquid evaporates?",
+    options: ["Condensation", "Evaporation", "Freezing", "Melting"],
+    answer: "Evaporation"
+  },
+  {
+    question: "What happens when a force acts on a stationary object?",
+    options: ["It remains at rest", "It starts moving", "It disappears", "It becomes lighter"],
+    answer: "It starts moving"
+  },
+  {
+    question: "Why are veins thinner than arteries?",
+    options: ["They carry more blood", "They carry blood at lower pressure", "They produce blood", "They contain oxygen only"],
+    answer: "They carry blood at lower pressure"
+  },
+  {
+    question: "What is the effect of increasing voltage in a circuit?",
+    options: ["Current decreases", "Current increases", "Resistance increases", "Energy disappears"],
+    answer: "Current increases"
+  },
+  {
+    question: "Why do we feel heat from the Sun even though space is a vacuum?",
+    options: ["Conduction", "Convection", "Radiation", "Diffusion"],
+    answer: "Radiation"
+  },
+  {
+    question: "Which of the following is a biodegradable material?",
+    options: ["Plastic", "Glass", "Paper", "Metal"],
+    answer: "Paper"
+  },
+  {
+    question: "Why does a heavier object not always fall faster than a lighter one?",
+    options: ["Due to air resistance", "Due to gravity", "Due to density", "Due to pressure"],
+    answer: "Due to air resistance"
+  },
+  {
+    question: "What is the main function of white blood cells?",
+    options: ["Carry oxygen", "Fight infections", "Clot blood", "Store nutrients"],
+    answer: "Fight infections"
+  },
+  {
+    question: "Why is it easier to dissolve sugar in hot tea than in cold water?",
+    options: ["Particles are larger", "Particles move faster at higher temperature", "Water is heavier", "Sugar changes state"],
+    answer: "Particles move faster at higher temperature"
+  },
+  {
+    question: "What happens when a magnet is heated strongly?",
+    options: ["It becomes stronger", "It loses its magnetism", "It increases weight", "It produces electricity"],
+    answer: "It loses its magnetism"
+  },
+  {
+    question: "Why is the atmosphere important to life on Earth?",
+    options: ["It produces soil", "It provides gases and protection", "It reduces gravity", "It produces water"],
+    answer: "It provides gases and protection"
+  },
+  {
+    question: "What is the effect of too much fertilizer entering water bodies?",
+    options: ["Improves water quality", "Causes water pollution and algal growth", "Increases oxygen", "Reduces temperature"],
+    answer: "Causes water pollution and algal growth"
+  },
+  {
+    question: "Which of the following best explains pressure?",
+    options: ["Force only", "Force per unit area", "Energy per unit time", "Mass per volume"],
+    answer: "Force per unit area"
+  },
+  {
+    question: "Why does a concave mirror form a magnified image when an object is close?",
+    options: ["Reflection of light rays", "Refraction of light", "Absorption of light", "Diffusion of light"],
+    answer: "Reflection of light rays"
+  },
+  
 {
-  question: "Which material is a good conductor of electricity?",
-  options: ["Rubber", "Plastic", "Wood", "Copper"],
-  answer: "Copper"
+  question: "The diagram shows a filtration setup. What is collected as the filtrate?",
+  image: "/images/filtration1.png",
+  options: [
+    "Solid on the filter paper",
+    "Liquid that passes through",
+    "Mixture before filtration",
+    "Residue in the funnel"
+  ],
+  answer: "Liquid that passes through"
 },
+
 {
-  question: "What happens when unlike poles of two magnets are brought close together?",
-  options: ["They repel each other", "They attract each other", "They become weaker", "Nothing happens"],
-  answer: "They attract each other"
+  question: "The diagram shows a simple electric circuit. What happens when the switch is closed?",
+  image: "/images/circuit1.png",
+  options: [
+    "No current flows",
+    "Bulb lights",
+    "Battery stops working",
+    "Wire breaks"
+  ],
+  answer: "Bulb lights"
 },
+
 {
-  question: "Which of the following is an example of an insulator?",
-  options: ["Iron nail", "Aluminium rod", "Copper wire", "Rubber band"],
-  answer: "Rubber band"
+  question: "The diagram shows the human heart. Which chamber pumps blood to the body?",
+  image: "/images/heart1.png",
+  options: [
+    "Right atrium",
+    "Left atrium",
+    "Right ventricle",
+    "Left ventricle"
+  ],
+  answer: "Left ventricle"
 },
+
 {
-  question: "What is the function of a switch in an electric circuit?",
-  options: ["To increase current", "To store electricity", "To control the flow of current", "To provide resistance"],
-  answer: "To control the flow of current"
+  question: "The diagram shows lungs. What process is taking place?",
+  image: "/images/lungs1.png",
+  options: [
+    "Digestion",
+    "Respiration",
+    "Excretion",
+    "Circulation"
+  ],
+  answer: "Respiration"
 },
+
 {
-  question: "Which substance turns blue litmus paper red?",
-  options: ["Water", "Salt", "Acid", "Base"],
-  answer: "Acid"
+  question: "The diagram shows a thermometer reading. What is the temperature shown?",
+  image: "/images/thermometer1.png",
+  options: ["20Â°C", "25Â°C", "30Â°C", "35Â°C"],
+  answer: "25Â°C"
 },
+
 {
-  question: "Neutralization is a reaction between:",
-  options: ["Acid and oxygen", "Acid and base", "Base and water", "Salt and sugar"],
-  answer: "Acid and base"
+  question: "The diagram shows a magnet attracting objects. Which material is attracted?",
+  image: "/images/magnet1.png",
+  options: [
+    "Plastic",
+    "Wood",
+    "Iron nail",
+    "Rubber"
+  ],
+  answer: "Iron nail"
 },
+
 {
-  question: "What is produced when an acid reacts with a base?",
-  options: ["Salt and water", "Oxygen", "Gas and water", "Heat and sugar"],
-  answer: "Salt and water"
+  question: "The diagram shows a food chain. Which organism is the secondary consumer?",
+  image: "/images/foodchain1.png",
+  options: [
+    "Grass",
+    "Grasshopper",
+    "Frog",
+    "Snake"
+  ],
+  answer: "Frog"
 },
+
 {
-  question: "Which of these is a basic substance?",
-  options: ["Vinegar", "Lemon juice", "Soap solution", "Orange juice"],
-  answer: "Soap solution"
+  question: "The diagram shows evaporation of water. What causes this process?",
+  image: "/images/evaporation1.png",
+  options: [
+    "Cooling",
+    "Heating",
+    "Freezing",
+    "Condensation"
+  ],
+  answer: "Heating"
 },
+
 {
-  question: "Which of these animals is a vertebrate?",
-  options: ["Snail", "Earthworm", "Toad", "Spider"],
-  answer: "Toad"
+  question: "The diagram shows a lever. What is the function of the fulcrum?",
+  image: "/images/lever1.png",
+  options: [
+    "Applies force",
+    "Holds the load",
+    "Acts as pivot point",
+    "Reduces weight"
+  ],
+  answer: "Acts as pivot point"
 },
+
 {
-  question: "What is the primary source of energy in a food chain?",
-  options: ["Water", "Sun", "Oxygen", "Soil"],
-  answer: "Sun"
+  question: "The diagram shows a plant cell. Which part contains chlorophyll?",
+  image: "/images/plantcell1.png",
+  options: [
+    "Nucleus",
+    "Vacuole",
+    "Chloroplast",
+    "Cell membrane"
+  ],
+  answer: "Chloroplast"
 },
+
 {
-  question: "Which of these animals is a herbivore?",
-  options: ["Lion", "Dog", "Goat", "Hyena"],
-  answer: "Goat"
-},
-{
-  question: "What role do decomposers play in an ecosystem?",
-  options: ["Make food", "Hunt animals", "Break down dead organisms", "Protect plants"],
-  answer: "Break down dead organisms"
-},
-{
-  question: "The long neck of a giraffe is an example of:",
-  options: ["Reproduction", "Pollination", "Adaptation", "Digestion"],
-  answer: "Adaptation"
-},
-{
-  question: "Which of the following is a desert plant adaptation?",
-  options: ["Large leaves", "Short roots", "Thick stems", "Broad flowers"],
-  answer: "Thick stems"
-},
-{
-  question: "In a food web, which organism is usually the producer?",
-  options: ["Bird", "Lion", "Plant", "Insect"],
-  answer: "Plant"
-},
-{
-  question: "Animals that feed on both plants and animals are called:",
-  options: ["Herbivores", "Carnivores", "Omnivores", "Producers"],
-  answer: "Omnivores"
-},
-{
-  question: "Which of these is a step in scientific investigation?",
-  options: ["Guessing", "Experimenting", "Assuming", "Copying"],
-  answer: "Experimenting"
-},
-{
-  question: "In an experiment, the factor that is changed is called:",
-  options: ["Control", "Variable", "Result", "Data"],
-  answer: "Variable"
-},
-{
-  question: "Why is observation important in science?",
-  options: ["To guess answers", "To memorize rules", "To collect accurate data", "To confuse others"],
-  answer: "To collect accurate data"
-},
-{
-  question: "What is the purpose of a hypothesis?",
-  options: ["To draw pictures", "To record data", "To suggest a possible answer", "To summarize the result"],
-  answer: "To suggest a possible answer"
-},
-{
-  question: "What causes day and night on Earth?",
-  options: ["The moon’s rotation", "Earth’s revolution around the sun", "The Earth rotating on its axis", "Cloud movement"],
-  answer: "The Earth rotating on its axis"
-},
-{
-  question: "Which heavenly body is known as the 'Red Planet'?",
-  options: ["Venus", "Earth", "Mars", "Jupiter"],
-  answer: "Mars"
-},
-{
-  question: "What is the main cause of the Earth’s seasons?",
-  options: ["Changing moon phases", "The tilt of the Earth's axis", "Sun changing size", "Winds from the poles"],
-  answer: "The tilt of the Earth's axis"
-},
-{
-  question: "Which of the following is NOT a planet?",
-  options: ["Mercury", "Pluto", "Earth", "Sun"],
-  answer: "Sun"
-},
-{
-  question: "Which of these is a renewable source of energy?",
-  options: ["Coal", "Petroleum", "Natural gas", "Solar energy"],
-  answer: "Solar energy"
-},
-{
-  question: "In a torchlight, chemical energy is converted into:",
-  options: ["Heat energy", "Sound energy", "Electrical energy", "Magnetic energy"],
-  answer: "Electrical energy"
-},
-{
-  question: "Which energy transformation takes place in an electric iron?",
-  options: ["Chemical to electrical", "Electrical to heat", "Light to chemical", "Sound to heat"],
-  answer: "Electrical to heat"
-},
-{
-  question: "Hydropower is generated using:",
-  options: ["Wind", "Coal", "Running water", "Sunlight"],
-  answer: "Running water"
-},
-{
-  question: "Which organ pumps blood throughout the body?",
-  options: ["Liver", "Lungs", "Heart", "Kidney"],
-  answer: "Heart"
-},
-{
-  question: "Where does digestion begin in the human body?",
-  options: ["Stomach", "Small intestine", "Mouth", "Liver"],
+  question: "The diagram shows the human digestive system. Where does digestion begin?",
+  image: "/images/digestive1.png",
+  options: [
+    "Stomach",
+    "Mouth",
+    "Small intestine",
+    "Large intestine"
+  ],
   answer: "Mouth"
 },
+
 {
-  question: "Which blood vessels carry blood away from the heart?",
-  options: ["Veins", "Capillaries", "Arteries", "Lymph nodes"],
-  answer: "Arteries"
+  question: "The diagram shows the eye. Which part focuses light?",
+  image: "/images/eye1.png",
+  options: [
+    "Retina",
+    "Iris",
+    "Lens",
+    "Optic nerve"
+  ],
+  answer: "Lens"
 },
+
 {
-  question: "What gas do humans inhale during respiration?",
-  options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-  answer: "Oxygen"
+  question: "The diagram shows a pulley system. What is its main advantage?",
+  image: "/images/pulley1.png",
+  options: [
+    "Increases friction",
+    "Changes direction of force",
+    "Stores energy",
+    "Produces heat"
+  ],
+  answer: "Changes direction of force"
 },
+
 {
-  question: "Which human activity is most responsible for deforestation?",
-  options: ["Farming", "Mining", "Tree planting", "Hunting"],
-  answer: "Farming"
+  question: "The diagram shows a seed germinating. Which part emerges first?",
+  image: "/images/germination1.png",
+  options: [
+    "Leaf",
+    "Stem",
+    "Root",
+    "Flower"
+  ],
+  answer: "Root"
 },
+
 {
-  question: "A method of conserving water is:",
-  options: ["Cutting trees", "Leaving taps open", "Fixing leaking pipes", "Mining near rivers"],
-  answer: "Fixing leaking pipes"
+  question: "The diagram shows the human skeleton. Which part protects the heart and lungs?",
+  image: "/images/skeleton1.png",
+  options: [
+    "Skull",
+    "Rib cage",
+    "Spine",
+    "Pelvis"
+  ],
+  answer: "Rib cage"
 },
+
 {
-  question: "Improper disposal of plastic waste leads to:",
-  options: ["Clean rivers", "Air cooling", "Water pollution", "Increased rainfall"],
-  answer: "Water pollution"
+  question: "The diagram shows a water cycle. What process forms clouds?",
+  image: "/images/watercycle1.png",
+  options: [
+    "Evaporation",
+    "Condensation",
+    "Precipitation",
+    "Collection"
+  ],
+  answer: "Condensation"
 },
+
 {
-  question: "Which of these helps protect soil from erosion?",
-  options: ["Bush burning", "Overgrazing", "Planting cover crops", "Cutting all trees"],
-  answer: "Planting cover crops"
+  question: "The diagram shows a balance. What is being measured?",
+  image: "/images/balance1.png",
+  options: [
+    "Force",
+    "Weight",
+    "Mass",
+    "Pressure"
+  ],
+  answer: "Mass"
 },
+
 {
-  question: "Which of the following is a non-contact force?",
-  options: ["Friction", "Muscular force", "Magnetic force", "Push"],
-  answer: "Magnetic force"
+  question: "The diagram shows a circuit with two bulbs in series. What happens if one bulb is removed?",
+  image: "/images/circuit2.png",
+  options: [
+    "Other bulb stays on",
+    "All bulbs go off",
+    "Battery increases power",
+    "Nothing changes"
+  ],
+  answer: "All bulbs go off"
 },
+
 {
-  question: "A moving object stops when:",
-  options: ["There is no gravity", "It runs out of energy", "Friction opposes its motion", "Air pushes it"],
-  answer: "Friction opposes its motion"
+  question: "The diagram shows a leaf. What process occurs in the leaf?",
+  image: "/images/leaf1.png",
+  options: [
+    "Respiration",
+    "Photosynthesis",
+    "Transpiration",
+    "All of the above"
+  ],
+  answer: "All of the above"
 },
+
 {
-  question: "Which instrument is used to measure force?",
-  options: ["Thermometer", "Spring balance", "Ruler", "Stopwatch"],
-  answer: "Spring balance"
+  question: "The diagram shows the ear. Which part is responsible for hearing?",
+  image: "/images/ear1.png",
+  options: [
+    "Eardrum",
+    "Cochlea",
+    "Nerve",
+    "Canal"
+  ],
+  answer: "Cochlea"
 },
+
 {
-  question: "What happens to the speed of a ball rolling on a rough surface?",
-  options: ["It speeds up", "It bounces higher", "It slows down", "It flies off"],
-  answer: "It slows down"
+  question: "The diagram shows a pH scale. Which substance is strongly acidic?",
+  image: "/images/phscale1.png",
+  options: ["pH 2", "pH 7", "pH 9", "pH 12"],
+  answer: "pH 2"
 },
+
 {
-  question: "Which of the following is a property of solids?",
-  options: ["Takes the shape of container", "Can be compressed easily", "Fixed shape", "Flows freely"],
-  answer: "Fixed shape"
+  question: "The diagram shows acid-base indicators. Which colour shows a base in litmus test?",
+  image: "/images/indicator1.png",
+  options: ["Red", "Blue", "Green", "Yellow"],
+  answer: "Blue"
 },
+
 {
-  question: "What change of state occurs when ice melts?",
-  options: ["Liquid to gas", "Solid to liquid", "Gas to solid", "Liquid to solid"],
-  answer: "Solid to liquid"
+  question: "The diagram shows particles in a solid, liquid, and gas. Which has the highest kinetic energy?",
+  image: "/images/states1.png",
+  options: ["Solid", "Liquid", "Gas", "All equal"],
+  answer: "Gas"
 },
+
 {
-  question: "Water changing to vapour is called:",
-  options: ["Condensation", "Evaporation", "Freezing", "Melting"],
-  answer: "Evaporation"
+  question: "The diagram shows atomic structure. What is the charge of electrons?",
+  image: "/images/atom1.png",
+  options: ["Positive", "Negative", "Neutral", "Mixed"],
+  answer: "Negative"
 },
+
+{
+  question: "The diagram shows a mixture being separated by distillation. What is collected first?",
+  image: "/images/distillation1.png",
+  options: ["Substance with higher boiling point", "Substance with lower boiling point", "Residue", "Solid"],
+  answer: "Substance with lower boiling point"
+},
+
+{
+  question: "The diagram shows bonding between atoms. What type of bond is shown?",
+  image: "/images/bonding1.png",
+  options: ["Ionic", "Covalent", "Metallic", "Hydrogen"],
+  answer: "Covalent"
+},
+
+{
+  question: "The diagram shows the life cycle of a mosquito. Which stage causes disease transmission?",
+  image: "/images/mosquito1.png",
+  options: ["Egg", "Larva", "Pupa", "Adult"],
+  answer: "Adult"
+},
+
+{
+  question: "The diagram shows a carbon cycle. What process removes carbon dioxide from the atmosphere?",
+  image: "/images/carboncycle1.png",
+  options: ["Respiration", "Photosynthesis", "Combustion", "Decay"],
+  answer: "Photosynthesis"
+},
+
+{
+  question: "The diagram shows types of teeth. Which is used for tearing food?",
+  image: "/images/teeth1.png",
+  options: ["Incisor", "Canine", "Premolar", "Molar"],
+  answer: "Canine"
+},
+
+{
+  question: "The diagram shows the digestive system. Where is bile produced?",
+  image: "/images/digestive3.png",
+  options: ["Stomach", "Liver", "Pancreas", "Intestine"],
+  answer: "Liver"
+},
+
+{
+  question: "The diagram shows the heart. Which vessel carries oxygenated blood?",
+  image: "/images/heart2.png",
+  options: ["Pulmonary artery", "Pulmonary vein", "Vena cava", "Aorta"],
+  answer: "Aorta"
+},
+
+{
+  question: "The diagram shows respiration. What happens in the alveoli?",
+  image: "/images/alveoli1.png",
+  options: ["Digestion", "Gas exchange", "Filtration", "Absorption"],
+  answer: "Gas exchange"
+},
+
+{
+  question: "The diagram shows a food web. Which organism is both a predator and prey?",
+  image: "/images/foodweb1.png",
+  options: ["Grass", "Grasshopper", "Frog", "Snake"],
+  answer: "Frog"
+},
+
+{
+  question: "The diagram shows waste disposal methods. Which is most environmentally friendly?",
+  image: "/images/waste1.png",
+  options: ["Burning", "Dumping", "Recycling", "Burying"],
+  answer: "Recycling"
+},
+
+{
+  question: "The diagram shows greenhouse effect. What gas contributes most?",
+  image: "/images/greenhouse1.png",
+  options: ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+  answer: "Carbon dioxide"
+},
+
+{
+  question: "The diagram shows reflection of light. What law is demonstrated?",
+  image: "/images/reflection1.png",
+  options: [
+    "Angle of incidence equals angle of reflection",
+    "Light travels in straight line",
+    "Refraction law",
+    "Dispersion law"
+  ],
+  answer: "Angle of incidence equals angle of reflection"
+},
+
+{
+  question: "The diagram shows refraction. Why does light bend?",
+  image: "/images/refraction1.png",
+  options: [
+    "Change in speed",
+    "Change in direction only",
+    "Increase in energy",
+    "Loss of light"
+  ],
+  answer: "Change in speed"
+},
+
+{
+  question: "The diagram shows a simple machine. What determines efficiency?",
+  image: "/images/machine1.png",
+  options: [
+    "Input only",
+    "Output only",
+    "Output/Input",
+    "Force only"
+  ],
+  answer: "Output/Input"
+},
+
+{
+  question: "The diagram shows planets in orbit. Which is closest to the Sun?",
+  image: "/images/solarsystem1.png",
+  options: ["Earth", "Mars", "Mercury", "Venus"],
+  answer: "Mercury"
+},
+
+{
+  question: "The diagram shows soil profile. Which layer is richest in humus?",
+  image: "/images/soil1.png",
+  options: ["Topsoil", "Subsoil", "Bedrock", "Parent rock"],
+  answer: "Topsoil"
+},
+
+{
+  question: "The diagram shows a neutralization reaction setup. What is formed after reaction?",
+  image: "/images/neutralization1.png",
+  options: ["Salt and water", "Acid only", "Base only", "Gas only"],
+  answer: "Salt and water"
+},
+
+{
+  question: "The diagram shows a suspension. Why do particles settle?",
+  image: "/images/suspension1.png",
+  options: [
+    "They are lighter",
+    "They are insoluble and heavy",
+    "They dissolve",
+    "They evaporate"
+  ],
+  answer: "They are insoluble and heavy"
+},
+
+{
+  question: "The diagram shows electron arrangement. What determines the atomic number?",
+  image: "/images/electron1.png",
+  options: ["Neutrons", "Protons", "Electrons", "Mass"],
+  answer: "Protons"
+},
+
+{
+  question: "The diagram shows ionic bonding. What happens to electrons?",
+  image: "/images/ionic1.png",
+  options: [
+    "Shared",
+    "Transferred",
+    "Destroyed",
+    "Multiplied"
+  ],
+  answer: "Transferred"
+},
+
+{
+  question: "The diagram shows a prokaryotic cell. What is missing?",
+  image: "/images/prokaryote1.png",
+  options: ["Cell wall", "Nucleus", "Cytoplasm", "Membrane"],
+  answer: "Nucleus"
+},
+
+{
+  question: "The diagram shows a eukaryotic cell. What makes it different?",
+  image: "/images/eukaryote1.png",
+  options: [
+    "No cytoplasm",
+    "Has nucleus",
+    "No membrane",
+    "No organelles"
+  ],
+  answer: "Has nucleus"
+},
+
+{
+  question: "The diagram shows the life cycle of a grasshopper. Why is it incomplete metamorphosis?",
+  image: "/images/grasshopper1.png",
+  options: [
+    "No pupa stage",
+    "No egg stage",
+    "No adult",
+    "No larva"
+  ],
+  answer: "No pupa stage"
+},
+
+{
+  question: "The diagram shows the respiratory system. What is the function of the diaphragm?",
+  image: "/images/diaphragm1.png",
+  options: [
+    "Pump blood",
+    "Control breathing",
+    "Digest food",
+    "Filter air"
+  ],
+  answer: "Control breathing"
+},
+
+{
+  question: "The diagram shows blood circulation. Which vessel carries blood to the heart?",
+  image: "/images/vein1.png",
+  options: ["Artery", "Vein", "Capillary", "Aorta"],
+  answer: "Vein"
+},
+
+{
+  question: "The diagram shows a habitat. Which factor is abiotic?",
+  image: "/images/habitat1.png",
+  options: ["Plants", "Animals", "Water", "Bacteria"],
+  answer: "Water"
+},
+
+{
+  question: "The diagram shows communicable disease spread. How is it transmitted?",
+  image: "/images/disease1.png",
+  options: [
+    "Inheritance",
+    "Contact",
+    "Growth",
+    "Digestion"
+  ],
+  answer: "Contact"
+},
+
+{
+  question: "The diagram shows recycling process. What is the benefit?",
+  image: "/images/recycle1.png",
+  options: [
+    "Increase waste",
+    "Reduce pollution",
+    "Destroy materials",
+    "Increase cost"
+  ],
+  answer: "Reduce pollution"
+},
+
+{
+  question: "The diagram shows climate change. What is the main cause?",
+  image: "/images/climate1.png",
+  options: [
+    "Plant growth",
+    "Greenhouse gases",
+    "Water cycle",
+    "Wind"
+  ],
+  answer: "Greenhouse gases"
+},
+
+{
+  question: "The diagram shows heat transfer. What type is shown?",
+  image: "/images/conduction1.png",
+  options: ["Conduction", "Convection", "Radiation", "Evaporation"],
+  answer: "Conduction"
+},
+
+{
+  question: "The diagram shows light dispersion. What is formed?",
+  image: "/images/dispersion1.png",
+  options: ["Shadow", "Rainbow", "Image", "Reflection"],
+  answer: "Rainbow"
+},
+
+{
+  question: "The diagram shows a shadow. Why is shadow formed?",
+  image: "/images/shadow1.png",
+  options: [
+    "Light bends",
+    "Light travels in curves",
+    "Light travels in straight lines",
+    "Light disappears"
+  ],
+  answer: "Light travels in straight lines"
+},
+
+{
+  question: "The diagram shows a magnet being made. What method is used?",
+  image: "/images/magnetmaking1.png",
+  options: [
+    "Heating",
+    "Stroking",
+    "Cooling",
+    "Breaking"
+  ],
+  answer: "Stroking"
+},
+
+{
+  question: "The diagram shows pressure applied. What happens when area decreases?",
+  image: "/images/pressure1.png",
+  options: [
+    "Pressure decreases",
+    "Pressure increases",
+    "No change",
+    "Stops"
+  ],
+  answer: "Pressure increases"
+},
+
+{
+  question: "The diagram shows crop rotation. What is its benefit?",
+  image: "/images/croprotation1.png",
+  options: [
+    "Soil depletion",
+    "Soil fertility",
+    "Increase pests",
+    "Reduce growth"
+  ],
+  answer: "Soil fertility"
+},
+
+{
+  question: "The diagram shows farm tools. Which is used for digging?",
+  image: "/images/tools1.png",
+  options: ["Cutlass", "Hoe", "Watering can", "Rake"],
+  answer: "Hoe"
+},
+
+{
+  question: "The diagram shows a solution with solute and solvent. What is the solvent?",
+  image: "/images/solution1.png",
+  options: [
+    "Substance dissolved",
+    "Liquid that dissolves the solute",
+    "Solid particles",
+    "Gas above the solution"
+  ],
+  answer: "Liquid that dissolves the solute"
+},
+
+{
+  question: "The diagram shows electrolysis setup. What moves towards the cathode?",
+  image: "/images/electrolysis1.png",
+  options: [
+    "Anions",
+    "Cations",
+    "Neutrons",
+    "Atoms"
+  ],
+  answer: "Cations"
+},
+
+{
+  question: "The diagram shows an animal cell. Which part controls activities?",
+  image: "/images/animalcell1.png",
+  options: [
+    "Cytoplasm",
+    "Cell membrane",
+    "Nucleus",
+    "Vacuole"
+  ],
+  answer: "Nucleus"
+},
+
+{
+  question: "The diagram shows a neuron. What is its function?",
+  image: "/images/neuron1.png",
+  options: [
+    "Transport oxygen",
+    "Transmit impulses",
+    "Digest food",
+    "Filter blood"
+  ],
+  answer: "Transmit impulses"
+},
+
+{
+  question: "The diagram shows the kidney. What is its function?",
+  image: "/images/kidney1.png",
+  options: [
+    "Pump blood",
+    "Filter waste from blood",
+    "Digest food",
+    "Control breathing"
+  ],
+  answer: "Filter waste from blood"
+},
+
+{
+  question: "The diagram shows a food test. What nutrient is tested using iodine?",
+  image: "/images/iodinetest1.png",
+  options: [
+    "Protein",
+    "Fat",
+    "Starch",
+    "Vitamin"
+  ],
+  answer: "Starch"
+},
+
+{
+  question: "The diagram shows convection currents. Where does hot fluid move?",
+  image: "/images/convection1.png",
+  options: [
+    "Downward",
+    "Sideways",
+    "Upward",
+    "Nowhere"
+  ],
+  answer: "Upward"
+},
+
+{
+  question: "The diagram shows an eclipse. What type is shown?",
+  image: "/images/eclipse1.png",
+  options: [
+    "Solar eclipse",
+    "Lunar eclipse",
+    "Partial eclipse",
+    "Total eclipse"
+  ],
+  answer: "Solar eclipse"
+},
+
+{
+  question: "The diagram shows irrigation. What is its purpose?",
+  image: "/images/irrigation1.png",
+  options: [
+    "Remove crops",
+    "Supply water to crops",
+    "Add fertilizer",
+    "Harvest crops"
+  ],
+  answer: "Supply water to crops"
+},
+
+{
+  question: "The diagram shows soil erosion. What is the main cause?",
+  image: "/images/erosion1.png",
+  options: [
+    "Plant growth",
+    "Wind or water",
+    "Sunlight",
+    "Animals"
+  ],
+  answer: "Wind or water"
+},
+
 {
   question: "Which state of matter has no fixed volume or shape?",
   options: ["Solid", "Liquid", "Gas", "Plasma"],

@@ -1,4147 +1,1621 @@
 const businessManagementQuestions = [
-  {
-    question: "Which of the following best describes management?",
-    options: [
-      "The art of selling goods",
-      "The ability to own a business",
-      "The process of planning, organizing, leading, and controlling",
-      "The knowledge of legal systems"
-    ],
-    answer: "The process of planning, organizing, leading, and controlling"
-  },
-  {
-    question: "Which form of business is owned and managed by one person?",
-    options: ["Corporation", "Partnership", "Sole proprietorship", "Cooperative"],
-    answer: "Sole proprietorship"
-  },
-  {
-    question: "What is the main goal of a business organization?",
-    options: ["To follow laws", "To satisfy government", "To make profit", "To employ people"],
-    answer: "To make profit"
-  },
-  {
-    question: "Which of the following is NOT a characteristic of a partnership?",
-    options: [
-      "Owned by two or more people",
-      "Unlimited liability",
-      "Easy to transfer ownership",
-      "Shared decision-making"
-    ],
-    answer: "Easy to transfer ownership"
-  },
-  {
-    question: "In the management process, which function involves setting goals and determining how to achieve them?",
-    options: ["Organizing", "Controlling", "Planning", "Delegating"],
-    answer: "Planning"
-  },
-  {
-    question: "Which function of management is responsible for assigning tasks and grouping activities?",
-    options: ["Delegation", "Organizing", "Planning", "Directing"],
-    answer: "Organizing"
-  },
-  {
-    question: "Directing as a function of management involves:",
-    options: [
-      "Hiring more workers",
-      "Motivating and leading employees",
-      "Buying office furniture",
-      "Building relationships with clients"
-    ],
-    answer: "Motivating and leading employees"
-  },
-  {
-    question: "Which of the following is an internal stakeholder of a business?",
-    options: ["Customers", "Government", "Employees", "Suppliers"],
-    answer: "Employees"
-  },
-  {
-    question: "The relationship between a business and society can be described as:",
-    options: [
-      "Independent",
-      "Unrelated",
-      "Interdependent",
-      "Competitive"
-    ],
-    answer: "Interdependent"
-  },
-  {
-    question: "Decision-making in management refers to:",
-    options: [
-      "Developing a marketing plan",
-      "Assigning tasks to workers",
-      "Choosing among alternatives",
-      "Organizing office furniture"
-    ],
-    answer: "Choosing among alternatives"
-  },
-  {
-    question: "Which legal document governs business operations in most countries?",
-    options: ["Memorandum of Understanding", "Constitution", "Business Act", "Company Law"],
-    answer: "Company Law"
-  },
-  {
-    question: "A legally binding agreement between two or more parties is called:",
-    options: ["Contract", "Proposal", "Business plan", "Agenda"],
-    answer: "Contract"
-  },
-  {
-    question: "In a contract, the person who authorizes someone to act on their behalf is the:",
-    options: ["Agent", "Principal", "Supplier", "Contractor"],
-    answer: "Principal"
-  },
-  {
-    question: "Which of the following is a negotiable instrument?",
-    options: ["A lease agreement", "A cheque", "A contract form", "A verbal agreement"],
-    answer: "A cheque"
-  },
-  {
-    question: "The main purpose of financial institutions is to:",
-    options: ["Control inflation", "Promote government agenda", "Facilitate savings and loans", "Create jobs"],
-    answer: "Facilitate savings and loans"
-  },
-  {
-    question: "Which financial market deals with buying and selling of company shares?",
-    options: ["Money market", "Forex market", "Insurance market", "Stock exchange"],
-    answer: "Stock exchange"
-  },
-  {
-    question: "Insurance is primarily used for:",
-    options: ["Earning interest", "Raising capital", "Risk transfer", "Profit maximization"],
-    answer: "Risk transfer"
-  },
-  {
-    question: "Which of the following is NOT a function of money?",
-    options: ["Medium of exchange", "Store of value", "Unit of account", "Legal tender only in banks"],
-    answer: "Legal tender only in banks"
-  },
-  {
-    question: "Globalization primarily results in:",
-    options: ["National restrictions", "Trade barriers", "Increased global interaction", "Currency devaluation"],
-    answer: "Increased global interaction"
-  },
-  {
-    question: "Economic integration refers to:",
-    options: [
-      "A business strategy",
-      "The formation of large monopolies",
-      "Unification of economic policies and markets between countries",
-      "Taxation reforms"
-    ],
-    answer: "Unification of economic policies and markets between countries"
-  },
-  {
-    question: "Which of the following is a function of Human Resource Management?",
-    options: ["Product packaging", "Employee recruitment", "Stock analysis", "Price setting"],
-    answer: "Employee recruitment"
-  },
-  {
-    question: "Industrial relations deals mainly with:",
-    options: ["Customer loyalty", "Employee motivation", "Employer-employee relations", "Stock control"],
-    answer: "Employer-employee relations"
-  },
-  {
-    question: "Which of the following is a key activity in production management?",
-    options: ["Employee training", "Distribution", "Scheduling production", "Market research"],
-    answer: "Scheduling production"
-  },
-  {
-    question: "Marketing involves:",
-    options: ["Only advertising", "Only selling", "Creating and delivering value to customers", "Transporting goods only"],
-    answer: "Creating and delivering value to customers"
-  },
-  {
-    question: "Which of the following is an advantage of e-commerce?",
-    options: ["Limited reach", "Physical store required", "24/7 availability", "Cash-only payment"],
-    answer: "24/7 availability"
-  },
-  {
-    question: "Entrepreneurship can best be described as:",
-    options: [
-      "Being employed",
-      "Managing a company",
-      "Starting and running a business while taking risks",
-      "Working in finance"
-    ],
-    answer: "Starting and running a business while taking risks"
-  },
-  {
-    question: "One of the main roles of an entrepreneur is to:",
-    options: ["Work under a boss", "Avoid risk", "Organize and coordinate resources", "Follow only orders"],
-    answer: "Organize and coordinate resources"
-  },
-  {
-    question: "A business plan includes all EXCEPT:",
-    options: ["Marketing strategy", "Operations plan", "Loan payment agreement", "Executive summary"],
-    answer: "Loan payment agreement"
-  },
-  {
-    question: "What is a major challenge faced by small businesses?",
-    options: ["Too many staff", "Access to capital", "Excessive advertising", "Global expansion"],
-    answer: "Access to capital"
-  },
-  {
-    question: "Delegation in management means:",
-    options: [
-      "Giving employees full ownership",
-      "Transferring authority to subordinates",
-      "Hiring external contractors",
-      "Reducing company goals"
-    ],
-    answer: "Transferring authority to subordinates"
-  },
-  {
-    question: "An important quality of a good leader is:",
-    options: ["Aggressiveness", "Inflexibility", "Communication", "Favoritism"],
-    answer: "Communication"
-  },
-  {
-    question: "Which of the following is true about limited liability companies?",
-    options: ["Owned by government", "Shares are not transferable", "Owners' personal assets are protected", "One-man ownership"],
-    answer: "Owners' personal assets are protected"
-  },
-  {
-    question: "A key responsibility of the operations department is:",
-    options: ["Recruitment", "Product distribution", "Production process control", "Employee welfare"],
-    answer: "Production process control"
-  },
-  {
-    question: "Which of the following is NOT an objective of business?",
-    options: ["Profit", "Expansion", "Loss-making", "Customer satisfaction"],
-    answer: "Loss-making"
-  },
-  {
-    question: "The law of contract includes all EXCEPT:",
-    options: ["Offer", "Acceptance", "Marriage", "Consideration"],
-    answer: "Marriage"
-  },
-  {
-    question: "Which organization type has its shares traded on the stock exchange?",
-    options: ["Sole proprietorship", "Partnership", "Public limited company", "Cooperative"],
-    answer: "Public limited company"
-  },
-  {
-    question: "An agent who sells goods on behalf of a principal and earns commission is known as:",
-    options: ["Broker", "Retailer", "Wholesaler", "Commission agent"],
-    answer: "Commission agent"
-  },
-  {
-    question: "A person who buys goods not for resale but for personal use is a:",
-    options: ["Retailer", "Consumer", "Agent", "Supplier"],
-    answer: "Consumer"
-  },
-  {
-    question: "The tool used to manage unexpected future events in business is:",
-    options: ["Audit", "Budget", "Insurance", "Invoice"],
-    answer: "Insurance"
-  },
-  {
-    question: "Which of the following is NOT a function of a central bank?",
-    options: ["Issuing currency", "Controlling inflation", "Lending to the public", "Managing foreign reserves"],
-    answer: "Lending to the public"
-  },
-  {
-    question: "An agreement to buy goods to be delivered in future at a specified price is:",
-    options: ["Installment plan", "Hire purchase", "Forward contract", "Invoice"],
-    answer: "Forward contract"
-  },
-  {
-    question: "Planning is important in management because it:",
-    options: ["Focuses only on present", "Avoids changes", "Provides direction", "Eliminates mistakes"],
-    answer: "Provides direction"
-  },
-  {
-    question: "A cheque becomes stale when it is older than:",
-    options: ["1 week", "1 month", "3 months", "6 months"],
-    answer: "6 months"
-  },
-  {
-    question: "Labour unions are mainly formed to:",
-    options: ["Support government policies", "Replace managers", "Protect workers’ interests", "Buy shares"],
-    answer: "Protect workers’ interests"
-  },
-  {
-    question: "Which function of management follows organizing?",
-    options: ["Delegation", "Controlling", "Directing", "Planning"],
-    answer: "Directing"
-  },
-  {
-    question: "Globalization has made businesses more:",
-    options: ["Local", "Traditional", "Competitive", "Self-reliant"],
-    answer: "Competitive"
-  },
-  {
-    question: "The function of the stock exchange is to:",
-    options: ["Sell goods to customers", "Train entrepreneurs", "Facilitate buying and selling of shares", "Provide office space"],
-    answer: "Facilitate buying and selling of shares"
-  },
-  {
-    question: "What is the purpose of business ethics?",
-    options: [
-      "To increase profits only",
-      "To avoid paying taxes",
-      "To ensure fair and moral business practices",
-      "To delay production"
-    ],
-    answer: "To ensure fair and moral business practices"
-  },
-  {
-    question: "Which of the following is an advantage of partnership over sole proprietorship?",
-    options: [
-      "Unlimited liability",
-      "Greater capital pool",
-      "Easier decision-making",
-      "No need for registration"
-    ],
-    answer: "Greater capital pool"
-  },
-  {
-    question: "A legal entity that is separate from its owners is known as a:",
-    options: [
-      "Sole trader",
-      "Partnership",
-      "Limited liability company",
-      "Franchise"
-    ],
-    answer: "Limited liability company"
-  },
-  {
-    question: "What does delegation promote in an organization?",
-    options: [
-      "Reduced communication",
-      "Micromanagement",
-      "Employee empowerment",
-      "Bureaucracy"
-    ],
-    answer: "Employee empowerment"
-  },
-  {
-    question: "A contract is valid only when there is:",
-    options: [
-      "Written document only",
-      "Government approval",
-      "Free consent and lawful object",
-      "Stamp duty"
-    ],
-    answer: "Free consent and lawful object"
-  },
-  {
-    question: "Which of the following is NOT a feature of money?",
-    options: [
-      "Durability",
-      "Portability",
-      "Unlimited supply",
-      "Divisibility"
-    ],
-    answer: "Unlimited supply"
-  },
-  {
-    question: "An electronic method of buying and selling goods is called:",
-    options: [
-      "Mobile banking",
-      "E-commerce",
-      "Internet surfing",
-      "Inventory tracking"
-    ],
-    answer: "E-commerce"
-  },
-  {
-    question: "Risk management in business involves:",
-    options: [
-      "Avoiding all risks",
-      "Ignoring minor issues",
-      "Identifying, assessing, and controlling risks",
-      "Firing workers"
-    ],
-    answer: "Identifying, assessing, and controlling risks"
-  },
-  {
-    question: "Which of the following types of insurance is compulsory in most countries?",
-    options: [
-      "Marine insurance",
-      "Life assurance",
-      "Motor vehicle insurance",
-      "Fire insurance"
-    ],
-    answer: "Motor vehicle insurance"
-  },
-  {
-    question: "The head of the production department is primarily responsible for:",
-    options: [
-      "Hiring workers",
-      "Raising capital",
-      "Ensuring quality output",
-      "Advertising products"
-    ],
-    answer: "Ensuring quality output"
-  },
-  {
-    question: "The division of labor in management promotes:",
-    options: [
-      "Confusion",
-      "Efficiency",
-      "Unemployment",
-      "Overlapping duties"
-    ],
-    answer: "Efficiency"
-  },
-  {
-    question: "Which of the following is NOT an entrepreneur’s role?",
-    options: [
-      "Risk bearer",
-      "Innovator",
-      "Resource organizer",
-      "Wage earner"
-    ],
-    answer: "Wage earner"
-  },
-  {
-    question: "A person who carries out business activities on behalf of another person is a:",
-    options: [
-      "Contractor",
-      "Principal",
-      "Agent",
-      "Manager"
-    ],
-    answer: "Agent"
-  },
-  {
-    question: "The term ‘capital market’ refers to:",
-    options: [
-      "Short-term loan market",
-      "Long-term financial market",
-      "Foreign currency market",
-      "Daily savings group"
-    ],
-    answer: "Long-term financial market"
-  },
-  {
-    question: "Which of the following is a principle of marketing?",
-    options: [
-      "Product orientation",
-      "Consumer orientation",
-      "Warehouse management",
-      "Staff development"
-    ],
-    answer: "Consumer orientation"
-  },
-  {
-    question: "The main goal of marketing is to:",
-    options: [
-      "Promote staff welfare",
-      "Satisfy customer needs",
-      "Increase staff salaries",
-      "Buy more raw materials"
-    ],
-    answer: "Satisfy customer needs"
-  },
-  {
-    question: "Which element of the marketing mix deals with distribution?",
-    options: [
-      "Product",
-      "Price",
-      "Place",
-      "Promotion"
-    ],
-    answer: "Place"
-  },
-  {
-    question: "An agreement between businesses in different countries is likely a result of:",
-    options: [
-      "Localization",
-      "Centralization",
-      "Globalization",
-      "Urbanization"
-    ],
-    answer: "Globalization"
-  },
-  {
-    question: "A stockbroker primarily deals in:",
-    options: [
-      "Buying insurance",
-      "Selling products",
-      "Buying and selling shares",
-      "Auditing accounts"
-    ],
-    answer: "Buying and selling shares"
-  },
-  {
-    question: "Which of the following is a characteristic of a good manager?",
-    options: [
-      "Selfishness",
-      "Indecisiveness",
-      "Integrity",
-      "Fearfulness"
-    ],
-    answer: "Integrity"
-  },
-  {
-    question: "Business integration among countries is known as:",
-    options: [
-      "Nationalization",
-      "Privatization",
-      "Economic integration",
-      "Budgeting"
-    ],
-    answer: "Economic integration"
-  },
-  {
-    question: "The law of agency involves relationships between:",
-    options: [
-      "Employee and employer",
-      "Principal and agent",
-      "Buyer and seller",
-      "Manager and supervisor"
-    ],
-    answer: "Principal and agent"
-  },
-  {
-    question: "In which situation does e-commerce offer the greatest benefit?",
-    options: [
-      "Remote locations",
-      "Busy highways",
-      "Traditional markets",
-      "Manual offices"
-    ],
-    answer: "Remote locations"
-  },
-  {
-    question: "The directing function of management includes:",
-    options: [
-      "Coordinating tasks",
-      "Monitoring performance",
-      "Inspiring employees",
-      "Hiring managers"
-    ],
-    answer: "Inspiring employees"
-  },
-  {
-    question: "One advantage of globalization is:",
-    options: [
-      "Increased protectionism",
-      "Restricted trade",
-      "Increased market access",
-      "Higher tariffs"
-    ],
-    answer: "Increased market access"
-  },
-  {
-    question: "Which one is NOT a function of management?",
-    options: [
-      "Planning",
-      "Controlling",
-      "Motivating",
-      "Manufacturing"
-    ],
-    answer: "Manufacturing"
-  },
-  {
-    question: "A written promise to pay a certain amount at a specific time is a:",
-    options: [
-      "Cheque",
-      "Invoice",
-      "Promissory note",
-      "Receipt"
-    ],
-    answer: "Promissory note"
-  },
-  {
-    question: "A key activity of small business management is:",
-    options: [
-      "International expansion",
-      "Cost control",
-      "Mergers and acquisitions",
-      "Import licensing"
-    ],
-    answer: "Cost control"
-  },
-  {
-    question: "Entrepreneurial development aims to:",
-    options: [
-      "Make laws",
-      "Enforce rules",
-      "Train business-minded individuals",
-      "Create taxes"
-    ],
-    answer: "Train business-minded individuals"
-  },
-  {
-    question: "Which of the following is a source of business finance?",
-    options: [
-      "Training",
-      "Advertisement",
-      "Bank loan",
-      "Delegation"
-    ],
-    answer: "Bank loan"
-  },
-  {
-    question: "Which of these is used in risk management?",
-    options: [
-      "Insurance",
-      "Marketing",
-      "Auditing",
-      "Inspection"
-    ],
-    answer: "Insurance"
-  },
-  {
-    question: "What is the aim of planning in management?",
-    options: [
-      "Increase confusion",
-      "Improve profits and achieve goals",
-      "Delay decisions",
-      "Avoid change"
-    ],
-    answer: "Improve profits and achieve goals"
-  },
-  {
-    question: "Business finance deals mainly with:",
-    options: [
-      "Managing materials",
-      "Raising and using funds",
-      "Advertising products",
-      "Keeping employee records"
-    ],
-    answer: "Raising and using funds"
-  },
-  {
-    question: "A small business is generally characterized by:",
-    options: [
-      "Large market share",
-      "Many employees",
-      "Personal management",
-      "Global reach"
-    ],
-    answer: "Personal management"
-  },
-  {
-    question: "Which of the following is an example of a negotiable instrument?",
-    options: [
-      "Letter of complaint",
-      "Cheque",
-      "Service agreement",
-      "Memorandum of association"
-    ],
-    answer: "Cheque"
-  },
-  {
-    question: "A key disadvantage of sole proprietorship is:",
-    options: [
-      "Difficult to manage",
-      "Unlimited liability",
-      "No decision-making power",
-      "Slow growth"
-    ],
-    answer: "Unlimited liability"
-  },
-  {
-    question: "Who takes the greatest financial risk in a business?",
-    options: [
-      "Employees",
-      "Investors",
-      "Customers",
-      "Entrepreneurs"
-    ],
-    answer: "Entrepreneurs"
-  },
-  {
-    question: "Which of the following is not part of the marketing mix?",
-    options: [
-      "Product",
-      "Promotion",
-      "Place",
-      "Procurement"
-    ],
-    answer: "Procurement"
-  },
-  {
-    question: "Which type of insurance covers damage to business property?",
-    options: [
-      "Fire insurance",
-      "Life assurance",
-      "Health insurance",
-      "Marine insurance"
-    ],
-    answer: "Fire insurance"
-  },
-  {
-    question: "A small-scale business can best survive through:",
-    options: [
-      "Innovative ideas",
-      "Borrowing heavily",
-      "Ignoring feedback",
-      "Avoiding competition"
-    ],
-    answer: "Innovative ideas"
-  },
-  {
-    question: "Directing in management helps to:",
-    options: [
-      "Confuse workers",
-      "Set long-term goals",
-      "Guide and influence subordinates",
-      "Reduce authority"
-    ],
-    answer: "Guide and influence subordinates"
-  },
-  {
-    question: "What does 'human resource management' primarily deal with?",
-    options: [
-      "Product development",
-      "Customer service",
-      "Staffing and employee relations",
-      "Sales forecasting"
-    ],
-    answer: "Staffing and employee relations"
-  },
-  {
-    question: "A negotiable instrument must be:",
-    options: [
-      "Oral",
-      "Transferable by endorsement or delivery",
-      "Written in secret",
-      "Used only in banks"
-    ],
-    answer: "Transferable by endorsement or delivery"
-  },
-  {
-    question: "The ability of a business to meet its short-term obligations is called:",
-    options: [
-      "Liquidity",
-      "Profitability",
-      "Solvency",
-      "Efficiency"
-    ],
-    answer: "Liquidity"
-  },
-  {
-    question: "An entrepreneur who opens a business in an entirely new industry is considered:",
-    options: [
-      "Imitator",
-      "Traditionalist",
-      "Innovator",
-      "Manager"
-    ],
-    answer: "Innovator"
-  },
-  {
-    question: "The element of production that includes tools and equipment is:",
-    options: [
-      "Labor",
-      "Land",
-      "Capital",
-      "Entrepreneurship"
-    ],
-    answer: "Capital"
-  },
-  {
-    question: "Which of the following best describes organizing in management?",
-    options: [
-      "Assigning tasks and allocating resources",
-      "Hiring staff only",
-      "Supervising subordinates",
-      "Writing company policies"
-    ],
-    answer: "Assigning tasks and allocating resources"
-  },
-  {
-    question: "A company that sells products online without a physical store is engaged in:",
-    options: [
-      "Direct marketing",
-      "E-commerce",
-      "Retailing",
-      "Franchising"
-    ],
-    answer: "E-commerce"
-  },
-  {
-    question: "Which function of management ensures that tasks are carried out properly?",
-    options: [
-      "Planning",
-      "Directing",
-      "Controlling",
-      "Organizing"
-    ],
-    answer: "Controlling"
-  },
-  {
-    question: "Which of these financial institutions primarily grants long-term loans for investment?",
-    options: [
-      "Commercial bank",
-      "Development bank",
-      "Microfinance institution",
-      "Savings and loans company"
-    ],
-    answer: "Development bank"
-  },
-  {
-    question: "In business law, a contract must have all the following EXCEPT:",
-    options: [
-      "Lawful object",
-      "Consideration",
-      "Mutual agreement",
-      "Profit"
-    ],
-    answer: "Profit"
-  },
-  {
-    question: "Labour relations in business involve:",
-    options: [
-      "Customers and workers",
-      "Employers and employees",
-      "Government and businesses",
-      "Traders and banks"
-    ],
-    answer: "Employers and employees"
-  },
-  {
-    question: "The process of setting short- and long-term goals is called:",
-    options: [
-      "Controlling",
-      "Forecasting",
-      "Directing",
-      "Planning"
-    ],
-    answer: "Planning"
-  },
-  {
-    question: "Which of the following is the first step in decision-making?",
-    options: [
-      "Implementing the plan",
-      "Identifying the problem",
-      "Evaluating alternatives",
-      "Choosing a solution"
-    ],
-    answer: "Identifying the problem"
-  },
-  {
-    question: "Which of the following is a characteristic of small businesses?",
-    options: [
-      "Many departments",
-      "High capital requirement",
-      "Personal supervision",
-      "National coverage"
-    ],
-    answer: "Personal supervision"
-  },
-  {
-    question: "Which type of risk can be insured?",
-    options: [
-      "Speculative risk",
-      "Pure risk",
-      "Market risk",
-      "Political risk"
-    ],
-    answer: "Pure risk"
-  },
-  {
-    question: "Which term refers to the promotion and selling of goods and services?",
-    options: [
-      "Management",
-      "Marketing",
-      "Auditing",
-      "Merchandising"
-    ],
-    answer: "Marketing"
-  },
-  {
-    question: "An entrepreneur’s reward for taking business risks is:",
-    options: [
-      "Profit",
-      "Salary",
-      "Bonus",
-      "Commission"
-    ],
-    answer: "Profit"
-  },
-  {
-    question: "Which of these is NOT an element of the communication process?",
-    options: [
-      "Sender",
-      "Receiver",
-      "Listener",
-      "Feedback"
-    ],
-    answer: "Listener"
-  },
-  {
-    question: "A share certificate represents:",
-    options: [
-      "Loan from the bank",
-      "Proof of ownership in a company",
-      "Company policy",
-      "Business registration"
-    ],
-    answer: "Proof of ownership in a company"
-  },
-  {
-    question: "The process of grouping activities to achieve goals is called:",
-    options: [
-      "Directing",
-      "Planning",
-      "Organizing",
-      "Delegating"
-    ],
-    answer: "Organizing"
-  },
-  {
-    question: "What is the primary objective of financial management?",
-    options: [
-      "To keep all cash in hand",
-      "To maximize shareholder wealth",
-      "To control employees",
-      "To make production faster"
-    ],
-    answer: "To maximize shareholder wealth"
-  },
-  {
-    question: "One function of a stock exchange is to:",
-    options: [
-      "Print money",
-      "Supervise taxes",
-      "Provide a market for securities",
-      "Grant personal loans"
-    ],
-    answer: "Provide a market for securities"
-  },
-  {
-    question: "The principle of span of control refers to:",
-    options: [
-      "How many products a company sells",
-      "The number of subordinates a manager can effectively control",
-      "The speed of production",
-      "The strength of an organization"
-    ],
-    answer: "The number of subordinates a manager can effectively control"
-  },
-  {
-    question: "An agreement with all legal elements present is:",
-    options: [
-      "Void contract",
-      "Illegal agreement",
-      "Valid contract",
-      "Unilateral agreement"
-    ],
-    answer: "Valid contract"
-  },
-  {
-    question: "Which of the following is a marketing strategy?",
-    options: [
-      "Salary increment",
-      "Product pricing",
-      "Raw material selection",
-      "Staff training"
-    ],
-    answer: "Product pricing"
-  },
-  {
-    question: "Which of these is NOT a financial institution?",
-    options: [
-      "Central bank",
-      "Commercial bank",
-      "Insurance company",
-      "Retail store"
-    ],
-    answer: "Retail store"
-  },
-  {
-    question: "Which of the following helps businesses protect against financial loss?",
-    options: [
-      "Discounting",
-      "Insurance",
-      "Inventory",
-      "Auditing"
-    ],
-    answer: "Insurance"
-  },
-  {
-    question: "Globalization leads to:",
-    options: [
-      "Restricted trade",
-      "Lower access to information",
-      "Increased interconnectedness",
-      "Reduced innovation"
-    ],
-    answer: "Increased interconnectedness"
-  },
-  {
-    question: "Entrepreneurs help national economies by:",
-    options: [
-      "Laying off workers",
-      "Importing goods",
-      "Creating employment",
-      "Holding funds abroad"
-    ],
-    answer: "Creating employment"
-  },
-  {
-    question: "A small business is likely to have:",
-    options: [
-      "Complex organizational structure",
-      "High bureaucracy",
-      "Few employees",
-      "Multiple branches"
-    ],
-    answer: "Few employees"
-  },
-  {
-    question: "The act of assigning authority to another person is known as:",
-    options: [
-      "Planning",
-      "Controlling",
-      "Delegation",
-      "Motivation"
-    ],
-    answer: "Delegation"
-  },
-  {
-    question: "Which of the following is true of e-commerce?",
-    options: [
-      "It reduces market size",
-      "It limits customer choice",
-      "It uses electronic platforms",
-      "It requires physical presence"
-    ],
-    answer: "It uses electronic platforms"
-  },
-  {
-    question: "A promissory note is a type of:",
-    options: [
-      "Marketing strategy",
-      "Negotiable instrument",
-      "Organizational chart",
-      "Expense account"
-    ],
-    answer: "Negotiable instrument"
-  },
-  {
-    question: "The best approach to solving employee disputes is:",
-    options: [
-      "Strikes",
-      "Negotiation and dialogue",
-      "Avoidance",
-      "Management threats"
-    ],
-    answer: "Negotiation and dialogue"
-  },
-  {
-    question: "The term 'risk' in business refers to:",
-    options: [
-      "Profit only",
-      "Uncertain events",
-      "Fixed returns",
-      "Customer complaints"
-    ],
-    answer: "Uncertain events"
-  },
-  {
-    question: "An agent acts on behalf of:",
-    options: [
-      "Shareholder",
-      "Principal",
-      "Manager",
-      "Customer"
-    ],
-    answer: "Principal"
-  },
-  {
-    question: "The relationship between business and society is based on:",
-    options: [
-      "Exploitation",
-      "Mutual dependence",
-      "Competition",
-      "Avoidance"
-    ],
-    answer: "Mutual dependence"
-  },
-  {
-    question: "Which one is NOT a source of business finance?",
-    options: [
-      "Bank loan",
-      "Trade credit",
-      "Personal savings",
-      "Competition"
-    ],
-    answer: "Competition"
-  },
-  {
-    question: "A franchise is a business arrangement where:",
-    options: [
-      "The government owns shares",
-      "An individual uses a brand under agreement",
-      "Two companies merge",
-      "A manager is promoted"
-    ],
-    answer: "An individual uses a brand under agreement"
-  },
-  {
-    question: "Which of the following is part of the internal environment of business?",
-    options: [
-      "Customers",
-      "Suppliers",
-      "Organizational culture",
-      "Government regulations"
-    ],
-    answer: "Organizational culture"
-  },
-  {
-    question: "A functional area that deals with employee welfare is:",
-    options: [
-      "Finance",
-      "Human resources",
-      "Marketing",
-      "Operations"
-    ],
-    answer: "Human resources"
-  },
-  {
-    question: "The stock exchange is important because it:",
-    options: [
-      "Creates company logos",
-      "Regulates product prices",
-      "Provides a platform for securities trading",
-      "Hires managers"
-    ],
-    answer: "Provides a platform for securities trading"
-  },
-  {
-    question: "A key reason for starting a small business is to:",
-    options: [
-      "Import more goods",
-      "Avoid taxes",
-      "Earn profits and be independent",
-      "Limit innovation"
-    ],
-    answer: "Earn profits and be independent"
-  },
-  {
-    question: "E-commerce enables businesses to:",
-    options: [
-      "Avoid planning",
-      "Reduce sales",
-      "Reach global markets easily",
-      "Eliminate staff"
-    ],
-    answer: "Reach global markets easily"
-  },
-  {
-    question: "Entrepreneurs differ from managers because they:",
-    options: [
-      "Are hired by firms",
-      "Own and run businesses",
-      "Do not take risks",
-      "Work only in banks"
-    ],
-    answer: "Own and run businesses"
-  },
-  {
-    question: "Business functions can be grouped into:",
-    options: [
-      "Four core areas",
-      "Only sales",
-      "Marketing only",
-      "Production only"
-    ],
-    answer: "Four core areas"
-  },
-  {
-    question: "A marketing principle based on customer satisfaction is called:",
-    options: [
-      "Consumer orientation",
-      "Production focus",
-      "Product pushing",
-      "Profit maximization"
-    ],
-    answer: "Consumer orientation"
-  },
-  {
-    question: "Delegation helps to develop:",
-    options: [
-      "Fear in subordinates",
-      "Skills and leadership",
-      "Workplace conflict",
-      "Central control"
-    ],
-    answer: "Skills and leadership"
-  },
-  {
-    question: "A well-planned business has a better chance of:",
-    options: [
-      "Being taxed more",
-      "Avoiding innovation",
-      "Surviving and growing",
-      "Relying on luck"
-    ],
-    answer: "Surviving and growing"
-  },
-  {
-    question: "Which of the following is the primary role of marketing?",
-    options: [
-      "To monitor workers",
-      "To store raw materials",
-      "To satisfy customer needs",
-      "To increase taxes"
-    ],
-    answer: "To satisfy customer needs"
-  },
-  {
-    question: "Which management function involves guiding employees to achieve goals?",
-    options: [
-      "Planning",
-      "Delegating",
-      "Directing",
-      "Controlling"
-    ],
-    answer: "Directing"
-  },
-  {
-    question: "Which of these is not a form of business organization?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Ministry",
-      "Limited liability company"
-    ],
-    answer: "Ministry"
-  },
-  {
-    question: "The act of influencing others to achieve goals is known as:",
-    options: [
-      "Motivation",
-      "Planning",
-      "Staffing",
-      "Leadership"
-    ],
-    answer: "Leadership"
-  },
-  {
-    question: "Business and society are linked because:",
-    options: [
-      "Society is the only consumer",
-      "Business owns society",
-      "They depend on each other",
-      "They compete always"
-    ],
-    answer: "They depend on each other"
-  },
-  {
-    question: "In management, setting standards and evaluating performance relates to:",
-    options: [
-      "Planning",
-      "Controlling",
-      "Directing",
-      "Delegating"
-    ],
-    answer: "Controlling"
-  },
-  {
-    question: "One major benefit of globalization is:",
-    options: [
-      "Restricted trade",
-      "Limited knowledge",
-      "Access to global markets",
-      "Increased tariffs"
-    ],
-    answer: "Access to global markets"
-  },
-  {
-    question: "Insurance companies help businesses to:",
-    options: [
-      "Avoid expenses",
-      "Minimize taxes",
-      "Manage risks",
-      "Hire more staff"
-    ],
-    answer: "Manage risks"
-  },
-  {
-    question: "Which of the following is NOT a principle of insurance?",
-    options: [
-      "Indemnity",
-      "Contribution",
-      "Guarantee",
-      "Proximate cause"
-    ],
-    answer: "Guarantee"
-  },
-  {
-    question: "A valid contract must contain:",
-    options: [
-      "Illiteracy",
-      "Conflict of interest",
-      "Agreement and consideration",
-      "Shareholding"
-    ],
-    answer: "Agreement and consideration"
-  },
-  {
-    question: "Stock exchange helps companies to:",
-    options: [
-      "Hide financials",
-      "Borrow from suppliers",
-      "Raise capital",
-      "Avoid taxes"
-    ],
-    answer: "Raise capital"
-  },
-  {
-    question: "Entrepreneurship is best defined as:",
-    options: [
-      "Working for others",
-      "Running government departments",
-      "Starting and managing businesses",
-      "Avoiding business risks"
-    ],
-    answer: "Starting and managing businesses"
-  },
-  {
-    question: "The business function responsible for production efficiency is:",
-    options: [
-      "Marketing",
-      "Human resources",
-      "Operations/Production management",
-      "Finance"
-    ],
-    answer: "Operations/Production management"
-  },
-  {
-    question: "A negotiable instrument that orders payment to a named person is called:",
-    options: [
-      "Invoice",
-      "Cheque",
-      "Receipt",
-      "Debit note"
-    ],
-    answer: "Cheque"
-  },
-  {
-    question: "The process of moving goods from producer to consumer is:",
-    options: [
-      "Advertising",
-      "Promotion",
-      "Distribution",
-      "Accounting"
-    ],
-    answer: "Distribution"
-  },
-  {
-    question: "Delegation of authority means:",
-    options: [
-      "Transferring responsibilities forever",
-      "Sharing tasks with peers",
-      "Assigning duties while retaining accountability",
-      "Giving promotions"
-    ],
-    answer: "Assigning duties while retaining accountability"
-  },
-  {
-    question: "Which is NOT a reason businesses fail?",
-    options: [
-      "Good planning",
-      "Poor financial control",
-      "Lack of experience",
-      "Poor customer service"
-    ],
-    answer: "Good planning"
-  },
-  {
-    question: "What is a key purpose of E-commerce?",
-    options: [
-      "Reduce production",
-      "Limit communication",
-      "Enable online buying and selling",
-      "Create physical markets"
-    ],
-    answer: "Enable online buying and selling"
-  },
-  {
-    question: "Entrepreneurs contribute to society by:",
-    options: [
-      "Causing unemployment",
-      "Reducing innovation",
-      "Creating jobs",
-      "Discouraging saving"
-    ],
-    answer: "Creating jobs"
-  },
-  {
-    question: "Money is best defined as:",
-    options: [
-      "A store of value only",
-      "A factor of production",
-      "A medium of exchange",
-      "A business expense"
-    ],
-    answer: "A medium of exchange"
-  },
-  {
-    question: "Which of these is a characteristic of a good business decision?",
-    options: [
-      "Emotion-based",
-      "Random",
-      "Well-informed and rational",
-      "Delayed indefinitely"
-    ],
-    answer: "Well-informed and rational"
-  },
-  {
-    question: "Industrial relations deal mainly with:",
-    options: [
-      "Farmers and consumers",
-      "Banks and customers",
-      "Employers and workers",
-      "Sellers and buyers"
-    ],
-    answer: "Employers and workers"
-  },
-  {
-    question: "Which of the following is NOT a benefit of planning?",
-    options: [
-      "It reduces uncertainty",
-      "It promotes goal setting",
-      "It eliminates all risk",
-      "It aids decision making"
-    ],
-    answer: "It eliminates all risk"
-  },
-  {
-    question: "E-commerce has led to:",
-    options: [
-      "Decline in global reach",
-      "Increased online fraud only",
-      "Expansion of digital markets",
-      "Reduced use of ICT"
-    ],
-    answer: "Expansion of digital markets"
-  },
-  {
-    question: "Which of the following is used to transfer money electronically?",
-    options: [
-      "Cheque book",
-      "Point of Sale (POS)",
-      "Postage stamp",
-      "Ledger"
-    ],
-    answer: "Point of Sale (POS)"
-  },
-  {
-    question: "The function of organizing in management involves:",
-    options: [
-      "Recruiting only",
-      "Creating a working structure",
-      "Issuing orders",
-      "Evaluating sales"
-    ],
-    answer: "Creating a working structure"
-  },
-  {
-    question: "Which of these best defines a manager?",
-    options: [
-      "Owner of the business",
-      "Someone who directs and controls resources",
-      "Random employee",
-      "Salesperson"
-    ],
-    answer: "Someone who directs and controls resources"
-  },
-  {
-    question: "A small business is usually characterized by:",
-    options: [
-      "Large capital base",
-      "National reach",
-      "Limited workforce",
-      "Complex structure"
-    ],
-    answer: "Limited workforce"
-  },
-  {
-    question: "The law that governs agreements between parties is:",
-    options: [
-      "Tort law",
-      "Criminal law",
-      "Contract law",
-      "Company law"
-    ],
-    answer: "Contract law"
-  },
-  {
-    question: "Risk management includes all EXCEPT:",
-    options: [
-      "Identifying potential threats",
-      "Measuring performance",
-      "Reducing or transferring risks",
-      "Insuring assets"
-    ],
-    answer: "Measuring performance"
-  },
-  {
-    question: "Entrepreneurial skills include:",
-    options: [
-      "Complacency",
-      "Laziness",
-      "Innovation and risk-taking",
-      "Rigidity"
-    ],
-    answer: "Innovation and risk-taking"
-  },
-  {
-    question: "Which one is NOT a type of insurance?",
-    options: [
-      "Fire insurance",
-      "Life insurance",
-      "Unemployment insurance",
-      "Welfare insurance"
-    ],
-    answer: "Welfare insurance"
-  },
-  {
-    question: "Globalization encourages businesses to:",
-    options: [
-      "Remain local",
-      "Avoid partnerships",
-      "Explore international markets",
-      "Ignore competition"
-    ],
-    answer: "Explore international markets"
-  },
-  {
-    question: "What type of environment includes laws and regulations?",
-    options: [
-      "Natural environment",
-      "Internal environment",
-      "Legal environment",
-      "Technological environment"
-    ],
-    answer: "Legal environment"
-  },
-  {
-    question: "A small business may face challenges like:",
-    options: [
-      "Abundant finance",
-      "Limited market access",
-      "Global coverage",
-      "Excess labor"
-    ],
-    answer: "Limited market access"
-  },
-  {
-    question: "An entrepreneur must be willing to:",
-    options: [
-      "Avoid decision-making",
-      "Take calculated risks",
-      "Delay innovation",
-      "Ignore opportunities"
-    ],
-    answer: "Take calculated risks"
-  },
-  {
-    question: "The business document used to promise payment at a future date is:",
-    options: [
-      "Invoice",
-      "Promissory note",
-      "Receipt",
-      "Memo"
-    ],
-    answer: "Promissory note"
-  },
-  {
-    question: "An example of a financial institution is:",
-    options: [
-      "Supermarket",
-      "Travel agency",
-      "Insurance company",
-      "Cement factory"
-    ],
-    answer: "Insurance company"
-  },
-  {
-    question: "The process of launching a business idea into reality is called:",
-    options: [
-      "Investment",
-      "Entrepreneurship",
-      "Franchising",
-      "Marketing"
-    ],
-    answer: "Entrepreneurship"
-  },
-  {
-    question: "Business ethics focuses on:",
-    options: [
-      "Profit maximization only",
-      "Legal policies only",
-      "Right and wrong in business conduct",
-      "Stock exchange rules"
-    ],
-    answer: "Right and wrong in business conduct"
-  },
-  {
-    question: "Which of the following is NOT a type of business risk?",
-    options: [
-      "Financial risk",
-      "Operational risk",
-      "Educational risk",
-      "Strategic risk"
-    ],
-    answer: "Educational risk"
-  },
-  {
-    question: "Delegation improves efficiency by:",
-    options: [
-      "Creating confusion",
-      "Overburdening subordinates",
-      "Enabling workload sharing",
-      "Avoiding responsibility"
-    ],
-    answer: "Enabling workload sharing"
-  },
-  {
-    question: "Entrepreneurial innovation results in:",
-    options: [
-      "Reduced product quality",
-      "Stagnant business operations",
-      "New and improved products/services",
-      "Legal penalties"
-    ],
-    answer: "New and improved products/services"
-  },
-  {
-    question: "Which of these financial tools help businesses assess performance?",
-    options: [
-      "Survey forms",
-      "Balance sheets and income statements",
-      "Cheques",
-      "Receipts"
-    ],
-    answer: "Balance sheets and income statements"
-  },
-  {
-    question: "In business, the primary goal of decision-making is to:",
-    options: [
-      "Avoid growth",
-      "Ensure effective solutions",
-      "Increase delay",
-      "Hire external help"
-    ],
-    answer: "Ensure effective solutions"
-  },
-  {
-    question: "The primary purpose of the stock exchange is to:",
-    options: [
-      "Pay workers",
-      "Trade goods and services",
-      "Provide loans to students",
-      "Facilitate buying and selling of shares"
-    ],
-    answer: "Facilitate buying and selling of shares"
-  },
-  {
-    question: "A key element of human resource management is:",
-    options: [
-      "Stock valuation",
-      "Recruitment and selection",
-      "Advertising",
-      "Product distribution"
-    ],
-    answer: "Recruitment and selection"
-  },
-  {
-    question: "Which of the following is a characteristic of a good entrepreneur?",
-    options: [
-      "Fear of risk",
-      "Avoidance of planning",
-      "Proactivity",
-      "Resistance to change"
-    ],
-    answer: "Proactivity"
-  },
-  {
-    question: "An agent is best described as someone who:",
-    options: [
-      "Owns the business",
-      "Buys goods for personal use",
-      "Acts on behalf of another party",
-      "Competes with the business"
-    ],
-    answer: "Acts on behalf of another party"
-  },
-  {
-    question: "A promissory note is used for:",
-    options: [
-      "Demanding salaries",
-      "Advertising new products",
-      "Promising to pay money in the future",
-      "Rejecting goods"
-    ],
-    answer: "Promising to pay money in the future"
-  },
-  {
-    question: "One benefit of small businesses to the economy is:",
-    options: [
-      "They do not pay tax",
-      "They create employment",
-      "They avoid innovation",
-      "They reduce exports"
-    ],
-    answer: "They create employment"
-  },
-  {
-    question: "Which financial institution is responsible for controlling money supply?",
-    options: [
-      "Commercial bank",
-      "Development bank",
-      "Rural bank",
-      "Central bank"
-    ],
-    answer: "Central bank"
-  },
-  {
-    question: "E-commerce includes all the following EXCEPT:",
-    options: [
-      "Online banking",
-      "Retail stores",
-      "Mobile payments",
-      "Digital marketplaces"
-    ],
-    answer: "Retail stores"
-  },
-  {
-    question: "Delegation allows a manager to:",
-    options: [
-      "Avoid responsibility",
-      "Increase workload",
-      "Assign tasks while retaining accountability",
-      "Replace employees"
-    ],
-    answer: "Assign tasks while retaining accountability"
-  },
-  {
-    question: "Planning helps management to:",
-    options: [
-      "React randomly",
-      "Operate without goals",
-      "Set and achieve objectives",
-      "Avoid decisions"
-    ],
-    answer: "Set and achieve objectives"
-  },
-  {
-    question: "Which type of insurance covers loss from theft?",
-    options: [
-      "Life insurance",
-      "Marine insurance",
-      "Burglary insurance",
-      "Fire insurance"
-    ],
-    answer: "Burglary insurance"
-  },
-  {
-    question: "An economic integration where countries adopt a single currency is called:",
-    options: [
-      "Customs union",
-      "Monetary union",
-      "Trade agreement",
-      "Global partnership"
-    ],
-    answer: "Monetary union"
-  },
-  {
-    question: "A contract is enforceable when it:",
-    options: [
-      "Is based on emotion",
-      "Has legal backing",
-      "Is unwritten",
-      "Lacks consent"
-    ],
-    answer: "Has legal backing"
-  },
-  {
-    question: "The human resource department handles:",
-    options: [
-      "Machinery repair",
-      "Recruitment and training",
-      "Sales monitoring",
-      "Financial auditing"
-    ],
-    answer: "Recruitment and training"
-  },
-  {
-    question: "The process of setting goals and developing plans is known as:",
-    options: [
-      "Supervision",
-      "Organizing",
-      "Planning",
-      "Directing"
-    ],
-    answer: "Planning"
-  },
-  {
-    question: "An entrepreneur typically:",
-    options: [
-      "Avoids risk",
-      "Follows trends blindly",
-      "Takes initiative and risks",
-      "Depends entirely on others"
-    ],
-    answer: "Takes initiative and risks"
-  },
-  {
-    question: "Which of the following is a negotiable instrument?",
-    options: [
-      "Cheque",
-      "Invoice",
-      "Memo",
-      "Job description"
-    ],
-    answer: "Cheque"
-  },
-  {
-    question: "Globalization affects businesses by:",
-    options: [
-      "Isolating markets",
-      "Eliminating competition",
-      "Expanding opportunities and challenges",
-      "Decreasing product quality"
-    ],
-    answer: "Expanding opportunities and challenges"
-  },
-  {
-    question: "Which of these is a core principle in marketing?",
-    options: [
-      "Customer satisfaction",
-      "Product hoarding",
-      "Service monopoly",
-      "Production halts"
-    ],
-    answer: "Customer satisfaction"
-  },
-  {
-    question: "The main goal of production management is to:",
-    options: [
-      "Reduce employment",
-      "Increase costs",
-      "Ensure efficient production",
-      "Delay delivery"
-    ],
-    answer: "Ensure efficient production"
-  },
-  {
-    question: "Which is NOT an element of the legal environment of business?",
-    options: [
-      "Law of contract",
-      "Agency principles",
-      "Product design",
-      "Negotiable instruments"
-    ],
-    answer: "Product design"
-  },
-  {
-    question: "Which of the following is a source of business finance?",
-    options: [
-      "Manager’s office",
-      "Loan from a bank",
-      "Daily reports",
-      "Job application"
-    ],
-    answer: "Loan from a bank"
-  },
-  {
-    question: "Stock exchange encourages investment by:",
-    options: [
-      "Limiting business growth",
-      "Providing a platform to buy/sell shares",
-      "Increasing inflation",
-      "Reducing product quality"
-    ],
-    answer: "Providing a platform to buy/sell shares"
-  },
-  {
-    question: "E-commerce provides the benefit of:",
-    options: [
-      "Face-to-face transactions",
-      "Limited shopping hours",
-      "Convenient shopping from anywhere",
-      "Manual bookkeeping"
-    ],
-    answer: "Convenient shopping from anywhere"
-  },
-  {
-    question: "Which of the following is NOT a function of money?",
-    options: [
-      "Medium of exchange",
-      "Store of value",
-      "Unit of account",
-      "Source of production"
-    ],
-    answer: "Source of production"
-  },
-  {
-    question: "Which of these is an external factor affecting business operations?",
-    options: [
-      "Company policy",
-      "Employee skill",
-      "Government regulation",
-      "Organizational culture"
-    ],
-    answer: "Government regulation"
-  },
-  {
-    question: "Decision-making in management involves:",
-    options: [
-      "Guessing",
-      "Choosing among alternatives",
-      "Delegating authority",
-      "Attending meetings only"
-    ],
-    answer: "Choosing among alternatives"
-  },
-  {
-    question: "Which one is a key function of the marketing department?",
-    options: [
-      "Training staff",
-      "Controlling production",
-      "Promoting products and services",
-      "Auditing accounts"
-    ],
-    answer: "Promoting products and services"
-  },
-  {
-    question: "Which of the following is NOT a benefit of entrepreneurship?",
-    options: [
-      "Job creation",
-      "Innovation",
-      "Increased unemployment",
-      "Economic development"
-    ],
-    answer: "Increased unemployment"
-  },
-  {
-    question: "The function of organizing includes:",
-    options: [
-      "Setting vague objectives",
-      "Structuring resources to achieve goals",
-      "Avoiding planning",
-      "Reducing staff morale"
-    ],
-    answer: "Structuring resources to achieve goals"
-  },
-  {
-    question: "A business that operates mainly online is engaging in:",
-    options: [
-      "Direct marketing",
-      "E-commerce",
-      "Wholesale trade",
-      "Traditional retail"
-    ],
-    answer: "E-commerce"
-  },
-  {
-    question: "Labour relations focus on:",
-    options: [
-      "Employer-customer issues",
-      "Employee performance appraisal",
-      "Relationship between workers and management",
-      "Job rotation"
-    ],
-    answer: "Relationship between workers and management"
-  },
-  {
-    question: "A key advantage of small businesses is their:",
-    options: [
-      "Complex structure",
-      "Slow decision-making",
-      "Flexibility and innovation",
-      "Lack of risk"
-    ],
-    answer: "Flexibility and innovation"
-  },
-  {
-    question: "The purpose of the law of contract is to:",
-    options: [
-      "Create criminal cases",
-      "Regulate marriage",
-      "Ensure agreement between parties is legally binding",
-      "Enforce tax rules"
-    ],
-    answer: "Ensure agreement between parties is legally binding"
-  },
-  {
-    question: "One key disadvantage of e-commerce is:",
-    options: [
-      "Global access",
-      "Delivery delays",
-      "Low internet usage",
-      "24/7 operation"
-    ],
-    answer: "Delivery delays"
-  },
-  {
-    question: "Money serves as a:",
-    options: [
-      "Production tool",
-      "Medium of communication",
-      "Medium of exchange",
-      "Human resource"
-    ],
-    answer: "Medium of exchange"
-  },
-  {
-    question: "The act of giving authority to subordinates is called:",
-    options: [
-      "Planning",
-      "Directing",
-      "Delegation",
-      "Supervision"
-    ],
-    answer: "Delegation"
-  },
-  {
-    question: "A contract signed under pressure is considered:",
-    options: [
-      "Valid",
-      "Void",
-      "Voidable",
-      "Enforceable"
-    ],
-    answer: "Voidable"
-  },
-  {
-    question: "Entrepreneurs are important because they:",
-    options: [
-      "Rely on government support only",
-      "Ignore innovation",
-      "Create goods, services, and jobs",
-      "Discourage investment"
-    ],
-    answer: "Create goods, services, and jobs"
-  },
-  {
-    question: "Marketing focuses on:",
-    options: [
-      "Human resource training",
-      "Meeting customer needs profitably",
-      "Production line efficiency",
-      "Recruitment processes"
-    ],
-    answer: "Meeting customer needs profitably"
-  },
-  {
-    question: "Which of these is NOT a responsibility of human resource management?",
-    options: [
-      "Staff recruitment",
-      "Training and development",
-      "Advertising products",
-      "Conflict resolution"
-    ],
-    answer: "Advertising products"
-  },
-  {
-    question: "One role of financial institutions is to:",
-    options: [
-      "Manufacture goods",
-      "Organize meetings",
-      "Provide financial services",
-      "Set tax rates"
-    ],
-    answer: "Provide financial services"
-  },
-  {
-    question: "The principle of indemnity in insurance ensures:",
-    options: [
-      "The insured gains profit",
-      "Double payment is made",
-      "The insured is restored to original financial position",
-      "Premiums are refunded"
-    ],
-    answer: "The insured is restored to original financial position"
-  },
-  {
-    question: "Entrepreneurial development is promoted through:",
-    options: [
-      "Limited access to loans",
-      "Business education and training",
-      "Rising inflation",
-      "High taxes"
-    ],
-    answer: "Business education and training"
-  },
-  {
-    question: "An economic union allows members to:",
-    options: [
-      "Use different currencies",
-      "Impose trade barriers",
-      "Trade freely and adopt common policies",
-      "Ban imports"
-    ],
-    answer: "Trade freely and adopt common policies"
-  },
-  {
-    question: "Negotiable instruments must be:",
-    options: [
-      "Delivered verbally",
-      "Written and signed",
-      "Unclear and anonymous",
-      "Oral agreements"
-    ],
-    answer: "Written and signed"
-  },
-  {
-    question: "Which one of the following is NOT a function of management?",
-    options: [
-      "Directing",
-      "Planning",
-      "Gambling",
-      "Organizing"
-    ],
-    answer: "Gambling"
-  },
-  {
-    question: "A key feature of economic integration is:",
-    options: [
-      "National isolation",
-      "Increased trade barriers",
-      "Promotion of free trade among member countries",
-      "Reduction of internal investment"
-    ],
-    answer: "Promotion of free trade among member countries"
-  },
-  {
-    question: "Which of the following defines globalization?",
-    options: [
-      "Limiting internet access",
-      "Integration of world economies and markets",
-      "Decentralizing internal processes",
-      "Restricting import of foreign goods"
-    ],
-    answer: "Integration of world economies and markets"
-  },
-  {
-    question: "The role of insurance in business is to:",
-    options: [
-      "Create liabilities",
-      "Eliminate taxes",
-      "Manage and mitigate risk",
-      "Avoid employee recruitment"
-    ],
-    answer: "Manage and mitigate risk"
-  },
-  {
-    question: "E-commerce has grown due to:",
-    options: [
-      "Decline in mobile phones",
-      "Increase in paper use",
-      "Advancement in digital technology",
-      "Rise in face-to-face transactions"
-    ],
-    answer: "Advancement in digital technology"
-  },
-  {
-    question: "A person who undertakes risks in starting a new business is called a:",
-    options: [
-      "Technician",
-      "Banker",
-      "Manager",
-      "Entrepreneur"
-    ],
-    answer: "Entrepreneur"
-  },
-  {
-    question: "Planning in management involves:",
-    options: [
-      "Avoiding decisions",
-      "Setting objectives and outlining actions",
-      "Hiring workers only",
-      "Watching competitors"
-    ],
-    answer: "Setting objectives and outlining actions"
-  },
-  {
-    question: "Delegation improves organizational efficiency by:",
-    options: [
-      "Overworking staff",
-      "Avoiding task distribution",
-      "Assigning tasks and responsibilities appropriately",
-      "Increasing confusion"
-    ],
-    answer: "Assigning tasks and responsibilities appropriately"
-  },
-  {
-    question: "Which of these is a form of negotiable instrument?",
-    options: [
-      "Receipt",
-      "Cheque",
-      "Report",
-      "Invoice"
-    ],
-    answer: "Cheque"
-  },
-  {
-    question: "In business, the law of agency covers:",
-    options: [
-      "Ownership of businesses",
-      "Relationships between employer and employee",
-      "Authority granted by a principal to an agent",
-      "Stock exchange regulations"
-    ],
-    answer: "Authority granted by a principal to an agent"
-  },
-  {
-    question: "A small business is likely to succeed if it:",
-    options: [
-      "Ignores customer needs",
-      "Adopts flexible strategies",
-      "Has no business plan",
-      "Avoids market research"
-    ],
-    answer: "Adopts flexible strategies"
-  },
-  {
-    question: "Which of the following is a financial institution?",
-    options: [
-      "Retail store",
-      "Commercial bank",
-      "NGO",
-      "Post office"
-    ],
-    answer: "Commercial bank"
-  },
-  {
-    question: "Which function of management involves influencing staff to work towards goals?",
-    options: [
-      "Directing",
-      "Planning",
-      "Organizing",
-      "Budgeting"
-    ],
-    answer: "Directing"
-  },
-  {
-    question: "Entrepreneurship contributes to national development through:",
-    options: [
-      "Lower productivity",
-      "Export reduction",
-      "Innovation and job creation",
-      "Limiting markets"
-    ],
-    answer: "Innovation and job creation"
-  },
-  {
-    question: "Which of the following is essential in human resource management?",
-    options: [
-      "Power production",
-      "Employee training",
-      "Goods packaging",
-      "Machinery control"
-    ],
-    answer: "Employee training"
-  },
-  {
-    question: "The marketing concept focuses on:",
-    options: [
-      "Satisfying customer needs",
-      "Reducing sales",
-      "Firing unproductive staff",
-      "Avoiding advertisement"
-    ],
-    answer: "Satisfying customer needs"
-  },
-  {
-    question: "The stock exchange enables investors to:",
-    options: [
-      "Borrow capital",
-      "Purchase raw materials",
-      "Buy and sell securities",
-      "Secure jobs"
-    ],
-    answer: "Buy and sell securities"
-  },
-  {
-    question: "A contract without mutual agreement is considered:",
-    options: [
-      "Void",
-      "Valid",
-      "Profitable",
-      "Enforceable"
-    ],
-    answer: "Void"
-  },
-  {
-    question: "Which of the following is NOT a responsibility of production management?",
-    options: [
-      "Quality control",
-      "Resource planning",
-      "Recruitment interviews",
-      "Inventory management"
-    ],
-    answer: "Recruitment interviews"
-  },
-  {
-    question: "A central element of globalization is:",
-    options: [
-      "Internet censorship",
-      "Business isolation",
-      "Increased connectivity",
-      "Discouraging foreign trade"
-    ],
-    answer: "Increased connectivity"
-  },
-  {
-    question: "Risk management in business aims to:",
-    options: [
-      "Increase uncertainty",
-      "Reduce losses and maximize opportunities",
-      "Avoid customer service",
-      "Ignore potential threats"
-    ],
-    answer: "Reduce losses and maximize opportunities"
-  },
-  {
-    question: "Labour relations involve:",
-    options: [
-      "Monetary policy",
-      "Legal documents",
-      "Employer-employee relations",
-      "Product design"
-    ],
-    answer: "Employer-employee relations"
-  },
-  {
-    question: "Which of the following is NOT a form of economic integration?",
-    options: [
-      "Customs union",
-      "Free trade area",
-      "Tariff wall",
-      "Common market"
-    ],
-    answer: "Tariff wall"
-  },
-  {
-    question: "A key characteristic of a successful entrepreneur is:",
-    options: [
-      "Passivity",
-      "Creativity",
-      "Dependency",
-      "Procrastination"
-    ],
-    answer: "Creativity"
-  },
-  {
-    question: "Organizing in management ensures:",
-    options: [
-      "Chaos in the workplace",
-      "Resources are not aligned",
-      "Orderly arrangement of activities",
-      "No plan execution"
-    ],
-    answer: "Orderly arrangement of activities"
-  },
-  {
-    question: "One major benefit of globalization to businesses is:",
-    options: [
-      "Smaller markets",
-      "Isolation from innovation",
-      "Access to international markets",
-      "Increasing tariffs"
-    ],
-    answer: "Access to international markets"
-  },
-  {
-    question: "A business plan is important to entrepreneurs because it:",
-    options: [
-      "Limits growth",
-      "Confuses managers",
-      "Provides a roadmap",
-      "Eliminates the need for marketing"
-    ],
-    answer: "Provides a roadmap"
-  },
-  {
-    question: "Which of the following is used for risk coverage?",
-    options: [
-      "Market research",
-      "Insurance",
-      "Sales promotion",
-      "Recruitment"
-    ],
-    answer: "Insurance"
-  },
-  {
-    question: "Which of these is a function of financial institutions?",
-    options: [
-      "Legal drafting",
-      "Providing loans and savings services",
-      "Regulating laws",
-      "Creating insurance policies"
-    ],
-    answer: "Providing loans and savings services"
-  },
-  {
-    question: "The term ‘entrepreneur’ is most associated with:",
-    options: [
-      "Risk-taking and innovation",
-      "Wage employment",
-      "Lawsuits",
-      "Government employment"
-    ],
-    answer: "Risk-taking and innovation"
-  },
-  {
-    question: "Which is NOT an advantage of small-scale businesses?",
-    options: [
-      "Closer customer relationships",
-      "Flexibility",
-      "Large-scale economies",
-      "Quick decision-making"
-    ],
-    answer: "Large-scale economies"
-  },
-  {
-    question: "One function of the central bank is to:",
-    options: [
-      "Fix market prices",
-      "Act as a lender of last resort",
-      "Advertise businesses",
-      "Set up retail outlets"
-    ],
-    answer: "Act as a lender of last resort"
-  },
-  {
-    question: "Delegation helps improve:",
-    options: [
-      "Workload imbalance",
-      "Efficiency and team performance",
-      "Micromanagement",
-      "Manager stress"
-    ],
-    answer: "Efficiency and team performance"
-  },
-  {
-    question: "Negotiable instruments must be:",
-    options: [
-      "Illegal",
-      "Written and signed",
-      "Verbal promises",
-      "Electronic voice messages"
-    ],
-    answer: "Written and signed"
-  },
-  {
-    question: "A stock exchange is important because it:",
-    options: [
-      "Employs only farmers",
-      "Determines political leadership",
-      "Facilitates capital formation",
-      "Avoids risk-sharing"
-    ],
-    answer: "Facilitates capital formation"
-  },
-  {
-    question: "Marketing involves all EXCEPT:",
-    options: [
-      "Product development",
-      "Customer research",
-      "Production planning",
-      "Promotion"
-    ],
-    answer: "Production planning"
-  },
-  {
-    question: "E-commerce can improve sales by:",
-    options: [
-      "Reducing product visibility",
-      "Limiting customer feedback",
-      "Reaching global audiences",
-      "Restricting payment options"
-    ],
-    answer: "Reaching global audiences"
-  },
-  {
-    question: "An effective decision-making process includes:",
-    options: [
-      "Avoiding choices",
-      "Random actions",
-      "Evaluating alternatives",
-      "Ignoring data"
-    ],
-    answer: "Evaluating alternatives"
-  },
-  {
-    question: "Which function of management is concerned with goal-setting?",
-    options: [
-      "Organizing",
-      "Planning",
-      "Controlling",
-      "Supervising"
-    ],
-    answer: "Planning"
-  },
-  {
-    question: "Which of these would most likely be insured under fire insurance?",
-    options: [
-      "Company vehicle",
-      "Office building",
-      "Employee’s life",
-      "Loan repayment"
-    ],
-    answer: "Office building"
-  },
-  {
-    question: "In business, a contract is binding when:",
-    options: [
-      "One party disagrees",
-      "It lacks consideration",
-      "It is signed voluntarily and legally",
-      "It is oral only"
-    ],
-    answer: "It is signed voluntarily and legally"
-  },
-  {
-    question: "A key task in small business management is:",
-    options: [
-      "Writing laws",
-      "Market analysis",
-      "Judicial review",
-      "Publishing textbooks"
-    ],
-    answer: "Market analysis"
-  },
-  {
-    question: "Which of the following is NOT a source of business finance?",
-    options: [
-      "Personal savings",
-      "Bank loan",
-      "Credit sales",
-      "Phone call"
-    ],
-    answer: "Phone call"
-  },
-  {
-    question: "Labour and industrial relations primarily deal with:",
-    options: [
-      "Legal cases",
-      "Business growth plans",
-      "Employer-employee negotiations",
-      "Product warranties"
-    ],
-    answer: "Employer-employee negotiations"
-  },
-  {
-    question: "Which type of economic integration involves total harmonization of policies?",
-    options: [
-      "Preferential trade area",
-      "Free trade area",
-      "Common market",
-      "Economic union"
-    ],
-    answer: "Economic union"
-  },
-  {
-    question: "Production management focuses on:",
-    options: [
-      "Recruitment",
-      "Process efficiency and output",
-      "Market regulation",
-      "Law enforcement"
-    ],
-    answer: "Process efficiency and output"
-  },
-  {
-    question: "Which of the following best defines ‘management’?",
-    options: [
-      "Leading a group to meet goals",
-      "Ignoring staff needs",
-      "Only making decisions",
-      "Avoiding responsibility"
-    ],
-    answer: "Leading a group to meet goals"
-  },
-  {
-    question: "The primary aim of business organizations is to:",
-    options: [
-      "Make profits",
-      "Lose money",
-      "Distribute free goods",
-      "Avoid customers"
-    ],
-    answer: "Make profits"
-  },
-  {
-    question: "What is the first step in the management process?",
-    options: [
-      "Organizing",
-      "Planning",
-      "Delegating",
-      "Controlling"
-    ],
-    answer: "Planning"
-  },
-  {
-    question: "In business, the term ‘society’ refers to:",
-    options: [
-      "Only shareholders",
-      "All stakeholders and community",
-      "Competitors only",
-      "Suppliers only"
-    ],
-    answer: "All stakeholders and community"
-  },
-  {
-    question: "Which of the following is NOT a type of business organization?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Corporation",
-      "Municipality"
-    ],
-    answer: "Municipality"
-  },
-  {
-    question: "Decision-making in management involves:",
-    options: [
-      "Choosing the best alternative",
-      "Avoiding choices",
-      "Random guessing",
-      "Ignoring facts"
-    ],
-    answer: "Choosing the best alternative"
-  },
-  {
-    question: "Which management function includes assigning duties to others?",
-    options: [
-      "Directing",
-      "Planning",
-      "Delegating",
-      "Controlling"
-    ],
-    answer: "Delegating"
-  },
-  {
-    question: "The legal framework of business ensures:",
-    options: [
-      "Unregulated trade",
-      "Fairness and protection for all parties",
-      "Complete freedom without rules",
-      "Ignoring contracts"
-    ],
-    answer: "Fairness and protection for all parties"
-  },
-  {
-    question: "Money serves as a medium of exchange, unit of account, and:",
-    options: [
-      "Source of risk",
-      "Store of value",
-      "Type of labor",
-      "Legal document"
-    ],
-    answer: "Store of value"
-  },
-  {
-    question: "Which of the following is a financial risk in business?",
-    options: [
-      "Inflation",
-      "Employee motivation",
-      "Customer feedback",
-      "Sales promotion"
-    ],
-    answer: "Inflation"
-  },
-  {
-    question: "Globalization has led to increased:",
-    options: [
-      "Cultural exchange and trade",
-      "Isolationism",
-      "Barriers to trade",
-      "Government restrictions"
-    ],
-    answer: "Cultural exchange and trade"
-  },
-  {
-    question: "Elements of human resource management include:",
-    options: [
-      "Recruitment and training",
-      "Advertising",
-      "Transport logistics",
-      "Product packaging"
-    ],
-    answer: "Recruitment and training"
-  },
-  {
-    question: "Which of the following is NOT an aspect of industrial relations?",
-    options: [
-      "Conflict resolution",
-      "Wage negotiation",
-      "Customer service",
-      "Collective bargaining"
-    ],
-    answer: "Customer service"
-  },
-  {
-    question: "Entrepreneurship mainly involves:",
-    options: [
-      "Risk-taking and innovation",
-      "Following orders",
-      "Avoiding investments",
-      "Ignoring customers"
-    ],
-    answer: "Risk-taking and innovation"
-  },
-  {
-    question: "Which of these is a principle of marketing management?",
-    options: [
-      "Ignoring customer needs",
-      "Product focus",
-      "Customer orientation",
-      "Random pricing"
-    ],
-    answer: "Customer orientation"
-  },
-  {
-    question: "E-commerce enables businesses to:",
-    options: [
-      "Reach wider markets",
-      "Avoid advertising",
-      "Reduce product quality",
-      "Ignore customer feedback"
-    ],
-    answer: "Reach wider markets"
-  },
-  {
-    question: "Small business development requires:",
-    options: [
-      "Adequate planning",
-      "Ignoring competition",
-      "No finances",
-      "Avoiding customer needs"
-    ],
-    answer: "Adequate planning"
-  },
-  {
-    question: "Which is NOT a financial institution?",
-    options: [
-      "Microfinance bank",
-      "Commercial bank",
-      "Savings and loans",
-      "Retail store"
-    ],
-    answer: "Retail store"
-  },
-  {
-    question: "Which of these is NOT a function of management?",
-    options: [
-      "Planning",
-      "Directing",
-      "Producing",
-      "Controlling"
-    ],
-    answer: "Producing"
-  },
-  {
-    question: "A contract requires which of the following to be valid?",
-    options: [
-      "Offer and acceptance",
-      "Only an offer",
-      "Only acceptance",
-      "No consideration"
-    ],
-    answer: "Offer and acceptance"
-  },
-  {
-    question: "Which is an example of a negotiable instrument?",
-    options: [
-      "Promissory note",
-      "Invoice",
-      "Billboard",
-      "Receipt"
-    ],
-    answer: "Promissory note"
-  },
-  {
-    question: "The stock exchange mainly deals with:",
-    options: [
-      "Buying and selling of shares",
-      "Real estate sales",
-      "Labor contracts",
-      "Government legislation"
-    ],
-    answer: "Buying and selling of shares"
-  },
-  {
-    question: "Which of these is a characteristic of small businesses?",
-    options: [
-      "Limited capital",
-      "Large workforce",
-      "Global presence",
-      "Extensive bureaucracy"
-    ],
-    answer: "Limited capital"
-  },
-  {
-    question: "Which of the following is a principle of delegation?",
-    options: [
-      "Clarity of authority",
-      "Avoiding responsibility",
-      "Ignoring communication",
-      "Overloading employees"
-    ],
-    answer: "Clarity of authority"
-  },
-  {
-    question: "Which of the following is NOT part of the management process?",
-    options: [
-      "Planning",
-      "Judging",
-      "Organizing",
-      "Controlling"
-    ],
-    answer: "Judging"
-  },
-  {
-    question: "The global market is:",
-    options: [
-      "A single worldwide market",
-      "A local market only",
-      "A government market",
-      "A restricted market"
-    ],
-    answer: "A single worldwide market"
-  },
-  {
-    question: "Risk management in business aims to:",
-    options: [
-      "Minimize potential losses",
-      "Maximize losses",
-      "Ignore threats",
-      "Avoid planning"
-    ],
-    answer: "Minimize potential losses"
-  },
-  {
-    question: "Labour relations cover:",
-    options: [
-      "Employee-employer interactions",
-      "Marketing strategies",
-      "Financial audits",
-      "Product design"
-    ],
-    answer: "Employee-employer interactions"
-  },
-  {
-    question: "Which of the following is NOT a form of economic integration?",
-    options: [
-      "Common market",
-      "Free trade area",
-      "Tariff barrier",
-      "Economic union"
-    ],
-    answer: "Tariff barrier"
-  },
-  {
-    question: "Which of these is NOT a principle of marketing?",
-    options: [
-      "Customer focus",
-      "Product quality",
-      "Ignoring customer feedback",
-      "Effective promotion"
-    ],
-    answer: "Ignoring customer feedback"
-  },
-  {
-    question: "Which of these business activities involves buying and selling goods?",
-    options: [
-      "Marketing",
-      "Manufacturing",
-      "Accounting",
-      "Staff training"
-    ],
-    answer: "Marketing"
-  },
-  {
-    question: "Which function of management controls activities to ensure goals are met?",
-    options: [
-      "Controlling",
-      "Planning",
-      "Organizing",
-      "Leading"
-    ],
-    answer: "Controlling"
-  },
-  {
-    question: "Which of these best describes a sole proprietorship?",
-    options: [
-      "Business owned by one person",
-      "Business owned by many people",
-      "Government business",
-      "Non-profit organization"
-    ],
-    answer: "Business owned by one person"
-  },
-  {
-    question: "Which of the following is NOT a method of payment in e-commerce?",
-    options: [
-      "Credit card",
-      "Mobile money",
-      "Cash on delivery",
-      "Barter trade"
-    ],
-    answer: "Barter trade"
-  },
-  {
-    question: "Which of the following is NOT a source of business finance?",
-    options: [
-      "Bank loan",
-      "Personal savings",
-      "Friends and family",
-      "Illegal activities"
-    ],
-    answer: "Illegal activities"
-  },
-  {
-    question: "Which of these is NOT a type of business risk?",
-    options: [
-      "Financial risk",
-      "Operational risk",
-      "Market risk",
-      "Permanent success"
-    ],
-    answer: "Permanent success"
-  },
-  {
-    question: "Which of these is a benefit of business planning?",
-    options: [
-      "Clarifies objectives",
-      "Confuses staff",
-      "Reduces profits",
-      "Increases risks"
-    ],
-    answer: "Clarifies objectives"
-  },
-  {
-    question: "Which of the following is NOT a financial institution?",
-    options: [
-      "Insurance company",
-      "Microfinance bank",
-      "Supermarket",
-      "Commercial bank"
-    ],
-    answer: "Supermarket"
-  },
-  {
-    question: "Which of the following is NOT a feature of effective leadership?",
-    options: [
-      "Good communication",
-      "Vision",
-      "Indecisiveness",
-      "Integrity"
-    ],
-    answer: "Indecisiveness"
-  },
-  {
-    question: "Which of these is NOT a form of business ownership?",
-    options: [
-      "Partnership",
-      "Corporation",
-      "Employee union",
-      "Sole proprietorship"
-    ],
-    answer: "Employee union"
-  },
-  {
-    question: "Which of the following best describes the ‘organizing’ function in management?",
-    options: [
-      "Arranging resources to achieve goals",
-      "Making decisions only",
-      "Ignoring staff input",
-      "Setting prices"
-    ],
-    answer: "Arranging resources to achieve goals"
-  },
-  {
-    question: "Which form of business organization involves shareholders?",
-    options: [
-      "Corporation",
-      "Sole proprietorship",
-      "Partnership",
-      "Cooperative"
-    ],
-    answer: "Corporation"
-  },
-  {
-    question: "Which of these is NOT a stage in the decision-making process?",
-    options: [
-      "Identifying the problem",
-      "Evaluating alternatives",
-      "Ignoring consequences",
-      "Implementing the decision"
-    ],
-    answer: "Ignoring consequences"
-  },
-  {
-    question: "The main role of ‘directing’ in management is to:",
-    options: [
-      "Guide and motivate employees",
-      "Prepare financial reports",
-      "Hire new staff",
-      "Develop products"
-    ],
-    answer: "Guide and motivate employees"
-  },
-  {
-    question: "Which law governs the formation and enforcement of contracts?",
-    options: [
-      "Law of Contract",
-      "Law of Agency",
-      "Criminal Law",
-      "Property Law"
-    ],
-    answer: "Law of Contract"
-  },
-  {
-    question: "Which of the following is NOT a principle of agency?",
-    options: [
-      "Authority",
-      "Consent",
-      "Fraud",
-      "Accountability"
-    ],
-    answer: "Fraud"
-  },
-  {
-    question: "Risk management in business involves:",
-    options: [
-      "Identifying and mitigating potential risks",
-      "Ignoring threats",
-      "Maximizing risks",
-      "Avoiding insurance"
-    ],
-    answer: "Identifying and mitigating potential risks"
-  },
-  {
-    question: "Which of the following is a type of economic integration?",
-    options: [
-      "Free trade area",
-      "Trade embargo",
-      "Tariff barrier",
-      "Quotas"
-    ],
-    answer: "Free trade area"
-  },
-  {
-    question: "Which of the following best describes ‘small business development’?",
-    options: [
-      "Supporting and growing small enterprises",
-      "Closing small businesses",
-      "Ignoring small firms",
-      "Only large businesses matter"
-    ],
-    answer: "Supporting and growing small enterprises"
-  },
-  {
-    question: "Which of the following best describes ‘market segmentation’?",
-    options: [
-      "Dividing a market into groups with similar needs",
-      "Ignoring customer groups",
-      "Selling only one product",
-      "Reducing product quality"
-    ],
-    answer: "Dividing a market into groups with similar needs"
-  },
-  {
-    question: "Which of these is NOT a key element of human resource management?",
-    options: [
-      "Recruitment",
-      "Training",
-      "Product packaging",
-      "Performance appraisal"
-    ],
-    answer: "Product packaging"
-  },
-  {
-    question: "Which of the following is NOT a form of business finance?",
-    options: [
-      "Equity financing",
-      "Debt financing",
-      "Trade credit",
-      "Bartering"
-    ],
-    answer: "Bartering"
-  },
-  {
-    question: "Which of these is NOT a type of business risk?",
-    options: [
-      "Credit risk",
-      "Market risk",
-      "Environmental risk",
-      "Guaranteed profit"
-    ],
-    answer: "Guaranteed profit"
-  },
-  {
-    question: "What does the term ‘e-commerce’ mean?",
-    options: [
-      "Buying and selling goods electronically",
-      "Selling only in local markets",
-      "Avoiding internet use",
-      "Using only cash payments"
-    ],
-    answer: "Buying and selling goods electronically"
-  },
-  {
-    question: "Which of the following is a major advantage of e-commerce?",
-    options: [
-      "Access to global markets",
-      "Limited customer base",
-      "High operating costs",
-      "No need for advertising"
-    ],
-    answer: "Access to global markets"
-  },
-  {
-    question: "Which of these is NOT a negotiable instrument?",
-    options: [
-      "Cheque",
-      "Promissory note",
-      "Invoice",
-      "Bill of exchange"
-    ],
-    answer: "Invoice"
-  },
-  {
-    question: "The term ‘business environment’ refers to:",
-    options: [
-      "All external and internal factors affecting a business",
-      "Only the location of the business",
-      "The company’s products",
-      "The legal documents"
-    ],
-    answer: "All external and internal factors affecting a business"
-  },
-  {
-    question: "Which of the following best describes ‘business ethics’?",
-    options: [
-      "Moral principles guiding business conduct",
-      "Illegal business activities",
-      "Profit maximization at all costs",
-      "Ignoring customer needs"
-    ],
-    answer: "Moral principles guiding business conduct"
-  },
-  {
-    question: "Which financial institution primarily deals with long-term capital for businesses?",
-    options: [
-      "Development bank",
-      "Commercial bank",
-      "Microfinance bank",
-      "Insurance company"
-    ],
-    answer: "Development bank"
-  },
-  {
-    question: "The ‘stock exchange’ facilitates:",
-    options: [
-      "Trading of shares and securities",
-      "Sales of goods",
-      "Issuing business licenses",
-      "Tax collection"
-    ],
-    answer: "Trading of shares and securities"
-  },
-  {
-    question: "Which of these is NOT a function of management?",
-    options: [
-      "Planning",
-      "Motivating",
-      "Manufacturing",
-      "Controlling"
-    ],
-    answer: "Manufacturing"
-  },
-  {
-    question: "Which of the following is a form of business ownership?",
-    options: [
-      "Cooperative",
-      "Union",
-      "Government department",
-      "NGO"
-    ],
-    answer: "Cooperative"
-  },
-  {
-    question: "Which of these is NOT part of the management process?",
-    options: [
-      "Planning",
-      "Organizing",
-      "Producing",
-      "Leading"
-    ],
-    answer: "Producing"
-  },
-  {
-    question: "Which of the following is NOT an objective of marketing?",
-    options: [
-      "Increase sales",
-      "Create customer satisfaction",
-      "Ignore competition",
-      "Build brand loyalty"
-    ],
-    answer: "Ignore competition"
-  },
-  {
-    question: "Which of these is a characteristic of a ‘partnership’?",
-    options: [
-      "Owned by two or more persons",
-      "Owned by a single person",
-      "Owned by government",
-      "Owned by shareholders"
-    ],
-    answer: "Owned by two or more persons"
-  },
-  {
-    question: "Which of the following best describes ‘business plan’?",
-    options: [
-      "A document detailing business goals and strategies",
-      "An employee handbook",
-      "A financial report",
-      "A marketing flyer"
-    ],
-    answer: "A document detailing business goals and strategies"
-  },
-  {
-    question: "Which of the following is NOT a function of money?",
-    options: [
-      "Medium of exchange",
-      "Unit of account",
-      "Store of value",
-      "Source of conflict"
-    ],
-    answer: "Source of conflict"
-  },
-  {
-    question: "Which of these best describes ‘market research’?",
-    options: [
-      "Collecting and analyzing information about customers",
-      "Ignoring customer opinions",
-      "Advertising products",
-      "Selling goods"
-    ],
-    answer: "Collecting and analyzing information about customers"
-  },
-  {
-    question: "Which of the following is NOT a component of the marketing mix?",
-    options: [
-      "Price",
-      "Product",
-      "Place",
-      "Personnel"
-    ],
-    answer: "Personnel"
-  },
-  {
-    question: "Which of these is NOT a type of insurance?",
-    options: [
-      "Life insurance",
-      "Health insurance",
-      "Fire insurance",
-      "Employment insurance"
-    ],
-    answer: "Employment insurance"
-  },
-  {
-    question: "Which of these is a type of production management?",
-    options: [
-      "Operations management",
-      "Marketing management",
-      "Financial management",
-      "Human resource management"
-    ],
-    answer: "Operations management"
-  },
-  {
-    question: "Which is NOT a characteristic of effective communication in business?",
-    options: [
-      "Clarity",
-      "Timeliness",
-      "Ambiguity",
-      "Feedback"
-    ],
-    answer: "Ambiguity"
-  },
-  {
-    question: "Which of the following is NOT a responsibility of management?",
-    options: [
-      "Setting objectives",
-      "Motivating employees",
-      "Ignoring market trends",
-      "Allocating resources"
-    ],
-    answer: "Ignoring market trends"
-  },
-  {
-    question: "Which of these best describes ‘business competition’?",
-    options: [
-      "Rivalry among firms to attract customers",
-      "Cooperation among all businesses",
-      "Government control of prices",
-      "No effort to improve products"
-    ],
-    answer: "Rivalry among firms to attract customers"
-  },
-  {
-    question: "Which of these is a key feature of entrepreneurship?",
-    options: [
-      "Innovation",
-      "Avoiding risks",
-      "Following orders",
-      "Ignoring market needs"
-    ],
-    answer: "Innovation"
-  },
-  {
-    question: "Which of the following is NOT part of the legal environment of business?",
-    options: [
-      "Environmental laws",
-      "Contract laws",
-      "Taxation laws",
-      "Fashion laws"
-    ],
-    answer: "Fashion laws"
-  },
-  {
-    question: "Which of the following is NOT a type of financial institution?",
-    options: [
-      "Commercial bank",
-      "Microfinance bank",
-      "Insurance company",
-      "Manufacturing firm"
-    ],
-    answer: "Manufacturing firm"
-  },
-  {
-    question: "Which of the following is NOT a feature of a sole proprietorship?",
-    options: [
-      "Single owner",
-      "Limited liability",
-      "Easy to set up",
-      "Owner controls profits"
-    ],
-    answer: "Limited liability"
-  },
-  {
-    question: "What is the primary goal of production management?",
-    options: [
-      "Efficiently produce goods and services",
-      "Increase sales volume",
-      "Hire employees",
-      "Advertise products"
-    ],
-    answer: "Efficiently produce goods and services"
-  },
-  {
-    question: "Which principle of management stresses the importance of unity of command?",
-    options: [
-      "Fayol’s Principles",
-      "Taylor’s Scientific Management",
-      "Maslow’s Hierarchy of Needs",
-      "Herzberg’s Two-Factor Theory"
-    ],
-    answer: "Fayol’s Principles"
-  },
-  {
-    question: "What does ‘delegation’ involve in management?",
-    options: [
-      "Assigning authority to others",
-      "Doing all work yourself",
-      "Ignoring employee input",
-      "Setting goals alone"
-    ],
-    answer: "Assigning authority to others"
-  },
-  {
-    question: "Which of the following is NOT a common barrier to effective communication?",
-    options: [
-      "Language differences",
-      "Noise",
-      "Clear message",
-      "Cultural differences"
-    ],
-    answer: "Clear message"
-  },
-  {
-    question: "Which of the following best describes ‘market economy’?",
-    options: [
-      "Resources are allocated by market forces",
-      "Government controls all resources",
-      "No private businesses exist",
-      "Only barter trade happens"
-    ],
-    answer: "Resources are allocated by market forces"
-  },
-  {
-    question: "Which financial statement shows a company’s assets, liabilities, and equity?",
-    options: [
-      "Balance Sheet",
-      "Income Statement",
-      "Cash Flow Statement",
-      "Statement of Changes in Equity"
-    ],
-    answer: "Balance Sheet"
-  },
-  {
-    question: "Which of the following is NOT a type of production layout?",
-    options: [
-      "Process layout",
-      "Product layout",
-      "Fixed-position layout",
-      "Marketing layout"
-    ],
-    answer: "Marketing layout"
-  },
-  {
-    question: "Which of these is NOT a type of business risk?",
-    options: [
-      "Strategic risk",
-      "Financial risk",
-      "Legal risk",
-      "Guaranteed risk"
-    ],
-    answer: "Guaranteed risk"
-  },
-  {
-    question: "Which of these is NOT a form of business communication?",
-    options: [
-      "Verbal communication",
-      "Non-verbal communication",
-      "Written communication",
-      "Telepathy"
-    ],
-    answer: "Telepathy"
-  },
-  {
-    question: "Which of these best describes ‘business plan’?",
-    options: [
-      "A document outlining business goals and strategies",
-      "An employee manual",
-      "A financial report",
-      "A marketing flyer"
-    ],
-    answer: "A document outlining business goals and strategies"
-  },
-  {
-    question: "Which of the following is NOT a type of marketing strategy?",
-    options: [
-      "Price skimming",
-      "Market penetration",
-      "Product diversification",
-      "Tax evasion"
-    ],
-    answer: "Tax evasion"
-  },
-  {
-    question: "Which of the following is NOT a feature of globalization?",
-    options: [
-      "Increased trade and investment",
-      "Cross-border flow of information",
-      "Isolated national economies",
-      "International cooperation"
-    ],
-    answer: "Isolated national economies"
-  },
-  {
-    question: "Which of these is NOT a key element of human resource management?",
-    options: [
-      "Recruitment",
-      "Training and development",
-      "Performance appraisal",
-      "Product packaging"
-    ],
-    answer: "Product packaging"
-  },
-  {
-    question: "Which is the primary purpose of a contract?",
-    options: [
-      "To create legally binding obligations",
-      "To entertain parties",
-      "To confuse the customer",
-      "To increase prices"
-    ],
-    answer: "To create legally binding obligations"
-  },
-  {
-    question: "Which of the following is NOT a financial institution?",
-    options: [
-      "Commercial bank",
-      "Insurance company",
-      "Stock exchange",
-      "Retail store"
-    ],
-    answer: "Retail store"
-  },
-  {
-    question: "Which of the following is NOT part of the management process?",
-    options: [
-      "Planning",
-      "Organizing",
-      "Producing",
-      "Controlling"
-    ],
-    answer: "Producing"
-  },
-  {
-    question: "Which of these is NOT a principle of good marketing?",
-    options: [
-      "Customer focus",
-      "Continuous improvement",
-      "Ignoring competition",
-      "Value creation"
-    ],
-    answer: "Ignoring competition"
-  },
-  {
-    question: "Which of the following is NOT a characteristic of an entrepreneur?",
-    options: [
-      "Risk-taking",
-      "Innovation",
-      "Complacency",
-      "Leadership"
-    ],
-    answer: "Complacency"
-  },
-  {
-    question: "Which of these is NOT a type of business ownership?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Corporation",
-      "Government regulation"
-    ],
-    answer: "Government regulation"
-  },
-  {
-    question: "Which of these is NOT a role of management?",
-    options: [
-      "Planning",
-      "Motivating employees",
-      "Setting goals",
-      "Ignoring employee welfare"
-    ],
-    answer: "Ignoring employee welfare"
-  },
-  {
-    question: "Which financial institution facilitates the trading of shares?",
-    options: [
-      "Stock exchange",
-      "Commercial bank",
-      "Insurance company",
-      "Microfinance bank"
-    ],
-    answer: "Stock exchange"
-  },
-  {
-    question: "Which of the following is NOT a form of business finance?",
-    options: [
-      "Equity financing",
-      "Debt financing",
-      "Trade credit",
-      "Personal savings"
-    ],
-    answer: "Trade credit"
-  },
-  {
-    question: "Which of these is NOT a basic function of management?",
-    options: [
-      "Planning",
-      "Organizing",
-      "Controlling",
-      "Marketing"
-    ],
-    answer: "Marketing"
-  },
-  {
-    question: "Which of the following best describes ‘e-commerce’?",
-    options: [
-      "Buying and selling goods online",
-      "Selling only in physical stores",
-      "Avoiding digital platforms",
-      "Using cash payments only"
-    ],
-    answer: "Buying and selling goods online"
-  },
-  {
-    question: "Which of these is NOT a component of the marketing mix?",
-    options: [
-      "Product",
-      "Price",
-      "Place",
-      "Profit"
-    ],
-    answer: "Profit"
-  },
-  {
-    question: "Which of these best describes ‘market segmentation’?",
-    options: [
-      "Dividing a market into groups with similar needs",
-      "Selling the same product to everyone",
-      "Ignoring customer preferences",
-      "Raising prices arbitrarily"
-    ],
-    answer: "Dividing a market into groups with similar needs"
-  },
-  {
-    question: "Which of the following is NOT a legal form of business organization?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Cooperative",
-      "Illegal cartel"
-    ],
-    answer: "Illegal cartel"
-  },
-  {
-    question: "Which is NOT a feature of a corporation?",
-    options: [
-      "Limited liability",
-      "Separate legal entity",
-      "Unlimited liability",
-      "Ability to raise capital by issuing shares"
-    ],
-    answer: "Unlimited liability"
-  },
-  {
-    question: "Which of the following is NOT a function of money?",
-    options: [
-      "Medium of exchange",
-      "Unit of account",
-      "Store of value",
-      "Medium of production"
-    ],
-    answer: "Medium of production"
-  },
-  {
-    question: "Which of these is NOT an objective of management?",
-    options: [
-      "Achieving organizational goals",
-      "Motivating employees",
-      "Ignoring competition",
-      "Efficient use of resources"
-    ],
-    answer: "Ignoring competition"
-  },
-  {
-    question: "Which of the following best describes ‘risk management’?",
-    options: [
-      "Identifying and reducing business risks",
-      "Ignoring potential risks",
-      "Taking unnecessary risks",
-      "Avoiding insurance"
-    ],
-    answer: "Identifying and reducing business risks"
-  },
-  {
-    question: "Which of these is NOT a principle of contract law?",
-    options: [
-      "Offer and acceptance",
-      "Consideration",
-      "Illegal purpose",
-      "Capacity to contract"
-    ],
-    answer: "Illegal purpose"
-  },
-  {
-    question: "Which of the following best describes ‘business ethics’?",
-    options: [
-      "Moral principles guiding business behavior",
-      "Dishonest business practices",
-      "Ignoring customer rights",
-      "Maximizing profits at any cost"
-    ],
-    answer: "Moral principles guiding business behavior"
-  },
-  {
-    question: "Which of the following is NOT an example of a negotiable instrument?",
-    options: [
-      "Cheque",
-      "Promissory note",
-      "Bill of exchange",
-      "Invoice"
-    ],
-    answer: "Invoice"
-  },
-  {
-    question: "Which of these best describes ‘globalization’?",
-    options: [
-      "Increasing worldwide interconnectedness",
-      "Isolated local economies",
-      "Restricting trade",
-      "Closing borders"
-    ],
-    answer: "Increasing worldwide interconnectedness"
-  },
-  {
-    question: "Which of the following is NOT a type of business organization?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Corporation",
-      "Labor union"
-    ],
-    answer: "Labor union"
-  },
-  {
-    question: "Which of the following is NOT a function of human resource management?",
-    options: [
-      "Recruitment and selection",
-      "Training and development",
-      "Production scheduling",
-      "Performance appraisal"
-    ],
-    answer: "Production scheduling"
-  },
-  {
-    question: "Which is the first step in the decision-making process?",
-    options: [
-      "Identifying the problem",
-      "Evaluating alternatives",
-      "Implementing the decision",
-      "Reviewing the decision"
-    ],
-    answer: "Identifying the problem"
-  },
-  {
-    question: "Which of these is NOT a characteristic of a good business plan?",
-    options: [
-      "Clear objectives",
-      "Detailed financial projections",
-      "Unrealistic goals",
-      "Market analysis"
-    ],
-    answer: "Unrealistic goals"
-  },
-  {
-    question: "Which financial institution provides loans to individuals and small businesses?",
-    options: [
-      "Microfinance bank",
-      "Central bank",
-      "Stock exchange",
-      "Insurance company"
-    ],
-    answer: "Microfinance bank"
-  },
-  {
-    question: "Which of the following best describes ‘business environment’?",
-    options: [
-      "All external and internal factors affecting business operations",
-      "Only internal company policies",
-      "Only government regulations",
-      "Only customers’ preferences"
-    ],
-    answer: "All external and internal factors affecting business operations"
-  },
-  {
-    question: "Which of these is NOT a key principle of effective planning?",
-    options: [
-      "Setting clear objectives",
-      "Flexibility",
-      "Ignoring risks",
-      "Timeliness"
-    ],
-    answer: "Ignoring risks"
-  },
-  {
-    question: "Which term describes the process of dividing work into smaller tasks?",
-    options: [
-      "Division of labor",
-      "Delegation",
-      "Coordination",
-      "Supervision"
-    ],
-    answer: "Division of labor"
-  },
-  {
-    question: "Which of the following is NOT a benefit of e-commerce?",
-    options: [
-      "Global reach",
-      "Reduced costs",
-      "Immediate product delivery",
-      "Limited customer access"
-    ],
-    answer: "Limited customer access"
-  },
-  {
-    question: "Which of the following is NOT a common source of business finance?",
-    options: [
-      "Personal savings",
-      "Bank loans",
-      "Government grants",
-      "Illegal funding"
-    ],
-    answer: "Illegal funding"
-  },
-  {
-    question: "Which marketing strategy involves setting prices low to enter a new market?",
-    options: [
-      "Market penetration",
-      "Price skimming",
-      "Product differentiation",
-      "Direct marketing"
-    ],
-    answer: "Market penetration"
-  },
-  {
-    question: "Which of these is NOT a factor of production?",
-    options: [
-      "Land",
-      "Labor",
-      "Capital",
-      "Money laundering"
-    ],
-    answer: "Money laundering"
-  },
-  {
-    question: "Which of the following is NOT an element of the promotional mix?",
-    options: [
-      "Advertising",
-      "Sales promotion",
-      "Public relations",
-      "Product pricing"
-    ],
-    answer: "Product pricing"
-  },
-  {
-    question: "Which of the following best defines ‘entrepreneurship’?",
-    options: [
-      "The process of starting and managing a business",
-      "Being an employee",
-      "Avoiding risks",
-      "Following instructions"
-    ],
-    answer: "The process of starting and managing a business"
-  },
-  {
-    question: "Which of these is NOT an example of a negotiable instrument?",
-    options: [
-      "Cheque",
-      "Bill of exchange",
-      "Promissory note",
-      "Business card"
-    ],
-    answer: "Business card"
-  },
-  {
-    question: "Which of the following is NOT a responsibility of management?",
-    options: [
-      "Planning",
-      "Leading",
-      "Cooking",
-      "Controlling"
-    ],
-    answer: "Cooking"
-  },
-  {
-    question: "Which term describes the process of determining what tasks need to be done?",
-    options: [
-      "Planning",
-      "Organizing",
-      "Staffing",
-      "Directing"
-    ],
-    answer: "Planning"
-  },
-  {
-    question: "Which of these is NOT a characteristic of an effective leader?",
-    options: [
-      "Communication skills",
-      "Indecisiveness",
-      "Integrity",
-      "Vision"
-    ],
-    answer: "Indecisiveness"
-  },
-  {
-    question: "Which is NOT a form of business ownership?",
-    options: [
-      "Cooperative",
-      "Partnership",
-      "Corporation",
-      "Employment agency"
-    ],
-    answer: "Employment agency"
-  },
-  {
-    question: "Which of these is NOT a reason for business failure?",
-    options: [
-      "Poor management",
-      "Lack of capital",
-      "Effective marketing",
-      "Inadequate planning"
-    ],
-    answer: "Effective marketing"
-  },
-  {
-    question: "Which of the following is NOT a feature of a partnership?",
-    options: [
-      "Shared ownership",
-      "Unlimited liability for partners",
-      "Separate legal entity",
-      "Joint decision making"
-    ],
-    answer: "Separate legal entity"
-  },
-  {
-    question: "Which of these is NOT a component of the external business environment?",
-    options: [
-      "Political factors",
-      "Economic factors",
-      "Technological factors",
-      "Company’s internal policies"
-    ],
-    answer: "Company’s internal policies"
-  },
-  {
-    question: "Which of the following is NOT part of risk management?",
-    options: [
-      "Risk identification",
-      "Risk assessment",
-      "Risk ignoring",
-      "Risk control"
-    ],
-    answer: "Risk ignoring"
-  },
-  {
-    question: "Which of these best defines ‘stock exchange’?",
-    options: [
-      "A marketplace for buying and selling shares",
-      "A bank that gives loans",
-      "An insurance company",
-      "A government agency"
-    ],
-    answer: "A marketplace for buying and selling shares"
-  },
-  {
-    question: "Which of the following is NOT a type of contract?",
-    options: [
-      "Express contract",
-      "Implied contract",
-      "Forced contract",
-      "Bilateral contract"
-    ],
-    answer: "Forced contract"
-  },
-  {
-    question: "Which term describes a situation where one person acts on behalf of another?",
-    options: [
-      "Agency",
-      "Partnership",
-      "Franchise",
-      "Merger"
-    ],
-    answer: "Agency"
-  },
-  {
-    question: "Which of the following is NOT a key function of marketing?",
-    options: [
-      "Product development",
-      "Pricing",
-      "Manufacturing",
-      "Promotion"
-    ],
-    answer: "Manufacturing"
-  },
-  {
-    question: "Which of these best describes ‘economic integration’?",
-    options: [
-      "Cooperation among countries to reduce trade barriers",
-      "Increasing tariffs",
-      "Isolating economies",
-      "Restricting trade"
-    ],
-    answer: "Cooperation among countries to reduce trade barriers"
-  },
-  {
-    question: "Which of these is NOT a type of business organization?",
-    options: [
-      "Sole proprietorship",
-      "Partnership",
-      "Corporation",
-      "Trade union"
-    ],
-    answer: "Trade union"
-  },
-  {
-    question: "Which of the following is NOT a characteristic of an effective organization?",
-    options: [
-      "Clear objectives",
-      "Poor communication",
-      "Good coordination",
-      "Efficient use of resources"
-    ],
-    answer: "Poor communication"
-  },
-  {
-    question: "Which of these best describes ‘business ethics’?",
-    options: [
-      "Standards of right and wrong in business",
-      "Dishonest practices",
-      "Ignoring customers",
-      "Maximizing profits by any means"
-    ],
-    answer: "Standards of right and wrong in business"
-  },
-  {
-    question: "Which of the following best describes ‘production’?",
-    options: [
-      "Process of creating goods and services",
-      "Selling goods",
-      "Advertising products",
-      "Hiring employees"
-    ],
-    answer: "Process of creating goods and services"
-  },
-  {
-    question: "Which of the following is NOT a method of market research?",
-    options: [
-      "Surveys",
-      "Interviews",
-      "Guesswork",
-      "Focus groups"
-    ],
-    answer: "Guesswork"
-  },
-  {
-    question: "Which of these is NOT a function of money?",
-    options: [
-      "Medium of exchange",
-      "Store of value",
-      "Unit of account",
-      "Means of production"
-    ],
-    answer: "Means of production"
-  },
-  {
-    question: "Which term best describes a legal business entity owned by shareholders?",
-    options: [
-      "Corporation",
-      "Sole proprietorship",
-      "Partnership",
-      "Cooperative"
-    ],
-    answer: "Corporation"
-  },
-  {
-    question: "Which of the following is NOT an element of the business environment?",
-    options: [
-      "Social factors",
-      "Technological factors",
-      "Psychological factors",
-      "Legal factors"
-    ],
-    answer: "Psychological factors"
-  },
-  {
-    question: "Which of the following is NOT a leadership style?",
-    options: [
-      "Autocratic",
-      "Democratic",
-      "Laissez-faire",
-      "Passive-aggressive"
-    ],
-    answer: "Passive-aggressive"
-  },
-  {
-    question: "Which of these best defines ‘small business management’?",
-    options: [
-      "Managing and developing small enterprises",
-      "Running large corporations",
-      "Ignoring business risks",
-      "Focusing on non-profit organizations"
-    ],
-    answer: "Managing and developing small enterprises"
-  },
-  {
-    question: "Which of the following is NOT a marketing tool?",
-    options: [
-      "Advertising",
-      "Sales promotion",
-      "Price discrimination",
-      "Customer service"
-    ],
-    answer: "Price discrimination"
-  },
-  {
-    question: "Which of these is NOT a step in the planning process?",
-    options: [
-      "Setting objectives",
-      "Developing strategies",
-      "Ignoring constraints",
-      "Evaluating results"
-    ],
-    answer: "Ignoring constraints"
-  },
-  {
-    question: "Which of the following is NOT a type of production system?",
-    options: [
-      "Job production",
-      "Batch production",
-      "Mass production",
-      "Corporate production"
-    ],
-    answer: "Corporate production"
-  },
-  {
-    question: "Which term describes the cost of using capital in a business?",
-    options: [
-      "Interest",
-      "Profit",
-      "Revenue",
-      "Depreciation"
-    ],
-    answer: "Interest"
-  },
-  {
-    question: "Which of the following is NOT a type of business risk?",
-    options: [
-      "Operational risk",
-      "Financial risk",
-      "Speculative risk",
-      "Guaranteed risk"
-    ],
-    answer: "Guaranteed risk"
-  },
-  {
-    question: "Which of these is NOT an example of a financial institution?",
-    options: [
-      "Commercial bank",
-      "Insurance company",
-      "Stock exchange",
-      "Manufacturing firm"
-    ],
-    answer: "Manufacturing firm"
-  }
-  // Add more questions here
+
+{
+  question: "A business expands rapidly but fails due to poor coordination among departments. This situation best reflects:",
+  options: ["weak management structure", "lack of capital", "low demand", "external economic pressure"],
+  answer: "weak management structure"
+},
+{
+  question: "Which of the following best distinguishes a business from other economic activities?",
+  options: ["continuous production of goods and services for profit", "occasional exchange of goods", "government regulation", "charitable activities"],
+  answer: "continuous production of goods and services for profit"
+},
+{
+  question: "A sole proprietor bears unlimited liability. This implies that:",
+  options: ["personal assets may be used to settle business debts", "profits are shared equally", "business is controlled by shareholders", "liability is limited to capital invested"],
+  answer: "personal assets may be used to settle business debts"
+},
+{
+  question: "A major weakness of partnership as a form of business is:",
+  options: ["joint liability among partners", "limited decision-making", "lack of capital always", "government interference"],
+  answer: "joint liability among partners"
+},
+{
+  question: "Which of the following businesses is most suitable for raising large capital?",
+  options: ["public limited company", "sole proprietorship", "partnership", "co-operative"],
+  answer: "public limited company"
+},
+{
+  question: "A business responding to environmental pollution complaints is fulfilling its:",
+  options: ["social responsibility", "economic objective", "legal duty only", "profit motive"],
+  answer: "social responsibility"
+},
+{
+  question: "Internal business environment includes:",
+  options: ["management style and workforce", "government policies", "inflation rate", "technological change"],
+  answer: "management style and workforce"
+},
+{
+  question: "Which external factor is most unpredictable for business planning?",
+  options: ["economic conditions", "employee behavior", "organizational structure", "internal finance"],
+  answer: "economic conditions"
+},
+{
+  question: "A company maximizing profit at the expense of employee welfare is ignoring:",
+  options: ["ethical responsibility", "economic objective", "production efficiency", "market demand"],
+  answer: "ethical responsibility"
+},
+{
+  question: "Which stakeholder group is most concerned with dividends?",
+  options: ["shareholders", "employees", "government", "customers"],
+  answer: "shareholders"
+},
+{
+  question: "A business fails due to poor decision-making and lack of planning. This is classified as:",
+  options: ["managerial incompetence", "external risk", "financial limitation", "market failure"],
+  answer: "managerial incompetence"
+},
+{
+  question: "Which of the following best explains a co-operative society?",
+  options: ["business owned and run by members for mutual benefit", "government-owned enterprise", "profit-maximizing company", "private limited firm"],
+  answer: "business owned and run by members for mutual benefit"
+},
+{
+  question: "The main objective of most private businesses is:",
+  options: ["profit maximization", "social welfare", "employment creation only", "government policy compliance"],
+  answer: "profit maximization"
+},
+{
+  question: "Which form of business has the greatest continuity?",
+  options: ["limited liability company", "sole proprietorship", "partnership", "informal sector"],
+  answer: "limited liability company"
+},
+{
+  question: "A business reacting to changes in technology is responding to:",
+  options: ["external environment", "internal policy", "organizational structure", "financial planning"],
+  answer: "external environment"
+},
+{
+  question: "Which of the following best explains business growth failure despite high demand?",
+  options: ["poor management decisions", "strong market conditions", "high customer loyalty", "increased production"],
+  answer: "poor management decisions"
+},
+{
+  question: "A partnership agreement mainly governs:",
+  options: ["profit sharing and responsibilities", "government taxation", "employee wages", "customer relations"],
+  answer: "profit sharing and responsibilities"
+},
+{
+  question: "Which of the following best explains stakeholder conflict?",
+  options: ["different interests among groups", "lack of employees", "low production", "absence of capital"],
+  answer: "different interests among groups"
+},
+{
+  question: "A business focusing on long-term survival rather than immediate profit is pursuing:",
+  options: ["strategic objective", "operational goal", "short-term plan", "tactical decision"],
+  answer: "strategic objective"
+},
+{
+  question: "Which factor is most likely to cause sudden business failure?",
+  options: ["poor risk management", "high sales", "efficient planning", "strong leadership"],
+  answer: "poor risk management"
+},
+
+{
+  question: "A manager sets long-term goals and determines overall direction of a company. This is best described as:",
+  options: ["strategic planning", "operational planning", "delegation", "controlling"],
+  answer: "strategic planning"
+},
+{
+  question: "Which stage in planning involves comparing different possible actions before selecting one?",
+  options: ["evaluation of alternatives", "implementation", "goal setting", "monitoring"],
+  answer: "evaluation of alternatives"
+},
+{
+  question: "A company develops backup plans in case its main strategy fails. This is known as:",
+  options: ["contingency planning", "strategic planning", "operational control", "decision analysis"],
+  answer: "contingency planning"
+},
+{
+  question: "Which of the following best explains why planning is essential in management?",
+  options: ["it reduces uncertainty and provides direction", "it eliminates risk completely", "it increases employee workload", "it replaces decision-making"],
+  answer: "it reduces uncertainty and provides direction"
+},
+{
+  question: "A decision made routinely based on established procedures is called:",
+  options: ["programmed decision", "strategic decision", "tactical decision", "non-programmed decision"],
+  answer: "programmed decision"
+},
+{
+  question: "Non-programmed decisions are typically:",
+  options: ["unique and require judgment", "routine and repetitive", "automatic responses", "based on fixed rules"],
+  answer: "unique and require judgment"
+},
+{
+  question: "Which level of management is mainly responsible for strategic decisions?",
+  options: ["top management", "middle management", "lower management", "supervisory staff"],
+  answer: "top management"
+},
+{
+  question: "A manager gathers data, identifies alternatives and selects the best option. This process is:",
+  options: ["decision-making", "planning", "organizing", "delegating"],
+  answer: "decision-making"
+},
+{
+  question: "Which of the following is NOT a step in decision-making?",
+  options: ["ignoring alternatives", "identifying the problem", "evaluating options", "implementing decision"],
+  answer: "ignoring alternatives"
+},
+{
+  question: "A committee formed to make decisions on company policy is an example of:",
+  options: ["group decision-making", "individual planning", "delegation", "control system"],
+  answer: "group decision-making"
+},
+{
+  question: "Which advantage is associated with group decision-making?",
+  options: ["diverse ideas and better solutions", "faster decisions always", "less conflict", "reduced responsibility"],
+  answer: "diverse ideas and better solutions"
+},
+{
+  question: "A manager divides work into smaller tasks and assigns them to employees. This is:",
+  options: ["organizing", "planning", "controlling", "directing"],
+  answer: "organizing"
+},
+{
+  question: "Which principle of organizing ensures that each employee reports to only one supervisor?",
+  options: ["unity of command", "division of labour", "authority", "delegation"],
+  answer: "unity of command"
+},
+{
+  question: "An organizational structure that combines functional and project-based systems is called:",
+  options: ["matrix structure", "line structure", "functional structure", "flat structure"],
+  answer: "matrix structure"
+},
+{
+  question: "Which of the following is a key advantage of division of labour?",
+  options: ["increased efficiency and specialization", "reduced productivity", "higher costs", "limited skills"],
+  answer: "increased efficiency and specialization"
+},
+{
+  question: "A business expands and becomes difficult to manage due to complexity. This reflects:",
+  options: ["organizational growth challenges", "effective planning", "strong leadership", "good coordination"],
+  answer: "organizational growth challenges"
+},
+{
+  question: "Centralization in an organization means:",
+  options: ["decision-making authority is concentrated at the top", "authority is shared equally", "employees make all decisions", "no control system exists"],
+  answer: "decision-making authority is concentrated at the top"
+},
+{
+  question: "Decentralization improves management by:",
+  options: ["allowing faster decision-making at lower levels", "eliminating authority", "reducing responsibility", "centralizing control"],
+  answer: "allowing faster decision-making at lower levels"
+},
+{
+  question: "Which of the following is a limitation of planning?",
+  options: ["reliance on inaccurate data", "clear direction", "improved coordination", "goal achievement"],
+  answer: "reliance on inaccurate data"
+},
+{
+  question: "A manager uses budgets and schedules to guide operations. These are examples of:",
+  options: ["planning tools", "control systems", "organizational structures", "decision models"],
+  answer: "planning tools"
+},
+
+{
+  question: "Delegation involves the transfer of:",
+  options: ["authority with responsibility but not accountability", "responsibility and accountability only", "authority only without responsibility", "accountability without authority"],
+  answer: "authority with responsibility but not accountability"
+},
+{
+  question: "A manager assigns a task but retains final responsibility. This reflects:",
+  options: ["delegation principle", "centralization", "span of control", "line authority"],
+  answer: "delegation principle"
+},
+{
+  question: "Which of the following is a major barrier to effective delegation?",
+  options: ["lack of trust in subordinates", "clear communication", "employee competence", "defined authority"],
+  answer: "lack of trust in subordinates"
+},
+{
+  question: "Delegation improves organizational efficiency by:",
+  options: ["reducing workload of top managers", "eliminating responsibility", "centralizing decisions", "increasing confusion"],
+  answer: "reducing workload of top managers"
+},
+{
+  question: "Which of the following best defines leadership?",
+  options: ["ability to influence others towards goals", "authority to command employees", "control over resources", "ownership of business"],
+  answer: "ability to influence others towards goals"
+},
+{
+  question: "An autocratic leader typically:",
+  options: ["makes decisions alone", "consults employees fully", "delegates all authority", "encourages independence always"],
+  answer: "makes decisions alone"
+},
+{
+  question: "Which leadership style is most suitable for highly skilled workers?",
+  options: ["democratic leadership", "autocratic leadership", "laissez-faire leadership only", "bureaucratic leadership"],
+  answer: "democratic leadership"
+},
+{
+  question: "Laissez-faire leadership is characterized by:",
+  options: ["minimal supervision and high employee freedom", "strict control", "centralized decisions", "rigid rules"],
+  answer: "minimal supervision and high employee freedom"
+},
+{
+  question: "A leader who inspires employees through vision and motivation demonstrates:",
+  options: ["transformational leadership", "autocratic leadership", "transactional leadership", "bureaucratic leadership"],
+  answer: "transformational leadership"
+},
+{
+  question: "Which leadership style is most effective during crisis situations?",
+  options: ["autocratic leadership", "democratic leadership", "laissez-faire leadership", "participative leadership"],
+  answer: "autocratic leadership"
+},
+{
+  question: "Motivation in management refers to:",
+  options: ["stimulating employees to achieve goals", "increasing wages only", "reducing workload", "providing supervision"],
+  answer: "stimulating employees to achieve goals"
+},
+{
+  question: "According to Maslow, the highest level of need is:",
+  options: ["self-actualization", "esteem", "social needs", "safety"],
+  answer: "self-actualization"
+},
+{
+  question: "Which need involves job security and protection?",
+  options: ["safety needs", "physiological needs", "esteem needs", "social needs"],
+  answer: "safety needs"
+},
+{
+  question: "Providing bonuses and salaries addresses:",
+  options: ["physiological needs", "esteem needs", "self-actualization", "social needs"],
+  answer: "physiological needs"
+},
+{
+  question: "Recognition and respect relate to:",
+  options: ["esteem needs", "safety needs", "physiological needs", "social needs"],
+  answer: "esteem needs"
+},
+{
+  question: "Which of the following is a non-financial motivator?",
+  options: ["promotion opportunities", "salary increase", "bonus payment", "commission"],
+  answer: "promotion opportunities"
+},
+{
+  question: "A company offering flexible working hours is improving:",
+  options: ["employee motivation", "production cost", "market share", "profit margin"],
+  answer: "employee motivation"
+},
+{
+  question: "Which theory suggests workers are naturally lazy and need strict control?",
+  options: ["Theory X", "Theory Y", "Maslow theory", "Herzberg theory"],
+  answer: "Theory X"
+},
+{
+  question: "Theory Y assumes employees:",
+  options: ["are self-motivated and responsible", "avoid work", "require strict supervision", "lack initiative"],
+  answer: "are self-motivated and responsible"
+},
+{
+  question: "Which factor reduces employee motivation most?",
+  options: ["lack of recognition", "high salary", "promotion", "job satisfaction"],
+  answer: "lack of recognition"
+},
+
+{
+  question: "Effective communication is best achieved when:",
+  options: ["the message is clearly understood by the receiver", "the sender speaks fluently", "the channel is formal", "the receiver agrees with the sender"],
+  answer: "the message is clearly understood by the receiver"
+},
+{
+  question: "Which element of communication ensures feedback?",
+  options: ["receiver response", "message encoding", "communication channel", "sender intention"],
+  answer: "receiver response"
+},
+{
+  question: "A breakdown in communication due to language differences is a:",
+  options: ["semantic barrier", "physical barrier", "organizational barrier", "technological barrier"],
+  answer: "semantic barrier"
+},
+{
+  question: "Which communication channel is most suitable for urgent decisions?",
+  options: ["face-to-face communication", "written memo", "email", "notice board"],
+  answer: "face-to-face communication"
+},
+{
+  question: "Downward communication in an organization refers to:",
+  options: ["flow of information from management to employees", "communication among peers", "communication from employees to management", "external communication"],
+  answer: "flow of information from management to employees"
+},
+{
+  question: "Upward communication is important because it:",
+  options: ["provides feedback to management", "enforces authority", "reduces employee involvement", "limits decision-making"],
+  answer: "provides feedback to management"
+},
+{
+  question: "Which of the following is an example of informal communication?",
+  options: ["grapevine", "official report", "formal memo", "policy document"],
+  answer: "grapevine"
+},
+{
+  question: "The major disadvantage of informal communication is:",
+  options: ["distortion of information", "speed of communication", "flexibility", "ease of use"],
+  answer: "distortion of information"
+},
+{
+  question: "Which of the following improves communication effectiveness?",
+  options: ["clarity of message", "complex language", "long messages", "technical jargon"],
+  answer: "clarity of message"
+},
+{
+  question: "Noise in communication refers to:",
+  options: ["any factor that distorts the message", "loud sound only", "external communication", "formal message"],
+  answer: "any factor that distorts the message"
+},
+{
+  question: "A manager using reports and performance indicators is practicing:",
+  options: ["control function", "planning", "organizing", "delegation"],
+  answer: "control function"
+},
+{
+  question: "Control in management ensures:",
+  options: ["actual performance meets planned objectives", "employees are punished", "communication is reduced", "authority is centralized"],
+  answer: "actual performance meets planned objectives"
+},
+{
+  question: "Which stage of control involves comparing performance with standards?",
+  options: ["evaluation", "implementation", "planning", "delegation"],
+  answer: "evaluation"
+},
+{
+  question: "Setting performance standards is part of:",
+  options: ["control process", "communication process", "planning process", "leadership process"],
+  answer: "control process"
+},
+{
+  question: "Corrective action in control means:",
+  options: ["adjusting activities to meet standards", "punishing employees", "ignoring deviations", "increasing workload"],
+  answer: "adjusting activities to meet standards"
+},
+{
+  question: "Which of the following is a limitation of control systems?",
+  options: ["high cost of implementation", "improved efficiency", "clear objectives", "better coordination"],
+  answer: "high cost of implementation"
+},
+{
+  question: "Feedback in communication is essential because it:",
+  options: ["confirms understanding", "reduces message clarity", "limits communication", "increases barriers"],
+  answer: "confirms understanding"
+},
+{
+  question: "Which barrier arises from poor organizational structure?",
+  options: ["organizational barrier", "semantic barrier", "physical barrier", "psychological barrier"],
+  answer: "organizational barrier"
+},
+{
+  question: "A manager ignoring feedback is likely to cause:",
+  options: ["communication failure", "effective planning", "strong leadership", "better control"],
+  answer: "communication failure"
+},
+{
+  question: "Which of the following best explains effective control?",
+  options: ["continuous monitoring and corrective action", "punishment of workers", "strict supervision only", "reducing employee involvement"],
+  answer: "continuous monitoring and corrective action"
+},
+
+{
+  question: "Information and Communication Technology (ICT) in business is mainly used to:",
+  options: ["improve efficiency and communication", "replace all workers", "increase costs", "eliminate planning"],
+  answer: "improve efficiency and communication"
+},
+{
+  question: "A company using online platforms to sell goods directly to consumers is engaged in:",
+  options: ["B2C e-commerce", "B2B e-commerce", "C2C e-commerce", "G2B e-commerce"],
+  answer: "B2C e-commerce"
+},
+{
+  question: "Which of the following best explains B2B e-commerce?",
+  options: ["transactions between businesses", "sales to final consumers", "government transactions", "consumer-to-consumer sales"],
+  answer: "transactions between businesses"
+},
+{
+  question: "The use of ICT reduces business costs mainly by:",
+  options: ["automating processes", "increasing labour", "reducing production", "limiting communication"],
+  answer: "automating processes"
+},
+{
+  question: "Which of the following is a disadvantage of e-commerce?",
+  options: ["security risks and fraud", "fast transactions", "global reach", "low operational cost"],
+  answer: "security risks and fraud"
+},
+{
+  question: "Electronic payment systems are important because they:",
+  options: ["facilitate quick transactions", "eliminate business risks", "increase physical cash usage", "reduce communication"],
+  answer: "facilitate quick transactions"
+},
+{
+  question: "Which ICT tool is most useful for internal communication in organizations?",
+  options: ["intranet", "television", "radio", "newspaper"],
+  answer: "intranet"
+},
+{
+  question: "An extranet allows businesses to:",
+  options: ["share information with external partners", "restrict access completely", "replace internet", "store data only"],
+  answer: "share information with external partners"
+},
+{
+  question: "Which of the following best explains cloud computing?",
+  options: ["storing and accessing data over the internet", "saving files on local devices only", "offline communication", "manual data storage"],
+  answer: "storing and accessing data over the internet"
+},
+{
+  question: "A major advantage of cloud computing for businesses is:",
+  options: ["remote access to data", "high hardware costs", "limited storage", "data isolation"],
+  answer: "remote access to data"
+},
+{
+  question: "Which of the following improves decision-making using ICT?",
+  options: ["management information systems", "manual records", "paper files only", "traditional meetings"],
+  answer: "management information systems"
+},
+{
+  question: "Data security in ICT systems refers to:",
+  options: ["protection of information from unauthorized access", "sharing all data freely", "increasing system access", "eliminating passwords"],
+  answer: "protection of information from unauthorized access"
+},
+{
+  question: "A business using social media for advertising is engaging in:",
+  options: ["digital marketing", "direct selling", "traditional promotion", "production management"],
+  answer: "digital marketing"
+},
+{
+  question: "Which of the following is a challenge of ICT adoption in business?",
+  options: ["high initial cost", "improved efficiency", "faster communication", "global access"],
+  answer: "high initial cost"
+},
+{
+  question: "Online marketplaces like e-commerce platforms provide:",
+  options: ["access to wider markets", "limited customer base", "high physical costs", "restricted trade"],
+  answer: "access to wider markets"
+},
+{
+  question: "Automation in business leads to:",
+  options: ["increased productivity", "reduced efficiency", "higher labour demand", "limited output"],
+  answer: "increased productivity"
+},
+{
+  question: "Which of the following best explains cybercrime?",
+  options: ["illegal activities using computers", "manual fraud only", "legal online transactions", "government regulation"],
+  answer: "illegal activities using computers"
+},
+{
+  question: "A business storing customer data digitally must ensure:",
+  options: ["data privacy compliance", "unrestricted access", "manual backup only", "no security measures"],
+  answer: "data privacy compliance"
+},
+{
+  question: "Which ICT system helps track inventory automatically?",
+  options: ["database management system", "manual ledger", "telephone system", "fax machine"],
+  answer: "database management system"
+},
+{
+  question: "The main role of ICT in supply chain management is to:",
+  options: ["improve coordination and tracking", "reduce communication", "increase delays", "limit information flow"],
+  answer: "improve coordination and tracking"
+},
+
+{
+  question: "A valid contract must include:",
+  options: ["offer, acceptance, consideration, intention", "payment only", "written agreement only", "government approval"],
+  answer: "offer, acceptance, consideration, intention"
+},
+{
+  question: "An offer becomes legally binding when:",
+  options: ["it is accepted", "it is proposed", "it is rejected", "it is withdrawn"],
+  answer: "it is accepted"
+},
+{
+  question: "Consideration in a contract refers to:",
+  options: ["something of value exchanged", "verbal agreement", "written document", "legal enforcement"],
+  answer: "something of value exchanged"
+},
+{
+  question: "A contract without consideration is generally:",
+  options: ["void", "valid", "binding", "legal"],
+  answer: "void"
+},
+{
+  question: "Which of the following contracts is unenforceable by law?",
+  options: ["illegal contract", "valid contract", "express contract", "bilateral contract"],
+  answer: "illegal contract"
+},
+{
+  question: "A minor entering into a contract is considered:",
+  options: ["not legally bound", "fully liable", "fully responsible", "legally competent"],
+  answer: "not legally bound"
+},
+{
+  question: "Which type of contract is formed through spoken words?",
+  options: ["oral contract", "written contract", "implied contract", "void contract"],
+  answer: "oral contract"
+},
+{
+  question: "A breach of contract occurs when:",
+  options: ["one party fails to fulfill obligations", "both parties agree", "contract is signed", "terms are clear"],
+  answer: "one party fails to fulfill obligations"
+},
+{
+  question: "Remedy for breach of contract includes:",
+  options: ["damages", "punishment only", "imprisonment only", "dismissal only"],
+  answer: "damages"
+},
+{
+  question: "An agent acts on behalf of:",
+  options: ["principal", "government", "employee", "customer"],
+  answer: "principal"
+},
+{
+  question: "Which of the following defines agency relationship?",
+  options: ["one person acts for another in business transactions", "government controls business", "employee supervises manager", "business sells goods"],
+  answer: "one person acts for another in business transactions"
+},
+{
+  question: "Authority given explicitly to an agent is called:",
+  options: ["express authority", "implied authority", "apparent authority", "legal authority"],
+  answer: "express authority"
+},
+{
+  question: "Implied authority arises from:",
+  options: ["nature of the job", "written agreement only", "government law", "contract breach"],
+  answer: "nature of the job"
+},
+{
+  question: "Which type of authority is based on appearance or representation?",
+  options: ["apparent authority", "express authority", "implied authority", "actual authority"],
+  answer: "apparent authority"
+},
+{
+  question: "An agent exceeding authority makes the principal:",
+  options: ["not liable unless ratified", "always liable", "automatically guilty", "legally void"],
+  answer: "not liable unless ratified"
+},
+{
+  question: "Ratification occurs when:",
+  options: ["principal approves agent’s unauthorized act", "agent cancels contract", "contract becomes void", "authority is removed"],
+  answer: "principal approves agent’s unauthorized act"
+},
+{
+  question: "Which of the following terminates agency?",
+  options: ["death of either party", "increase in profit", "contract renewal", "business expansion"],
+  answer: "death of either party"
+},
+{
+  question: "A contract entered under misrepresentation is:",
+  options: ["voidable", "valid", "illegal", "enforceable"],
+  answer: "voidable"
+},
+{
+  question: "A contract is void if:",
+  options: ["it lacks essential elements", "it is written", "both parties agree", "it involves money"],
+  answer: "it lacks essential elements"
+},
+{
+  question: "Which of the following best explains legal capacity?",
+  options: ["ability to enter into a contract", "ability to pay money", "authority to manage business", "ability to supervise workers"],
+  answer: "ability to enter into a contract"
+},
+
+{
+  question: "The primary objective of financial management is to:",
+  options: ["maximize shareholder wealth", "increase production only", "reduce employees", "increase expenses"],
+  answer: "maximize shareholder wealth"
+},
+{
+  question: "Which source of finance is most suitable for long-term expansion?",
+  options: ["equity capital", "bank overdraft", "trade credit", "cash sales"],
+  answer: "equity capital"
+},
+{
+  question: "A bank overdraft is classified as:",
+  options: ["short-term finance", "long-term finance", "internal finance", "equity finance"],
+  answer: "short-term finance"
+},
+{
+  question: "Retained earnings are considered:",
+  options: ["internal source of finance", "external borrowing", "short-term liability", "fixed cost"],
+  answer: "internal source of finance"
+},
+{
+  question: "Which of the following is a disadvantage of equity financing?",
+  options: ["loss of control", "fixed interest payments", "short repayment period", "high liquidity"],
+  answer: "loss of control"
+},
+{
+  question: "Debentures are:",
+  options: ["long-term loans with fixed interest", "shares of ownership", "short-term credit", "internal funds"],
+  answer: "long-term loans with fixed interest"
+},
+{
+  question: "Working capital refers to:",
+  options: ["funds used for day-to-day operations", "money for long-term assets", "total revenue", "net profit"],
+  answer: "funds used for day-to-day operations"
+},
+{
+  question: "A business with insufficient working capital may face:",
+  options: ["liquidity problems", "high profits", "increased production", "strong expansion"],
+  answer: "liquidity problems"
+},
+{
+  question: "Fixed costs are costs that:",
+  options: ["do not change with output", "increase with production", "decrease with sales", "depend on profit"],
+  answer: "do not change with output"
+},
+{
+  question: "Variable costs are costs that:",
+  options: ["change with level of output", "remain constant", "are fixed monthly", "depend on assets"],
+  answer: "change with level of output"
+},
+{
+  question: "Break-even point is where:",
+  options: ["total cost equals total revenue", "profit is maximum", "loss is highest", "sales are lowest"],
+  answer: "total cost equals total revenue"
+},
+{
+  question: "A firm making sales above break-even point will:",
+  options: ["earn profit", "incur loss", "break even", "reduce revenue"],
+  answer: "earn profit"
+},
+{
+  question: "Which of the following increases profit?",
+  options: ["reducing costs", "increasing expenses", "lowering prices only", "increasing losses"],
+  answer: "reducing costs"
+},
+{
+  question: "Budgeting in business helps to:",
+  options: ["control and plan finances", "increase expenses", "eliminate profits", "reduce planning"],
+  answer: "control and plan finances"
+},
+{
+  question: "A budget is best described as:",
+  options: ["a financial plan for a future period", "past financial record", "daily expense sheet", "profit statement"],
+  answer: "a financial plan for a future period"
+},
+{
+  question: "Which of the following is a limitation of budgeting?",
+  options: ["based on estimates", "provides control", "improves planning", "guides decisions"],
+  answer: "based on estimates"
+},
+{
+  question: "Net profit is calculated as:",
+  options: ["total revenue minus total expenses", "sales minus variable cost", "revenue minus fixed cost", "income minus assets"],
+  answer: "total revenue minus total expenses"
+},
+{
+  question: "Gross profit is:",
+  options: ["sales minus cost of goods sold", "total revenue minus expenses", "income minus tax", "sales minus fixed cost"],
+  answer: "sales minus cost of goods sold"
+},
+{
+  question: "Which financial source does NOT require repayment?",
+  options: ["equity shares", "bank loan", "debenture", "overdraft"],
+  answer: "equity shares"
+},
+{
+  question: "A business relying heavily on loans may face:",
+  options: ["high interest burden", "low expenses", "increased control", "reduced risk"],
+  answer: "high interest burden"
+},
+
+{
+  question: "Marketing is best defined as:",
+  options: ["process of identifying and satisfying customer needs profitably", "selling goods only", "advertising products", "distribution of goods only"],
+  answer: "process of identifying and satisfying customer needs profitably"
+},
+{
+  question: "Which element of marketing mix deals with how goods reach consumers?",
+  options: ["place", "product", "price", "promotion"],
+  answer: "place"
+},
+{
+  question: "A company lowering its price to increase sales is adjusting:",
+  options: ["price", "promotion", "place", "product"],
+  answer: "price"
+},
+{
+  question: "Product differentiation helps a business to:",
+  options: ["stand out from competitors", "reduce production", "increase cost only", "eliminate marketing"],
+  answer: "stand out from competitors"
+},
+{
+  question: "Which of the following best explains promotion?",
+  options: ["communicating product value to customers", "reducing prices", "manufacturing goods", "storing goods"],
+  answer: "communicating product value to customers"
+},
+{
+  question: "Demand refers to:",
+  options: ["willingness and ability to buy", "desire only", "supply of goods", "production level"],
+  answer: "willingness and ability to buy"
+},
+{
+  question: "An increase in price generally leads to:",
+  options: ["decrease in demand", "increase in demand", "no change", "unpredictable change"],
+  answer: "decrease in demand"
+},
+{
+  question: "Which factor can shift demand curve to the right?",
+  options: ["increase in consumer income", "increase in price", "decrease in population", "reduction in advertising"],
+  answer: "increase in consumer income"
+},
+{
+  question: "Consumer behavior is influenced mainly by:",
+  options: ["income, taste and preferences", "government laws only", "business location", "production cost"],
+  answer: "income, taste and preferences"
+},
+{
+  question: "Market research is conducted to:",
+  options: ["understand customer needs", "increase production cost", "reduce profit", "limit sales"],
+  answer: "understand customer needs"
+},
+{
+  question: "Which method of market research collects primary data?",
+  options: ["survey", "published reports", "government statistics", "books"],
+  answer: "survey"
+},
+{
+  question: "Branding helps to:",
+  options: ["create product identity", "reduce cost", "increase production", "eliminate competition"],
+  answer: "create product identity"
+},
+{
+  question: "A strong brand leads to:",
+  options: ["customer loyalty", "reduced demand", "higher cost only", "lower quality"],
+  answer: "customer loyalty"
+},
+{
+  question: "Which pricing strategy sets low prices to enter a competitive market?",
+  options: ["penetration pricing", "skimming pricing", "premium pricing", "cost-plus pricing"],
+  answer: "penetration pricing"
+},
+{
+  question: "Price skimming involves:",
+  options: ["charging high initial price then reducing", "setting low price always", "matching competitor price", "ignoring demand"],
+  answer: "charging high initial price then reducing"
+},
+{
+  question: "Advertising is a form of:",
+  options: ["promotion", "production", "distribution", "pricing"],
+  answer: "promotion"
+},
+{
+  question: "Which factor affects supply directly?",
+  options: ["cost of production", "consumer income", "taste", "advertising"],
+  answer: "cost of production"
+},
+{
+  question: "An increase in production cost will:",
+  options: ["reduce supply", "increase supply", "not affect supply", "increase demand"],
+  answer: "reduce supply"
+},
+{
+  question: "Which of the following best explains customer satisfaction?",
+  options: ["meeting or exceeding expectations", "low pricing only", "high production", "large inventory"],
+  answer: "meeting or exceeding expectations"
+},
+{
+  question: "A business losing customers despite high sales promotion likely has:",
+  options: ["poor product quality", "high demand", "effective pricing", "strong branding"],
+  answer: "poor product quality"
+},
+
+{
+  question: "Human resource management is mainly concerned with:",
+  options: ["managing people effectively in an organization", "managing machines only", "producing goods", "controlling finance"],
+  answer: "managing people effectively in an organization"
+},
+{
+  question: "Recruitment is the process of:",
+  options: ["attracting suitable candidates for a job", "selecting candidates only", "training employees", "paying wages"],
+  answer: "attracting suitable candidates for a job"
+},
+{
+  question: "Selection involves:",
+  options: ["choosing the most suitable candidate", "advertising vacancies", "training workers", "promoting employees"],
+  answer: "choosing the most suitable candidate"
+},
+{
+  question: "Internal recruitment refers to:",
+  options: ["hiring from within the organization", "hiring new workers", "outsourcing jobs", "contracting labour"],
+  answer: "hiring from within the organization"
+},
+{
+  question: "Which of the following is an advantage of internal recruitment?",
+  options: ["motivates existing employees", "brings new ideas always", "reduces training cost completely", "increases labour turnover"],
+  answer: "motivates existing employees"
+},
+{
+  question: "External recruitment may lead to:",
+  options: ["new skills and ideas", "employee dissatisfaction only", "reduced diversity", "low competition"],
+  answer: "new skills and ideas"
+},
+{
+  question: "Training is important because it:",
+  options: ["improves employee performance", "reduces productivity", "increases errors", "eliminates supervision"],
+  answer: "improves employee performance"
+},
+{
+  question: "On-the-job training occurs when:",
+  options: ["employees learn while working", "training is done outside company", "employees attend lectures only", "training is theoretical"],
+  answer: "employees learn while working"
+},
+{
+  question: "Which of the following is off-the-job training?",
+  options: ["seminars and workshops", "learning during work", "apprenticeship only", "supervision training"],
+  answer: "seminars and workshops"
+},
+{
+  question: "Induction training is meant to:",
+  options: ["introduce new employees to the organization", "promote workers", "increase wages", "reduce turnover"],
+  answer: "introduce new employees to the organization"
+},
+{
+  question: "Labour turnover refers to:",
+  options: ["rate at which employees leave and join", "employee productivity", "training level", "wage structure"],
+  answer: "rate at which employees leave and join"
+},
+{
+  question: "High labour turnover may indicate:",
+  options: ["poor working conditions", "high employee satisfaction", "good leadership", "strong motivation"],
+  answer: "poor working conditions"
+},
+{
+  question: "Which wage system pays workers based on output?",
+  options: ["piece rate system", "time rate system", "salary system", "bonus system"],
+  answer: "piece rate system"
+},
+{
+  question: "Time rate system pays employees based on:",
+  options: ["hours worked", "output produced", "sales achieved", "profit earned"],
+  answer: "hours worked"
+},
+{
+  question: "Which incentive encourages higher productivity?",
+  options: ["bonus payment", "strict supervision", "reduced wages", "long working hours"],
+  answer: "bonus payment"
+},
+{
+  question: "Employee motivation is improved by:",
+  options: ["recognition and rewards", "punishment", "job insecurity", "poor conditions"],
+  answer: "recognition and rewards"
+},
+{
+  question: "Which of the following is a non-financial incentive?",
+  options: ["job satisfaction", "salary increase", "bonus", "commission"],
+  answer: "job satisfaction"
+},
+{
+  question: "A business experiencing low productivity should:",
+  options: ["improve training and motivation", "reduce wages", "increase workload only", "ignore employees"],
+  answer: "improve training and motivation"
+},
+{
+  question: "Performance appraisal is used to:",
+  options: ["evaluate employee performance", "hire employees", "train workers", "set wages"],
+  answer: "evaluate employee performance"
+},
+{
+  question: "Which of the following improves employee retention?",
+  options: ["good working conditions", "low wages", "lack of promotion", "job insecurity"],
+  answer: "good working conditions"
+},
+
+{
+  question: "The business environment refers to:",
+  options: ["all internal and external factors affecting business", "internal factors only", "external factors only", "financial factors only"],
+  answer: "all internal and external factors affecting business"
+},
+{
+  question: "Internal environment includes:",
+  options: ["organizational structure and employees", "government policies", "economic conditions", "technological changes"],
+  answer: "organizational structure and employees"
+},
+{
+  question: "Which of the following is an external factor affecting business?",
+  options: ["government regulations", "management style", "employee skills", "organizational culture"],
+  answer: "government regulations"
+},
+{
+  question: "Inflation affects business by:",
+  options: ["increasing cost of production", "reducing demand always", "eliminating profit", "stabilizing prices"],
+  answer: "increasing cost of production"
+},
+{
+  question: "High interest rates may lead to:",
+  options: ["reduced borrowing", "increased investment", "lower costs", "higher profits"],
+  answer: "reduced borrowing"
+},
+{
+  question: "Government taxation affects business by:",
+  options: ["reducing profit margins", "increasing demand", "improving productivity", "reducing competition"],
+  answer: "reducing profit margins"
+},
+{
+  question: "Which policy encourages business growth?",
+  options: ["tax incentives", "high taxation", "strict regulations", "trade restrictions"],
+  answer: "tax incentives"
+},
+{
+  question: "Technological advancement helps businesses to:",
+  options: ["increase efficiency", "reduce productivity", "limit communication", "increase cost only"],
+  answer: "increase efficiency"
+},
+{
+  question: "Which of the following best explains globalization?",
+  options: ["integration of world markets", "local trade only", "government ownership", "domestic production"],
+  answer: "integration of world markets"
+},
+{
+  question: "Globalization increases competition by:",
+  options: ["allowing foreign firms to enter markets", "reducing trade", "eliminating exports", "limiting business growth"],
+  answer: "allowing foreign firms to enter markets"
+},
+{
+  question: "A stable political environment encourages:",
+  options: ["business investment", "business failure", "reduced production", "higher risk"],
+  answer: "business investment"
+},
+{
+  question: "Which of the following is a social factor affecting business?",
+  options: ["consumer lifestyle changes", "interest rates", "tax laws", "inflation"],
+  answer: "consumer lifestyle changes"
+},
+{
+  question: "Environmental regulations affect business by:",
+  options: ["increasing compliance costs", "reducing production only", "eliminating profit", "reducing demand"],
+  answer: "increasing compliance costs"
+},
+{
+  question: "Which factor affects demand directly?",
+  options: ["consumer income", "production cost", "government policy", "technology"],
+  answer: "consumer income"
+},
+{
+  question: "Economic recession leads to:",
+  options: ["reduced consumer spending", "increased demand", "higher profits", "expansion of business"],
+  answer: "reduced consumer spending"
+},
+{
+  question: "Which of the following is a legal factor affecting business?",
+  options: ["labour laws", "consumer taste", "technology", "income levels"],
+  answer: "labour laws"
+},
+{
+  question: "Exchange rate fluctuations affect businesses involved in:",
+  options: ["international trade", "local sales", "domestic production", "internal management"],
+  answer: "international trade"
+},
+{
+  question: "Which of the following best explains economic environment?",
+  options: ["conditions affecting production and consumption", "internal management structure", "employee behavior", "company policy"],
+  answer: "conditions affecting production and consumption"
+},
+{
+  question: "A business adapting to environmental changes demonstrates:",
+  options: ["flexibility", "rigidity", "inefficiency", "poor planning"],
+  answer: "flexibility"
+},
+{
+  question: "Which of the following can cause sudden business failure?",
+  options: ["unexpected external shocks", "good management", "high demand", "efficient planning"],
+  answer: "unexpected external shocks"
+},
+
+{
+  question: "International trade involves:",
+  options: ["exchange of goods and services between countries", "local buying and selling", "internal company transactions", "government spending only"],
+  answer: "exchange of goods and services between countries"
+},
+{
+  question: "Exports refer to:",
+  options: ["goods sold to other countries", "goods bought from abroad", "local goods only", "services within country"],
+  answer: "goods sold to other countries"
+},
+{
+  question: "Imports refer to:",
+  options: ["goods bought from other countries", "goods sold locally", "goods produced locally", "services exported"],
+  answer: "goods bought from other countries"
+},
+{
+  question: "Balance of trade is the difference between:",
+  options: ["exports and imports", "revenue and cost", "assets and liabilities", "profit and loss"],
+  answer: "exports and imports"
+},
+{
+  question: "A favorable balance of trade occurs when:",
+  options: ["exports exceed imports", "imports exceed exports", "exports equal imports", "trade is restricted"],
+  answer: "exports exceed imports"
+},
+{
+  question: "A country with high imports and low exports has:",
+  options: ["unfavorable balance of trade", "favorable balance", "stable economy", "no trade deficit"],
+  answer: "unfavorable balance of trade"
+},
+{
+  question: "Tariffs are:",
+  options: ["taxes on imports", "subsidies on exports", "government spending", "currency exchange"],
+  answer: "taxes on imports"
+},
+{
+  question: "The main purpose of tariffs is to:",
+  options: ["protect local industries", "increase imports", "reduce exports", "increase competition"],
+  answer: "protect local industries"
+},
+{
+  question: "Quotas restrict:",
+  options: ["quantity of goods imported", "price of goods", "quality of goods", "production level"],
+  answer: "quantity of goods imported"
+},
+{
+  question: "Which of the following is a benefit of international trade?",
+  options: ["access to wider markets", "reduced competition", "limited choice", "higher costs always"],
+  answer: "access to wider markets"
+},
+{
+  question: "International trade allows countries to:",
+  options: ["specialize in production", "produce everything locally", "avoid competition", "reduce efficiency"],
+  answer: "specialize in production"
+},
+{
+  question: "Exchange rate refers to:",
+  options: ["value of one currency in terms of another", "interest rate of banks", "price of goods", "tax rate"],
+  answer: "value of one currency in terms of another"
+},
+{
+  question: "A depreciation of currency makes exports:",
+  options: ["cheaper and more competitive", "more expensive", "unchanged", "less attractive"],
+  answer: "cheaper and more competitive"
+},
+{
+  question: "A strong currency may lead to:",
+  options: ["increased imports", "increased exports", "reduced imports", "trade surplus"],
+  answer: "increased imports"
+},
+{
+  question: "Which of the following is a barrier to international trade?",
+  options: ["tariffs and quotas", "free trade agreements", "global markets", "technology"],
+  answer: "tariffs and quotas"
+},
+{
+  question: "Free trade encourages:",
+  options: ["removal of trade barriers", "increase in tariffs", "restriction of imports", "limited competition"],
+  answer: "removal of trade barriers"
+},
+{
+  question: "Dumping occurs when:",
+  options: ["goods are sold below cost in foreign markets", "goods are exported at high prices", "goods are imported legally", "goods are taxed"],
+  answer: "goods are sold below cost in foreign markets"
+},
+{
+  question: "Which organization promotes global trade?",
+  options: ["World Trade Organization", "Central Bank", "Local Council", "Private Firms"],
+  answer: "World Trade Organization"
+},
+{
+  question: "Trade deficit occurs when:",
+  options: ["imports exceed exports", "exports exceed imports", "imports equal exports", "trade is balanced"],
+  answer: "imports exceed exports"
+},
+{
+  question: "Which of the following best explains comparative advantage?",
+  options: ["ability to produce goods at lower opportunity cost", "ability to produce more goods", "higher production cost", "low quality production"],
+  answer: "ability to produce goods at lower opportunity cost"
+},
+
+{
+  question: "An entrepreneur is best defined as a person who:",
+  options: ["identifies opportunities and takes risks to create a business", "manages an existing company only", "works for salary", "controls government policies"],
+  answer: "identifies opportunities and takes risks to create a business"
+},
+{
+  question: "Which of the following is a key characteristic of successful entrepreneurs?",
+  options: ["risk-taking ability", "fear of failure", "dependence on others", "lack of innovation"],
+  answer: "risk-taking ability"
+},
+{
+  question: "Innovation in business refers to:",
+  options: ["introducing new ideas or methods", "copying competitors", "reducing production", "increasing cost"],
+  answer: "introducing new ideas or methods"
+},
+{
+  question: "A business opportunity arises when:",
+  options: ["there is a gap in the market", "competition is high", "costs are high", "profits are low"],
+  answer: "there is a gap in the market"
+},
+{
+  question: "Which of the following is the main aim of entrepreneurship?",
+  options: ["creating value and profit", "reducing employment", "increasing cost", "avoiding risk"],
+  answer: "creating value and profit"
+},
+{
+  question: "Entrepreneurial risk refers to:",
+  options: ["uncertainty in business outcomes", "guaranteed profit", "fixed cost", "stable market"],
+  answer: "uncertainty in business outcomes"
+},
+{
+  question: "Which of the following is a financial risk?",
+  options: ["loss of capital", "poor leadership", "low motivation", "bad communication"],
+  answer: "loss of capital"
+},
+{
+  question: "A feasibility study is conducted to:",
+  options: ["assess viability of a business idea", "increase production", "hire employees", "reduce marketing"],
+  answer: "assess viability of a business idea"
+},
+{
+  question: "Business plan is important because it:",
+  options: ["guides business operations", "reduces profit", "increases risk", "limits planning"],
+  answer: "guides business operations"
+},
+{
+  question: "Which of the following is included in a business plan?",
+  options: ["marketing strategy", "personal hobbies", "family details", "social activities"],
+  answer: "marketing strategy"
+},
+{
+  question: "A start-up business requires capital mainly for:",
+  options: ["initial operations and setup", "government policy", "employee training only", "social events"],
+  answer: "initial operations and setup"
+},
+{
+  question: "Which factor contributes most to business failure?",
+  options: ["poor management", "high demand", "strong planning", "good leadership"],
+  answer: "poor management"
+},
+{
+  question: "Entrepreneurs contribute to the economy by:",
+  options: ["creating employment", "reducing output", "limiting innovation", "increasing imports"],
+  answer: "creating employment"
+},
+{
+  question: "Which of the following is a non-financial motivation for entrepreneurs?",
+  options: ["self-fulfillment", "salary increase", "bonus", "commission"],
+  answer: "self-fulfillment"
+},
+{
+  question: "A business that introduces a new product to dominate the market demonstrates:",
+  options: ["innovation", "imitation", "risk avoidance", "inefficiency"],
+  answer: "innovation"
+},
+{
+  question: "Which of the following is a challenge faced by entrepreneurs?",
+  options: ["limited access to finance", "high profit always", "low competition", "strong market demand"],
+  answer: "limited access to finance"
+},
+{
+  question: "Entrepreneurs improve productivity by:",
+  options: ["introducing efficient methods", "reducing technology", "limiting workers", "increasing waste"],
+  answer: "introducing efficient methods"
+},
+{
+  question: "Which of the following best explains opportunity cost in entrepreneurship?",
+  options: ["value of next best alternative forgone", "total business cost", "fixed cost", "profit margin"],
+  answer: "value of next best alternative forgone"
+},
+{
+  question: "Which of the following encourages entrepreneurship?",
+  options: ["access to finance", "high taxes", "strict regulations", "low demand"],
+  answer: "access to finance"
+},
+{
+  question: "A successful entrepreneur must be able to:",
+  options: ["make effective decisions under uncertainty", "avoid all risks", "depend on others", "ignore market changes"],
+  answer: "make effective decisions under uncertainty"
+},
+
+{
+  question: "A firm increases advertising but experiences declining sales. The most likely cause is:",
+  options: ["poor product quality", "low promotion effort", "high demand", "effective pricing"],
+  answer: "poor product quality"
+},
+{
+  question: "A business expands using borrowed funds but struggles to repay. This indicates:",
+  options: ["poor financial management", "high profitability", "effective planning", "strong liquidity"],
+  answer: "poor financial management"
+},
+{
+  question: "Which of the following best explains economies of scale?",
+  options: ["reduction in average cost as output increases", "increase in total cost", "reduction in production", "increase in fixed cost"],
+  answer: "reduction in average cost as output increases"
+},
+{
+  question: "A company producing large quantities but making losses likely has:",
+  options: ["high costs exceeding revenue", "low demand", "efficient production", "strong marketing"],
+  answer: "high costs exceeding revenue"
+},
+{
+  question: "Which of the following links HR and productivity directly?",
+  options: ["employee motivation", "government regulation", "tax policy", "exchange rate"],
+  answer: "employee motivation"
+},
+{
+  question: "A manager ignores employee feedback, resulting in low morale. This reflects poor:",
+  options: ["communication", "production", "finance", "marketing"],
+  answer: "communication"
+},
+{
+  question: "A contract becomes voidable when:",
+  options: ["one party is misled", "all conditions are met", "consideration exists", "both parties agree"],
+  answer: "one party is misled"
+},
+{
+  question: "Which of the following best explains working capital management?",
+  options: ["managing short-term assets and liabilities", "long-term investment planning", "profit calculation only", "tax planning"],
+  answer: "managing short-term assets and liabilities"
+},
+{
+  question: "A firm lowers prices but profits decline. The likely reason is:",
+  options: ["costs are too high", "demand increased", "market expanded", "competition reduced"],
+  answer: "costs are too high"
+},
+{
+  question: "Which of the following is a benefit of decentralization?",
+  options: ["faster decision-making", "reduced responsibility", "central control", "less flexibility"],
+  answer: "faster decision-making"
+},
+{
+  question: "A business fails due to inability to adapt to technology. This reflects:",
+  options: ["poor environmental analysis", "strong planning", "effective leadership", "high innovation"],
+  answer: "poor environmental analysis"
+},
+{
+  question: "Which of the following affects both demand and supply?",
+  options: ["government policy", "product design", "employee training", "organizational structure"],
+  answer: "government policy"
+},
+{
+  question: "A business focusing only on profit may neglect:",
+  options: ["social responsibility", "marketing strategy", "production efficiency", "financial planning"],
+  answer: "social responsibility"
+},
+{
+  question: "A fall in exchange rate will likely:",
+  options: ["increase exports", "increase imports", "reduce exports", "have no effect"],
+  answer: "increase exports"
+},
+{
+  question: "Which of the following best explains leadership effectiveness?",
+  options: ["ability to influence and motivate employees", "authority only", "control of resources", "ownership of business"],
+  answer: "ability to influence and motivate employees"
+},
+{
+  question: "A business using ICT to reduce costs demonstrates:",
+  options: ["efficiency improvement", "increased risk", "poor planning", "low productivity"],
+  answer: "efficiency improvement"
+},
+{
+  question: "Which of the following is a limitation of international trade?",
+  options: ["exposure to global competition", "access to markets", "specialization", "increased output"],
+  answer: "exposure to global competition"
+},
+{
+  question: "A motivated workforce leads to:",
+  options: ["higher productivity", "lower efficiency", "reduced output", "increased turnover"],
+  answer: "higher productivity"
+},
+{
+  question: "Which of the following best explains strategic planning?",
+  options: ["long-term decision-making", "daily operations", "routine tasks", "short-term budgeting"],
+  answer: "long-term decision-making"
+},
+{
+  question: "A business with poor control systems is likely to:",
+  options: ["deviate from planned objectives", "achieve targets easily", "increase efficiency", "reduce errors"],
+  answer: "deviate from planned objectives"
+},
+
+{
+  question: "A firm’s total cost is GH₵10,000 and total revenue is GH₵12,500. Its profit is:",
+  options: ["GH₵2,500", "GH₵22,500", "GH₵10,000", "GH₵2,000"],
+  answer: "GH₵2,500"
+},
+{
+  question: "A business sells 500 units at GH₵20 each. Variable cost per unit is GH₵12. Total contribution is:",
+  options: ["GH₵4,000", "GH₵10,000", "GH₵6,000", "GH₵8,000"],
+  answer: "GH₵4,000"
+},
+{
+  question: "Break-even point occurs when:",
+  options: ["total revenue equals total cost", "profit is maximum", "sales are highest", "fixed cost is zero"],
+  answer: "total revenue equals total cost"
+},
+{
+  question: "A company’s fixed cost is GH₵5,000 and contribution per unit is GH₵10. Break-even output is:",
+  options: ["500 units", "50 units", "5,000 units", "100 units"],
+  answer: "500 units"
+},
+{
+  question: "A business increases sales but profit falls. The most likely reason is:",
+  options: ["increase in costs", "increase in demand", "better marketing", "lower competition"],
+  answer: "increase in costs"
+},
+{
+  question: "Government imposing high taxes on firms may lead to:",
+  options: ["reduced business expansion", "increased production", "higher profits", "lower costs"],
+  answer: "reduced business expansion"
+},
+{
+  question: "Subsidies from government help businesses by:",
+  options: ["reducing production costs", "increasing taxes", "reducing demand", "increasing losses"],
+  answer: "reducing production costs"
+},
+{
+  question: "A business polluting the environment is failing in its:",
+  options: ["social responsibility", "economic objective", "financial planning", "production efficiency"],
+  answer: "social responsibility"
+},
+{
+  question: "Ethical business practices involve:",
+  options: ["fair and honest dealings", "profit maximization only", "cost reduction only", "market domination"],
+  answer: "fair and honest dealings"
+},
+{
+  question: "A firm refusing to improve worker conditions may face:",
+  options: ["low productivity", "high profit", "strong loyalty", "increased efficiency"],
+  answer: "low productivity"
+},
+{
+  question: "A company reduces price to attract customers but loses profit. This suggests:",
+  options: ["poor pricing strategy", "effective marketing", "high demand", "good planning"],
+  answer: "poor pricing strategy"
+},
+{
+  question: "A firm diversifying its products is trying to:",
+  options: ["reduce business risk", "increase costs", "reduce sales", "limit growth"],
+  answer: "reduce business risk"
+},
+{
+  question: "A business facing strong competition should:",
+  options: ["differentiate its products", "reduce quality", "ignore market", "increase costs"],
+  answer: "differentiate its products"
+},
+{
+  question: "A company with poor leadership and planning is likely to:",
+  options: ["fail in operations", "increase profit", "improve productivity", "reduce risk"],
+  answer: "fail in operations"
+},
+{
+  question: "Which of the following improves long-term business survival?",
+  options: ["strategic planning", "short-term decisions", "random decisions", "high risk only"],
+  answer: "strategic planning"
+},
+{
+  question: "A firm operating below break-even point will:",
+  options: ["incur losses", "make profit", "break even", "increase revenue"],
+  answer: "incur losses"
+},
+{
+  question: "Government regulation can benefit consumers by:",
+  options: ["ensuring quality standards", "increasing prices", "reducing supply", "limiting production"],
+  answer: "ensuring quality standards"
+},
+{
+  question: "A business failing to adapt to external changes is experiencing:",
+  options: ["poor environmental analysis", "strong planning", "good management", "effective strategy"],
+  answer: "poor environmental analysis"
+},
+{
+  question: "Corporate social responsibility improves business by:",
+  options: ["enhancing public image", "reducing profit always", "increasing cost only", "limiting growth"],
+  answer: "enhancing public image"
+},
+{
+  question: "A company investing in employee training is likely to:",
+  options: ["increase productivity", "reduce efficiency", "increase errors", "reduce output"],
+  answer: "increase productivity"
+},
+
+{
+  question: "A company increases production but total profit declines. The most likely cause is:",
+  options: ["rising production costs", "higher demand", "improved efficiency", "better pricing"],
+  answer: "rising production costs"
+},
+{
+  question: "A firm relies heavily on one product and faces sudden market decline. This shows lack of:",
+  options: ["diversification", "planning", "motivation", "communication"],
+  answer: "diversification"
+},
+{
+  question: "A manager delegates tasks but employees perform poorly. The main issue is likely:",
+  options: ["lack of supervision and training", "too much planning", "high motivation", "strong leadership"],
+  answer: "lack of supervision and training"
+},
+{
+  question: "A business experiences high employee turnover. The most probable cause is:",
+  options: ["poor working conditions", "high wages", "strong leadership", "good motivation"],
+  answer: "poor working conditions"
+},
+{
+  question: "A firm lowers prices but competitors follow immediately. The result is:",
+  options: ["reduced profit margins", "higher monopoly power", "increased differentiation", "lower competition"],
+  answer: "reduced profit margins"
+},
+{
+  question: "A business using outdated technology will likely:",
+  options: ["lose competitive advantage", "increase productivity", "reduce costs", "improve efficiency"],
+  answer: "lose competitive advantage"
+},
+{
+  question: "A company expands internationally but fails due to cultural differences. This reflects poor:",
+  options: ["market research", "production planning", "financial control", "human resource management"],
+  answer: "market research"
+},
+{
+  question: "A firm fails despite high sales due to poor cash flow. This indicates:",
+  options: ["liquidity problems", "low demand", "high production", "strong marketing"],
+  answer: "liquidity problems"
+},
+{
+  question: "A business ignoring environmental laws risks:",
+  options: ["legal penalties", "higher profits", "market expansion", "customer loyalty"],
+  answer: "legal penalties"
+},
+{
+  question: "Which of the following ensures effective management control?",
+  options: ["continuous monitoring and corrective action", "strict punishment only", "centralized authority", "reduced communication"],
+  answer: "continuous monitoring and corrective action"
+},
+{
+  question: "A firm with strong leadership but poor planning is likely to:",
+  options: ["fail to achieve long-term goals", "increase profits", "improve coordination", "reduce risk"],
+  answer: "fail to achieve long-term goals"
+},
+{
+  question: "A company invests heavily in marketing but ignores production quality. The likely outcome is:",
+  options: ["customer dissatisfaction", "increased loyalty", "higher demand", "strong brand"],
+  answer: "customer dissatisfaction"
+},
+{
+  question: "Which of the following best explains opportunity cost in business decisions?",
+  options: ["value of next best alternative forgone", "total cost of production", "profit earned", "fixed cost"],
+  answer: "value of next best alternative forgone"
+},
+{
+  question: "A business fails to adapt to changing consumer preferences. This shows weakness in:",
+  options: ["marketing strategy", "financial planning", "legal compliance", "production capacity"],
+  answer: "marketing strategy"
+},
+{
+  question: "A firm increases wages but productivity does not improve. The likely reason is:",
+  options: ["lack of motivation factors beyond pay", "low wages", "poor planning", "strong leadership"],
+  answer: "lack of motivation factors beyond pay"
+},
+{
+  question: "A company facing high competition should focus on:",
+  options: ["innovation and differentiation", "cost increase", "reduced quality", "limited production"],
+  answer: "innovation and differentiation"
+},
+{
+  question: "A business that fails to control costs effectively will:",
+  options: ["reduce profitability", "increase revenue", "improve efficiency", "expand market share"],
+  answer: "reduce profitability"
+},
+{
+  question: "A manager making decisions without consulting subordinates is using:",
+  options: ["autocratic leadership", "democratic leadership", "laissez-faire leadership", "participative leadership"],
+  answer: "autocratic leadership"
+},
+{
+  question: "A business improves its public image by engaging in:",
+  options: ["corporate social responsibility", "cost cutting only", "price increase", "reduced wages"],
+  answer: "corporate social responsibility"
+},
+{
+  question: "A firm operating efficiently but failing financially likely has:",
+  options: ["poor financial management", "low production", "weak marketing", "high demand"],
+  answer: "poor financial management"
+},
+
+{
+  question: "A manufacturing firm experiences increasing sales but declining profits over three years. Investigation reveals rising production costs and inefficient processes. The most appropriate management action is to:",
+  options: ["improve operational efficiency and cost control", "increase selling price immediately", "reduce marketing efforts", "expand production further"],
+  answer: "improve operational efficiency and cost control"
+},
+{
+  question: "A company introduces a new product without conducting market research and faces low demand. This failure is mainly due to poor:",
+  options: ["planning and market analysis", "financial management", "production process", "employee training"],
+  answer: "planning and market analysis"
+},
+{
+  question: "An organization suffers from slow decision-making because all decisions are made by top management. The best solution is to:",
+  options: ["decentralize decision-making", "increase supervision", "reduce employees", "centralize further"],
+  answer: "decentralize decision-making"
+},
+{
+  question: "A firm invests heavily in advertising but customer complaints about product quality increase. The most likely outcome is:",
+  options: ["decline in customer loyalty", "increase in market share", "higher profit margins", "reduced competition"],
+  answer: "decline in customer loyalty"
+},
+{
+  question: "A business experiences frequent employee turnover despite offering competitive salaries. This suggests a problem with:",
+  options: ["non-financial motivation factors", "financial management", "production efficiency", "marketing strategy"],
+  answer: "non-financial motivation factors"
+},
+{
+  question: "A company expands into international markets but fails due to lack of understanding of local culture. This indicates failure in:",
+  options: ["environmental analysis", "financial planning", "production management", "human resource training"],
+  answer: "environmental analysis"
+},
+{
+  question: "A firm uses outdated technology while competitors adopt advanced systems. The likely long-term effect is:",
+  options: ["loss of competitive advantage", "increase in profit", "higher demand", "reduced costs"],
+  answer: "loss of competitive advantage"
+},
+{
+  question: "A company faces cash flow problems despite making profits. This indicates poor:",
+  options: ["working capital management", "marketing strategy", "production planning", "employee motivation"],
+  answer: "working capital management"
+},
+{
+  question: "A business increases output but fails to meet customer expectations. The most likely cause is:",
+  options: ["lack of quality control", "low production", "high marketing effort", "strong competition"],
+  answer: "lack of quality control"
+},
+{
+  question: "A manager adopts a leadership style that involves employees in decision-making. This is likely to:",
+  options: ["increase employee commitment", "reduce productivity", "slow communication only", "increase conflict always"],
+  answer: "increase employee commitment"
+},
+{
+  question: "A firm reduces price to gain market share but competitors match the price reduction. The long-term effect is:",
+  options: ["reduced industry profitability", "market dominance", "increased profit", "reduced competition"],
+  answer: "reduced industry profitability"
+},
+{
+  question: "A business ignores government regulations to reduce costs. This may lead to:",
+  options: ["legal sanctions and reputational damage", "increased profit sustainably", "higher market share", "customer loyalty"],
+  answer: "legal sanctions and reputational damage"
+},
+{
+  question: "A company relies on one supplier and faces disruption when the supplier fails. This shows lack of:",
+  options: ["risk management strategy", "marketing planning", "financial control", "employee training"],
+  answer: "risk management strategy"
+},
+{
+  question: "A firm introduces automation, reducing labor costs but causing employee dissatisfaction. Management should:",
+  options: ["balance efficiency with employee welfare", "ignore employee concerns", "increase production only", "reduce automation"],
+  answer: "balance efficiency with employee welfare"
+},
+{
+  question: "A business fails to achieve its goals due to lack of coordination among departments. This reflects poor:",
+  options: ["organizing function", "planning function", "marketing strategy", "financial management"],
+  answer: "organizing function"
+},
+{
+  question: "A company improves customer service and product quality, resulting in increased loyalty. This demonstrates:",
+  options: ["effective marketing strategy", "poor planning", "weak leadership", "high production cost"],
+  answer: "effective marketing strategy"
+},
+{
+  question: "A firm increases wages but productivity remains unchanged. The best explanation is:",
+  options: ["lack of intrinsic motivation", "low wages", "strong leadership", "good communication"],
+  answer: "lack of intrinsic motivation"
+},
+{
+  question: "A business expands rapidly without proper planning and collapses. This highlights the importance of:",
+  options: ["strategic planning", "production only", "marketing only", "employee training only"],
+  answer: "strategic planning"
+},
+{
+  question: "A company improves its brand image through environmental protection initiatives. This is an example of:",
+  options: ["corporate social responsibility", "profit maximization", "cost reduction", "market expansion"],
+  answer: "corporate social responsibility"
+},
+{
+  question: "A firm diversifies its product range to reduce dependency on one market. This strategy helps to:",
+  options: ["minimize business risk", "increase cost only", "reduce efficiency", "limit growth"],
+  answer: "minimize business risk"
+}
+
 ];
 
 export default businessManagementQuestions;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

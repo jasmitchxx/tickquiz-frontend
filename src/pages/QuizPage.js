@@ -12,7 +12,6 @@ function QuizPage() {
   const level = rawLevel?.toUpperCase();
   const normalizedSubject = subjectKey?.toLowerCase().replace(/\s+/g, '');
 
-  // Get questions for this level + subject
   const subjectQuestions = useMemo(() => {
     if (!level || !questionsData[level]) return [];
     const subjectKeyFound = Object.keys(questionsData[level]).find(
@@ -24,7 +23,7 @@ function QuizPage() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 min default
+  const [timeLeft, setTimeLeft] = useState(60 * 60);
   const [finished, setFinished] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [reviewing, setReviewing] = useState(false);
@@ -42,7 +41,6 @@ function QuizPage() {
     setFinished(true);
   }, []);
 
-  // Initialize quiz
   useEffect(() => {
     if (!code || !subject || !level || subjectQuestions.length === 0) {
       navigate('/start-quiz');
@@ -51,7 +49,6 @@ function QuizPage() {
 
     const saved = JSON.parse(localStorage.getItem('quizProgress'));
     if (saved && saved.code === code && saved.subjectKey === subjectKey) {
-      // Resume previous progress for this subject
       setCurrent(saved.current);
       setAnswers(saved.answers);
       setScore(saved.score);
@@ -59,7 +56,6 @@ function QuizPage() {
       setFinished(saved.finished);
       setShuffledQuestions(saved.questions);
     } else {
-      // Fresh quiz for this subject
       const shuffled = shuffleArray(subjectQuestions).slice(0, MAX_QUESTIONS);
       setShuffledQuestions(shuffled);
       setCurrent(0);
@@ -70,7 +66,6 @@ function QuizPage() {
     }
   }, [code, subject, subjectKey, level, subjectQuestions, navigate]);
 
-  // Save progress
   useEffect(() => {
     if (!code || shuffledQuestions.length === 0) return;
     localStorage.setItem(
@@ -88,7 +83,6 @@ function QuizPage() {
     );
   }, [code, subjectKey, current, answers, score, timeLeft, finished, shuffledQuestions]);
 
-  // Timer
   useEffect(() => {
     if (finished) return;
     const timer = setInterval(() => {
@@ -104,7 +98,6 @@ function QuizPage() {
     return () => clearInterval(timer);
   }, [finished, endQuiz]);
 
-  // Send results to backend
   useEffect(() => {
     if (!finished) return;
 
@@ -135,8 +128,9 @@ function QuizPage() {
 
     setAnswers(prev => [
       ...prev,
-      { question: q.question, selected, correct: q.answer, isCorrect, options: q.options },
+      { question: q.question, selected, correct: q.answer, isCorrect, options: q.options, image: q.image },
     ]);
+
     if (isCorrect) setScore(prev => prev + 1);
 
     if (current + 1 >= shuffledQuestions.length) {
@@ -166,7 +160,9 @@ function QuizPage() {
     return { grade: 'F9', label: 'Fail', color: 'text-red-600' };
   };
 
-  // Render finished page
+  const currentQuestion = shuffledQuestions[current];
+
+  // Finished page
   if (finished && !reviewing) {
     const percentage = Math.round((score / shuffledQuestions.length) * 100);
     const { grade, label, color } = getGrade(percentage);
@@ -216,6 +212,13 @@ function QuizPage() {
         {answers.map((item, index) => (
           <div key={index} className="mb-4 p-4 border rounded-lg bg-white shadow">
             <p className="font-semibold">{index + 1}. {item.question}</p>
+            {item.image && (
+              <img
+                src={item.image}
+                alt="diagram"
+                className="w-full max-w-md h-auto block mx-auto my-4 border border-gray-300 rounded-lg"
+              />
+            )}
             <div className="mt-2 space-y-2">
               {item.options.map((opt, i) => {
                 let btnClass = "border rounded-lg px-4 py-2 w-full text-left";
@@ -226,9 +229,7 @@ function QuizPage() {
                 } else {
                   btnClass += " bg-gray-50";
                 }
-                return (
-                  <div key={i} className={btnClass}>{opt}</div>
-                );
+                return <div key={i} className={btnClass}>{opt}</div>;
               })}
             </div>
           </div>
@@ -247,8 +248,6 @@ function QuizPage() {
       </div>
     );
   }
-
-  const currentQuestion = shuffledQuestions[current];
 
   // Quiz running page
   return (
@@ -283,8 +282,18 @@ function QuizPage() {
         <h2 className="text-xl font-bold mb-4">
           Question {current + 1} of {shuffledQuestions.length}
         </h2>
-        <p className="text-lg mb-6 font-medium">{currentQuestion?.question}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <p className="text-lg mb-4 font-medium">{currentQuestion?.question}</p>
+
+        {/* Responsive Diagram */}
+        {currentQuestion?.image && (
+          <img
+            src={currentQuestion.image}
+            alt="diagram"
+            className="w-full max-w-md h-auto block mx-auto my-4 border border-gray-300 rounded-lg"
+          />
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
           {currentQuestion?.options?.map((option, index) => (
             <button
               key={index}
