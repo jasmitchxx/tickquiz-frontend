@@ -176,7 +176,7 @@ function QuizPage() {
           <p className="text-lg"><strong>Subject:</strong> {subject}</p>
           <p className="text-xl mt-4 font-bold">Score: {score} / {shuffledQuestions.length} ({percentage}%)</p>
           <p className={`text-xl mt-2 font-semibold ${color}`}>
-            Grade: <strong>{grade}</strong> – <em>{label}</em>
+            Grade: <strong>{grade}</strong> - <em>{label}</em>
           </p>
         </div>
 
@@ -250,63 +250,332 @@ function QuizPage() {
   }
 
   // Quiz running page
-  return (
-    <div className="max-w-3xl mx-auto p-6 bg-blue-50 min-h-screen">
-      <div className="bg-white shadow p-4 rounded-lg mb-6 flex justify-between items-center">
+return (
+  <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-4 lg:p-6">
+
+    {/* TOP BAR */}
+    <div className="max-w-7xl mx-auto mb-6">
+
+      <div className="bg-white/90 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl p-5 flex flex-col lg:flex-row justify-between gap-4">
+
         <div>
-          <p className="font-bold text-lg">{subject}</p>
-          <p className="text-sm text-gray-600">Level: {level}</p>
+          <div className="flex items-center gap-3 flex-wrap">
+
+            <div className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">
+              {subject}
+            </div>
+
+            <div className="bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full text-sm font-bold">
+              {level}
+            </div>
+
+          </div>
+
+          <h1 className="text-2xl lg:text-3xl font-black mt-3 text-gray-900">
+            TickQuiz Examination
+          </h1>
+
+          <p className="text-gray-500 mt-1">
+            Candidate: {name}
+          </p>
         </div>
-        <div className="text-right">
-          <p className="font-semibold">Candidate: {name}</p>
-          <p className="font-mono text-sm">Code: {code}</p>
+
+        {/* TIMER */}
+        <div className="lg:text-right">
+
+          <div className="text-sm text-gray-500 mb-2">
+            Time Remaining
+          </div>
+
+          <div className={`text-4xl lg:text-5xl font-black tracking-wider ${
+            timeLeft < 300
+              ? "text-red-600"
+              : "text-blue-700"
+          }`}>
+            {formatTime()}
+          </div>
+
+          <div className="w-56 bg-gray-200 rounded-full h-3 mt-3 overflow-hidden ml-auto">
+            <div
+              className={`h-3 rounded-full transition-all duration-700 ${
+                timeLeft < 300
+                  ? "bg-red-500"
+                  : "bg-green-500"
+              }`}
+              style={{
+                width: `${progressPercent}%`
+              }}
+            />
+          </div>
+
         </div>
+
       </div>
 
-      {/* Timer */}
-      <div className="mb-6">
-        <div className="flex justify-between mb-1">
-          <span className="text-sm font-medium">Time Left</span>
-          <span className="text-sm font-mono">{formatTime()}</span>
-        </div>
-        <div className="w-full bg-gray-200 rounded-full h-4">
-          <div
-            className="bg-green-500 h-4 rounded-full transition-all duration-500"
-            style={{ width: `${progressPercent}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Question */}
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h2 className="text-xl font-bold mb-4">
-          Question {current + 1} of {shuffledQuestions.length}
-        </h2>
-        <p className="text-lg mb-4 font-medium">{currentQuestion?.question}</p>
-
-        {/* Responsive Diagram */}
-        {currentQuestion?.image && (
-          <img
-            src={currentQuestion.image}
-            alt="diagram"
-            className="w-full max-w-md h-auto block mx-auto my-4 border border-gray-300 rounded-lg"
-          />
-        )}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-          {currentQuestion?.options?.map((option, index) => (
-            <button
-              key={index}
-              className="bg-gray-50 border rounded-lg px-6 py-3 shadow hover:bg-gray-100 font-medium transition"
-              onClick={() => handleAnswer(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
-  );
+
+    {/* MAIN LAYOUT */}
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
+
+      {/* LEFT PANEL */}
+      <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+
+        {/* QUESTION HEADER */}
+        <div className="border-b border-gray-100 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+          <div>
+
+            <div className="text-sm text-gray-500 font-medium">
+              Question Progress
+            </div>
+
+            <h2 className="text-2xl font-black text-gray-900">
+              Question {current + 1}
+              <span className="text-gray-400 font-medium">
+                {" "}of {shuffledQuestions.length}
+              </span>
+            </h2>
+
+          </div>
+
+          <div className="bg-blue-50 px-5 py-3 rounded-2xl">
+
+            <div className="text-sm text-gray-500">
+              Current Score
+            </div>
+
+            <div className="text-2xl font-black text-blue-700">
+              {score}
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* QUESTION BODY */}
+        <div className="p-6 lg:p-8">
+
+          {/* QUESTION */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-3xl p-6 mb-8">
+
+            <p className="text-xl leading-9 font-semibold text-gray-800">
+              {currentQuestion?.question}
+            </p>
+
+          </div>
+
+          {/* IMAGE */}
+          {currentQuestion?.image && (
+            <div className="mb-8 text-center">
+
+              <img
+                src={currentQuestion.image}
+                alt="diagram"
+                className="w-full max-w-2xl mx-auto rounded-2xl border border-gray-200 shadow-lg"
+              />
+
+            </div>
+          )}
+
+          {/* OPTIONS */}
+          <div className="grid grid-cols-1 gap-5">
+
+            {currentQuestion?.options?.map((option, index) => (
+
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  bg-white
+                  border-2
+                  border-gray-200
+                  rounded-2xl
+                  p-5
+                  text-left
+                  hover:border-blue-500
+                  hover:shadow-xl
+                  hover:-translate-y-1
+                  transition-all
+                  duration-200
+                "
+              >
+
+                <div className="flex items-start gap-5">
+
+                  <div className="
+                    min-w-[48px]
+                    h-12
+                    rounded-full
+                    bg-blue-600
+                    text-white
+                    flex
+                    items-center
+                    justify-center
+                    font-black
+                    text-lg
+                    shadow-md
+                  ">
+                    {String.fromCharCode(65 + index)}
+                  </div>
+
+                  <div className="
+                    text-lg
+                    font-medium
+                    text-gray-800
+                    leading-7
+                    pt-1
+                  ">
+                    {option}
+                  </div>
+
+                </div>
+
+              </button>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDEBAR */}
+      <div className="space-y-6">
+
+        {/* EXAM INFO */}
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6">
+
+          <h3 className="text-xl font-black mb-5">
+            Exam Dashboard
+          </h3>
+
+          <div className="space-y-4">
+
+            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
+              <span className="text-gray-500">
+                Candidate
+              </span>
+
+              <span className="font-bold text-gray-900">
+                {name}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
+              <span className="text-gray-500">
+                Subject
+              </span>
+
+              <span className="font-bold text-gray-900">
+                {subject}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
+              <span className="text-gray-500">
+                Questions
+              </span>
+
+              <span className="font-bold text-gray-900">
+                {shuffledQuestions.length}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">
+                Current
+              </span>
+
+              <span className="font-bold text-blue-700">
+                {current + 1}
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* QUESTION NAVIGATOR */}
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6">
+
+          <h3 className="text-xl font-black mb-5">
+            Question Navigator
+          </h3>
+
+          <div className="grid grid-cols-5 gap-3">
+
+            {shuffledQuestions.map((_, index) => {
+
+              const answered =
+                index < answers.length;
+
+              const currentQ =
+                index === current;
+
+              return (
+
+                <div
+                  key={index}
+                  className={`
+                    h-12
+                    rounded-xl
+                    flex
+                    items-center
+                    justify-center
+                    font-bold
+                    text-sm
+                    transition-all
+                    ${
+                      currentQ
+                        ? "bg-blue-600 text-white shadow-lg scale-105"
+                        : answered
+                        ? "bg-green-100 text-green-700"
+                        : "bg-gray-100 text-gray-500"
+                    }
+                  `}
+                >
+                  {index + 1}
+                </div>
+
+              );
+            })}
+
+          </div>
+
+        </div>
+
+        {/* LIVE PERFORMANCE */}
+        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl shadow-2xl p-6 text-white">
+
+          <div className="text-sm opacity-80 mb-2">
+            Live Performance
+          </div>
+
+          <div className="text-5xl font-black">
+            {Math.round(
+              (score / Math.max(1, answers.length)) * 100
+            ) || 0}%
+          </div>
+
+          <div className="mt-3 opacity-90 leading-7">
+            Keep going strong. Your performance
+            updates in real-time as you answer.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+);
+
+      
 }
 
 export default QuizPage;
