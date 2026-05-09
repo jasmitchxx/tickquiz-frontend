@@ -251,53 +251,58 @@ function QuizPage() {
 
   // Quiz running page
 return (
-  <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-4 lg:p-6">
+  <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-2 lg:p-3">
 
     {/* TOP BAR */}
-    <div className="max-w-7xl mx-auto mb-6">
+    <div className="max-w-7xl mx-auto mb-3">
 
-      <div className="bg-white/90 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl p-5 flex flex-col lg:flex-row justify-between gap-4">
+      <div className="bg-white/95 backdrop-blur-lg border border-gray-200 rounded-xl shadow-md px-4 py-3 flex flex-col lg:flex-row justify-between gap-3">
 
+        {/* LEFT */}
         <div>
-          <div className="flex items-center gap-3 flex-wrap">
 
-            <div className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold">
+          <div className="flex items-center gap-2 flex-wrap">
+
+            <div className="bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full text-[10px] font-bold">
               {subject}
             </div>
 
-            <div className="bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full text-sm font-bold">
+            <div className="bg-indigo-100 text-indigo-700 px-2.5 py-1 rounded-full text-[10px] font-bold">
               {level}
             </div>
 
           </div>
 
-          <h1 className="text-2xl lg:text-3xl font-black mt-3 text-gray-900">
-            TickQuiz Examination
+          <h1 className="text-lg lg:text-xl font-black mt-1 text-gray-900">
+            TickQuiz CBT
           </h1>
 
-          <p className="text-gray-500 mt-1">
-            Candidate: {name}
+          <p className="text-xs text-gray-500">
+            {name}
           </p>
+
         </div>
 
         {/* TIMER */}
         <div className="lg:text-right">
 
-          <div className="text-sm text-gray-500 mb-2">
-            Time Remaining
+          <div className="text-[10px] text-gray-500 mb-1">
+            TIME LEFT
           </div>
 
-          <div className={`text-4xl lg:text-5xl font-black tracking-wider ${
-            timeLeft < 300
-              ? "text-red-600"
-              : "text-blue-700"
-          }`}>
+          <div
+            className={`text-2xl lg:text-3xl font-black tracking-wide ${
+              timeLeft < 300
+                ? "text-red-600"
+                : "text-blue-700"
+            }`}
+          >
             {formatTime()}
           </div>
 
-          <div className="w-56 bg-gray-200 rounded-full h-3 mt-3 overflow-hidden ml-auto">
+          <div className="w-40 bg-gray-200 rounded-full h-2 mt-1 overflow-hidden ml-auto">
             <div
-              className={`h-3 rounded-full transition-all duration-700 ${
+              className={`h-2 rounded-full transition-all duration-700 ${
                 timeLeft < 300
                   ? "bg-red-500"
                   : "bg-green-500"
@@ -314,37 +319,37 @@ return (
 
     </div>
 
-    {/* MAIN LAYOUT */}
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
+    {/* MAIN */}
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-3">
 
-      {/* LEFT PANEL */}
-      <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+      {/* QUESTION AREA */}
+      <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
 
         {/* QUESTION HEADER */}
-        <div className="border-b border-gray-100 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="border-b border-gray-100 px-4 py-3 flex justify-between items-center">
 
           <div>
 
-            <div className="text-sm text-gray-500 font-medium">
-              Question Progress
+            <div className="text-[10px] text-gray-500 uppercase">
+              Progress
             </div>
 
-            <h2 className="text-2xl font-black text-gray-900">
-              Question {current + 1}
+            <h2 className="text-lg font-black text-gray-900">
+              Q{current + 1}
               <span className="text-gray-400 font-medium">
-                {" "}of {shuffledQuestions.length}
+                /{shuffledQuestions.length}
               </span>
             </h2>
 
           </div>
 
-          <div className="bg-blue-50 px-5 py-3 rounded-2xl">
+          <div className="bg-blue-50 px-3 py-1.5 rounded-lg text-center">
 
-            <div className="text-sm text-gray-500">
-              Current Score
+            <div className="text-[10px] text-gray-500">
+              SCORE
             </div>
 
-            <div className="text-2xl font-black text-blue-700">
+            <div className="text-lg font-black text-blue-700">
               {score}
             </div>
 
@@ -352,13 +357,13 @@ return (
 
         </div>
 
-        {/* QUESTION BODY */}
-        <div className="p-6 lg:p-8">
+        {/* BODY */}
+        <div className="p-4">
 
           {/* QUESTION */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-3xl p-6 mb-8">
+          <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-4">
 
-            <p className="text-xl leading-9 font-semibold text-gray-800">
+            <p className="text-base leading-6 font-semibold text-gray-800">
               {currentQuestion?.question}
             </p>
 
@@ -366,19 +371,21 @@ return (
 
           {/* IMAGE */}
           {currentQuestion?.image && (
-            <div className="mb-8 text-center">
+
+            <div className="mb-4 text-center">
 
               <img
                 src={currentQuestion.image}
                 alt="diagram"
-                className="w-full max-w-2xl mx-auto rounded-2xl border border-gray-200 shadow-lg"
+                className="w-full max-w-lg mx-auto rounded-lg border border-gray-200 shadow-sm"
               />
 
             </div>
+
           )}
 
           {/* OPTIONS */}
-          <div className="grid grid-cols-1 gap-5">
+          <div className="grid gap-2.5">
 
             {currentQuestion?.options?.map((option, index) => (
 
@@ -387,45 +394,41 @@ return (
                 onClick={() => handleAnswer(option)}
                 className="
                   group
-                  relative
-                  overflow-hidden
                   bg-white
-                  border-2
+                  border
                   border-gray-200
-                  rounded-2xl
-                  p-5
+                  rounded-lg
+                  px-3
+                  py-2.5
                   text-left
                   hover:border-blue-500
-                  hover:shadow-xl
-                  hover:-translate-y-1
+                  hover:bg-blue-50
                   transition-all
-                  duration-200
                 "
               >
 
-                <div className="flex items-start gap-5">
+                <div className="flex items-start gap-3">
 
                   <div className="
-                    min-w-[48px]
-                    h-12
+                    min-w-[32px]
+                    h-8
                     rounded-full
                     bg-blue-600
                     text-white
                     flex
                     items-center
                     justify-center
+                    text-xs
                     font-black
-                    text-lg
-                    shadow-md
                   ">
                     {String.fromCharCode(65 + index)}
                   </div>
 
                   <div className="
-                    text-lg
-                    font-medium
+                    text-sm
                     text-gray-800
-                    leading-7
+                    leading-5
+                    font-medium
                     pt-1
                   ">
                     {option}
@@ -443,29 +446,19 @@ return (
 
       </div>
 
-      {/* RIGHT SIDEBAR */}
-      <div className="space-y-6">
+      {/* SIDEBAR */}
+      <div className="space-y-3">
 
-        {/* EXAM INFO */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6">
+        {/* DASHBOARD */}
+        <div className="bg-white rounded-xl shadow-md border border-gray-100 p-3">
 
-          <h3 className="text-xl font-black mb-5">
-            Exam Dashboard
+          <h3 className="text-base font-black mb-3">
+            Dashboard
           </h3>
 
-          <div className="space-y-4">
+          <div className="space-y-2 text-sm">
 
-            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
-              <span className="text-gray-500">
-                Candidate
-              </span>
-
-              <span className="font-bold text-gray-900">
-                {name}
-              </span>
-            </div>
-
-            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
+            <div className="flex justify-between">
               <span className="text-gray-500">
                 Subject
               </span>
@@ -475,7 +468,7 @@ return (
               </span>
             </div>
 
-            <div className="flex justify-between items-center border-b border-gray-100 pb-3">
+            <div className="flex justify-between">
               <span className="text-gray-500">
                 Questions
               </span>
@@ -485,7 +478,7 @@ return (
               </span>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between">
               <span className="text-gray-500">
                 Current
               </span>
@@ -499,14 +492,14 @@ return (
 
         </div>
 
-        {/* QUESTION NAVIGATOR */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6">
+        {/* NAVIGATOR */}
+        <div className="bg-white rounded-xl shadow-md border border-gray-100 p-3">
 
-          <h3 className="text-xl font-black mb-5">
-            Question Navigator
+          <h3 className="text-base font-black mb-3">
+            Navigator
           </h3>
 
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-5 gap-1.5">
 
             {shuffledQuestions.map((_, index) => {
 
@@ -521,17 +514,16 @@ return (
                 <div
                   key={index}
                   className={`
-                    h-12
-                    rounded-xl
+                    h-8
+                    rounded-md
                     flex
                     items-center
                     justify-center
                     font-bold
-                    text-sm
-                    transition-all
+                    text-[10px]
                     ${
                       currentQ
-                        ? "bg-blue-600 text-white shadow-lg scale-105"
+                        ? "bg-blue-600 text-white"
                         : answered
                         ? "bg-green-100 text-green-700"
                         : "bg-gray-100 text-gray-500"
@@ -548,22 +540,21 @@ return (
 
         </div>
 
-        {/* LIVE PERFORMANCE */}
-        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl shadow-2xl p-6 text-white">
+        {/* PERFORMANCE */}
+        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl shadow-lg p-3 text-white">
 
-          <div className="text-sm opacity-80 mb-2">
-            Live Performance
+          <div className="text-[10px] opacity-80 mb-1">
+            PERFORMANCE
           </div>
 
-          <div className="text-5xl font-black">
+          <div className="text-2xl font-black">
             {Math.round(
               (score / Math.max(1, answers.length)) * 100
             ) || 0}%
           </div>
 
-          <div className="mt-3 opacity-90 leading-7">
-            Keep going strong. Your performance
-            updates in real-time as you answer.
+          <div className="mt-1 text-xs opacity-90 leading-5">
+            Live score updates.
           </div>
 
         </div>

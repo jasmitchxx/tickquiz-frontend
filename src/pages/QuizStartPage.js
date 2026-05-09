@@ -40,19 +40,19 @@ function StartQuizPage() {
   };
 
   return (
-  <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 flex items-center justify-center p-4 relative overflow-hidden">
+  <div className="min-h-[92vh] bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 flex items-center justify-center p-4 relative overflow-hidden">
 
     {/* BACKGROUND GLOWS */}
-    <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-    <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
+    <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
+    <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl" />
 
-    <div className="relative z-10 w-full max-w-5xl">
+    <div className="relative z-10 w-full max-w-4xl">
 
       {/* MAIN CARD */}
       <div className="
         bg-white/95
         backdrop-blur-2xl
-        rounded-[36px]
+        rounded-[28px]
         shadow-2xl
         border
         border-white/20
@@ -65,33 +65,33 @@ function StartQuizPage() {
           from-blue-600
           to-indigo-700
           px-6
-          lg:px-10
-          py-12
+          lg:px-8
+          py-8
           text-center
           text-white
         ">
 
           <div className="
-            w-24
-            h-24
+            w-16
+            h-16
             mx-auto
             rounded-full
             bg-white/20
             flex
             items-center
             justify-center
-            text-5xl
-            shadow-2xl
-            mb-6
+            text-3xl
+            shadow-xl
+            mb-4
           ">
             🎓
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-black mb-4">
+          <h1 className="text-3xl lg:text-4xl font-black mb-3">
             Select Your Level
           </h1>
 
-          <p className="text-lg opacity-90 max-w-2xl mx-auto leading-8">
+          <p className="text-sm lg:text-base opacity-90 max-w-xl mx-auto leading-6">
             Choose your academic level to continue
             to the TickQuiz examination portal.
           </p>
@@ -99,10 +99,10 @@ function StartQuizPage() {
         </div>
 
         {/* BODY */}
-        <div className="p-6 lg:p-10">
+        <div className="p-5 lg:p-7">
 
           {/* LEVEL CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
             {levels.map((level) => (
 
@@ -113,14 +113,14 @@ function StartQuizPage() {
                   group
                   relative
                   overflow-hidden
-                  rounded-3xl
+                  rounded-2xl
                   border
                   border-gray-200
                   bg-white
-                  p-8
-                  shadow-lg
-                  hover:shadow-2xl
-                  hover:-translate-y-2
+                  p-5
+                  shadow-md
+                  hover:shadow-xl
+                  hover:-translate-y-1
                   transition-all
                   duration-300
                 "
@@ -143,16 +143,16 @@ function StartQuizPage() {
                 <div className="relative z-10">
 
                   <div className="
-                    w-24
-                    h-24
+                    w-16
+                    h-16
                     mx-auto
                     rounded-full
                     bg-blue-100
-                    text-5xl
+                    text-3xl
                     flex
                     items-center
                     justify-center
-                    mb-6
+                    mb-4
                     group-hover:bg-white/20
                     transition-all
                   ">
@@ -160,10 +160,10 @@ function StartQuizPage() {
                   </div>
 
                   <h2 className="
-                    text-3xl
+                    text-2xl
                     font-black
                     text-gray-900
-                    mb-3
+                    mb-2
                     group-hover:text-white
                     transition-colors
                   ">
@@ -171,8 +171,9 @@ function StartQuizPage() {
                   </h2>
 
                   <p className="
+                    text-sm
                     text-gray-500
-                    leading-7
+                    leading-6
                     group-hover:text-blue-100
                     transition-colors
                   ">
@@ -182,17 +183,18 @@ function StartQuizPage() {
                   </p>
 
                   <div className="
-                    mt-8
+                    mt-5
                     inline-flex
                     items-center
                     justify-center
-                    px-6
-                    py-3
-                    rounded-2xl
+                    px-5
+                    py-2.5
+                    rounded-xl
                     bg-blue-600
                     text-white
+                    text-sm
                     font-bold
-                    shadow-lg
+                    shadow-md
                     group-hover:bg-white
                     group-hover:text-blue-700
                     transition-all
@@ -210,20 +212,20 @@ function StartQuizPage() {
 
           {/* FOOTER INFO */}
           <div className="
-            mt-10
+            mt-6
             bg-blue-50
             border
             border-blue-100
-            rounded-3xl
-            p-6
+            rounded-2xl
+            p-4
             text-center
           ">
 
-            <div className="text-blue-700 font-black text-lg mb-2">
+            <div className="text-blue-700 font-black text-base mb-1">
               TickQuiz Smart Examination System
             </div>
 
-            <p className="text-gray-600 leading-7 max-w-2xl mx-auto">
+            <p className="text-sm text-gray-600 leading-6 max-w-xl mx-auto">
               Practice WAEC-style objective questions with
               timer-based quizzes, leaderboard rankings,
               performance tracking, and premium examination simulation.
