@@ -99,28 +99,57 @@ function QuizPage() {
   }, [finished, endQuiz]);
 
   useEffect(() => {
-    if (!finished) return;
 
-    const saveResults = async () => {
-      if (!name || !school || !subject || !code || typeof score !== 'number') return;
+  if (!finished) return;
 
-      try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/leaderboard`, {
-          name: String(name),
-          school: String(school),
-          subject: normalizedSubject,
+  const saveResults = async () => {
+
+    if (
+      !name ||
+      !school ||
+      !subject ||
+      !code ||
+      typeof score !== 'number'
+    ) return;
+
+    try {
+
+      await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/save-result`,
+        {
+          name: String(name || 'Student'),
+          school: String(school || 'Unknown School'),
+          subject: String(normalizedSubject),
           level: String(level),
           score: Number(score),
           total: Number(shuffledQuestions.length),
           code: String(code),
-        });
-      } catch (err) {
-        console.error('Failed to save result:', err);
-      }
-    };
+          timestamp: new Date().toISOString(),
+        }
+      );
 
-    saveResults();
-  }, [finished, name, school, subject, score, code, level, normalizedSubject, shuffledQuestions.length]);
+    } catch (err) {
+
+      console.error(
+        'Failed to save result:',
+        err
+      );
+    }
+  };
+
+  saveResults();
+
+}, [
+  finished,
+  name,
+  school,
+  subject,
+  score,
+  code,
+  level,
+  normalizedSubject,
+  shuffledQuestions.length
+]);
 
   const handleAnswer = (selected) => {
     const q = shuffledQuestions[current];
