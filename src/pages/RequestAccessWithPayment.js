@@ -142,8 +142,8 @@ useEffect(() => {
 
         <h1 className="text-3xl lg:text-4xl font-black leading-tight">
           Unlock
-          <span className="text-blue-400"> Premium </span>
-          Exam Practice
+          <span className="text-blue-400"> Premium BECE AND WASSCE</span>
+           Exam QUESTIONS
         </h1>
 
         <p className="text-sm text-blue-100 mt-3 leading-6 max-w-lg">
