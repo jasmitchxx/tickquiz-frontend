@@ -1,50 +1,119 @@
+/* ===============================
+   TICKQUIZ LEADERBOARD STYLES
+================================= */
+
 .leaderboard {
   padding: 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-  border-radius: 1rem;
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b;
-  display: flex;
-  flex-direction: column;
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #dbeafe,
+      #eef2ff
+    );
+  border-radius: 2rem;
+  box-shadow:
+    0 10px 40px rgba(37, 99, 235, 0.12);
+  font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  color: #0f172a;
+  overflow: hidden;
+  position: relative;
 }
+
+/* Glow effects */
+.leaderboard::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 250px;
+  height: 250px;
+  background: rgba(59, 130, 246, 0.15);
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.leaderboard::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 250px;
+  height: 250px;
+  background: rgba(99, 102, 241, 0.15);
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+/* ===============================
+   TITLE
+================================= */
 
 .leaderboard h3 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
   text-align: center;
-  color: #1e40af;
-  font-weight: 800;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  color: #1d4ed8;
+  font-weight: 900;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Subject selector */
+.leaderboard-subtitle {
+  text-align: center;
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   FILTER BOX
+================================= */
+
 .subject-selector {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
   gap: 1rem;
   flex-wrap: wrap;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 2;
 }
 
 .subject-selector label {
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 1rem;
   color: #1e293b;
 }
 
 .subject-selector select,
 .subject-selector input[type="date"] {
-  padding: 0.6rem 1rem;
-  border: 2px solid #3b82f6;
-  border-radius: 0.75rem;
-  font-size: 1.1rem;
-  background-color: #f0f9ff;
-  color: #1e293b;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.85rem 1rem;
+  border: 2px solid #bfdbfe;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  background: white;
+  color: #0f172a;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .subject-selector select:hover,
@@ -52,20 +121,27 @@
 .subject-selector input[type="date"]:hover,
 .subject-selector input[type="date"]:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 8px #2563ebaa;
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.12);
   outline: none;
 }
 
-/* Scrollable leaderboard list */
+/* ===============================
+   SCROLL WRAPPER
+================================= */
+
 .scroll-wrapper {
   overflow: hidden;
-  height: 320px;
+  height: 420px;
   position: relative;
-  border-top: 2px solid #bfdbfe;
-  border-bottom: 2px solid #bfdbfe;
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: inset 0 0 10px #e0f2fe;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1.8rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow:
+    inset 0 0 20px rgba(219, 234, 254, 0.5),
+    0 10px 30px rgba(0,0,0,0.06);
+  z-index: 2;
 }
 
 .scroll-wrapper:focus {
@@ -75,7 +151,7 @@
 .scrolling-list {
   display: flex;
   flex-direction: column;
-  animation: scrollUp 20s linear infinite;
+  animation: scrollUp 28s linear infinite;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -94,152 +170,273 @@
   }
 }
 
+/* ===============================
+   ROWS
+================================= */
+
 .scrolling-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e0e7ff;
-  font-size: 1.1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1rem;
   color: #1e293b;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .scrolling-list li:nth-child(even) {
-  background-color: #f0f9ff;
+  background: rgba(239, 246, 255, 0.5);
 }
 
 .scrolling-list li:hover {
-  background-color: #dbeafe;
+  background: rgba(219, 234, 254, 0.8);
+  transform: scale(1.01);
 }
 
-/* Sticky header row */
+/* ===============================
+   HEADER ROW
+================================= */
+
 .header-row {
   position: sticky;
   top: 0;
-  background: #e0f2fe;
-  font-weight: 800;
-  border-bottom: 2px solid #3b82f6;
-  z-index: 2;
-  color: #1e40af;
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #4f46e5
+    );
+  font-weight: 900;
+  z-index: 5;
+  color: white;
+  border-bottom: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Highlight current user */
+/* ===============================
+   CURRENT USER
+================================= */
+
 .scrolling-list li.highlight {
-  background-color: #fef3c7;
-  font-weight: 700;
+  background:
+    linear-gradient(
+      90deg,
+      #fef3c7,
+      #fde68a
+    );
+  font-weight: 800;
   color: #92400e;
-  box-shadow: 0 0 10px #fbbf24aa;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 25px rgba(251, 191, 36, 0.35);
   animation: glowPulse 2s infinite;
 }
 
 @keyframes glowPulse {
-  0% { box-shadow: 0 0 10px #facc15; }
-  50% { box-shadow: 0 0 20px #facc15aa; }
-  100% { box-shadow: 0 0 10px #facc15; }
+  0% {
+    box-shadow: 0 0 10px #facc15;
+  }
+  50% {
+    box-shadow: 0 0 25px #facc15aa;
+  }
+  100% {
+    box-shadow: 0 0 10px #facc15;
+  }
 }
 
-/* Rank emoji styles */
+/* ===============================
+   RANK
+================================= */
+
+.rank {
+  width: 70px;
+  font-weight: 900;
+  color: #2563eb;
+  text-align: center;
+  font-size: 1rem;
+}
+
 .rank::before {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
   font-size: 1.3rem;
 }
 
-.rank.gold::before { content: "🥇"; }
-.rank.silver::before { content: "🥈"; }
-.rank.bronze::before { content: "🥉"; }
-
-.rank {
-  width: 60px;
-  font-weight: 700;
-  color: #2563eb;
-  text-align: center;
+.rank.gold::before {
+  content: "🥇";
 }
+
+.rank.silver::before {
+  content: "🥈";
+}
+
+.rank.bronze::before {
+  content: "🥉";
+}
+
+/* ===============================
+   NAME
+================================= */
 
 .name {
   flex: 1;
-  padding-left: 1.5rem;
-  font-weight: 700;
-  color: #1e293b;
+  padding-left: 1rem;
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1rem;
 }
+
+/* ===============================
+   SCHOOL
+================================= */
 
 .school {
   flex: 1;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   font-style: italic;
   color: #64748b;
+  font-size: 0.92rem;
 }
+
+/* ===============================
+   SCORE
+================================= */
 
 .score {
-  width: 70px;
+  width: 90px;
   text-align: right;
-  font-weight: 700;
+  font-weight: 900;
   color: #16a34a;
+  font-size: 1rem;
 }
+
+/* ===============================
+   PERCENTAGE
+================================= */
 
 .percentage {
-  width: 80px;
+  width: 90px;
   text-align: right;
+  font-weight: 800;
 }
 
-.date {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  min-width: 90px;
-  text-align: right;
-}
-
-/* Dynamic percentage color classes */
 .percent-high {
   color: #16a34a;
-  font-weight: 700;
-}
-.percent-medium {
-  color: #f59e0b;
-  font-weight: 600;
-}
-.percent-low {
-  color: #dc2626;
-  font-weight: 600;
 }
 
-/* Error and status messages */
+.percent-medium {
+  color: #f59e0b;
+}
+
+.percent-low {
+  color: #dc2626;
+}
+
+/* ===============================
+   DATE
+================================= */
+
+.date {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  min-width: 95px;
+  text-align: right;
+}
+
+/* ===============================
+   ERROR
+================================= */
+
 .error {
-  color: #b91c1c;
+  color: #dc2626;
   font-weight: 700;
   text-align: center;
   margin-top: 1rem;
+  background: #fef2f2;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #fecaca;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
+/* ===============================
+   LOADING
+================================= */
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #2563eb;
+  padding: 2rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
   .leaderboard {
     padding: 1rem;
-    max-width: 95%;
+    border-radius: 1.5rem;
+  }
+
+  .leaderboard h3 {
+    font-size: 2rem;
   }
 
   .subject-selector {
     flex-direction: column;
-    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .subject-selector select,
+  .subject-selector input[type="date"] {
+    width: 100%;
   }
 
   .scroll-wrapper {
-    height: 250px;
+    height: 320px;
   }
 
   .scrolling-list li {
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-  }
-
-  .rank, .score, .percentage, .date {
+    padding: 0.8rem;
     font-size: 0.9rem;
   }
 
-  .name, .school {
-    padding-left: 0.8rem;
+  .rank,
+  .score,
+  .percentage,
+  .date {
+    font-size: 0.8rem;
   }
+
+  .name,
+  .school {
+    padding-left: 0.5rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .scrolling-list li {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .rank {
+    width: 55px;
+  }
+
+  .score,
+  .percentage {
+    width: auto;
+  }
+
 }
