@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function RequestAccessWithPayment() {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [countryCode, setCountryCode] = useState('+233');
@@ -94,11 +98,15 @@ useEffect(() => {
     setMessage('');
 
     try {
-      const response = await axios.post(`${API_URL}/api/initiate-payment`, {
-        name: name.trim(),
-        email: email.trim(),
-        phone: countryCode + phone.trim(),
-      });
+      const response = await axios.post(
+  `${API_URL}/api/initiate-payment`,
+  {
+    name: name.trim(),
+    email: email.trim(),
+    phone: countryCode + phone.trim(),
+    product: localStorage.getItem('selectedProduct') || 'quiz'
+  }
+);
 
       localStorage.setItem(
         'pendingUser',
@@ -197,93 +205,144 @@ useEffect(() => {
         </div>
 
     
-    {/* CHAMPIONS */}
-<div className="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-4">
+    {/* CHAMPIONS + AI */}
+<div className="mt-5">
 
-  {/* SHS SECTION */}
-  <div>
+  {/* TOP ROW */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-    <div className="text-sm font-black text-white mb-3">
-      🏆 Current SHS Champions
+    {/* SHS SECTION */}
+    <div>
+
+      <div className="text-sm font-black text-white mb-3">
+        🏆 Current SHS Champions
+      </div>
+
+      <div className="space-y-2">
+
+        {/* SHS MATHS */}
+        <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
+
+          <div>
+            <div className="text-[11px] text-blue-200">
+              SHS Maths Champion
+            </div>
+
+            <div className="text-sm font-black text-white">
+              {champions.shs?.maths?.name || 'No Champion Yet'}
+            </div>
+
+            <div className="text-[11px] text-gray-300">
+              {champions.shs?.maths?.school || ''}
+            </div>
+          </div>
+
+          <div className="text-2xl">👑</div>
+
+        </div>
+
+        {/* SHS SCIENCE */}
+        <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
+
+          <div>
+            <div className="text-[11px] text-green-200">
+              SHS Science Champion
+            </div>
+
+            <div className="text-sm font-black text-white">
+              {champions.shs?.science?.name || 'No Champion Yet'}
+            </div>
+
+            <div className="text-[11px] text-gray-300">
+              {champions.shs?.science?.school || ''}
+            </div>
+          </div>
+
+          <div className="text-2xl">🧪</div>
+
+        </div>
+
+        {/* SHS ENGLISH */}
+        <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
+
+          <div>
+            <div className="text-[11px] text-pink-200">
+              SHS English Champion
+            </div>
+
+            <div className="text-sm font-black text-white">
+              {champions.shs?.english?.name || 'No Champion Yet'}
+            </div>
+
+            <div className="text-[11px] text-gray-300">
+              {champions.shs?.english?.school || ''}
+            </div>
+          </div>
+
+          <div className="text-2xl">📘</div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div className="space-y-2">
+    {/* AI TUTOR */}
+    <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-5 text-white shadow-xl">
 
-      {/* SHS MATHS */}
-      <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
-
-        <div>
-          <div className="text-[11px] text-blue-200">
-            SHS Maths Champion
-          </div>
-
-          <div className="text-sm font-black text-white">
-            {champions.shs?.maths?.name || 'No Champion Yet'}
-          </div>
-
-          <div className="text-[11px] text-gray-300">
-            {champions.shs?.maths?.school || ''}
-          </div>
-        </div>
-
-        <div className="text-2xl">
-          👑
-        </div>
-
+      <div className="text-2xl font-black mb-2">
+        🤖 TickQuiz AI Tutor
       </div>
 
-      {/* SHS SCIENCE */}
-      <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
+      <p className="text-sm leading-6">
+        Ask questions and get step-by-step explanations.
+      </p>
 
-        <div>
-          <div className="text-[11px] text-green-200">
-            SHS Science Champion
-          </div>
+      <div className="grid grid-cols-2 gap-2 mt-4 text-sm">
 
-          <div className="text-sm font-black text-white">
-            {champions.shs?.science?.name || 'No Champion Yet'}
-          </div>
+  <div>✅ SHS Courses</div>
+  <div>✅ JHS Courses</div>
 
-          <div className="text-[11px] text-gray-300">
-            {champions.shs?.science?.school || ''}
-          </div>
-        </div>
+  <div>✅ University Courses</div>
+  <div>✅ ICA Courses</div>
 
-        <div className="text-2xl">
-          🧪
-        </div>
+  <div>✅ ACCA Courses</div>
+  <div>✅ CIMA Courses</div>
 
-      </div>
+</div>
 
-      {/* SHS ENGLISH */}
-      <div className="bg-white/10 border border-white/10 rounded-xl px-3 py-2 backdrop-blur-lg flex items-center justify-between">
+      <button
+ onClick={() => {
 
-        <div>
-          <div className="text-[11px] text-pink-200">
-            SHS English Champion
-          </div>
+  localStorage.setItem(
+    'selectedProduct',
+    'ai-tutor'
+  );
 
-          <div className="text-sm font-black text-white">
-            {champions.shs?.english?.name || 'No Champion Yet'}
-          </div>
+  navigate('/ai-tutor-access');
 
-          <div className="text-[11px] text-gray-300">
-            {champions.shs?.english?.school || ''}
-          </div>
-        </div>
-
-        <div className="text-2xl">
-          📘
-        </div>
-
-      </div>
+}}
+  className="
+    w-full
+    mt-4
+    bg-white
+    text-green-700
+    rounded-xl
+    p-3
+    font-black
+    hover:scale-[1.02]
+    transition-all
+  "
+>
+  🤖 Try AI Tutor
+</button>
 
     </div>
 
   </div>
 
   {/* JHS SECTION */}
-  <div>
+  <div className="mt-4">
 
     <div className="text-sm font-black text-white mb-3">
       🏆 Current JHS Champions
@@ -308,9 +367,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="text-2xl">
-          👑
-        </div>
+        <div className="text-2xl">👑</div>
 
       </div>
 
@@ -331,9 +388,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="text-2xl">
-          🧪
-        </div>
+        <div className="text-2xl">🧪</div>
 
       </div>
 
@@ -354,9 +409,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className="text-2xl">
-          📘
-        </div>
+        <div className="text-2xl">📘</div>
 
       </div>
 
@@ -365,11 +418,17 @@ useEffect(() => {
   </div>
 
 </div>
+
+
 </div>
  {/* FORM */}
 <div className="w-full lg:flex lg:justify-end order-2">
 
   <div className="bg-white/95 backdrop-blur-2xl rounded-[28px] shadow-2xl p-5 lg:p-6 border border-white/20 w-full max-w-sm sticky top-6">
+
+
+
+
 
     {/* HEADER */}
     <div className="text-center mb-5">

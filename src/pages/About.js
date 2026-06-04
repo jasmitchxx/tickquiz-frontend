@@ -112,7 +112,7 @@ function About() {
 
             {[
               ['5000+', 'Students'],
-              ['1500+', 'Questions'],
+              ['5500+', 'Questions'],
               ['24/7', 'Access'],
               ['Nationwide', 'Competition']
             ].map((item, i) => (
@@ -221,60 +221,69 @@ function About() {
 
             </div>
 
-            {/* SUBJECTS */}
-            <div className="mb-6">
-
-              <h2 className="
-                text-2xl
-                font-black
-                text-gray-900
-                mb-4
-              ">
-                Available Subjects
-              </h2>
-
-              <div className="
-                grid
-                grid-cols-2
-                md:grid-cols-4
-                gap-3
-              ">
-
-                {[
-                  'Core Maths',
-                  'English',
-                  'Science',
-                  'Social Studies',
-                  'Biology',
-                  'Chemistry',
-                  'Physics',
-                  'Geography'
-                ].map((subject, i) => (
-
-                  <div
-                    key={i}
-                    className="
-                      bg-gradient-to-br
-                      from-blue-50
-                      to-indigo-50
-                      border
-                      border-blue-100
-                      rounded-2xl
-                      p-4
-                      text-center
-                      font-bold
-                      text-sm
-                      text-gray-700
-                    "
                   >
-                    {subject}
-                  </div>
+                    {/* SUBJECTS */}
+<div className="mb-6">
 
-                ))}
+  <h2 className="
+    text-2xl
+    font-black
+    text-gray-900
+    mb-4
+  ">
+    All SHS And JHS Subjects
+  </h2>
 
-              </div>
+  <div className="
+    grid
+    grid-cols-2
+    md:grid-cols-4
+    gap-3
+  ">
 
-            </div>
+    {[
+      'Core Maths',
+      'English',
+      'Core Science',
+      'Social Studies',
+      'Biology',
+      'Chemistry',
+      'Physics',
+      'Geography',
+      'Economics',
+      'Elective ICT',
+      'Accounting',
+      'Business Management',
+      'Computing',
+      'Career Tech',
+      'RME',
+      'French'
+    ].map((subject, i) => (
+
+      <div
+        key={i}
+        className="
+          bg-gradient-to-br
+          from-blue-50
+          to-indigo-50
+          border
+          border-blue-100
+          rounded-2xl
+          p-4
+          text-center
+          font-bold
+          text-sm
+          text-gray-700
+        "
+      >
+        {subject}
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
 
             {/* MAIN GRID */}
             <div className="

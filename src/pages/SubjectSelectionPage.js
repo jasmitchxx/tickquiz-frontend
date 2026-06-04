@@ -7,8 +7,9 @@ function SubjectSelectionPage() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('quizUser'));
+
     if (!user || !user.code || !user.level) {
-      navigate('/start-quiz');
+      navigate('/start');
     }
   }, [navigate]);
 
@@ -26,203 +27,224 @@ function SubjectSelectionPage() {
 
   const handleSelectSubject = (subjectKey) => {
     const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+
     user.subject = formatSubject(subjectKey);
     user.subjectKey = subjectKey;
-    // Remove any previous quiz progress for this new subject
+
     localStorage.removeItem('quizProgress');
     localStorage.setItem('quizUser', JSON.stringify(user));
+
     navigate('/quiz');
   };
 
-  // Filter subjects by selected level
+  const handleAITutor = (subjectKey) => {
+    const user = JSON.parse(localStorage.getItem('quizUser')) || {};
+
+    user.subject = formatSubject(subjectKey);
+    user.subjectKey = subjectKey;
+
+    localStorage.setItem('quizUser', JSON.stringify(user));
+
+    navigate('/ask-ai');
+  };
+
   const user = JSON.parse(localStorage.getItem('quizUser')) || {};
-  const levelSubjects = user.level ? Object.keys(questionsData[user.level] || {}) : [];
+
+  const levelSubjects = user.level
+    ? Object.keys(questionsData[user.level] || {})
+    : [];
 
   return (
-  <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 py-5 px-3 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 py-5 px-3 relative overflow-hidden">
 
-    {/* BACKGROUND GLOWS */}
-    <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
-    <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/10 blur-3xl rounded-full" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/10 blur-3xl rounded-full" />
 
-    <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
 
-      {/* HERO */}
-      <div className="text-center text-white mb-8">
+        <div className="text-center text-white mb-8">
 
-        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-1 rounded-full backdrop-blur-lg text-xs font-bold mb-4">
-          🎯 TickQuiz Subject Portal
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-1 rounded-full backdrop-blur-lg text-xs font-bold mb-4">
+            🎯 TickQuiz Subject Portal
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+            Choose Your
+            <span className="text-blue-400"> Subject</span>
+          </h1>
+
+          <p className="text-blue-100 text-sm max-w-xl mx-auto mt-4 leading-6">
+            Select a subject below and begin your learning experience.
+          </p>
+
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
-          Choose Your
-          <span className="text-blue-400"> Subject</span>
-        </h1>
+        <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 overflow-hidden">
 
-        <p className="text-blue-100 text-sm max-w-xl mx-auto mt-4 leading-6">
-          Select a subject below and begin your examination experience.
-        </p>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-5 py-5 text-white">
 
-      </div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
 
-      {/* MAIN CARD */}
-      <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 overflow-hidden">
+              <div>
+                <div className="text-xs uppercase tracking-widest opacity-80">
+                  Examination Level
+                </div>
 
-        {/* TOP INFO */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-5 py-5 text-white">
-
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-
-            <div>
-
-              <div className="text-xs uppercase tracking-widest opacity-80">
-                Examination Level
+                <h2 className="text-2xl font-black mt-1">
+                  {user.level}
+                </h2>
               </div>
 
-              <h2 className="text-2xl font-black mt-1">
-                {user.level}
-              </h2>
+              <div className="grid grid-cols-2 gap-3">
 
-            </div>
+                <div className="bg-white/10 rounded-xl px-4 py-3 backdrop-blur-lg">
+                  <div className="text-2xl font-black">
+                    {levelSubjects.length}
+                  </div>
 
-            <div className="grid grid-cols-2 gap-3">
-
-              <div className="bg-white/10 rounded-xl px-4 py-3 backdrop-blur-lg">
-                <div className="text-2xl font-black">
-                  {levelSubjects.length}
+                  <div className="text-xs opacity-80">
+                    Subjects
+                  </div>
                 </div>
 
-                <div className="text-xs opacity-80">
-                  Subjects
-                </div>
-              </div>
+                <div className="bg-white/10 rounded-xl px-4 py-3 backdrop-blur-lg">
+                  <div className="text-2xl font-black">
+                    60
+                  </div>
 
-              <div className="bg-white/10 rounded-xl px-4 py-3 backdrop-blur-lg">
-                <div className="text-2xl font-black">
-                  60
+                  <div className="text-xs opacity-80">
+                    Questions
+                  </div>
                 </div>
 
-                <div className="text-xs opacity-80">
-                  Questions
-                </div>
               </div>
 
             </div>
 
           </div>
 
-        </div>
+          <div className="p-4 lg:p-6">
 
-        {/* SUBJECT GRID */}
-        <div className="p-4 lg:p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {levelSubjects.map((subject, index) => (
 
-            {levelSubjects.map((subject, index) => (
+                <div
+                  key={index}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-2xl
+                    bg-gradient-to-br
+                    from-white
+                    to-blue-50
+                    border
+                    border-blue-100
+                    p-5
+                    text-left
+                    shadow-md
+                    hover:shadow-xl
+                    hover:-translate-y-1
+                    transition-all
+                    duration-300
+                  "
+                >
 
-              <button
-                key={index}
-                onClick={() => handleSelectSubject(subject)}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-2xl
-                  bg-gradient-to-br
-                  from-white
-                  to-blue-50
-                  border
-                  border-blue-100
-                  p-5
-                  text-left
-                  shadow-md
-                  hover:shadow-xl
-                  hover:-translate-y-1
-                  transition-all
-                  duration-300
-                "
-              >
+                  <div className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-br
+                    from-blue-500/0
+                    to-indigo-500/0
+                    group-hover:from-blue-500/10
+                    group-hover:to-indigo-500/10
+                    transition-all
+                    duration-300
+                  " />
 
-                {/* GLOW */}
-                <div className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-br
-                  from-blue-500/0
-                  to-indigo-500/0
-                  group-hover:from-blue-500/10
-                  group-hover:to-indigo-500/10
-                  transition-all
-                  duration-300
-                " />
-
-                {/* ICON */}
-                <div className="
-                  relative
-                  w-12
-                  h-12
-                  rounded-xl
-                  bg-gradient-to-br
-                  from-blue-600
-                  to-indigo-700
-                  text-white
-                  flex
-                  items-center
-                  justify-center
-                  text-lg
-                  shadow-lg
-                  mb-4
-                ">
-                  📘
-                </div>
-
-                {/* SUBJECT */}
-                <h3 className="
-                  relative
-                  text-lg
-                  font-black
-                  text-gray-900
-                  leading-tight
-                ">
-                  {formatSubject(subject)}
-                </h3>
-
-                <p className="
-                  relative
-                  text-gray-500
-                  mt-2
-                  text-sm
-                  leading-6
-                ">
-                  Start your practice test and compete on the leaderboard.
-                </p>
-
-                {/* BUTTON */}
-                <div className="
-                  relative
-                  mt-4
-                  inline-flex
-                  items-center
-                  gap-2
-                  text-blue-700
-                  text-sm
-                  font-bold
-                ">
-
-                  Start Quiz
-
-                  <span className="
-                    group-hover:translate-x-1
-                    transition-transform
+                  <div className="
+                    relative
+                    w-12
+                    h-12
+                    rounded-xl
+                    bg-gradient-to-br
+                    from-blue-600
+                    to-indigo-700
+                    text-white
+                    flex
+                    items-center
+                    justify-center
+                    text-lg
+                    shadow-lg
+                    mb-4
                   ">
-                    →
-                  </span>
+                    📘
+                  </div>
+
+                  <h3 className="
+                    relative
+                    text-lg
+                    font-black
+                    text-gray-900
+                    leading-tight
+                  ">
+                    {formatSubject(subject)}
+                  </h3>
+
+                  <p className="
+                    relative
+                    text-gray-500
+                    mt-2
+                    text-sm
+                    leading-6
+                  ">
+                    Practice quizzes or learn instantly with AI Tutor.
+                  </p>
+
+                  <div className="relative mt-5 flex gap-2">
+
+                    <button
+                      onClick={() => handleSelectSubject(subject)}
+                      className="
+                        flex-1
+                        bg-blue-600
+                        text-white
+                        py-2.5
+                        rounded-xl
+                        text-sm
+                        font-bold
+                        hover:bg-blue-700
+                        transition-all
+                      "
+                    >
+                      📝 Start Quiz
+                    </button>
+
+                    <button
+                      onClick={() => handleAITutor(subject)}
+                      className="
+                        flex-1
+                        bg-green-600
+                        text-white
+                        py-2.5
+                        rounded-xl
+                        text-sm
+                        font-bold
+                        hover:bg-green-700
+                        transition-all
+                      "
+                    >
+                      🤖 AI Tutor
+                    </button>
+
+                  </div>
 
                 </div>
 
-              </button>
+              ))}
 
-            ))}
+            </div>
 
           </div>
 
@@ -231,10 +253,7 @@ function SubjectSelectionPage() {
       </div>
 
     </div>
-
-  </div>
-);
-
+  );
 }
 
 export default SubjectSelectionPage;

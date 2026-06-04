@@ -9,6 +9,14 @@ import QuizPage from './pages/QuizPage';
 import PaymentFailedPage from './pages/PaymentFailedPage';
 import UseAccessCodePage from './pages/UseAccessCodePage';
 import QuizStartPage from './pages/QuizStartPage';
+import AskAI from './pages/AskAI';
+import AITutorAccessPage from './pages/AITutorAccessPage';
+import AIPaymentPage from './pages/AIPaymentPage';
+import AISubscribePage from './pages/AISubscribePage';
+import AISuccessPage from './pages/AISuccessPage';
+
+
+
 
 // ? UPDATED paths here:
 import Header from './components/Header';
@@ -31,8 +39,45 @@ function App() {
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
         <Route path="/payment-failed" element={<PaymentFailedPage />} />
         <Route path="/about" element={<About />} />
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+
+
+
+
+<Route
+  path="/ask-ai"
+  element={
+    localStorage.getItem('aiAccessGranted') === 'true'
+      ? <AskAI />
+      : <Navigate to="/ai-tutor-access" replace />
+  }
+/>
+
+
+
+
+
+<Route
+  path="/ai-tutor-access"
+  element={<AITutorAccessPage />}
+/>
+        
+<Route
+  path="/ai-payment"
+  element={<AIPaymentPage />}
+/>
+
+<Route
+  path="/ai-subscribe"
+  element={<AISubscribePage />}
+/>
+
+<Route
+  path="/ai-success"
+  element={<AISuccessPage />}
+/>
 
         {/* Protected Routes */}
         <Route
@@ -49,7 +94,7 @@ function App() {
           path="*"
           element={
             <div className="min-h-screen flex items-center justify-center text-center text-red-600 font-bold text-2xl">
-              404 – Page Not Found
+              404 ï¿½ Page Not Found
             </div>
           }
         />

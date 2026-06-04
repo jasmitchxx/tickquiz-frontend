@@ -53,7 +53,20 @@ export default function PaymentSuccessPage() {
           await res.json();
 
         if (data.success) {
+const selectedProduct =
+  localStorage.getItem('selectedProduct');
 
+if (selectedProduct === 'ai-tutor') {
+
+  localStorage.setItem(
+    'aiAccessGranted',
+    'true'
+  );
+
+  navigate('/ask-ai');
+
+  return;
+}
           setAccessCode(
             data.accessCode
           );
