@@ -34,11 +34,21 @@ console.log('API_URL:', API_URL);
 
 // CHECK USER
 useEffect(() => {
-  const user = JSON.parse(localStorage.getItem('quizUser'));
+ useEffect(() => {
+
+  localStorage.setItem(
+    'selectedProduct',
+    'quiz'
+  );
+
+  const user = JSON.parse(
+    localStorage.getItem('quizUser')
+  );
 
   if (!user || !user.code || !user.name || !user.subject) {
     localStorage.removeItem('quizUser');
   }
+
 }, []);
 
 // FETCH CHAMPIONS
@@ -104,7 +114,7 @@ useEffect(() => {
     name: name.trim(),
     email: email.trim(),
     phone: countryCode + phone.trim(),
-    product: localStorage.getItem('selectedProduct') || 'quiz'
+    product: 'quiz'
   }
 );
 
