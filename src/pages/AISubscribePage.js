@@ -85,7 +85,7 @@ console.log("API URL =", API_URL);
           </div>
 
           <div className="text-4xl font-black text-green-600">
-            GH₵50
+            GH₵2
           </div>
 
           <div className="text-sm text-gray-500">
