@@ -23,6 +23,9 @@ function AISuccessPage() {
       expiryDate.toISOString()
     );
 
+
+
+    
     setTimeout(() => {
 
       navigate('/ask-ai');

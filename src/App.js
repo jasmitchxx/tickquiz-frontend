@@ -45,16 +45,10 @@ function App() {
 
 
 
-
 <Route
   path="/ask-ai"
-  element={
-    localStorage.getItem('aiAccessGranted') === 'true'
-      ? <AskAI />
-      : <Navigate to="/ai-tutor-access" replace />
-  }
+  element={<AskAI />}
 />
-
 
 
 

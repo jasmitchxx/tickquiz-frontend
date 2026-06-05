@@ -17,13 +17,13 @@ console.log("API URL =", API_URL);
   console.log("Sending payment request...");
 
   const response = await axios.post(
-    `${API_URL}/api/initiate-ai-payment`,
-    {
-      name,
-      email,
-      phone
-    }
-  );
+  `${API_URL}/api/initiate-ai-payment`,
+  {
+    name: name.trim(),
+    email: email.trim(),
+    phone: phone.trim()
+  }
+);
 
   console.log("SUCCESS:", response.data);
 
