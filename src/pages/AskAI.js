@@ -28,10 +28,13 @@ function AskAI() {
 
       if (!pendingUser?.email) {
 
-        navigate('/ai-tutor-access');
-        return;
+  console.log(
+    'No pending user found'
+  );
 
-      }
+  return;
+
+}
 
       const response =
         await axios.post(
