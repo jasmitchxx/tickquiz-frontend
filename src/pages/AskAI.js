@@ -59,13 +59,15 @@ if (!response.data.active) {
   navigate('/ai-tutor-access');
 
 }
-    } catch (err) {
+    
+} catch (err) {
 
-      console.error(err);
+  console.error(
+    'SUBSCRIPTION ERROR:',
+    err.response?.data || err.message
+  );
 
-      navigate('/ai-tutor-access');
-
-    }
+}
 
   };
 
@@ -261,10 +263,23 @@ const downloadPDF = () => {
 
 
 
+const runQuickAction = async (prompt) => {
 
+  setQuestion(prompt);
+
+  setTimeout(() => {
+
+    handleAskAI();
+
+  }, 100);
+
+};
 
   const handleAskAI = async () => {
   
+
+
+
     if (!subject.trim()) {
       alert('Please enter a subject');
       return;
@@ -614,7 +629,138 @@ setFile(null);
 
 </div>
 
-        
+       {/* QUICK AI ACTIONS */}
+
+<div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
+
+  <button
+    onClick={() =>
+      runQuickAction(
+        'Generate 10 multiple choice questions from the uploaded document. Include answers at the end.'
+      )
+    }
+    className="
+      bg-purple-100
+      text-purple-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-purple-200
+    "
+  >
+    📝 10 MCQs
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Summarize the uploaded document in clear study notes.'
+      )
+    }
+    className="
+      bg-green-100
+      text-green-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-green-200
+    "
+  >
+    📄 Study Notes
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Create a revision guide from the uploaded document with key points, formulas, and important facts.'
+      )
+    }
+    className="
+      bg-blue-100
+      text-blue-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-blue-200
+    "
+  >
+    📚 Revision Guide
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Generate 15 ICAG professional examination questions from the uploaded document. Include a marking scheme.'
+      )
+    }
+    className="
+      bg-indigo-100
+      text-indigo-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-indigo-200
+    "
+  >
+    📊 ICAG Questions
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Generate 15 ACCA professional examination questions from the uploaded document. Include model answers and marking scheme.'
+      )
+    }
+    className="
+      bg-red-100
+      text-red-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-red-200
+    "
+  >
+    💼 ACCA Exam
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Create a CIMA case study based on the uploaded document. Include scenario, requirements and examiner style answers.'
+      )
+    }
+    className="
+      bg-orange-100
+      text-orange-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-orange-200
+    "
+  >
+    📈 CIMA Case
+  </button>
+
+  <button
+    onClick={() =>
+      setQuestion(
+        'Generate a university revision test from the uploaded document. Include short answer and essay questions.'
+      )
+    }
+    className="
+      bg-cyan-100
+      text-cyan-700
+      py-3
+      rounded-xl
+      font-bold
+      hover:bg-cyan-200
+    "
+  >
+    🎓 University Test
+  </button>
+
+</div>
+
 
           {/* ASK BUTTON */}
           <button
