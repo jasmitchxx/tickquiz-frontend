@@ -26,6 +26,10 @@ console.log("API URL =", API_URL);
 );
 
 console.log("SUCCESS:", response.data);
+console.log(
+  "SAVING EMAIL:",
+  email.trim()
+);
 
 localStorage.setItem(
   'aiSubscriptionEmail',
