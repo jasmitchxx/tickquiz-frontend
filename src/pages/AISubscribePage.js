@@ -28,12 +28,8 @@ console.log("API URL =", API_URL);
 console.log("SUCCESS:", response.data);
 
 localStorage.setItem(
-  'pendingUser',
-  JSON.stringify({
-    name: name.trim(),
-    email: email.trim(),
-    phone: phone.trim()
-  })
+  'aiSubscriptionEmail',
+  email.trim()
 );
 
 window.location.href =

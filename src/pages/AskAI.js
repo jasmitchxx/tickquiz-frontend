@@ -19,30 +19,25 @@ function AskAI() {
 
     try {
 
-      const pendingUser =
-        JSON.parse(
-          localStorage.getItem(
-            'pendingUser'
-          )
-        );
-
-      if (!pendingUser?.email) {
-
-  console.log(
-    'No pending user found'
+     const userEmail =
+  localStorage.getItem(
+    'aiSubscriptionEmail'
   );
 
+if (!userEmail) {
+
+  navigate('/ai-tutor-access');
   return;
 
 }
 
-      const response =
-        await axios.post(
-          `${process.env.REACT_APP_API_URL}/api/check-ai-subscription`,
-          {
-            email: pendingUser.email
-          }
-        );
+const response =
+  await axios.post(
+    `${process.env.REACT_APP_API_URL}/api/check-ai-subscription`,
+    {
+      email: userEmail
+    }
+  );
 
       if (!response.data.active) {
 

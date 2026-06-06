@@ -18,35 +18,6 @@ function AISuccessPage() {
 
     try {
 
-      const pendingUser =
-        JSON.parse(
-          localStorage.getItem(
-            'pendingUser'
-          )
-        );
-
-      console.log(
-        'PENDING USER:',
-        pendingUser
-      );
-if (!pendingUser) {
-
-  console.log(
-    'No pending user found'
-  );
-
-  return;
-
-}
-      
-await axios.post(
-  `${API_URL}/api/activate-ai-subscription`,
-  {
-    name: pendingUser.name,
-    email: pendingUser.email,
-    phone: pendingUser.phone
-  }
-);
 
 console.log(
   'AI subscription activated'
@@ -70,9 +41,9 @@ console.log(
 
   setTimeout(() => {
 
-    navigate('/ask-ai');
+  navigate('/ask-ai');
 
-  }, 3000);
+}, 1500);
 
 }, [navigate]);
 
