@@ -29,7 +29,15 @@ function AISuccessPage() {
         'PENDING USER:',
         pendingUser
       );
+if (!pendingUser) {
 
+  console.log(
+    'No pending user found'
+  );
+
+  return;
+
+}
       
 await axios.post(
   `${API_URL}/api/activate-ai-subscription`,

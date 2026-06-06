@@ -25,10 +25,19 @@ console.log("API URL =", API_URL);
   }
 );
 
-  console.log("SUCCESS:", response.data);
+console.log("SUCCESS:", response.data);
 
-  window.location.href =
-    response.data.authorization_url;
+localStorage.setItem(
+  'pendingUser',
+  JSON.stringify({
+    name: name.trim(),
+    email: email.trim(),
+    phone: phone.trim()
+  })
+);
+
+window.location.href =
+  response.data.authorization_url;
 
 } catch (err) {
 
