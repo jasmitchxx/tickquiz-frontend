@@ -15,6 +15,19 @@ import AIPaymentPage from './pages/AIPaymentPage';
 import AISubscribePage from './pages/AISubscribePage';
 import AISuccessPage from './pages/AISuccessPage';
 
+import AILoginPage from './pages/AILoginPage';
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -51,7 +64,10 @@ function App() {
 />
 
 
-
+<Route
+  path="/ai-login"
+  element={<AILoginPage />}
+/>
 
 <Route
   path="/ai-tutor-access"

@@ -14,28 +14,57 @@ function AISuccessPage() {
 
   useEffect(() => {
 
-  const activateSubscription = async () => {
+ const activateSubscription = async () => {
 
-    try {
+  try {
+
+    const name =
+      localStorage.getItem(
+        'aiSubscriptionName'
+      );
+
+    const email =
+      localStorage.getItem(
+        'aiSubscriptionEmail'
+      );
+
+    const phone =
+      localStorage.getItem(
+        'aiSubscriptionPhone'
+      );
+
+    const password =
+      localStorage.getItem(
+        'aiSubscriptionPassword'
+      );
+
+    await axios.post(
+      `${API_URL}/api/activate-ai-subscription`,
+      {
+        name,
+        email,
+        phone,
+        password
+      }
+    );
+
+    console.log(
+      'AI subscription activated'
+    );
+
+  } catch (err) {
+
+    console.error(
+      'ACTIVATION ERROR:',
+      err.response?.data ||
+      err.message
+    );
+
+  }
+
+};
 
 
-console.log(
-  'AI subscription activated'
-);
-
-
-
-
-    } catch (err) {
-
-      console.error(
-  'ACTIVATION ERROR:',
-  err.response?.data || err.message
-);
-
-    }
-
-  };
 
   activateSubscription();
 
@@ -45,7 +74,7 @@ console.log(
 
 }, 1500);
 
-}, [navigate]);
+}, [navigate, API_URL]);
 
   return (
 

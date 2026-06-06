@@ -34,10 +34,8 @@ console.log(
 
 if (!userEmail) {
 
-  navigate('/ai-tutor-access');
+  navigate('/ai-login');
   return;
-
-
 
 }
 

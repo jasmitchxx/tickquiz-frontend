@@ -6,6 +6,7 @@ function AISubscribePage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
 
   const API_URL = process.env.REACT_APP_API_URL;
 console.log("API URL =", API_URL);
@@ -19,10 +20,11 @@ console.log("API URL =", API_URL);
   const response = await axios.post(
   `${API_URL}/api/initiate-ai-payment`,
   {
-    name: name.trim(),
-    email: email.trim(),
-    phone: phone.trim()
-  }
+  name: name.trim(),
+  email: email.trim(),
+  phone: phone.trim(),
+  password: password.trim()
+}
 );
 
 console.log("SUCCESS:", response.data);
@@ -35,6 +37,22 @@ localStorage.setItem(
   'aiSubscriptionEmail',
   email.trim().toLowerCase()
 );
+localStorage.setItem(
+  'aiSubscriptionPassword',
+  password.trim()
+);
+
+localStorage.setItem(
+  'aiSubscriptionName',
+  name.trim()
+);
+
+localStorage.setItem(
+  'aiSubscriptionPhone',
+  phone.trim()
+);
+
+
 
 window.location.href =
   response.data.authorization_url;
@@ -86,7 +104,13 @@ window.location.href =
           onChange={(e) => setPhone(e.target.value)}
           className="w-full border p-3 rounded-xl mb-4"
         />
-
+<input
+  type="password"
+  placeholder="Create Password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  className="w-full border p-3 rounded-xl mb-4"
+/>
         <div className="bg-green-50 rounded-xl p-4 text-center mb-4">
 
           <div className="text-sm text-gray-500">
@@ -94,7 +118,7 @@ window.location.href =
           </div>
 
           <div className="text-4xl font-black text-green-600">
-            GH₵2
+            GH₵65
           </div>
 
           <div className="text-sm text-gray-500">
