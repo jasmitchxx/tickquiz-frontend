@@ -49,7 +49,10 @@ console.log(
 
     } catch (err) {
 
-      console.error(err);
+      console.error(
+  'ACTIVATION ERROR:',
+  err.response?.data || err.message
+);
 
     }
 
