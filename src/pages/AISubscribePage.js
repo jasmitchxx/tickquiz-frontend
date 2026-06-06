@@ -7,9 +7,58 @@ function AISubscribePage() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [loginEmail, setLoginEmail] = useState('');
+const [loginPassword, setLoginPassword] = useState('');
 
   const API_URL = process.env.REACT_APP_API_URL;
 console.log("API URL =", API_URL);
+
+
+
+
+const handleSubscriberLogin = async () => {
+
+  try {
+
+    const response = await axios.post(
+      `${API_URL}/api/check-ai-subscription`,
+      {
+        email: loginEmail.trim().toLowerCase(),
+        password: loginPassword.trim()
+      }
+    );
+
+    if (response.data.active) {
+
+      localStorage.setItem(
+        'aiSubscriptionEmail',
+        loginEmail.trim().toLowerCase()
+      );
+
+      localStorage.setItem(
+        'aiPassword',
+        loginPassword.trim()
+      );
+
+      window.location.href = '/ask-ai';
+
+    } else {
+
+      alert(
+        'Invalid email/password or subscription expired.'
+      );
+
+    }
+
+  } catch (err) {
+
+    alert(
+      'Unable to verify subscription.'
+    );
+
+  }
+
+};
 
   const handlePayment = async () => {
 
@@ -133,7 +182,45 @@ window.location.href =
         >
           Pay Now
         </button>
+<hr className="my-6" />
 
+<h2 className="text-xl font-black text-center mb-4">
+  Already Subscribed?
+</h2>
+
+<input
+  type="email"
+  placeholder="Subscription Email"
+  value={loginEmail}
+  onChange={(e) =>
+    setLoginEmail(e.target.value)
+  }
+  className="w-full border p-3 rounded-xl mb-3"
+/>
+
+<input
+  type="password"
+  placeholder="Password"
+  value={loginPassword}
+  onChange={(e) =>
+    setLoginPassword(e.target.value)
+  }
+  className="w-full border p-3 rounded-xl mb-4"
+/>
+
+<button
+  onClick={handleSubscriberLogin}
+  className="
+    w-full
+    bg-blue-600
+    text-white
+    py-3
+    rounded-xl
+    font-black
+  "
+>
+  Login To AI Tutor
+</button>
       </div>
 
     </div>
