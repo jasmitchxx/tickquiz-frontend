@@ -40,7 +40,7 @@ function AIPaymentPage() {
           </div>
 
           <div className="text-4xl font-black text-green-600">
-            GH₵2
+            GH₵65
           </div>
 
         </div>

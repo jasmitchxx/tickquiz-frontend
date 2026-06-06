@@ -89,7 +89,7 @@ function AITutorAccessPage() {
             </div>
 
             <div className="text-5xl font-black text-green-600 mt-2">
-              GH₵2
+              GH₵65
             </div>
 
             <div className="text-gray-500 text-sm">

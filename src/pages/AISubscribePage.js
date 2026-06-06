@@ -127,100 +127,140 @@ window.location.href =
 
     <div className="min-h-screen bg-slate-100 flex items-center justify-center p-4">
 
-      <div className="bg-white rounded-3xl shadow-xl max-w-md w-full p-6">
+      <div className="bg-white rounded-3xl shadow-xl max-w-5xl w-full p-6">
 
-        <h1 className="text-3xl font-black text-center mb-5">
-          🤖 AI Tutor Subscription
-        </h1>
+  <h1 className="text-3xl font-black text-center mb-8">
+    🤖 TickQuiz AI Tutor
+  </h1>
 
-        <input
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full border p-3 rounded-xl mb-3"
-        />
+  <div className="grid md:grid-cols-2 gap-8">
 
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full border p-3 rounded-xl mb-3"
-        />
+    {/* EXISTING SUBSCRIBER */}
 
-        <input
-          placeholder="Phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="w-full border p-3 rounded-xl mb-4"
-        />
-<input
-  type="password"
-  placeholder="Create Password"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-  className="w-full border p-3 rounded-xl mb-4"
-/>
-        <div className="bg-green-50 rounded-xl p-4 text-center mb-4">
+    <div className="border rounded-2xl p-6 bg-blue-50">
 
-          <div className="text-sm text-gray-500">
-            Subscription Fee
-          </div>
+      <h2 className="text-2xl font-black mb-4 text-blue-700">
+        Already Subscribed?
+      </h2>
 
-          <div className="text-4xl font-black text-green-600">
-            GH₵65
-          </div>
+      <p className="text-gray-600 mb-4">
+        Login and continue your learning.
+      </p>
 
-          <div className="text-sm text-gray-500">
-            30 Days Access
-          </div>
+      <input
+        type="email"
+        placeholder="Subscription Email"
+        value={loginEmail}
+        onChange={(e) =>
+          setLoginEmail(e.target.value)
+        }
+        className="w-full border p-3 rounded-xl mb-3"
+      />
 
+      <input
+        type="password"
+        placeholder="Password"
+        value={loginPassword}
+        onChange={(e) =>
+          setLoginPassword(e.target.value)
+        }
+        className="w-full border p-3 rounded-xl mb-4"
+      />
+
+      <button
+        onClick={handleSubscriberLogin}
+        className="
+          w-full
+          bg-blue-600
+          text-white
+          py-3
+          rounded-xl
+          font-bold
+        "
+      >
+        Login To AI Tutor
+      </button>
+
+    </div>
+
+    {/* NEW SUBSCRIPTION */}
+
+    <div className="border rounded-2xl p-6 bg-green-50">
+
+      <h2 className="text-2xl font-black mb-4 text-green-700">
+        New Subscription
+      </h2>
+
+      <p className="text-gray-600 mb-4">
+        Get 30 days unlimited AI Tutor access.
+      </p>
+
+      <input
+        placeholder="Full Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="w-full border p-3 rounded-xl mb-3"
+      />
+
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full border p-3 rounded-xl mb-3"
+      />
+
+      <input
+        placeholder="Phone"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        className="w-full border p-3 rounded-xl mb-3"
+      />
+
+      <input
+        type="password"
+        placeholder="Create Password"
+        value={password}
+        onChange={(e) =>
+          setPassword(e.target.value)
+        }
+        className="w-full border p-3 rounded-xl mb-4"
+      />
+
+      <div className="bg-white rounded-xl p-4 text-center mb-4">
+
+        <div className="text-sm text-gray-500">
+          Subscription Fee
         </div>
 
-        <button
-          onClick={handlePayment}
-          className="w-full bg-green-600 text-white py-3 rounded-xl font-black"
-        >
-          Pay Now
-        </button>
-<hr className="my-6" />
+        <div className="text-4xl font-black text-green-600">
+          GH₵65
+        </div>
 
-<h2 className="text-xl font-black text-center mb-4">
-  Already Subscribed?
-</h2>
+        <div className="text-sm text-gray-500">
+          30 Days Access
+        </div>
 
-<input
-  type="email"
-  placeholder="Subscription Email"
-  value={loginEmail}
-  onChange={(e) =>
-    setLoginEmail(e.target.value)
-  }
-  className="w-full border p-3 rounded-xl mb-3"
-/>
+      </div>
 
-<input
-  type="password"
-  placeholder="Password"
-  value={loginPassword}
-  onChange={(e) =>
-    setLoginPassword(e.target.value)
-  }
-  className="w-full border p-3 rounded-xl mb-4"
-/>
+      <button
+        onClick={handlePayment}
+        className="
+          w-full
+          bg-green-600
+          text-white
+          py-3
+          rounded-xl
+          font-black
+        "
+      >
+        Pay Now
+      </button>
 
-<button
-  onClick={handleSubscriberLogin}
-  className="
-    w-full
-    bg-blue-600
-    text-white
-    py-3
-    rounded-xl
-    font-black
-  "
->
-  Login To AI Tutor
-</button>
+    </div>
+
+  </div>
+
+
       </div>
 
     </div>
