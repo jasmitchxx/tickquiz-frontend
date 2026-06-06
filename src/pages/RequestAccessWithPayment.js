@@ -34,7 +34,6 @@ console.log('API_URL:', API_URL);
 
 // CHECK USER
 useEffect(() => {
- useEffect(() => {
 
   localStorage.setItem(
     'selectedProduct',

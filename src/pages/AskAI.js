@@ -13,17 +13,53 @@ import { useNavigate } from 'react-router-dom';
 function AskAI() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const expiry = localStorage.getItem('aiExpiryDate');
+ useEffect(() => {
 
-    if (!expiry || new Date(expiry) < new Date()) {
-      localStorage.removeItem('aiAccessGranted');
-      localStorage.removeItem('aiExpiryDate');
+  const checkSubscription = async () => {
+
+    try {
+
+      const pendingUser =
+        JSON.parse(
+          localStorage.getItem(
+            'pendingUser'
+          )
+        );
+
+      if (!pendingUser?.email) {
+
+        navigate('/ai-tutor-access');
+        return;
+
+      }
+
+      const response =
+        await axios.post(
+          `${process.env.REACT_APP_API_URL}/api/check-ai-subscription`,
+          {
+            email: pendingUser.email
+          }
+        );
+
+      if (!response.data.active) {
+
+        navigate('/ai-tutor-access');
+
+      }
+
+    } catch (err) {
+
+      console.error(err);
 
       navigate('/ai-tutor-access');
-    }
-  }, [navigate]);
 
+    }
+
+  };
+
+  checkSubscription();
+
+}, [navigate]);
 
 
 

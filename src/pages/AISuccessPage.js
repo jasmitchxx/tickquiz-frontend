@@ -1,38 +1,69 @@
 import { useEffect } from 'react';
+import axios from 'axios';
+
+
+
+
+
 import { useNavigate } from 'react-router-dom';
 
 function AISuccessPage() {
 
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
 
-    const expiryDate = new Date();
+  const activateSubscription = async () => {
 
-    expiryDate.setDate(
-      expiryDate.getDate() + 30
-    );
+    try {
 
-    localStorage.setItem(
-      'aiAccessGranted',
-      'true'
-    );
+      const pendingUser =
+        JSON.parse(
+          localStorage.getItem(
+            'pendingUser'
+          )
+        );
 
-    localStorage.setItem(
-      'aiExpiryDate',
-      expiryDate.toISOString()
-    );
+      console.log(
+        'PENDING USER:',
+        pendingUser
+      );
+
+      
+await axios.post(
+  `${API_URL}/api/activate-ai-subscription`,
+  {
+    name: pendingUser.name,
+    email: pendingUser.email,
+    phone: pendingUser.phone
+  }
+);
+
+console.log(
+  'AI subscription activated'
+);
 
 
 
-    
-    setTimeout(() => {
 
-      navigate('/ask-ai');
+    } catch (err) {
 
-    }, 3000);
+      console.error(err);
 
-  }, [navigate]);
+    }
+
+  };
+
+  activateSubscription();
+
+  setTimeout(() => {
+
+    navigate('/ask-ai');
+
+  }, 3000);
+
+}, [navigate]);
 
   return (
 
