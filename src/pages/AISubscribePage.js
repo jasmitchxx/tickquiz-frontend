@@ -33,7 +33,7 @@ console.log(
 
 localStorage.setItem(
   'aiSubscriptionEmail',
-  email.trim()
+  email.trim().toLowerCase()
 );
 
 window.location.href =

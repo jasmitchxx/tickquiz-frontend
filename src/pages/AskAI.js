@@ -24,10 +24,20 @@ function AskAI() {
     'aiSubscriptionEmail'
   );
 
+console.log(
+  'SUBSCRIPTION EMAIL:',
+  userEmail
+);
+
+
+
+
 if (!userEmail) {
 
   navigate('/ai-tutor-access');
   return;
+
+
 
 }
 
@@ -39,12 +49,16 @@ const response =
     }
   );
 
-      if (!response.data.active) {
+     console.log(
+  'SUBSCRIPTION CHECK:',
+  response.data
+);
 
-        navigate('/ai-tutor-access');
+if (!response.data.active) {
 
-      }
+  navigate('/ai-tutor-access');
 
+}
     } catch (err) {
 
       console.error(err);
