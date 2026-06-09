@@ -154,18 +154,19 @@ useEffect(() => {
       <div className="text-white order-1">
 
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-[11px] font-bold mb-3 backdrop-blur-lg">
-          🚀 Ghana's First Online Quiz Platform
+          🚀 Ghana's Learning Platform for Quizzes & AI Tutoring
         </div>
 
         <h1 className="text-3xl lg:text-4xl font-black leading-tight">
-          Unlock
-          <span className="text-blue-400"> Premium BECE AND WASSCE</span>
-         QUESTIONS
+         Unlock
+<span className="text-blue-400"> Smarter Learning</span>
+With Quizzes & AI Tutor
         </h1>
 
         <p className="text-sm text-blue-100 mt-3 leading-6 max-w-lg">
-          Practice BECE, WASSCE, SAT, GRE and other exams with
-          leaderboards, reviews, and adaptive quizzes.
+         Practice exam questions, compete on leaderboards,
+and learn with our AI Tutor for SHS, JHS,
+University, ICAG, ACCA and CIMA programmes.
         </p>
 
         {/* FEATURES */}
@@ -192,13 +193,13 @@ useEffect(() => {
           </div>
 
           <div className="bg-white/10 border border-white/10 rounded-xl p-2.5 backdrop-blur-lg">
-            <div className="text-lg font-black text-yellow-300">
-              Result
-            </div>
+           <div className="text-lg font-black text-yellow-300">
+  AI
+</div>
 
-            <div className="text-[11px] text-blue-100">
-              Reviews
-            </div>
+<div className="text-[11px] text-blue-100">
+  Tutor
+</div>
           </div>
 
           <div className="bg-white/10 border border-white/10 rounded-xl p-2.5 backdrop-blur-lg">
@@ -304,7 +305,8 @@ useEffect(() => {
       </div>
 
       <p className="text-sm leading-6">
-        Ask questions and get step-by-step explanations.
+        Ask questions, upload PDFs, generate quizzes,
+create revision notes and learn 24/7.
       </p>
 
       <div className="grid grid-cols-2 gap-2 mt-4 text-sm">
@@ -345,6 +347,7 @@ useEffect(() => {
 >
   🤖 Try AI Tutor
 </button>
+
 
     </div>
 
@@ -447,11 +450,12 @@ useEffect(() => {
       </div>
 
       <h2 className="text-3xl font-black text-gray-900 tracking-tight">
-        Buy Access Code
+        Get Premium Access
       </h2>
 
       <p className="text-gray-500 mt-2 text-sm leading-6">
-        One payment unlocks all subjects instantly.
+        One payment unlocks quizzes, leaderboards
+and premium learning tools.
       </p>
 
     </div>

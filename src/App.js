@@ -30,7 +30,6 @@ import AILoginPage from './pages/AILoginPage';
 
 
 
-
 // ? UPDATED paths here:
 import Header from './components/Header';
 import Leaderboard from './components/Leaderboard';
@@ -55,6 +54,25 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

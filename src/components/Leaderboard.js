@@ -7,8 +7,7 @@ function Leaderboard() {
   const [results, setResults] = useState([]);
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [adminPassword, setAdminPassword] = useState("");
@@ -70,8 +69,8 @@ function Leaderboard() {
       const queryParams = new URLSearchParams({
         subject,
         level,
-        ...(startDate && { startDate }),
-        ...(endDate && { endDate }),
+        
+        
       });
 
       const res = await axios.get(
@@ -92,10 +91,9 @@ function Leaderboard() {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    fetchResults();
-  }, [subject, level, startDate, endDate]);
+useEffect(() => {
+  fetchResults();
+}, [subject, level]);
 
   const handleReset = async () => {
 
@@ -278,41 +276,144 @@ function Leaderboard() {
 
             </select>
 
-            <input
-              type="date"
-              className="
-                p-3
-                border
-                border-gray-200
-                rounded-xl
-                bg-white
-                text-sm
-              "
-              value={startDate}
-              onChange={(e) =>
-                setStartDate(e.target.value)
-              }
-            />
+            
 
-            <input
-              type="date"
-              className="
-                p-3
-                border
-                border-gray-200
-                rounded-xl
-                bg-white
-                text-sm
-              "
-              value={endDate}
-              onChange={(e) =>
-                setEndDate(e.target.value)
-              }
-            />
+            
 
           </div>
 
         </div>
+{/* CURRENT CHAMPION */}
+
+{results.length > 0 && (
+
+  <div className="
+    bg-gradient-to-r
+    from-yellow-400
+    via-yellow-500
+    to-amber-500
+    rounded-3xl
+    shadow-xl
+    p-6
+    mb-6
+    text-white
+  ">
+
+    <div className="text-sm font-black">
+      🏆 CURRENT CHAMPION
+    </div>
+
+    <div className="text-3xl font-black mt-2">
+      {results[0].name}
+    </div>
+
+    <div className="text-lg">
+      {results[0].school}
+    </div>
+
+    <div className="mt-4">
+
+      <div className="text-sm">
+        Top Score
+      </div>
+
+      <div className="text-4xl font-black">
+        {results[0].score}/{results[0].total || 60}
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+
+
+
+
+
+
+{/* LEADERBOARD STATS */}
+
+{results.length > 0 && (
+
+  <div className="
+    grid
+    grid-cols-1
+    md:grid-cols-3
+    gap-4
+    mb-6
+  ">
+
+    <div className="
+      bg-white
+      rounded-3xl
+      shadow-lg
+      p-5
+      text-center
+    ">
+
+      <div className="text-3xl mb-2">
+        👥
+      </div>
+
+      <div className="text-sm text-gray-500">
+        Participants
+      </div>
+
+      <div className="text-3xl font-black text-blue-600">
+        {results.length}
+      </div>
+
+    </div>
+
+    <div className="
+      bg-white
+      rounded-3xl
+      shadow-lg
+      p-5
+      text-center
+    ">
+
+      <div className="text-3xl mb-2">
+        🎯
+      </div>
+
+      <div className="text-sm text-gray-500">
+        Highest Score
+      </div>
+
+      <div className="text-3xl font-black text-green-600">
+        {results[0].score}
+      </div>
+
+    </div>
+
+    <div className="
+      bg-white
+      rounded-3xl
+      shadow-lg
+      p-5
+      text-center
+    ">
+
+      <div className="text-3xl mb-2">
+        📚
+      </div>
+
+      <div className="text-sm text-gray-500">
+        Subject
+      </div>
+
+      <div className="text-xl font-black text-purple-600">
+        {subject}
+      </div>
+
+    </div>
+
+  </div>
+
+)}
+
 
         {/* RESULTS */}
         {loading ? (
