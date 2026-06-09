@@ -30,6 +30,7 @@ function Leaderboard() {
     "English",
     "Social Studies",
     "Geography",
+    "Core Science",
     "Economics",
     "Elective ICT",
     "Accounting",
